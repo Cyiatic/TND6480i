@@ -250,7 +250,31 @@ Captures:
 - `diagnostics/captures/gopher64/TND64_480i_dim1only_core_no_menu.png`
 - `diagnostics/captures/gopher64/TND64_480i_fghonly_core_no_menu.png`
 
-Conclusion: the direct gameplay dimension words are now the highest-risk patch family, even when isolated from framebuffer relocation. The F/G/H-only probe is the current rendering control because it keeps stock direct dimensions and framebuffer placement while applying the VI-side GE 480i word family.
+Conclusion: the direct gameplay dimension words are now a high-risk patch family, even when isolated from framebuffer relocation. At this point the F/G/H-only probe was the rendering emulator control because it kept stock direct dimensions and framebuffer placement while applying the VI-side GE 480i word family.
+
+## F/G/H-Only Visual Hardware Result
+
+After a physical power cycle restored the SC64 menu and `ROM write: Enabled`, the F/G/H-only visual control was uploaded:
+
+```text
+artifacts/generated/TND64_480i_fghonly_core_no_menu.z64
+MD5: 852a811f1e71603e3b510866a834cb47
+N64 CRC: 45AFEB49 BFF2CC66
+Profile: fg_h_only
+```
+
+After a real reset, the ROM launched out of the SC64 menu but stayed pure black through 60 seconds. Captures:
+
+- `diagnostics/captures/fgh_after_reset_00_20260509.png`
+- `diagnostics/captures/fgh_after_reset_03_20260509.png`
+- `diagnostics/captures/fgh_after_reset_08_20260509.png`
+- `diagnostics/captures/fgh_after_reset_15_20260509.png`
+- `diagnostics/captures/fgh_after_reset_30_20260509.png`
+- `diagnostics/captures/fgh_after_reset_60_20260509.png`
+
+SC64 state was reset over USB afterward to `Bootloader -> Menu from SD card`, but `ROM write` remains disabled until the N64 is physically reset or power-cycled back to the menu.
+
+Conclusion: F/G/H-only is not real-hardware safe as a group. The next branch should isolate the F, G, and H subfamilies, then split H into origin, width/vsync, and scale probes before any direct-dimension or framebuffer-relocation payload is retried.
 
 ## Post-Dim0 Reset Check
 
@@ -267,4 +291,4 @@ Current hardware rule: no more uploads until a physical reset or power cycle vis
 
 After the N64 is physically reset/power-cycled or reset back to the SC64 menu and ROM writes are enabled again, do not retry `single8076_all_dim0` first. It black-screened on hardware.
 
-The next useful hardware candidate, once the menu and ROM-write state are restored, is the stock-dimension `FGH only` visual control. It is not expected to solve the aliased-hand issue by itself, but it should answer whether the GE 480i VI-side word family can run on real hardware without the framebuffer relocation or direct dimension patches.
+Do not upload another candidate until a physical reset or power cycle visibly restores the SC64 menu and `ROM write: Enabled`. The next useful work is offline: split the F/G/H-only failure into smaller probes.

@@ -30,7 +30,8 @@ Date: 2026-05-08
   - A full two-word dim-aware candidate patched both words to `640x480` and survived process smokes, but later visual capture stayed black in Gopher64.
   - One-word tests on the single-buffer full-H branch showed `0x4F354 -> 640x480` (`single8076_all_dim0`) rendered in Gopher64, while `0x4F35C -> 640x480` (`single8076_all_dim1`) stayed black.
   - Real hardware then black-screened `single8076_all_dim0`, and smaller `dim0_only` / `dim1_only` probes both stayed black in Gopher64 even without framebuffer relocation.
-  - The `FGH only` probe, which keeps stock direct dimensions and framebuffer placement while applying F/G/H VI-side words, rendered in Gopher64. It is now the lowest-risk visual control after the SC64 menu and ROM-write state are restored.
+  - The `FGH only` probe, which keeps stock direct dimensions and framebuffer placement while applying F/G/H VI-side words, rendered in Gopher64.
+  - Hardware later black-screened `FGH only` through 60 seconds, so it is no longer a candidate. Split F/G/H into smaller probes before another hardware upload.
 - 2026-05-08 SC64 session:
   - SC64 detected on `COM4`; firmware `v2.20.2`; SD initialized; ROM writes enabled.
   - GV-USB2 capture showed the SC64 menu clearly.
@@ -114,18 +115,15 @@ Date: 2026-05-08
 
 ## Current Safest Hardware Candidate
 
-Only use this if the capture card visibly shows the SC64 menu, EverDrive menu, or another known-good live video state after a physical reset or power-cycle, and SC64 reports `ROM write: Enabled`. If it black-screens or locks, stop immediately and continue offline.
+There is no active safest hardware candidate right now. Only resume uploads if the capture card visibly shows the SC64 menu, EverDrive menu, or another known-good live video state after a physical reset or power-cycle, and SC64 reports `ROM write: Enabled`.
 
-`TND64_480i_fghonly_core_no_menu.z64`
+Do not retest these first:
 
-- Profile: `fg_h_only`
-- MD5: `852a811f1e71603e3b510866a834cb47`
-- N64 CRC: `45AFEB49 BFF2CC66`
-- Purpose: tests the GE 480i F/G/H VI-side word family while keeping stock framebuffer placement and stock direct dimension words.
-- Emulator status: Gopher64 80 second visual capture rendered, with window mean luma `121.17`.
-- Expected limitation: this may still look aliased because direct gameplay dimensions remain stock. Its value is isolating whether the F/G/H VI-side patches are real-hardware safe.
+- `TND64_480i_single8076_all_dim0_core_no_menu.z64` - black-screened on real hardware through 60 seconds.
+- `TND64_480i_fghonly_core_no_menu.z64` - black-screened on real hardware through 60 seconds.
+- `TND64_480i_dim0only_core_no_menu.z64` / `TND64_480i_dim1only_core_no_menu.z64` - both black-screened in Gopher64 visual capture.
 
-Do not test another direct-dimension candidate first. `single8076_all_dim0` black-screened on real hardware, and `dim0_only` / `dim1_only` both black-screened in Gopher64 visual capture.
+Next useful work is offline: build and smoke smaller stock-memory, stock-dimension probes for F-only, G-only, H-only, and then H origin / H width-vsync / H scale. Pick the next hardware candidate only after one of those renders in emulator and has a clear isolation purpose.
 
 Baseline controls already run:
 

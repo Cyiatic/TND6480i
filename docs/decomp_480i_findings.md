@@ -54,7 +54,7 @@ The first direct dimension word looked safer in emulator at this stage, but hard
 | `artifacts/generated/TND64_480i_dim1only_core_no_menu.z64` | `dim1_only` | `d909037053d29548ddf6fa11b8924207` | `C2BD98A2 B89F823D` | black; window mean luma `16.53` |
 | `artifacts/generated/TND64_480i_fghonly_core_no_menu.z64` | `fg_h_only` | `852a811f1e71603e3b510866a834cb47` | `45AFEB49 BFF2CC66` | rendered; window mean luma `121.17` |
 
-Current conclusion: the direct dimension words are necessary to solve the aliasing symptom eventually, but they are unsafe to patch first. `FGH only` is the next low-risk visual control because it keeps stock direct dimensions and stock framebuffer placement while applying the GE 480i F/G/H VI-side word family.
+Hardware follow-up changed the conclusion again: the direct dimension words are necessary to solve the aliasing symptom eventually, but they are unsafe to patch first, and the combined F/G/H VI-side word family is also not real-hardware safe as a group. `FGH only` rendered in Gopher64, then black-screened on real N64 through 60 seconds. Split F/G/H into smaller probes before trying another 480i payload.
 
 Fallback double-buffer full-dims candidate:
 

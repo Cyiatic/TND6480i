@@ -9,7 +9,7 @@ Generated from local ROMs only. No hardware upload was performed.
 - `single all` and the new `single FG+origin*` builds add that origin branch family while keeping the safer `0x8076A000` single-buffer memory placement.
 - The direct gameplay dimension words at `0x4F354` and `0x4F35C` explain why the no-dims single-all hardware test could still show an aliased Bond hand, but the latest isolation results make those words dangerous to patch first.
 - `dim0 only` and `dim1 only` both stayed black in Gopher64 visual capture, and the combined `single all dim0` build black-screened on real hardware. Treat direct dimension patches as a research branch, not the next hardware-first branch.
-- `FGH only` keeps framebuffer placement and direct dimensions stock while applying the GE 480i F/G/H VI-side word family. It rendered in Gopher64 visual capture, making it the current lowest-risk visual control after the SC64 menu and ROM-write state are physically restored.
+- `FGH only` keeps framebuffer placement and direct dimensions stock while applying the GE 480i F/G/H VI-side word family. It rendered in Gopher64 visual capture, but later black-screened on real hardware, so the F/G/H family now needs smaller hardware probes before any 480i payload is retried.
 - `split8030 all + dims` is the double-buffer fallback that avoids both the earlier `0x80400000` real-hardware failure point and the known `0x8070xxxx` TND references while also applying the direct dimension words.
 
 ## ROM Inventory
