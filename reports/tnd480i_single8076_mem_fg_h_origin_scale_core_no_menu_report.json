@@ -1,0 +1,270 @@
+{
+  "base_rom": "TND64_enh480i_core_no_menu_pigz.z64",
+  "ge480i_rom": "BASELINE_GE_480i_direct_from_stock.z64",
+  "out_rom": "TND64_480i_single8076_mem_fg_h_origin_scale_core_no_menu.z64",
+  "variant": "direct_only",
+  "direct_profile": "single8076_mem_fg_h_origin_scale_nodims",
+  "out_md5": "c8e04cc802ff804376199fa9793f6acf",
+  "header_crc": "3E9EA71019BEFF21",
+  "main_raw_md5": "b77ac94fd19847299613d6ab600047a2",
+  "verify_main_raw_md5": "b77ac94fd19847299613d6ab600047a2",
+  "slot_len": "0xFDA7",
+  "packed_len": "0x0",
+  "verify_consumed": "0xFDA7",
+  "main_changed_bytes_from_tnd": 0,
+  "main_ranges": [],
+  "direct_word_patches": [
+    {
+      "group": "A_single_stride_zero",
+      "offset": "0x3C8C",
+      "old": "0x3C010002",
+      "new": "0x00000825",
+      "note": "single-buffer stride zero"
+    },
+    {
+      "group": "A_single_stride_zero",
+      "offset": "0x3C90",
+      "old": "0x24215800",
+      "new": "0x00000000",
+      "note": "clear old stride lower"
+    },
+    {
+      "group": "B_clear_single_8076A000",
+      "offset": "0x3D30",
+      "old": "0x3C058000",
+      "new": "0x3C048076",
+      "note": "single fb clear base upper 0x8076A000"
+    },
+    {
+      "group": "B_clear_single_8076A000",
+      "offset": "0x3D34",
+      "old": "0x8CA40318",
+      "new": "0x3484A000",
+      "note": "single fb clear base lower 0x8076A000"
+    },
+    {
+      "group": "B_clear_single_8076A000",
+      "offset": "0x3D38",
+      "old": "0x00852025",
+      "new": "0x00000000",
+      "note": "clear old RAM end OR"
+    },
+    {
+      "group": "B_clear_single_8076A000",
+      "offset": "0x3D3C",
+      "old": "0x3C050004",
+      "new": "0x3C050009",
+      "note": "single fb size upper for 0x96000"
+    },
+    {
+      "group": "B_clear_single_8076A000",
+      "offset": "0x3D40",
+      "old": "0x34A5B000",
+      "new": "0x34A56000",
+      "note": "single fb size lower for 0x96000"
+    },
+    {
+      "group": "B_clear_single_8076A000",
+      "offset": "0x3D48",
+      "old": "0x00852023",
+      "new": "0x00000000",
+      "note": "do not subtract size from fixed base"
+    },
+    {
+      "group": "C_single_offset_zero",
+      "offset": "0x46C8",
+      "old": "0x00187880",
+      "new": "0x00007825",
+      "note": "single-buffer active offset zero"
+    },
+    {
+      "group": "C_single_offset_zero",
+      "offset": "0x46CC",
+      "old": "0x01F87821",
+      "new": "0x00000000",
+      "note": "clear old offset calc"
+    },
+    {
+      "group": "C_single_offset_zero",
+      "offset": "0x46D0",
+      "old": "0x000F7880",
+      "new": "0x00000000",
+      "note": "clear old offset calc"
+    },
+    {
+      "group": "C_single_offset_zero",
+      "offset": "0x46D4",
+      "old": "0x01F87823",
+      "new": "0x00000000",
+      "note": "clear old offset calc"
+    },
+    {
+      "group": "C_single_offset_zero",
+      "offset": "0x46D8",
+      "old": "0x000F7880",
+      "new": "0x00000000",
+      "note": "clear old offset calc"
+    },
+    {
+      "group": "C_single_offset_zero",
+      "offset": "0x46DC",
+      "old": "0x01F87823",
+      "new": "0x00000000",
+      "note": "clear old offset calc"
+    },
+    {
+      "group": "C_single_offset_zero",
+      "offset": "0x46E8",
+      "old": "0x000F7AC0",
+      "new": "0x00000000",
+      "note": "clear old offset calc"
+    },
+    {
+      "group": "D_fb_single_8076A000",
+      "offset": "0x6584",
+      "old": "0x3C048000",
+      "new": "0x3C048076",
+      "note": "single fb base upper 0x8076A000"
+    },
+    {
+      "group": "D_fb_single_8076A000",
+      "offset": "0x6588",
+      "old": "0x8C840318",
+      "new": "0x3484A000",
+      "note": "single fb base lower 0x8076A000"
+    },
+    {
+      "group": "D_fb_single_8076A000",
+      "offset": "0x658C",
+      "old": "0x3C020002",
+      "new": "0x00802825",
+      "note": "fb1 = fb0 for single buffering"
+    },
+    {
+      "group": "D_fb_single_8076A000",
+      "offset": "0x6590",
+      "old": "0x24425800",
+      "new": "0x3C02A000",
+      "note": "uncached segment upper"
+    },
+    {
+      "group": "D_fb_single_8076A000",
+      "offset": "0x6594",
+      "old": "0x00822823",
+      "new": "0x00827025",
+      "note": "fb0 uncached"
+    },
+    {
+      "group": "D_fb_single_8076A000",
+      "offset": "0x6598",
+      "old": "0x00A22023",
+      "new": "0x3C018002",
+      "note": "global pointer base"
+    },
+    {
+      "group": "D_fb_single_8076A000",
+      "offset": "0x659C",
+      "old": "0x3C02A000",
+      "new": "0xAC2E417C",
+      "note": "store fb0 pointer"
+    },
+    {
+      "group": "D_fb_single_8076A000",
+      "offset": "0x65A0",
+      "old": "0x00827025",
+      "new": "0x00A27825",
+      "note": "fb1 uncached"
+    },
+    {
+      "group": "D_fb_single_8076A000",
+      "offset": "0x65A4",
+      "old": "0x3C018002",
+      "new": "0x03E00008",
+      "note": "return"
+    },
+    {
+      "group": "D_fb_single_8076A000",
+      "offset": "0x65A8",
+      "old": "0xAC2E417C",
+      "new": "0xAC2F4180",
+      "note": "store fb1 pointer in delay slot"
+    },
+    {
+      "group": "D_fb_single_8076A000",
+      "offset": "0x65AC",
+      "old": "0x00A27825",
+      "new": "0x00000000",
+      "note": "clear old fb1 calc"
+    },
+    {
+      "group": "D_fb_single_8076A000",
+      "offset": "0x65B0",
+      "old": "0x03E00008",
+      "new": "0x00000000",
+      "note": "clear old return"
+    },
+    {
+      "group": "D_fb_single_8076A000",
+      "offset": "0x65B4",
+      "old": "0xAC2F4180",
+      "new": "0x00000000",
+      "note": "clear old delay slot"
+    },
+    {
+      "group": "F_vi_word",
+      "offset": "0x441C",
+      "old": "0x00187840",
+      "new": "0x00187880",
+      "note": "GE 480i VI-related word"
+    },
+    {
+      "group": "G_mask_word",
+      "offset": "0x104DC",
+      "old": "0x2401FCFF",
+      "new": "0x2401FFFF",
+      "note": "GE 480i mask word"
+    },
+    {
+      "group": "H_origin_scale",
+      "offset": "0x19978",
+      "old": "0x00000000",
+      "new": "0x3C09A440",
+      "note": "GE 480i VI origin/control-flow bypass"
+    },
+    {
+      "group": "H_origin_scale",
+      "offset": "0x19980",
+      "old": "0x3C0103FF",
+      "new": "0x10000006",
+      "note": "GE 480i VI origin/control-flow bypass"
+    },
+    {
+      "group": "H_origin_scale",
+      "offset": "0x19984",
+      "old": "0x8E240004",
+      "new": "0x00000000",
+      "note": "GE 480i VI origin/control-flow bypass"
+    },
+    {
+      "group": "H_origin_scale",
+      "offset": "0x19A24",
+      "old": "0x3C0AA440",
+      "new": "0x8E2B002C",
+      "note": "GE 480i VI scale patch"
+    },
+    {
+      "group": "H_origin_scale",
+      "offset": "0x19A60",
+      "old": "0xAD490030",
+      "new": "0xAD890030",
+      "note": "GE 480i VI scale patch"
+    },
+    {
+      "group": "H_origin_scale",
+      "offset": "0x19A64",
+      "old": "0x8E2B002C",
+      "new": "0x000B5842",
+      "note": "GE 480i VI scale patch"
+    }
+  ]
+}

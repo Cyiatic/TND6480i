@@ -1,0 +1,18 @@
+{
+    "name":  "single8076_all_sc64isv_entry",
+    "rom":  "TND64_480i_single8076_all_core_no_menu_sc64isv_entry.z64",
+    "main_window_seen":  true,
+    "elapsed":  30.04,
+    "exited_before_timeout":  false,
+    "exit_code_before_timeout":  null,
+    "stderr_tail":  [
+                        "[INFO]: Using present mode: 2.",
+                        "[INFO]: Current transform is enum 0x1.",
+                        "[INFO]: Supported transform 0x1: IDENTITY_BIT_KHR.",
+                        "[INFO]: Swapchain current extent: 640 x 480",
+                        "[INFO]: Targeting 3 swapchain images.",
+                        "[INFO]: Created swapchain 640 x 480 (fmt: 64, transform: 1).",
+                        "[INFO]: Got 3 swapchain images.",
+                        "[WARN]: Current proprietary AMD driver is known to be buggy with 8/16-bit integer arithmetic, disabling support for time being."
+                    ]
+}

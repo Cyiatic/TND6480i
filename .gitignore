@@ -1,0 +1,35 @@
+# Commercial ROMs, generated candidates, and save data stay local.
+*.z64
+*.n64
+*.v64
+*.rom
+*.bin
+*.eep
+*.eeprom
+*.sav
+*.sra
+*.fla
+
+# Patch/output blobs can be regenerated locally.
+*.xdelta
+*.vcdiff
+*.ips
+*.bps
+
+# Emulator and tool noise.
+*.log
+*.stdout.txt
+*.stderr.txt
+__pycache__/
+.pytest_cache/
+
+# Local artifact staging.
+artifacts/roms/*
+artifacts/generated/*
+artifacts/tmp/*
+!artifacts/roms/.gitkeep
+!artifacts/generated/.gitkeep
+!artifacts/tmp/.gitkeep
+
+# Keep curated diagnostics, but ignore accidental bulk captures.
+diagnostics/bulk/

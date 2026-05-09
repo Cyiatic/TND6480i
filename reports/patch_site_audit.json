@@ -1,0 +1,3835 @@
+{
+  "missing_rom_labels": [
+    "GE exact all",
+    "single FG+origin",
+    "single FG+origin+scale",
+    "single FG+origin+width",
+    "single FG+width+scale",
+    "split8030 FG+width+scale"
+  ],
+  "roms": {
+    "GE stock": {
+      "path": "artifacts\\roms\\GoldenEye 007 (USA).z64",
+      "md5": "70c525880240c1e838b8b1be35666c3b",
+      "size": 12582912
+    },
+    "GE 480i": {
+      "path": "artifacts\\roms\\BASELINE_GE_480i_direct_from_stock.z64",
+      "md5": "1ff9bb4987e83dc85b0d314545a6025f",
+      "size": 12582912
+    },
+    "TND base": {
+      "path": "artifacts\\roms\\BASELINE_TND64_Expanded_direct_from_stock.z64",
+      "md5": "1ee22dd1d70443f5e4766d4238756949",
+      "size": 16777216
+    },
+    "TND tables only": {
+      "path": "artifacts\\roms\\TND64_enh480i_core_no_menu_pigz.z64",
+      "md5": "5e022639fe3aab5e2aa8a209339621d1",
+      "size": 16777216
+    },
+    "single all": {
+      "path": "artifacts\\generated\\TND64_480i_single8076_all_core_no_menu.z64",
+      "md5": "3c6306b06ad9d52121ccc6817038a525",
+      "size": 16777216
+    },
+    "split8030 all": {
+      "path": "artifacts\\generated\\TND64_480i_split8030_8076_all_core_no_menu.z64",
+      "md5": "6464d1b85aa7fc60d5a6fbf36fa71bf7",
+      "size": 16777216
+    }
+  },
+  "safe_byte_runs": [
+    {
+      "start": "0x003D33",
+      "end": "0x003D34",
+      "len": 1
+    },
+    {
+      "start": "0x00441F",
+      "end": "0x004420",
+      "len": 1
+    },
+    {
+      "start": "0x0046C8",
+      "end": "0x0046D1",
+      "len": 9
+    },
+    {
+      "start": "0x0046D2",
+      "end": "0x0046D8",
+      "len": 6
+    },
+    {
+      "start": "0x0046D9",
+      "end": "0x0046DA",
+      "len": 1
+    },
+    {
+      "start": "0x0046DB",
+      "end": "0x0046E0",
+      "len": 5
+    },
+    {
+      "start": "0x0046E9",
+      "end": "0x0046EC",
+      "len": 3
+    },
+    {
+      "start": "0x006587",
+      "end": "0x006588",
+      "len": 1
+    },
+    {
+      "start": "0x00658F",
+      "end": "0x006590",
+      "len": 1
+    },
+    {
+      "start": "0x0104DE",
+      "end": "0x0104DF",
+      "len": 1
+    },
+    {
+      "start": "0x019978",
+      "end": "0x01997C",
+      "len": 4
+    },
+    {
+      "start": "0x019980",
+      "end": "0x019986",
+      "len": 6
+    },
+    {
+      "start": "0x019987",
+      "end": "0x019988",
+      "len": 1
+    },
+    {
+      "start": "0x0199B4",
+      "end": "0x0199B7",
+      "len": 3
+    },
+    {
+      "start": "0x0199D0",
+      "end": "0x0199D2",
+      "len": 2
+    },
+    {
+      "start": "0x019A24",
+      "end": "0x019A28",
+      "len": 4
+    },
+    {
+      "start": "0x019A61",
+      "end": "0x019A62",
+      "len": 1
+    },
+    {
+      "start": "0x019A64",
+      "end": "0x019A68",
+      "len": 4
+    }
+  ],
+  "direct_word_sites": [
+    {
+      "offset": "0x003C8C",
+      "groups": [
+        "A_init_stride",
+        "A_single_stride_zero",
+        "A_split_load_two_globals"
+      ],
+      "notes": [
+        "fb size upper for 0x96000",
+        "load second framebuffer global instead of adding stride",
+        "single-buffer stride zero"
+      ],
+      "ge_stock": "3C058006",
+      "ge_stock_disasm": "lui $a1, 0x8006",
+      "ge_480i": "3C010009",
+      "ge_480i_disasm": "lui $at, 9",
+      "tnd_base": "3C010002",
+      "tnd_base_disasm": "lui $at, 2",
+      "ge_changed": true,
+      "tnd_matches_ge_stock": false,
+      "roms": {
+        "GE stock": {
+          "word": "3C058006",
+          "disasm": "lui $a1, 0x8006"
+        },
+        "GE 480i": {
+          "word": "3C010009",
+          "disasm": "lui $at, 9"
+        },
+        "TND base": {
+          "word": "3C010002",
+          "disasm": "lui $at, 2"
+        },
+        "TND tables only": {
+          "word": "3C010002",
+          "disasm": "lui $at, 2"
+        },
+        "single all": {
+          "word": "00000825",
+          "disasm": "move $at, $zero"
+        },
+        "split8030 all": {
+          "word": "8CC94180",
+          "disasm": "lw $t1, 0x4180($a2)"
+        }
+      }
+    },
+    {
+      "offset": "0x003C90",
+      "groups": [
+        "A_init_stride",
+        "A_single_stride_zero",
+        "A_split_load_two_globals"
+      ],
+      "notes": [
+        "clear old stride lower",
+        "fb size lower for 0x96000",
+        "force K1 bit before toggling to cached"
+      ],
+      "ge_stock": "00007812",
+      "ge_stock_disasm": "mflo $t7",
+      "ge_480i": "24216000",
+      "ge_480i_disasm": "addiu $at, $at, 0x6000",
+      "tnd_base": "24215800",
+      "tnd_base_disasm": "addiu $at, $at, 0x5800",
+      "ge_changed": true,
+      "tnd_matches_ge_stock": false,
+      "roms": {
+        "GE stock": {
+          "word": "00007812",
+          "disasm": "mflo $t7"
+        },
+        "GE 480i": {
+          "word": "24216000",
+          "disasm": "addiu $at, $at, 0x6000"
+        },
+        "TND base": {
+          "word": "24215800",
+          "disasm": "addiu $at, $at, 0x5800"
+        },
+        "TND tables only": {
+          "word": "24215800",
+          "disasm": "addiu $at, $at, 0x5800"
+        },
+        "single all": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "split8030 all": {
+          "word": "01214825",
+          "disasm": "or $t1, $t1, $at"
+        }
+      }
+    },
+    {
+      "offset": "0x003C94",
+      "groups": [
+        "A_split_load_two_globals"
+      ],
+      "notes": [
+        "convert second framebuffer global K1->K0"
+      ],
+      "ge_stock": "3C068002",
+      "ge_stock_disasm": "lui $a2, 0x8002",
+      "ge_480i": "01214821",
+      "ge_480i_disasm": "addu $t1, $t1, $at",
+      "tnd_base": "01214821",
+      "tnd_base_disasm": "addu $t1, $t1, $at",
+      "ge_changed": true,
+      "tnd_matches_ge_stock": false,
+      "roms": {
+        "GE stock": {
+          "word": "3C068002",
+          "disasm": "lui $a2, 0x8002"
+        },
+        "GE 480i": {
+          "word": "01214821",
+          "disasm": "addu $t1, $t1, $at"
+        },
+        "TND base": {
+          "word": "01214821",
+          "disasm": "addu $t1, $t1, $at"
+        },
+        "TND tables only": {
+          "word": "01214821",
+          "disasm": "addu $t1, $t1, $at"
+        },
+        "single all": {
+          "word": "01214821",
+          "disasm": "addu $t1, $t1, $at"
+        },
+        "split8030 all": {
+          "word": "01214826",
+          "disasm": "xor $t1, $t1, $at"
+        }
+      }
+    },
+    {
+      "offset": "0x003D24",
+      "groups": [
+        "B_clear_split_8030_8076",
+        "B_clear_split_8040_8076",
+        "B_clear_split_8060_8076"
+      ],
+      "notes": [
+        "save ra before stack adjust"
+      ],
+      "ge_stock": "27BDFFE8",
+      "ge_stock_disasm": "addiu $sp, $sp, -0x18",
+      "ge_480i": "AFBFFFFC",
+      "ge_480i_disasm": "sw $ra, -4($sp)",
+      "tnd_base": "AFBFFFFC",
+      "tnd_base_disasm": "sw $ra, -4($sp)",
+      "ge_changed": true,
+      "tnd_matches_ge_stock": false,
+      "roms": {
+        "GE stock": {
+          "word": "27BDFFE8",
+          "disasm": "addiu $sp, $sp, -0x18"
+        },
+        "GE 480i": {
+          "word": "AFBFFFFC",
+          "disasm": "sw $ra, -4($sp)"
+        },
+        "TND base": {
+          "word": "AFBFFFFC",
+          "disasm": "sw $ra, -4($sp)"
+        },
+        "TND tables only": {
+          "word": "AFBFFFFC",
+          "disasm": "sw $ra, -4($sp)"
+        },
+        "single all": {
+          "word": "AFBFFFFC",
+          "disasm": "sw $ra, -4($sp)"
+        },
+        "split8030 all": {
+          "word": "AFBFFFFC",
+          "disasm": "sw $ra, -4($sp)"
+        }
+      }
+    },
+    {
+      "offset": "0x003D28",
+      "groups": [
+        "B_clear_split_8030_8076",
+        "B_clear_split_8040_8076",
+        "B_clear_split_8060_8076"
+      ],
+      "notes": [
+        "zbufDeallocate"
+      ],
+      "ge_stock": "AFBF0014",
+      "ge_stock_disasm": "sw $ra, 0x14($sp)",
+      "ge_480i": "0FC348E0",
+      "ge_480i_disasm": "jal 0xf0d2380",
+      "tnd_base": "0FC348E0",
+      "tnd_base_disasm": "jal 0xf0d2380",
+      "ge_changed": true,
+      "tnd_matches_ge_stock": false,
+      "roms": {
+        "GE stock": {
+          "word": "AFBF0014",
+          "disasm": "sw $ra, 0x14($sp)"
+        },
+        "GE 480i": {
+          "word": "0FC348E0",
+          "disasm": "jal 0xf0d2380"
+        },
+        "TND base": {
+          "word": "0FC348E0",
+          "disasm": "jal 0xf0d2380"
+        },
+        "TND tables only": {
+          "word": "0FC348E0",
+          "disasm": "jal 0xf0d2380"
+        },
+        "single all": {
+          "word": "0FC348E0",
+          "disasm": "jal 0xf0d2380"
+        },
+        "split8030 all": {
+          "word": "0FC348E0",
+          "disasm": "jal 0xf0d2380"
+        }
+      }
+    },
+    {
+      "offset": "0x003D2C",
+      "groups": [
+        "B_clear_split_8030_8076",
+        "B_clear_split_8040_8076",
+        "B_clear_split_8060_8076"
+      ],
+      "notes": [
+        "allocate stack in delay slot"
+      ],
+      "ge_stock": "0FC348E0",
+      "ge_stock_disasm": "jal 0xf0d2380",
+      "ge_480i": "27BDFFE8",
+      "ge_480i_disasm": "addiu $sp, $sp, -0x18",
+      "tnd_base": "27BDFFE8",
+      "tnd_base_disasm": "addiu $sp, $sp, -0x18",
+      "ge_changed": true,
+      "tnd_matches_ge_stock": false,
+      "roms": {
+        "GE stock": {
+          "word": "0FC348E0",
+          "disasm": "jal 0xf0d2380"
+        },
+        "GE 480i": {
+          "word": "27BDFFE8",
+          "disasm": "addiu $sp, $sp, -0x18"
+        },
+        "TND base": {
+          "word": "27BDFFE8",
+          "disasm": "addiu $sp, $sp, -0x18"
+        },
+        "TND tables only": {
+          "word": "27BDFFE8",
+          "disasm": "addiu $sp, $sp, -0x18"
+        },
+        "single all": {
+          "word": "27BDFFE8",
+          "disasm": "addiu $sp, $sp, -0x18"
+        },
+        "split8030 all": {
+          "word": "27BDFFE8",
+          "disasm": "addiu $sp, $sp, -0x18"
+        }
+      }
+    },
+    {
+      "offset": "0x003D30",
+      "groups": [
+        "B_alloc_reserve",
+        "B_clear_fixed_8040",
+        "B_clear_single_8076A000",
+        "B_clear_split_8030_8076",
+        "B_clear_split_8040_8076",
+        "B_clear_split_8060_8076"
+      ],
+      "notes": [
+        "clear fb0 base upper 0x80300000",
+        "clear fb0 base upper 0x80400000",
+        "clear fb0 base upper 0x80600000",
+        "fixed fb clear base upper 0x80400000",
+        "single fb clear base upper 0x8076A000",
+        "upper RAM end pointer"
+      ],
+      "ge_stock": "00000000",
+      "ge_stock_disasm": "nop",
+      "ge_480i": "3C048080",
+      "ge_480i_disasm": "lui $a0, 0x8080",
+      "tnd_base": "3C058000",
+      "tnd_base_disasm": "lui $a1, 0x8000",
+      "ge_changed": true,
+      "tnd_matches_ge_stock": false,
+      "roms": {
+        "GE stock": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "GE 480i": {
+          "word": "3C048080",
+          "disasm": "lui $a0, 0x8080"
+        },
+        "TND base": {
+          "word": "3C058000",
+          "disasm": "lui $a1, 0x8000"
+        },
+        "TND tables only": {
+          "word": "3C058000",
+          "disasm": "lui $a1, 0x8000"
+        },
+        "single all": {
+          "word": "3C048076",
+          "disasm": "lui $a0, 0x8076"
+        },
+        "split8030 all": {
+          "word": "3C048030",
+          "disasm": "lui $a0, 0x8030"
+        }
+      }
+    },
+    {
+      "offset": "0x003D34",
+      "groups": [
+        "B_alloc_reserve",
+        "B_clear_fixed_8040",
+        "B_clear_single_8076A000",
+        "B_clear_split_8030_8076",
+        "B_clear_split_8040_8076",
+        "B_clear_split_8060_8076"
+      ],
+      "notes": [
+        "clear old RAM end load",
+        "fb0 base lower zero",
+        "single fb clear base lower 0x8076A000"
+      ],
+      "ge_stock": "3C070002",
+      "ge_stock_disasm": "lui $a3, 2",
+      "ge_480i": "00000000",
+      "ge_480i_disasm": "nop",
+      "tnd_base": "8CA40318",
+      "tnd_base_disasm": "lw $a0, 0x318($a1)",
+      "ge_changed": true,
+      "tnd_matches_ge_stock": false,
+      "roms": {
+        "GE stock": {
+          "word": "3C070002",
+          "disasm": "lui $a3, 2"
+        },
+        "GE 480i": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "TND base": {
+          "word": "8CA40318",
+          "disasm": "lw $a0, 0x318($a1)"
+        },
+        "TND tables only": {
+          "word": "8CA40318",
+          "disasm": "lw $a0, 0x318($a1)"
+        },
+        "single all": {
+          "word": "3484A000",
+          "disasm": "ori $a0, $a0, 0xa000"
+        },
+        "split8030 all": {
+          "word": "00000000",
+          "disasm": "nop"
+        }
+      }
+    },
+    {
+      "offset": "0x003D38",
+      "groups": [
+        "B_alloc_reserve",
+        "B_clear_fixed_8040",
+        "B_clear_single_8076A000",
+        "B_clear_split_8030_8076",
+        "B_clear_split_8040_8076",
+        "B_clear_split_8060_8076"
+      ],
+      "notes": [
+        "clear old RAM end OR",
+        "fb clear size upper for 0x96000"
+      ],
+      "ge_stock": "3C06803E",
+      "ge_stock_disasm": "lui $a2, 0x803e",
+      "ge_480i": "00000000",
+      "ge_480i_disasm": "nop",
+      "tnd_base": "00852025",
+      "tnd_base_disasm": "or $a0, $a0, $a1",
+      "ge_changed": true,
+      "tnd_matches_ge_stock": false,
+      "roms": {
+        "GE stock": {
+          "word": "3C06803E",
+          "disasm": "lui $a2, 0x803e"
+        },
+        "GE 480i": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "TND base": {
+          "word": "00852025",
+          "disasm": "or $a0, $a0, $a1"
+        },
+        "TND tables only": {
+          "word": "00852025",
+          "disasm": "or $a0, $a0, $a1"
+        },
+        "single all": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "split8030 all": {
+          "word": "3C050009",
+          "disasm": "lui $a1, 9"
+        }
+      }
+    },
+    {
+      "offset": "0x003D3C",
+      "groups": [
+        "B_alloc_reserve",
+        "B_clear_fixed_8040",
+        "B_clear_single_8076A000",
+        "B_clear_split_8030_8076",
+        "B_clear_split_8040_8076",
+        "B_clear_split_8060_8076"
+      ],
+      "notes": [
+        "double fb size upper for 0x12C000",
+        "fb clear size lower for 0x96000",
+        "single fb size upper for 0x96000"
+      ],
+      "ge_stock": "3C05803B",
+      "ge_stock_disasm": "lui $a1, 0x803b",
+      "ge_480i": "3C050012",
+      "ge_480i_disasm": "lui $a1, 0x12",
+      "tnd_base": "3C050004",
+      "tnd_base_disasm": "lui $a1, 4",
+      "ge_changed": true,
+      "tnd_matches_ge_stock": false,
+      "roms": {
+        "GE stock": {
+          "word": "3C05803B",
+          "disasm": "lui $a1, 0x803b"
+        },
+        "GE 480i": {
+          "word": "3C050012",
+          "disasm": "lui $a1, 0x12"
+        },
+        "TND base": {
+          "word": "3C050004",
+          "disasm": "lui $a1, 4"
+        },
+        "TND tables only": {
+          "word": "3C050004",
+          "disasm": "lui $a1, 4"
+        },
+        "single all": {
+          "word": "3C050009",
+          "disasm": "lui $a1, 9"
+        },
+        "split8030 all": {
+          "word": "34A56000",
+          "disasm": "ori $a1, $a1, 0x6000"
+        }
+      }
+    },
+    {
+      "offset": "0x003D40",
+      "groups": [
+        "B_alloc_reserve",
+        "B_clear_fixed_8040",
+        "B_clear_single_8076A000",
+        "B_clear_split_8030_8076",
+        "B_clear_split_8040_8076",
+        "B_clear_split_8060_8076"
+      ],
+      "notes": [
+        "clear fb0",
+        "double fb size lower for 0x12C000",
+        "single fb size lower for 0x96000"
+      ],
+      "ge_stock": "24A55000",
+      "ge_stock_disasm": "addiu $a1, $a1, 0x5000",
+      "ge_480i": "34A5C000",
+      "ge_480i_disasm": "ori $a1, $a1, 0xc000",
+      "tnd_base": "34A5B000",
+      "tnd_base_disasm": "ori $a1, $a1, 0xb000",
+      "ge_changed": true,
+      "tnd_matches_ge_stock": false,
+      "roms": {
+        "GE stock": {
+          "word": "24A55000",
+          "disasm": "addiu $a1, $a1, 0x5000"
+        },
+        "GE 480i": {
+          "word": "34A5C000",
+          "disasm": "ori $a1, $a1, 0xc000"
+        },
+        "TND base": {
+          "word": "34A5B000",
+          "disasm": "ori $a1, $a1, 0xb000"
+        },
+        "TND tables only": {
+          "word": "34A5B000",
+          "disasm": "ori $a1, $a1, 0xb000"
+        },
+        "single all": {
+          "word": "34A56000",
+          "disasm": "ori $a1, $a1, 0x6000"
+        },
+        "split8030 all": {
+          "word": "0C005F10",
+          "disasm": "jal 0x17c40"
+        }
+      }
+    },
+    {
+      "offset": "0x003D44",
+      "groups": [
+        "B_clear_split_8030_8076",
+        "B_clear_split_8040_8076",
+        "B_clear_split_8060_8076"
+      ],
+      "notes": [
+        "clear delay slot"
+      ],
+      "ge_stock": "24C6A800",
+      "ge_stock_disasm": "addiu $a2, $a2, -0x5800",
+      "ge_480i": "0C005F10",
+      "ge_480i_disasm": "jal 0x17c40",
+      "tnd_base": "0C005F10",
+      "tnd_base_disasm": "jal 0x17c40",
+      "ge_changed": true,
+      "tnd_matches_ge_stock": false,
+      "roms": {
+        "GE stock": {
+          "word": "24C6A800",
+          "disasm": "addiu $a2, $a2, -0x5800"
+        },
+        "GE 480i": {
+          "word": "0C005F10",
+          "disasm": "jal 0x17c40"
+        },
+        "TND base": {
+          "word": "0C005F10",
+          "disasm": "jal 0x17c40"
+        },
+        "TND tables only": {
+          "word": "0C005F10",
+          "disasm": "jal 0x17c40"
+        },
+        "single all": {
+          "word": "0C005F10",
+          "disasm": "jal 0x17c40"
+        },
+        "split8030 all": {
+          "word": "00000000",
+          "disasm": "nop"
+        }
+      }
+    },
+    {
+      "offset": "0x003D48",
+      "groups": [
+        "B_clear_fixed_8040",
+        "B_clear_single_8076A000",
+        "B_clear_split_8030_8076",
+        "B_clear_split_8040_8076",
+        "B_clear_split_8060_8076"
+      ],
+      "notes": [
+        "clear fb1 base upper 0x8076A000",
+        "do not subtract size from fixed base"
+      ],
+      "ge_stock": "34E75800",
+      "ge_stock_disasm": "ori $a3, $a3, 0x5800",
+      "ge_480i": "00852023",
+      "ge_480i_disasm": "subu $a0, $a0, $a1",
+      "tnd_base": "00852023",
+      "tnd_base_disasm": "subu $a0, $a0, $a1",
+      "ge_changed": true,
+      "tnd_matches_ge_stock": false,
+      "roms": {
+        "GE stock": {
+          "word": "34E75800",
+          "disasm": "ori $a3, $a3, 0x5800"
+        },
+        "GE 480i": {
+          "word": "00852023",
+          "disasm": "subu $a0, $a0, $a1"
+        },
+        "TND base": {
+          "word": "00852023",
+          "disasm": "subu $a0, $a0, $a1"
+        },
+        "TND tables only": {
+          "word": "00852023",
+          "disasm": "subu $a0, $a0, $a1"
+        },
+        "single all": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "split8030 all": {
+          "word": "3C048076",
+          "disasm": "lui $a0, 0x8076"
+        }
+      }
+    },
+    {
+      "offset": "0x003D4C",
+      "groups": [
+        "B_clear_split_8030_8076",
+        "B_clear_split_8040_8076",
+        "B_clear_split_8060_8076"
+      ],
+      "notes": [
+        "clear fb1 base lower 0x8076A000"
+      ],
+      "ge_stock": "00002025",
+      "ge_stock_disasm": "move $a0, $zero",
+      "ge_480i": "8FBF0014",
+      "ge_480i_disasm": "lw $ra, 0x14($sp)",
+      "tnd_base": "8FBF0014",
+      "tnd_base_disasm": "lw $ra, 0x14($sp)",
+      "ge_changed": true,
+      "tnd_matches_ge_stock": false,
+      "roms": {
+        "GE stock": {
+          "word": "00002025",
+          "disasm": "move $a0, $zero"
+        },
+        "GE 480i": {
+          "word": "8FBF0014",
+          "disasm": "lw $ra, 0x14($sp)"
+        },
+        "TND base": {
+          "word": "8FBF0014",
+          "disasm": "lw $ra, 0x14($sp)"
+        },
+        "TND tables only": {
+          "word": "8FBF0014",
+          "disasm": "lw $ra, 0x14($sp)"
+        },
+        "single all": {
+          "word": "8FBF0014",
+          "disasm": "lw $ra, 0x14($sp)"
+        },
+        "split8030 all": {
+          "word": "3484A000",
+          "disasm": "ori $a0, $a0, 0xa000"
+        }
+      }
+    },
+    {
+      "offset": "0x003D50",
+      "groups": [
+        "B_clear_split_8030_8076",
+        "B_clear_split_8040_8076",
+        "B_clear_split_8060_8076"
+      ],
+      "notes": [
+        "fb clear size upper for 0x96000"
+      ],
+      "ge_stock": "00A41021",
+      "ge_stock_disasm": "addu $v0, $a1, $a0",
+      "ge_480i": "03E00008",
+      "ge_480i_disasm": "jr $ra",
+      "tnd_base": "03E00008",
+      "tnd_base_disasm": "jr $ra",
+      "ge_changed": true,
+      "tnd_matches_ge_stock": false,
+      "roms": {
+        "GE stock": {
+          "word": "00A41021",
+          "disasm": "addu $v0, $a1, $a0"
+        },
+        "GE 480i": {
+          "word": "03E00008",
+          "disasm": "jr $ra"
+        },
+        "TND base": {
+          "word": "03E00008",
+          "disasm": "jr $ra"
+        },
+        "TND tables only": {
+          "word": "03E00008",
+          "disasm": "jr $ra"
+        },
+        "single all": {
+          "word": "03E00008",
+          "disasm": "jr $ra"
+        },
+        "split8030 all": {
+          "word": "3C050009",
+          "disasm": "lui $a1, 9"
+        }
+      }
+    },
+    {
+      "offset": "0x003D54",
+      "groups": [
+        "B_clear_split_8030_8076",
+        "B_clear_split_8040_8076",
+        "B_clear_split_8060_8076"
+      ],
+      "notes": [
+        "fb clear size lower for 0x96000"
+      ],
+      "ge_stock": "A0400000",
+      "ge_stock_disasm": "sb $zero, ($v0)",
+      "ge_480i": "27BD0018",
+      "ge_480i_disasm": "addiu $sp, $sp, 0x18",
+      "tnd_base": "27BD0018",
+      "tnd_base_disasm": "addiu $sp, $sp, 0x18",
+      "ge_changed": true,
+      "tnd_matches_ge_stock": false,
+      "roms": {
+        "GE stock": {
+          "word": "A0400000",
+          "disasm": "sb $zero, ($v0)"
+        },
+        "GE 480i": {
+          "word": "27BD0018",
+          "disasm": "addiu $sp, $sp, 0x18"
+        },
+        "TND base": {
+          "word": "27BD0018",
+          "disasm": "addiu $sp, $sp, 0x18"
+        },
+        "TND tables only": {
+          "word": "27BD0018",
+          "disasm": "addiu $sp, $sp, 0x18"
+        },
+        "single all": {
+          "word": "27BD0018",
+          "disasm": "addiu $sp, $sp, 0x18"
+        },
+        "split8030 all": {
+          "word": "34A56000",
+          "disasm": "ori $a1, $a1, 0x6000"
+        }
+      }
+    },
+    {
+      "offset": "0x003D58",
+      "groups": [
+        "B_clear_split_8030_8076",
+        "B_clear_split_8040_8076",
+        "B_clear_split_8060_8076"
+      ],
+      "notes": [
+        "clear fb1"
+      ],
+      "ge_stock": "00C41821",
+      "ge_stock_disasm": "addu $v1, $a2, $a0",
+      "ge_480i": "00000000",
+      "ge_480i_disasm": "nop",
+      "tnd_base": "00000000",
+      "tnd_base_disasm": "nop",
+      "ge_changed": true,
+      "tnd_matches_ge_stock": false,
+      "roms": {
+        "GE stock": {
+          "word": "00C41821",
+          "disasm": "addu $v1, $a2, $a0"
+        },
+        "GE 480i": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "TND base": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "TND tables only": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "single all": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "split8030 all": {
+          "word": "0C005F10",
+          "disasm": "jal 0x17c40"
+        }
+      }
+    },
+    {
+      "offset": "0x003D5C",
+      "groups": [
+        "B_clear_split_8030_8076",
+        "B_clear_split_8040_8076",
+        "B_clear_split_8060_8076"
+      ],
+      "notes": [
+        "clear delay slot"
+      ],
+      "ge_stock": "A0600000",
+      "ge_stock_disasm": "sb $zero, ($v1)",
+      "ge_480i": "00000000",
+      "ge_480i_disasm": "nop",
+      "tnd_base": "00000000",
+      "tnd_base_disasm": "nop",
+      "ge_changed": true,
+      "tnd_matches_ge_stock": false,
+      "roms": {
+        "GE stock": {
+          "word": "A0600000",
+          "disasm": "sb $zero, ($v1)"
+        },
+        "GE 480i": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "TND base": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "TND tables only": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "single all": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "split8030 all": {
+          "word": "00000000",
+          "disasm": "nop"
+        }
+      }
+    },
+    {
+      "offset": "0x003D60",
+      "groups": [
+        "B_clear_split_8030_8076",
+        "B_clear_split_8040_8076",
+        "B_clear_split_8060_8076"
+      ],
+      "notes": [
+        "restore ra"
+      ],
+      "ge_stock": "A0400001",
+      "ge_stock_disasm": "sb $zero, 1($v0)",
+      "ge_480i": "00000000",
+      "ge_480i_disasm": "nop",
+      "tnd_base": "00000000",
+      "tnd_base_disasm": "nop",
+      "ge_changed": true,
+      "tnd_matches_ge_stock": false,
+      "roms": {
+        "GE stock": {
+          "word": "A0400001",
+          "disasm": "sb $zero, 1($v0)"
+        },
+        "GE 480i": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "TND base": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "TND tables only": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "single all": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "split8030 all": {
+          "word": "8FBF0014",
+          "disasm": "lw $ra, 0x14($sp)"
+        }
+      }
+    },
+    {
+      "offset": "0x003D64",
+      "groups": [
+        "B_clear_split_8030_8076",
+        "B_clear_split_8040_8076",
+        "B_clear_split_8060_8076"
+      ],
+      "notes": [
+        "return"
+      ],
+      "ge_stock": "A0600001",
+      "ge_stock_disasm": "sb $zero, 1($v1)",
+      "ge_480i": "00000000",
+      "ge_480i_disasm": "nop",
+      "tnd_base": "00000000",
+      "tnd_base_disasm": "nop",
+      "ge_changed": true,
+      "tnd_matches_ge_stock": false,
+      "roms": {
+        "GE stock": {
+          "word": "A0600001",
+          "disasm": "sb $zero, 1($v1)"
+        },
+        "GE 480i": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "TND base": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "TND tables only": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "single all": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "split8030 all": {
+          "word": "03E00008",
+          "disasm": "jr $ra"
+        }
+      }
+    },
+    {
+      "offset": "0x003D68",
+      "groups": [
+        "B_clear_split_8030_8076",
+        "B_clear_split_8040_8076",
+        "B_clear_split_8060_8076"
+      ],
+      "notes": [
+        "restore stack in delay slot"
+      ],
+      "ge_stock": "A0400002",
+      "ge_stock_disasm": "sb $zero, 2($v0)",
+      "ge_480i": "00000000",
+      "ge_480i_disasm": "nop",
+      "tnd_base": "00000000",
+      "tnd_base_disasm": "nop",
+      "ge_changed": true,
+      "tnd_matches_ge_stock": false,
+      "roms": {
+        "GE stock": {
+          "word": "A0400002",
+          "disasm": "sb $zero, 2($v0)"
+        },
+        "GE 480i": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "TND base": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "TND tables only": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "single all": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "split8030 all": {
+          "word": "27BD0018",
+          "disasm": "addiu $sp, $sp, 0x18"
+        }
+      }
+    },
+    {
+      "offset": "0x003D6C",
+      "groups": [
+        "B_clear_split_8030_8076",
+        "B_clear_split_8040_8076",
+        "B_clear_split_8060_8076"
+      ],
+      "notes": [
+        "clear old padding"
+      ],
+      "ge_stock": "A0600002",
+      "ge_stock_disasm": "sb $zero, 2($v1)",
+      "ge_480i": "00000000",
+      "ge_480i_disasm": "nop",
+      "tnd_base": "00000000",
+      "tnd_base_disasm": "nop",
+      "ge_changed": true,
+      "tnd_matches_ge_stock": false,
+      "roms": {
+        "GE stock": {
+          "word": "A0600002",
+          "disasm": "sb $zero, 2($v1)"
+        },
+        "GE 480i": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "TND base": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "TND tables only": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "single all": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "split8030 all": {
+          "word": "00000000",
+          "disasm": "nop"
+        }
+      }
+    },
+    {
+      "offset": "0x003D70",
+      "groups": [
+        "B_clear_split_8030_8076",
+        "B_clear_split_8040_8076",
+        "B_clear_split_8060_8076"
+      ],
+      "notes": [
+        "clear old padding"
+      ],
+      "ge_stock": "A0400003",
+      "ge_stock_disasm": "sb $zero, 3($v0)",
+      "ge_480i": "00000000",
+      "ge_480i_disasm": "nop",
+      "tnd_base": "00000000",
+      "tnd_base_disasm": "nop",
+      "ge_changed": true,
+      "tnd_matches_ge_stock": false,
+      "roms": {
+        "GE stock": {
+          "word": "A0400003",
+          "disasm": "sb $zero, 3($v0)"
+        },
+        "GE 480i": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "TND base": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "TND tables only": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "single all": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "split8030 all": {
+          "word": "00000000",
+          "disasm": "nop"
+        }
+      }
+    },
+    {
+      "offset": "0x003D74",
+      "groups": [
+        "B_clear_split_8030_8076",
+        "B_clear_split_8040_8076",
+        "B_clear_split_8060_8076"
+      ],
+      "notes": [
+        "clear old padding"
+      ],
+      "ge_stock": "24840004",
+      "ge_stock_disasm": "addiu $a0, $a0, 4",
+      "ge_480i": "00000000",
+      "ge_480i_disasm": "nop",
+      "tnd_base": "00000000",
+      "tnd_base_disasm": "nop",
+      "ge_changed": true,
+      "tnd_matches_ge_stock": false,
+      "roms": {
+        "GE stock": {
+          "word": "24840004",
+          "disasm": "addiu $a0, $a0, 4"
+        },
+        "GE 480i": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "TND base": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "TND tables only": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "single all": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "split8030 all": {
+          "word": "00000000",
+          "disasm": "nop"
+        }
+      }
+    },
+    {
+      "offset": "0x003D78",
+      "groups": [
+        "B_clear_split_8030_8076",
+        "B_clear_split_8040_8076",
+        "B_clear_split_8060_8076"
+      ],
+      "notes": [
+        "clear old padding"
+      ],
+      "ge_stock": "1487FFF5",
+      "ge_stock_disasm": "bne $a0, $a3, 0x3d50",
+      "ge_480i": "00000000",
+      "ge_480i_disasm": "nop",
+      "tnd_base": "00000000",
+      "tnd_base_disasm": "nop",
+      "ge_changed": true,
+      "tnd_matches_ge_stock": false,
+      "roms": {
+        "GE stock": {
+          "word": "1487FFF5",
+          "disasm": "bne $a0, $a3, 0x3d50"
+        },
+        "GE 480i": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "TND base": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "TND tables only": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "single all": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "split8030 all": {
+          "word": "00000000",
+          "disasm": "nop"
+        }
+      }
+    },
+    {
+      "offset": "0x003D7C",
+      "groups": [
+        "B_clear_split_8030_8076",
+        "B_clear_split_8040_8076",
+        "B_clear_split_8060_8076"
+      ],
+      "notes": [
+        "clear old padding"
+      ],
+      "ge_stock": "A0600003",
+      "ge_stock_disasm": "sb $zero, 3($v1)",
+      "ge_480i": "00000000",
+      "ge_480i_disasm": "nop",
+      "tnd_base": "00000000",
+      "tnd_base_disasm": "nop",
+      "ge_changed": true,
+      "tnd_matches_ge_stock": false,
+      "roms": {
+        "GE stock": {
+          "word": "A0600003",
+          "disasm": "sb $zero, 3($v1)"
+        },
+        "GE 480i": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "TND base": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "TND tables only": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "single all": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "split8030 all": {
+          "word": "00000000",
+          "disasm": "nop"
+        }
+      }
+    },
+    {
+      "offset": "0x003D80",
+      "groups": [
+        "B_clear_split_8030_8076",
+        "B_clear_split_8040_8076",
+        "B_clear_split_8060_8076"
+      ],
+      "notes": [
+        "clear old padding"
+      ],
+      "ge_stock": "8FBF0014",
+      "ge_stock_disasm": "lw $ra, 0x14($sp)",
+      "ge_480i": "00000000",
+      "ge_480i_disasm": "nop",
+      "tnd_base": "00000000",
+      "tnd_base_disasm": "nop",
+      "ge_changed": true,
+      "tnd_matches_ge_stock": false,
+      "roms": {
+        "GE stock": {
+          "word": "8FBF0014",
+          "disasm": "lw $ra, 0x14($sp)"
+        },
+        "GE 480i": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "TND base": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "TND tables only": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "single all": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "split8030 all": {
+          "word": "00000000",
+          "disasm": "nop"
+        }
+      }
+    },
+    {
+      "offset": "0x003D84",
+      "groups": [
+        "B_clear_split_8030_8076",
+        "B_clear_split_8040_8076",
+        "B_clear_split_8060_8076"
+      ],
+      "notes": [
+        "clear old padding"
+      ],
+      "ge_stock": "27BD0018",
+      "ge_stock_disasm": "addiu $sp, $sp, 0x18",
+      "ge_480i": "00000000",
+      "ge_480i_disasm": "nop",
+      "tnd_base": "00000000",
+      "tnd_base_disasm": "nop",
+      "ge_changed": true,
+      "tnd_matches_ge_stock": false,
+      "roms": {
+        "GE stock": {
+          "word": "27BD0018",
+          "disasm": "addiu $sp, $sp, 0x18"
+        },
+        "GE 480i": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "TND base": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "TND tables only": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "single all": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "split8030 all": {
+          "word": "00000000",
+          "disasm": "nop"
+        }
+      }
+    },
+    {
+      "offset": "0x003D88",
+      "groups": [
+        "B_clear_split_8030_8076",
+        "B_clear_split_8040_8076",
+        "B_clear_split_8060_8076"
+      ],
+      "notes": [
+        "clear old padding"
+      ],
+      "ge_stock": "03E00008",
+      "ge_stock_disasm": "jr $ra",
+      "ge_480i": "00000000",
+      "ge_480i_disasm": "nop",
+      "tnd_base": "00000000",
+      "tnd_base_disasm": "nop",
+      "ge_changed": true,
+      "tnd_matches_ge_stock": false,
+      "roms": {
+        "GE stock": {
+          "word": "03E00008",
+          "disasm": "jr $ra"
+        },
+        "GE 480i": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "TND base": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "TND tables only": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "single all": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "split8030 all": {
+          "word": "00000000",
+          "disasm": "nop"
+        }
+      }
+    },
+    {
+      "offset": "0x003D8C",
+      "groups": [
+        "B_clear_split_8030_8076",
+        "B_clear_split_8040_8076",
+        "B_clear_split_8060_8076"
+      ],
+      "notes": [
+        "clear old padding"
+      ],
+      "ge_stock": "00000000",
+      "ge_stock_disasm": "nop",
+      "ge_480i": "00000000",
+      "ge_480i_disasm": "nop",
+      "tnd_base": "00000000",
+      "tnd_base_disasm": "nop",
+      "ge_changed": false,
+      "tnd_matches_ge_stock": true,
+      "roms": {
+        "GE stock": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "GE 480i": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "TND base": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "TND tables only": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "single all": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "split8030 all": {
+          "word": "00000000",
+          "disasm": "nop"
+        }
+      }
+    },
+    {
+      "offset": "0x00441C",
+      "groups": [
+        "F_vi_word"
+      ],
+      "notes": [
+        "GE 480i VI-related word"
+      ],
+      "ge_stock": "00187840",
+      "ge_stock_disasm": "sll $t7, $t8, 1",
+      "ge_480i": "00187880",
+      "ge_480i_disasm": "sll $t7, $t8, 2",
+      "tnd_base": "00187840",
+      "tnd_base_disasm": "sll $t7, $t8, 1",
+      "ge_changed": true,
+      "tnd_matches_ge_stock": true,
+      "roms": {
+        "GE stock": {
+          "word": "00187840",
+          "disasm": "sll $t7, $t8, 1"
+        },
+        "GE 480i": {
+          "word": "00187880",
+          "disasm": "sll $t7, $t8, 2"
+        },
+        "TND base": {
+          "word": "00187840",
+          "disasm": "sll $t7, $t8, 1"
+        },
+        "TND tables only": {
+          "word": "00187840",
+          "disasm": "sll $t7, $t8, 1"
+        },
+        "single all": {
+          "word": "00187880",
+          "disasm": "sll $t7, $t8, 2"
+        },
+        "split8030 all": {
+          "word": "00187880",
+          "disasm": "sll $t7, $t8, 2"
+        }
+      }
+    },
+    {
+      "offset": "0x0046B4",
+      "groups": [
+        "C_split_select_global"
+      ],
+      "notes": [
+        "load g_ViBackIndex base"
+      ],
+      "ge_stock": "3C038006",
+      "ge_stock_disasm": "lui $v1, 0x8006",
+      "ge_480i": "3C048002",
+      "ge_480i_disasm": "lui $a0, 0x8002",
+      "tnd_base": "3C048002",
+      "tnd_base_disasm": "lui $a0, 0x8002",
+      "ge_changed": true,
+      "tnd_matches_ge_stock": false,
+      "roms": {
+        "GE stock": {
+          "word": "3C038006",
+          "disasm": "lui $v1, 0x8006"
+        },
+        "GE 480i": {
+          "word": "3C048002",
+          "disasm": "lui $a0, 0x8002"
+        },
+        "TND base": {
+          "word": "3C048002",
+          "disasm": "lui $a0, 0x8002"
+        },
+        "TND tables only": {
+          "word": "3C048002",
+          "disasm": "lui $a0, 0x8002"
+        },
+        "single all": {
+          "word": "3C048002",
+          "disasm": "lui $a0, 0x8002"
+        },
+        "split8030 all": {
+          "word": "3C038006",
+          "disasm": "lui $v1, 0x8006"
+        }
+      }
+    },
+    {
+      "offset": "0x0046B8",
+      "groups": [
+        "C_split_select_global"
+      ],
+      "notes": [
+        "load g_ViBackIndex"
+      ],
+      "ge_stock": "24630879",
+      "ge_stock_disasm": "addiu $v1, $v1, 0x879",
+      "ge_480i": "0C00012B",
+      "ge_480i_disasm": "jal 0x4ac",
+      "tnd_base": "0C00012B",
+      "tnd_base_disasm": "jal 0x4ac",
+      "ge_changed": true,
+      "tnd_matches_ge_stock": false,
+      "roms": {
+        "GE stock": {
+          "word": "24630879",
+          "disasm": "addiu $v1, $v1, 0x879"
+        },
+        "GE 480i": {
+          "word": "0C00012B",
+          "disasm": "jal 0x4ac"
+        },
+        "TND base": {
+          "word": "0C00012B",
+          "disasm": "jal 0x4ac"
+        },
+        "TND tables only": {
+          "word": "0C00012B",
+          "disasm": "jal 0x4ac"
+        },
+        "single all": {
+          "word": "0C00012B",
+          "disasm": "jal 0x4ac"
+        },
+        "split8030 all": {
+          "word": "90780879",
+          "disasm": "lbu $t8, 0x879($v1)"
+        }
+      }
+    },
+    {
+      "offset": "0x0046BC",
+      "groups": [
+        "C_split_select_global"
+      ],
+      "notes": [
+        "index * sizeof(pointer)"
+      ],
+      "ge_stock": "90780000",
+      "ge_stock_disasm": "lbu $t8, ($v1)",
+      "ge_480i": "8C84417C",
+      "ge_480i_disasm": "lw $a0, 0x417c($a0)",
+      "tnd_base": "8C84417C",
+      "tnd_base_disasm": "lw $a0, 0x417c($a0)",
+      "ge_changed": true,
+      "tnd_matches_ge_stock": false,
+      "roms": {
+        "GE stock": {
+          "word": "90780000",
+          "disasm": "lbu $t8, ($v1)"
+        },
+        "GE 480i": {
+          "word": "8C84417C",
+          "disasm": "lw $a0, 0x417c($a0)"
+        },
+        "TND base": {
+          "word": "8C84417C",
+          "disasm": "lw $a0, 0x417c($a0)"
+        },
+        "TND tables only": {
+          "word": "8C84417C",
+          "disasm": "lw $a0, 0x417c($a0)"
+        },
+        "single all": {
+          "word": "8C84417C",
+          "disasm": "lw $a0, 0x417c($a0)"
+        },
+        "split8030 all": {
+          "word": "0018C080",
+          "disasm": "sll $t8, $t8, 2"
+        }
+      }
+    },
+    {
+      "offset": "0x0046C0",
+      "groups": [
+        "C_split_select_global"
+      ],
+      "notes": [
+        "framebuffer global base upper"
+      ],
+      "ge_stock": "3C0E803B",
+      "ge_stock_disasm": "lui $t6, 0x803b",
+      "ge_480i": "3C038006",
+      "ge_480i_disasm": "lui $v1, 0x8006",
+      "tnd_base": "3C038006",
+      "tnd_base_disasm": "lui $v1, 0x8006",
+      "ge_changed": true,
+      "tnd_matches_ge_stock": false,
+      "roms": {
+        "GE stock": {
+          "word": "3C0E803B",
+          "disasm": "lui $t6, 0x803b"
+        },
+        "GE 480i": {
+          "word": "3C038006",
+          "disasm": "lui $v1, 0x8006"
+        },
+        "TND base": {
+          "word": "3C038006",
+          "disasm": "lui $v1, 0x8006"
+        },
+        "TND tables only": {
+          "word": "3C038006",
+          "disasm": "lui $v1, 0x8006"
+        },
+        "single all": {
+          "word": "3C038006",
+          "disasm": "lui $v1, 0x8006"
+        },
+        "split8030 all": {
+          "word": "3C048002",
+          "disasm": "lui $a0, 0x8002"
+        }
+      }
+    },
+    {
+      "offset": "0x0046C4",
+      "groups": [
+        "C_split_select_global"
+      ],
+      "notes": [
+        "select framebuffer global address"
+      ],
+      "ge_stock": "25CE5000",
+      "ge_stock_disasm": "addiu $t6, $t6, 0x5000",
+      "ge_480i": "90780879",
+      "ge_480i_disasm": "lbu $t8, 0x879($v1)",
+      "tnd_base": "90780879",
+      "tnd_base_disasm": "lbu $t8, 0x879($v1)",
+      "ge_changed": true,
+      "tnd_matches_ge_stock": false,
+      "roms": {
+        "GE stock": {
+          "word": "25CE5000",
+          "disasm": "addiu $t6, $t6, 0x5000"
+        },
+        "GE 480i": {
+          "word": "90780879",
+          "disasm": "lbu $t8, 0x879($v1)"
+        },
+        "TND base": {
+          "word": "90780879",
+          "disasm": "lbu $t8, 0x879($v1)"
+        },
+        "TND tables only": {
+          "word": "90780879",
+          "disasm": "lbu $t8, 0x879($v1)"
+        },
+        "single all": {
+          "word": "90780879",
+          "disasm": "lbu $t8, 0x879($v1)"
+        },
+        "split8030 all": {
+          "word": "00982021",
+          "disasm": "addu $a0, $a0, $t8"
+        }
+      }
+    },
+    {
+      "offset": "0x0046C8",
+      "groups": [
+        "C_fb_calc",
+        "C_single_offset_zero",
+        "C_split_select_global"
+      ],
+      "notes": [
+        "convert selected framebuffer pointer",
+        "fb size upper for 0x96000",
+        "single-buffer active offset zero"
+      ],
+      "ge_stock": "00187880",
+      "ge_stock_disasm": "sll $t7, $t8, 2",
+      "ge_480i": "3C0F0009",
+      "ge_480i_disasm": "lui $t7, 9",
+      "tnd_base": "00187880",
+      "tnd_base_disasm": "sll $t7, $t8, 2",
+      "ge_changed": true,
+      "tnd_matches_ge_stock": true,
+      "roms": {
+        "GE stock": {
+          "word": "00187880",
+          "disasm": "sll $t7, $t8, 2"
+        },
+        "GE 480i": {
+          "word": "3C0F0009",
+          "disasm": "lui $t7, 9"
+        },
+        "TND base": {
+          "word": "00187880",
+          "disasm": "sll $t7, $t8, 2"
+        },
+        "TND tables only": {
+          "word": "00187880",
+          "disasm": "sll $t7, $t8, 2"
+        },
+        "single all": {
+          "word": "00007825",
+          "disasm": "move $t7, $zero"
+        },
+        "split8030 all": {
+          "word": "0C00012B",
+          "disasm": "jal 0x4ac"
+        }
+      }
+    },
+    {
+      "offset": "0x0046CC",
+      "groups": [
+        "C_fb_calc",
+        "C_single_offset_zero",
+        "C_split_select_global"
+      ],
+      "notes": [
+        "clear old offset calc",
+        "fb size lower for 0x96000",
+        "load selected framebuffer global in delay slot"
+      ],
+      "ge_stock": "01F87821",
+      "ge_stock_disasm": "addu $t7, $t7, $t8",
+      "ge_480i": "35EF6000",
+      "ge_480i_disasm": "ori $t7, $t7, 0x6000",
+      "tnd_base": "01F87821",
+      "tnd_base_disasm": "addu $t7, $t7, $t8",
+      "ge_changed": true,
+      "tnd_matches_ge_stock": true,
+      "roms": {
+        "GE stock": {
+          "word": "01F87821",
+          "disasm": "addu $t7, $t7, $t8"
+        },
+        "GE 480i": {
+          "word": "35EF6000",
+          "disasm": "ori $t7, $t7, 0x6000"
+        },
+        "TND base": {
+          "word": "01F87821",
+          "disasm": "addu $t7, $t7, $t8"
+        },
+        "TND tables only": {
+          "word": "01F87821",
+          "disasm": "addu $t7, $t7, $t8"
+        },
+        "single all": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "split8030 all": {
+          "word": "8C84417C",
+          "disasm": "lw $a0, 0x417c($a0)"
+        }
+      }
+    },
+    {
+      "offset": "0x0046D0",
+      "groups": [
+        "C_fb_calc",
+        "C_single_offset_zero",
+        "C_split_select_global"
+      ],
+      "notes": [
+        "clear old offset calc",
+        "load g_ViBackData upper",
+        "multu t8,t7"
+      ],
+      "ge_stock": "000F7880",
+      "ge_stock_disasm": "sll $t7, $t7, 2",
+      "ge_480i": "030F0018",
+      "ge_480i_disasm": "mult $t8, $t7",
+      "tnd_base": "000F7880",
+      "tnd_base_disasm": "sll $t7, $t7, 2",
+      "ge_changed": true,
+      "tnd_matches_ge_stock": true,
+      "roms": {
+        "GE stock": {
+          "word": "000F7880",
+          "disasm": "sll $t7, $t7, 2"
+        },
+        "GE 480i": {
+          "word": "030F0018",
+          "disasm": "mult $t8, $t7"
+        },
+        "TND base": {
+          "word": "000F7880",
+          "disasm": "sll $t7, $t7, 2"
+        },
+        "TND tables only": {
+          "word": "000F7880",
+          "disasm": "sll $t7, $t7, 2"
+        },
+        "single all": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "split8030 all": {
+          "word": "3C188002",
+          "disasm": "lui $t8, 0x8002"
+        }
+      }
+    },
+    {
+      "offset": "0x0046D4",
+      "groups": [
+        "C_fb_calc",
+        "C_single_offset_zero",
+        "C_split_select_global"
+      ],
+      "notes": [
+        "clear old offset calc",
+        "clear old subtract path",
+        "load g_ViBackData"
+      ],
+      "ge_stock": "01F87823",
+      "ge_stock_disasm": "subu $t7, $t7, $t8",
+      "ge_480i": "00000000",
+      "ge_480i_disasm": "nop",
+      "tnd_base": "01F87823",
+      "tnd_base_disasm": "subu $t7, $t7, $t8",
+      "ge_changed": true,
+      "tnd_matches_ge_stock": true,
+      "roms": {
+        "GE stock": {
+          "word": "01F87823",
+          "disasm": "subu $t7, $t7, $t8"
+        },
+        "GE 480i": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "TND base": {
+          "word": "01F87823",
+          "disasm": "subu $t7, $t7, $t8"
+        },
+        "TND tables only": {
+          "word": "01F87823",
+          "disasm": "subu $t7, $t7, $t8"
+        },
+        "single all": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "split8030 all": {
+          "word": "8F1832A8",
+          "disasm": "lw $t8, 0x32a8($t8)"
+        }
+      }
+    },
+    {
+      "offset": "0x0046D8",
+      "groups": [
+        "C_fb_calc",
+        "C_single_offset_zero",
+        "C_split_select_global"
+      ],
+      "notes": [
+        "clear old offset calc",
+        "mflo t7"
+      ],
+      "ge_stock": "000F7880",
+      "ge_stock_disasm": "sll $t7, $t7, 2",
+      "ge_480i": "00007812",
+      "ge_480i_disasm": "mflo $t7",
+      "tnd_base": "000F7880",
+      "tnd_base_disasm": "sll $t7, $t7, 2",
+      "ge_changed": true,
+      "tnd_matches_ge_stock": true,
+      "roms": {
+        "GE stock": {
+          "word": "000F7880",
+          "disasm": "sll $t7, $t7, 2"
+        },
+        "GE 480i": {
+          "word": "00007812",
+          "disasm": "mflo $t7"
+        },
+        "TND base": {
+          "word": "000F7880",
+          "disasm": "sll $t7, $t7, 2"
+        },
+        "TND tables only": {
+          "word": "000F7880",
+          "disasm": "sll $t7, $t7, 2"
+        },
+        "single all": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "split8030 all": {
+          "word": "00000000",
+          "disasm": "nop"
+        }
+      }
+    },
+    {
+      "offset": "0x0046DC",
+      "groups": [
+        "C_fb_calc",
+        "C_single_offset_zero",
+        "C_split_select_global"
+      ],
+      "notes": [
+        "clear old offset calc",
+        "clear old subtract path"
+      ],
+      "ge_stock": "01F87823",
+      "ge_stock_disasm": "subu $t7, $t7, $t8",
+      "ge_480i": "00000000",
+      "ge_480i_disasm": "nop",
+      "tnd_base": "01F87823",
+      "tnd_base_disasm": "subu $t7, $t7, $t8",
+      "ge_changed": true,
+      "tnd_matches_ge_stock": true,
+      "roms": {
+        "GE stock": {
+          "word": "01F87823",
+          "disasm": "subu $t7, $t7, $t8"
+        },
+        "GE 480i": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "TND base": {
+          "word": "01F87823",
+          "disasm": "subu $t7, $t7, $t8"
+        },
+        "TND tables only": {
+          "word": "01F87823",
+          "disasm": "subu $t7, $t7, $t8"
+        },
+        "single all": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "split8030 all": {
+          "word": "00000000",
+          "disasm": "nop"
+        }
+      }
+    },
+    {
+      "offset": "0x0046E0",
+      "groups": [
+        "C_split_select_global"
+      ],
+      "notes": [
+        "clear old offset calc"
+      ],
+      "ge_stock": "3C188002",
+      "ge_stock_disasm": "lui $t8, 0x8002",
+      "ge_480i": "3C188002",
+      "ge_480i_disasm": "lui $t8, 0x8002",
+      "tnd_base": "3C188002",
+      "tnd_base_disasm": "lui $t8, 0x8002",
+      "ge_changed": false,
+      "tnd_matches_ge_stock": true,
+      "roms": {
+        "GE stock": {
+          "word": "3C188002",
+          "disasm": "lui $t8, 0x8002"
+        },
+        "GE 480i": {
+          "word": "3C188002",
+          "disasm": "lui $t8, 0x8002"
+        },
+        "TND base": {
+          "word": "3C188002",
+          "disasm": "lui $t8, 0x8002"
+        },
+        "TND tables only": {
+          "word": "3C188002",
+          "disasm": "lui $t8, 0x8002"
+        },
+        "single all": {
+          "word": "3C188002",
+          "disasm": "lui $t8, 0x8002"
+        },
+        "split8030 all": {
+          "word": "00000000",
+          "disasm": "nop"
+        }
+      }
+    },
+    {
+      "offset": "0x0046E4",
+      "groups": [
+        "C_split_select_global"
+      ],
+      "notes": [
+        "clear old offset calc"
+      ],
+      "ge_stock": "8F1832A8",
+      "ge_stock_disasm": "lw $t8, 0x32a8($t8)",
+      "ge_480i": "8F1832A8",
+      "ge_480i_disasm": "lw $t8, 0x32a8($t8)",
+      "tnd_base": "8F1832A8",
+      "tnd_base_disasm": "lw $t8, 0x32a8($t8)",
+      "ge_changed": false,
+      "tnd_matches_ge_stock": true,
+      "roms": {
+        "GE stock": {
+          "word": "8F1832A8",
+          "disasm": "lw $t8, 0x32a8($t8)"
+        },
+        "GE 480i": {
+          "word": "8F1832A8",
+          "disasm": "lw $t8, 0x32a8($t8)"
+        },
+        "TND base": {
+          "word": "8F1832A8",
+          "disasm": "lw $t8, 0x32a8($t8)"
+        },
+        "TND tables only": {
+          "word": "8F1832A8",
+          "disasm": "lw $t8, 0x32a8($t8)"
+        },
+        "single all": {
+          "word": "8F1832A8",
+          "disasm": "lw $t8, 0x32a8($t8)"
+        },
+        "split8030 all": {
+          "word": "00000000",
+          "disasm": "nop"
+        }
+      }
+    },
+    {
+      "offset": "0x0046E8",
+      "groups": [
+        "C_fb_calc",
+        "C_single_offset_zero",
+        "C_split_select_global"
+      ],
+      "notes": [
+        "clear old offset calc",
+        "clear old store path"
+      ],
+      "ge_stock": "000F7AC0",
+      "ge_stock_disasm": "sll $t7, $t7, 0xb",
+      "ge_480i": "00000000",
+      "ge_480i_disasm": "nop",
+      "tnd_base": "000F7AC0",
+      "tnd_base_disasm": "sll $t7, $t7, 0xb",
+      "ge_changed": true,
+      "tnd_matches_ge_stock": true,
+      "roms": {
+        "GE stock": {
+          "word": "000F7AC0",
+          "disasm": "sll $t7, $t7, 0xb"
+        },
+        "GE 480i": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "TND base": {
+          "word": "000F7AC0",
+          "disasm": "sll $t7, $t7, 0xb"
+        },
+        "TND tables only": {
+          "word": "000F7AC0",
+          "disasm": "sll $t7, $t7, 0xb"
+        },
+        "single all": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "split8030 all": {
+          "word": "00000000",
+          "disasm": "nop"
+        }
+      }
+    },
+    {
+      "offset": "0x0046EC",
+      "groups": [
+        "C_split_select_global"
+      ],
+      "notes": [
+        "selected framebuffer pointer"
+      ],
+      "ge_stock": "01EEC821",
+      "ge_stock_disasm": "addu $t9, $t7, $t6",
+      "ge_480i": "01E2C821",
+      "ge_480i_disasm": "addu $t9, $t7, $v0",
+      "tnd_base": "01E2C821",
+      "tnd_base_disasm": "addu $t9, $t7, $v0",
+      "ge_changed": true,
+      "tnd_matches_ge_stock": false,
+      "roms": {
+        "GE stock": {
+          "word": "01EEC821",
+          "disasm": "addu $t9, $t7, $t6"
+        },
+        "GE 480i": {
+          "word": "01E2C821",
+          "disasm": "addu $t9, $t7, $v0"
+        },
+        "TND base": {
+          "word": "01E2C821",
+          "disasm": "addu $t9, $t7, $v0"
+        },
+        "TND tables only": {
+          "word": "01E2C821",
+          "disasm": "addu $t9, $t7, $v0"
+        },
+        "single all": {
+          "word": "01E2C821",
+          "disasm": "addu $t9, $t7, $v0"
+        },
+        "split8030 all": {
+          "word": "0040C825",
+          "disasm": "move $t9, $v0"
+        }
+      }
+    },
+    {
+      "offset": "0x0046F0",
+      "groups": [
+        "C_split_select_global"
+      ],
+      "notes": [
+        "store selected framebuffer pointer"
+      ],
+      "ge_stock": "AF190028",
+      "ge_stock_disasm": "sw $t9, 0x28($t8)",
+      "ge_480i": "AF190028",
+      "ge_480i_disasm": "sw $t9, 0x28($t8)",
+      "tnd_base": "AF190028",
+      "tnd_base_disasm": "sw $t9, 0x28($t8)",
+      "ge_changed": false,
+      "tnd_matches_ge_stock": true,
+      "roms": {
+        "GE stock": {
+          "word": "AF190028",
+          "disasm": "sw $t9, 0x28($t8)"
+        },
+        "GE 480i": {
+          "word": "AF190028",
+          "disasm": "sw $t9, 0x28($t8)"
+        },
+        "TND base": {
+          "word": "AF190028",
+          "disasm": "sw $t9, 0x28($t8)"
+        },
+        "TND tables only": {
+          "word": "AF190028",
+          "disasm": "sw $t9, 0x28($t8)"
+        },
+        "single all": {
+          "word": "AF190028",
+          "disasm": "sw $t9, 0x28($t8)"
+        },
+        "split8030 all": {
+          "word": "AF190028",
+          "disasm": "sw $t9, 0x28($t8)"
+        }
+      }
+    },
+    {
+      "offset": "0x006584",
+      "groups": [
+        "D_fb_fixed_8040",
+        "D_fb_single_8076A000",
+        "D_fb_split_8030_8076",
+        "D_fb_split_8040_8076",
+        "D_fb_split_8060_8076",
+        "D_mem_fn"
+      ],
+      "notes": [
+        "fb0 base upper 0x80300000",
+        "fb0 base upper 0x80400000",
+        "fb0 base upper 0x80600000",
+        "fixed fb0 base upper 0x80400000",
+        "single fb base upper 0x8076A000",
+        "upper RAM end pointer"
+      ],
+      "ge_stock": "3C02A000",
+      "ge_stock_disasm": "lui $v0, 0xa000",
+      "ge_480i": "3C048080",
+      "ge_480i_disasm": "lui $a0, 0x8080",
+      "tnd_base": "3C048000",
+      "tnd_base_disasm": "lui $a0, 0x8000",
+      "ge_changed": true,
+      "tnd_matches_ge_stock": false,
+      "roms": {
+        "GE stock": {
+          "word": "3C02A000",
+          "disasm": "lui $v0, 0xa000"
+        },
+        "GE 480i": {
+          "word": "3C048080",
+          "disasm": "lui $a0, 0x8080"
+        },
+        "TND base": {
+          "word": "3C048000",
+          "disasm": "lui $a0, 0x8000"
+        },
+        "TND tables only": {
+          "word": "3C048000",
+          "disasm": "lui $a0, 0x8000"
+        },
+        "single all": {
+          "word": "3C048076",
+          "disasm": "lui $a0, 0x8076"
+        },
+        "split8030 all": {
+          "word": "3C048030",
+          "disasm": "lui $a0, 0x8030"
+        }
+      }
+    },
+    {
+      "offset": "0x006588",
+      "groups": [
+        "D_fb_fixed_8040",
+        "D_fb_single_8076A000",
+        "D_fb_split_8030_8076",
+        "D_fb_split_8040_8076",
+        "D_fb_split_8060_8076",
+        "D_mem_fn"
+      ],
+      "notes": [
+        "clear old load",
+        "fb size upper for 0x96000",
+        "fb0 base lower 0x80300000",
+        "fb0 base lower 0x80400000",
+        "fb0 base lower 0x80600000",
+        "single fb base lower 0x8076A000"
+      ],
+      "ge_stock": "00827025",
+      "ge_stock_disasm": "or $t6, $a0, $v0",
+      "ge_480i": "00000000",
+      "ge_480i_disasm": "nop",
+      "tnd_base": "8C840318",
+      "tnd_base_disasm": "lw $a0, 0x318($a0)",
+      "ge_changed": true,
+      "tnd_matches_ge_stock": false,
+      "roms": {
+        "GE stock": {
+          "word": "00827025",
+          "disasm": "or $t6, $a0, $v0"
+        },
+        "GE 480i": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "TND base": {
+          "word": "8C840318",
+          "disasm": "lw $a0, 0x318($a0)"
+        },
+        "TND tables only": {
+          "word": "8C840318",
+          "disasm": "lw $a0, 0x318($a0)"
+        },
+        "single all": {
+          "word": "3484A000",
+          "disasm": "ori $a0, $a0, 0xa000"
+        },
+        "split8030 all": {
+          "word": "34840000",
+          "disasm": "ori $a0, $a0, 0"
+        }
+      }
+    },
+    {
+      "offset": "0x00658C",
+      "groups": [
+        "D_fb_fixed_8040",
+        "D_fb_single_8076A000",
+        "D_fb_split_8030_8076",
+        "D_fb_split_8040_8076",
+        "D_fb_split_8060_8076",
+        "D_mem_fn"
+      ],
+      "notes": [
+        "fb size lower for 0x96000",
+        "fb size upper for 0x96000",
+        "fb1 = fb0 for single buffering",
+        "fb1 base upper 0x8076A000"
+      ],
+      "ge_stock": "3C018002",
+      "ge_stock_disasm": "lui $at, 0x8002",
+      "ge_480i": "3C020009",
+      "ge_480i_disasm": "lui $v0, 9",
+      "tnd_base": "3C020002",
+      "tnd_base_disasm": "lui $v0, 2",
+      "ge_changed": true,
+      "tnd_matches_ge_stock": false,
+      "roms": {
+        "GE stock": {
+          "word": "3C018002",
+          "disasm": "lui $at, 0x8002"
+        },
+        "GE 480i": {
+          "word": "3C020009",
+          "disasm": "lui $v0, 9"
+        },
+        "TND base": {
+          "word": "3C020002",
+          "disasm": "lui $v0, 2"
+        },
+        "TND tables only": {
+          "word": "3C020002",
+          "disasm": "lui $v0, 2"
+        },
+        "single all": {
+          "word": "00802825",
+          "disasm": "move $a1, $a0"
+        },
+        "split8030 all": {
+          "word": "3C058076",
+          "disasm": "lui $a1, 0x8076"
+        }
+      }
+    },
+    {
+      "offset": "0x006590",
+      "groups": [
+        "D_fb_fixed_8040",
+        "D_fb_single_8076A000",
+        "D_fb_split_8030_8076",
+        "D_fb_split_8040_8076",
+        "D_fb_split_8060_8076",
+        "D_mem_fn"
+      ],
+      "notes": [
+        "fb size lower for 0x96000",
+        "fb1 = fb0 + size",
+        "fb1 base lower 0x8076A000",
+        "uncached segment upper"
+      ],
+      "ge_stock": "AC2E417C",
+      "ge_stock_disasm": "sw $t6, 0x417c($at)",
+      "ge_480i": "24426000",
+      "ge_480i_disasm": "addiu $v0, $v0, 0x6000",
+      "tnd_base": "24425800",
+      "tnd_base_disasm": "addiu $v0, $v0, 0x5800",
+      "ge_changed": true,
+      "tnd_matches_ge_stock": false,
+      "roms": {
+        "GE stock": {
+          "word": "AC2E417C",
+          "disasm": "sw $t6, 0x417c($at)"
+        },
+        "GE 480i": {
+          "word": "24426000",
+          "disasm": "addiu $v0, $v0, 0x6000"
+        },
+        "TND base": {
+          "word": "24425800",
+          "disasm": "addiu $v0, $v0, 0x5800"
+        },
+        "TND tables only": {
+          "word": "24425800",
+          "disasm": "addiu $v0, $v0, 0x5800"
+        },
+        "single all": {
+          "word": "3C02A000",
+          "disasm": "lui $v0, 0xa000"
+        },
+        "split8030 all": {
+          "word": "34A5A000",
+          "disasm": "ori $a1, $a1, 0xa000"
+        }
+      }
+    },
+    {
+      "offset": "0x006594",
+      "groups": [
+        "D_fb_fixed_8040",
+        "D_fb_single_8076A000",
+        "D_fb_split_8030_8076",
+        "D_fb_split_8040_8076",
+        "D_fb_split_8060_8076"
+      ],
+      "notes": [
+        "fb0 uncached",
+        "uncached segment upper"
+      ],
+      "ge_stock": "3C018002",
+      "ge_stock_disasm": "lui $at, 0x8002",
+      "ge_480i": "00822823",
+      "ge_480i_disasm": "subu $a1, $a0, $v0",
+      "tnd_base": "00822823",
+      "tnd_base_disasm": "subu $a1, $a0, $v0",
+      "ge_changed": true,
+      "tnd_matches_ge_stock": false,
+      "roms": {
+        "GE stock": {
+          "word": "3C018002",
+          "disasm": "lui $at, 0x8002"
+        },
+        "GE 480i": {
+          "word": "00822823",
+          "disasm": "subu $a1, $a0, $v0"
+        },
+        "TND base": {
+          "word": "00822823",
+          "disasm": "subu $a1, $a0, $v0"
+        },
+        "TND tables only": {
+          "word": "00822823",
+          "disasm": "subu $a1, $a0, $v0"
+        },
+        "single all": {
+          "word": "00827025",
+          "disasm": "or $t6, $a0, $v0"
+        },
+        "split8030 all": {
+          "word": "3C02A000",
+          "disasm": "lui $v0, 0xa000"
+        }
+      }
+    },
+    {
+      "offset": "0x006598",
+      "groups": [
+        "D_fb_fixed_8040",
+        "D_fb_single_8076A000",
+        "D_fb_split_8030_8076",
+        "D_fb_split_8040_8076",
+        "D_fb_split_8060_8076"
+      ],
+      "notes": [
+        "fb0 uncached",
+        "global pointer base"
+      ],
+      "ge_stock": "00A27825",
+      "ge_stock_disasm": "or $t7, $a1, $v0",
+      "ge_480i": "00A22023",
+      "ge_480i_disasm": "subu $a0, $a1, $v0",
+      "tnd_base": "00A22023",
+      "tnd_base_disasm": "subu $a0, $a1, $v0",
+      "ge_changed": true,
+      "tnd_matches_ge_stock": false,
+      "roms": {
+        "GE stock": {
+          "word": "00A27825",
+          "disasm": "or $t7, $a1, $v0"
+        },
+        "GE 480i": {
+          "word": "00A22023",
+          "disasm": "subu $a0, $a1, $v0"
+        },
+        "TND base": {
+          "word": "00A22023",
+          "disasm": "subu $a0, $a1, $v0"
+        },
+        "TND tables only": {
+          "word": "00A22023",
+          "disasm": "subu $a0, $a1, $v0"
+        },
+        "single all": {
+          "word": "3C018002",
+          "disasm": "lui $at, 0x8002"
+        },
+        "split8030 all": {
+          "word": "00827025",
+          "disasm": "or $t6, $a0, $v0"
+        }
+      }
+    },
+    {
+      "offset": "0x00659C",
+      "groups": [
+        "D_fb_fixed_8040",
+        "D_fb_single_8076A000",
+        "D_fb_split_8030_8076",
+        "D_fb_split_8040_8076",
+        "D_fb_split_8060_8076"
+      ],
+      "notes": [
+        "global pointer base",
+        "store fb0 pointer"
+      ],
+      "ge_stock": "03E00008",
+      "ge_stock_disasm": "jr $ra",
+      "ge_480i": "3C02A000",
+      "ge_480i_disasm": "lui $v0, 0xa000",
+      "tnd_base": "3C02A000",
+      "tnd_base_disasm": "lui $v0, 0xa000",
+      "ge_changed": true,
+      "tnd_matches_ge_stock": false,
+      "roms": {
+        "GE stock": {
+          "word": "03E00008",
+          "disasm": "jr $ra"
+        },
+        "GE 480i": {
+          "word": "3C02A000",
+          "disasm": "lui $v0, 0xa000"
+        },
+        "TND base": {
+          "word": "3C02A000",
+          "disasm": "lui $v0, 0xa000"
+        },
+        "TND tables only": {
+          "word": "3C02A000",
+          "disasm": "lui $v0, 0xa000"
+        },
+        "single all": {
+          "word": "AC2E417C",
+          "disasm": "sw $t6, 0x417c($at)"
+        },
+        "split8030 all": {
+          "word": "3C018002",
+          "disasm": "lui $at, 0x8002"
+        }
+      }
+    },
+    {
+      "offset": "0x0065A0",
+      "groups": [
+        "D_fb_fixed_8040",
+        "D_fb_single_8076A000",
+        "D_fb_split_8030_8076",
+        "D_fb_split_8040_8076",
+        "D_fb_split_8060_8076"
+      ],
+      "notes": [
+        "fb1 uncached",
+        "store fb0 pointer"
+      ],
+      "ge_stock": "AC2F4180",
+      "ge_stock_disasm": "sw $t7, 0x4180($at)",
+      "ge_480i": "00827025",
+      "ge_480i_disasm": "or $t6, $a0, $v0",
+      "tnd_base": "00827025",
+      "tnd_base_disasm": "or $t6, $a0, $v0",
+      "ge_changed": true,
+      "tnd_matches_ge_stock": false,
+      "roms": {
+        "GE stock": {
+          "word": "AC2F4180",
+          "disasm": "sw $t7, 0x4180($at)"
+        },
+        "GE 480i": {
+          "word": "00827025",
+          "disasm": "or $t6, $a0, $v0"
+        },
+        "TND base": {
+          "word": "00827025",
+          "disasm": "or $t6, $a0, $v0"
+        },
+        "TND tables only": {
+          "word": "00827025",
+          "disasm": "or $t6, $a0, $v0"
+        },
+        "single all": {
+          "word": "00A27825",
+          "disasm": "or $t7, $a1, $v0"
+        },
+        "split8030 all": {
+          "word": "AC2E417C",
+          "disasm": "sw $t6, 0x417c($at)"
+        }
+      }
+    },
+    {
+      "offset": "0x0065A4",
+      "groups": [
+        "D_fb_fixed_8040",
+        "D_fb_single_8076A000",
+        "D_fb_split_8030_8076",
+        "D_fb_split_8040_8076",
+        "D_fb_split_8060_8076"
+      ],
+      "notes": [
+        "fb1 uncached",
+        "return"
+      ],
+      "ge_stock": "27BDFFE8",
+      "ge_stock_disasm": "addiu $sp, $sp, -0x18",
+      "ge_480i": "3C018002",
+      "ge_480i_disasm": "lui $at, 0x8002",
+      "tnd_base": "3C018002",
+      "tnd_base_disasm": "lui $at, 0x8002",
+      "ge_changed": true,
+      "tnd_matches_ge_stock": false,
+      "roms": {
+        "GE stock": {
+          "word": "27BDFFE8",
+          "disasm": "addiu $sp, $sp, -0x18"
+        },
+        "GE 480i": {
+          "word": "3C018002",
+          "disasm": "lui $at, 0x8002"
+        },
+        "TND base": {
+          "word": "3C018002",
+          "disasm": "lui $at, 0x8002"
+        },
+        "TND tables only": {
+          "word": "3C018002",
+          "disasm": "lui $at, 0x8002"
+        },
+        "single all": {
+          "word": "03E00008",
+          "disasm": "jr $ra"
+        },
+        "split8030 all": {
+          "word": "00A27825",
+          "disasm": "or $t7, $a1, $v0"
+        }
+      }
+    },
+    {
+      "offset": "0x0065A8",
+      "groups": [
+        "D_fb_fixed_8040",
+        "D_fb_single_8076A000",
+        "D_fb_split_8030_8076",
+        "D_fb_split_8040_8076",
+        "D_fb_split_8060_8076"
+      ],
+      "notes": [
+        "return",
+        "store fb1 pointer in delay slot"
+      ],
+      "ge_stock": "AFBF0014",
+      "ge_stock_disasm": "sw $ra, 0x14($sp)",
+      "ge_480i": "AC2E417C",
+      "ge_480i_disasm": "sw $t6, 0x417c($at)",
+      "tnd_base": "AC2E417C",
+      "tnd_base_disasm": "sw $t6, 0x417c($at)",
+      "ge_changed": true,
+      "tnd_matches_ge_stock": false,
+      "roms": {
+        "GE stock": {
+          "word": "AFBF0014",
+          "disasm": "sw $ra, 0x14($sp)"
+        },
+        "GE 480i": {
+          "word": "AC2E417C",
+          "disasm": "sw $t6, 0x417c($at)"
+        },
+        "TND base": {
+          "word": "AC2E417C",
+          "disasm": "sw $t6, 0x417c($at)"
+        },
+        "TND tables only": {
+          "word": "AC2E417C",
+          "disasm": "sw $t6, 0x417c($at)"
+        },
+        "single all": {
+          "word": "AC2F4180",
+          "disasm": "sw $t7, 0x4180($at)"
+        },
+        "split8030 all": {
+          "word": "03E00008",
+          "disasm": "jr $ra"
+        }
+      }
+    },
+    {
+      "offset": "0x0065AC",
+      "groups": [
+        "D_fb_fixed_8040",
+        "D_fb_single_8076A000",
+        "D_fb_split_8030_8076",
+        "D_fb_split_8040_8076",
+        "D_fb_split_8060_8076"
+      ],
+      "notes": [
+        "clear old fb1 calc",
+        "store fb1 pointer in delay slot"
+      ],
+      "ge_stock": "3C04803B",
+      "ge_stock_disasm": "lui $a0, 0x803b",
+      "ge_480i": "00A27825",
+      "ge_480i_disasm": "or $t7, $a1, $v0",
+      "tnd_base": "00A27825",
+      "tnd_base_disasm": "or $t7, $a1, $v0",
+      "ge_changed": true,
+      "tnd_matches_ge_stock": false,
+      "roms": {
+        "GE stock": {
+          "word": "3C04803B",
+          "disasm": "lui $a0, 0x803b"
+        },
+        "GE 480i": {
+          "word": "00A27825",
+          "disasm": "or $t7, $a1, $v0"
+        },
+        "TND base": {
+          "word": "00A27825",
+          "disasm": "or $t7, $a1, $v0"
+        },
+        "TND tables only": {
+          "word": "00A27825",
+          "disasm": "or $t7, $a1, $v0"
+        },
+        "single all": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "split8030 all": {
+          "word": "AC2F4180",
+          "disasm": "sw $t7, 0x4180($at)"
+        }
+      }
+    },
+    {
+      "offset": "0x0065B0",
+      "groups": [
+        "D_fb_fixed_8040",
+        "D_fb_single_8076A000",
+        "D_fb_split_8030_8076",
+        "D_fb_split_8040_8076",
+        "D_fb_split_8060_8076"
+      ],
+      "notes": [
+        "clear old return"
+      ],
+      "ge_stock": "3C05803E",
+      "ge_stock_disasm": "lui $a1, 0x803e",
+      "ge_480i": "03E00008",
+      "ge_480i_disasm": "jr $ra",
+      "tnd_base": "03E00008",
+      "tnd_base_disasm": "jr $ra",
+      "ge_changed": true,
+      "tnd_matches_ge_stock": false,
+      "roms": {
+        "GE stock": {
+          "word": "3C05803E",
+          "disasm": "lui $a1, 0x803e"
+        },
+        "GE 480i": {
+          "word": "03E00008",
+          "disasm": "jr $ra"
+        },
+        "TND base": {
+          "word": "03E00008",
+          "disasm": "jr $ra"
+        },
+        "TND tables only": {
+          "word": "03E00008",
+          "disasm": "jr $ra"
+        },
+        "single all": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "split8030 all": {
+          "word": "00000000",
+          "disasm": "nop"
+        }
+      }
+    },
+    {
+      "offset": "0x0065B4",
+      "groups": [
+        "D_fb_fixed_8040",
+        "D_fb_single_8076A000",
+        "D_fb_split_8030_8076",
+        "D_fb_split_8040_8076",
+        "D_fb_split_8060_8076"
+      ],
+      "notes": [
+        "clear old delay slot"
+      ],
+      "ge_stock": "24A5A800",
+      "ge_stock_disasm": "addiu $a1, $a1, -0x5800",
+      "ge_480i": "AC2F4180",
+      "ge_480i_disasm": "sw $t7, 0x4180($at)",
+      "tnd_base": "AC2F4180",
+      "tnd_base_disasm": "sw $t7, 0x4180($at)",
+      "ge_changed": true,
+      "tnd_matches_ge_stock": false,
+      "roms": {
+        "GE stock": {
+          "word": "24A5A800",
+          "disasm": "addiu $a1, $a1, -0x5800"
+        },
+        "GE 480i": {
+          "word": "AC2F4180",
+          "disasm": "sw $t7, 0x4180($at)"
+        },
+        "TND base": {
+          "word": "AC2F4180",
+          "disasm": "sw $t7, 0x4180($at)"
+        },
+        "TND tables only": {
+          "word": "AC2F4180",
+          "disasm": "sw $t7, 0x4180($at)"
+        },
+        "single all": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "split8030 all": {
+          "word": "00000000",
+          "disasm": "nop"
+        }
+      }
+    },
+    {
+      "offset": "0x0104DC",
+      "groups": [
+        "G_mask_word"
+      ],
+      "notes": [
+        "GE 480i mask word"
+      ],
+      "ge_stock": "2401FCFF",
+      "ge_stock_disasm": "addiu $at, $zero, -0x301",
+      "ge_480i": "2401FFFF",
+      "ge_480i_disasm": "addiu $at, $zero, -1",
+      "tnd_base": "2401FCFF",
+      "tnd_base_disasm": "addiu $at, $zero, -0x301",
+      "ge_changed": true,
+      "tnd_matches_ge_stock": true,
+      "roms": {
+        "GE stock": {
+          "word": "2401FCFF",
+          "disasm": "addiu $at, $zero, -0x301"
+        },
+        "GE 480i": {
+          "word": "2401FFFF",
+          "disasm": "addiu $at, $zero, -1"
+        },
+        "TND base": {
+          "word": "2401FCFF",
+          "disasm": "addiu $at, $zero, -0x301"
+        },
+        "TND tables only": {
+          "word": "2401FCFF",
+          "disasm": "addiu $at, $zero, -0x301"
+        },
+        "single all": {
+          "word": "2401FFFF",
+          "disasm": "addiu $at, $zero, -1"
+        },
+        "split8030 all": {
+          "word": "2401FFFF",
+          "disasm": "addiu $at, $zero, -1"
+        }
+      }
+    },
+    {
+      "offset": "0x019978",
+      "groups": [
+        "H_origin_bypass",
+        "H_origin_scale",
+        "H_origin_width",
+        "H_pi_dma"
+      ],
+      "notes": [
+        "GE 480i PI/DMA patch",
+        "GE 480i VI origin/control-flow bypass"
+      ],
+      "ge_stock": "00000000",
+      "ge_stock_disasm": "nop",
+      "ge_480i": "3C09A440",
+      "ge_480i_disasm": "lui $t1, 0xa440",
+      "tnd_base": "00000000",
+      "tnd_base_disasm": "nop",
+      "ge_changed": true,
+      "tnd_matches_ge_stock": true,
+      "roms": {
+        "GE stock": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "GE 480i": {
+          "word": "3C09A440",
+          "disasm": "lui $t1, 0xa440"
+        },
+        "TND base": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "TND tables only": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "single all": {
+          "word": "3C09A440",
+          "disasm": "lui $t1, 0xa440"
+        },
+        "split8030 all": {
+          "word": "3C09A440",
+          "disasm": "lui $t1, 0xa440"
+        }
+      }
+    },
+    {
+      "offset": "0x019980",
+      "groups": [
+        "H_origin_bypass",
+        "H_origin_scale",
+        "H_origin_width",
+        "H_pi_dma"
+      ],
+      "notes": [
+        "GE 480i PI/DMA patch",
+        "GE 480i VI origin/control-flow bypass"
+      ],
+      "ge_stock": "3C0103FF",
+      "ge_stock_disasm": "lui $at, 0x3ff",
+      "ge_480i": "10000006",
+      "ge_480i_disasm": "b 0x1999c",
+      "tnd_base": "3C0103FF",
+      "tnd_base_disasm": "lui $at, 0x3ff",
+      "ge_changed": true,
+      "tnd_matches_ge_stock": true,
+      "roms": {
+        "GE stock": {
+          "word": "3C0103FF",
+          "disasm": "lui $at, 0x3ff"
+        },
+        "GE 480i": {
+          "word": "10000006",
+          "disasm": "b 0x1999c"
+        },
+        "TND base": {
+          "word": "3C0103FF",
+          "disasm": "lui $at, 0x3ff"
+        },
+        "TND tables only": {
+          "word": "3C0103FF",
+          "disasm": "lui $at, 0x3ff"
+        },
+        "single all": {
+          "word": "10000006",
+          "disasm": "b 0x1999c"
+        },
+        "split8030 all": {
+          "word": "10000006",
+          "disasm": "b 0x1999c"
+        }
+      }
+    },
+    {
+      "offset": "0x019984",
+      "groups": [
+        "H_origin_bypass",
+        "H_origin_scale",
+        "H_origin_width",
+        "H_pi_dma"
+      ],
+      "notes": [
+        "GE 480i PI/DMA patch",
+        "GE 480i VI origin/control-flow bypass"
+      ],
+      "ge_stock": "8E240004",
+      "ge_stock_disasm": "lw $a0, 4($s1)",
+      "ge_480i": "00000000",
+      "ge_480i_disasm": "nop",
+      "tnd_base": "8E240004",
+      "tnd_base_disasm": "lw $a0, 4($s1)",
+      "ge_changed": true,
+      "tnd_matches_ge_stock": true,
+      "roms": {
+        "GE stock": {
+          "word": "8E240004",
+          "disasm": "lw $a0, 4($s1)"
+        },
+        "GE 480i": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "TND base": {
+          "word": "8E240004",
+          "disasm": "lw $a0, 4($s1)"
+        },
+        "TND tables only": {
+          "word": "8E240004",
+          "disasm": "lw $a0, 4($s1)"
+        },
+        "single all": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "split8030 all": {
+          "word": "00000000",
+          "disasm": "nop"
+        }
+      }
+    },
+    {
+      "offset": "0x0199B4",
+      "groups": [
+        "H_origin_width",
+        "H_pi_dma",
+        "H_width_scale",
+        "H_width_vsync"
+      ],
+      "notes": [
+        "GE 480i PI/DMA patch",
+        "GE 480i VI width/vsync patch"
+      ],
+      "ge_stock": "3C18A440",
+      "ge_stock_disasm": "lui $t8, 0xa440",
+      "ge_480i": "000C6040",
+      "ge_480i_disasm": "sll $t4, $t4, 1",
+      "tnd_base": "3C18A440",
+      "tnd_base_disasm": "lui $t8, 0xa440",
+      "ge_changed": true,
+      "tnd_matches_ge_stock": true,
+      "roms": {
+        "GE stock": {
+          "word": "3C18A440",
+          "disasm": "lui $t8, 0xa440"
+        },
+        "GE 480i": {
+          "word": "000C6040",
+          "disasm": "sll $t4, $t4, 1"
+        },
+        "TND base": {
+          "word": "3C18A440",
+          "disasm": "lui $t8, 0xa440"
+        },
+        "TND tables only": {
+          "word": "3C18A440",
+          "disasm": "lui $t8, 0xa440"
+        },
+        "single all": {
+          "word": "000C6040",
+          "disasm": "sll $t4, $t4, 1"
+        },
+        "split8030 all": {
+          "word": "000C6040",
+          "disasm": "sll $t4, $t4, 1"
+        }
+      }
+    },
+    {
+      "offset": "0x0199D0",
+      "groups": [
+        "H_origin_width",
+        "H_pi_dma",
+        "H_width_scale",
+        "H_width_vsync"
+      ],
+      "notes": [
+        "GE 480i PI/DMA patch",
+        "GE 480i VI width/vsync patch"
+      ],
+      "ge_stock": "AF0E0018",
+      "ge_stock_disasm": "sw $t6, 0x18($t8)",
+      "ge_480i": "ADEE0018",
+      "ge_480i_disasm": "sw $t6, 0x18($t7)",
+      "tnd_base": "AF0E0018",
+      "tnd_base_disasm": "sw $t6, 0x18($t8)",
+      "ge_changed": true,
+      "tnd_matches_ge_stock": true,
+      "roms": {
+        "GE stock": {
+          "word": "AF0E0018",
+          "disasm": "sw $t6, 0x18($t8)"
+        },
+        "GE 480i": {
+          "word": "ADEE0018",
+          "disasm": "sw $t6, 0x18($t7)"
+        },
+        "TND base": {
+          "word": "AF0E0018",
+          "disasm": "sw $t6, 0x18($t8)"
+        },
+        "TND tables only": {
+          "word": "AF0E0018",
+          "disasm": "sw $t6, 0x18($t8)"
+        },
+        "single all": {
+          "word": "ADEE0018",
+          "disasm": "sw $t6, 0x18($t7)"
+        },
+        "split8030 all": {
+          "word": "ADEE0018",
+          "disasm": "sw $t6, 0x18($t7)"
+        }
+      }
+    },
+    {
+      "offset": "0x019A24",
+      "groups": [
+        "H_origin_scale",
+        "H_pi_dma",
+        "H_scale",
+        "H_width_scale"
+      ],
+      "notes": [
+        "GE 480i PI/DMA patch",
+        "GE 480i VI scale patch"
+      ],
+      "ge_stock": "3C0AA440",
+      "ge_stock_disasm": "lui $t2, 0xa440",
+      "ge_480i": "8E2B002C",
+      "ge_480i_disasm": "lw $t3, 0x2c($s1)",
+      "tnd_base": "3C0AA440",
+      "tnd_base_disasm": "lui $t2, 0xa440",
+      "ge_changed": true,
+      "tnd_matches_ge_stock": true,
+      "roms": {
+        "GE stock": {
+          "word": "3C0AA440",
+          "disasm": "lui $t2, 0xa440"
+        },
+        "GE 480i": {
+          "word": "8E2B002C",
+          "disasm": "lw $t3, 0x2c($s1)"
+        },
+        "TND base": {
+          "word": "3C0AA440",
+          "disasm": "lui $t2, 0xa440"
+        },
+        "TND tables only": {
+          "word": "3C0AA440",
+          "disasm": "lui $t2, 0xa440"
+        },
+        "single all": {
+          "word": "8E2B002C",
+          "disasm": "lw $t3, 0x2c($s1)"
+        },
+        "split8030 all": {
+          "word": "8E2B002C",
+          "disasm": "lw $t3, 0x2c($s1)"
+        }
+      }
+    },
+    {
+      "offset": "0x019A60",
+      "groups": [
+        "H_origin_scale",
+        "H_pi_dma",
+        "H_scale",
+        "H_width_scale"
+      ],
+      "notes": [
+        "GE 480i PI/DMA patch",
+        "GE 480i VI scale patch"
+      ],
+      "ge_stock": "AD490030",
+      "ge_stock_disasm": "sw $t1, 0x30($t2)",
+      "ge_480i": "AD890030",
+      "ge_480i_disasm": "sw $t1, 0x30($t4)",
+      "tnd_base": "AD490030",
+      "tnd_base_disasm": "sw $t1, 0x30($t2)",
+      "ge_changed": true,
+      "tnd_matches_ge_stock": true,
+      "roms": {
+        "GE stock": {
+          "word": "AD490030",
+          "disasm": "sw $t1, 0x30($t2)"
+        },
+        "GE 480i": {
+          "word": "AD890030",
+          "disasm": "sw $t1, 0x30($t4)"
+        },
+        "TND base": {
+          "word": "AD490030",
+          "disasm": "sw $t1, 0x30($t2)"
+        },
+        "TND tables only": {
+          "word": "AD490030",
+          "disasm": "sw $t1, 0x30($t2)"
+        },
+        "single all": {
+          "word": "AD890030",
+          "disasm": "sw $t1, 0x30($t4)"
+        },
+        "split8030 all": {
+          "word": "AD890030",
+          "disasm": "sw $t1, 0x30($t4)"
+        }
+      }
+    },
+    {
+      "offset": "0x019A64",
+      "groups": [
+        "H_origin_scale",
+        "H_pi_dma",
+        "H_scale",
+        "H_width_scale"
+      ],
+      "notes": [
+        "GE 480i PI/DMA patch",
+        "GE 480i VI scale patch"
+      ],
+      "ge_stock": "8E2B002C",
+      "ge_stock_disasm": "lw $t3, 0x2c($s1)",
+      "ge_480i": "000B5842",
+      "ge_480i_disasm": "srl $t3, $t3, 1",
+      "tnd_base": "8E2B002C",
+      "tnd_base_disasm": "lw $t3, 0x2c($s1)",
+      "ge_changed": true,
+      "tnd_matches_ge_stock": true,
+      "roms": {
+        "GE stock": {
+          "word": "8E2B002C",
+          "disasm": "lw $t3, 0x2c($s1)"
+        },
+        "GE 480i": {
+          "word": "000B5842",
+          "disasm": "srl $t3, $t3, 1"
+        },
+        "TND base": {
+          "word": "8E2B002C",
+          "disasm": "lw $t3, 0x2c($s1)"
+        },
+        "TND tables only": {
+          "word": "8E2B002C",
+          "disasm": "lw $t3, 0x2c($s1)"
+        },
+        "single all": {
+          "word": "000B5842",
+          "disasm": "srl $t3, $t3, 1"
+        },
+        "split8030 all": {
+          "word": "000B5842",
+          "disasm": "srl $t3, $t3, 1"
+        }
+      }
+    },
+    {
+      "offset": "0x04F354",
+      "groups": [
+        "E_direct_dims"
+      ],
+      "notes": [
+        "direct render dimensions table 0"
+      ],
+      "ge_stock": "8C42A8C4",
+      "ge_stock_disasm": "lw $v0, -0x573c($v0)",
+      "ge_480i": "028001E0",
+      "ge_480i_disasm": "",
+      "tnd_base": "014000F0",
+      "tnd_base_disasm": "tge $t2, $zero, 3",
+      "ge_changed": true,
+      "tnd_matches_ge_stock": false,
+      "roms": {
+        "GE stock": {
+          "word": "8C42A8C4",
+          "disasm": "lw $v0, -0x573c($v0)"
+        },
+        "GE 480i": {
+          "word": "028001E0",
+          "disasm": ""
+        },
+        "TND base": {
+          "word": "014000F0",
+          "disasm": "tge $t2, $zero, 3"
+        },
+        "TND tables only": {
+          "word": "014000F0",
+          "disasm": "tge $t2, $zero, 3"
+        },
+        "single all": {
+          "word": "014000F0",
+          "disasm": "tge $t2, $zero, 3"
+        },
+        "split8030 all": {
+          "word": "014000F0",
+          "disasm": "tge $t2, $zero, 3"
+        }
+      }
+    },
+    {
+      "offset": "0x04F35C",
+      "groups": [
+        "E_direct_dims"
+      ],
+      "notes": [
+        "direct render dimensions table 1"
+      ],
+      "ge_stock": "00000000",
+      "ge_stock_disasm": "nop",
+      "ge_480i": "028001E0",
+      "ge_480i_disasm": "",
+      "tnd_base": "01B8014A",
+      "tnd_base_disasm": "",
+      "ge_changed": true,
+      "tnd_matches_ge_stock": false,
+      "roms": {
+        "GE stock": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "GE 480i": {
+          "word": "028001E0",
+          "disasm": ""
+        },
+        "TND base": {
+          "word": "01B8014A",
+          "disasm": ""
+        },
+        "TND tables only": {
+          "word": "01B8014A",
+          "disasm": ""
+        },
+        "single all": {
+          "word": "01B8014A",
+          "disasm": ""
+        },
+        "split8030 all": {
+          "word": "01B8014A",
+          "disasm": ""
+        }
+      }
+    }
+  ],
+  "profile_matrix": [
+    {
+      "rom": "single all",
+      "profile": "single8076_all_nodims",
+      "expected_words": 38,
+      "mismatches": []
+    },
+    {
+      "rom": "split8030 all",
+      "profile": "split8030_8076_all_nodims",
+      "expected_words": 69,
+      "mismatches": []
+    }
+  ],
+  "main_ranges": [
+    {
+      "rom": "GE stock",
+      "main_md5": "055525d9087f953d43d80639773b4291",
+      "stream_consumed": "0x11850",
+      "ranges": [
+        {
+          "start": "0x24B8",
+          "end": "0x2500",
+          "len": 72,
+          "note": "display dimensions table",
+          "equals_ge480": false,
+          "equals_tnd_base": true,
+          "diff_bytes_from_tnd": 0,
+          "diff_bytes_from_ge480": 24
+        },
+        {
+          "start": "0x5CD4",
+          "end": "0x5D10",
+          "len": 60,
+          "note": "VI table A",
+          "equals_ge480": false,
+          "equals_tnd_base": true,
+          "diff_bytes_from_tnd": 0,
+          "diff_bytes_from_ge480": 12
+        },
+        {
+          "start": "0x7594",
+          "end": "0x75D0",
+          "len": 60,
+          "note": "VI table B",
+          "equals_ge480": false,
+          "equals_tnd_base": true,
+          "diff_bytes_from_tnd": 0,
+          "diff_bytes_from_ge480": 12
+        },
+        {
+          "start": "0x76F0",
+          "end": "0x7700",
+          "len": 16,
+          "note": "dimension header only",
+          "equals_ge480": false,
+          "equals_tnd_base": true,
+          "diff_bytes_from_tnd": 0,
+          "diff_bytes_from_ge480": 12
+        },
+        {
+          "start": "0x9C3C",
+          "end": "0x9D24",
+          "len": 232,
+          "note": "menu/display table A",
+          "equals_ge480": false,
+          "equals_tnd_base": true,
+          "diff_bytes_from_tnd": 0,
+          "diff_bytes_from_ge480": 38
+        },
+        {
+          "start": "0xA240",
+          "end": "0xA264",
+          "len": 36,
+          "note": "menu/display table B",
+          "equals_ge480": false,
+          "equals_tnd_base": true,
+          "diff_bytes_from_tnd": 0,
+          "diff_bytes_from_ge480": 11
+        }
+      ]
+    },
+    {
+      "rom": "GE 480i",
+      "main_md5": "b374298c9253148eb1e3a86a971a79b1",
+      "stream_consumed": "0x10F81",
+      "ranges": [
+        {
+          "start": "0x24B8",
+          "end": "0x2500",
+          "len": 72,
+          "note": "display dimensions table",
+          "equals_ge480": true,
+          "equals_tnd_base": false,
+          "diff_bytes_from_tnd": 24,
+          "diff_bytes_from_ge480": 0
+        },
+        {
+          "start": "0x5CD4",
+          "end": "0x5D10",
+          "len": 60,
+          "note": "VI table A",
+          "equals_ge480": true,
+          "equals_tnd_base": false,
+          "diff_bytes_from_tnd": 12,
+          "diff_bytes_from_ge480": 0
+        },
+        {
+          "start": "0x7594",
+          "end": "0x75D0",
+          "len": 60,
+          "note": "VI table B",
+          "equals_ge480": true,
+          "equals_tnd_base": false,
+          "diff_bytes_from_tnd": 12,
+          "diff_bytes_from_ge480": 0
+        },
+        {
+          "start": "0x76F0",
+          "end": "0x7700",
+          "len": 16,
+          "note": "dimension header only",
+          "equals_ge480": true,
+          "equals_tnd_base": false,
+          "diff_bytes_from_tnd": 12,
+          "diff_bytes_from_ge480": 0
+        },
+        {
+          "start": "0x9C3C",
+          "end": "0x9D24",
+          "len": 232,
+          "note": "menu/display table A",
+          "equals_ge480": true,
+          "equals_tnd_base": false,
+          "diff_bytes_from_tnd": 38,
+          "diff_bytes_from_ge480": 0
+        },
+        {
+          "start": "0xA240",
+          "end": "0xA264",
+          "len": 36,
+          "note": "menu/display table B",
+          "equals_ge480": true,
+          "equals_tnd_base": false,
+          "diff_bytes_from_tnd": 11,
+          "diff_bytes_from_ge480": 0
+        }
+      ]
+    },
+    {
+      "rom": "TND base",
+      "main_md5": "22272695451cab0af3b1075c917fc4de",
+      "stream_consumed": "0x103C9",
+      "ranges": [
+        {
+          "start": "0x24B8",
+          "end": "0x2500",
+          "len": 72,
+          "note": "display dimensions table",
+          "equals_ge480": false,
+          "equals_tnd_base": true,
+          "diff_bytes_from_tnd": 0,
+          "diff_bytes_from_ge480": 24
+        },
+        {
+          "start": "0x5CD4",
+          "end": "0x5D10",
+          "len": 60,
+          "note": "VI table A",
+          "equals_ge480": false,
+          "equals_tnd_base": true,
+          "diff_bytes_from_tnd": 0,
+          "diff_bytes_from_ge480": 12
+        },
+        {
+          "start": "0x7594",
+          "end": "0x75D0",
+          "len": 60,
+          "note": "VI table B",
+          "equals_ge480": false,
+          "equals_tnd_base": true,
+          "diff_bytes_from_tnd": 0,
+          "diff_bytes_from_ge480": 12
+        },
+        {
+          "start": "0x76F0",
+          "end": "0x7700",
+          "len": 16,
+          "note": "dimension header only",
+          "equals_ge480": false,
+          "equals_tnd_base": true,
+          "diff_bytes_from_tnd": 0,
+          "diff_bytes_from_ge480": 12
+        },
+        {
+          "start": "0x9C3C",
+          "end": "0x9D24",
+          "len": 232,
+          "note": "menu/display table A",
+          "equals_ge480": false,
+          "equals_tnd_base": true,
+          "diff_bytes_from_tnd": 0,
+          "diff_bytes_from_ge480": 38
+        },
+        {
+          "start": "0xA240",
+          "end": "0xA264",
+          "len": 36,
+          "note": "menu/display table B",
+          "equals_ge480": false,
+          "equals_tnd_base": true,
+          "diff_bytes_from_tnd": 0,
+          "diff_bytes_from_ge480": 11
+        }
+      ]
+    },
+    {
+      "rom": "TND tables only",
+      "main_md5": "b77ac94fd19847299613d6ab600047a2",
+      "stream_consumed": "0xFDA7",
+      "ranges": [
+        {
+          "start": "0x24B8",
+          "end": "0x2500",
+          "len": 72,
+          "note": "display dimensions table",
+          "equals_ge480": true,
+          "equals_tnd_base": false,
+          "diff_bytes_from_tnd": 24,
+          "diff_bytes_from_ge480": 0
+        },
+        {
+          "start": "0x5CD4",
+          "end": "0x5D10",
+          "len": 60,
+          "note": "VI table A",
+          "equals_ge480": true,
+          "equals_tnd_base": false,
+          "diff_bytes_from_tnd": 12,
+          "diff_bytes_from_ge480": 0
+        },
+        {
+          "start": "0x7594",
+          "end": "0x75D0",
+          "len": 60,
+          "note": "VI table B",
+          "equals_ge480": true,
+          "equals_tnd_base": false,
+          "diff_bytes_from_tnd": 12,
+          "diff_bytes_from_ge480": 0
+        },
+        {
+          "start": "0x76F0",
+          "end": "0x7700",
+          "len": 16,
+          "note": "dimension header only",
+          "equals_ge480": true,
+          "equals_tnd_base": false,
+          "diff_bytes_from_tnd": 12,
+          "diff_bytes_from_ge480": 0
+        },
+        {
+          "start": "0x9C3C",
+          "end": "0x9D24",
+          "len": 232,
+          "note": "menu/display table A",
+          "equals_ge480": false,
+          "equals_tnd_base": true,
+          "diff_bytes_from_tnd": 0,
+          "diff_bytes_from_ge480": 38
+        },
+        {
+          "start": "0xA240",
+          "end": "0xA264",
+          "len": 36,
+          "note": "menu/display table B",
+          "equals_ge480": false,
+          "equals_tnd_base": true,
+          "diff_bytes_from_tnd": 0,
+          "diff_bytes_from_ge480": 11
+        }
+      ]
+    },
+    {
+      "rom": "single all",
+      "main_md5": "b77ac94fd19847299613d6ab600047a2",
+      "stream_consumed": "0xFDA7",
+      "ranges": [
+        {
+          "start": "0x24B8",
+          "end": "0x2500",
+          "len": 72,
+          "note": "display dimensions table",
+          "equals_ge480": true,
+          "equals_tnd_base": false,
+          "diff_bytes_from_tnd": 24,
+          "diff_bytes_from_ge480": 0
+        },
+        {
+          "start": "0x5CD4",
+          "end": "0x5D10",
+          "len": 60,
+          "note": "VI table A",
+          "equals_ge480": true,
+          "equals_tnd_base": false,
+          "diff_bytes_from_tnd": 12,
+          "diff_bytes_from_ge480": 0
+        },
+        {
+          "start": "0x7594",
+          "end": "0x75D0",
+          "len": 60,
+          "note": "VI table B",
+          "equals_ge480": true,
+          "equals_tnd_base": false,
+          "diff_bytes_from_tnd": 12,
+          "diff_bytes_from_ge480": 0
+        },
+        {
+          "start": "0x76F0",
+          "end": "0x7700",
+          "len": 16,
+          "note": "dimension header only",
+          "equals_ge480": true,
+          "equals_tnd_base": false,
+          "diff_bytes_from_tnd": 12,
+          "diff_bytes_from_ge480": 0
+        },
+        {
+          "start": "0x9C3C",
+          "end": "0x9D24",
+          "len": 232,
+          "note": "menu/display table A",
+          "equals_ge480": false,
+          "equals_tnd_base": true,
+          "diff_bytes_from_tnd": 0,
+          "diff_bytes_from_ge480": 38
+        },
+        {
+          "start": "0xA240",
+          "end": "0xA264",
+          "len": 36,
+          "note": "menu/display table B",
+          "equals_ge480": false,
+          "equals_tnd_base": true,
+          "diff_bytes_from_tnd": 0,
+          "diff_bytes_from_ge480": 11
+        }
+      ]
+    },
+    {
+      "rom": "split8030 all",
+      "main_md5": "b77ac94fd19847299613d6ab600047a2",
+      "stream_consumed": "0xFDA7",
+      "ranges": [
+        {
+          "start": "0x24B8",
+          "end": "0x2500",
+          "len": 72,
+          "note": "display dimensions table",
+          "equals_ge480": true,
+          "equals_tnd_base": false,
+          "diff_bytes_from_tnd": 24,
+          "diff_bytes_from_ge480": 0
+        },
+        {
+          "start": "0x5CD4",
+          "end": "0x5D10",
+          "len": 60,
+          "note": "VI table A",
+          "equals_ge480": true,
+          "equals_tnd_base": false,
+          "diff_bytes_from_tnd": 12,
+          "diff_bytes_from_ge480": 0
+        },
+        {
+          "start": "0x7594",
+          "end": "0x75D0",
+          "len": 60,
+          "note": "VI table B",
+          "equals_ge480": true,
+          "equals_tnd_base": false,
+          "diff_bytes_from_tnd": 12,
+          "diff_bytes_from_ge480": 0
+        },
+        {
+          "start": "0x76F0",
+          "end": "0x7700",
+          "len": 16,
+          "note": "dimension header only",
+          "equals_ge480": true,
+          "equals_tnd_base": false,
+          "diff_bytes_from_tnd": 12,
+          "diff_bytes_from_ge480": 0
+        },
+        {
+          "start": "0x9C3C",
+          "end": "0x9D24",
+          "len": 232,
+          "note": "menu/display table A",
+          "equals_ge480": false,
+          "equals_tnd_base": true,
+          "diff_bytes_from_tnd": 0,
+          "diff_bytes_from_ge480": 38
+        },
+        {
+          "start": "0xA240",
+          "end": "0xA264",
+          "len": 36,
+          "note": "menu/display table B",
+          "equals_ge480": false,
+          "equals_tnd_base": true,
+          "diff_bytes_from_tnd": 0,
+          "diff_bytes_from_ge480": 11
+        }
+      ]
+    }
+  ]
+}

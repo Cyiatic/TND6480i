@@ -1,0 +1,102 @@
+[
+    {
+        "name":  "single8076_origin",
+        "rom":  "TND64_480i_single8076_mem_fg_h_origin_core_no_menu.z64",
+        "main_window_seen":  true,
+        "elapsed":  30.41,
+        "exited_before_timeout":  false,
+        "exit_code_before_timeout":  null,
+        "stdout_bytes":  0,
+        "stderr_bytes":  2706,
+        "stderr_tail":  [
+                            "[WARN]: Stalled compile (compute, 1cbd9189b0a23679): thread 0 - 45691.900 us (mode: sync, success: yes).",
+                            "[WARN]: Stalled compile (compute, 7e74068a497f23c2): thread 0 - 1464775.200 us (mode: sync, success: yes).",
+                            "[WARN]: Stalled compile (compute, bd9293d0d50b3e8b): thread 0 - 144745.300 us (mode: sync, success: yes).",
+                            "[WARN]: Stalled compile (compute, bf3dfa0bf27d196e): thread 0 - 5743.800 us (mode: sync, success: yes).",
+                            "[WARN]: Stalled compile (graphics, e3b76ed8c30a5cc1): thread 0 - 36560.100 us (mode: sync, success: yes).",
+                            "[WARN]: Stalled compile (graphics, 9d0b2ccf3e83a80b): thread 0 - 7438.400 us (mode: sync, success: yes).",
+                            "[WARN]: Stalled compile (graphics, b178544ed4416cd2): thread 0 - 21855.600 us (mode: sync, success: yes).",
+                            "[WARN]: Stalled compile (compute, 35f88fc5fb45ef46): thread 0 - 124780.700 us (mode: sync, success: yes)."
+                        ]
+    },
+    {
+        "name":  "single8076_origin_width",
+        "rom":  "TND64_480i_single8076_mem_fg_h_origin_width_core_no_menu.z64",
+        "main_window_seen":  true,
+        "elapsed":  30.36,
+        "exited_before_timeout":  false,
+        "exit_code_before_timeout":  null,
+        "stdout_bytes":  0,
+        "stderr_bytes":  2707,
+        "stderr_tail":  [
+                            "[WARN]: Stalled compile (compute, 1cbd9189b0a23679): thread 0 - 66648.200 us (mode: sync, success: yes).",
+                            "[WARN]: Stalled compile (compute, 7e74068a497f23c2): thread 0 - 2075735.900 us (mode: sync, success: yes).",
+                            "[WARN]: Stalled compile (compute, bd9293d0d50b3e8b): thread 0 - 135475.100 us (mode: sync, success: yes).",
+                            "[WARN]: Stalled compile (compute, bf3dfa0bf27d196e): thread 0 - 13671.400 us (mode: sync, success: yes).",
+                            "[WARN]: Stalled compile (graphics, e3b76ed8c30a5cc1): thread 0 - 65518.300 us (mode: sync, success: yes).",
+                            "[WARN]: Stalled compile (graphics, 9d0b2ccf3e83a80b): thread 0 - 6967.200 us (mode: sync, success: yes).",
+                            "[WARN]: Stalled compile (graphics, b178544ed4416cd2): thread 0 - 21821.800 us (mode: sync, success: yes).",
+                            "[WARN]: Stalled compile (compute, 35f88fc5fb45ef46): thread 0 - 298203.900 us (mode: sync, success: yes)."
+                        ]
+    },
+    {
+        "name":  "single8076_origin_scale",
+        "rom":  "TND64_480i_single8076_mem_fg_h_origin_scale_core_no_menu.z64",
+        "main_window_seen":  true,
+        "elapsed":  30.81,
+        "exited_before_timeout":  false,
+        "exit_code_before_timeout":  null,
+        "stdout_bytes":  0,
+        "stderr_bytes":  2815,
+        "stderr_tail":  [
+                            "[WARN]: Stalled compile (compute, 7e74068a497f23c2): thread 0 - 2530199.000 us (mode: sync, success: yes).",
+                            "[WARN]: Stalled compile (compute, bd9293d0d50b3e8b): thread 0 - 215957.900 us (mode: sync, success: yes).",
+                            "[WARN]: Stalled compile (compute, bf3dfa0bf27d196e): thread 0 - 16703.000 us (mode: sync, success: yes).",
+                            "[WARN]: Stalled compile (graphics, d177283513a5a0f7): thread 0 - 169176.500 us (mode: sync, success: yes).",
+                            "[WARN]: Stalled compile (graphics, 5b01cde7ced266c2): thread 0 - 61490.000 us (mode: sync, success: yes).",
+                            "[WARN]: Stalled compile (graphics, b178554ed4416e85): thread 0 - 88024.300 us (mode: sync, success: yes).",
+                            "[WARN]: Stalled compile (graphics, 4c0855dda5fc846f): thread 0 - 5133.800 us (mode: sync, success: yes).",
+                            "[WARN]: Stalled compile (compute, 35f88fc5fb45ef46): thread 0 - 177375.700 us (mode: sync, success: yes)."
+                        ]
+    },
+    {
+        "name":  "single8076_all_explicit",
+        "rom":  "TND64_480i_single8076_all_core_no_menu.z64",
+        "main_window_seen":  true,
+        "elapsed":  30.73,
+        "exited_before_timeout":  false,
+        "exit_code_before_timeout":  null,
+        "stdout_bytes":  0,
+        "stderr_bytes":  2921,
+        "stderr_tail":  [
+                            "[WARN]: Stalled compile (compute, bd9293d0d50b3e8b): thread 0 - 288438.900 us (mode: sync, success: yes).",
+                            "[WARN]: Stalled compile (compute, bf3dfa0bf27d196e): thread 0 - 17540.100 us (mode: sync, success: yes).",
+                            "[WARN]: Stalled compile (graphics, d177283513a5a0f7): thread 0 - 92240.800 us (mode: sync, success: yes).",
+                            "[WARN]: Stalled compile (graphics, 5b01cde7ced266c2): thread 0 - 24398.900 us (mode: sync, success: yes).",
+                            "[WARN]: Stalled compile (graphics, b178554ed4416e85): thread 0 - 80624.300 us (mode: sync, success: yes).",
+                            "[WARN]: Stalled compile (graphics, 4c0855dda5fc846f): thread 0 - 7348.300 us (mode: sync, success: yes).",
+                            "[WARN]: Stalled compile (graphics, cc34dd1d8797f3c8): thread 0 - 5694.000 us (mode: sync, success: yes).",
+                            "[WARN]: Stalled compile (compute, 35f88fc5fb45ef46): thread 0 - 261337.700 us (mode: sync, success: yes)."
+                        ]
+    },
+    {
+        "name":  "split8030_8076_all",
+        "rom":  "TND64_480i_split8030_8076_all_core_no_menu.z64",
+        "main_window_seen":  true,
+        "elapsed":  30.78,
+        "exited_before_timeout":  false,
+        "exit_code_before_timeout":  null,
+        "stdout_bytes":  0,
+        "stderr_bytes":  2814,
+        "stderr_tail":  [
+                            "[WARN]: Stalled compile (compute, 7e74068a497f23c2): thread 0 - 2684401.800 us (mode: sync, success: yes).",
+                            "[WARN]: Stalled compile (compute, bd9293d0d50b3e8b): thread 0 - 207691.200 us (mode: sync, success: yes).",
+                            "[WARN]: Stalled compile (compute, bf3dfa0bf27d196e): thread 0 - 11585.300 us (mode: sync, success: yes).",
+                            "[WARN]: Stalled compile (graphics, d177283513a5a0f7): thread 0 - 79278.600 us (mode: sync, success: yes).",
+                            "[WARN]: Stalled compile (graphics, 5b01cde7ced266c2): thread 0 - 32294.600 us (mode: sync, success: yes).",
+                            "[WARN]: Stalled compile (graphics, b178554ed4416e85): thread 0 - 54413.500 us (mode: sync, success: yes).",
+                            "[WARN]: Stalled compile (graphics, 4c0855dda5fc846f): thread 0 - 9273.700 us (mode: sync, success: yes).",
+                            "[WARN]: Stalled compile (compute, 35f88fc5fb45ef46): thread 0 - 188431.200 us (mode: sync, success: yes)."
+                        ]
+    }
+]

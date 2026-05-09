@@ -1,0 +1,20 @@
+[
+    {
+        "rom":  "TND64_480i_single8076_all_core_no_menu.z64",
+        "elapsed":  30.98,
+        "exited_before_timeout":  false,
+        "exit_code_before_timeout":  null,
+        "title":  "TND64_480i_single8076_all_core_no_menu",
+        "responding":  true,
+        "cpu_seconds":  20.48
+    },
+    {
+        "rom":  "TND64_480i_split8030_8076_all_core_no_menu.z64",
+        "elapsed":  30.04,
+        "exited_before_timeout":  false,
+        "exit_code_before_timeout":  null,
+        "title":  "TND64_480i_split8030_8076_all_core_no_menu",
+        "responding":  true,
+        "cpu_seconds":  19.83
+    }
+]
