@@ -46,7 +46,15 @@ Visual capture follow-up changed the conclusion: the full-dims build stays black
 | `artifacts/generated/TND64_480i_single8076_all_dim0_core_no_menu.z64` | `single8076_all_dim0` | `ad441669291605a3fd551b51c68bb195` | `CE5E1EF0 26DDA6CD` | renders; window mean luma `122.22`; ares 30s survived |
 | `artifacts/generated/TND64_480i_single8076_all_dim1_core_no_menu.z64` | `single8076_all_dim1` | `66c3a0ef8116cfb6c0a52a48dc1a967e` | `CF3E1F20 E5FF8B59` | black; window mean luma `16.81`; ares 30s survived |
 
-So `single8076_all_dim0` is now the safer dim-aware visual candidate. The second direct dimension word at `0x4F35C` should not be patched on hardware until that path is understood.
+The first direct dimension word looked safer in emulator at this stage, but hardware later black-screened `single8076_all_dim0` through 60 seconds. That pushed the investigation toward smaller probes that isolate the direct dimension words from the framebuffer relocation and F/G/H VI-side patches.
+
+| ROM | Profile | MD5 | N64 CRC | Gopher64 80s visual capture |
+|---|---|---|---|---|
+| `artifacts/generated/TND64_480i_dim0only_core_no_menu.z64` | `dim0_only` | `dfd10a81e5ad9c517382cb3f866696d9` | `C23D9942 3FB57C0D` | black; window mean luma `16.53` |
+| `artifacts/generated/TND64_480i_dim1only_core_no_menu.z64` | `dim1_only` | `d909037053d29548ddf6fa11b8924207` | `C2BD98A2 B89F823D` | black; window mean luma `16.53` |
+| `artifacts/generated/TND64_480i_fghonly_core_no_menu.z64` | `fg_h_only` | `852a811f1e71603e3b510866a834cb47` | `45AFEB49 BFF2CC66` | rendered; window mean luma `121.17` |
+
+Current conclusion: the direct dimension words are necessary to solve the aliasing symptom eventually, but they are unsafe to patch first. `FGH only` is the next low-risk visual control because it keeps stock direct dimensions and stock framebuffer placement while applying the GE 480i F/G/H VI-side word family.
 
 Fallback double-buffer full-dims candidate:
 
@@ -57,4 +65,4 @@ MD5: cce443d766bd681a511f7d18bb95b657
 N64 CRC: 278D2E7E C311ADE7
 ```
 
-The full-dims candidates survived process/input smokes but should be treated as suspicious because visual capture can still be black. None of the dim-aware candidates has been uploaded to hardware.
+The full-dims candidates survived process/input smokes but should be treated as suspicious because visual capture can still be black. The direct-dimension branch needs more decomp work before another hardware attempt.

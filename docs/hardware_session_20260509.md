@@ -234,8 +234,37 @@ SC64 state was reset over USB afterward to `Bootloader -> Menu from SD card`, bu
 
 Conclusion: even the safer one-word direct-dim candidate fails on real hardware. The next offline branch should stop assuming the direct gameplay dimension table can be patched first. Prefer isolating the render-dimension word from the framebuffer/VI-side patches, or test visual controls that keep direct dimensions stock while changing only one VI/register family.
 
+## Direct-Dimension Offline Isolation
+
+Three smaller visual probes were built on top of `TND64_enh480i_core_no_menu_pigz.z64`, which already has the compressed-main core table changes. These probes avoid framebuffer relocation and isolate the direct dimension words from the F/G/H VI-side word family.
+
+| ROM | MD5 | N64 CRC | Profile | Gopher64 80s visual capture |
+|---|---|---|---|---|
+| `artifacts/generated/TND64_480i_dim0only_core_no_menu.z64` | `dfd10a81e5ad9c517382cb3f866696d9` | `C23D9942 3FB57C0D` | `dim0_only` | black; window mean luma `16.53` |
+| `artifacts/generated/TND64_480i_dim1only_core_no_menu.z64` | `d909037053d29548ddf6fa11b8924207` | `C2BD98A2 B89F823D` | `dim1_only` | black; window mean luma `16.53` |
+| `artifacts/generated/TND64_480i_fghonly_core_no_menu.z64` | `852a811f1e71603e3b510866a834cb47` | `45AFEB49 BFF2CC66` | `fg_h_only` | rendered; window mean luma `121.17` |
+
+Captures:
+
+- `diagnostics/captures/gopher64/TND64_480i_dim0only_core_no_menu.png`
+- `diagnostics/captures/gopher64/TND64_480i_dim1only_core_no_menu.png`
+- `diagnostics/captures/gopher64/TND64_480i_fghonly_core_no_menu.png`
+
+Conclusion: the direct gameplay dimension words are now the highest-risk patch family, even when isolated from framebuffer relocation. The F/G/H-only probe is the current rendering control because it keeps stock direct dimensions and framebuffer placement while applying the VI-side GE 480i word family.
+
+## Post-Dim0 Reset Check
+
+After the failed `single8076_all_dim0` hardware run, the user pressed reset again. GV-USB2 still captured pure black video, and `sc64deployer info` still reported `ROM write: Disabled` even though the SC64 boot mode had been reset over USB to `Bootloader -> Menu from SD card`.
+
+Captures:
+
+- `diagnostics/captures/after_user_reset_20260509.png`
+- `diagnostics/captures/after_sc64_reset_20260509.png`
+
+Current hardware rule: no more uploads until a physical reset or power cycle visibly restores the SC64 menu and `ROM write: Enabled`.
+
 ## Next Step
 
 After the N64 is physically reset/power-cycled or reset back to the SC64 menu and ROM writes are enabled again, do not retry `single8076_all_dim0` first. It black-screened on hardware.
 
-The next useful work is offline: isolate whether the hardware failure comes from the direct dimension word itself, the single-buffer `0x8076A000` layout, or its interaction with the full H VI-register family. A good next build pair would keep the direct dimension table stock and vary only H subfamilies, or patch `0x4F354` on top of a much smaller known-rendering base.
+The next useful hardware candidate, once the menu and ROM-write state are restored, is the stock-dimension `FGH only` visual control. It is not expected to solve the aliased-hand issue by itself, but it should answer whether the GE 480i VI-side word family can run on real hardware without the framebuffer relocation or direct dimension patches.

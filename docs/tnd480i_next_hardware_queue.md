@@ -22,12 +22,15 @@ Date: 2026-05-08
   - From a confirmed SC64 menu, `TND64_480i_single8076_all_dim0_core_no_menu.z64` was uploaded and launched after a real reset.
   - It stayed pure black through 60 seconds on GV-USB2.
   - SC64 boot configuration was reset over USB afterward, but a real reset/power-cycle is still needed before another upload because ROM write remains disabled.
+  - A later user reset did not recover visible video; GV-USB2 still captured pure black and SC64 still reported `ROM write: Disabled`.
   - Do not retry `single8076_all_dim0` first. Continue offline and isolate whether the direct dimension word, the single-buffer layout, or the full H VI-register family is the hardware failure point.
 - 2026-05-09 offline decomp follow-up:
   - The user-tested no-dims single-all visual candidate did not patch direct gameplay dimension words at `0x4F354` and `0x4F35C`.
   - Those words were still `320x240` and `440x330`, which matches the reported aliased Bond-hand symptom.
   - A full two-word dim-aware candidate patched both words to `640x480` and survived process smokes, but later visual capture stayed black in Gopher64.
-  - One-word tests showed `0x4F354 -> 640x480` (`single8076_all_dim0`) renders, while `0x4F35C -> 640x480` (`single8076_all_dim1`) stays black. Use `dim0` as the safer dim-aware visual candidate.
+  - One-word tests on the single-buffer full-H branch showed `0x4F354 -> 640x480` (`single8076_all_dim0`) rendered in Gopher64, while `0x4F35C -> 640x480` (`single8076_all_dim1`) stayed black.
+  - Real hardware then black-screened `single8076_all_dim0`, and smaller `dim0_only` / `dim1_only` probes both stayed black in Gopher64 even without framebuffer relocation.
+  - The `FGH only` probe, which keeps stock direct dimensions and framebuffer placement while applying F/G/H VI-side words, rendered in Gopher64. It is now the lowest-risk visual control after the SC64 menu and ROM-write state are restored.
 - 2026-05-08 SC64 session:
   - SC64 detected on `COM4`; firmware `v2.20.2`; SD initialized; ROM writes enabled.
   - GV-USB2 capture showed the SC64 menu clearly.
@@ -111,33 +114,29 @@ Date: 2026-05-08
 
 ## Current Safest Hardware Candidate
 
-Only use this if the capture card visibly shows the SC64 menu, EverDrive menu, or another known-good live video state after a physical reset or power-cycle. If it black-screens or locks, stop immediately and continue offline.
+Only use this if the capture card visibly shows the SC64 menu, EverDrive menu, or another known-good live video state after a physical reset or power-cycle, and SC64 reports `ROM write: Enabled`. If it black-screens or locks, stop immediately and continue offline.
 
-`BASELINE_TND64_Expanded_sc64isv_hvionly_lowcave.z64`
+`TND64_480i_fghonly_core_no_menu.z64`
 
-- Base: known-good baseline TND expanded ROM.
-- MD5: `efc8c7caaa898e421f82eb42b2d62edb`
-- N64 CRC: `5AB52A0F BAB5C1D8`
-- Expected marker: `TND:HVI1`
-- Purpose: validate SC64/IS-Viewer logging from the least invasive late video hook, with the logger/trampoline in known early-code padding, before testing any 480i payload.
-- Emulator status: Gopher64 25 second smoke survived.
+- Profile: `fg_h_only`
+- MD5: `852a811f1e71603e3b510866a834cb47`
+- N64 CRC: `45AFEB49 BFF2CC66`
+- Purpose: tests the GE 480i F/G/H VI-side word family while keeping stock framebuffer placement and stock direct dimension words.
+- Emulator status: Gopher64 80 second visual capture rendered, with window mean luma `121.17`.
+- Expected limitation: this may still look aliased because direct gameplay dimensions remain stock. Its value is isolating whether the F/G/H VI-side patches are real-hardware safe.
 
-If this prints `TND:HVI1`, test `BASELINE_TND64_Expanded_sc64isv_noentry_v3_lowcave.z64` next to validate the corrected multi-hook logger. Only then use the HVI-only 480i debug ROM or return to visual 480i candidates.
+Do not test another direct-dimension candidate first. `single8076_all_dim0` black-screened on real hardware, and `dim0_only` / `dim1_only` both black-screened in Gopher64 visual capture.
 
-Lowest-risk visual-only control:
+Baseline controls already run:
 
-`BASELINE_TND64_Expanded_hvijump_lowcave.z64`
-
-- MD5: `e12d5f83eadd9ad4ae3f5427c3648e02`
-- N64 CRC: `E21F057C 49DC630F`
-- Purpose: proves the low-cave HVI trampoline itself does not break baseline TND. It emits no debug marker.
-- Emulator status: Gopher64 25 second smoke survived.
+- `BASELINE_TND64_Expanded_sc64isv_hvionly_lowcave.z64` reached visible TND output on hardware, but ISV marker capture was not validated.
+- `BASELINE_TND64_Expanded_hvijump_lowcave.z64` remains a low-cave visual-only control if the trampoline itself needs another sanity check.
 
 ## SC64 Instrumented Debug Candidate
 
 Use this on SummerCart64 when debug visibility matters more than keeping the ROM byte-for-byte close to the candidate above.
 
-Preferred dim-aware payload:
+Deprecated dim-aware payload:
 
 `TND64_480i_single8076_all_dim0_core_no_menu_sc64isv_hvionly_lowcave.z64`
 
@@ -148,6 +147,7 @@ Preferred dim-aware payload:
 - Expected markers:
   - `TND:HVI1` - VI setup function returned; may repeat while the game is alive
 - Emulator status: Gopher64 25 second smoke survived and printed 737 `TND:HVI1` markers.
+- Hardware status: matching visual ROM black-screened through 60 seconds. Do not upload this debug payload first.
 
 Older no-dims debug payload, superseded for visual-quality testing:
 
@@ -169,9 +169,9 @@ Full-dims debug payload, not first choice because the matching visual ROM captur
 
 Do not use the old entry-debug ROMs first. Entry logging black-screened the baseline control, and the older no-entry build had a `DFB1` hook bug. The corrected all-hook baseline is `BASELINE_TND64_Expanded_sc64isv_noentry_v3_lowcave.z64`.
 
-## Most Meaningful Visual Candidate
+## Deprecated Dim-Aware Visual Candidate
 
-This was the most meaningful visual candidate before hardware testing because it directly addressed the observed "boots but Bond's hand is still aliased" symptom without applying the second direct dimension word that black-screens in Gopher64.
+This was the most meaningful visual candidate before hardware testing because it directly addressed the observed "boots but Bond's hand is still aliased" symptom without applying the second direct dimension word that black-screens in Gopher64. It has now failed on real hardware and should not be retried first.
 
 `TND64_480i_single8076_all_dim0_core_no_menu.z64`
 

@@ -351,6 +351,11 @@ DIRECT_PATCH_GROUPS = {
 
 DIRECT_PATCH_PROFILES = {
     "none": [],
+    "dim0_only": ["E_direct_dim0"],
+    "dim1_only": ["E_direct_dim1"],
+    "dims_only": ["E_direct_dims"],
+    "h_only": ["H_pi_dma"],
+    "fg_h_only": ["F_vi_word", "G_mask_word", "H_pi_dma"],
     "mem_nodims": ["A_init_stride", "B_alloc_reserve", "C_fb_calc", "D_mem_fn"],
     "mem_dims": ["A_init_stride", "B_alloc_reserve", "C_fb_calc", "D_mem_fn", "E_direct_dims"],
     "other": ["F_vi_word", "G_mask_word", "H_pi_dma"],

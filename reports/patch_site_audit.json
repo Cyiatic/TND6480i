@@ -48,6 +48,21 @@
       "md5": "8f4c7fdf524ec1c7f4fc63223a8b386c",
       "size": 16777216
     },
+    "dim0 only": {
+      "path": "artifacts\\generated\\TND64_480i_dim0only_core_no_menu.z64",
+      "md5": "dfd10a81e5ad9c517382cb3f866696d9",
+      "size": 16777216
+    },
+    "dim1 only": {
+      "path": "artifacts\\generated\\TND64_480i_dim1only_core_no_menu.z64",
+      "md5": "d909037053d29548ddf6fa11b8924207",
+      "size": 16777216
+    },
+    "FGH only": {
+      "path": "artifacts\\generated\\TND64_480i_fghonly_core_no_menu.z64",
+      "md5": "852a811f1e71603e3b510866a834cb47",
+      "size": 16777216
+    },
     "split8030 all": {
       "path": "artifacts\\generated\\TND64_480i_split8030_8076_all_core_no_menu.z64",
       "md5": "6464d1b85aa7fc60d5a6fbf36fa71bf7",
@@ -205,6 +220,18 @@
           "word": "00000825",
           "disasm": "move $at, $zero"
         },
+        "dim0 only": {
+          "word": "3C010002",
+          "disasm": "lui $at, 2"
+        },
+        "dim1 only": {
+          "word": "3C010002",
+          "disasm": "lui $at, 2"
+        },
+        "FGH only": {
+          "word": "3C010002",
+          "disasm": "lui $at, 2"
+        },
         "split8030 all": {
           "word": "8CC94180",
           "disasm": "lw $t1, 0x4180($a2)"
@@ -268,6 +295,18 @@
           "word": "00000000",
           "disasm": "nop"
         },
+        "dim0 only": {
+          "word": "24215800",
+          "disasm": "addiu $at, $at, 0x5800"
+        },
+        "dim1 only": {
+          "word": "24215800",
+          "disasm": "addiu $at, $at, 0x5800"
+        },
+        "FGH only": {
+          "word": "24215800",
+          "disasm": "addiu $at, $at, 0x5800"
+        },
         "split8030 all": {
           "word": "01214825",
           "disasm": "or $t1, $t1, $at"
@@ -324,6 +363,18 @@
           "disasm": "addu $t1, $t1, $at"
         },
         "single all + dims": {
+          "word": "01214821",
+          "disasm": "addu $t1, $t1, $at"
+        },
+        "dim0 only": {
+          "word": "01214821",
+          "disasm": "addu $t1, $t1, $at"
+        },
+        "dim1 only": {
+          "word": "01214821",
+          "disasm": "addu $t1, $t1, $at"
+        },
+        "FGH only": {
           "word": "01214821",
           "disasm": "addu $t1, $t1, $at"
         },
@@ -388,6 +439,18 @@
           "word": "AFBFFFFC",
           "disasm": "sw $ra, -4($sp)"
         },
+        "dim0 only": {
+          "word": "AFBFFFFC",
+          "disasm": "sw $ra, -4($sp)"
+        },
+        "dim1 only": {
+          "word": "AFBFFFFC",
+          "disasm": "sw $ra, -4($sp)"
+        },
+        "FGH only": {
+          "word": "AFBFFFFC",
+          "disasm": "sw $ra, -4($sp)"
+        },
         "split8030 all": {
           "word": "AFBFFFFC",
           "disasm": "sw $ra, -4($sp)"
@@ -449,6 +512,18 @@
           "word": "0FC348E0",
           "disasm": "jal 0xf0d2380"
         },
+        "dim0 only": {
+          "word": "0FC348E0",
+          "disasm": "jal 0xf0d2380"
+        },
+        "dim1 only": {
+          "word": "0FC348E0",
+          "disasm": "jal 0xf0d2380"
+        },
+        "FGH only": {
+          "word": "0FC348E0",
+          "disasm": "jal 0xf0d2380"
+        },
         "split8030 all": {
           "word": "0FC348E0",
           "disasm": "jal 0xf0d2380"
@@ -507,6 +582,18 @@
           "disasm": "addiu $sp, $sp, -0x18"
         },
         "single all + dims": {
+          "word": "27BDFFE8",
+          "disasm": "addiu $sp, $sp, -0x18"
+        },
+        "dim0 only": {
+          "word": "27BDFFE8",
+          "disasm": "addiu $sp, $sp, -0x18"
+        },
+        "dim1 only": {
+          "word": "27BDFFE8",
+          "disasm": "addiu $sp, $sp, -0x18"
+        },
+        "FGH only": {
           "word": "27BDFFE8",
           "disasm": "addiu $sp, $sp, -0x18"
         },
@@ -579,6 +666,18 @@
           "word": "3C048076",
           "disasm": "lui $a0, 0x8076"
         },
+        "dim0 only": {
+          "word": "3C058000",
+          "disasm": "lui $a1, 0x8000"
+        },
+        "dim1 only": {
+          "word": "3C058000",
+          "disasm": "lui $a1, 0x8000"
+        },
+        "FGH only": {
+          "word": "3C058000",
+          "disasm": "lui $a1, 0x8000"
+        },
         "split8030 all": {
           "word": "3C048030",
           "disasm": "lui $a0, 0x8030"
@@ -645,6 +744,18 @@
           "word": "3484A000",
           "disasm": "ori $a0, $a0, 0xa000"
         },
+        "dim0 only": {
+          "word": "8CA40318",
+          "disasm": "lw $a0, 0x318($a1)"
+        },
+        "dim1 only": {
+          "word": "8CA40318",
+          "disasm": "lw $a0, 0x318($a1)"
+        },
+        "FGH only": {
+          "word": "8CA40318",
+          "disasm": "lw $a0, 0x318($a1)"
+        },
         "split8030 all": {
           "word": "00000000",
           "disasm": "nop"
@@ -709,6 +820,18 @@
         "single all + dims": {
           "word": "00000000",
           "disasm": "nop"
+        },
+        "dim0 only": {
+          "word": "00852025",
+          "disasm": "or $a0, $a0, $a1"
+        },
+        "dim1 only": {
+          "word": "00852025",
+          "disasm": "or $a0, $a0, $a1"
+        },
+        "FGH only": {
+          "word": "00852025",
+          "disasm": "or $a0, $a0, $a1"
         },
         "split8030 all": {
           "word": "3C050009",
@@ -776,6 +899,18 @@
           "word": "3C050009",
           "disasm": "lui $a1, 9"
         },
+        "dim0 only": {
+          "word": "3C050004",
+          "disasm": "lui $a1, 4"
+        },
+        "dim1 only": {
+          "word": "3C050004",
+          "disasm": "lui $a1, 4"
+        },
+        "FGH only": {
+          "word": "3C050004",
+          "disasm": "lui $a1, 4"
+        },
         "split8030 all": {
           "word": "34A56000",
           "disasm": "ori $a1, $a1, 0x6000"
@@ -842,6 +977,18 @@
           "word": "34A56000",
           "disasm": "ori $a1, $a1, 0x6000"
         },
+        "dim0 only": {
+          "word": "34A5B000",
+          "disasm": "ori $a1, $a1, 0xb000"
+        },
+        "dim1 only": {
+          "word": "34A5B000",
+          "disasm": "ori $a1, $a1, 0xb000"
+        },
+        "FGH only": {
+          "word": "34A5B000",
+          "disasm": "ori $a1, $a1, 0xb000"
+        },
         "split8030 all": {
           "word": "0C005F10",
           "disasm": "jal 0x17c40"
@@ -900,6 +1047,18 @@
           "disasm": "jal 0x17c40"
         },
         "single all + dims": {
+          "word": "0C005F10",
+          "disasm": "jal 0x17c40"
+        },
+        "dim0 only": {
+          "word": "0C005F10",
+          "disasm": "jal 0x17c40"
+        },
+        "dim1 only": {
+          "word": "0C005F10",
+          "disasm": "jal 0x17c40"
+        },
+        "FGH only": {
           "word": "0C005F10",
           "disasm": "jal 0x17c40"
         },
@@ -967,6 +1126,18 @@
           "word": "00000000",
           "disasm": "nop"
         },
+        "dim0 only": {
+          "word": "00852023",
+          "disasm": "subu $a0, $a0, $a1"
+        },
+        "dim1 only": {
+          "word": "00852023",
+          "disasm": "subu $a0, $a0, $a1"
+        },
+        "FGH only": {
+          "word": "00852023",
+          "disasm": "subu $a0, $a0, $a1"
+        },
         "split8030 all": {
           "word": "3C048076",
           "disasm": "lui $a0, 0x8076"
@@ -1025,6 +1196,18 @@
           "disasm": "lw $ra, 0x14($sp)"
         },
         "single all + dims": {
+          "word": "8FBF0014",
+          "disasm": "lw $ra, 0x14($sp)"
+        },
+        "dim0 only": {
+          "word": "8FBF0014",
+          "disasm": "lw $ra, 0x14($sp)"
+        },
+        "dim1 only": {
+          "word": "8FBF0014",
+          "disasm": "lw $ra, 0x14($sp)"
+        },
+        "FGH only": {
           "word": "8FBF0014",
           "disasm": "lw $ra, 0x14($sp)"
         },
@@ -1089,6 +1272,18 @@
           "word": "03E00008",
           "disasm": "jr $ra"
         },
+        "dim0 only": {
+          "word": "03E00008",
+          "disasm": "jr $ra"
+        },
+        "dim1 only": {
+          "word": "03E00008",
+          "disasm": "jr $ra"
+        },
+        "FGH only": {
+          "word": "03E00008",
+          "disasm": "jr $ra"
+        },
         "split8030 all": {
           "word": "3C050009",
           "disasm": "lui $a1, 9"
@@ -1147,6 +1342,18 @@
           "disasm": "addiu $sp, $sp, 0x18"
         },
         "single all + dims": {
+          "word": "27BD0018",
+          "disasm": "addiu $sp, $sp, 0x18"
+        },
+        "dim0 only": {
+          "word": "27BD0018",
+          "disasm": "addiu $sp, $sp, 0x18"
+        },
+        "dim1 only": {
+          "word": "27BD0018",
+          "disasm": "addiu $sp, $sp, 0x18"
+        },
+        "FGH only": {
           "word": "27BD0018",
           "disasm": "addiu $sp, $sp, 0x18"
         },
@@ -1211,6 +1418,18 @@
           "word": "00000000",
           "disasm": "nop"
         },
+        "dim0 only": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "dim1 only": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "FGH only": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
         "split8030 all": {
           "word": "0C005F10",
           "disasm": "jal 0x17c40"
@@ -1269,6 +1488,18 @@
           "disasm": "nop"
         },
         "single all + dims": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "dim0 only": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "dim1 only": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "FGH only": {
           "word": "00000000",
           "disasm": "nop"
         },
@@ -1333,6 +1564,18 @@
           "word": "00000000",
           "disasm": "nop"
         },
+        "dim0 only": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "dim1 only": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "FGH only": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
         "split8030 all": {
           "word": "8FBF0014",
           "disasm": "lw $ra, 0x14($sp)"
@@ -1391,6 +1634,18 @@
           "disasm": "nop"
         },
         "single all + dims": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "dim0 only": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "dim1 only": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "FGH only": {
           "word": "00000000",
           "disasm": "nop"
         },
@@ -1455,6 +1710,18 @@
           "word": "00000000",
           "disasm": "nop"
         },
+        "dim0 only": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "dim1 only": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "FGH only": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
         "split8030 all": {
           "word": "27BD0018",
           "disasm": "addiu $sp, $sp, 0x18"
@@ -1513,6 +1780,18 @@
           "disasm": "nop"
         },
         "single all + dims": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "dim0 only": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "dim1 only": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "FGH only": {
           "word": "00000000",
           "disasm": "nop"
         },
@@ -1577,6 +1856,18 @@
           "word": "00000000",
           "disasm": "nop"
         },
+        "dim0 only": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "dim1 only": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "FGH only": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
         "split8030 all": {
           "word": "00000000",
           "disasm": "nop"
@@ -1635,6 +1926,18 @@
           "disasm": "nop"
         },
         "single all + dims": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "dim0 only": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "dim1 only": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "FGH only": {
           "word": "00000000",
           "disasm": "nop"
         },
@@ -1699,6 +2002,18 @@
           "word": "00000000",
           "disasm": "nop"
         },
+        "dim0 only": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "dim1 only": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "FGH only": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
         "split8030 all": {
           "word": "00000000",
           "disasm": "nop"
@@ -1757,6 +2072,18 @@
           "disasm": "nop"
         },
         "single all + dims": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "dim0 only": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "dim1 only": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "FGH only": {
           "word": "00000000",
           "disasm": "nop"
         },
@@ -1821,6 +2148,18 @@
           "word": "00000000",
           "disasm": "nop"
         },
+        "dim0 only": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "dim1 only": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "FGH only": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
         "split8030 all": {
           "word": "00000000",
           "disasm": "nop"
@@ -1879,6 +2218,18 @@
           "disasm": "nop"
         },
         "single all + dims": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "dim0 only": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "dim1 only": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "FGH only": {
           "word": "00000000",
           "disasm": "nop"
         },
@@ -1943,6 +2294,18 @@
           "word": "00000000",
           "disasm": "nop"
         },
+        "dim0 only": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "dim1 only": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "FGH only": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
         "split8030 all": {
           "word": "00000000",
           "disasm": "nop"
@@ -2001,6 +2364,18 @@
           "disasm": "nop"
         },
         "single all + dims": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "dim0 only": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "dim1 only": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "FGH only": {
           "word": "00000000",
           "disasm": "nop"
         },
@@ -2063,6 +2438,18 @@
           "word": "00187880",
           "disasm": "sll $t7, $t8, 2"
         },
+        "dim0 only": {
+          "word": "00187840",
+          "disasm": "sll $t7, $t8, 1"
+        },
+        "dim1 only": {
+          "word": "00187840",
+          "disasm": "sll $t7, $t8, 1"
+        },
+        "FGH only": {
+          "word": "00187880",
+          "disasm": "sll $t7, $t8, 2"
+        },
         "split8030 all": {
           "word": "00187880",
           "disasm": "sll $t7, $t8, 2"
@@ -2119,6 +2506,18 @@
           "disasm": "lui $a0, 0x8002"
         },
         "single all + dims": {
+          "word": "3C048002",
+          "disasm": "lui $a0, 0x8002"
+        },
+        "dim0 only": {
+          "word": "3C048002",
+          "disasm": "lui $a0, 0x8002"
+        },
+        "dim1 only": {
+          "word": "3C048002",
+          "disasm": "lui $a0, 0x8002"
+        },
+        "FGH only": {
           "word": "3C048002",
           "disasm": "lui $a0, 0x8002"
         },
@@ -2181,6 +2580,18 @@
           "word": "0C00012B",
           "disasm": "jal 0x4ac"
         },
+        "dim0 only": {
+          "word": "0C00012B",
+          "disasm": "jal 0x4ac"
+        },
+        "dim1 only": {
+          "word": "0C00012B",
+          "disasm": "jal 0x4ac"
+        },
+        "FGH only": {
+          "word": "0C00012B",
+          "disasm": "jal 0x4ac"
+        },
         "split8030 all": {
           "word": "90780879",
           "disasm": "lbu $t8, 0x879($v1)"
@@ -2237,6 +2648,18 @@
           "disasm": "lw $a0, 0x417c($a0)"
         },
         "single all + dims": {
+          "word": "8C84417C",
+          "disasm": "lw $a0, 0x417c($a0)"
+        },
+        "dim0 only": {
+          "word": "8C84417C",
+          "disasm": "lw $a0, 0x417c($a0)"
+        },
+        "dim1 only": {
+          "word": "8C84417C",
+          "disasm": "lw $a0, 0x417c($a0)"
+        },
+        "FGH only": {
           "word": "8C84417C",
           "disasm": "lw $a0, 0x417c($a0)"
         },
@@ -2299,6 +2722,18 @@
           "word": "3C038006",
           "disasm": "lui $v1, 0x8006"
         },
+        "dim0 only": {
+          "word": "3C038006",
+          "disasm": "lui $v1, 0x8006"
+        },
+        "dim1 only": {
+          "word": "3C038006",
+          "disasm": "lui $v1, 0x8006"
+        },
+        "FGH only": {
+          "word": "3C038006",
+          "disasm": "lui $v1, 0x8006"
+        },
         "split8030 all": {
           "word": "3C048002",
           "disasm": "lui $a0, 0x8002"
@@ -2355,6 +2790,18 @@
           "disasm": "lbu $t8, 0x879($v1)"
         },
         "single all + dims": {
+          "word": "90780879",
+          "disasm": "lbu $t8, 0x879($v1)"
+        },
+        "dim0 only": {
+          "word": "90780879",
+          "disasm": "lbu $t8, 0x879($v1)"
+        },
+        "dim1 only": {
+          "word": "90780879",
+          "disasm": "lbu $t8, 0x879($v1)"
+        },
+        "FGH only": {
           "word": "90780879",
           "disasm": "lbu $t8, 0x879($v1)"
         },
@@ -2421,6 +2868,18 @@
           "word": "00007825",
           "disasm": "move $t7, $zero"
         },
+        "dim0 only": {
+          "word": "00187880",
+          "disasm": "sll $t7, $t8, 2"
+        },
+        "dim1 only": {
+          "word": "00187880",
+          "disasm": "sll $t7, $t8, 2"
+        },
+        "FGH only": {
+          "word": "00187880",
+          "disasm": "sll $t7, $t8, 2"
+        },
         "split8030 all": {
           "word": "0C00012B",
           "disasm": "jal 0x4ac"
@@ -2483,6 +2942,18 @@
         "single all + dims": {
           "word": "00000000",
           "disasm": "nop"
+        },
+        "dim0 only": {
+          "word": "01F87821",
+          "disasm": "addu $t7, $t7, $t8"
+        },
+        "dim1 only": {
+          "word": "01F87821",
+          "disasm": "addu $t7, $t7, $t8"
+        },
+        "FGH only": {
+          "word": "01F87821",
+          "disasm": "addu $t7, $t7, $t8"
         },
         "split8030 all": {
           "word": "8C84417C",
@@ -2547,6 +3018,18 @@
           "word": "00000000",
           "disasm": "nop"
         },
+        "dim0 only": {
+          "word": "000F7880",
+          "disasm": "sll $t7, $t7, 2"
+        },
+        "dim1 only": {
+          "word": "000F7880",
+          "disasm": "sll $t7, $t7, 2"
+        },
+        "FGH only": {
+          "word": "000F7880",
+          "disasm": "sll $t7, $t7, 2"
+        },
         "split8030 all": {
           "word": "3C188002",
           "disasm": "lui $t8, 0x8002"
@@ -2610,6 +3093,18 @@
           "word": "00000000",
           "disasm": "nop"
         },
+        "dim0 only": {
+          "word": "01F87823",
+          "disasm": "subu $t7, $t7, $t8"
+        },
+        "dim1 only": {
+          "word": "01F87823",
+          "disasm": "subu $t7, $t7, $t8"
+        },
+        "FGH only": {
+          "word": "01F87823",
+          "disasm": "subu $t7, $t7, $t8"
+        },
         "split8030 all": {
           "word": "8F1832A8",
           "disasm": "lw $t8, 0x32a8($t8)"
@@ -2671,6 +3166,18 @@
         "single all + dims": {
           "word": "00000000",
           "disasm": "nop"
+        },
+        "dim0 only": {
+          "word": "000F7880",
+          "disasm": "sll $t7, $t7, 2"
+        },
+        "dim1 only": {
+          "word": "000F7880",
+          "disasm": "sll $t7, $t7, 2"
+        },
+        "FGH only": {
+          "word": "000F7880",
+          "disasm": "sll $t7, $t7, 2"
         },
         "split8030 all": {
           "word": "00000000",
@@ -2734,6 +3241,18 @@
           "word": "00000000",
           "disasm": "nop"
         },
+        "dim0 only": {
+          "word": "01F87823",
+          "disasm": "subu $t7, $t7, $t8"
+        },
+        "dim1 only": {
+          "word": "01F87823",
+          "disasm": "subu $t7, $t7, $t8"
+        },
+        "FGH only": {
+          "word": "01F87823",
+          "disasm": "subu $t7, $t7, $t8"
+        },
         "split8030 all": {
           "word": "00000000",
           "disasm": "nop"
@@ -2793,6 +3312,18 @@
           "word": "3C188002",
           "disasm": "lui $t8, 0x8002"
         },
+        "dim0 only": {
+          "word": "3C188002",
+          "disasm": "lui $t8, 0x8002"
+        },
+        "dim1 only": {
+          "word": "3C188002",
+          "disasm": "lui $t8, 0x8002"
+        },
+        "FGH only": {
+          "word": "3C188002",
+          "disasm": "lui $t8, 0x8002"
+        },
         "split8030 all": {
           "word": "00000000",
           "disasm": "nop"
@@ -2849,6 +3380,18 @@
           "disasm": "lw $t8, 0x32a8($t8)"
         },
         "single all + dims": {
+          "word": "8F1832A8",
+          "disasm": "lw $t8, 0x32a8($t8)"
+        },
+        "dim0 only": {
+          "word": "8F1832A8",
+          "disasm": "lw $t8, 0x32a8($t8)"
+        },
+        "dim1 only": {
+          "word": "8F1832A8",
+          "disasm": "lw $t8, 0x32a8($t8)"
+        },
+        "FGH only": {
           "word": "8F1832A8",
           "disasm": "lw $t8, 0x32a8($t8)"
         },
@@ -2914,6 +3457,18 @@
           "word": "00000000",
           "disasm": "nop"
         },
+        "dim0 only": {
+          "word": "000F7AC0",
+          "disasm": "sll $t7, $t7, 0xb"
+        },
+        "dim1 only": {
+          "word": "000F7AC0",
+          "disasm": "sll $t7, $t7, 0xb"
+        },
+        "FGH only": {
+          "word": "000F7AC0",
+          "disasm": "sll $t7, $t7, 0xb"
+        },
         "split8030 all": {
           "word": "00000000",
           "disasm": "nop"
@@ -2973,6 +3528,18 @@
           "word": "01E2C821",
           "disasm": "addu $t9, $t7, $v0"
         },
+        "dim0 only": {
+          "word": "01E2C821",
+          "disasm": "addu $t9, $t7, $v0"
+        },
+        "dim1 only": {
+          "word": "01E2C821",
+          "disasm": "addu $t9, $t7, $v0"
+        },
+        "FGH only": {
+          "word": "01E2C821",
+          "disasm": "addu $t9, $t7, $v0"
+        },
         "split8030 all": {
           "word": "0040C825",
           "disasm": "move $t9, $v0"
@@ -3029,6 +3596,18 @@
           "disasm": "sw $t9, 0x28($t8)"
         },
         "single all + dims": {
+          "word": "AF190028",
+          "disasm": "sw $t9, 0x28($t8)"
+        },
+        "dim0 only": {
+          "word": "AF190028",
+          "disasm": "sw $t9, 0x28($t8)"
+        },
+        "dim1 only": {
+          "word": "AF190028",
+          "disasm": "sw $t9, 0x28($t8)"
+        },
+        "FGH only": {
           "word": "AF190028",
           "disasm": "sw $t9, 0x28($t8)"
         },
@@ -3101,6 +3680,18 @@
           "word": "3C048076",
           "disasm": "lui $a0, 0x8076"
         },
+        "dim0 only": {
+          "word": "3C048000",
+          "disasm": "lui $a0, 0x8000"
+        },
+        "dim1 only": {
+          "word": "3C048000",
+          "disasm": "lui $a0, 0x8000"
+        },
+        "FGH only": {
+          "word": "3C048000",
+          "disasm": "lui $a0, 0x8000"
+        },
         "split8030 all": {
           "word": "3C048030",
           "disasm": "lui $a0, 0x8030"
@@ -3170,6 +3761,18 @@
           "word": "3484A000",
           "disasm": "ori $a0, $a0, 0xa000"
         },
+        "dim0 only": {
+          "word": "8C840318",
+          "disasm": "lw $a0, 0x318($a0)"
+        },
+        "dim1 only": {
+          "word": "8C840318",
+          "disasm": "lw $a0, 0x318($a0)"
+        },
+        "FGH only": {
+          "word": "8C840318",
+          "disasm": "lw $a0, 0x318($a0)"
+        },
         "split8030 all": {
           "word": "34840000",
           "disasm": "ori $a0, $a0, 0"
@@ -3236,6 +3839,18 @@
         "single all + dims": {
           "word": "00802825",
           "disasm": "move $a1, $a0"
+        },
+        "dim0 only": {
+          "word": "3C020002",
+          "disasm": "lui $v0, 2"
+        },
+        "dim1 only": {
+          "word": "3C020002",
+          "disasm": "lui $v0, 2"
+        },
+        "FGH only": {
+          "word": "3C020002",
+          "disasm": "lui $v0, 2"
         },
         "split8030 all": {
           "word": "3C058076",
@@ -3304,6 +3919,18 @@
           "word": "3C02A000",
           "disasm": "lui $v0, 0xa000"
         },
+        "dim0 only": {
+          "word": "24425800",
+          "disasm": "addiu $v0, $v0, 0x5800"
+        },
+        "dim1 only": {
+          "word": "24425800",
+          "disasm": "addiu $v0, $v0, 0x5800"
+        },
+        "FGH only": {
+          "word": "24425800",
+          "disasm": "addiu $v0, $v0, 0x5800"
+        },
         "split8030 all": {
           "word": "34A5A000",
           "disasm": "ori $a1, $a1, 0xa000"
@@ -3367,6 +3994,18 @@
         "single all + dims": {
           "word": "00827025",
           "disasm": "or $t6, $a0, $v0"
+        },
+        "dim0 only": {
+          "word": "00822823",
+          "disasm": "subu $a1, $a0, $v0"
+        },
+        "dim1 only": {
+          "word": "00822823",
+          "disasm": "subu $a1, $a0, $v0"
+        },
+        "FGH only": {
+          "word": "00822823",
+          "disasm": "subu $a1, $a0, $v0"
         },
         "split8030 all": {
           "word": "3C02A000",
@@ -3432,6 +4071,18 @@
           "word": "3C018002",
           "disasm": "lui $at, 0x8002"
         },
+        "dim0 only": {
+          "word": "00A22023",
+          "disasm": "subu $a0, $a1, $v0"
+        },
+        "dim1 only": {
+          "word": "00A22023",
+          "disasm": "subu $a0, $a1, $v0"
+        },
+        "FGH only": {
+          "word": "00A22023",
+          "disasm": "subu $a0, $a1, $v0"
+        },
         "split8030 all": {
           "word": "00827025",
           "disasm": "or $t6, $a0, $v0"
@@ -3495,6 +4146,18 @@
         "single all + dims": {
           "word": "AC2E417C",
           "disasm": "sw $t6, 0x417c($at)"
+        },
+        "dim0 only": {
+          "word": "3C02A000",
+          "disasm": "lui $v0, 0xa000"
+        },
+        "dim1 only": {
+          "word": "3C02A000",
+          "disasm": "lui $v0, 0xa000"
+        },
+        "FGH only": {
+          "word": "3C02A000",
+          "disasm": "lui $v0, 0xa000"
         },
         "split8030 all": {
           "word": "3C018002",
@@ -3560,6 +4223,18 @@
           "word": "00A27825",
           "disasm": "or $t7, $a1, $v0"
         },
+        "dim0 only": {
+          "word": "00827025",
+          "disasm": "or $t6, $a0, $v0"
+        },
+        "dim1 only": {
+          "word": "00827025",
+          "disasm": "or $t6, $a0, $v0"
+        },
+        "FGH only": {
+          "word": "00827025",
+          "disasm": "or $t6, $a0, $v0"
+        },
         "split8030 all": {
           "word": "AC2E417C",
           "disasm": "sw $t6, 0x417c($at)"
@@ -3623,6 +4298,18 @@
         "single all + dims": {
           "word": "03E00008",
           "disasm": "jr $ra"
+        },
+        "dim0 only": {
+          "word": "3C018002",
+          "disasm": "lui $at, 0x8002"
+        },
+        "dim1 only": {
+          "word": "3C018002",
+          "disasm": "lui $at, 0x8002"
+        },
+        "FGH only": {
+          "word": "3C018002",
+          "disasm": "lui $at, 0x8002"
         },
         "split8030 all": {
           "word": "00A27825",
@@ -3688,6 +4375,18 @@
           "word": "AC2F4180",
           "disasm": "sw $t7, 0x4180($at)"
         },
+        "dim0 only": {
+          "word": "AC2E417C",
+          "disasm": "sw $t6, 0x417c($at)"
+        },
+        "dim1 only": {
+          "word": "AC2E417C",
+          "disasm": "sw $t6, 0x417c($at)"
+        },
+        "FGH only": {
+          "word": "AC2E417C",
+          "disasm": "sw $t6, 0x417c($at)"
+        },
         "split8030 all": {
           "word": "03E00008",
           "disasm": "jr $ra"
@@ -3752,6 +4451,18 @@
           "word": "00000000",
           "disasm": "nop"
         },
+        "dim0 only": {
+          "word": "00A27825",
+          "disasm": "or $t7, $a1, $v0"
+        },
+        "dim1 only": {
+          "word": "00A27825",
+          "disasm": "or $t7, $a1, $v0"
+        },
+        "FGH only": {
+          "word": "00A27825",
+          "disasm": "or $t7, $a1, $v0"
+        },
         "split8030 all": {
           "word": "AC2F4180",
           "disasm": "sw $t7, 0x4180($at)"
@@ -3814,6 +4525,18 @@
         "single all + dims": {
           "word": "00000000",
           "disasm": "nop"
+        },
+        "dim0 only": {
+          "word": "03E00008",
+          "disasm": "jr $ra"
+        },
+        "dim1 only": {
+          "word": "03E00008",
+          "disasm": "jr $ra"
+        },
+        "FGH only": {
+          "word": "03E00008",
+          "disasm": "jr $ra"
         },
         "split8030 all": {
           "word": "00000000",
@@ -3878,6 +4601,18 @@
           "word": "00000000",
           "disasm": "nop"
         },
+        "dim0 only": {
+          "word": "AC2F4180",
+          "disasm": "sw $t7, 0x4180($at)"
+        },
+        "dim1 only": {
+          "word": "AC2F4180",
+          "disasm": "sw $t7, 0x4180($at)"
+        },
+        "FGH only": {
+          "word": "AC2F4180",
+          "disasm": "sw $t7, 0x4180($at)"
+        },
         "split8030 all": {
           "word": "00000000",
           "disasm": "nop"
@@ -3934,6 +4669,18 @@
           "disasm": "addiu $at, $zero, -1"
         },
         "single all + dims": {
+          "word": "2401FFFF",
+          "disasm": "addiu $at, $zero, -1"
+        },
+        "dim0 only": {
+          "word": "2401FCFF",
+          "disasm": "addiu $at, $zero, -0x301"
+        },
+        "dim1 only": {
+          "word": "2401FCFF",
+          "disasm": "addiu $at, $zero, -0x301"
+        },
+        "FGH only": {
           "word": "2401FFFF",
           "disasm": "addiu $at, $zero, -1"
         },
@@ -4000,6 +4747,18 @@
           "word": "3C09A440",
           "disasm": "lui $t1, 0xa440"
         },
+        "dim0 only": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "dim1 only": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "FGH only": {
+          "word": "3C09A440",
+          "disasm": "lui $t1, 0xa440"
+        },
         "split8030 all": {
           "word": "3C09A440",
           "disasm": "lui $t1, 0xa440"
@@ -4060,6 +4819,18 @@
           "disasm": "b 0x1999c"
         },
         "single all + dims": {
+          "word": "10000006",
+          "disasm": "b 0x1999c"
+        },
+        "dim0 only": {
+          "word": "3C0103FF",
+          "disasm": "lui $at, 0x3ff"
+        },
+        "dim1 only": {
+          "word": "3C0103FF",
+          "disasm": "lui $at, 0x3ff"
+        },
+        "FGH only": {
           "word": "10000006",
           "disasm": "b 0x1999c"
         },
@@ -4126,6 +4897,18 @@
           "word": "00000000",
           "disasm": "nop"
         },
+        "dim0 only": {
+          "word": "8E240004",
+          "disasm": "lw $a0, 4($s1)"
+        },
+        "dim1 only": {
+          "word": "8E240004",
+          "disasm": "lw $a0, 4($s1)"
+        },
+        "FGH only": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
         "split8030 all": {
           "word": "00000000",
           "disasm": "nop"
@@ -4186,6 +4969,18 @@
           "disasm": "sll $t4, $t4, 1"
         },
         "single all + dims": {
+          "word": "000C6040",
+          "disasm": "sll $t4, $t4, 1"
+        },
+        "dim0 only": {
+          "word": "3C18A440",
+          "disasm": "lui $t8, 0xa440"
+        },
+        "dim1 only": {
+          "word": "3C18A440",
+          "disasm": "lui $t8, 0xa440"
+        },
+        "FGH only": {
           "word": "000C6040",
           "disasm": "sll $t4, $t4, 1"
         },
@@ -4252,6 +5047,18 @@
           "word": "ADEE0018",
           "disasm": "sw $t6, 0x18($t7)"
         },
+        "dim0 only": {
+          "word": "AF0E0018",
+          "disasm": "sw $t6, 0x18($t8)"
+        },
+        "dim1 only": {
+          "word": "AF0E0018",
+          "disasm": "sw $t6, 0x18($t8)"
+        },
+        "FGH only": {
+          "word": "ADEE0018",
+          "disasm": "sw $t6, 0x18($t7)"
+        },
         "split8030 all": {
           "word": "ADEE0018",
           "disasm": "sw $t6, 0x18($t7)"
@@ -4312,6 +5119,18 @@
           "disasm": "lw $t3, 0x2c($s1)"
         },
         "single all + dims": {
+          "word": "8E2B002C",
+          "disasm": "lw $t3, 0x2c($s1)"
+        },
+        "dim0 only": {
+          "word": "3C0AA440",
+          "disasm": "lui $t2, 0xa440"
+        },
+        "dim1 only": {
+          "word": "3C0AA440",
+          "disasm": "lui $t2, 0xa440"
+        },
+        "FGH only": {
           "word": "8E2B002C",
           "disasm": "lw $t3, 0x2c($s1)"
         },
@@ -4378,6 +5197,18 @@
           "word": "AD890030",
           "disasm": "sw $t1, 0x30($t4)"
         },
+        "dim0 only": {
+          "word": "AD490030",
+          "disasm": "sw $t1, 0x30($t2)"
+        },
+        "dim1 only": {
+          "word": "AD490030",
+          "disasm": "sw $t1, 0x30($t2)"
+        },
+        "FGH only": {
+          "word": "AD890030",
+          "disasm": "sw $t1, 0x30($t4)"
+        },
         "split8030 all": {
           "word": "AD890030",
           "disasm": "sw $t1, 0x30($t4)"
@@ -4441,6 +5272,18 @@
           "word": "000B5842",
           "disasm": "srl $t3, $t3, 1"
         },
+        "dim0 only": {
+          "word": "8E2B002C",
+          "disasm": "lw $t3, 0x2c($s1)"
+        },
+        "dim1 only": {
+          "word": "8E2B002C",
+          "disasm": "lw $t3, 0x2c($s1)"
+        },
+        "FGH only": {
+          "word": "000B5842",
+          "disasm": "srl $t3, $t3, 1"
+        },
         "split8030 all": {
           "word": "000B5842",
           "disasm": "srl $t3, $t3, 1"
@@ -4500,6 +5343,18 @@
         "single all + dims": {
           "word": "028001E0",
           "disasm": ""
+        },
+        "dim0 only": {
+          "word": "028001E0",
+          "disasm": ""
+        },
+        "dim1 only": {
+          "word": "014000F0",
+          "disasm": "tge $t2, $zero, 3"
+        },
+        "FGH only": {
+          "word": "014000F0",
+          "disasm": "tge $t2, $zero, 3"
         },
         "split8030 all": {
           "word": "014000F0",
@@ -4561,6 +5416,18 @@
           "word": "028001E0",
           "disasm": ""
         },
+        "dim0 only": {
+          "word": "01B8014A",
+          "disasm": ""
+        },
+        "dim1 only": {
+          "word": "028001E0",
+          "disasm": ""
+        },
+        "FGH only": {
+          "word": "01B8014A",
+          "disasm": ""
+        },
         "split8030 all": {
           "word": "01B8014A",
           "disasm": ""
@@ -4595,6 +5462,24 @@
       "rom": "single all + dims",
       "profile": "single8076_all_dims",
       "expected_words": 40,
+      "mismatches": []
+    },
+    {
+      "rom": "dim0 only",
+      "profile": "dim0_only",
+      "expected_words": 1,
+      "mismatches": []
+    },
+    {
+      "rom": "dim1 only",
+      "profile": "dim1_only",
+      "expected_words": 1,
+      "mismatches": []
+    },
+    {
+      "rom": "FGH only",
+      "profile": "fg_h_only",
+      "expected_words": 10,
       "mismatches": []
     },
     {
@@ -5082,6 +5967,207 @@
     },
     {
       "rom": "single all + dims",
+      "main_md5": "b77ac94fd19847299613d6ab600047a2",
+      "stream_consumed": "0xFDA7",
+      "ranges": [
+        {
+          "start": "0x24B8",
+          "end": "0x2500",
+          "len": 72,
+          "note": "display dimensions table",
+          "equals_ge480": true,
+          "equals_tnd_base": false,
+          "diff_bytes_from_tnd": 24,
+          "diff_bytes_from_ge480": 0
+        },
+        {
+          "start": "0x5CD4",
+          "end": "0x5D10",
+          "len": 60,
+          "note": "VI table A",
+          "equals_ge480": true,
+          "equals_tnd_base": false,
+          "diff_bytes_from_tnd": 12,
+          "diff_bytes_from_ge480": 0
+        },
+        {
+          "start": "0x7594",
+          "end": "0x75D0",
+          "len": 60,
+          "note": "VI table B",
+          "equals_ge480": true,
+          "equals_tnd_base": false,
+          "diff_bytes_from_tnd": 12,
+          "diff_bytes_from_ge480": 0
+        },
+        {
+          "start": "0x76F0",
+          "end": "0x7700",
+          "len": 16,
+          "note": "dimension header only",
+          "equals_ge480": true,
+          "equals_tnd_base": false,
+          "diff_bytes_from_tnd": 12,
+          "diff_bytes_from_ge480": 0
+        },
+        {
+          "start": "0x9C3C",
+          "end": "0x9D24",
+          "len": 232,
+          "note": "menu/display table A",
+          "equals_ge480": false,
+          "equals_tnd_base": true,
+          "diff_bytes_from_tnd": 0,
+          "diff_bytes_from_ge480": 38
+        },
+        {
+          "start": "0xA240",
+          "end": "0xA264",
+          "len": 36,
+          "note": "menu/display table B",
+          "equals_ge480": false,
+          "equals_tnd_base": true,
+          "diff_bytes_from_tnd": 0,
+          "diff_bytes_from_ge480": 11
+        }
+      ]
+    },
+    {
+      "rom": "dim0 only",
+      "main_md5": "b77ac94fd19847299613d6ab600047a2",
+      "stream_consumed": "0xFDA7",
+      "ranges": [
+        {
+          "start": "0x24B8",
+          "end": "0x2500",
+          "len": 72,
+          "note": "display dimensions table",
+          "equals_ge480": true,
+          "equals_tnd_base": false,
+          "diff_bytes_from_tnd": 24,
+          "diff_bytes_from_ge480": 0
+        },
+        {
+          "start": "0x5CD4",
+          "end": "0x5D10",
+          "len": 60,
+          "note": "VI table A",
+          "equals_ge480": true,
+          "equals_tnd_base": false,
+          "diff_bytes_from_tnd": 12,
+          "diff_bytes_from_ge480": 0
+        },
+        {
+          "start": "0x7594",
+          "end": "0x75D0",
+          "len": 60,
+          "note": "VI table B",
+          "equals_ge480": true,
+          "equals_tnd_base": false,
+          "diff_bytes_from_tnd": 12,
+          "diff_bytes_from_ge480": 0
+        },
+        {
+          "start": "0x76F0",
+          "end": "0x7700",
+          "len": 16,
+          "note": "dimension header only",
+          "equals_ge480": true,
+          "equals_tnd_base": false,
+          "diff_bytes_from_tnd": 12,
+          "diff_bytes_from_ge480": 0
+        },
+        {
+          "start": "0x9C3C",
+          "end": "0x9D24",
+          "len": 232,
+          "note": "menu/display table A",
+          "equals_ge480": false,
+          "equals_tnd_base": true,
+          "diff_bytes_from_tnd": 0,
+          "diff_bytes_from_ge480": 38
+        },
+        {
+          "start": "0xA240",
+          "end": "0xA264",
+          "len": 36,
+          "note": "menu/display table B",
+          "equals_ge480": false,
+          "equals_tnd_base": true,
+          "diff_bytes_from_tnd": 0,
+          "diff_bytes_from_ge480": 11
+        }
+      ]
+    },
+    {
+      "rom": "dim1 only",
+      "main_md5": "b77ac94fd19847299613d6ab600047a2",
+      "stream_consumed": "0xFDA7",
+      "ranges": [
+        {
+          "start": "0x24B8",
+          "end": "0x2500",
+          "len": 72,
+          "note": "display dimensions table",
+          "equals_ge480": true,
+          "equals_tnd_base": false,
+          "diff_bytes_from_tnd": 24,
+          "diff_bytes_from_ge480": 0
+        },
+        {
+          "start": "0x5CD4",
+          "end": "0x5D10",
+          "len": 60,
+          "note": "VI table A",
+          "equals_ge480": true,
+          "equals_tnd_base": false,
+          "diff_bytes_from_tnd": 12,
+          "diff_bytes_from_ge480": 0
+        },
+        {
+          "start": "0x7594",
+          "end": "0x75D0",
+          "len": 60,
+          "note": "VI table B",
+          "equals_ge480": true,
+          "equals_tnd_base": false,
+          "diff_bytes_from_tnd": 12,
+          "diff_bytes_from_ge480": 0
+        },
+        {
+          "start": "0x76F0",
+          "end": "0x7700",
+          "len": 16,
+          "note": "dimension header only",
+          "equals_ge480": true,
+          "equals_tnd_base": false,
+          "diff_bytes_from_tnd": 12,
+          "diff_bytes_from_ge480": 0
+        },
+        {
+          "start": "0x9C3C",
+          "end": "0x9D24",
+          "len": 232,
+          "note": "menu/display table A",
+          "equals_ge480": false,
+          "equals_tnd_base": true,
+          "diff_bytes_from_tnd": 0,
+          "diff_bytes_from_ge480": 38
+        },
+        {
+          "start": "0xA240",
+          "end": "0xA264",
+          "len": 36,
+          "note": "menu/display table B",
+          "equals_ge480": false,
+          "equals_tnd_base": true,
+          "diff_bytes_from_tnd": 0,
+          "diff_bytes_from_ge480": 11
+        }
+      ]
+    },
+    {
+      "rom": "FGH only",
       "main_md5": "b77ac94fd19847299613d6ab600047a2",
       "stream_consumed": "0xFDA7",
       "ranges": [
