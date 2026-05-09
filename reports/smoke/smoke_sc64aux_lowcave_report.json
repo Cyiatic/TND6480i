@@ -1,0 +1,36 @@
+[
+    {
+        "name":  "baseline_tnd_sc64aux_hvionly_lowcave",
+        "rom":  "artifacts\\generated\\BASELINE_TND64_Expanded_sc64aux_hvionly_lowcave.z64",
+        "elapsed":  25.04,
+        "exited_before_timeout":  true,
+        "exit_code_before_timeout":  null,
+        "stderr_tail":  [
+                            "[INFO]: Targeting 3 swapchain images.",
+                            "[INFO]: Created swapchain 640 x 480 (fmt: 64, transform: 1).",
+                            "[INFO]: Got 3 swapchain images.",
+                            "[WARN]: Current proprietary AMD driver is known to be buggy with 8/16-bit integer arithmetic, disabling support for time being.",
+                            "",
+                            "thread \u0027main\u0027 (13232) panicked at src\\device\\cart\\sc64.rs:368:42:",
+                            "called `Option::unwrap()` on a `None` value",
+                            "note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace"
+                        ]
+    },
+    {
+        "name":  "single8076_all_sc64aux_hvionly_lowcave",
+        "rom":  "artifacts\\generated\\TND64_480i_single8076_all_core_no_menu_sc64aux_hvionly_lowcave.z64",
+        "elapsed":  25.02,
+        "exited_before_timeout":  true,
+        "exit_code_before_timeout":  null,
+        "stderr_tail":  [
+                            "[INFO]: Targeting 3 swapchain images.",
+                            "[INFO]: Created swapchain 640 x 480 (fmt: 64, transform: 1).",
+                            "[INFO]: Got 3 swapchain images.",
+                            "[WARN]: Current proprietary AMD driver is known to be buggy with 8/16-bit integer arithmetic, disabling support for time being.",
+                            "",
+                            "thread \u0027main\u0027 (8964) panicked at src\\device\\cart\\sc64.rs:368:42:",
+                            "called `Option::unwrap()` on a `None` value",
+                            "note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace"
+                        ]
+    }
+]

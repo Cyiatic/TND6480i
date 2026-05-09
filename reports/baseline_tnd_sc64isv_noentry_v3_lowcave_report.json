@@ -1,0 +1,44 @@
+{
+  "base_rom": "artifacts\\roms\\BASELINE_TND64_Expanded_direct_from_stock.z64",
+  "out_rom": "artifacts\\generated\\BASELINE_TND64_Expanded_sc64isv_noentry_v3_lowcave.z64",
+  "out_md5": "f33cf07e6b97a69c95f148e3ac68ae8a",
+  "header_crc": "B5D5935347CD57E8",
+  "transport": "isv",
+  "debug_command": "sc64deployer.exe debug --isv 0x03FF0000 --no-writeback",
+  "hooks": [
+    "BCLR",
+    "DFB1",
+    "HVI1"
+  ],
+  "expected_markers": [
+    "TND:BCLR",
+    "TND:DFB1",
+    "TND:HVI1"
+  ],
+  "patches": [
+    {
+      "offset": "0x3CB0",
+      "note": "ISV marker logger"
+    },
+    {
+      "offset": "0x3CE4",
+      "note": "VI return breadcrumb trampoline"
+    },
+    {
+      "offset": "0x3CFC",
+      "note": "framebuffer global setup breadcrumb trampoline"
+    },
+    {
+      "offset": "0x3D4C",
+      "note": "log after framebuffer clear function"
+    },
+    {
+      "offset": "0x65A4",
+      "note": "jump to framebuffer global setup breadcrumb"
+    },
+    {
+      "offset": "0x19AC4",
+      "note": "log after VI setup function returns"
+    }
+  ]
+}

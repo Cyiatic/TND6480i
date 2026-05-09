@@ -1,0 +1,36 @@
+[
+    {
+        "name":  "baseline_tnd_hvijump_lowcave",
+        "rom":  "artifacts\\generated\\BASELINE_TND64_Expanded_hvijump_lowcave.z64",
+        "elapsed":  25.08,
+        "exited_before_timeout":  false,
+        "exit_code_before_timeout":  null,
+        "stderr_tail":  [
+                            "[WARN]: Current proprietary AMD driver is known to be buggy with 8/16-bit integer arithmetic, disabling support for time being.",
+                            "[WARN]: Stalled compile (compute, c36377373cb79785): thread 0 - 27310.500 us (mode: sync, success: yes).",
+                            "[WARN]: Stalled compile (compute, 1cbd9189b0a23679): thread 0 - 34102.200 us (mode: sync, success: yes).",
+                            "[WARN]: Stalled compile (compute, 7e74068a497f23c2): thread 0 - 1094510.600 us (mode: sync, success: yes).",
+                            "[WARN]: Stalled compile (compute, bd9293d0d50b3e8b): thread 0 - 65239.200 us (mode: sync, success: yes).",
+                            "[WARN]: Stalled compile (graphics, e3b76ed8c30a5cc1): thread 0 - 18339.200 us (mode: sync, success: yes).",
+                            "[WARN]: Stalled compile (graphics, b178544ed4416cd2): thread 0 - 10806.100 us (mode: sync, success: yes).",
+                            "[WARN]: Stalled compile (compute, 35f88fc5fb45ef46): thread 0 - 50095.800 us (mode: sync, success: yes)."
+                        ]
+    },
+    {
+        "name":  "single8076_all_hvijump_lowcave",
+        "rom":  "artifacts\\generated\\TND64_480i_single8076_all_core_no_menu_hvijump_lowcave.z64",
+        "elapsed":  25.06,
+        "exited_before_timeout":  false,
+        "exit_code_before_timeout":  null,
+        "stderr_tail":  [
+                            "[WARN]: Stalled compile (compute, c36377373cb79785): thread 0 - 24221.900 us (mode: sync, success: yes).",
+                            "[WARN]: Stalled compile (compute, 1cbd9189b0a23679): thread 0 - 28591.100 us (mode: sync, success: yes).",
+                            "[WARN]: Stalled compile (compute, 7e74068a497f23c2): thread 0 - 1003173.900 us (mode: sync, success: yes).",
+                            "[WARN]: Stalled compile (compute, bd9293d0d50b3e8b): thread 0 - 67049.200 us (mode: sync, success: yes).",
+                            "[WARN]: Stalled compile (graphics, d177283513a5a0f7): thread 0 - 26405.900 us (mode: sync, success: yes).",
+                            "[WARN]: Stalled compile (graphics, 5b01cde7ced266c2): thread 0 - 6455.300 us (mode: sync, success: yes).",
+                            "[WARN]: Stalled compile (graphics, b178554ed4416e85): thread 0 - 11163.800 us (mode: sync, success: yes).",
+                            "[WARN]: Stalled compile (compute, 35f88fc5fb45ef46): thread 0 - 50572.900 us (mode: sync, success: yes)."
+                        ]
+    }
+]

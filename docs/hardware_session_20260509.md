@@ -102,13 +102,73 @@ Built no-entry, runtime-fixed debug controls that only log later breadcrumbs fro
 | `artifacts/generated/BASELINE_TND64_Expanded_sc64isv_noentry_runtimefix.z64` | `484ac2cdaf535e56935efda0015f519f` | `5146CF58 370EE12D` | `TND:BCLR`, `TND:DFB1`, `TND:HVI1` | Gopher64 25s survived |
 | `artifacts/generated/TND64_480i_single8076_all_core_no_menu_sc64isv_noentry_runtimefix.z64` | `0c6c3662173be66c0ccc1a19010abfd0` | `C3C81044 B73D1559` | `TND:BCLR`, `TND:DFB1`, `TND:HVI1` | Gopher64 25s survived |
 
+## No-Entry Debug Hardware Result
+
+After a clean SC64 menu state, the no-entry baseline control was uploaded:
+
+```text
+artifacts/generated/BASELINE_TND64_Expanded_sc64isv_noentry_runtimefix.z64
+```
+
+The console entered black video after reset. `sc64deployer debug --isv 0x03FF0000 --no-writeback` repeatedly started and stopped, never stayed attached, and a direct dump of `0x03FF0000` still contained only `0x5A` fill bytes. The post-test capture was flat black.
+
+This result should not be used as proof that late ISV logging itself is impossible. A review immediately afterward found a bug in the `DFB1` hook: it overwrote the original framebuffer-global setup block and skipped the fb0 store / fb1 pointer calculation. That can black-screen a known-good baseline by itself.
+
+SC64 was reset over USB afterward:
+
+```text
+Boot mode: Bootloader -> Menu from SD card
+```
+
+The capture remained flat black until the console receives a physical reset/power cycle.
+
+## Corrected No-Entry Debug Builds
+
+`scripts/build_sc64_isv_instrumented.py` now supports `--hooks` and routes the `DFB1` hook through a trampoline that replays the original framebuffer-global stores before logging.
+
+| ROM | MD5 | N64 CRC | Expected markers | Emulator smoke |
+|---|---|---|---|---|
+| `artifacts/generated/BASELINE_TND64_Expanded_sc64isv_hvionly_runtimefix.z64` | `3da0d7373a5c5feac35d36a1a6b41493` | `5ABBA557 BACFDFFA` | `TND:HVI1` | Gopher64 25s survived |
+| `artifacts/generated/BASELINE_TND64_Expanded_sc64isv_noentry_v2_runtimefix.z64` | `2d1f9bd38e684b98d199b34da3edbbcc` | `B5D098AD D2A048D6` | `TND:BCLR`, `TND:DFB1`, `TND:HVI1` | Gopher64 25s survived |
+| `artifacts/generated/TND64_480i_single8076_all_core_no_menu_sc64isv_hvionly_runtimefix.z64` | `d2be3ae28d62c20d83e37bb9d1c9a724` | `C323C56F 529E9D3E` | `TND:HVI1` | Gopher64 25s survived |
+
+## HVI-Only High-Cave Hardware Result
+
+After the SC64 menu was visibly restored, the HVI-only baseline control was uploaded:
+
+```text
+artifacts/generated/BASELINE_TND64_Expanded_sc64isv_hvionly_runtimefix.z64
+```
+
+After reset, the console entered flat black video. The ISV listener never stayed attached, and dumping `0x03FF0000` still showed only `0x5A` fill bytes. SC64 was reset over USB back to:
+
+```text
+Boot mode: Bootloader -> Menu from SD card
+```
+
+This test strongly suggests a remaining diagnostic problem rather than a TND 480i problem. The HVI-only build left framebuffer setup untouched, so the likely issue is that the logger/trampoline cave at ROM `0x331E0` is not resident in RDRAM when early boot/video code calls it on real hardware.
+
+## Low-Cave Diagnostic Builds
+
+The diagnostic script now places the logger and trampolines in early padding at ROM `0x3CB0-0x3D20`, near known-loaded code. It also supports `--transport isv`, `--transport aux`, and `--transport none`.
+
+| ROM | MD5 | N64 CRC | Transport | Expected markers | Emulator smoke |
+|---|---|---|---|---|---|
+| `artifacts/generated/BASELINE_TND64_Expanded_hvijump_lowcave.z64` | `e12d5f83eadd9ad4ae3f5427c3648e02` | `E21F057C 49DC630F` | none | none | Gopher64 25s survived |
+| `artifacts/generated/BASELINE_TND64_Expanded_sc64isv_hvionly_lowcave.z64` | `efc8c7caaa898e421f82eb42b2d62edb` | `5AB52A0F BAB5C1D8` | ISV | `TND:HVI1` | Gopher64 25s survived |
+| `artifacts/generated/BASELINE_TND64_Expanded_sc64isv_noentry_v3_lowcave.z64` | `f33cf07e6b97a69c95f148e3ac68ae8a` | `B5D59353 47CD57E8` | ISV | `TND:BCLR`, `TND:DFB1`, `TND:HVI1` | Gopher64 25s survived |
+| `artifacts/generated/TND64_480i_single8076_all_core_no_menu_sc64isv_hvionly_lowcave.z64` | `d324a80841416d57c33e64c17923be03` | `C32248EF F42057CC` | ISV | `TND:HVI1` | Gopher64 25s survived |
+| `artifacts/generated/BASELINE_TND64_Expanded_sc64aux_hvionly_lowcave.z64` | `5a9f649b8a4a51d5aea8815703bc6fb6` | `E89798F4 07CC0928` | AUX | `HVI1` word via AUX | Gopher64 panicked in its SC64 cart path |
+
 ## Next Step
 
-After the N64 is physically power-cycled and the SC64 menu is visible again, test the no-entry baseline debug control first:
+After the N64 is physically reset/power-cycled and the SC64 menu is visible again, test the low-cave HVI-only baseline control first:
 
 ```powershell
-& 'C:\Users\codex\Documents\n64\sc64deployer.exe' upload 'C:\Users\codex\Documents\GitHub\TND6480i\artifacts\generated\BASELINE_TND64_Expanded_sc64isv_noentry_runtimefix.z64'
+& 'C:\Users\codex\Documents\n64\sc64deployer.exe' upload 'C:\Users\codex\Documents\GitHub\TND6480i\artifacts\generated\BASELINE_TND64_Expanded_sc64isv_hvionly_lowcave.z64'
 & 'C:\Users\codex\Documents\n64\sc64deployer.exe' debug --isv 0x03FF0000 --no-writeback
 ```
 
-Then press the real N64 reset button once. If later markers appear on the known-good baseline, the debug channel is validated and the no-entry 480i debug candidate can be tested next.
+Then press the real N64 reset button once. If `TND:HVI1` appears on the known-good baseline, the debug channel is validated and the corrected v3 all-hook baseline can be tested next. Only after that should the low-cave HVI-only 480i debug ROM be used.
+
+If we want the lowest-risk branch before any debug writes, upload `BASELINE_TND64_Expanded_hvijump_lowcave.z64` and verify visually that baseline TND still boots. That proves the low-cave trampoline mechanics before involving ISV.

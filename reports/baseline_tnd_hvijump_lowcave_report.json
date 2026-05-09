@@ -1,0 +1,26 @@
+{
+  "base_rom": "artifacts\\roms\\BASELINE_TND64_Expanded_direct_from_stock.z64",
+  "out_rom": "artifacts\\generated\\BASELINE_TND64_Expanded_hvijump_lowcave.z64",
+  "out_md5": "e12d5f83eadd9ad4ae3f5427c3648e02",
+  "header_crc": "E21F057C49DC630F",
+  "transport": "none",
+  "debug_command": null,
+  "hooks": [
+    "HVI1"
+  ],
+  "expected_markers": [],
+  "patches": [
+    {
+      "offset": "0x3CB0",
+      "note": "NONE marker logger"
+    },
+    {
+      "offset": "0x3CE4",
+      "note": "VI return breadcrumb trampoline"
+    },
+    {
+      "offset": "0x19AC4",
+      "note": "log after VI setup function returns"
+    }
+  ]
+}

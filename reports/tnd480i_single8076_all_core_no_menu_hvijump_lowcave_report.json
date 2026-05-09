@@ -1,0 +1,26 @@
+{
+  "base_rom": "artifacts\\generated\\TND64_480i_single8076_all_core_no_menu.z64",
+  "out_rom": "artifacts\\generated\\TND64_480i_single8076_all_core_no_menu_hvijump_lowcave.z64",
+  "out_md5": "28247e1039694288cca7028801a440db",
+  "header_crc": "BB8458697F86D04C",
+  "transport": "none",
+  "debug_command": null,
+  "hooks": [
+    "HVI1"
+  ],
+  "expected_markers": [],
+  "patches": [
+    {
+      "offset": "0x3CB0",
+      "note": "NONE marker logger"
+    },
+    {
+      "offset": "0x3CE4",
+      "note": "VI return breadcrumb trampoline"
+    },
+    {
+      "offset": "0x19AC4",
+      "note": "log after VI setup function returns"
+    }
+  ]
+}

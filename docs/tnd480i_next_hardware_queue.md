@@ -4,6 +4,14 @@ Date: 2026-05-08
 
 ## Current Hardware State
 
+- 2026-05-09 SC64 repo session:
+  - The prior runtime-fixed no-entry baseline debug ROM black-screened on hardware and produced no ISV markers.
+  - That result is now partially invalidated because the `DFB1` hook was found to overwrite original framebuffer-global setup instead of replaying it.
+  - `scripts/build_sc64_isv_instrumented.py` now supports `--hooks` and uses a corrected trampoline for `DFB1`.
+  - A later HVI-only baseline control also black-screened when the logger/trampoline cave was at ROM `0x331E0`.
+  - Current theory: `0x331E0` is not guaranteed to be resident in RDRAM when early boot/video code runs on real hardware. The new builds use an early low cave at ROM `0x3CB0`.
+  - SC64 was reset over USB and reports `Bootloader -> Menu from SD card`. Do not upload another ROM while the user is away.
+  - Next hardware step is a low-cave baseline control, not a 480i candidate.
 - 2026-05-08 SC64 session:
   - SC64 detected on `COM4`; firmware `v2.20.2`; SD initialized; ROM writes enabled.
   - GV-USB2 capture showed the SC64 menu clearly.
@@ -85,36 +93,45 @@ Date: 2026-05-08
 - N64 CRC: `3D4A29A2 1F98FEB5`
 - Result: black screen on real N64 from a confirmed EverDrive menu, pure black at 2, 5, 10, 15, 30, 45, 60, 90, and 120 seconds.
 
-## Current Best One-Shot Hardware Candidate
+## Current Safest Hardware Candidate
 
 Only use this if the capture card visibly shows the SC64 menu, EverDrive menu, or another known-good live video state after a physical reset or power-cycle. If it black-screens or locks, stop immediately and continue offline.
 
-`TND64_480i_single8076_all_core_no_menu.z64`
+`BASELINE_TND64_Expanded_sc64isv_hvionly_lowcave.z64`
 
-- Profile: `single8076_all_nodims`
-- MD5: `3c6306b06ad9d52121ccc6817038a525`
-- N64 CRC: `C35E1F10 C9208D74`
-- Purpose: uses the safer single-high framebuffer at `0x8076A000` while applying the full GE 480i H branch family, including the origin/control-flow bypass at `0x19978/0x19980`. This is more likely to show the real GE 480i hand/aliasing behavior than the width/scale-only single build.
-- Emulator status: Gopher64 visible smoke passed for 30 seconds; Gopher64 input-driven smoke survived 75 seconds with 156 Start/A key taps; ares process smoke survived 30 seconds and stayed responsive.
+- Base: known-good baseline TND expanded ROM.
+- MD5: `efc8c7caaa898e421f82eb42b2d62edb`
+- N64 CRC: `5AB52A0F BAB5C1D8`
+- Expected marker: `TND:HVI1`
+- Purpose: validate SC64/IS-Viewer logging from the least invasive late video hook, with the logger/trampoline in known early-code padding, before testing any 480i payload.
+- Emulator status: Gopher64 25 second smoke survived.
+
+If this prints `TND:HVI1`, test `BASELINE_TND64_Expanded_sc64isv_noentry_v3_lowcave.z64` next to validate the corrected multi-hook logger. Only then use the HVI-only 480i debug ROM or return to visual 480i candidates.
+
+Lowest-risk visual-only control:
+
+`BASELINE_TND64_Expanded_hvijump_lowcave.z64`
+
+- MD5: `e12d5f83eadd9ad4ae3f5427c3648e02`
+- N64 CRC: `E21F057C 49DC630F`
+- Purpose: proves the low-cave HVI trampoline itself does not break baseline TND. It emits no debug marker.
+- Emulator status: Gopher64 25 second smoke survived.
 
 ## SC64 Instrumented Debug Candidate
 
 Use this on SummerCart64 when debug visibility matters more than keeping the ROM byte-for-byte close to the candidate above.
 
-`TND64_480i_single8076_all_core_no_menu_sc64isv_entry.z64`
+`TND64_480i_single8076_all_core_no_menu_sc64isv_hvionly_lowcave.z64`
 
 - Base: `TND64_480i_single8076_all_core_no_menu.z64`
-- MD5: `76071b20801ad798fa47233e95daf27f`
-- N64 CRC: `5BC25FC8 8378A8B1`
-- Debug command: `sc64deployer.exe debug --isv 0x03FF0000`
+- MD5: `d324a80841416d57c33e64c17923be03`
+- N64 CRC: `C32248EF F42057CC`
+- Debug command: `sc64deployer.exe debug --isv 0x03FF0000 --no-writeback`
 - Expected markers:
-  - `TND:ENTR` - entry trampoline ran
-  - `TND:BCLR` - framebuffer clear function returned
-  - `TND:DFB1` - framebuffer globals were written
   - `TND:HVI1` - VI setup function returned; may repeat while the game is alive
-- Emulator status: Gopher64 visible smoke passed for 30 seconds.
+- Emulator status: Gopher64 25 second smoke survived.
 
-Older width/scale-only SC64 debug ROM remains available as `TND64_480i_single8076_mem_fg_h_width_scale_core_no_menu_sc64isv_entry.z64`, but it does not include the full GE origin/control-flow bypass and is no longer the first debug choice.
+Do not use the old entry-debug ROMs first. Entry logging black-screened the baseline control, and the older no-entry build had a `DFB1` hook bug. The corrected all-hook baseline is `BASELINE_TND64_Expanded_sc64isv_noentry_v3_lowcave.z64`.
 
 ## Single-High Diagnostic Fallbacks
 

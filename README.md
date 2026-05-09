@@ -11,7 +11,9 @@ This repo tracks the reproducible patch/build scripts, notes, hardware queue, an
 - The most recent blind visual candidate, `TND64_480i_single8076_all_core_no_menu.z64`, did not work on hardware per user test.
 - The first SC64 debug candidate had a real-hardware runtime-address bug in its trampolines. Fixed debug builds now use the ROM load mapping `0x1000 -> 0x80000400`.
 - Corrected entry-time ISV logging still black-screened on known-good baseline TND, so entry hooks are no longer the next path.
-- Next useful step is validating no-entry SC64/IS-Viewer logging on a known-good baseline TND ROM before another 480i candidate test.
+- The first no-entry baseline ISV control also black-screened, but it was found to have a `DFB1` hook bug that skipped original framebuffer-global setup. That build is superseded.
+- A later HVI-only baseline control still black-screened when its logger lived at ROM `0x331E0`; that high cave may not be resident in RDRAM on hardware. The current diagnostics use a lower early-code cave at `0x3CB0`.
+- Next useful step is validating the low-cave HVI-only SC64/IS-Viewer baseline control on real hardware before another 480i candidate test.
 
 ## Key Docs
 
@@ -54,13 +56,9 @@ SC64 debug build:
 ```powershell
 & $py scripts\build_sc64_isv_instrumented.py `
   --base-rom artifacts\generated\TND64_480i_single8076_all_core_no_menu.z64 `
-  --out-rom artifacts\generated\TND64_480i_single8076_all_core_no_menu_sc64isv.z64 `
-  --report reports\tnd480i_single8076_all_core_no_menu_sc64isv_report.json
-
-& $py scripts\build_sc64_isv_entry_instrumented.py `
-  --base-rom artifacts\generated\TND64_480i_single8076_all_core_no_menu_sc64isv.z64 `
-  --out-rom artifacts\generated\TND64_480i_single8076_all_core_no_menu_sc64isv_entry.z64 `
-  --report reports\tnd480i_single8076_all_core_no_menu_sc64isv_entry_report.json
+  --out-rom artifacts\generated\TND64_480i_single8076_all_core_no_menu_sc64isv_hvionly_lowcave.z64 `
+  --report reports\tnd480i_single8076_all_core_no_menu_sc64isv_hvionly_lowcave_report.json `
+  --hooks HVI1
 ```
 
 ## Hardware Rule

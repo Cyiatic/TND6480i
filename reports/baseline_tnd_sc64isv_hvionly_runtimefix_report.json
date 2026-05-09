@@ -1,0 +1,27 @@
+{
+  "base_rom": "artifacts\\roms\\BASELINE_TND64_Expanded_direct_from_stock.z64",
+  "out_rom": "artifacts\\generated\\BASELINE_TND64_Expanded_sc64isv_hvionly_runtimefix.z64",
+  "out_md5": "3da0d7373a5c5feac35d36a1a6b41493",
+  "header_crc": "5ABBA557BACFDFFA",
+  "isv_debug_command": "sc64deployer.exe debug --isv 0x03FF0000",
+  "hooks": [
+    "HVI1"
+  ],
+  "expected_markers": [
+    "TND:HVI1"
+  ],
+  "patches": [
+    {
+      "offset": "0x331E0",
+      "note": "IS-Viewer marker logger"
+    },
+    {
+      "offset": "0x33240",
+      "note": "VI return breadcrumb trampoline"
+    },
+    {
+      "offset": "0x19AC4",
+      "note": "log after VI setup function returns"
+    }
+  ]
+}

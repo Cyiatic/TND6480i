@@ -1,0 +1,53 @@
+[
+    {
+        "name":  "baseline_tnd_sc64isv_hvionly_lowcave",
+        "rom":  "artifacts\\generated\\BASELINE_TND64_Expanded_sc64isv_hvionly_lowcave.z64",
+        "elapsed":  25.09,
+        "exited_before_timeout":  false,
+        "exit_code_before_timeout":  null,
+        "stderr_tail":  [
+                            "[WARN]: Stalled compile (compute, c36377373cb79785): thread 0 - 44288.800 us (mode: sync, success: yes).",
+                            "[WARN]: Stalled compile (compute, 1cbd9189b0a23679): thread 0 - 46526.500 us (mode: sync, success: yes).",
+                            "[WARN]: Stalled compile (compute, 7e74068a497f23c2): thread 0 - 887757.500 us (mode: sync, success: yes).",
+                            "[WARN]: Stalled compile (compute, bd9293d0d50b3e8b): thread 0 - 67083.300 us (mode: sync, success: yes).",
+                            "[WARN]: Stalled compile (compute, bf3dfa0bf27d196e): thread 0 - 7743.900 us (mode: sync, success: yes).",
+                            "[WARN]: Stalled compile (graphics, e3b76ed8c30a5cc1): thread 0 - 25701.500 us (mode: sync, success: yes).",
+                            "[WARN]: Stalled compile (graphics, b178544ed4416cd2): thread 0 - 11600.400 us (mode: sync, success: yes).",
+                            "[WARN]: Stalled compile (compute, 35f88fc5fb45ef46): thread 0 - 49187.600 us (mode: sync, success: yes)."
+                        ]
+    },
+    {
+        "name":  "baseline_tnd_sc64isv_noentry_v3_lowcave",
+        "rom":  "artifacts\\generated\\BASELINE_TND64_Expanded_sc64isv_noentry_v3_lowcave.z64",
+        "elapsed":  25.07,
+        "exited_before_timeout":  false,
+        "exit_code_before_timeout":  null,
+        "stderr_tail":  [
+                            "[WARN]: Stalled compile (compute, c36377373cb79785): thread 0 - 25393.900 us (mode: sync, success: yes).",
+                            "[WARN]: Stalled compile (compute, 1cbd9189b0a23679): thread 0 - 27983.400 us (mode: sync, success: yes).",
+                            "[WARN]: Stalled compile (compute, 7e74068a497f23c2): thread 0 - 881223.600 us (mode: sync, success: yes).",
+                            "[WARN]: Stalled compile (compute, bd9293d0d50b3e8b): thread 0 - 71897.000 us (mode: sync, success: yes).",
+                            "[WARN]: Stalled compile (compute, bf3dfa0bf27d196e): thread 0 - 8828.200 us (mode: sync, success: yes).",
+                            "[WARN]: Stalled compile (graphics, e3b76ed8c30a5cc1): thread 0 - 23482.100 us (mode: sync, success: yes).",
+                            "[WARN]: Stalled compile (graphics, b178544ed4416cd2): thread 0 - 10504.400 us (mode: sync, success: yes).",
+                            "[WARN]: Stalled compile (compute, 35f88fc5fb45ef46): thread 0 - 52810.200 us (mode: sync, success: yes)."
+                        ]
+    },
+    {
+        "name":  "single8076_all_sc64isv_hvionly_lowcave",
+        "rom":  "artifacts\\generated\\TND64_480i_single8076_all_core_no_menu_sc64isv_hvionly_lowcave.z64",
+        "elapsed":  25.07,
+        "exited_before_timeout":  false,
+        "exit_code_before_timeout":  null,
+        "stderr_tail":  [
+                            "[WARN]: Stalled compile (compute, c36377373cb79785): thread 0 - 23361.500 us (mode: sync, success: yes).",
+                            "[WARN]: Stalled compile (compute, 1cbd9189b0a23679): thread 0 - 29241.300 us (mode: sync, success: yes).",
+                            "[WARN]: Stalled compile (compute, 7e74068a497f23c2): thread 0 - 916783.700 us (mode: sync, success: yes).",
+                            "[WARN]: Stalled compile (compute, bd9293d0d50b3e8b): thread 0 - 67817.900 us (mode: sync, success: yes).",
+                            "[WARN]: Stalled compile (graphics, d177283513a5a0f7): thread 0 - 26007.800 us (mode: sync, success: yes).",
+                            "[WARN]: Stalled compile (graphics, 5b01cde7ced266c2): thread 0 - 6509.100 us (mode: sync, success: yes).",
+                            "[WARN]: Stalled compile (graphics, b178554ed4416e85): thread 0 - 11719.900 us (mode: sync, success: yes).",
+                            "[WARN]: Stalled compile (compute, 35f88fc5fb45ef46): thread 0 - 49677.500 us (mode: sync, success: yes)."
+                        ]
+    }
+]
