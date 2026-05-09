@@ -1,0 +1,25 @@
+{
+  "base_rom": "artifacts\\roms\\TND64_enh480i_core_no_menu_pigz.z64",
+  "ge480i_rom": "artifacts\\roms\\BASELINE_GE_480i_direct_from_stock.z64",
+  "out_rom": "artifacts\\generated\\TND64_480i_gonly_core_no_menu.z64",
+  "variant": "direct_only",
+  "direct_profile": "g_only",
+  "out_md5": "c8b97c8fe4b52a294628364bd887a7b1",
+  "header_crc": "CEBD65A29481B68B",
+  "main_raw_md5": "b77ac94fd19847299613d6ab600047a2",
+  "verify_main_raw_md5": "b77ac94fd19847299613d6ab600047a2",
+  "slot_len": "0xFDA7",
+  "packed_len": "0x0",
+  "verify_consumed": "0xFDA7",
+  "main_changed_bytes_from_tnd": 0,
+  "main_ranges": [],
+  "direct_word_patches": [
+    {
+      "group": "G_mask_word",
+      "offset": "0x104DC",
+      "old": "0x2401FCFF",
+      "new": "0x2401FFFF",
+      "note": "GE 480i mask word"
+    }
+  ]
+}

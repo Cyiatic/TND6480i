@@ -46,6 +46,13 @@ ROMS = {
     "single all + dims": "TND64_480i_single8076_all_dims_core_no_menu.z64",
     "dim0 only": "TND64_480i_dim0only_core_no_menu.z64",
     "dim1 only": "TND64_480i_dim1only_core_no_menu.z64",
+    "F only": "TND64_480i_fonly_core_no_menu.z64",
+    "G only": "TND64_480i_gonly_core_no_menu.z64",
+    "FG only": "TND64_480i_fgonly_core_no_menu.z64",
+    "H only": "TND64_480i_honly_core_no_menu.z64",
+    "H origin only": "TND64_480i_horiginonly_core_no_menu.z64",
+    "H width only": "TND64_480i_hwidthonly_core_no_menu.z64",
+    "H scale only": "TND64_480i_hscaleonly_core_no_menu.z64",
     "FGH only": "TND64_480i_fghonly_core_no_menu.z64",
     "split8030 FG+width+scale": "TND64_480i_split8030_8076_mem_fg_h_width_scale_core_no_menu.z64",
     "split8030 all": "TND64_480i_split8030_8076_all_core_no_menu.z64",
@@ -64,6 +71,13 @@ PROFILE_HINTS = {
     "single all + dims": "single8076_all_dims",
     "dim0 only": "dim0_only",
     "dim1 only": "dim1_only",
+    "F only": "f_only",
+    "G only": "g_only",
+    "FG only": "fg_only",
+    "H only": "h_only",
+    "H origin only": "h_origin_only",
+    "H width only": "h_width_only",
+    "H scale only": "h_scale_only",
     "FGH only": "fg_h_only",
     "split8030 FG+width+scale": "split8030_8076_mem_fg_h_width_scale_nodims",
     "split8030 all": "split8030_8076_all_nodims",
@@ -266,6 +280,13 @@ def write_markdown(report):
         ("single all + dims", "Single all + dims"),
         ("dim0 only", "Dim0 only"),
         ("dim1 only", "Dim1 only"),
+        ("F only", "F only"),
+        ("G only", "G only"),
+        ("FG only", "FG only"),
+        ("H only", "H only"),
+        ("H origin only", "H origin"),
+        ("H width only", "H width"),
+        ("H scale only", "H scale"),
         ("FGH only", "FGH only"),
         ("split8030 all", "Split8030 all"),
         ("split8030 all + dims", "Split8030 all + dims"),
@@ -295,6 +316,9 @@ def write_markdown(report):
     )
     lines.append(
         "- `FGH only` keeps framebuffer placement and direct dimensions stock while applying the GE 480i F/G/H VI-side word family. It rendered in Gopher64 visual capture, but later black-screened on real hardware, so the F/G/H family now needs smaller hardware probes before any 480i payload is retried."
+    )
+    lines.append(
+        "- The smaller F/G/H subfamily probes all render in Gopher64; `H only` is the next most informative hardware discriminator because it removes F/G, direct dimensions, and framebuffer relocation."
     )
     lines.append(
         "- `split8030 all + dims` is the double-buffer fallback that avoids both the earlier `0x80400000` real-hardware failure point and the known `0x8070xxxx` TND references while also applying the direct dimension words."

@@ -32,6 +32,8 @@ Date: 2026-05-08
   - Real hardware then black-screened `single8076_all_dim0`, and smaller `dim0_only` / `dim1_only` probes both stayed black in Gopher64 even without framebuffer relocation.
   - The `FGH only` probe, which keeps stock direct dimensions and framebuffer placement while applying F/G/H VI-side words, rendered in Gopher64.
   - Hardware later black-screened `FGH only` through 60 seconds, so it is no longer a candidate. Split F/G/H into smaller probes before another hardware upload.
+  - Smaller `F only`, `G only`, `FG only`, `H only`, `H origin only`, `H width only`, and `H scale only` probes all rendered in Gopher64 80 second visual/input smokes.
+  - `H only` is now the most informative next hardware candidate because it tests whether the H VI-register family alone causes the F/G/H-only hardware black screen.
 - 2026-05-08 SC64 session:
   - SC64 detected on `COM4`; firmware `v2.20.2`; SD initialized; ROM writes enabled.
   - GV-USB2 capture showed the SC64 menu clearly.
@@ -115,7 +117,7 @@ Date: 2026-05-08
 
 ## Current Safest Hardware Candidate
 
-There is no active safest hardware candidate right now. Only resume uploads if the capture card visibly shows the SC64 menu, EverDrive menu, or another known-good live video state after a physical reset or power-cycle, and SC64 reports `ROM write: Enabled`.
+There is no proven-safe hardware candidate right now. Only resume uploads if the capture card visibly shows the SC64 menu, EverDrive menu, or another known-good live video state after a physical reset or power-cycle, and SC64 reports `ROM write: Enabled`.
 
 Do not retest these first:
 
@@ -123,7 +125,16 @@ Do not retest these first:
 - `TND64_480i_fghonly_core_no_menu.z64` - black-screened on real hardware through 60 seconds.
 - `TND64_480i_dim0only_core_no_menu.z64` / `TND64_480i_dim1only_core_no_menu.z64` - both black-screened in Gopher64 visual capture.
 
-Next useful work is offline: build and smoke smaller stock-memory, stock-dimension probes for F-only, G-only, H-only, and then H origin / H width-vsync / H scale. Pick the next hardware candidate only after one of those renders in emulator and has a clear isolation purpose.
+Most informative next hardware candidate:
+
+`TND64_480i_honly_core_no_menu.z64`
+
+- Profile: `h_only`
+- MD5: `58a529bf4b71a8cbbfe4bae6bbd08b61`
+- N64 CRC: `45AFF449 F54CE932`
+- Purpose: tests whether the H VI-register family alone causes the F/G/H-only hardware black screen.
+- Emulator status: Gopher64 80 second visual/input smoke rendered, with window mean luma `122.26`.
+- Caution: if this black-screens, stop and split H into origin / width-vsync / scale hardware probes after another physical power cycle.
 
 Baseline controls already run:
 

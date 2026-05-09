@@ -1,0 +1,366 @@
+[
+  {
+    "rom": "artifacts\\generated\\TND64_480i_fonly_core_no_menu.z64",
+    "elapsed": 80.0,
+    "main_window_seen": true,
+    "main_window": {
+      "hwnd": 7603932,
+      "title": "gopher64"
+    },
+    "key_taps": 230,
+    "exited_before_timeout": false,
+    "exit_code_before_timeout": null,
+    "stdout_path": "reports\\smoke\\TND64_480i_fonly_core_no_menu.stdout.txt",
+    "stderr_path": "reports\\smoke\\TND64_480i_fonly_core_no_menu.stderr.txt",
+    "stdout_bytes": 0,
+    "stderr_bytes": 2877,
+    "marker_counts": {},
+    "stderr_tail": [
+      "[WARN]: Stalled compile (compute, 7e74068a497f23c2): thread 0 - 987408.700 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (compute, bd9293d0d50b3e8b): thread 0 - 68272.500 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, e3b76ed8c30a5cc1): thread 0 - 17522.700 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, b178544ed4416cd2): thread 0 - 11289.100 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (compute, 35f88fc5fb45ef46): thread 0 - 52047.900 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (compute, 5949a1b688b6ff72): thread 0 - 94961.000 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, e6b76ed8c8235cc1): thread 0 - 10529.500 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, 7d7854549a936cd2): thread 0 - 11501.600 us (mode: sync, success: yes)."
+    ],
+    "capture": {
+      "path": "diagnostics\\captures\\gopher64\\TND64_480i_fonly_core_no_menu.png",
+      "returncode": 0,
+      "stderr_tail": [],
+      "window_rect": {
+        "left": 505,
+        "top": 210,
+        "right": 1031,
+        "bottom": 632,
+        "width": 526,
+        "height": 422
+      },
+      "window_stats": {
+        "crop_box": [
+          505,
+          210,
+          1031,
+          632
+        ],
+        "mean_luma": 97.9,
+        "stddev_luma": 75.78,
+        "nonblack_ratio": 0.9507,
+        "bright_ratio": 0.5213
+      }
+    }
+  },
+  {
+    "rom": "artifacts\\generated\\TND64_480i_gonly_core_no_menu.z64",
+    "elapsed": 80.03,
+    "main_window_seen": true,
+    "main_window": {
+      "hwnd": 5768628,
+      "title": "gopher64"
+    },
+    "key_taps": 228,
+    "exited_before_timeout": false,
+    "exit_code_before_timeout": null,
+    "stdout_path": "reports\\smoke\\TND64_480i_gonly_core_no_menu.stdout.txt",
+    "stderr_path": "reports\\smoke\\TND64_480i_gonly_core_no_menu.stderr.txt",
+    "stdout_bytes": 0,
+    "stderr_bytes": 2878,
+    "marker_counts": {},
+    "stderr_tail": [
+      "[WARN]: Stalled compile (compute, 7e74068a497f23c2): thread 0 - 939951.400 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (compute, bd9293d0d50b3e8b): thread 0 - 75671.900 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, e3b76ed8c30a5cc1): thread 0 - 18363.200 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, b178544ed4416cd2): thread 0 - 10968.600 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (compute, 35f88fc5fb45ef46): thread 0 - 53559.400 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (compute, 5949a1b688b6ff72): thread 0 - 106118.300 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, e6b76ed8c8235cc1): thread 0 - 17673.800 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, 7d7854549a936cd2): thread 0 - 22345.500 us (mode: sync, success: yes)."
+    ],
+    "capture": {
+      "path": "diagnostics\\captures\\gopher64\\TND64_480i_gonly_core_no_menu.png",
+      "returncode": 0,
+      "stderr_tail": [],
+      "window_rect": {
+        "left": 505,
+        "top": 210,
+        "right": 1031,
+        "bottom": 632,
+        "width": 526,
+        "height": 422
+      },
+      "window_stats": {
+        "crop_box": [
+          505,
+          210,
+          1031,
+          632
+        ],
+        "mean_luma": 122.54,
+        "stddev_luma": 87.53,
+        "nonblack_ratio": 0.9569,
+        "bright_ratio": 0.5886
+      }
+    }
+  },
+  {
+    "rom": "artifacts\\generated\\TND64_480i_fgonly_core_no_menu.z64",
+    "elapsed": 80.08,
+    "main_window_seen": true,
+    "main_window": {
+      "hwnd": 9504052,
+      "title": "gopher64"
+    },
+    "key_taps": 228,
+    "exited_before_timeout": false,
+    "exit_code_before_timeout": null,
+    "stdout_path": "reports\\smoke\\TND64_480i_fgonly_core_no_menu.stdout.txt",
+    "stderr_path": "reports\\smoke\\TND64_480i_fgonly_core_no_menu.stderr.txt",
+    "stdout_bytes": 0,
+    "stderr_bytes": 2981,
+    "marker_counts": {},
+    "stderr_tail": [
+      "[WARN]: Stalled compile (compute, bd9293d0d50b3e8b): thread 0 - 73880.100 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (compute, bf3dfa0bf27d196e): thread 0 - 6386.900 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, e3b76ed8c30a5cc1): thread 0 - 21187.400 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, b178544ed4416cd2): thread 0 - 13320.400 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (compute, 35f88fc5fb45ef46): thread 0 - 58577.900 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (compute, 5949a1b688b6ff72): thread 0 - 84070.200 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, e6b76ed8c8235cc1): thread 0 - 15542.400 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, 7d7854549a936cd2): thread 0 - 14625.100 us (mode: sync, success: yes)."
+    ],
+    "capture": {
+      "path": "diagnostics\\captures\\gopher64\\TND64_480i_fgonly_core_no_menu.png",
+      "returncode": 0,
+      "stderr_tail": [],
+      "window_rect": {
+        "left": 505,
+        "top": 210,
+        "right": 1031,
+        "bottom": 632,
+        "width": 526,
+        "height": 422
+      },
+      "window_stats": {
+        "crop_box": [
+          505,
+          210,
+          1031,
+          632
+        ],
+        "mean_luma": 83.52,
+        "stddev_luma": 75.41,
+        "nonblack_ratio": 0.9473,
+        "bright_ratio": 0.4166
+      }
+    }
+  },
+  {
+    "rom": "artifacts\\generated\\TND64_480i_honly_core_no_menu.z64",
+    "elapsed": 80.01,
+    "main_window_seen": true,
+    "main_window": {
+      "hwnd": 9569588,
+      "title": "gopher64"
+    },
+    "key_taps": 228,
+    "exited_before_timeout": false,
+    "exit_code_before_timeout": null,
+    "stdout_path": "reports\\smoke\\TND64_480i_honly_core_no_menu.stdout.txt",
+    "stderr_path": "reports\\smoke\\TND64_480i_honly_core_no_menu.stderr.txt",
+    "stdout_bytes": 0,
+    "stderr_bytes": 2983,
+    "marker_counts": {},
+    "stderr_tail": [
+      "[WARN]: Stalled compile (compute, bd9293d0d50b3e8b): thread 0 - 85429.600 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, d177283513a5a0f7): thread 0 - 30280.300 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, 5b01cde7ced266c2): thread 0 - 6657.200 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, b178554ed4416e85): thread 0 - 14600.100 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (compute, 35f88fc5fb45ef46): thread 0 - 53650.800 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (compute, 5949a1b688b6ff72): thread 0 - 94583.400 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, d077283511f2a0f7): thread 0 - 16730.900 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, 7d7855549a936e85): thread 0 - 16585.800 us (mode: sync, success: yes)."
+    ],
+    "capture": {
+      "path": "diagnostics\\captures\\gopher64\\TND64_480i_honly_core_no_menu.png",
+      "returncode": 0,
+      "stderr_tail": [],
+      "window_rect": {
+        "left": 505,
+        "top": 210,
+        "right": 1031,
+        "bottom": 632,
+        "width": 526,
+        "height": 422
+      },
+      "window_stats": {
+        "crop_box": [
+          505,
+          210,
+          1031,
+          632
+        ],
+        "mean_luma": 122.26,
+        "stddev_luma": 87.4,
+        "nonblack_ratio": 0.9566,
+        "bright_ratio": 0.5885
+      }
+    }
+  },
+  {
+    "rom": "artifacts\\generated\\TND64_480i_horiginonly_core_no_menu.z64",
+    "elapsed": 80.03,
+    "main_window_seen": true,
+    "main_window": {
+      "hwnd": 5965236,
+      "title": "gopher64"
+    },
+    "key_taps": 228,
+    "exited_before_timeout": false,
+    "exit_code_before_timeout": null,
+    "stdout_path": "reports\\smoke\\TND64_480i_horiginonly_core_no_menu.stdout.txt",
+    "stderr_path": "reports\\smoke\\TND64_480i_horiginonly_core_no_menu.stderr.txt",
+    "stdout_bytes": 0,
+    "stderr_bytes": 2878,
+    "marker_counts": {},
+    "stderr_tail": [
+      "[WARN]: Stalled compile (compute, 7e74068a497f23c2): thread 0 - 1080664.800 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (compute, bd9293d0d50b3e8b): thread 0 - 85815.200 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, e3b76ed8c30a5cc1): thread 0 - 23942.200 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, b178544ed4416cd2): thread 0 - 14268.100 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (compute, 35f88fc5fb45ef46): thread 0 - 53624.400 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (compute, 5949a1b688b6ff72): thread 0 - 83040.500 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, e6b76ed8c8235cc1): thread 0 - 12474.900 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, 7d7854549a936cd2): thread 0 - 14843.000 us (mode: sync, success: yes)."
+    ],
+    "capture": {
+      "path": "diagnostics\\captures\\gopher64\\TND64_480i_horiginonly_core_no_menu.png",
+      "returncode": 0,
+      "stderr_tail": [],
+      "window_rect": {
+        "left": 505,
+        "top": 210,
+        "right": 1031,
+        "bottom": 632,
+        "width": 526,
+        "height": 422
+      },
+      "window_stats": {
+        "crop_box": [
+          505,
+          210,
+          1031,
+          632
+        ],
+        "mean_luma": 120.63,
+        "stddev_luma": 85.36,
+        "nonblack_ratio": 0.9529,
+        "bright_ratio": 0.5846
+      }
+    }
+  },
+  {
+    "rom": "artifacts\\generated\\TND64_480i_hwidthonly_core_no_menu.z64",
+    "elapsed": 80.03,
+    "main_window_seen": true,
+    "main_window": {
+      "hwnd": 8062684,
+      "title": "gopher64"
+    },
+    "key_taps": 228,
+    "exited_before_timeout": false,
+    "exit_code_before_timeout": null,
+    "stdout_path": "reports\\smoke\\TND64_480i_hwidthonly_core_no_menu.stdout.txt",
+    "stderr_path": "reports\\smoke\\TND64_480i_hwidthonly_core_no_menu.stderr.txt",
+    "stdout_bytes": 0,
+    "stderr_bytes": 2877,
+    "marker_counts": {},
+    "stderr_tail": [
+      "[WARN]: Stalled compile (compute, 7e74068a497f23c2): thread 0 - 965487.800 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (compute, bd9293d0d50b3e8b): thread 0 - 79721.700 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, e3b76ed8c30a5cc1): thread 0 - 21538.100 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, b178544ed4416cd2): thread 0 - 11406.000 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (compute, 35f88fc5fb45ef46): thread 0 - 53262.300 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (compute, 5949a1b688b6ff72): thread 0 - 93298.700 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, e6b76ed8c8235cc1): thread 0 - 13862.800 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, 7d7854549a936cd2): thread 0 - 22304.100 us (mode: sync, success: yes)."
+    ],
+    "capture": {
+      "path": "diagnostics\\captures\\gopher64\\TND64_480i_hwidthonly_core_no_menu.png",
+      "returncode": 0,
+      "stderr_tail": [],
+      "window_rect": {
+        "left": 505,
+        "top": 210,
+        "right": 1031,
+        "bottom": 632,
+        "width": 526,
+        "height": 422
+      },
+      "window_stats": {
+        "crop_box": [
+          505,
+          210,
+          1031,
+          632
+        ],
+        "mean_luma": 90.59,
+        "stddev_luma": 87.6,
+        "nonblack_ratio": 0.8064,
+        "bright_ratio": 0.4365
+      }
+    }
+  },
+  {
+    "rom": "artifacts\\generated\\TND64_480i_hscaleonly_core_no_menu.z64",
+    "elapsed": 80.03,
+    "main_window_seen": true,
+    "main_window": {
+      "hwnd": 8128220,
+      "title": "gopher64"
+    },
+    "key_taps": 228,
+    "exited_before_timeout": false,
+    "exit_code_before_timeout": null,
+    "stdout_path": "reports\\smoke\\TND64_480i_hscaleonly_core_no_menu.stdout.txt",
+    "stderr_path": "reports\\smoke\\TND64_480i_hscaleonly_core_no_menu.stderr.txt",
+    "stdout_bytes": 0,
+    "stderr_bytes": 2983,
+    "marker_counts": {},
+    "stderr_tail": [
+      "[WARN]: Stalled compile (compute, bd9293d0d50b3e8b): thread 0 - 78978.600 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, d177283513a5a0f7): thread 0 - 28665.800 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, 5b01cde7ced266c2): thread 0 - 6490.900 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, b178554ed4416e85): thread 0 - 13585.200 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (compute, 35f88fc5fb45ef46): thread 0 - 52214.600 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (compute, 5949a1b688b6ff72): thread 0 - 104777.600 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, d077283511f2a0f7): thread 0 - 21676.300 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, 7d7855549a936e85): thread 0 - 16302.800 us (mode: sync, success: yes)."
+    ],
+    "capture": {
+      "path": "diagnostics\\captures\\gopher64\\TND64_480i_hscaleonly_core_no_menu.png",
+      "returncode": 0,
+      "stderr_tail": [],
+      "window_rect": {
+        "left": 505,
+        "top": 210,
+        "right": 1031,
+        "bottom": 632,
+        "width": 526,
+        "height": 422
+      },
+      "window_stats": {
+        "crop_box": [
+          505,
+          210,
+          1031,
+          632
+        ],
+        "mean_luma": 120.48,
+        "stddev_luma": 93.59,
+        "nonblack_ratio": 0.9259,
+        "bright_ratio": 0.5589
+      }
+    }
+  }
+]

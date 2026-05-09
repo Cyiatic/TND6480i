@@ -1,0 +1,39 @@
+{
+  "base_rom": "artifacts\\roms\\TND64_enh480i_core_no_menu_pigz.z64",
+  "ge480i_rom": "artifacts\\roms\\BASELINE_GE_480i_direct_from_stock.z64",
+  "out_rom": "artifacts\\generated\\TND64_480i_hscaleonly_core_no_menu.z64",
+  "variant": "direct_only",
+  "direct_profile": "h_scale_only",
+  "out_md5": "62c46d434dabe54c4db6fa60bda68c14",
+  "header_crc": "BE3F2BA676E136F3",
+  "main_raw_md5": "b77ac94fd19847299613d6ab600047a2",
+  "verify_main_raw_md5": "b77ac94fd19847299613d6ab600047a2",
+  "slot_len": "0xFDA7",
+  "packed_len": "0x0",
+  "verify_consumed": "0xFDA7",
+  "main_changed_bytes_from_tnd": 0,
+  "main_ranges": [],
+  "direct_word_patches": [
+    {
+      "group": "H_scale",
+      "offset": "0x19A24",
+      "old": "0x3C0AA440",
+      "new": "0x8E2B002C",
+      "note": "GE 480i VI scale patch"
+    },
+    {
+      "group": "H_scale",
+      "offset": "0x19A60",
+      "old": "0xAD490030",
+      "new": "0xAD890030",
+      "note": "GE 480i VI scale patch"
+    },
+    {
+      "group": "H_scale",
+      "offset": "0x19A64",
+      "old": "0x8E2B002C",
+      "new": "0x000B5842",
+      "note": "GE 480i VI scale patch"
+    }
+  ]
+}

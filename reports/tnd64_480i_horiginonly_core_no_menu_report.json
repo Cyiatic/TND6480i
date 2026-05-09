@@ -1,0 +1,39 @@
+{
+  "base_rom": "artifacts\\roms\\TND64_enh480i_core_no_menu_pigz.z64",
+  "ge480i_rom": "artifacts\\roms\\BASELINE_GE_480i_direct_from_stock.z64",
+  "out_rom": "artifacts\\generated\\TND64_480i_horiginonly_core_no_menu.z64",
+  "variant": "direct_only",
+  "direct_profile": "h_origin_only",
+  "out_md5": "9fb0525bd5584326adc29c516a749d20",
+  "header_crc": "DEB65C5AF35930B0",
+  "main_raw_md5": "b77ac94fd19847299613d6ab600047a2",
+  "verify_main_raw_md5": "b77ac94fd19847299613d6ab600047a2",
+  "slot_len": "0xFDA7",
+  "packed_len": "0x0",
+  "verify_consumed": "0xFDA7",
+  "main_changed_bytes_from_tnd": 0,
+  "main_ranges": [],
+  "direct_word_patches": [
+    {
+      "group": "H_origin_bypass",
+      "offset": "0x19978",
+      "old": "0x00000000",
+      "new": "0x3C09A440",
+      "note": "GE 480i VI origin/control-flow bypass"
+    },
+    {
+      "group": "H_origin_bypass",
+      "offset": "0x19980",
+      "old": "0x3C0103FF",
+      "new": "0x10000006",
+      "note": "GE 480i VI origin/control-flow bypass"
+    },
+    {
+      "group": "H_origin_bypass",
+      "offset": "0x19984",
+      "old": "0x8E240004",
+      "new": "0x00000000",
+      "note": "GE 480i VI origin/control-flow bypass"
+    }
+  ]
+}

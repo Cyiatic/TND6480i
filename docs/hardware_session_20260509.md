@@ -276,6 +276,26 @@ SC64 state was reset over USB afterward to `Bootloader -> Menu from SD card`, bu
 
 Conclusion: F/G/H-only is not real-hardware safe as a group. The next branch should isolate the F, G, and H subfamilies, then split H into origin, width/vsync, and scale probes before any direct-dimension or framebuffer-relocation payload is retried.
 
+## F/G/H Subfamily Offline Isolation
+
+Seven smaller probes were built on top of `TND64_enh480i_core_no_menu_pigz.z64`. All keep stock framebuffer placement and stock direct dimension words.
+
+| ROM | MD5 | N64 CRC | Profile | Gopher64 80s visual capture |
+|---|---|---|---|---|
+| `artifacts/generated/TND64_480i_fonly_core_no_menu.z64` | `d77d832f63691c9a05429f582e440533` | `CEBD9B22 96966DF2` | `f_only` | rendered; window mean luma `97.90` |
+| `artifacts/generated/TND64_480i_gonly_core_no_menu.z64` | `c8b97c8fe4b52a294628364bd887a7b1` | `CEBD65A2 9481B68B` | `g_only` | rendered; window mean luma `122.54` |
+| `artifacts/generated/TND64_480i_fgonly_core_no_menu.z64` | `638362984e489338b8a02e46ae1c4fe2` | `CEBD6522 858B3C36` | `fg_only` | rendered; window mean luma `83.52` |
+| `artifacts/generated/TND64_480i_honly_core_no_menu.z64` | `58a529bf4b71a8cbbfe4bae6bbd08b61` | `45AFF449 F54CE932` | `h_only` | rendered; window mean luma `122.26` |
+| `artifacts/generated/TND64_480i_horiginonly_core_no_menu.z64` | `9fb0525bd5584326adc29c516a749d20` | `DEB65C5A F35930B0` | `h_origin_only` | rendered; window mean luma `120.63` |
+| `artifacts/generated/TND64_480i_hwidthonly_core_no_menu.z64` | `144d76f41770e019dcef704d5eafab58` | `BD7D1BA2 9DD20E83` | `h_width_only` | rendered; window mean luma `90.59` |
+| `artifacts/generated/TND64_480i_hscaleonly_core_no_menu.z64` | `62c46d434dabe54c4db6fa60bda68c14` | `BE3F2BA6 76E136F3` | `h_scale_only` | rendered; window mean luma `120.48` |
+
+Report:
+
+- `reports/smoke/smoke_fgh_subfamily_capture_80s_report.json`
+
+Conclusion: Gopher64 still renders every smaller subfamily probe, so the next discriminator has to be hardware. `H only` is the most informative next one-shot because it answers whether the H VI-register family alone causes the F/G/H-only hardware black screen.
+
 ## Post-Dim0 Reset Check
 
 After the failed `single8076_all_dim0` hardware run, the user pressed reset again. GV-USB2 still captured pure black video, and `sc64deployer info` still reported `ROM write: Disabled` even though the SC64 boot mode had been reset over USB to `Bootloader -> Menu from SD card`.
@@ -291,4 +311,4 @@ Current hardware rule: no more uploads until a physical reset or power cycle vis
 
 After the N64 is physically reset/power-cycled or reset back to the SC64 menu and ROM writes are enabled again, do not retry `single8076_all_dim0` first. It black-screened on hardware.
 
-Do not upload another candidate until a physical reset or power cycle visibly restores the SC64 menu and `ROM write: Enabled`. The next useful work is offline: split the F/G/H-only failure into smaller probes.
+Do not upload another candidate until a physical reset or power cycle visibly restores the SC64 menu and `ROM write: Enabled`. The next useful hardware candidate is `TND64_480i_honly_core_no_menu.z64`, because it isolates the full H VI-register family without F/G, direct dimensions, or framebuffer relocation.

@@ -1,0 +1,25 @@
+{
+  "base_rom": "artifacts\\roms\\TND64_enh480i_core_no_menu_pigz.z64",
+  "ge480i_rom": "artifacts\\roms\\BASELINE_GE_480i_direct_from_stock.z64",
+  "out_rom": "artifacts\\generated\\TND64_480i_fonly_core_no_menu.z64",
+  "variant": "direct_only",
+  "direct_profile": "f_only",
+  "out_md5": "d77d832f63691c9a05429f582e440533",
+  "header_crc": "CEBD9B2296966DF2",
+  "main_raw_md5": "b77ac94fd19847299613d6ab600047a2",
+  "verify_main_raw_md5": "b77ac94fd19847299613d6ab600047a2",
+  "slot_len": "0xFDA7",
+  "packed_len": "0x0",
+  "verify_consumed": "0xFDA7",
+  "main_changed_bytes_from_tnd": 0,
+  "main_ranges": [],
+  "direct_word_patches": [
+    {
+      "group": "F_vi_word",
+      "offset": "0x441C",
+      "old": "0x00187840",
+      "new": "0x00187880",
+      "note": "GE 480i VI-related word"
+    }
+  ]
+}
