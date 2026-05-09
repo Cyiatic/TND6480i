@@ -22,6 +22,11 @@
 *.stderr.txt
 reports/hardware_*_stdout_*.txt
 reports/hardware_*_stderr_*.txt
+reports/hardware_*_stdout.txt
+reports/hardware_*_stderr.txt
+reports/hardware_*_summary*.json
+reports/dump_after_reset_*.bin
+reports/dump_after_reset_*.json
 __pycache__/
 .pytest_cache/
 

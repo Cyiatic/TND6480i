@@ -1,0 +1,34 @@
+{
+  "base_rom": "artifacts\\generated\\TND64_480i_single8076_all_core_no_menu.z64",
+  "out_rom": "artifacts\\generated\\TND64_480i_single8076_all_core_no_menu_sc64isv_runtimefix.z64",
+  "out_md5": "0c6c3662173be66c0ccc1a190198ec5e",
+  "header_crc": "C3CF9544D2BE13E5",
+  "isv_debug_command": "sc64deployer.exe debug --isv 0x03FF0000",
+  "expected_markers": [
+    "TND:BCLR",
+    "TND:DFB1",
+    "TND:HVI1"
+  ],
+  "patches": [
+    {
+      "offset": "0x331E0",
+      "note": "IS-Viewer marker logger"
+    },
+    {
+      "offset": "0x33240",
+      "note": "VI return breadcrumb trampoline"
+    },
+    {
+      "offset": "0x3D4C",
+      "note": "log after framebuffer clear function"
+    },
+    {
+      "offset": "0x65A4",
+      "note": "log after framebuffer globals are written"
+    },
+    {
+      "offset": "0x19AC4",
+      "note": "log after VI setup function returns"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "base_rom": "artifacts\\generated\\BASELINE_TND64_Expanded_sc64isv_runtimefix.z64",
+  "out_rom": "artifacts\\generated\\BASELINE_TND64_Expanded_sc64isv_entry_runtimefix.z64",
+  "out_md5": "72f86a8a04e311d42b1aa92c6b83c447",
+  "header_crc": "6A4A700D70F582D9",
+  "isv_debug_command": "sc64deployer.exe debug --isv 0x03FF0000",
+  "expected_markers": [
+    "TND:ENTR",
+    "TND:BCLR",
+    "TND:DFB1",
+    "TND:HVI1"
+  ],
+  "patches": [
+    {
+      "offset": "0x33280",
+      "note": "entry breadcrumb trampoline; logs ENTR then replays original startup words",
+      "original_entry_words": [
+        "0x3C088006",
+        "0x3C090003",
+        "0x35291080",
+        "0x01284821"
+      ]
+    },
+    {
+      "offset": "0x1000",
+      "note": "entry jump to SC64 IS-Viewer trampoline"
+    }
+  ]
+}

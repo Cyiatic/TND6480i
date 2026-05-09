@@ -1,0 +1,38 @@
+[
+    {
+        "name":  "baseline_tnd_sc64isv_entry_runtimefix",
+        "rom":  "artifacts\\generated\\BASELINE_TND64_Expanded_sc64isv_entry_runtimefix.z64",
+        "main_window_seen":  true,
+        "elapsed":  25.11,
+        "exited_before_timeout":  false,
+        "exit_code_before_timeout":  null,
+        "stderr_tail":  [
+                            "[INFO]: Using present mode: 2.",
+                            "[INFO]: Current transform is enum 0x1.",
+                            "[INFO]: Supported transform 0x1: IDENTITY_BIT_KHR.",
+                            "[INFO]: Swapchain current extent: 640 x 480",
+                            "[INFO]: Targeting 3 swapchain images.",
+                            "[INFO]: Created swapchain 640 x 480 (fmt: 64, transform: 1).",
+                            "[INFO]: Got 3 swapchain images.",
+                            "[WARN]: Current proprietary AMD driver is known to be buggy with 8/16-bit integer arithmetic, disabling support for time being."
+                        ]
+    },
+    {
+        "name":  "single8076_all_sc64isv_entry_runtimefix",
+        "rom":  "artifacts\\generated\\TND64_480i_single8076_all_core_no_menu_sc64isv_entry_runtimefix.z64",
+        "main_window_seen":  true,
+        "elapsed":  25.16,
+        "exited_before_timeout":  false,
+        "exit_code_before_timeout":  null,
+        "stderr_tail":  [
+                            "[INFO]: Using present mode: 2.",
+                            "[INFO]: Current transform is enum 0x1.",
+                            "[INFO]: Supported transform 0x1: IDENTITY_BIT_KHR.",
+                            "[INFO]: Swapchain current extent: 640 x 480",
+                            "[INFO]: Targeting 3 swapchain images.",
+                            "[INFO]: Created swapchain 640 x 480 (fmt: 64, transform: 1).",
+                            "[INFO]: Got 3 swapchain images.",
+                            "[WARN]: Current proprietary AMD driver is known to be buggy with 8/16-bit integer arithmetic, disabling support for time being."
+                        ]
+    }
+]

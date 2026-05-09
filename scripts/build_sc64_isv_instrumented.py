@@ -18,6 +18,8 @@ R_SP = 29
 R_RA = 31
 
 KSEG0_BASE = 0x80000000
+ROM_LOAD_OFFSET = 0x1000
+RAM_LOAD_ADDRESS = 0x80000400
 LOGGER_ROM_OFF = 0x331E0
 HVI_RETURN_TRAMP_ROM_OFF = 0x33240
 
@@ -67,7 +69,7 @@ def nop():
 
 
 def runtime(rom_off):
-    return KSEG0_BASE + rom_off
+    return RAM_LOAD_ADDRESS + (rom_off - ROM_LOAD_OFFSET)
 
 
 def ascii_word(text):

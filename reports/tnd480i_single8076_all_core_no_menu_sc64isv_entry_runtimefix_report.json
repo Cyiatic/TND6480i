@@ -1,0 +1,29 @@
+{
+  "base_rom": "artifacts\\generated\\TND64_480i_single8076_all_core_no_menu_sc64isv_runtimefix.z64",
+  "out_rom": "artifacts\\generated\\TND64_480i_single8076_all_core_no_menu_sc64isv_entry_runtimefix.z64",
+  "out_md5": "908e47837ffab866e8b0a5a721a22d9b",
+  "header_crc": "5BC5B7C8E9315FF5",
+  "isv_debug_command": "sc64deployer.exe debug --isv 0x03FF0000",
+  "expected_markers": [
+    "TND:ENTR",
+    "TND:BCLR",
+    "TND:DFB1",
+    "TND:HVI1"
+  ],
+  "patches": [
+    {
+      "offset": "0x33280",
+      "note": "entry breadcrumb trampoline; logs ENTR then replays original startup words",
+      "original_entry_words": [
+        "0x3C088006",
+        "0x3C090003",
+        "0x35291080",
+        "0x01284821"
+      ]
+    },
+    {
+      "offset": "0x1000",
+      "note": "entry jump to SC64 IS-Viewer trampoline"
+    }
+  ]
+}
