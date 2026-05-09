@@ -20,6 +20,8 @@
 *.log
 *.stdout.txt
 *.stderr.txt
+reports/hardware_*_stdout_*.txt
+reports/hardware_*_stderr_*.txt
 __pycache__/
 .pytest_cache/
 
