@@ -68,20 +68,47 @@ The N64 header PC is `0x80000400`, so ROM offset `0x1000` executes at `0x8000040
 runtime_address = 0x80000400 + (rom_offset - 0x1000)
 ```
 
-Corrected debug candidates:
+Corrected entry-debug candidates:
 
 | ROM | MD5 | N64 CRC | Emulator smoke |
 |---|---|---|---|
 | `artifacts/generated/BASELINE_TND64_Expanded_sc64isv_entry_runtimefix.z64` | `72f86a8a04e311d42b1aa92c6b83c447` | `6A4A700D 70F582D9` | Gopher64 25s survived |
 | `artifacts/generated/TND64_480i_single8076_all_core_no_menu_sc64isv_entry_runtimefix.z64` | `908e47837ffab866e8b0a5a721a22d9b` | `5BC5B7C8 E9315FF5` | Gopher64 25s survived |
 
+## Corrected Baseline Entry-Debug Hardware Result
+
+After a clean SC64 menu power cycle, the corrected baseline entry-debug ROM was uploaded:
+
+```text
+artifacts/generated/BASELINE_TND64_Expanded_sc64isv_entry_runtimefix.z64
+```
+
+The user reset the N64. The console left the menu into black video, the debug listener never stayed attached, and the `0x03FF0000` ISV buffer still contained only `0x5A` fill bytes. That means entry-time ISV writes are still not a safe hardware diagnostic, even with the runtime address mapping fixed. Do not use entry-debug builds as the next hardware step.
+
+SC64 was reset over USB afterward:
+
+```text
+Boot mode: Bootloader -> Menu from SD card
+```
+
+The console still needs a physical power cycle to return visible video.
+
+## No-Entry Debug Builds
+
+Built no-entry, runtime-fixed debug controls that only log later breadcrumbs from safer game-init paths:
+
+| ROM | MD5 | N64 CRC | Expected markers | Emulator smoke |
+|---|---|---|---|---|
+| `artifacts/generated/BASELINE_TND64_Expanded_sc64isv_noentry_runtimefix.z64` | `484ac2cdaf535e56935efda0015f519f` | `5146CF58 370EE12D` | `TND:BCLR`, `TND:DFB1`, `TND:HVI1` | Gopher64 25s survived |
+| `artifacts/generated/TND64_480i_single8076_all_core_no_menu_sc64isv_noentry_runtimefix.z64` | `0c6c3662173be66c0ccc1a19010abfd0` | `C3C81044 B73D1559` | `TND:BCLR`, `TND:DFB1`, `TND:HVI1` | Gopher64 25s survived |
+
 ## Next Step
 
-After the N64 is physically power-cycled and the SC64 menu is visible again, test the corrected baseline debug control first:
+After the N64 is physically power-cycled and the SC64 menu is visible again, test the no-entry baseline debug control first:
 
 ```powershell
-& 'C:\Users\codex\Documents\n64\sc64deployer.exe' upload 'C:\Users\codex\Documents\GitHub\TND6480i\artifacts\generated\BASELINE_TND64_Expanded_sc64isv_entry_runtimefix.z64'
+& 'C:\Users\codex\Documents\n64\sc64deployer.exe' upload 'C:\Users\codex\Documents\GitHub\TND6480i\artifacts\generated\BASELINE_TND64_Expanded_sc64isv_noentry_runtimefix.z64'
 & 'C:\Users\codex\Documents\n64\sc64deployer.exe' debug --isv 0x03FF0000 --no-writeback
 ```
 
-Then press the real N64 reset button once. If `TND:ENTR` appears on the known-good baseline, the debug channel is validated and the corrected 480i debug candidate can be tested next.
+Then press the real N64 reset button once. If later markers appear on the known-good baseline, the debug channel is validated and the no-entry 480i debug candidate can be tested next.

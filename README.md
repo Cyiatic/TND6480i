@@ -10,7 +10,8 @@ This repo tracks the reproducible patch/build scripts, notes, hardware queue, an
 - The capture path can see the SC64 menu; see `diagnostics/captures/capture_sc64_menu_before_repo_migration_20260509.png`.
 - The most recent blind visual candidate, `TND64_480i_single8076_all_core_no_menu.z64`, did not work on hardware per user test.
 - The first SC64 debug candidate had a real-hardware runtime-address bug in its trampolines. Fixed debug builds now use the ROM load mapping `0x1000 -> 0x80000400`.
-- Next useful step is validating the corrected SC64/IS-Viewer path on a known-good baseline TND ROM before another 480i candidate test.
+- Corrected entry-time ISV logging still black-screened on known-good baseline TND, so entry hooks are no longer the next path.
+- Next useful step is validating no-entry SC64/IS-Viewer logging on a known-good baseline TND ROM before another 480i candidate test.
 
 ## Key Docs
 
