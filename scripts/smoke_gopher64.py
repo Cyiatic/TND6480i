@@ -25,6 +25,7 @@ user32.GetWindowTextLengthW.argtypes = [wintypes.HWND]
 user32.GetWindowTextW.argtypes = [wintypes.HWND, wintypes.LPWSTR, ctypes.c_int]
 user32.SetForegroundWindow.argtypes = [wintypes.HWND]
 user32.keybd_event.argtypes = [ctypes.c_ubyte, ctypes.c_ubyte, wintypes.DWORD, ctypes.POINTER(ctypes.c_ulong)]
+user32.GetWindowRect.argtypes = [wintypes.HWND, ctypes.POINTER(wintypes.RECT)]
 
 VK_RETURN = 0x0D
 VK_LSHIFT = 0xA0
@@ -87,6 +88,49 @@ def capture_desktop(ffmpeg, out_png):
     }
 
 
+def window_rect(hwnd):
+    rect = wintypes.RECT()
+    if not user32.GetWindowRect(wintypes.HWND(hwnd), ctypes.byref(rect)):
+        return None
+    return {
+        "left": rect.left,
+        "top": rect.top,
+        "right": rect.right,
+        "bottom": rect.bottom,
+        "width": rect.right - rect.left,
+        "height": rect.bottom - rect.top,
+    }
+
+
+def analyze_capture(capture_path, rect):
+    if not rect:
+        return None
+    try:
+        from PIL import Image, ImageStat
+    except Exception as exc:
+        return {"error": f"Pillow unavailable: {exc}"}
+    image = Image.open(capture_path).convert("RGB")
+    left = max(0, min(image.width, rect["left"]))
+    top = max(0, min(image.height, rect["top"]))
+    right = max(0, min(image.width, rect["right"]))
+    bottom = max(0, min(image.height, rect["bottom"]))
+    if right <= left or bottom <= top:
+        return {"error": "window rect outside capture"}
+    crop = image.crop((left, top, right, bottom)).convert("L")
+    stat = ImageStat.Stat(crop)
+    pixels = crop.width * crop.height
+    hist = crop.histogram()
+    nonblack = sum(hist[9:])
+    bright = sum(hist[48:])
+    return {
+        "crop_box": [left, top, right, bottom],
+        "mean_luma": round(stat.mean[0], 2),
+        "stddev_luma": round(stat.stddev[0], 2),
+        "nonblack_ratio": round(nonblack / pixels, 4),
+        "bright_ratio": round(bright / pixels, 4),
+    }
+
+
 def run_one(args, rom):
     stdout_path = args.report.parent / f"{Path(rom).stem}.stdout.txt"
     stderr_path = args.report.parent / f"{Path(rom).stem}.stderr.txt"
@@ -106,6 +150,7 @@ def run_one(args, rom):
         main_window = None
         key_taps = 0
         last_tap = 0.0
+        capture = None
         try:
             while time.monotonic() - start < args.seconds:
                 windows = windows_for_pid(proc.pid)
@@ -124,6 +169,13 @@ def run_one(args, rom):
             elapsed = time.monotonic() - start
             exited_before_timeout = proc.poll() is not None
             exit_code_before_timeout = proc.poll()
+            if not exited_before_timeout and args.ffmpeg and args.capture_dir:
+                capture = capture_desktop(args.ffmpeg, args.capture_dir / f"{Path(rom).stem}.png")
+                if main_window is not None:
+                    rect = window_rect(main_window["hwnd"])
+                    capture["window_rect"] = rect
+                    if capture["returncode"] == 0:
+                        capture["window_stats"] = analyze_capture(capture["path"], rect)
             if not exited_before_timeout:
                 proc.terminate()
                 try:
@@ -135,9 +187,6 @@ def run_one(args, rom):
     stdout_text = stdout_path.read_text(encoding="utf-8", errors="replace")
     stderr_text = stderr_path.read_text(encoding="utf-8", errors="replace")
     marker_counts = Counter(line.strip() for line in stdout_text.splitlines() if line.startswith("TND:"))
-    capture = None
-    if args.ffmpeg and args.capture_dir:
-        capture = capture_desktop(args.ffmpeg, args.capture_dir / f"{Path(rom).stem}.png")
     return {
         "rom": str(rom),
         "elapsed": round(elapsed, 2),

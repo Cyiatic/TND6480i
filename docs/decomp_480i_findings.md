@@ -28,7 +28,7 @@ That matches the hardware symptom: the ROM can boot and show Bond's hand, but if
 
 ## Resulting Candidates
 
-Primary visual candidate:
+Initial full-dims candidate:
 
 ```text
 artifacts/generated/TND64_480i_single8076_all_dims_core_no_menu.z64
@@ -39,7 +39,16 @@ N64 CRC: CDBE2120 73E89F69
 
 Binary sanity check against `TND64_480i_single8076_all_core_no_menu.z64`: only the N64 header CRC words and the two direct dimension words changed.
 
-Fallback double-buffer candidate:
+Visual capture follow-up changed the conclusion: the full-dims build stays black in Gopher64, while the old no-dims single-all build renders. One-word tests isolated the risk:
+
+| ROM | Profile | MD5 | N64 CRC | Gopher64 80s visual capture |
+|---|---|---|---|---|
+| `artifacts/generated/TND64_480i_single8076_all_dim0_core_no_menu.z64` | `single8076_all_dim0` | `ad441669291605a3fd551b51c68bb195` | `CE5E1EF0 26DDA6CD` | renders; window mean luma `122.22`; ares 30s survived |
+| `artifacts/generated/TND64_480i_single8076_all_dim1_core_no_menu.z64` | `single8076_all_dim1` | `66c3a0ef8116cfb6c0a52a48dc1a967e` | `CF3E1F20 E5FF8B59` | black; window mean luma `16.81`; ares 30s survived |
+
+So `single8076_all_dim0` is now the safer dim-aware visual candidate. The second direct dimension word at `0x4F35C` should not be patched on hardware until that path is understood.
+
+Fallback double-buffer full-dims candidate:
 
 ```text
 artifacts/generated/TND64_480i_split8030_8076_all_dims_core_no_menu.z64
@@ -48,4 +57,4 @@ MD5: cce443d766bd681a511f7d18bb95b657
 N64 CRC: 278D2E7E C311ADE7
 ```
 
-Both survived the local Gopher64 input smoke and ares process smoke. Neither has been uploaded to hardware.
+The full-dims candidates survived process/input smokes but should be treated as suspicious because visual capture can still be black. None of the dim-aware candidates has been uploaded to hardware.

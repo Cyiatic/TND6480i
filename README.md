@@ -9,8 +9,8 @@ This repo tracks the reproducible patch/build scripts, notes, hardware queue, an
 - SC64 is working on `COM4` when connected.
 - The capture path can see the SC64 menu; see `diagnostics/captures/capture_sc64_menu_before_repo_migration_20260509.png`.
 - The most recent blind visual candidate, `TND64_480i_single8076_all_core_no_menu.z64`, booted far enough for a user test but did not visibly render at 480i. Decomp follow-up found it still left the direct gameplay dimension words at `320x240`/`440x330`.
-- New dim-aware visual candidates exist locally. The primary one is `artifacts/generated/TND64_480i_single8076_all_dims_core_no_menu.z64` with MD5 `8f4c7fdf524ec1c7f4fc63223a8b386c` and N64 CRC `CDBE2120 73E89F69`; it survived Gopher64 input smoke and ares process smoke. It has not been uploaded to hardware.
-- Matching low-cave SC64 HVI-only debug builds now exist for the dim-aware candidates. The primary one is `artifacts/generated/TND64_480i_single8076_all_dims_core_no_menu_sc64isv_hvionly_lowcave.z64` with MD5 `05c4e67a8b293eb10208ff396afbffb2` and N64 CRC `C5E24FCF 6BB1D73D`; it survived Gopher64 and printed repeated `TND:HVI1` markers.
+- Full `+dims` builds exist locally, but visual capture showed `single8076_all_dims` stays black in Gopher64. Follow-up one-word tests found `single8076_all_dim0` renders while `single8076_all_dim1` stays black, so the safer dim-aware visual candidate is now `artifacts/generated/TND64_480i_single8076_all_dim0_core_no_menu.z64` with MD5 `ad441669291605a3fd551b51c68bb195` and N64 CRC `CE5E1EF0 26DDA6CD`.
+- Matching low-cave SC64 HVI-only debug builds now exist for the dim-aware candidates. The primary one is `artifacts/generated/TND64_480i_single8076_all_dim0_core_no_menu_sc64isv_hvionly_lowcave.z64` with MD5 `8e1c0d5b2b8b276af8558602d06a80d5` and N64 CRC `C6224ECF 7FEB4471`; it survived Gopher64 and printed repeated `TND:HVI1` markers.
 - The first SC64 debug candidate had a real-hardware runtime-address bug in its trampolines. Fixed debug builds now use the ROM load mapping `0x1000 -> 0x80000400`.
 - Corrected entry-time ISV logging still black-screened on known-good baseline TND, so entry hooks are no longer the next path.
 - The first no-entry baseline ISV control also black-screened, but it was found to have a `DFB1` hook bug that skipped original framebuffer-global setup. That build is superseded.
@@ -58,9 +58,9 @@ SC64 debug build:
 
 ```powershell
 & $py scripts\build_sc64_isv_instrumented.py `
-  --base-rom artifacts\generated\TND64_480i_single8076_all_dims_core_no_menu.z64 `
-  --out-rom artifacts\generated\TND64_480i_single8076_all_dims_core_no_menu_sc64isv_hvionly_lowcave.z64 `
-  --report reports\tnd480i_single8076_all_dims_core_no_menu_sc64isv_hvionly_lowcave_report.json `
+  --base-rom artifacts\generated\TND64_480i_single8076_all_dim0_core_no_menu.z64 `
+  --out-rom artifacts\generated\TND64_480i_single8076_all_dim0_core_no_menu_sc64isv_hvionly_lowcave.z64 `
+  --report reports\tnd480i_single8076_all_dim0_core_no_menu_sc64isv_hvionly_lowcave_report.json `
   --hooks HVI1
 ```
 

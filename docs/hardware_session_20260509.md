@@ -164,19 +164,22 @@ The diagnostic script now places the logger and trampolines in early padding at 
 
 The user-tested no-dims single-all visual ROM booted far enough to inspect Bond's hand but did not visibly render at 480i. A decomp pass against local `007-decomp` explains why that could happen: gameplay still passes stock direct dimensions through `viSetXY`/`viSetBuf`, and the no-dims candidate left ROM offsets `0x4F354` and `0x4F35C` at `0x014000F0` (`320x240`) and `0x01B8014A` (`440x330`).
 
-New visual candidates now include direct `640x480` dimension words:
+New visual candidates explored direct `640x480` dimension words:
 
 | ROM | MD5 | N64 CRC | Profile | Emulator smoke |
 |---|---|---|---|---|
+| `artifacts/generated/TND64_480i_single8076_all_dim0_core_no_menu.z64` | `ad441669291605a3fd551b51c68bb195` | `CE5E1EF0 26DDA6CD` | `single8076_all_dim0` | Gopher64 80s visual capture rendered; ares 30s survived |
+| `artifacts/generated/TND64_480i_single8076_all_dim1_core_no_menu.z64` | `66c3a0ef8116cfb6c0a52a48dc1a967e` | `CF3E1F20 E5FF8B59` | `single8076_all_dim1` | Gopher64 80s visual capture stayed black; ares 30s survived |
 | `artifacts/generated/TND64_480i_single8076_all_dims_core_no_menu.z64` | `8f4c7fdf524ec1c7f4fc63223a8b386c` | `CDBE2120 73E89F69` | `single8076_all_dims` | Gopher64 80s input survived; ares 30s survived |
 | `artifacts/generated/TND64_480i_split8030_8076_all_dims_core_no_menu.z64` | `cce443d766bd681a511f7d18bb95b657` | `278D2E7E C311ADE7` | `split8030_8076_all_dims` | Gopher64 80s input survived; ares 30s survived |
 
-No hardware upload was performed for these dim-aware candidates during this offline follow-up.
+The full `single8076_all_dims` build later captured black in Gopher64, so `single8076_all_dim0` supersedes it as the next visual candidate. No hardware upload was performed for these dim-aware candidates during this offline follow-up.
 
 Matching low-cave HVI-only debug builds:
 
 | ROM | MD5 | N64 CRC | Expected markers | Emulator smoke |
 |---|---|---|---|---|
+| `artifacts/generated/TND64_480i_single8076_all_dim0_core_no_menu_sc64isv_hvionly_lowcave.z64` | `8e1c0d5b2b8b276af8558602d06a80d5` | `C6224ECF 7FEB4471` | `TND:HVI1` | Gopher64 25s survived; 737 `TND:HVI1` markers |
 | `artifacts/generated/TND64_480i_single8076_all_dims_core_no_menu_sc64isv_hvionly_lowcave.z64` | `05c4e67a8b293eb10208ff396afbffb2` | `C5E24FCF 6BB1D73D` | `TND:HVI1` | Gopher64 25s survived; 740 `TND:HVI1` markers |
 | `artifacts/generated/TND64_480i_split8030_8076_all_dims_core_no_menu_sc64isv_hvionly_lowcave.z64` | `1d7399907d353fe12266f9120541b221` | `37FE4249 55E07F56` | `TND:HVI1` | Gopher64 25s survived; 755 `TND:HVI1` markers |
 

@@ -1,0 +1,32 @@
+[
+  {
+    "rom": "artifacts\\generated\\TND64_480i_single8076_all_dim0_core_no_menu_sc64isv_hvionly_lowcave.z64",
+    "elapsed": 25.0,
+    "main_window_seen": true,
+    "main_window": {
+      "hwnd": 6030718,
+      "title": "gopher64"
+    },
+    "key_taps": 0,
+    "exited_before_timeout": false,
+    "exit_code_before_timeout": null,
+    "stdout_path": "reports\\smoke\\TND64_480i_single8076_all_dim0_core_no_menu_sc64isv_hvionly_lowcave.stdout.txt",
+    "stderr_path": "reports\\smoke\\TND64_480i_single8076_all_dim0_core_no_menu_sc64isv_hvionly_lowcave.stderr.txt",
+    "stdout_bytes": 6633,
+    "stderr_bytes": 2772,
+    "marker_counts": {
+      "TND:HVI1": 737
+    },
+    "stderr_tail": [
+      "[WARN]: Stalled compile (compute, 1cbd9189b0a23679): thread 0 - 28672.600 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (compute, 7e74068a497f23c2): thread 0 - 898821.400 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (compute, bd9293d0d50b3e8b): thread 0 - 68593.000 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, e3b76ed8c30a5cc1): thread 0 - 18136.900 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, b178544ed4416cd2): thread 0 - 11013.500 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, d177283513a5a0f7): thread 0 - 24257.600 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, b178554ed4416e85): thread 0 - 10794.300 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (compute, 35f88fc5fb45ef46): thread 0 - 52514.100 us (mode: sync, success: yes)."
+    ],
+    "capture": null
+  }
+]

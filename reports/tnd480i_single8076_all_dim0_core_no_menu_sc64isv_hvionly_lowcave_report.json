@@ -1,0 +1,28 @@
+{
+  "base_rom": "artifacts\\generated\\TND64_480i_single8076_all_dim0_core_no_menu.z64",
+  "out_rom": "artifacts\\generated\\TND64_480i_single8076_all_dim0_core_no_menu_sc64isv_hvionly_lowcave.z64",
+  "out_md5": "8e1c0d5b2b8b276af8558602d06a80d5",
+  "header_crc": "C6224ECF7FEB4471",
+  "transport": "isv",
+  "debug_command": "sc64deployer.exe debug --isv 0x03FF0000 --no-writeback",
+  "hooks": [
+    "HVI1"
+  ],
+  "expected_markers": [
+    "TND:HVI1"
+  ],
+  "patches": [
+    {
+      "offset": "0x3CB0",
+      "note": "ISV marker logger"
+    },
+    {
+      "offset": "0x3CE4",
+      "note": "VI return breadcrumb trampoline"
+    },
+    {
+      "offset": "0x19AC4",
+      "note": "log after VI setup function returns"
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+[
+  {
+    "rom": "artifacts\\roms\\BASELINE_GE_480i_direct_from_stock.z64",
+    "elapsed": 80.0,
+    "main_window_seen": true,
+    "main_window": {
+      "hwnd": 5571966,
+      "title": "gopher64"
+    },
+    "key_taps": 228,
+    "exited_before_timeout": false,
+    "exit_code_before_timeout": null,
+    "stdout_path": "reports\\smoke\\BASELINE_GE_480i_direct_from_stock.stdout.txt",
+    "stderr_path": "reports\\smoke\\BASELINE_GE_480i_direct_from_stock.stderr.txt",
+    "stdout_bytes": 0,
+    "stderr_bytes": 2665,
+    "marker_counts": {},
+    "stderr_tail": [
+      "[WARN]: Stalled compile (compute, c36377373cb79785): thread 0 - 24514.400 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (compute, 1cbd9189b0a23679): thread 0 - 29073.900 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (compute, 7e74068a497f23c2): thread 0 - 917787.300 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (compute, bd9293d0d50b3e8b): thread 0 - 69695.700 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, e3b76ed8c30a5cc1): thread 0 - 18399.900 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, b178544ed4416cd2): thread 0 - 11658.600 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (compute, 35f88fc5fb45ef46): thread 0 - 56562.100 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (compute, 5949a1b688b6ff72): thread 0 - 80463.900 us (mode: sync, success: yes)."
+    ],
+    "capture": {
+      "path": "diagnostics\\captures\\gopher64\\BASELINE_GE_480i_direct_from_stock.png",
+      "returncode": 0,
+      "stderr_tail": []
+    }
+  }
+]

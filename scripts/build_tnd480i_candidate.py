@@ -288,6 +288,12 @@ DIRECT_PATCH_GROUPS = {
     (0x4F354, 0x028001E0, "direct render dimensions table 0"),
     (0x4F35C, 0x028001E0, "direct render dimensions table 1"),
     ],
+    "E_direct_dim0": [
+    (0x4F354, 0x028001E0, "direct render dimensions table 0"),
+    ],
+    "E_direct_dim1": [
+    (0x4F35C, 0x028001E0, "direct render dimensions table 1"),
+    ],
     "F_vi_word": [
         (0x441C, 0x00187880, "GE 480i VI-related word"),
     ],
@@ -363,6 +369,8 @@ DIRECT_PATCH_PROFILES = {
     "single8076_mem_fg_h_origin_width_nodims": ["A_single_stride_zero", "B_clear_single_8076A000", "C_single_offset_zero", "D_fb_single_8076A000", "F_vi_word", "G_mask_word", "H_origin_width"],
     "single8076_mem_fg_h_origin_scale_nodims": ["A_single_stride_zero", "B_clear_single_8076A000", "C_single_offset_zero", "D_fb_single_8076A000", "F_vi_word", "G_mask_word", "H_origin_scale"],
     "single8076_all_nodims": ["A_single_stride_zero", "B_clear_single_8076A000", "C_single_offset_zero", "D_fb_single_8076A000", "F_vi_word", "G_mask_word", "H_pi_dma"],
+    "single8076_all_dim0": ["A_single_stride_zero", "B_clear_single_8076A000", "C_single_offset_zero", "D_fb_single_8076A000", "E_direct_dim0", "F_vi_word", "G_mask_word", "H_pi_dma"],
+    "single8076_all_dim1": ["A_single_stride_zero", "B_clear_single_8076A000", "C_single_offset_zero", "D_fb_single_8076A000", "E_direct_dim1", "F_vi_word", "G_mask_word", "H_pi_dma"],
     "single8076_all_dims": ["A_single_stride_zero", "B_clear_single_8076A000", "C_single_offset_zero", "D_fb_single_8076A000", "E_direct_dims", "F_vi_word", "G_mask_word", "H_pi_dma"],
     "split8060_8076_mem_nodims": ["A_split_load_two_globals", "B_clear_split_8060_8076", "C_split_select_global", "D_fb_split_8060_8076"],
     "split8060_8076_all_nodims": ["A_split_load_two_globals", "B_clear_split_8060_8076", "C_split_select_global", "D_fb_split_8060_8076", "F_vi_word", "G_mask_word", "H_pi_dma"],

@@ -1,0 +1,18 @@
+[
+    {
+        "rom":  "artifacts\\generated\\TND64_480i_single8076_all_dim0_core_no_menu.z64",
+        "elapsed":  30.06,
+        "exited_before_timeout":  false,
+        "responding":  true,
+        "cpu_seconds":  19.0625,
+        "title":  ""
+    },
+    {
+        "rom":  "artifacts\\generated\\TND64_480i_single8076_all_dim1_core_no_menu.z64",
+        "elapsed":  30.02,
+        "exited_before_timeout":  false,
+        "responding":  true,
+        "cpu_seconds":  23.484375,
+        "title":  ""
+    }
+]

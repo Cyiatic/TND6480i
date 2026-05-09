@@ -15,7 +15,8 @@ Date: 2026-05-08
 - 2026-05-09 offline decomp follow-up:
   - The user-tested no-dims single-all visual candidate did not patch direct gameplay dimension words at `0x4F354` and `0x4F35C`.
   - Those words were still `320x240` and `440x330`, which matches the reported aliased Bond-hand symptom.
-  - New dim-aware candidates now patch both words to `640x480` and survived local emulator smokes, but they have not been uploaded to hardware.
+  - A full two-word dim-aware candidate patched both words to `640x480` and survived process smokes, but later visual capture stayed black in Gopher64.
+  - One-word tests showed `0x4F354 -> 640x480` (`single8076_all_dim0`) renders, while `0x4F35C -> 640x480` (`single8076_all_dim1`) stays black. Use `dim0` as the safer dim-aware visual candidate.
 - 2026-05-08 SC64 session:
   - SC64 detected on `COM4`; firmware `v2.20.2`; SD initialized; ROM writes enabled.
   - GV-USB2 capture showed the SC64 menu clearly.
@@ -127,15 +128,15 @@ Use this on SummerCart64 when debug visibility matters more than keeping the ROM
 
 Preferred dim-aware payload:
 
-`TND64_480i_single8076_all_dims_core_no_menu_sc64isv_hvionly_lowcave.z64`
+`TND64_480i_single8076_all_dim0_core_no_menu_sc64isv_hvionly_lowcave.z64`
 
-- Base: `TND64_480i_single8076_all_dims_core_no_menu.z64`
-- MD5: `05c4e67a8b293eb10208ff396afbffb2`
-- N64 CRC: `C5E24FCF 6BB1D73D`
+- Base: `TND64_480i_single8076_all_dim0_core_no_menu.z64`
+- MD5: `8e1c0d5b2b8b276af8558602d06a80d5`
+- N64 CRC: `C6224ECF 7FEB4471`
 - Debug command: `sc64deployer.exe debug --isv 0x03FF0000 --no-writeback`
 - Expected markers:
   - `TND:HVI1` - VI setup function returned; may repeat while the game is alive
-- Emulator status: Gopher64 25 second smoke survived and printed 740 `TND:HVI1` markers.
+- Emulator status: Gopher64 25 second smoke survived and printed 737 `TND:HVI1` markers.
 
 Older no-dims debug payload, superseded for visual-quality testing:
 
@@ -146,19 +147,28 @@ Older no-dims debug payload, superseded for visual-quality testing:
 - N64 CRC: `C32248EF F42057CC`
 - Emulator status: Gopher64 25 second smoke survived.
 
+Full-dims debug payload, not first choice because the matching visual ROM captures black in Gopher64:
+
+`TND64_480i_single8076_all_dims_core_no_menu_sc64isv_hvionly_lowcave.z64`
+
+- Base: `TND64_480i_single8076_all_dims_core_no_menu.z64`
+- MD5: `05c4e67a8b293eb10208ff396afbffb2`
+- N64 CRC: `C5E24FCF 6BB1D73D`
+- Emulator status: Gopher64 25 second smoke survived and printed 740 `TND:HVI1` markers.
+
 Do not use the old entry-debug ROMs first. Entry logging black-screened the baseline control, and the older no-entry build had a `DFB1` hook bug. The corrected all-hook baseline is `BASELINE_TND64_Expanded_sc64isv_noentry_v3_lowcave.z64`.
 
 ## Most Meaningful Visual Candidate
 
-Use this only after the baseline/control path has a clear result, or if the user explicitly chooses one visual test over more debug validation. It directly addresses the observed "boots but Bond's hand is still aliased" symptom from the old no-dims single-all ROM.
+Use this only after the baseline/control path has a clear result, or if the user explicitly chooses one visual test over more debug validation. It directly addresses the observed "boots but Bond's hand is still aliased" symptom from the old no-dims single-all ROM without applying the second direct dimension word that black-screens in Gopher64.
 
-`TND64_480i_single8076_all_dims_core_no_menu.z64`
+`TND64_480i_single8076_all_dim0_core_no_menu.z64`
 
-- Profile: `single8076_all_dims`
-- MD5: `8f4c7fdf524ec1c7f4fc63223a8b386c`
-- N64 CRC: `CDBE2120 73E89F69`
-- Difference from `TND64_480i_single8076_all_core_no_menu.z64`: the two direct gameplay dimension words at `0x4F354` and `0x4F35C` are now `0x028001E0` (`640x480`) instead of stock `320x240`/`440x330`.
-- Emulator status: Gopher64 input-driven smoke survived 80 seconds with 266 Start/A taps; ares process smoke survived 30 seconds and stayed responsive.
+- Profile: `single8076_all_dim0`
+- MD5: `ad441669291605a3fd551b51c68bb195`
+- N64 CRC: `CE5E1EF0 26DDA6CD`
+- Difference from `TND64_480i_single8076_all_core_no_menu.z64`: only the first direct dimension word at `0x4F354` is now `0x028001E0` (`640x480`); `0x4F35C` remains stock `0x01B8014A` (`440x330`).
+- Emulator status: Gopher64 80 second input-driven visual capture rendered, with window mean luma `122.22`; ares 30 second process smoke survived. The sibling `single8076_all_dim1` and full `single8076_all_dims` builds stayed black in visual capture.
 - Hardware status: not uploaded.
 
 ## Single-High Diagnostic Fallbacks
@@ -245,6 +255,7 @@ Dim-aware double-buffer fallback:
 - N64 CRC: `278D2E7E C311ADE7`
 - Purpose: same split8030 memory layout as above, plus the direct `640x480` gameplay dimension words.
 - Emulator status: Gopher64 input-driven smoke survived 80 seconds with 266 Start/A taps; ares process smoke survived 30 seconds and stayed responsive.
+- Caution: the single-buffer full-dims visual build stayed black in Gopher64, so full-dims split builds should not jump ahead of the one-word `dim0` branch.
 - Hardware status: not uploaded.
 
 Matching HVI-only SC64 debug build:

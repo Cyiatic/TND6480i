@@ -41,6 +41,8 @@ ROMS = {
     "single FG+origin+width": "TND64_480i_single8076_mem_fg_h_origin_width_core_no_menu.z64",
     "single FG+origin+scale": "TND64_480i_single8076_mem_fg_h_origin_scale_core_no_menu.z64",
     "single all": "TND64_480i_single8076_all_core_no_menu.z64",
+    "single all dim0": "TND64_480i_single8076_all_dim0_core_no_menu.z64",
+    "single all dim1": "TND64_480i_single8076_all_dim1_core_no_menu.z64",
     "single all + dims": "TND64_480i_single8076_all_dims_core_no_menu.z64",
     "split8030 FG+width+scale": "TND64_480i_split8030_8076_mem_fg_h_width_scale_core_no_menu.z64",
     "split8030 all": "TND64_480i_split8030_8076_all_core_no_menu.z64",
@@ -54,6 +56,8 @@ PROFILE_HINTS = {
     "single FG+origin+width": "single8076_mem_fg_h_origin_width_nodims",
     "single FG+origin+scale": "single8076_mem_fg_h_origin_scale_nodims",
     "single all": "single8076_all_nodims",
+    "single all dim0": "single8076_all_dim0",
+    "single all dim1": "single8076_all_dim1",
     "single all + dims": "single8076_all_dims",
     "split8030 FG+width+scale": "split8030_8076_mem_fg_h_width_scale_nodims",
     "split8030 all": "split8030_8076_all_nodims",
@@ -251,6 +255,8 @@ def write_markdown(report):
     direct_columns = [
         ("single FG+width+scale", "Current single W/S"),
         ("single all", "Single all"),
+        ("single all dim0", "Single all dim0"),
+        ("single all dim1", "Single all dim1"),
         ("single all + dims", "Single all + dims"),
         ("split8030 all", "Split8030 all"),
         ("split8030 all + dims", "Split8030 all + dims"),
@@ -274,6 +280,9 @@ def write_markdown(report):
     )
     lines.append(
         "- The `+ dims` builds also patch the two direct gameplay dimension words at `0x4F354` and `0x4F35C` from `320x240`/`440x330` to `640x480`; this is the likely missing piece behind the aliased Bond-hand result from the no-dims single-all hardware test."
+    )
+    lines.append(
+        "- Follow-up visual emulator capture showed that patching only `0x4F354` (`single all dim0`) still renders, while patching `0x4F35C` (`single all dim1`) or both words black-screens the Gopher64 window. Treat full `+ dims` as suspicious until the second dimension path is understood."
     )
     lines.append(
         "- `split8030 all + dims` is the double-buffer fallback that avoids both the earlier `0x80400000` real-hardware failure point and the known `0x8070xxxx` TND references while also applying the direct dimension words."
