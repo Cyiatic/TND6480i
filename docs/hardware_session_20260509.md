@@ -183,15 +183,41 @@ Matching low-cave HVI-only debug builds:
 | `artifacts/generated/TND64_480i_single8076_all_dims_core_no_menu_sc64isv_hvionly_lowcave.z64` | `05c4e67a8b293eb10208ff396afbffb2` | `C5E24FCF 6BB1D73D` | `TND:HVI1` | Gopher64 25s survived; 740 `TND:HVI1` markers |
 | `artifacts/generated/TND64_480i_split8030_8076_all_dims_core_no_menu_sc64isv_hvionly_lowcave.z64` | `1d7399907d353fe12266f9120541b221` | `37FE4249 55E07F56` | `TND:HVI1` | Gopher64 25s survived; 755 `TND:HVI1` markers |
 
-## Next Step
+## Low-Cave HVI Baseline Hardware Result
 
-After the N64 is physically reset/power-cycled and the SC64 menu is visible again, test the low-cave HVI-only baseline control first:
+After the user power-cycled the N64, GV-USB2 showed the SC64 menu and `sc64deployer info` reported `Bootloader -> Menu from SD card` with ROM writes enabled. The low-cave HVI-only baseline control was uploaded:
 
-```powershell
-& 'C:\Users\codex\Documents\n64\sc64deployer.exe' upload 'C:\Users\codex\Documents\GitHub\TND6480i\artifacts\generated\BASELINE_TND64_Expanded_sc64isv_hvionly_lowcave.z64'
-& 'C:\Users\codex\Documents\n64\sc64deployer.exe' debug --isv 0x03FF0000 --no-writeback
+```text
+artifacts/generated/BASELINE_TND64_Expanded_sc64isv_hvionly_lowcave.z64
+MD5: efc8c7caaa898e421f82eb42b2d62edb
+N64 CRC: 5AB52A0F BAB5C1D8
+Expected marker: TND:HVI1
 ```
 
-Then press the real N64 reset button once. If `TND:HVI1` appears on the known-good baseline, the debug channel is validated and the corrected v3 all-hook baseline can be tested next. Only after that should the low-cave HVI-only 480i debug ROM be used.
+After a real reset, the console left the menu and reached visible TND output. Captures:
 
-If we want the lowest-risk branch before any debug writes, upload `BASELINE_TND64_Expanded_hvijump_lowcave.z64` and verify visually that baseline TND still boots. That proves the low-cave trampoline mechanics before involving ISV.
+- `diagnostics/captures/after_baseline_hvi_upload_20260509_dim0_session.png` - immediate black frame after launch.
+- `diagnostics/captures/after_baseline_hvi_delay_20260509_dim0_session.png` - visible TND title/credits transition.
+- `diagnostics/captures/after_baseline_hvi_delay2_20260509_dim0_session.png` - visible credits scene.
+
+The SC64 ISV listener still started and stopped immediately, and dumping `0x03FF0000` showed no `TND:*` marker. This means the low-cave HVI trampoline no longer appears to black-screen baseline TND, but SC64 ISV marker capture is still not validated on real hardware.
+
+SC64 state was reset over USB afterward so the next real reset/power-cycle should return to the menu:
+
+```text
+Boot mode: Bootloader -> Menu from SD card
+```
+
+Do not treat this as approval to skip visual validation. It supports using the low-cave trampoline mechanics, but not the ISV transport.
+
+## Next Step
+
+After the N64 is physically reset/power-cycled or reset back to the SC64 menu and ROM writes are enabled again, the next useful hardware step is a visual test of the safer one-word dim-aware candidate:
+
+```powershell
+& 'C:\Users\codex\Documents\n64\sc64deployer.exe' upload 'C:\Users\codex\Documents\GitHub\TND6480i\artifacts\generated\TND64_480i_single8076_all_dim0_core_no_menu.z64'
+```
+
+Then press the real N64 reset button once and inspect GV-USB2 output. This is preferred over the HVI-only dim0 debug ROM because the baseline result above showed video survives the low-cave trampoline, but SC64 ISV marker capture still does not work reliably on hardware.
+
+Do not use the full `single8076_all_dims` visual ROM first; it stayed black in Gopher64 visual capture. The current candidate is `single8076_all_dim0`, which patches only `0x4F354` to `640x480`.

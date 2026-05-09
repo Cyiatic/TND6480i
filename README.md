@@ -15,7 +15,7 @@ This repo tracks the reproducible patch/build scripts, notes, hardware queue, an
 - Corrected entry-time ISV logging still black-screened on known-good baseline TND, so entry hooks are no longer the next path.
 - The first no-entry baseline ISV control also black-screened, but it was found to have a `DFB1` hook bug that skipped original framebuffer-global setup. That build is superseded.
 - A later HVI-only baseline control still black-screened when its logger lived at ROM `0x331E0`; that high cave may not be resident in RDRAM on hardware. The current diagnostics use a lower early-code cave at `0x3CB0`.
-- Next useful step is validating the low-cave HVI-only SC64/IS-Viewer baseline control on real hardware before another 480i candidate test.
+- The low-cave HVI-only baseline control now reached visible TND credits output on real hardware, but SC64 ISV did not report `TND:HVI1`. Next useful hardware step is a visual test of `TND64_480i_single8076_all_dim0_core_no_menu.z64` from a confirmed SC64 menu.
 
 ## Key Docs
 

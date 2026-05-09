@@ -1,0 +1,23 @@
+{
+  "session": "20260509_dim0_baseline_hvi",
+  "uploaded_rom": "artifacts/generated/BASELINE_TND64_Expanded_sc64isv_hvionly_lowcave.z64",
+  "uploaded_md5": "efc8c7caaa898e421f82eb42b2d62edb",
+  "uploaded_n64_crc": "5AB52A0F BAB5C1D8",
+  "pre_upload_state": {
+    "capture": "diagnostics/captures/after_powercycle_20260509_dim0_session.png",
+    "sc64_boot_mode": "Bootloader -> Menu from SD card",
+    "rom_write": "Enabled"
+  },
+  "post_reset_result": {
+    "video": "visible TND title/credits output",
+    "captures": [
+      "diagnostics/captures/after_baseline_hvi_upload_20260509_dim0_session.png",
+      "diagnostics/captures/after_baseline_hvi_delay_20260509_dim0_session.png",
+      "diagnostics/captures/after_baseline_hvi_delay2_20260509_dim0_session.png"
+    ],
+    "isv_listener": "started and stopped immediately",
+    "isv_dump_contains_tnd_marker": false
+  },
+  "conclusion": "Low-cave HVI trampoline appears visually safe on baseline TND, but SC64 ISV marker capture remains unvalidated.",
+  "next_hardware_candidate": "artifacts/generated/TND64_480i_single8076_all_dim0_core_no_menu.z64"
+}

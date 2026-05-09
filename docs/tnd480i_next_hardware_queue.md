@@ -12,6 +12,12 @@ Date: 2026-05-08
   - Current theory: `0x331E0` is not guaranteed to be resident in RDRAM when early boot/video code runs on real hardware. The new builds use an early low cave at ROM `0x3CB0`.
   - SC64 was reset over USB and reports `Bootloader -> Menu from SD card`. Do not upload another ROM while the user is away.
   - Next hardware step is a low-cave baseline control, not a 480i candidate.
+- 2026-05-09 low-cave HVI baseline follow-up:
+  - From a visible SC64 menu, `BASELINE_TND64_Expanded_sc64isv_hvionly_lowcave.z64` was uploaded and launched after a real reset.
+  - The ROM reached visible TND title/credits output on GV-USB2, so the low-cave HVI trampoline no longer appears to black-screen baseline TND.
+  - The SC64 ISV listener still started/stopped immediately, and dumping `0x03FF0000` showed no `TND:*` marker.
+  - Treat the low-cave trampoline mechanics as visually validated on baseline, but do not trust SC64 ISV marker capture yet.
+  - SC64 boot configuration was reset over USB to `Bootloader -> Menu from SD card`; a real reset/power-cycle is still needed before another upload because ROM write remains disabled while the ROM is running.
 - 2026-05-09 offline decomp follow-up:
   - The user-tested no-dims single-all visual candidate did not patch direct gameplay dimension words at `0x4F354` and `0x4F35C`.
   - Those words were still `320x240` and `440x330`, which matches the reported aliased Bond-hand symptom.
