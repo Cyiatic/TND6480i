@@ -173,6 +173,13 @@ New visual candidates now include direct `640x480` dimension words:
 
 No hardware upload was performed for these dim-aware candidates during this offline follow-up.
 
+Matching low-cave HVI-only debug builds:
+
+| ROM | MD5 | N64 CRC | Expected markers | Emulator smoke |
+|---|---|---|---|---|
+| `artifacts/generated/TND64_480i_single8076_all_dims_core_no_menu_sc64isv_hvionly_lowcave.z64` | `05c4e67a8b293eb10208ff396afbffb2` | `C5E24FCF 6BB1D73D` | `TND:HVI1` | Gopher64 25s survived; 740 `TND:HVI1` markers |
+| `artifacts/generated/TND64_480i_split8030_8076_all_dims_core_no_menu_sc64isv_hvionly_lowcave.z64` | `1d7399907d353fe12266f9120541b221` | `37FE4249 55E07F56` | `TND:HVI1` | Gopher64 25s survived; 755 `TND:HVI1` markers |
+
 ## Next Step
 
 After the N64 is physically reset/power-cycled and the SC64 menu is visible again, test the low-cave HVI-only baseline control first:

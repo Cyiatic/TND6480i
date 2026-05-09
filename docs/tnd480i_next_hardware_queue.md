@@ -125,14 +125,25 @@ Lowest-risk visual-only control:
 
 Use this on SummerCart64 when debug visibility matters more than keeping the ROM byte-for-byte close to the candidate above.
 
+Preferred dim-aware payload:
+
+`TND64_480i_single8076_all_dims_core_no_menu_sc64isv_hvionly_lowcave.z64`
+
+- Base: `TND64_480i_single8076_all_dims_core_no_menu.z64`
+- MD5: `05c4e67a8b293eb10208ff396afbffb2`
+- N64 CRC: `C5E24FCF 6BB1D73D`
+- Debug command: `sc64deployer.exe debug --isv 0x03FF0000 --no-writeback`
+- Expected markers:
+  - `TND:HVI1` - VI setup function returned; may repeat while the game is alive
+- Emulator status: Gopher64 25 second smoke survived and printed 740 `TND:HVI1` markers.
+
+Older no-dims debug payload, superseded for visual-quality testing:
+
 `TND64_480i_single8076_all_core_no_menu_sc64isv_hvionly_lowcave.z64`
 
 - Base: `TND64_480i_single8076_all_core_no_menu.z64`
 - MD5: `d324a80841416d57c33e64c17923be03`
 - N64 CRC: `C32248EF F42057CC`
-- Debug command: `sc64deployer.exe debug --isv 0x03FF0000 --no-writeback`
-- Expected markers:
-  - `TND:HVI1` - VI setup function returned; may repeat while the game is alive
 - Emulator status: Gopher64 25 second smoke survived.
 
 Do not use the old entry-debug ROMs first. Entry logging black-screened the baseline control, and the older no-entry build had a `DFB1` hook bug. The corrected all-hook baseline is `BASELINE_TND64_Expanded_sc64isv_noentry_v3_lowcave.z64`.
@@ -234,6 +245,16 @@ Dim-aware double-buffer fallback:
 - N64 CRC: `278D2E7E C311ADE7`
 - Purpose: same split8030 memory layout as above, plus the direct `640x480` gameplay dimension words.
 - Emulator status: Gopher64 input-driven smoke survived 80 seconds with 266 Start/A taps; ares process smoke survived 30 seconds and stayed responsive.
+- Hardware status: not uploaded.
+
+Matching HVI-only SC64 debug build:
+
+`TND64_480i_split8030_8076_all_dims_core_no_menu_sc64isv_hvionly_lowcave.z64`
+
+- MD5: `1d7399907d353fe12266f9120541b221`
+- N64 CRC: `37FE4249 55E07F56`
+- Expected marker: `TND:HVI1`
+- Emulator status: Gopher64 25 second smoke survived and printed 755 `TND:HVI1` markers.
 - Hardware status: not uploaded.
 
 ## Older Split Diagnostic Queue, Deprioritized

@@ -30,6 +30,7 @@ Date: 2026-05-08
   - fastest current smoke-test path
   - easiest to automate over RDP
   - good for boot/menu/gameplay survival checks
+  - `scripts/smoke_gopher64.py` can launch ROMs, optionally drive Start/A input, and count `TND:*` stdout markers in JSON reports
 - ares:
   - stricter, more hardware-like reference than Project64
   - useful when Gopher64 passes but the real N64 fails
