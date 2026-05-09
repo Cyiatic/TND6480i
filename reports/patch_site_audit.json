@@ -33,9 +33,19 @@
       "md5": "3c6306b06ad9d52121ccc6817038a525",
       "size": 16777216
     },
+    "single all + dims": {
+      "path": "artifacts\\generated\\TND64_480i_single8076_all_dims_core_no_menu.z64",
+      "md5": "8f4c7fdf524ec1c7f4fc63223a8b386c",
+      "size": 16777216
+    },
     "split8030 all": {
       "path": "artifacts\\generated\\TND64_480i_split8030_8076_all_core_no_menu.z64",
       "md5": "6464d1b85aa7fc60d5a6fbf36fa71bf7",
+      "size": 16777216
+    },
+    "split8030 all + dims": {
+      "path": "artifacts\\generated\\TND64_480i_split8030_8076_all_dims_core_no_menu.z64",
+      "md5": "cce443d766bd681a511f7d18bb95b657",
       "size": 16777216
     }
   },
@@ -173,7 +183,15 @@
           "word": "00000825",
           "disasm": "move $at, $zero"
         },
+        "single all + dims": {
+          "word": "00000825",
+          "disasm": "move $at, $zero"
+        },
         "split8030 all": {
+          "word": "8CC94180",
+          "disasm": "lw $t1, 0x4180($a2)"
+        },
+        "split8030 all + dims": {
           "word": "8CC94180",
           "disasm": "lw $t1, 0x4180($a2)"
         }
@@ -220,7 +238,15 @@
           "word": "00000000",
           "disasm": "nop"
         },
+        "single all + dims": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
         "split8030 all": {
+          "word": "01214825",
+          "disasm": "or $t1, $t1, $at"
+        },
+        "split8030 all + dims": {
           "word": "01214825",
           "disasm": "or $t1, $t1, $at"
         }
@@ -263,7 +289,15 @@
           "word": "01214821",
           "disasm": "addu $t1, $t1, $at"
         },
+        "single all + dims": {
+          "word": "01214821",
+          "disasm": "addu $t1, $t1, $at"
+        },
         "split8030 all": {
+          "word": "01214826",
+          "disasm": "xor $t1, $t1, $at"
+        },
+        "split8030 all + dims": {
           "word": "01214826",
           "disasm": "xor $t1, $t1, $at"
         }
@@ -308,7 +342,15 @@
           "word": "AFBFFFFC",
           "disasm": "sw $ra, -4($sp)"
         },
+        "single all + dims": {
+          "word": "AFBFFFFC",
+          "disasm": "sw $ra, -4($sp)"
+        },
         "split8030 all": {
+          "word": "AFBFFFFC",
+          "disasm": "sw $ra, -4($sp)"
+        },
+        "split8030 all + dims": {
           "word": "AFBFFFFC",
           "disasm": "sw $ra, -4($sp)"
         }
@@ -353,7 +395,15 @@
           "word": "0FC348E0",
           "disasm": "jal 0xf0d2380"
         },
+        "single all + dims": {
+          "word": "0FC348E0",
+          "disasm": "jal 0xf0d2380"
+        },
         "split8030 all": {
+          "word": "0FC348E0",
+          "disasm": "jal 0xf0d2380"
+        },
+        "split8030 all + dims": {
           "word": "0FC348E0",
           "disasm": "jal 0xf0d2380"
         }
@@ -398,7 +448,15 @@
           "word": "27BDFFE8",
           "disasm": "addiu $sp, $sp, -0x18"
         },
+        "single all + dims": {
+          "word": "27BDFFE8",
+          "disasm": "addiu $sp, $sp, -0x18"
+        },
         "split8030 all": {
+          "word": "27BDFFE8",
+          "disasm": "addiu $sp, $sp, -0x18"
+        },
+        "split8030 all + dims": {
           "word": "27BDFFE8",
           "disasm": "addiu $sp, $sp, -0x18"
         }
@@ -451,7 +509,15 @@
           "word": "3C048076",
           "disasm": "lui $a0, 0x8076"
         },
+        "single all + dims": {
+          "word": "3C048076",
+          "disasm": "lui $a0, 0x8076"
+        },
         "split8030 all": {
+          "word": "3C048030",
+          "disasm": "lui $a0, 0x8030"
+        },
+        "split8030 all + dims": {
           "word": "3C048030",
           "disasm": "lui $a0, 0x8030"
         }
@@ -501,7 +567,15 @@
           "word": "3484A000",
           "disasm": "ori $a0, $a0, 0xa000"
         },
+        "single all + dims": {
+          "word": "3484A000",
+          "disasm": "ori $a0, $a0, 0xa000"
+        },
         "split8030 all": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "split8030 all + dims": {
           "word": "00000000",
           "disasm": "nop"
         }
@@ -550,7 +624,15 @@
           "word": "00000000",
           "disasm": "nop"
         },
+        "single all + dims": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
         "split8030 all": {
+          "word": "3C050009",
+          "disasm": "lui $a1, 9"
+        },
+        "split8030 all + dims": {
           "word": "3C050009",
           "disasm": "lui $a1, 9"
         }
@@ -600,7 +682,15 @@
           "word": "3C050009",
           "disasm": "lui $a1, 9"
         },
+        "single all + dims": {
+          "word": "3C050009",
+          "disasm": "lui $a1, 9"
+        },
         "split8030 all": {
+          "word": "34A56000",
+          "disasm": "ori $a1, $a1, 0x6000"
+        },
+        "split8030 all + dims": {
           "word": "34A56000",
           "disasm": "ori $a1, $a1, 0x6000"
         }
@@ -650,7 +740,15 @@
           "word": "34A56000",
           "disasm": "ori $a1, $a1, 0x6000"
         },
+        "single all + dims": {
+          "word": "34A56000",
+          "disasm": "ori $a1, $a1, 0x6000"
+        },
         "split8030 all": {
+          "word": "0C005F10",
+          "disasm": "jal 0x17c40"
+        },
+        "split8030 all + dims": {
           "word": "0C005F10",
           "disasm": "jal 0x17c40"
         }
@@ -695,7 +793,15 @@
           "word": "0C005F10",
           "disasm": "jal 0x17c40"
         },
+        "single all + dims": {
+          "word": "0C005F10",
+          "disasm": "jal 0x17c40"
+        },
         "split8030 all": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "split8030 all + dims": {
           "word": "00000000",
           "disasm": "nop"
         }
@@ -743,7 +849,15 @@
           "word": "00000000",
           "disasm": "nop"
         },
+        "single all + dims": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
         "split8030 all": {
+          "word": "3C048076",
+          "disasm": "lui $a0, 0x8076"
+        },
+        "split8030 all + dims": {
           "word": "3C048076",
           "disasm": "lui $a0, 0x8076"
         }
@@ -788,7 +902,15 @@
           "word": "8FBF0014",
           "disasm": "lw $ra, 0x14($sp)"
         },
+        "single all + dims": {
+          "word": "8FBF0014",
+          "disasm": "lw $ra, 0x14($sp)"
+        },
         "split8030 all": {
+          "word": "3484A000",
+          "disasm": "ori $a0, $a0, 0xa000"
+        },
+        "split8030 all + dims": {
           "word": "3484A000",
           "disasm": "ori $a0, $a0, 0xa000"
         }
@@ -833,7 +955,15 @@
           "word": "03E00008",
           "disasm": "jr $ra"
         },
+        "single all + dims": {
+          "word": "03E00008",
+          "disasm": "jr $ra"
+        },
         "split8030 all": {
+          "word": "3C050009",
+          "disasm": "lui $a1, 9"
+        },
+        "split8030 all + dims": {
           "word": "3C050009",
           "disasm": "lui $a1, 9"
         }
@@ -878,7 +1008,15 @@
           "word": "27BD0018",
           "disasm": "addiu $sp, $sp, 0x18"
         },
+        "single all + dims": {
+          "word": "27BD0018",
+          "disasm": "addiu $sp, $sp, 0x18"
+        },
         "split8030 all": {
+          "word": "34A56000",
+          "disasm": "ori $a1, $a1, 0x6000"
+        },
+        "split8030 all + dims": {
           "word": "34A56000",
           "disasm": "ori $a1, $a1, 0x6000"
         }
@@ -923,7 +1061,15 @@
           "word": "00000000",
           "disasm": "nop"
         },
+        "single all + dims": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
         "split8030 all": {
+          "word": "0C005F10",
+          "disasm": "jal 0x17c40"
+        },
+        "split8030 all + dims": {
           "word": "0C005F10",
           "disasm": "jal 0x17c40"
         }
@@ -968,7 +1114,15 @@
           "word": "00000000",
           "disasm": "nop"
         },
+        "single all + dims": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
         "split8030 all": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "split8030 all + dims": {
           "word": "00000000",
           "disasm": "nop"
         }
@@ -1013,7 +1167,15 @@
           "word": "00000000",
           "disasm": "nop"
         },
+        "single all + dims": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
         "split8030 all": {
+          "word": "8FBF0014",
+          "disasm": "lw $ra, 0x14($sp)"
+        },
+        "split8030 all + dims": {
           "word": "8FBF0014",
           "disasm": "lw $ra, 0x14($sp)"
         }
@@ -1058,7 +1220,15 @@
           "word": "00000000",
           "disasm": "nop"
         },
+        "single all + dims": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
         "split8030 all": {
+          "word": "03E00008",
+          "disasm": "jr $ra"
+        },
+        "split8030 all + dims": {
           "word": "03E00008",
           "disasm": "jr $ra"
         }
@@ -1103,7 +1273,15 @@
           "word": "00000000",
           "disasm": "nop"
         },
+        "single all + dims": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
         "split8030 all": {
+          "word": "27BD0018",
+          "disasm": "addiu $sp, $sp, 0x18"
+        },
+        "split8030 all + dims": {
           "word": "27BD0018",
           "disasm": "addiu $sp, $sp, 0x18"
         }
@@ -1148,7 +1326,15 @@
           "word": "00000000",
           "disasm": "nop"
         },
+        "single all + dims": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
         "split8030 all": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "split8030 all + dims": {
           "word": "00000000",
           "disasm": "nop"
         }
@@ -1193,7 +1379,15 @@
           "word": "00000000",
           "disasm": "nop"
         },
+        "single all + dims": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
         "split8030 all": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "split8030 all + dims": {
           "word": "00000000",
           "disasm": "nop"
         }
@@ -1238,7 +1432,15 @@
           "word": "00000000",
           "disasm": "nop"
         },
+        "single all + dims": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
         "split8030 all": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "split8030 all + dims": {
           "word": "00000000",
           "disasm": "nop"
         }
@@ -1283,7 +1485,15 @@
           "word": "00000000",
           "disasm": "nop"
         },
+        "single all + dims": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
         "split8030 all": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "split8030 all + dims": {
           "word": "00000000",
           "disasm": "nop"
         }
@@ -1328,7 +1538,15 @@
           "word": "00000000",
           "disasm": "nop"
         },
+        "single all + dims": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
         "split8030 all": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "split8030 all + dims": {
           "word": "00000000",
           "disasm": "nop"
         }
@@ -1373,7 +1591,15 @@
           "word": "00000000",
           "disasm": "nop"
         },
+        "single all + dims": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
         "split8030 all": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "split8030 all + dims": {
           "word": "00000000",
           "disasm": "nop"
         }
@@ -1418,7 +1644,15 @@
           "word": "00000000",
           "disasm": "nop"
         },
+        "single all + dims": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
         "split8030 all": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "split8030 all + dims": {
           "word": "00000000",
           "disasm": "nop"
         }
@@ -1463,7 +1697,15 @@
           "word": "00000000",
           "disasm": "nop"
         },
+        "single all + dims": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
         "split8030 all": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "split8030 all + dims": {
           "word": "00000000",
           "disasm": "nop"
         }
@@ -1508,7 +1750,15 @@
           "word": "00000000",
           "disasm": "nop"
         },
+        "single all + dims": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
         "split8030 all": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "split8030 all + dims": {
           "word": "00000000",
           "disasm": "nop"
         }
@@ -1551,7 +1801,15 @@
           "word": "00187880",
           "disasm": "sll $t7, $t8, 2"
         },
+        "single all + dims": {
+          "word": "00187880",
+          "disasm": "sll $t7, $t8, 2"
+        },
         "split8030 all": {
+          "word": "00187880",
+          "disasm": "sll $t7, $t8, 2"
+        },
+        "split8030 all + dims": {
           "word": "00187880",
           "disasm": "sll $t7, $t8, 2"
         }
@@ -1594,7 +1852,15 @@
           "word": "3C048002",
           "disasm": "lui $a0, 0x8002"
         },
+        "single all + dims": {
+          "word": "3C048002",
+          "disasm": "lui $a0, 0x8002"
+        },
         "split8030 all": {
+          "word": "3C038006",
+          "disasm": "lui $v1, 0x8006"
+        },
+        "split8030 all + dims": {
           "word": "3C038006",
           "disasm": "lui $v1, 0x8006"
         }
@@ -1637,7 +1903,15 @@
           "word": "0C00012B",
           "disasm": "jal 0x4ac"
         },
+        "single all + dims": {
+          "word": "0C00012B",
+          "disasm": "jal 0x4ac"
+        },
         "split8030 all": {
+          "word": "90780879",
+          "disasm": "lbu $t8, 0x879($v1)"
+        },
+        "split8030 all + dims": {
           "word": "90780879",
           "disasm": "lbu $t8, 0x879($v1)"
         }
@@ -1680,7 +1954,15 @@
           "word": "8C84417C",
           "disasm": "lw $a0, 0x417c($a0)"
         },
+        "single all + dims": {
+          "word": "8C84417C",
+          "disasm": "lw $a0, 0x417c($a0)"
+        },
         "split8030 all": {
+          "word": "0018C080",
+          "disasm": "sll $t8, $t8, 2"
+        },
+        "split8030 all + dims": {
           "word": "0018C080",
           "disasm": "sll $t8, $t8, 2"
         }
@@ -1723,7 +2005,15 @@
           "word": "3C038006",
           "disasm": "lui $v1, 0x8006"
         },
+        "single all + dims": {
+          "word": "3C038006",
+          "disasm": "lui $v1, 0x8006"
+        },
         "split8030 all": {
+          "word": "3C048002",
+          "disasm": "lui $a0, 0x8002"
+        },
+        "split8030 all + dims": {
           "word": "3C048002",
           "disasm": "lui $a0, 0x8002"
         }
@@ -1766,7 +2056,15 @@
           "word": "90780879",
           "disasm": "lbu $t8, 0x879($v1)"
         },
+        "single all + dims": {
+          "word": "90780879",
+          "disasm": "lbu $t8, 0x879($v1)"
+        },
         "split8030 all": {
+          "word": "00982021",
+          "disasm": "addu $a0, $a0, $t8"
+        },
+        "split8030 all + dims": {
           "word": "00982021",
           "disasm": "addu $a0, $a0, $t8"
         }
@@ -1813,7 +2111,15 @@
           "word": "00007825",
           "disasm": "move $t7, $zero"
         },
+        "single all + dims": {
+          "word": "00007825",
+          "disasm": "move $t7, $zero"
+        },
         "split8030 all": {
+          "word": "0C00012B",
+          "disasm": "jal 0x4ac"
+        },
+        "split8030 all + dims": {
           "word": "0C00012B",
           "disasm": "jal 0x4ac"
         }
@@ -1860,7 +2166,15 @@
           "word": "00000000",
           "disasm": "nop"
         },
+        "single all + dims": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
         "split8030 all": {
+          "word": "8C84417C",
+          "disasm": "lw $a0, 0x417c($a0)"
+        },
+        "split8030 all + dims": {
           "word": "8C84417C",
           "disasm": "lw $a0, 0x417c($a0)"
         }
@@ -1907,7 +2221,15 @@
           "word": "00000000",
           "disasm": "nop"
         },
+        "single all + dims": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
         "split8030 all": {
+          "word": "3C188002",
+          "disasm": "lui $t8, 0x8002"
+        },
+        "split8030 all + dims": {
           "word": "3C188002",
           "disasm": "lui $t8, 0x8002"
         }
@@ -1954,7 +2276,15 @@
           "word": "00000000",
           "disasm": "nop"
         },
+        "single all + dims": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
         "split8030 all": {
+          "word": "8F1832A8",
+          "disasm": "lw $t8, 0x32a8($t8)"
+        },
+        "split8030 all + dims": {
           "word": "8F1832A8",
           "disasm": "lw $t8, 0x32a8($t8)"
         }
@@ -2000,7 +2330,15 @@
           "word": "00000000",
           "disasm": "nop"
         },
+        "single all + dims": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
         "split8030 all": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "split8030 all + dims": {
           "word": "00000000",
           "disasm": "nop"
         }
@@ -2046,7 +2384,15 @@
           "word": "00000000",
           "disasm": "nop"
         },
+        "single all + dims": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
         "split8030 all": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "split8030 all + dims": {
           "word": "00000000",
           "disasm": "nop"
         }
@@ -2089,7 +2435,15 @@
           "word": "3C188002",
           "disasm": "lui $t8, 0x8002"
         },
+        "single all + dims": {
+          "word": "3C188002",
+          "disasm": "lui $t8, 0x8002"
+        },
         "split8030 all": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "split8030 all + dims": {
           "word": "00000000",
           "disasm": "nop"
         }
@@ -2132,7 +2486,15 @@
           "word": "8F1832A8",
           "disasm": "lw $t8, 0x32a8($t8)"
         },
+        "single all + dims": {
+          "word": "8F1832A8",
+          "disasm": "lw $t8, 0x32a8($t8)"
+        },
         "split8030 all": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "split8030 all + dims": {
           "word": "00000000",
           "disasm": "nop"
         }
@@ -2178,7 +2540,15 @@
           "word": "00000000",
           "disasm": "nop"
         },
+        "single all + dims": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
         "split8030 all": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "split8030 all + dims": {
           "word": "00000000",
           "disasm": "nop"
         }
@@ -2221,7 +2591,15 @@
           "word": "01E2C821",
           "disasm": "addu $t9, $t7, $v0"
         },
+        "single all + dims": {
+          "word": "01E2C821",
+          "disasm": "addu $t9, $t7, $v0"
+        },
         "split8030 all": {
+          "word": "0040C825",
+          "disasm": "move $t9, $v0"
+        },
+        "split8030 all + dims": {
           "word": "0040C825",
           "disasm": "move $t9, $v0"
         }
@@ -2264,7 +2642,15 @@
           "word": "AF190028",
           "disasm": "sw $t9, 0x28($t8)"
         },
+        "single all + dims": {
+          "word": "AF190028",
+          "disasm": "sw $t9, 0x28($t8)"
+        },
         "split8030 all": {
+          "word": "AF190028",
+          "disasm": "sw $t9, 0x28($t8)"
+        },
+        "split8030 all + dims": {
           "word": "AF190028",
           "disasm": "sw $t9, 0x28($t8)"
         }
@@ -2317,7 +2703,15 @@
           "word": "3C048076",
           "disasm": "lui $a0, 0x8076"
         },
+        "single all + dims": {
+          "word": "3C048076",
+          "disasm": "lui $a0, 0x8076"
+        },
         "split8030 all": {
+          "word": "3C048030",
+          "disasm": "lui $a0, 0x8030"
+        },
+        "split8030 all + dims": {
           "word": "3C048030",
           "disasm": "lui $a0, 0x8030"
         }
@@ -2370,7 +2764,15 @@
           "word": "3484A000",
           "disasm": "ori $a0, $a0, 0xa000"
         },
+        "single all + dims": {
+          "word": "3484A000",
+          "disasm": "ori $a0, $a0, 0xa000"
+        },
         "split8030 all": {
+          "word": "34840000",
+          "disasm": "ori $a0, $a0, 0"
+        },
+        "split8030 all + dims": {
           "word": "34840000",
           "disasm": "ori $a0, $a0, 0"
         }
@@ -2421,7 +2823,15 @@
           "word": "00802825",
           "disasm": "move $a1, $a0"
         },
+        "single all + dims": {
+          "word": "00802825",
+          "disasm": "move $a1, $a0"
+        },
         "split8030 all": {
+          "word": "3C058076",
+          "disasm": "lui $a1, 0x8076"
+        },
+        "split8030 all + dims": {
           "word": "3C058076",
           "disasm": "lui $a1, 0x8076"
         }
@@ -2472,7 +2882,15 @@
           "word": "3C02A000",
           "disasm": "lui $v0, 0xa000"
         },
+        "single all + dims": {
+          "word": "3C02A000",
+          "disasm": "lui $v0, 0xa000"
+        },
         "split8030 all": {
+          "word": "34A5A000",
+          "disasm": "ori $a1, $a1, 0xa000"
+        },
+        "split8030 all + dims": {
           "word": "34A5A000",
           "disasm": "ori $a1, $a1, 0xa000"
         }
@@ -2520,7 +2938,15 @@
           "word": "00827025",
           "disasm": "or $t6, $a0, $v0"
         },
+        "single all + dims": {
+          "word": "00827025",
+          "disasm": "or $t6, $a0, $v0"
+        },
         "split8030 all": {
+          "word": "3C02A000",
+          "disasm": "lui $v0, 0xa000"
+        },
+        "split8030 all + dims": {
           "word": "3C02A000",
           "disasm": "lui $v0, 0xa000"
         }
@@ -2568,7 +2994,15 @@
           "word": "3C018002",
           "disasm": "lui $at, 0x8002"
         },
+        "single all + dims": {
+          "word": "3C018002",
+          "disasm": "lui $at, 0x8002"
+        },
         "split8030 all": {
+          "word": "00827025",
+          "disasm": "or $t6, $a0, $v0"
+        },
+        "split8030 all + dims": {
           "word": "00827025",
           "disasm": "or $t6, $a0, $v0"
         }
@@ -2616,7 +3050,15 @@
           "word": "AC2E417C",
           "disasm": "sw $t6, 0x417c($at)"
         },
+        "single all + dims": {
+          "word": "AC2E417C",
+          "disasm": "sw $t6, 0x417c($at)"
+        },
         "split8030 all": {
+          "word": "3C018002",
+          "disasm": "lui $at, 0x8002"
+        },
+        "split8030 all + dims": {
           "word": "3C018002",
           "disasm": "lui $at, 0x8002"
         }
@@ -2664,7 +3106,15 @@
           "word": "00A27825",
           "disasm": "or $t7, $a1, $v0"
         },
+        "single all + dims": {
+          "word": "00A27825",
+          "disasm": "or $t7, $a1, $v0"
+        },
         "split8030 all": {
+          "word": "AC2E417C",
+          "disasm": "sw $t6, 0x417c($at)"
+        },
+        "split8030 all + dims": {
           "word": "AC2E417C",
           "disasm": "sw $t6, 0x417c($at)"
         }
@@ -2712,7 +3162,15 @@
           "word": "03E00008",
           "disasm": "jr $ra"
         },
+        "single all + dims": {
+          "word": "03E00008",
+          "disasm": "jr $ra"
+        },
         "split8030 all": {
+          "word": "00A27825",
+          "disasm": "or $t7, $a1, $v0"
+        },
+        "split8030 all + dims": {
           "word": "00A27825",
           "disasm": "or $t7, $a1, $v0"
         }
@@ -2760,7 +3218,15 @@
           "word": "AC2F4180",
           "disasm": "sw $t7, 0x4180($at)"
         },
+        "single all + dims": {
+          "word": "AC2F4180",
+          "disasm": "sw $t7, 0x4180($at)"
+        },
         "split8030 all": {
+          "word": "03E00008",
+          "disasm": "jr $ra"
+        },
+        "split8030 all + dims": {
           "word": "03E00008",
           "disasm": "jr $ra"
         }
@@ -2808,7 +3274,15 @@
           "word": "00000000",
           "disasm": "nop"
         },
+        "single all + dims": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
         "split8030 all": {
+          "word": "AC2F4180",
+          "disasm": "sw $t7, 0x4180($at)"
+        },
+        "split8030 all + dims": {
           "word": "AC2F4180",
           "disasm": "sw $t7, 0x4180($at)"
         }
@@ -2855,7 +3329,15 @@
           "word": "00000000",
           "disasm": "nop"
         },
+        "single all + dims": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
         "split8030 all": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "split8030 all + dims": {
           "word": "00000000",
           "disasm": "nop"
         }
@@ -2902,7 +3384,15 @@
           "word": "00000000",
           "disasm": "nop"
         },
+        "single all + dims": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
         "split8030 all": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "split8030 all + dims": {
           "word": "00000000",
           "disasm": "nop"
         }
@@ -2945,7 +3435,15 @@
           "word": "2401FFFF",
           "disasm": "addiu $at, $zero, -1"
         },
+        "single all + dims": {
+          "word": "2401FFFF",
+          "disasm": "addiu $at, $zero, -1"
+        },
         "split8030 all": {
+          "word": "2401FFFF",
+          "disasm": "addiu $at, $zero, -1"
+        },
+        "split8030 all + dims": {
           "word": "2401FFFF",
           "disasm": "addiu $at, $zero, -1"
         }
@@ -2992,7 +3490,15 @@
           "word": "3C09A440",
           "disasm": "lui $t1, 0xa440"
         },
+        "single all + dims": {
+          "word": "3C09A440",
+          "disasm": "lui $t1, 0xa440"
+        },
         "split8030 all": {
+          "word": "3C09A440",
+          "disasm": "lui $t1, 0xa440"
+        },
+        "split8030 all + dims": {
           "word": "3C09A440",
           "disasm": "lui $t1, 0xa440"
         }
@@ -3039,7 +3545,15 @@
           "word": "10000006",
           "disasm": "b 0x1999c"
         },
+        "single all + dims": {
+          "word": "10000006",
+          "disasm": "b 0x1999c"
+        },
         "split8030 all": {
+          "word": "10000006",
+          "disasm": "b 0x1999c"
+        },
+        "split8030 all + dims": {
           "word": "10000006",
           "disasm": "b 0x1999c"
         }
@@ -3086,7 +3600,15 @@
           "word": "00000000",
           "disasm": "nop"
         },
+        "single all + dims": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
         "split8030 all": {
+          "word": "00000000",
+          "disasm": "nop"
+        },
+        "split8030 all + dims": {
           "word": "00000000",
           "disasm": "nop"
         }
@@ -3133,7 +3655,15 @@
           "word": "000C6040",
           "disasm": "sll $t4, $t4, 1"
         },
+        "single all + dims": {
+          "word": "000C6040",
+          "disasm": "sll $t4, $t4, 1"
+        },
         "split8030 all": {
+          "word": "000C6040",
+          "disasm": "sll $t4, $t4, 1"
+        },
+        "split8030 all + dims": {
           "word": "000C6040",
           "disasm": "sll $t4, $t4, 1"
         }
@@ -3180,7 +3710,15 @@
           "word": "ADEE0018",
           "disasm": "sw $t6, 0x18($t7)"
         },
+        "single all + dims": {
+          "word": "ADEE0018",
+          "disasm": "sw $t6, 0x18($t7)"
+        },
         "split8030 all": {
+          "word": "ADEE0018",
+          "disasm": "sw $t6, 0x18($t7)"
+        },
+        "split8030 all + dims": {
           "word": "ADEE0018",
           "disasm": "sw $t6, 0x18($t7)"
         }
@@ -3227,7 +3765,15 @@
           "word": "8E2B002C",
           "disasm": "lw $t3, 0x2c($s1)"
         },
+        "single all + dims": {
+          "word": "8E2B002C",
+          "disasm": "lw $t3, 0x2c($s1)"
+        },
         "split8030 all": {
+          "word": "8E2B002C",
+          "disasm": "lw $t3, 0x2c($s1)"
+        },
+        "split8030 all + dims": {
           "word": "8E2B002C",
           "disasm": "lw $t3, 0x2c($s1)"
         }
@@ -3274,7 +3820,15 @@
           "word": "AD890030",
           "disasm": "sw $t1, 0x30($t4)"
         },
+        "single all + dims": {
+          "word": "AD890030",
+          "disasm": "sw $t1, 0x30($t4)"
+        },
         "split8030 all": {
+          "word": "AD890030",
+          "disasm": "sw $t1, 0x30($t4)"
+        },
+        "split8030 all + dims": {
           "word": "AD890030",
           "disasm": "sw $t1, 0x30($t4)"
         }
@@ -3321,7 +3875,15 @@
           "word": "000B5842",
           "disasm": "srl $t3, $t3, 1"
         },
+        "single all + dims": {
+          "word": "000B5842",
+          "disasm": "srl $t3, $t3, 1"
+        },
         "split8030 all": {
+          "word": "000B5842",
+          "disasm": "srl $t3, $t3, 1"
+        },
+        "split8030 all + dims": {
           "word": "000B5842",
           "disasm": "srl $t3, $t3, 1"
         }
@@ -3364,9 +3926,17 @@
           "word": "014000F0",
           "disasm": "tge $t2, $zero, 3"
         },
+        "single all + dims": {
+          "word": "028001E0",
+          "disasm": ""
+        },
         "split8030 all": {
           "word": "014000F0",
           "disasm": "tge $t2, $zero, 3"
+        },
+        "split8030 all + dims": {
+          "word": "028001E0",
+          "disasm": ""
         }
       }
     },
@@ -3407,8 +3977,16 @@
           "word": "01B8014A",
           "disasm": ""
         },
+        "single all + dims": {
+          "word": "028001E0",
+          "disasm": ""
+        },
         "split8030 all": {
           "word": "01B8014A",
+          "disasm": ""
+        },
+        "split8030 all + dims": {
+          "word": "028001E0",
           "disasm": ""
         }
       }
@@ -3422,9 +4000,21 @@
       "mismatches": []
     },
     {
+      "rom": "single all + dims",
+      "profile": "single8076_all_dims",
+      "expected_words": 40,
+      "mismatches": []
+    },
+    {
       "rom": "split8030 all",
       "profile": "split8030_8076_all_nodims",
       "expected_words": 69,
+      "mismatches": []
+    },
+    {
+      "rom": "split8030 all + dims",
+      "profile": "split8030_8076_all_dims",
+      "expected_words": 71,
       "mismatches": []
     }
   ],
@@ -3765,7 +4355,141 @@
       ]
     },
     {
+      "rom": "single all + dims",
+      "main_md5": "b77ac94fd19847299613d6ab600047a2",
+      "stream_consumed": "0xFDA7",
+      "ranges": [
+        {
+          "start": "0x24B8",
+          "end": "0x2500",
+          "len": 72,
+          "note": "display dimensions table",
+          "equals_ge480": true,
+          "equals_tnd_base": false,
+          "diff_bytes_from_tnd": 24,
+          "diff_bytes_from_ge480": 0
+        },
+        {
+          "start": "0x5CD4",
+          "end": "0x5D10",
+          "len": 60,
+          "note": "VI table A",
+          "equals_ge480": true,
+          "equals_tnd_base": false,
+          "diff_bytes_from_tnd": 12,
+          "diff_bytes_from_ge480": 0
+        },
+        {
+          "start": "0x7594",
+          "end": "0x75D0",
+          "len": 60,
+          "note": "VI table B",
+          "equals_ge480": true,
+          "equals_tnd_base": false,
+          "diff_bytes_from_tnd": 12,
+          "diff_bytes_from_ge480": 0
+        },
+        {
+          "start": "0x76F0",
+          "end": "0x7700",
+          "len": 16,
+          "note": "dimension header only",
+          "equals_ge480": true,
+          "equals_tnd_base": false,
+          "diff_bytes_from_tnd": 12,
+          "diff_bytes_from_ge480": 0
+        },
+        {
+          "start": "0x9C3C",
+          "end": "0x9D24",
+          "len": 232,
+          "note": "menu/display table A",
+          "equals_ge480": false,
+          "equals_tnd_base": true,
+          "diff_bytes_from_tnd": 0,
+          "diff_bytes_from_ge480": 38
+        },
+        {
+          "start": "0xA240",
+          "end": "0xA264",
+          "len": 36,
+          "note": "menu/display table B",
+          "equals_ge480": false,
+          "equals_tnd_base": true,
+          "diff_bytes_from_tnd": 0,
+          "diff_bytes_from_ge480": 11
+        }
+      ]
+    },
+    {
       "rom": "split8030 all",
+      "main_md5": "b77ac94fd19847299613d6ab600047a2",
+      "stream_consumed": "0xFDA7",
+      "ranges": [
+        {
+          "start": "0x24B8",
+          "end": "0x2500",
+          "len": 72,
+          "note": "display dimensions table",
+          "equals_ge480": true,
+          "equals_tnd_base": false,
+          "diff_bytes_from_tnd": 24,
+          "diff_bytes_from_ge480": 0
+        },
+        {
+          "start": "0x5CD4",
+          "end": "0x5D10",
+          "len": 60,
+          "note": "VI table A",
+          "equals_ge480": true,
+          "equals_tnd_base": false,
+          "diff_bytes_from_tnd": 12,
+          "diff_bytes_from_ge480": 0
+        },
+        {
+          "start": "0x7594",
+          "end": "0x75D0",
+          "len": 60,
+          "note": "VI table B",
+          "equals_ge480": true,
+          "equals_tnd_base": false,
+          "diff_bytes_from_tnd": 12,
+          "diff_bytes_from_ge480": 0
+        },
+        {
+          "start": "0x76F0",
+          "end": "0x7700",
+          "len": 16,
+          "note": "dimension header only",
+          "equals_ge480": true,
+          "equals_tnd_base": false,
+          "diff_bytes_from_tnd": 12,
+          "diff_bytes_from_ge480": 0
+        },
+        {
+          "start": "0x9C3C",
+          "end": "0x9D24",
+          "len": 232,
+          "note": "menu/display table A",
+          "equals_ge480": false,
+          "equals_tnd_base": true,
+          "diff_bytes_from_tnd": 0,
+          "diff_bytes_from_ge480": 38
+        },
+        {
+          "start": "0xA240",
+          "end": "0xA264",
+          "len": 36,
+          "note": "menu/display table B",
+          "equals_ge480": false,
+          "equals_tnd_base": true,
+          "diff_bytes_from_tnd": 0,
+          "diff_bytes_from_ge480": 11
+        }
+      ]
+    },
+    {
+      "rom": "split8030 all + dims",
       "main_md5": "b77ac94fd19847299613d6ab600047a2",
       "stream_consumed": "0xFDA7",
       "ranges": [

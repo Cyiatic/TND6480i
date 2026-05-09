@@ -160,6 +160,19 @@ The diagnostic script now places the logger and trampolines in early padding at 
 | `artifacts/generated/TND64_480i_single8076_all_core_no_menu_sc64isv_hvionly_lowcave.z64` | `d324a80841416d57c33e64c17923be03` | `C32248EF F42057CC` | ISV | `TND:HVI1` | Gopher64 25s survived |
 | `artifacts/generated/BASELINE_TND64_Expanded_sc64aux_hvionly_lowcave.z64` | `5a9f649b8a4a51d5aea8815703bc6fb6` | `E89798F4 07CC0928` | AUX | `HVI1` word via AUX | Gopher64 panicked in its SC64 cart path |
 
+## Offline Decomp Follow-up
+
+The user-tested no-dims single-all visual ROM booted far enough to inspect Bond's hand but did not visibly render at 480i. A decomp pass against local `007-decomp` explains why that could happen: gameplay still passes stock direct dimensions through `viSetXY`/`viSetBuf`, and the no-dims candidate left ROM offsets `0x4F354` and `0x4F35C` at `0x014000F0` (`320x240`) and `0x01B8014A` (`440x330`).
+
+New visual candidates now include direct `640x480` dimension words:
+
+| ROM | MD5 | N64 CRC | Profile | Emulator smoke |
+|---|---|---|---|---|
+| `artifacts/generated/TND64_480i_single8076_all_dims_core_no_menu.z64` | `8f4c7fdf524ec1c7f4fc63223a8b386c` | `CDBE2120 73E89F69` | `single8076_all_dims` | Gopher64 80s input survived; ares 30s survived |
+| `artifacts/generated/TND64_480i_split8030_8076_all_dims_core_no_menu.z64` | `cce443d766bd681a511f7d18bb95b657` | `278D2E7E C311ADE7` | `split8030_8076_all_dims` | Gopher64 80s input survived; ares 30s survived |
+
+No hardware upload was performed for these dim-aware candidates during this offline follow-up.
+
 ## Next Step
 
 After the N64 is physically reset/power-cycled and the SC64 menu is visible again, test the low-cave HVI-only baseline control first:

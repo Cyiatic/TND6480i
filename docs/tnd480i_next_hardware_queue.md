@@ -12,6 +12,10 @@ Date: 2026-05-08
   - Current theory: `0x331E0` is not guaranteed to be resident in RDRAM when early boot/video code runs on real hardware. The new builds use an early low cave at ROM `0x3CB0`.
   - SC64 was reset over USB and reports `Bootloader -> Menu from SD card`. Do not upload another ROM while the user is away.
   - Next hardware step is a low-cave baseline control, not a 480i candidate.
+- 2026-05-09 offline decomp follow-up:
+  - The user-tested no-dims single-all visual candidate did not patch direct gameplay dimension words at `0x4F354` and `0x4F35C`.
+  - Those words were still `320x240` and `440x330`, which matches the reported aliased Bond-hand symptom.
+  - New dim-aware candidates now patch both words to `640x480` and survived local emulator smokes, but they have not been uploaded to hardware.
 - 2026-05-08 SC64 session:
   - SC64 detected on `COM4`; firmware `v2.20.2`; SD initialized; ROM writes enabled.
   - GV-USB2 capture showed the SC64 menu clearly.
@@ -133,6 +137,19 @@ Use this on SummerCart64 when debug visibility matters more than keeping the ROM
 
 Do not use the old entry-debug ROMs first. Entry logging black-screened the baseline control, and the older no-entry build had a `DFB1` hook bug. The corrected all-hook baseline is `BASELINE_TND64_Expanded_sc64isv_noentry_v3_lowcave.z64`.
 
+## Most Meaningful Visual Candidate
+
+Use this only after the baseline/control path has a clear result, or if the user explicitly chooses one visual test over more debug validation. It directly addresses the observed "boots but Bond's hand is still aliased" symptom from the old no-dims single-all ROM.
+
+`TND64_480i_single8076_all_dims_core_no_menu.z64`
+
+- Profile: `single8076_all_dims`
+- MD5: `8f4c7fdf524ec1c7f4fc63223a8b386c`
+- N64 CRC: `CDBE2120 73E89F69`
+- Difference from `TND64_480i_single8076_all_core_no_menu.z64`: the two direct gameplay dimension words at `0x4F354` and `0x4F35C` are now `0x028001E0` (`640x480`) instead of stock `320x240`/`440x330`.
+- Emulator status: Gopher64 input-driven smoke survived 80 seconds with 266 Start/A taps; ares process smoke survived 30 seconds and stayed responsive.
+- Hardware status: not uploaded.
+
 ## Single-High Diagnostic Fallbacks
 
 Use these only after the one-shot candidate has a clear result and a physical reset/power-cycle is available if the console wedged.
@@ -207,6 +224,17 @@ Use this only after the single-high candidate has a clear result. It may be usef
 - Emulator status: Gopher64 visible smoke passed for 30 seconds; Gopher64 input-driven smoke survived 76 seconds with 158 Start/A key taps; ares process smoke survived 30 seconds and stayed responsive.
 
 The older width/scale-only split8030 fallback remains available as `TND64_480i_split8030_8076_mem_fg_h_width_scale_core_no_menu.z64` with MD5 `bd9f43cf6e42b4ee98bc519522d7c515`, but the full-H version above is now the better comparison if the single-buffer build boots but does not look right.
+
+Dim-aware double-buffer fallback:
+
+`TND64_480i_split8030_8076_all_dims_core_no_menu.z64`
+
+- Profile: `split8030_8076_all_dims`
+- MD5: `cce443d766bd681a511f7d18bb95b657`
+- N64 CRC: `278D2E7E C311ADE7`
+- Purpose: same split8030 memory layout as above, plus the direct `640x480` gameplay dimension words.
+- Emulator status: Gopher64 input-driven smoke survived 80 seconds with 266 Start/A taps; ares process smoke survived 30 seconds and stayed responsive.
+- Hardware status: not uploaded.
 
 ## Older Split Diagnostic Queue, Deprioritized
 

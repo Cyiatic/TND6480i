@@ -41,8 +41,10 @@ ROMS = {
     "single FG+origin+width": "TND64_480i_single8076_mem_fg_h_origin_width_core_no_menu.z64",
     "single FG+origin+scale": "TND64_480i_single8076_mem_fg_h_origin_scale_core_no_menu.z64",
     "single all": "TND64_480i_single8076_all_core_no_menu.z64",
+    "single all + dims": "TND64_480i_single8076_all_dims_core_no_menu.z64",
     "split8030 FG+width+scale": "TND64_480i_split8030_8076_mem_fg_h_width_scale_core_no_menu.z64",
     "split8030 all": "TND64_480i_split8030_8076_all_core_no_menu.z64",
+    "split8030 all + dims": "TND64_480i_split8030_8076_all_dims_core_no_menu.z64",
 }
 
 PROFILE_HINTS = {
@@ -52,8 +54,10 @@ PROFILE_HINTS = {
     "single FG+origin+width": "single8076_mem_fg_h_origin_width_nodims",
     "single FG+origin+scale": "single8076_mem_fg_h_origin_scale_nodims",
     "single all": "single8076_all_nodims",
+    "single all + dims": "single8076_all_dims",
     "split8030 FG+width+scale": "split8030_8076_mem_fg_h_width_scale_nodims",
     "split8030 all": "split8030_8076_all_nodims",
+    "split8030 all + dims": "split8030_8076_all_dims",
 }
 
 
@@ -244,6 +248,14 @@ def main_range_audit(roms):
 
 
 def write_markdown(report):
+    direct_columns = [
+        ("single FG+width+scale", "Current single W/S"),
+        ("single all", "Single all"),
+        ("single all + dims", "Single all + dims"),
+        ("split8030 all", "Split8030 all"),
+        ("split8030 all + dims", "Split8030 all + dims"),
+    ]
+    direct_columns = [col for col in direct_columns if col[0] in report["roms"]]
     lines = []
     lines.append("# TND64 480i Patch-Site Audit")
     lines.append("")
@@ -261,7 +273,10 @@ def write_markdown(report):
         "- `single all` and the new `single FG+origin*` builds add that origin branch family while keeping the safer `0x8076A000` single-buffer memory placement."
     )
     lines.append(
-        "- `split8030 all` is the double-buffer fallback that avoids both the earlier `0x80400000` real-hardware failure point and the known `0x8070xxxx` TND references."
+        "- The `+ dims` builds also patch the two direct gameplay dimension words at `0x4F354` and `0x4F35C` from `320x240`/`440x330` to `640x480`; this is the likely missing piece behind the aliased Bond-hand result from the no-dims single-all hardware test."
+    )
+    lines.append(
+        "- `split8030 all + dims` is the double-buffer fallback that avoids both the earlier `0x80400000` real-hardware failure point and the known `0x8070xxxx` TND references while also applying the direct dimension words."
     )
     lines.append("")
     lines.append("## ROM Inventory")
@@ -285,23 +300,25 @@ def write_markdown(report):
     lines.append("")
     lines.append("## Direct Word Sites")
     lines.append("")
-    lines.append("| Offset | Groups | TND base | GE 480i | Current single W/S | Single all | Split8030 all |")
-    lines.append("|---:|---|---|---|---|---|---|")
+    headers = ["Offset", "Groups", "TND base", "GE 480i"] + [name for _, name in direct_columns]
+    lines.append("| " + " | ".join(headers) + " |")
+    lines.append("|" + "|".join(["---:"] + ["---"] * (len(headers) - 1)) + "|")
     for row in report["direct_word_sites"]:
         rom_words = row["roms"]
+        cols = [
+            f"`{row['offset']}`",
+            ", ".join(row["groups"]),
+            f"`{row['tnd_base']}` {row['tnd_base_disasm']}",
+            f"`{row['ge_480i']}` {row['ge_480i_disasm']}",
+        ]
+        for label, _name in direct_columns:
+            cols.append(
+                f"`{rom_words.get(label, {}).get('word', 'missing')}` "
+                f"{rom_words.get(label, {}).get('disasm', '')}"
+            )
         lines.append(
             "| "
-            + " | ".join(
-                [
-                    f"`{row['offset']}`",
-                    ", ".join(row["groups"]),
-                    f"`{row['tnd_base']}` {row['tnd_base_disasm']}",
-                    f"`{row['ge_480i']}` {row['ge_480i_disasm']}",
-                    f"`{rom_words.get('single FG+width+scale', {}).get('word', 'missing')}` {rom_words.get('single FG+width+scale', {}).get('disasm', '')}",
-                    f"`{rom_words.get('single all', {}).get('word', 'missing')}` {rom_words.get('single all', {}).get('disasm', '')}",
-                    f"`{rom_words.get('split8030 all', {}).get('word', 'missing')}` {rom_words.get('split8030 all', {}).get('disasm', '')}",
-                ]
-            )
+            + " | ".join(cols)
             + " |"
         )
     lines.append("")
@@ -334,7 +351,7 @@ def write_markdown(report):
                 menu_eq += 1
         lines.append(f"| {row['rom']} | `{row['main_md5']}` | {core_eq}/4 | {menu_eq}/2 |")
     lines.append("")
-    lines.append("Full machine-readable details are in `parallel_diag/patch_site_audit.json`.")
+    lines.append(f"Full machine-readable details are in `{JSON_OUT}`.")
     MD_OUT.write_text("\n".join(lines) + "\n")
 
 

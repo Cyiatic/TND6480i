@@ -8,7 +8,8 @@ This repo tracks the reproducible patch/build scripts, notes, hardware queue, an
 
 - SC64 is working on `COM4` when connected.
 - The capture path can see the SC64 menu; see `diagnostics/captures/capture_sc64_menu_before_repo_migration_20260509.png`.
-- The most recent blind visual candidate, `TND64_480i_single8076_all_core_no_menu.z64`, did not work on hardware per user test.
+- The most recent blind visual candidate, `TND64_480i_single8076_all_core_no_menu.z64`, booted far enough for a user test but did not visibly render at 480i. Decomp follow-up found it still left the direct gameplay dimension words at `320x240`/`440x330`.
+- New dim-aware visual candidates exist locally. The primary one is `artifacts/generated/TND64_480i_single8076_all_dims_core_no_menu.z64` with MD5 `8f4c7fdf524ec1c7f4fc63223a8b386c` and N64 CRC `CDBE2120 73E89F69`; it survived Gopher64 input smoke and ares process smoke. It has not been uploaded to hardware.
 - The first SC64 debug candidate had a real-hardware runtime-address bug in its trampolines. Fixed debug builds now use the ROM load mapping `0x1000 -> 0x80000400`.
 - Corrected entry-time ISV logging still black-screened on known-good baseline TND, so entry hooks are no longer the next path.
 - The first no-entry baseline ISV control also black-screened, but it was found to have a `DFB1` hook bug that skipped original framebuffer-global setup. That build is superseded.
@@ -19,6 +20,7 @@ This repo tracks the reproducible patch/build scripts, notes, hardware queue, an
 
 - `docs/morning_handoff_20260509.md`
 - `docs/tnd480i_next_hardware_queue.md`
+- `docs/decomp_480i_findings.md`
 - `docs/patch_site_audit.md`
 - `docs/sc64_setup_notes.md`
 
