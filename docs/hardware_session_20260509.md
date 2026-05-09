@@ -210,14 +210,32 @@ Boot mode: Bootloader -> Menu from SD card
 
 Do not treat this as approval to skip visual validation. It supports using the low-cave trampoline mechanics, but not the ISV transport.
 
-## Next Step
+## Dim0 Visual Hardware Result
 
-After the N64 is physically reset/power-cycled or reset back to the SC64 menu and ROM writes are enabled again, the next useful hardware step is a visual test of the safer one-word dim-aware candidate:
+After another power cycle restored the SC64 menu, `TND64_480i_single8076_all_dim0_core_no_menu.z64` was uploaded:
 
-```powershell
-& 'C:\Users\codex\Documents\n64\sc64deployer.exe' upload 'C:\Users\codex\Documents\GitHub\TND6480i\artifacts\generated\TND64_480i_single8076_all_dim0_core_no_menu.z64'
+```text
+artifacts/generated/TND64_480i_single8076_all_dim0_core_no_menu.z64
+MD5: ad441669291605a3fd551b51c68bb195
+N64 CRC: CE5E1EF0 26DDA6CD
+Profile: single8076_all_dim0
 ```
 
-Then press the real N64 reset button once and inspect GV-USB2 output. This is preferred over the HVI-only dim0 debug ROM because the baseline result above showed video survives the low-cave trampoline, but SC64 ISV marker capture still does not work reliably on hardware.
+After a real reset, the ROM launched out of the SC64 menu but remained pure black through 60 seconds. Captures:
 
-Do not use the full `single8076_all_dims` visual ROM first; it stayed black in Gopher64 visual capture. The current candidate is `single8076_all_dim0`, which patches only `0x4F354` to `640x480`.
+- `diagnostics/captures/dim0_after_reset_00_20260509.png`
+- `diagnostics/captures/dim0_after_reset_03_20260509.png`
+- `diagnostics/captures/dim0_after_reset_08_20260509.png`
+- `diagnostics/captures/dim0_after_reset_15_20260509.png`
+- `diagnostics/captures/dim0_after_reset_30_20260509.png`
+- `diagnostics/captures/dim0_after_reset_60_20260509.png`
+
+SC64 state was reset over USB afterward to `Bootloader -> Menu from SD card`, but ROM write remains disabled until the N64 is reset or power-cycled back to the menu.
+
+Conclusion: even the safer one-word direct-dim candidate fails on real hardware. The next offline branch should stop assuming the direct gameplay dimension table can be patched first. Prefer isolating the render-dimension word from the framebuffer/VI-side patches, or test visual controls that keep direct dimensions stock while changing only one VI/register family.
+
+## Next Step
+
+After the N64 is physically reset/power-cycled or reset back to the SC64 menu and ROM writes are enabled again, do not retry `single8076_all_dim0` first. It black-screened on hardware.
+
+The next useful work is offline: isolate whether the hardware failure comes from the direct dimension word itself, the single-buffer `0x8076A000` layout, or its interaction with the full H VI-register family. A good next build pair would keep the direct dimension table stock and vary only H subfamilies, or patch `0x4F354` on top of a much smaller known-rendering base.

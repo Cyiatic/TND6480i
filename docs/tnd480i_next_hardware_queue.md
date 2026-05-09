@@ -18,6 +18,11 @@ Date: 2026-05-08
   - The SC64 ISV listener still started/stopped immediately, and dumping `0x03FF0000` showed no `TND:*` marker.
   - Treat the low-cave trampoline mechanics as visually validated on baseline, but do not trust SC64 ISV marker capture yet.
   - SC64 boot configuration was reset over USB to `Bootloader -> Menu from SD card`; a real reset/power-cycle is still needed before another upload because ROM write remains disabled while the ROM is running.
+- 2026-05-09 dim0 visual hardware result:
+  - From a confirmed SC64 menu, `TND64_480i_single8076_all_dim0_core_no_menu.z64` was uploaded and launched after a real reset.
+  - It stayed pure black through 60 seconds on GV-USB2.
+  - SC64 boot configuration was reset over USB afterward, but a real reset/power-cycle is still needed before another upload because ROM write remains disabled.
+  - Do not retry `single8076_all_dim0` first. Continue offline and isolate whether the direct dimension word, the single-buffer layout, or the full H VI-register family is the hardware failure point.
 - 2026-05-09 offline decomp follow-up:
   - The user-tested no-dims single-all visual candidate did not patch direct gameplay dimension words at `0x4F354` and `0x4F35C`.
   - Those words were still `320x240` and `440x330`, which matches the reported aliased Bond-hand symptom.
@@ -166,7 +171,7 @@ Do not use the old entry-debug ROMs first. Entry logging black-screened the base
 
 ## Most Meaningful Visual Candidate
 
-Use this only after the baseline/control path has a clear result, or if the user explicitly chooses one visual test over more debug validation. It directly addresses the observed "boots but Bond's hand is still aliased" symptom from the old no-dims single-all ROM without applying the second direct dimension word that black-screens in Gopher64.
+This was the most meaningful visual candidate before hardware testing because it directly addressed the observed "boots but Bond's hand is still aliased" symptom without applying the second direct dimension word that black-screens in Gopher64.
 
 `TND64_480i_single8076_all_dim0_core_no_menu.z64`
 
@@ -175,7 +180,7 @@ Use this only after the baseline/control path has a clear result, or if the user
 - N64 CRC: `CE5E1EF0 26DDA6CD`
 - Difference from `TND64_480i_single8076_all_core_no_menu.z64`: only the first direct dimension word at `0x4F354` is now `0x028001E0` (`640x480`); `0x4F35C` remains stock `0x01B8014A` (`440x330`).
 - Emulator status: Gopher64 80 second input-driven visual capture rendered, with window mean luma `122.22`; ares 30 second process smoke survived. The sibling `single8076_all_dim1` and full `single8076_all_dims` builds stayed black in visual capture.
-- Hardware status: not uploaded.
+- Hardware status: black screen through 60 seconds on real N64. Do not retry first.
 
 ## Single-High Diagnostic Fallbacks
 

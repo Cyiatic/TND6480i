@@ -1,0 +1,28 @@
+{
+  "session": "20260509_dim0_visual",
+  "uploaded_rom": "artifacts/generated/TND64_480i_single8076_all_dim0_core_no_menu.z64",
+  "uploaded_md5": "ad441669291605a3fd551b51c68bb195",
+  "uploaded_n64_crc": "CE5E1EF0 26DDA6CD",
+  "profile": "single8076_all_dim0",
+  "pre_upload_state": {
+    "capture": "diagnostics/captures/before_dim0_upload_after_powercycle_20260509.png",
+    "sc64_boot_mode": "Bootloader -> Menu from SD card",
+    "rom_write": "Enabled"
+  },
+  "post_reset_result": {
+    "video": "pure black through 60 seconds",
+    "captures": [
+      "diagnostics/captures/dim0_after_reset_00_20260509.png",
+      "diagnostics/captures/dim0_after_reset_03_20260509.png",
+      "diagnostics/captures/dim0_after_reset_08_20260509.png",
+      "diagnostics/captures/dim0_after_reset_15_20260509.png",
+      "diagnostics/captures/dim0_after_reset_30_20260509.png",
+      "diagnostics/captures/dim0_after_reset_60_20260509.png"
+    ]
+  },
+  "post_test_sc64_reset": {
+    "sc64_boot_mode": "Bootloader -> Menu from SD card",
+    "rom_write": "Disabled until the N64 is reset or power-cycled back to the menu"
+  },
+  "conclusion": "The safer one-word direct-dimension candidate fails on real hardware. Do not retry it first; continue offline isolation."
+}
