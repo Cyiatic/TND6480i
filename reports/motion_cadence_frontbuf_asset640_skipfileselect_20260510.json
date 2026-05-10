@@ -1,0 +1,92 @@
+[
+  {
+    "video": "diagnostics\\captures\\videos\\frontbuf_asset640_skipfileselect_offupload_poweron_startup_20260510.mkv",
+    "frames": 359,
+    "frame_diffs": 358,
+    "mean_diff": 1.0563,
+    "median_diff": 0.7893,
+    "p90_diff": 2.4119,
+    "near_duplicate_ratio": 0.5056,
+    "active_ratio": 0.2765,
+    "estimated_updates_per_second": 8.288,
+    "label": "frontbuf",
+    "start": 30.0,
+    "duration": 12.0,
+    "scale": [
+      180,
+      120
+    ]
+  },
+  {
+    "video": "diagnostics\\captures\\videos\\gunbarrel_asset640_skipfileselect_offupload_poweron_startup_20260510.mkv",
+    "frames": 359,
+    "frame_diffs": 358,
+    "mean_diff": 1.1639,
+    "median_diff": 0.8745,
+    "p90_diff": 2.3964,
+    "near_duplicate_ratio": 0.419,
+    "active_ratio": 0.2709,
+    "estimated_updates_per_second": 8.12,
+    "label": "assetskip",
+    "start": 30.0,
+    "duration": 12.0,
+    "scale": [
+      180,
+      120
+    ]
+  },
+  {
+    "video": "diagnostics\\captures\\videos\\frontlayout_gunbarrel_asset640_skipfileselect_offupload_poweron_startup_20260510.mkv",
+    "frames": 359,
+    "frame_diffs": 358,
+    "mean_diff": 1.1641,
+    "median_diff": 0.8738,
+    "p90_diff": 2.4053,
+    "near_duplicate_ratio": 0.419,
+    "active_ratio": 0.2709,
+    "estimated_updates_per_second": 8.12,
+    "label": "frontlayout",
+    "start": 30.0,
+    "duration": 12.0,
+    "scale": [
+      180,
+      120
+    ]
+  },
+  {
+    "video": "diagnostics\\captures\\videos\\stock_tnd64_expanded_offupload_poweron_startup_20260510.mkv",
+    "frames": 359,
+    "frame_diffs": 358,
+    "mean_diff": 1.8948,
+    "median_diff": 1.368,
+    "p90_diff": 4.4079,
+    "near_duplicate_ratio": 0.3408,
+    "active_ratio": 0.3603,
+    "estimated_updates_per_second": 10.799,
+    "label": "stock_tnd",
+    "start": 30.0,
+    "duration": 12.0,
+    "scale": [
+      180,
+      120
+    ]
+  },
+  {
+    "video": "diagnostics\\captures\\videos\\ge480i_reference_startup_controller_svideo_20260510.mkv",
+    "frames": 509,
+    "frame_diffs": 508,
+    "mean_diff": 1.4642,
+    "median_diff": 0.8435,
+    "p90_diff": 4.8128,
+    "near_duplicate_ratio": 0.4311,
+    "active_ratio": 0.2717,
+    "estimated_updates_per_second": 8.141,
+    "label": "ge480i",
+    "start": 19.0,
+    "duration": 17.0,
+    "scale": [
+      180,
+      120
+    ]
+  }
+]

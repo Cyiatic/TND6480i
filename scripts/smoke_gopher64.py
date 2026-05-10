@@ -24,12 +24,26 @@ user32.IsWindowVisible.argtypes = [wintypes.HWND]
 user32.GetWindowTextLengthW.argtypes = [wintypes.HWND]
 user32.GetWindowTextW.argtypes = [wintypes.HWND, wintypes.LPWSTR, ctypes.c_int]
 user32.SetForegroundWindow.argtypes = [wintypes.HWND]
+user32.ShowWindow.argtypes = [wintypes.HWND, ctypes.c_int]
+user32.MoveWindow.argtypes = [wintypes.HWND, ctypes.c_int, ctypes.c_int, ctypes.c_int, ctypes.c_int, wintypes.BOOL]
+user32.SetWindowPos.argtypes = [
+    wintypes.HWND,
+    wintypes.HWND,
+    ctypes.c_int,
+    ctypes.c_int,
+    ctypes.c_int,
+    ctypes.c_int,
+    ctypes.c_uint,
+]
 user32.keybd_event.argtypes = [ctypes.c_ubyte, ctypes.c_ubyte, wintypes.DWORD, ctypes.POINTER(ctypes.c_ulong)]
 user32.GetWindowRect.argtypes = [wintypes.HWND, ctypes.POINTER(wintypes.RECT)]
 
 VK_RETURN = 0x0D
 VK_LSHIFT = 0xA0
 KEYEVENTF_KEYUP = 0x0002
+SW_RESTORE = 9
+HWND_TOPMOST = wintypes.HWND(-1)
+SWP_SHOWWINDOW = 0x0040
 
 
 def window_title(hwnd):
@@ -60,6 +74,14 @@ def tap_key(vk):
     user32.keybd_event(vk, 0, 0, None)
     time.sleep(0.035)
     user32.keybd_event(vk, 0, KEYEVENTF_KEYUP, None)
+
+
+def foreground_for_capture(hwnd):
+    hwnd = wintypes.HWND(hwnd)
+    user32.ShowWindow(hwnd, SW_RESTORE)
+    user32.SetWindowPos(hwnd, HWND_TOPMOST, 96, 96, 656, 519, SWP_SHOWWINDOW)
+    user32.SetForegroundWindow(hwnd)
+    time.sleep(0.5)
 
 
 def capture_desktop(ffmpeg, out_png):
@@ -156,7 +178,9 @@ def run_one(args, rom):
                 windows = windows_for_pid(proc.pid)
                 if windows and main_window is None:
                     main_window = {"hwnd": int(windows[0][0]), "title": windows[0][1]}
-                if args.input and main_window is not None and time.monotonic() - last_tap >= args.tap_interval:
+                elapsed_now = time.monotonic() - start
+                input_allowed = args.input and (args.input_until <= 0 or elapsed_now <= args.input_until)
+                if input_allowed and main_window is not None and time.monotonic() - last_tap >= args.tap_interval:
                     user32.SetForegroundWindow(wintypes.HWND(main_window["hwnd"]))
                     tap_key(VK_RETURN)
                     tap_key(VK_LSHIFT)
@@ -170,6 +194,8 @@ def run_one(args, rom):
             exited_before_timeout = proc.poll() is not None
             exit_code_before_timeout = proc.poll()
             if not exited_before_timeout and args.ffmpeg and args.capture_dir:
+                if main_window is not None:
+                    foreground_for_capture(main_window["hwnd"])
                 capture = capture_desktop(args.ffmpeg, args.capture_dir / f"{Path(rom).stem}.png")
                 if main_window is not None:
                     rect = window_rect(main_window["hwnd"])
@@ -212,6 +238,7 @@ def main():
     parser.add_argument("--report", required=True, type=Path)
     parser.add_argument("--seconds", type=float, default=25.0)
     parser.add_argument("--input", action="store_true")
+    parser.add_argument("--input-until", type=float, default=0.0, help="Stop automated Start/A taps after this many seconds; 0 means tap for the full run.")
     parser.add_argument("--tap-interval", type=float, default=0.6)
     parser.add_argument("--ffmpeg", type=Path, default=None)
     parser.add_argument("--capture-dir", type=Path, default=None)
