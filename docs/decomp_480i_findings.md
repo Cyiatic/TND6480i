@@ -56,7 +56,7 @@ The first direct dimension word looked safer in emulator at this stage, but hard
 
 Hardware follow-up changed the conclusion again: the direct dimension words are necessary to solve the aliasing symptom eventually, but they are unsafe to patch first, and the combined F/G/H VI-side word family is also not real-hardware safe as a group. `FGH only` rendered in Gopher64, then black-screened on real N64 through 60 seconds. Split F/G/H into smaller probes before trying another 480i payload.
 
-The smaller `F only`, `G only`, `FG only`, `H only`, `H origin only`, `H width only`, and `H scale only` probes all rendered in Gopher64 80 second visual/input smokes. Hardware then black-screened `H only` through 60 seconds, so the culprit is inside the H VI-register family. `H origin only` is the next discriminator because it isolates the origin/control-flow bypass.
+The smaller `F only`, `G only`, `FG only`, `H only`, `H origin only`, `H width only`, and `H scale only` probes all rendered in Gopher64 80 second visual/input smokes. Hardware then black-screened `H only` through 60 seconds, so the culprit is inside the H VI-register family. `H origin only` produced unstable/noisy video on hardware, which makes the origin/control-flow bypass independently unsafe. The next checks are `H width only` and `H scale only`.
 
 Fallback double-buffer full-dims candidate:
 

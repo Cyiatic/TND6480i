@@ -322,6 +322,30 @@ SC64 state was reset over USB afterward to `Bootloader -> Menu from SD card`, bu
 
 Conclusion: the real-hardware failure is inside the H VI-register family. The next hardware discriminator is `H origin only`, followed by `H width only` and `H scale only` if needed.
 
+## H-Origin-Only Visual Hardware Result
+
+After a user-controlled Kasa power cycle restored the SC64 menu and `ROM write: Enabled`, the H origin/control-flow probe was uploaded:
+
+```text
+artifacts/generated/TND64_480i_horiginonly_core_no_menu.z64
+MD5: 9fb0525bd5584326adc29c516a749d20
+N64 CRC: DEB65C5A F35930B0
+Profile: h_origin_only
+```
+
+After the user pressed reset, the ROM launched out of the SC64 menu and produced unstable/noisy video through 60 seconds rather than pure black. Captures:
+
+- `diagnostics/captures/horigin_after_reset_00_20260509.png`
+- `diagnostics/captures/horigin_after_reset_03_20260509.png`
+- `diagnostics/captures/horigin_after_reset_08_20260509.png`
+- `diagnostics/captures/horigin_after_reset_15_20260509.png`
+- `diagnostics/captures/horigin_after_reset_30_20260509.png`
+- `diagnostics/captures/horigin_after_reset_60_20260509.png`
+
+SC64 state was reset over USB afterward to `Bootloader -> Menu from SD card`, but `ROM write` remains disabled until the N64 is physically reset or power-cycled back to the menu.
+
+Conclusion: the H origin/control-flow bypass is hardware-sensitive and can destabilize the video signal by itself. The next useful hardware checks are `H width only` and `H scale only` to confirm whether those H subfamilies are independently safe.
+
 ## Post-Dim0 Reset Check
 
 After the failed `single8076_all_dim0` hardware run, the user pressed reset again. GV-USB2 still captured pure black video, and `sc64deployer info` still reported `ROM write: Disabled` even though the SC64 boot mode had been reset over USB to `Bootloader -> Menu from SD card`.
@@ -337,4 +361,4 @@ Current hardware rule: no more uploads until a physical reset or power cycle vis
 
 After the N64 is physically reset/power-cycled or reset back to the SC64 menu and ROM writes are enabled again, do not retry `single8076_all_dim0` first. It black-screened on hardware.
 
-Do not upload another candidate until a physical reset or power cycle visibly restores the SC64 menu and `ROM write: Enabled`. The next useful hardware candidate is `TND64_480i_horiginonly_core_no_menu.z64`, because `H only` black-screened and the origin/control-flow subfamily is the most suspicious H subset.
+Do not upload another candidate until a physical reset or power cycle visibly restores the SC64 menu and `ROM write: Enabled`. The next useful hardware candidate is `TND64_480i_hwidthonly_core_no_menu.z64`, followed by `TND64_480i_hscaleonly_core_no_menu.z64`, to see whether the non-origin H subfamilies are hardware-safe.

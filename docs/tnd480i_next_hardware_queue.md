@@ -35,7 +35,8 @@ Date: 2026-05-08
   - Smaller `F only`, `G only`, `FG only`, `H only`, `H origin only`, `H width only`, and `H scale only` probes all rendered in Gopher64 80 second visual/input smokes.
   - Hardware black-screened `H only` through 60 seconds after a physical reset launched the queued ROM.
   - Kasa smart-plug power cycling is useful for recovery to the SC64 menu, but it did not launch a queued SC64 ROM by itself. A physical N64 reset was still needed after upload.
-  - Split H next. `H origin only` is now the most informative hardware candidate because it isolates the origin/control-flow subfamily.
+  - `H origin only` produced unstable/noisy video through 60 seconds on hardware, not a pure black screen. This makes the H origin/control-flow bypass independently hardware-sensitive.
+  - Test `H width only` next, then `H scale only`, to see whether the non-origin H subfamilies are hardware-safe.
 - 2026-05-08 SC64 session:
   - SC64 detected on `COM4`; firmware `v2.20.2`; SD initialized; ROM writes enabled.
   - GV-USB2 capture showed the SC64 menu clearly.
@@ -129,14 +130,14 @@ Do not retest these first:
 
 Most informative next hardware candidate:
 
-`TND64_480i_horiginonly_core_no_menu.z64`
+`TND64_480i_hwidthonly_core_no_menu.z64`
 
-- Profile: `h_origin_only`
-- MD5: `9fb0525bd5584326adc29c516a749d20`
-- N64 CRC: `DEB65C5A F35930B0`
-- Purpose: tests whether the H origin/control-flow bypass alone causes the H-only hardware black screen.
-- Emulator status: Gopher64 80 second visual/input smoke rendered, with window mean luma `120.63`.
-- Caution: if this black-screens, recover to the SC64 menu and test `H width only` / `H scale only` separately.
+- Profile: `h_width_only`
+- MD5: `144d76f41770e019dcef704d5eafab58`
+- N64 CRC: `BD7D1BA2 9DD20E83`
+- Purpose: tests whether the H width/vsync pair is hardware-safe without the origin/control-flow bypass.
+- Emulator status: Gopher64 80 second visual/input smoke rendered, with window mean luma `90.59`.
+- Caution: if this black-screens or corrupts video, recover to the SC64 menu before testing `H scale only`.
 
 Baseline controls already run:
 

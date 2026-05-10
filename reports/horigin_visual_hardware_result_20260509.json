@@ -1,0 +1,32 @@
+{
+  "date": "2026-05-09",
+  "rom": "artifacts/generated/TND64_480i_horiginonly_core_no_menu.z64",
+  "profile": "h_origin_only",
+  "md5": "9fb0525bd5584326adc29c516a749d20",
+  "n64_crc": "DEB65C5A F35930B0",
+  "pre_upload_state": {
+    "capture": "diagnostics/captures/after_user_kasa_recover_before_horigin_20260509.png",
+    "video": "SC64 menu visible",
+    "boot_mode": "Bootloader -> Menu from SD card",
+    "rom_write": "Enabled"
+  },
+  "upload_result": {
+    "boot_mode": "Bootloader -> ROM",
+    "rom_write": "Disabled"
+  },
+  "post_reset_captures": [
+    "diagnostics/captures/horigin_after_reset_00_20260509.png",
+    "diagnostics/captures/horigin_after_reset_03_20260509.png",
+    "diagnostics/captures/horigin_after_reset_08_20260509.png",
+    "diagnostics/captures/horigin_after_reset_15_20260509.png",
+    "diagnostics/captures/horigin_after_reset_30_20260509.png",
+    "diagnostics/captures/horigin_after_reset_60_20260509.png"
+  ],
+  "result": "unstable/noisy video through 60 seconds on real N64 after physical reset",
+  "post_test_state": {
+    "action": "sc64deployer reset",
+    "boot_mode": "Bootloader -> Menu from SD card",
+    "rom_write": "Disabled until the N64 is physically reset or power-cycled back to the menu"
+  },
+  "conclusion": "The H origin/control-flow bypass is hardware-sensitive and can destabilize the video signal by itself. Test H width-only and H scale-only next."
+}
