@@ -370,6 +370,28 @@ SC64 was reset over USB afterward, then the Kasa plug was power-cycled again. Re
 
 Conclusion: the H width/vsync pair is hardware-visible and does not black-screen by itself, but it is not a valid 480i fix. The next hardware discriminator is `H scale only`.
 
+## H-Scale-Only Visual Hardware Result
+
+From a confirmed SC64 menu with `ROM write: Enabled`, the H scale probe was uploaded:
+
+```text
+artifacts/generated/TND64_480i_hscaleonly_core_no_menu.z64
+MD5: 62c46d434dabe54c4db6fa60bda68c14
+N64 CRC: BE3F2BA6 76E136F3
+Profile: h_scale_only
+```
+
+A Kasa smart-plug power cycle launched the queued ROM. It stayed pure black through 60 seconds on GV-USB2. Captures:
+
+- `diagnostics/captures/hscale_after_kasa_powercycle_00_20260509_172934.png`
+- `diagnostics/captures/hscale_after_kasa_powercycle_plus10_20260509_172955.png`
+- `diagnostics/captures/hscale_after_kasa_powercycle_plus30_20260509_173015.png`
+- `diagnostics/captures/hscale_after_kasa_powercycle_plus60_20260509_173045.png`
+
+SC64 was reset over USB afterward, then the Kasa plug was power-cycled again. Recovery succeeded: `diagnostics/captures/after_hscale_recover_menu_20260509_173133.png` shows the SC64 menu, and `sc64deployer info` reports `Bootloader -> Menu from SD card` with `ROM write: Enabled`.
+
+Conclusion: all independent H subfamilies are now hardware-classified. `H origin only` destabilizes/noises video, `H width only` renders but corrupts video, and `H scale only` black-screens. Stop blind H-combination uploads and derive a semantic TND-specific VI patch instead of transplanting the GE H instruction words directly.
+
 ## Post-Dim0 Reset Check
 
 After the failed `single8076_all_dim0` hardware run, the user pressed reset again. GV-USB2 still captured pure black video, and `sc64deployer info` still reported `ROM write: Disabled` even though the SC64 boot mode had been reset over USB to `Bootloader -> Menu from SD card`.
@@ -385,4 +407,4 @@ Current hardware rule: no more uploads until a physical reset or power cycle vis
 
 After the N64 is physically reset/power-cycled or reset back to the SC64 menu and ROM writes are enabled again, do not retry `single8076_all_dim0` first. It black-screened on hardware.
 
-Current verified state after the H-width-only test is safe for another SC64 upload: the SC64 menu is visible and `ROM write: Enabled`. The next useful hardware candidate is `TND64_480i_hscaleonly_core_no_menu.z64`, to test the remaining non-origin H subfamily.
+Current verified state after the H-scale-only test is safe for another SC64 upload: the SC64 menu is visible and `ROM write: Enabled`. The next useful step is offline H-function analysis against GoldenEye 480i/decomp data, not another blind H-family hardware upload.

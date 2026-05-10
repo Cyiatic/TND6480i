@@ -37,8 +37,9 @@ Date: 2026-05-08
   - Kasa smart-plug power cycling is useful for recovery to the SC64 menu. A later clean Kasa cycle did launch a queued `Bootloader -> ROM` target, so earlier notes saying it did not launch may have been affected by Kasa UI/operator confusion.
   - `H origin only` produced unstable/noisy video through 60 seconds on hardware, not a pure black screen. This makes the H origin/control-flow bypass independently hardware-sensitive.
   - `H width only` launched from a clean Kasa power cycle and produced visible TND logo/rating/license/intro output through 60 seconds, but with severe lower-screen horizontal banding and bad vertical placement. It is not a valid 480i fix, but it is not a pure-black failure.
+  - `H scale only` launched from a clean Kasa power cycle and stayed pure black through 60 seconds.
   - The SC64 menu is currently visible again after `sc64deployer reset` plus Kasa power cycle, and SC64 reports `ROM write: Enabled`.
-  - Test `H scale only` next to finish the independent H subfamily checks.
+  - The independent H subfamily checks are complete: origin destabilizes/noises video, width/vsync renders with severe corruption, and scale black-screens. Stop blind H-combination uploads until the H function is re-derived semantically for TND.
 - 2026-05-08 SC64 session:
   - SC64 detected on `COM4`; firmware `v2.20.2`; SD initialized; ROM writes enabled.
   - GV-USB2 capture showed the SC64 menu clearly.
@@ -130,16 +131,14 @@ Do not retest these first:
 - `TND64_480i_fghonly_core_no_menu.z64` - black-screened on real hardware through 60 seconds.
 - `TND64_480i_dim0only_core_no_menu.z64` / `TND64_480i_dim1only_core_no_menu.z64` - both black-screened in Gopher64 visual capture.
 
-Most informative next hardware candidate:
+Most informative next step:
 
-`TND64_480i_hscaleonly_core_no_menu.z64`
+Offline H-function analysis and semantic patch derivation.
 
-- Profile: `h_scale_only`
-- MD5: `62c46d434dabe54c4db6fa60bda68c14`
-- N64 CRC: `BE3F2BA6 76E136F3`
-- Purpose: tests whether the H scale words are hardware-safe without the origin/control-flow bypass or width/vsync pair.
-- Emulator status: Gopher64 80 second visual/input smoke rendered, with window mean luma `120.48`.
-- Caution: if this black-screens or corrupts video, recover to the SC64 menu before testing combinations.
+- Do not upload another H-family combination just because it renders in Gopher64.
+- Compare the TND VI setup/control-flow around the H offsets with GoldenEye 480i and/or `n64decomp/007`.
+- Convert the GE 480i intent into TND-correct instructions/register lifetimes instead of transplanting GE instruction words directly.
+- Optional hardware sanity check after offline analysis: run `F only`, `G only`, or `FG only` to confirm the non-H side patches are not independently fatal, but these are not expected to prove 480i on their own.
 
 Baseline controls already run:
 

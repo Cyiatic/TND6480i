@@ -1,0 +1,33 @@
+{
+  "date": "2026-05-09",
+  "rom": "artifacts/generated/TND64_480i_hscaleonly_core_no_menu.z64",
+  "profile": "h_scale_only",
+  "md5": "62c46d434dabe54c4db6fa60bda68c14",
+  "n64_crc": "BE3F2BA6 76E136F3",
+  "pre_upload_state": {
+    "capture": "diagnostics/captures/after_hwidth_recover_menu_20260509_172700.png",
+    "video": "SC64 menu visible",
+    "boot_mode": "Bootloader -> Menu from SD card",
+    "rom_write": "Enabled"
+  },
+  "upload_result": {
+    "boot_mode": "Bootloader -> ROM",
+    "rom_write": "Disabled"
+  },
+  "launch_method": "Kasa smart-plug power cycle",
+  "post_power_cycle_captures": [
+    "diagnostics/captures/hscale_after_kasa_powercycle_00_20260509_172934.png",
+    "diagnostics/captures/hscale_after_kasa_powercycle_plus10_20260509_172955.png",
+    "diagnostics/captures/hscale_after_kasa_powercycle_plus30_20260509_173015.png",
+    "diagnostics/captures/hscale_after_kasa_powercycle_plus60_20260509_173045.png"
+  ],
+  "result": "pure black video through 60 seconds on real N64 after Kasa power cycle",
+  "post_test_state": {
+    "action": "sc64deployer reset, then Kasa smart-plug power cycle",
+    "capture": "diagnostics/captures/after_hscale_recover_menu_20260509_173133.png",
+    "video": "SC64 menu visible",
+    "boot_mode": "Bootloader -> Menu from SD card",
+    "rom_write": "Enabled"
+  },
+  "conclusion": "The H scale direct-word transplant is hardware-fatal by itself. With H origin unstable, H width visibly corrupted, and H scale black-screening, stop blind H-combination hardware uploads and derive a semantic TND-specific VI patch instead."
+}
