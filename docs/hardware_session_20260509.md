@@ -294,7 +294,33 @@ Report:
 
 - `reports/smoke/smoke_fgh_subfamily_capture_80s_report.json`
 
-Conclusion: Gopher64 still renders every smaller subfamily probe, so the next discriminator has to be hardware. `H only` is the most informative next one-shot because it answers whether the H VI-register family alone causes the F/G/H-only hardware black screen.
+Conclusion before the next hardware run: Gopher64 still rendered every smaller subfamily probe, so the next discriminator had to be hardware. `H only` was chosen because it answered whether the H VI-register family alone caused the F/G/H-only hardware black screen.
+
+## H-Only Visual Hardware Result
+
+After `H only` was queued from a confirmed SC64 menu, a Kasa smart-plug power cycle restored the menu but did not launch the queued ROM. A physical N64 reset was still needed to leave the SC64 menu and boot the queued upload.
+
+The queued ROM was:
+
+```text
+artifacts/generated/TND64_480i_honly_core_no_menu.z64
+MD5: 58a529bf4b71a8cbbfe4bae6bbd08b61
+N64 CRC: 45AFF449 F54CE932
+Profile: h_only
+```
+
+After the user pressed reset, the ROM launched out of the SC64 menu but stayed pure black through 60 seconds. Captures:
+
+- `diagnostics/captures/honly_after_reset_00_20260509.png`
+- `diagnostics/captures/honly_after_reset_03_20260509.png`
+- `diagnostics/captures/honly_after_reset_08_20260509.png`
+- `diagnostics/captures/honly_after_reset_15_20260509.png`
+- `diagnostics/captures/honly_after_reset_30_20260509.png`
+- `diagnostics/captures/honly_after_reset_60_20260509.png`
+
+SC64 state was reset over USB afterward to `Bootloader -> Menu from SD card`, but `ROM write` remains disabled until the N64 is physically reset or power-cycled back to the menu.
+
+Conclusion: the real-hardware failure is inside the H VI-register family. The next hardware discriminator is `H origin only`, followed by `H width only` and `H scale only` if needed.
 
 ## Post-Dim0 Reset Check
 
@@ -311,4 +337,4 @@ Current hardware rule: no more uploads until a physical reset or power cycle vis
 
 After the N64 is physically reset/power-cycled or reset back to the SC64 menu and ROM writes are enabled again, do not retry `single8076_all_dim0` first. It black-screened on hardware.
 
-Do not upload another candidate until a physical reset or power cycle visibly restores the SC64 menu and `ROM write: Enabled`. The next useful hardware candidate is `TND64_480i_honly_core_no_menu.z64`, because it isolates the full H VI-register family without F/G, direct dimensions, or framebuffer relocation.
+Do not upload another candidate until a physical reset or power cycle visibly restores the SC64 menu and `ROM write: Enabled`. The next useful hardware candidate is `TND64_480i_horiginonly_core_no_menu.z64`, because `H only` black-screened and the origin/control-flow subfamily is the most suspicious H subset.

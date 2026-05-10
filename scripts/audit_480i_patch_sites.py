@@ -318,7 +318,7 @@ def write_markdown(report):
         "- `FGH only` keeps framebuffer placement and direct dimensions stock while applying the GE 480i F/G/H VI-side word family. It rendered in Gopher64 visual capture, but later black-screened on real hardware, so the F/G/H family now needs smaller hardware probes before any 480i payload is retried."
     )
     lines.append(
-        "- The smaller F/G/H subfamily probes all render in Gopher64; `H only` is the next most informative hardware discriminator because it removes F/G, direct dimensions, and framebuffer relocation."
+        "- The smaller F/G/H subfamily probes all render in Gopher64, but `H only` later black-screened on real hardware. `H origin only` is the next discriminator because it isolates the origin/control-flow bypass inside the H family."
     )
     lines.append(
         "- `split8030 all + dims` is the double-buffer fallback that avoids both the earlier `0x80400000` real-hardware failure point and the known `0x8070xxxx` TND references while also applying the direct dimension words."

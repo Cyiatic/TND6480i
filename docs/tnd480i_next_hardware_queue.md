@@ -33,7 +33,9 @@ Date: 2026-05-08
   - The `FGH only` probe, which keeps stock direct dimensions and framebuffer placement while applying F/G/H VI-side words, rendered in Gopher64.
   - Hardware later black-screened `FGH only` through 60 seconds, so it is no longer a candidate. Split F/G/H into smaller probes before another hardware upload.
   - Smaller `F only`, `G only`, `FG only`, `H only`, `H origin only`, `H width only`, and `H scale only` probes all rendered in Gopher64 80 second visual/input smokes.
-  - `H only` is now the most informative next hardware candidate because it tests whether the H VI-register family alone causes the F/G/H-only hardware black screen.
+  - Hardware black-screened `H only` through 60 seconds after a physical reset launched the queued ROM.
+  - Kasa smart-plug power cycling is useful for recovery to the SC64 menu, but it did not launch a queued SC64 ROM by itself. A physical N64 reset was still needed after upload.
+  - Split H next. `H origin only` is now the most informative hardware candidate because it isolates the origin/control-flow subfamily.
 - 2026-05-08 SC64 session:
   - SC64 detected on `COM4`; firmware `v2.20.2`; SD initialized; ROM writes enabled.
   - GV-USB2 capture showed the SC64 menu clearly.
@@ -127,14 +129,14 @@ Do not retest these first:
 
 Most informative next hardware candidate:
 
-`TND64_480i_honly_core_no_menu.z64`
+`TND64_480i_horiginonly_core_no_menu.z64`
 
-- Profile: `h_only`
-- MD5: `58a529bf4b71a8cbbfe4bae6bbd08b61`
-- N64 CRC: `45AFF449 F54CE932`
-- Purpose: tests whether the H VI-register family alone causes the F/G/H-only hardware black screen.
-- Emulator status: Gopher64 80 second visual/input smoke rendered, with window mean luma `122.26`.
-- Caution: if this black-screens, stop and split H into origin / width-vsync / scale hardware probes after another physical power cycle.
+- Profile: `h_origin_only`
+- MD5: `9fb0525bd5584326adc29c516a749d20`
+- N64 CRC: `DEB65C5A F35930B0`
+- Purpose: tests whether the H origin/control-flow bypass alone causes the H-only hardware black screen.
+- Emulator status: Gopher64 80 second visual/input smoke rendered, with window mean luma `120.63`.
+- Caution: if this black-screens, recover to the SC64 menu and test `H width only` / `H scale only` separately.
 
 Baseline controls already run:
 

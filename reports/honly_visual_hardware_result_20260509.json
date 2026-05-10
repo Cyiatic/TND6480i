@@ -1,0 +1,33 @@
+{
+  "date": "2026-05-09",
+  "rom": "artifacts/generated/TND64_480i_honly_core_no_menu.z64",
+  "profile": "h_only",
+  "md5": "58a529bf4b71a8cbbfe4bae6bbd08b61",
+  "n64_crc": "45AFF449 F54CE932",
+  "pre_upload_state": {
+    "capture": "diagnostics/captures/after_clean_kasa_cycle_20260509.png",
+    "video": "SC64 menu visible",
+    "boot_mode": "Bootloader -> Menu from SD card",
+    "rom_write": "Enabled"
+  },
+  "upload_result": {
+    "boot_mode": "Bootloader -> ROM",
+    "rom_write": "Disabled"
+  },
+  "launch_note": "Kasa smart-plug power cycling recovered the SC64 menu but did not launch the queued ROM. A physical N64 reset was required to launch the queued upload.",
+  "post_reset_captures": [
+    "diagnostics/captures/honly_after_reset_00_20260509.png",
+    "diagnostics/captures/honly_after_reset_03_20260509.png",
+    "diagnostics/captures/honly_after_reset_08_20260509.png",
+    "diagnostics/captures/honly_after_reset_15_20260509.png",
+    "diagnostics/captures/honly_after_reset_30_20260509.png",
+    "diagnostics/captures/honly_after_reset_60_20260509.png"
+  ],
+  "result": "black screen through 60 seconds on real N64 after physical reset",
+  "post_test_state": {
+    "action": "sc64deployer reset",
+    "boot_mode": "Bootloader -> Menu from SD card",
+    "rom_write": "Disabled until the N64 is physically reset or power-cycled back to the menu"
+  },
+  "conclusion": "The real-hardware failure is inside the H VI-register family. Split H into origin/control-flow, width/vsync, and scale probes next."
+}
