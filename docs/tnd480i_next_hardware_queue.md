@@ -39,7 +39,7 @@ Date: 2026-05-08
   - `H width only` launched from a clean Kasa power cycle and produced visible TND logo/rating/license/intro output through 60 seconds, but with severe lower-screen horizontal banding and bad vertical placement. It is not a valid 480i fix, but it is not a pure-black failure.
   - `H scale only` launched from a clean Kasa power cycle and stayed pure black through 60 seconds.
   - The SC64 menu is currently visible again after `sc64deployer reset` plus Kasa power cycle, and SC64 reports `ROM write: Enabled`.
-  - The independent H subfamily checks are complete: origin destabilizes/noises video, width/vsync renders with severe corruption, and scale black-screens. Stop blind H-combination uploads until the H function is re-derived semantically for TND.
+  - The independent H subfamily checks are complete: origin destabilizes/noises video, width/vsync renders with severe corruption, and scale black-screens. Stop blind H-combination uploads until a coherent TND-specific VI/mode/framebuffer patch is derived.
 - 2026-05-08 SC64 session:
   - SC64 detected on `COM4`; firmware `v2.20.2`; SD initialized; ROM writes enabled.
   - GV-USB2 capture showed the SC64 menu clearly.
@@ -133,11 +133,11 @@ Do not retest these first:
 
 Most informative next step:
 
-Offline H-function analysis and semantic patch derivation.
+Offline H-function analysis and coherent VI/mode/framebuffer patch derivation.
 
 - Do not upload another H-family combination just because it renders in Gopher64.
-- Compare the TND VI setup/control-flow around the H offsets with GoldenEye 480i and/or `n64decomp/007`.
-- Convert the GE 480i intent into TND-correct instructions/register lifetimes instead of transplanting GE instruction words directly.
+- Compare TND's libultra `__osViSwapContext` and higher-level `fr.c`/`VideoSettings` flow against GoldenEye 480i and/or `n64decomp/007`.
+- The H-offset code itself is aligned with GE stock, so the next target is likely coherency between mode tables, framebuffer dimensions, direct gameplay dimensions, and the GE 480i libultra behavior.
 - Optional hardware sanity check after offline analysis: run `F only`, `G only`, or `FG only` to confirm the non-H side patches are not independently fatal, but these are not expected to prove 480i on their own.
 
 Baseline controls already run:

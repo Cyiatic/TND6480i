@@ -2,7 +2,7 @@
 
 Date: 2026-05-09
 
-Source context: local GoldenEye decomp checkout at `C:\Users\codex\Documents\n64\007-decomp`.
+Source context: local GoldenEye decomp checkout at `C:\Users\codex\Documents\Codex\2026-05-06\files-mentioned-by-the-user-tnd64\parallel_diag\goldeneye_decomp_007\007-master`.
 
 ## Why the No-Dims Candidate Was Suspicious
 
@@ -56,7 +56,22 @@ The first direct dimension word looked safer in emulator at this stage, but hard
 
 Hardware follow-up changed the conclusion again: the direct dimension words are necessary to solve the aliasing symptom eventually, but they are unsafe to patch first, and the combined F/G/H VI-side word family is also not real-hardware safe as a group. `FGH only` rendered in Gopher64, then black-screened on real N64 through 60 seconds. Split F/G/H into smaller probes before trying another 480i payload.
 
-The smaller `F only`, `G only`, `FG only`, `H only`, `H origin only`, `H width only`, and `H scale only` probes all rendered in Gopher64 80 second visual/input smokes. Hardware then black-screened `H only` through 60 seconds, so the culprit is inside the H VI-register family. `H origin only` produced unstable/noisy video on hardware, which makes the origin/control-flow bypass independently unsafe. The next checks are `H width only` and `H scale only`.
+The smaller `F only`, `G only`, `FG only`, `H only`, `H origin only`, `H width only`, and `H scale only` probes all rendered in Gopher64 80 second visual/input smokes. Hardware then black-screened `H only` through 60 seconds, so the culprit is inside the H VI-register family. `H origin only` produced unstable/noisy video on hardware, `H width only` produced visible but severely corrupted output, and `H scale only` stayed pure black through 60 seconds.
+
+## H Offset Mapping After Hardware Sub-Probes
+
+The H offsets map into libultra `__osViSwapContext`, not a TND-specific gameplay function. Disassembly showed that stock GoldenEye and the TND base ROM are byte-identical at the H offsets before patching, so the GE 480i words are not landing in the wrong function.
+
+The GE 480i changes at these offsets alter the low-level VI register handoff:
+
+| Offset | GE 480i intent observed in disassembly |
+|---:|---|
+| `0x19978` / `0x19980` / `0x19984` | bypass part of the stock origin/fade/repeat-line path |
+| `0x199B4` | double the VI width value before writing `VI_WIDTH_REG` |
+| `0x199D0` | keep the paired sync write using the still-live `A440` base register |
+| `0x19A24` / `0x19A60` / `0x19A64` | move the `y.scale` load earlier, write through the existing VI base, then halve the scale before writing `VI_Y_SCALE_REG` |
+
+The hardware results mean these changes are not safe as isolated knobs. The next candidate should be derived as a coherent VI/mode/framebuffer patch: mode table fields, framebuffer size/location, direct gameplay dimensions, and the libultra 480i behavior need to agree before another H-family hardware upload.
 
 Fallback double-buffer full-dims candidate:
 

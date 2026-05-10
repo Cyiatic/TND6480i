@@ -390,7 +390,7 @@ A Kasa smart-plug power cycle launched the queued ROM. It stayed pure black thro
 
 SC64 was reset over USB afterward, then the Kasa plug was power-cycled again. Recovery succeeded: `diagnostics/captures/after_hscale_recover_menu_20260509_173133.png` shows the SC64 menu, and `sc64deployer info` reports `Bootloader -> Menu from SD card` with `ROM write: Enabled`.
 
-Conclusion: all independent H subfamilies are now hardware-classified. `H origin only` destabilizes/noises video, `H width only` renders but corrupts video, and `H scale only` black-screens. Stop blind H-combination uploads and derive a semantic TND-specific VI patch instead of transplanting the GE H instruction words directly.
+Conclusion: all independent H subfamilies are now hardware-classified. `H origin only` destabilizes/noises video, `H width only` renders but corrupts video, and `H scale only` black-screens. Stop blind H-combination uploads and derive a coherent TND-specific VI/mode/framebuffer patch rather than testing isolated H-family direct-word combinations.
 
 ## Post-Dim0 Reset Check
 
