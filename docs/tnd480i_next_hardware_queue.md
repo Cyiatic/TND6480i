@@ -34,9 +34,11 @@ Date: 2026-05-08
   - Hardware later black-screened `FGH only` through 60 seconds, so it is no longer a candidate. Split F/G/H into smaller probes before another hardware upload.
   - Smaller `F only`, `G only`, `FG only`, `H only`, `H origin only`, `H width only`, and `H scale only` probes all rendered in Gopher64 80 second visual/input smokes.
   - Hardware black-screened `H only` through 60 seconds after a physical reset launched the queued ROM.
-  - Kasa smart-plug power cycling is useful for recovery to the SC64 menu, but it did not launch a queued SC64 ROM by itself. A physical N64 reset was still needed after upload.
+  - Kasa smart-plug power cycling is useful for recovery to the SC64 menu. A later clean Kasa cycle did launch a queued `Bootloader -> ROM` target, so earlier notes saying it did not launch may have been affected by Kasa UI/operator confusion.
   - `H origin only` produced unstable/noisy video through 60 seconds on hardware, not a pure black screen. This makes the H origin/control-flow bypass independently hardware-sensitive.
-  - Test `H width only` next, then `H scale only`, to see whether the non-origin H subfamilies are hardware-safe.
+  - `H width only` launched from a clean Kasa power cycle and produced visible TND logo/rating/license/intro output through 60 seconds, but with severe lower-screen horizontal banding and bad vertical placement. It is not a valid 480i fix, but it is not a pure-black failure.
+  - The SC64 menu is currently visible again after `sc64deployer reset` plus Kasa power cycle, and SC64 reports `ROM write: Enabled`.
+  - Test `H scale only` next to finish the independent H subfamily checks.
 - 2026-05-08 SC64 session:
   - SC64 detected on `COM4`; firmware `v2.20.2`; SD initialized; ROM writes enabled.
   - GV-USB2 capture showed the SC64 menu clearly.
@@ -130,14 +132,14 @@ Do not retest these first:
 
 Most informative next hardware candidate:
 
-`TND64_480i_hwidthonly_core_no_menu.z64`
+`TND64_480i_hscaleonly_core_no_menu.z64`
 
-- Profile: `h_width_only`
-- MD5: `144d76f41770e019dcef704d5eafab58`
-- N64 CRC: `BD7D1BA2 9DD20E83`
-- Purpose: tests whether the H width/vsync pair is hardware-safe without the origin/control-flow bypass.
-- Emulator status: Gopher64 80 second visual/input smoke rendered, with window mean luma `90.59`.
-- Caution: if this black-screens or corrupts video, recover to the SC64 menu before testing `H scale only`.
+- Profile: `h_scale_only`
+- MD5: `62c46d434dabe54c4db6fa60bda68c14`
+- N64 CRC: `BE3F2BA6 76E136F3`
+- Purpose: tests whether the H scale words are hardware-safe without the origin/control-flow bypass or width/vsync pair.
+- Emulator status: Gopher64 80 second visual/input smoke rendered, with window mean luma `120.48`.
+- Caution: if this black-screens or corrupts video, recover to the SC64 menu before testing combinations.
 
 Baseline controls already run:
 

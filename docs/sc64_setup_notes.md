@@ -36,6 +36,13 @@ Do not upload anything until the capture card visibly shows the SC64 menu or ano
 & 'C:\Users\codex\Documents\n64\sc64deployer.exe' info
 ```
 
+## Capture And Power Control Notes
+
+- Current DirectShow video device name for ffmpeg is `GV-USB2, Analog Capture`.
+- Kasa Smart Control plug label is `N64`.
+- To power-cycle from the app, click the center of the teal square above the `N64` label, then click the shaded `Off` or `On` button on the right. Avoid the `Refresh` button.
+- After `sc64deployer reset`, a Kasa off/on cycle has restored the SC64 menu and `ROM write: Enabled`.
+
 ## Upload Commands
 
 Current rule after the late 2026-05-08 SC64 session:

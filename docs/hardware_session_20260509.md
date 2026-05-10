@@ -346,6 +346,30 @@ SC64 state was reset over USB afterward to `Bootloader -> Menu from SD card`, bu
 
 Conclusion: the H origin/control-flow bypass is hardware-sensitive and can destabilize the video signal by itself. The next useful hardware checks are `H width only` and `H scale only` to confirm whether those H subfamilies are independently safe.
 
+## H-Width-Only Visual Hardware Result
+
+After `H width only` had already been uploaded and queued on SC64, a correctly controlled Kasa smart-plug power cycle launched the queued ROM:
+
+```text
+artifacts/generated/TND64_480i_hwidthonly_core_no_menu.z64
+MD5: 144d76f41770e019dcef704d5eafab58
+N64 CRC: BD7D1BA2 9DD20E83
+Profile: h_width_only
+```
+
+This is an important correction to the earlier Kasa/reset note: power cycling the console can launch a queued `Bootloader -> ROM` SC64 target when the plug is toggled cleanly. The earlier H-only result may have been affected by UI/operator confusion while learning the Kasa app.
+
+The ROM did not pure-black and did not immediately die. It produced visible TND logo/rating/license/intro output through 60 seconds, but the output was severely corrupted, with persistent lower-screen horizontal banding and bad vertical placement. Captures:
+
+- `diagnostics/captures/hwidth_after_kasa_powercycle_00_20260509_172414.png`
+- `diagnostics/captures/hwidth_after_kasa_powercycle_plus10_20260509_172440.png`
+- `diagnostics/captures/hwidth_after_kasa_powercycle_plus30_20260509_172500.png`
+- `diagnostics/captures/hwidth_after_kasa_powercycle_plus60_20260509_172530.png`
+
+SC64 was reset over USB afterward, then the Kasa plug was power-cycled again. Recovery succeeded: `diagnostics/captures/after_hwidth_recover_menu_20260509_172700.png` shows the SC64 menu, and `sc64deployer info` reports `Bootloader -> Menu from SD card` with `ROM write: Enabled`.
+
+Conclusion: the H width/vsync pair is hardware-visible and does not black-screen by itself, but it is not a valid 480i fix. The next hardware discriminator is `H scale only`.
+
 ## Post-Dim0 Reset Check
 
 After the failed `single8076_all_dim0` hardware run, the user pressed reset again. GV-USB2 still captured pure black video, and `sc64deployer info` still reported `ROM write: Disabled` even though the SC64 boot mode had been reset over USB to `Bootloader -> Menu from SD card`.
@@ -361,4 +385,4 @@ Current hardware rule: no more uploads until a physical reset or power cycle vis
 
 After the N64 is physically reset/power-cycled or reset back to the SC64 menu and ROM writes are enabled again, do not retry `single8076_all_dim0` first. It black-screened on hardware.
 
-Do not upload another candidate until a physical reset or power cycle visibly restores the SC64 menu and `ROM write: Enabled`. The next useful hardware candidate is `TND64_480i_hwidthonly_core_no_menu.z64`, followed by `TND64_480i_hscaleonly_core_no_menu.z64`, to see whether the non-origin H subfamilies are hardware-safe.
+Current verified state after the H-width-only test is safe for another SC64 upload: the SC64 menu is visible and `ROM write: Enabled`. The next useful hardware candidate is `TND64_480i_hscaleonly_core_no_menu.z64`, to test the remaining non-origin H subfamily.

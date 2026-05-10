@@ -1,0 +1,32 @@
+{
+  "date": "2026-05-09",
+  "rom": "artifacts/generated/TND64_480i_hwidthonly_core_no_menu.z64",
+  "profile": "h_width_only",
+  "md5": "144d76f41770e019dcef704d5eafab58",
+  "n64_crc": "BD7D1BA2 9DD20E83",
+  "launch_method": "Kasa smart-plug power cycle after the ROM had already been queued on SC64",
+  "pre_launch_state": {
+    "boot_mode": "Bootloader -> ROM",
+    "rom_write": "Disabled"
+  },
+  "post_launch_sc64_state": {
+    "boot_mode": "Bootloader -> ROM",
+    "rom_write": "Disabled",
+    "is_viewer_64": "Not listening"
+  },
+  "post_power_cycle_captures": [
+    "diagnostics/captures/hwidth_after_kasa_powercycle_00_20260509_172414.png",
+    "diagnostics/captures/hwidth_after_kasa_powercycle_plus10_20260509_172440.png",
+    "diagnostics/captures/hwidth_after_kasa_powercycle_plus30_20260509_172500.png",
+    "diagnostics/captures/hwidth_after_kasa_powercycle_plus60_20260509_172530.png"
+  ],
+  "result": "visible but severely corrupted video through 60 seconds on real N64 after Kasa power cycle; TND logo/rating/license/intro model were visible, but the output had persistent lower-screen horizontal banding and bad vertical placement",
+  "post_test_state": {
+    "action": "sc64deployer reset, then Kasa smart-plug power cycle",
+    "capture": "diagnostics/captures/after_hwidth_recover_menu_20260509_172700.png",
+    "video": "SC64 menu visible",
+    "boot_mode": "Bootloader -> Menu from SD card",
+    "rom_write": "Enabled"
+  },
+  "conclusion": "The H width/vsync pair is hardware-visible and does not black-screen by itself, but it is not a valid 480i fix. Test H scale-only next, then compare combinations only after scale has a hardware result."
+}
