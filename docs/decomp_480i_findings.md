@@ -82,4 +82,15 @@ MD5: cce443d766bd681a511f7d18bb95b657
 N64 CRC: 278D2E7E C311ADE7
 ```
 
-The full-dims candidates survived process/input smokes but should be treated as suspicious because visual capture can still be black. The direct-dimension branch needs more decomp work before another hardware attempt.
+The full-dims candidates survived process/input smokes but should be treated as suspicious because visual capture can still be black.
+
+## Split8030 Dim0 Resolution
+
+The successful branch keeps the coherent VI/framebuffer package but narrows the direct dimension patch to the first word:
+
+| ROM | Profile | MD5 | N64 CRC | Result |
+|---|---|---|---|---|
+| `artifacts/generated/TND64_480i_split8030_8076_all_dim0_core_no_menu.z64` | `split8030_8076_all_dim0` | `4fd6d3b38b50c2ec0a1bdd110598516c` | `25FD2E62 AF703620` | Gopher64 rendered; real N64 booted through at least 180s of intro/logo output |
+| `artifacts/generated/TND64_480i_split8030_8076_all_dim1_core_no_menu.z64` | `split8030_8076_all_dim1` | `c636ff45bfa1147ee72c44f1cc685679` | `258D2E7E 8DDB244B` | Gopher64 black; not uploaded |
+
+Conclusion: in this split-buffer layout, `0x4F354 -> 0x028001E0` is compatible with real hardware when paired with the split `0x80300000`/`0x8076A000` framebuffer setup and the full F/G/H VI-side family. `0x4F35C -> 0x028001E0` remains unsafe and should stay stock for now.

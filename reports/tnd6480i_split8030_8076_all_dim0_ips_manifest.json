@@ -1,0 +1,1332 @@
+{
+  "format": "IPS",
+  "base_rom": "artifacts\\roms\\BASELINE_TND64_Expanded_direct_from_stock.z64",
+  "target_rom": "artifacts\\generated\\TND64_480i_split8030_8076_all_dim0_core_no_menu.z64",
+  "patch": "artifacts\\generated\\TND6480i_split8030_8076_all_dim0_from_baseline_tnd.ips",
+  "base_md5": "1ee22dd1d70443f5e4766d4238756949",
+  "target_md5": "4fd6d3b38b50c2ec0a1bdd110598516c",
+  "patch_md5": "d08906f5353b6b0dd2d7937f00c09e58",
+  "verified": true,
+  "base_size": 16777216,
+  "target_size": 16777216,
+  "changed_bytes": 66404,
+  "record_count": 329,
+  "changed_ranges": [
+    {
+      "offset": "0x10",
+      "length": 8
+    },
+    {
+      "offset": "0x3C8C",
+      "length": 5
+    },
+    {
+      "offset": "0x3C92",
+      "length": 2
+    },
+    {
+      "offset": "0x3C97",
+      "length": 1
+    },
+    {
+      "offset": "0x3D31",
+      "length": 1
+    },
+    {
+      "offset": "0x3D33",
+      "length": 18
+    },
+    {
+      "offset": "0x3D46",
+      "length": 12
+    },
+    {
+      "offset": "0x3D53",
+      "length": 6
+    },
+    {
+      "offset": "0x3D5A",
+      "length": 2
+    },
+    {
+      "offset": "0x3D60",
+      "length": 2
+    },
+    {
+      "offset": "0x3D63",
+      "length": 3
+    },
+    {
+      "offset": "0x3D67",
+      "length": 3
+    },
+    {
+      "offset": "0x3D6B",
+      "length": 1
+    },
+    {
+      "offset": "0x441F",
+      "length": 1
+    },
+    {
+      "offset": "0x46B5",
+      "length": 1
+    },
+    {
+      "offset": "0x46B7",
+      "length": 9
+    },
+    {
+      "offset": "0x46C1",
+      "length": 1
+    },
+    {
+      "offset": "0x46C3",
+      "length": 21
+    },
+    {
+      "offset": "0x46D9",
+      "length": 15
+    },
+    {
+      "offset": "0x46E9",
+      "length": 5
+    },
+    {
+      "offset": "0x46EF",
+      "length": 1
+    },
+    {
+      "offset": "0x6587",
+      "length": 2
+    },
+    {
+      "offset": "0x658A",
+      "length": 2
+    },
+    {
+      "offset": "0x658D",
+      "length": 6
+    },
+    {
+      "offset": "0x6594",
+      "length": 4
+    },
+    {
+      "offset": "0x6599",
+      "length": 3
+    },
+    {
+      "offset": "0x659D",
+      "length": 21
+    },
+    {
+      "offset": "0x65B3",
+      "length": 5
+    },
+    {
+      "offset": "0x104DE",
+      "length": 1
+    },
+    {
+      "offset": "0x19978",
+      "length": 4
+    },
+    {
+      "offset": "0x19980",
+      "length": 6
+    },
+    {
+      "offset": "0x19987",
+      "length": 1
+    },
+    {
+      "offset": "0x199B4",
+      "length": 3
+    },
+    {
+      "offset": "0x199D0",
+      "length": 2
+    },
+    {
+      "offset": "0x19A24",
+      "length": 4
+    },
+    {
+      "offset": "0x19A61",
+      "length": 1
+    },
+    {
+      "offset": "0x19A64",
+      "length": 4
+    },
+    {
+      "offset": "0x21992",
+      "length": 529
+    },
+    {
+      "offset": "0x21BA4",
+      "length": 175
+    },
+    {
+      "offset": "0x21C54",
+      "length": 13
+    },
+    {
+      "offset": "0x21C62",
+      "length": 108
+    },
+    {
+      "offset": "0x21CCF",
+      "length": 221
+    },
+    {
+      "offset": "0x21DAD",
+      "length": 23
+    },
+    {
+      "offset": "0x21DC5",
+      "length": 118
+    },
+    {
+      "offset": "0x21E3C",
+      "length": 590
+    },
+    {
+      "offset": "0x2208B",
+      "length": 84
+    },
+    {
+      "offset": "0x220E0",
+      "length": 175
+    },
+    {
+      "offset": "0x22190",
+      "length": 229
+    },
+    {
+      "offset": "0x22276",
+      "length": 893
+    },
+    {
+      "offset": "0x225F4",
+      "length": 258
+    },
+    {
+      "offset": "0x226F7",
+      "length": 19
+    },
+    {
+      "offset": "0x2270B",
+      "length": 245
+    },
+    {
+      "offset": "0x22801",
+      "length": 99
+    },
+    {
+      "offset": "0x22865",
+      "length": 249
+    },
+    {
+      "offset": "0x2295F",
+      "length": 1130
+    },
+    {
+      "offset": "0x22DCA",
+      "length": 113
+    },
+    {
+      "offset": "0x22E3C",
+      "length": 330
+    },
+    {
+      "offset": "0x22F87",
+      "length": 58
+    },
+    {
+      "offset": "0x22FC2",
+      "length": 199
+    },
+    {
+      "offset": "0x2308A",
+      "length": 146
+    },
+    {
+      "offset": "0x2311D",
+      "length": 78
+    },
+    {
+      "offset": "0x2316C",
+      "length": 700
+    },
+    {
+      "offset": "0x23429",
+      "length": 55
+    },
+    {
+      "offset": "0x23461",
+      "length": 269
+    },
+    {
+      "offset": "0x2356F",
+      "length": 21
+    },
+    {
+      "offset": "0x23585",
+      "length": 424
+    },
+    {
+      "offset": "0x2372E",
+      "length": 146
+    },
+    {
+      "offset": "0x237C1",
+      "length": 46
+    },
+    {
+      "offset": "0x237F0",
+      "length": 138
+    },
+    {
+      "offset": "0x2387B",
+      "length": 319
+    },
+    {
+      "offset": "0x239BB",
+      "length": 495
+    },
+    {
+      "offset": "0x23BAB",
+      "length": 41
+    },
+    {
+      "offset": "0x23BD5",
+      "length": 605
+    },
+    {
+      "offset": "0x23E33",
+      "length": 149
+    },
+    {
+      "offset": "0x23EC9",
+      "length": 82
+    },
+    {
+      "offset": "0x23F1C",
+      "length": 187
+    },
+    {
+      "offset": "0x23FD8",
+      "length": 77
+    },
+    {
+      "offset": "0x24026",
+      "length": 14
+    },
+    {
+      "offset": "0x24035",
+      "length": 102
+    },
+    {
+      "offset": "0x2409C",
+      "length": 447
+    },
+    {
+      "offset": "0x2425C",
+      "length": 64
+    },
+    {
+      "offset": "0x2429D",
+      "length": 421
+    },
+    {
+      "offset": "0x24443",
+      "length": 232
+    },
+    {
+      "offset": "0x2452C",
+      "length": 458
+    },
+    {
+      "offset": "0x246F7",
+      "length": 142
+    },
+    {
+      "offset": "0x24786",
+      "length": 513
+    },
+    {
+      "offset": "0x24988",
+      "length": 75
+    },
+    {
+      "offset": "0x249D4",
+      "length": 1013
+    },
+    {
+      "offset": "0x24DCA",
+      "length": 85
+    },
+    {
+      "offset": "0x24E20",
+      "length": 203
+    },
+    {
+      "offset": "0x24EEC",
+      "length": 417
+    },
+    {
+      "offset": "0x2508E",
+      "length": 490
+    },
+    {
+      "offset": "0x25279",
+      "length": 56
+    },
+    {
+      "offset": "0x252B2",
+      "length": 543
+    },
+    {
+      "offset": "0x254D2",
+      "length": 196
+    },
+    {
+      "offset": "0x25597",
+      "length": 72
+    },
+    {
+      "offset": "0x255E0",
+      "length": 13
+    },
+    {
+      "offset": "0x255EE",
+      "length": 223
+    },
+    {
+      "offset": "0x256CE",
+      "length": 115
+    },
+    {
+      "offset": "0x25742",
+      "length": 57
+    },
+    {
+      "offset": "0x2577C",
+      "length": 58
+    },
+    {
+      "offset": "0x257B7",
+      "length": 378
+    },
+    {
+      "offset": "0x25932",
+      "length": 46
+    },
+    {
+      "offset": "0x25961",
+      "length": 21
+    },
+    {
+      "offset": "0x25977",
+      "length": 1197
+    },
+    {
+      "offset": "0x25E25",
+      "length": 19
+    },
+    {
+      "offset": "0x25E39",
+      "length": 81
+    },
+    {
+      "offset": "0x25E8B",
+      "length": 212
+    },
+    {
+      "offset": "0x25F60",
+      "length": 253
+    },
+    {
+      "offset": "0x2605E",
+      "length": 119
+    },
+    {
+      "offset": "0x260D6",
+      "length": 320
+    },
+    {
+      "offset": "0x26217",
+      "length": 29
+    },
+    {
+      "offset": "0x26235",
+      "length": 77
+    },
+    {
+      "offset": "0x26283",
+      "length": 10
+    },
+    {
+      "offset": "0x2628E",
+      "length": 214
+    },
+    {
+      "offset": "0x26365",
+      "length": 18
+    },
+    {
+      "offset": "0x26378",
+      "length": 17
+    },
+    {
+      "offset": "0x2638A",
+      "length": 111
+    },
+    {
+      "offset": "0x263FA",
+      "length": 25
+    },
+    {
+      "offset": "0x26414",
+      "length": 4
+    },
+    {
+      "offset": "0x26419",
+      "length": 89
+    },
+    {
+      "offset": "0x26473",
+      "length": 6
+    },
+    {
+      "offset": "0x2647A",
+      "length": 361
+    },
+    {
+      "offset": "0x265E4",
+      "length": 124
+    },
+    {
+      "offset": "0x26661",
+      "length": 555
+    },
+    {
+      "offset": "0x2688D",
+      "length": 104
+    },
+    {
+      "offset": "0x268F6",
+      "length": 314
+    },
+    {
+      "offset": "0x26A31",
+      "length": 203
+    },
+    {
+      "offset": "0x26AFD",
+      "length": 30
+    },
+    {
+      "offset": "0x26B1C",
+      "length": 115
+    },
+    {
+      "offset": "0x26B90",
+      "length": 240
+    },
+    {
+      "offset": "0x26C81",
+      "length": 570
+    },
+    {
+      "offset": "0x26EBC",
+      "length": 206
+    },
+    {
+      "offset": "0x26F8B",
+      "length": 234
+    },
+    {
+      "offset": "0x27076",
+      "length": 145
+    },
+    {
+      "offset": "0x27108",
+      "length": 225
+    },
+    {
+      "offset": "0x271EA",
+      "length": 359
+    },
+    {
+      "offset": "0x27352",
+      "length": 145
+    },
+    {
+      "offset": "0x273E4",
+      "length": 391
+    },
+    {
+      "offset": "0x2756C",
+      "length": 300
+    },
+    {
+      "offset": "0x27699",
+      "length": 798
+    },
+    {
+      "offset": "0x279B8",
+      "length": 298
+    },
+    {
+      "offset": "0x27AE3",
+      "length": 14
+    },
+    {
+      "offset": "0x27AF2",
+      "length": 88
+    },
+    {
+      "offset": "0x27B4B",
+      "length": 550
+    },
+    {
+      "offset": "0x27D72",
+      "length": 389
+    },
+    {
+      "offset": "0x27EF8",
+      "length": 239
+    },
+    {
+      "offset": "0x27FE8",
+      "length": 424
+    },
+    {
+      "offset": "0x28191",
+      "length": 226
+    },
+    {
+      "offset": "0x28274",
+      "length": 12
+    },
+    {
+      "offset": "0x28281",
+      "length": 12
+    },
+    {
+      "offset": "0x2828E",
+      "length": 151
+    },
+    {
+      "offset": "0x28326",
+      "length": 361
+    },
+    {
+      "offset": "0x28490",
+      "length": 178
+    },
+    {
+      "offset": "0x28543",
+      "length": 67
+    },
+    {
+      "offset": "0x28587",
+      "length": 61
+    },
+    {
+      "offset": "0x285C5",
+      "length": 281
+    },
+    {
+      "offset": "0x286DF",
+      "length": 216
+    },
+    {
+      "offset": "0x287B8",
+      "length": 30
+    },
+    {
+      "offset": "0x287D7",
+      "length": 69
+    },
+    {
+      "offset": "0x2881D",
+      "length": 357
+    },
+    {
+      "offset": "0x28983",
+      "length": 223
+    },
+    {
+      "offset": "0x28A63",
+      "length": 179
+    },
+    {
+      "offset": "0x28B17",
+      "length": 94
+    },
+    {
+      "offset": "0x28B76",
+      "length": 219
+    },
+    {
+      "offset": "0x28C52",
+      "length": 16
+    },
+    {
+      "offset": "0x28C63",
+      "length": 248
+    },
+    {
+      "offset": "0x28D5C",
+      "length": 277
+    },
+    {
+      "offset": "0x28E72",
+      "length": 300
+    },
+    {
+      "offset": "0x28F9F",
+      "length": 668
+    },
+    {
+      "offset": "0x2923C",
+      "length": 30
+    },
+    {
+      "offset": "0x2925B",
+      "length": 306
+    },
+    {
+      "offset": "0x2938E",
+      "length": 62
+    },
+    {
+      "offset": "0x293CD",
+      "length": 541
+    },
+    {
+      "offset": "0x295EB",
+      "length": 616
+    },
+    {
+      "offset": "0x29854",
+      "length": 431
+    },
+    {
+      "offset": "0x29A04",
+      "length": 107
+    },
+    {
+      "offset": "0x29A70",
+      "length": 558
+    },
+    {
+      "offset": "0x29C9F",
+      "length": 124
+    },
+    {
+      "offset": "0x29D1C",
+      "length": 140
+    },
+    {
+      "offset": "0x29DA9",
+      "length": 443
+    },
+    {
+      "offset": "0x29F65",
+      "length": 20
+    },
+    {
+      "offset": "0x29F7A",
+      "length": 51
+    },
+    {
+      "offset": "0x29FAE",
+      "length": 733
+    },
+    {
+      "offset": "0x2A28C",
+      "length": 20
+    },
+    {
+      "offset": "0x2A2A1",
+      "length": 376
+    },
+    {
+      "offset": "0x2A41A",
+      "length": 38
+    },
+    {
+      "offset": "0x2A441",
+      "length": 21
+    },
+    {
+      "offset": "0x2A457",
+      "length": 10
+    },
+    {
+      "offset": "0x2A462",
+      "length": 43
+    },
+    {
+      "offset": "0x2A48E",
+      "length": 96
+    },
+    {
+      "offset": "0x2A4EF",
+      "length": 641
+    },
+    {
+      "offset": "0x2A771",
+      "length": 194
+    },
+    {
+      "offset": "0x2A834",
+      "length": 35
+    },
+    {
+      "offset": "0x2A858",
+      "length": 84
+    },
+    {
+      "offset": "0x2A8AD",
+      "length": 184
+    },
+    {
+      "offset": "0x2A966",
+      "length": 14
+    },
+    {
+      "offset": "0x2A975",
+      "length": 355
+    },
+    {
+      "offset": "0x2AAD9",
+      "length": 150
+    },
+    {
+      "offset": "0x2AB70",
+      "length": 129
+    },
+    {
+      "offset": "0x2ABF2",
+      "length": 39
+    },
+    {
+      "offset": "0x2AC1A",
+      "length": 150
+    },
+    {
+      "offset": "0x2ACB1",
+      "length": 617
+    },
+    {
+      "offset": "0x2AF1B",
+      "length": 51
+    },
+    {
+      "offset": "0x2AF4F",
+      "length": 128
+    },
+    {
+      "offset": "0x2AFD0",
+      "length": 312
+    },
+    {
+      "offset": "0x2B109",
+      "length": 148
+    },
+    {
+      "offset": "0x2B19E",
+      "length": 233
+    },
+    {
+      "offset": "0x2B288",
+      "length": 116
+    },
+    {
+      "offset": "0x2B2FD",
+      "length": 25
+    },
+    {
+      "offset": "0x2B317",
+      "length": 473
+    },
+    {
+      "offset": "0x2B4F1",
+      "length": 68
+    },
+    {
+      "offset": "0x2B536",
+      "length": 132
+    },
+    {
+      "offset": "0x2B5BB",
+      "length": 40
+    },
+    {
+      "offset": "0x2B5E4",
+      "length": 39
+    },
+    {
+      "offset": "0x2B60C",
+      "length": 220
+    },
+    {
+      "offset": "0x2B6E9",
+      "length": 148
+    },
+    {
+      "offset": "0x2B77E",
+      "length": 31
+    },
+    {
+      "offset": "0x2B79E",
+      "length": 85
+    },
+    {
+      "offset": "0x2B7F4",
+      "length": 61
+    },
+    {
+      "offset": "0x2B832",
+      "length": 15
+    },
+    {
+      "offset": "0x2B842",
+      "length": 188
+    },
+    {
+      "offset": "0x2B8FF",
+      "length": 78
+    },
+    {
+      "offset": "0x2B94E",
+      "length": 195
+    },
+    {
+      "offset": "0x2BA12",
+      "length": 3
+    },
+    {
+      "offset": "0x2BA16",
+      "length": 237
+    },
+    {
+      "offset": "0x2BB04",
+      "length": 169
+    },
+    {
+      "offset": "0x2BBAE",
+      "length": 38
+    },
+    {
+      "offset": "0x2BBD5",
+      "length": 406
+    },
+    {
+      "offset": "0x2BD6C",
+      "length": 623
+    },
+    {
+      "offset": "0x2BFDC",
+      "length": 23
+    },
+    {
+      "offset": "0x2BFF4",
+      "length": 45
+    },
+    {
+      "offset": "0x2C022",
+      "length": 271
+    },
+    {
+      "offset": "0x2C132",
+      "length": 38
+    },
+    {
+      "offset": "0x2C159",
+      "length": 320
+    },
+    {
+      "offset": "0x2C29A",
+      "length": 126
+    },
+    {
+      "offset": "0x2C319",
+      "length": 650
+    },
+    {
+      "offset": "0x2C5A4",
+      "length": 241
+    },
+    {
+      "offset": "0x2C696",
+      "length": 393
+    },
+    {
+      "offset": "0x2C820",
+      "length": 305
+    },
+    {
+      "offset": "0x2C952",
+      "length": 10
+    },
+    {
+      "offset": "0x2C95D",
+      "length": 507
+    },
+    {
+      "offset": "0x2CB59",
+      "length": 164
+    },
+    {
+      "offset": "0x2CBFE",
+      "length": 82
+    },
+    {
+      "offset": "0x2CC51",
+      "length": 31
+    },
+    {
+      "offset": "0x2CC71",
+      "length": 143
+    },
+    {
+      "offset": "0x2CD01",
+      "length": 75
+    },
+    {
+      "offset": "0x2CD4D",
+      "length": 118
+    },
+    {
+      "offset": "0x2CDC4",
+      "length": 36
+    },
+    {
+      "offset": "0x2CDE9",
+      "length": 364
+    },
+    {
+      "offset": "0x2CF56",
+      "length": 364
+    },
+    {
+      "offset": "0x2D0C3",
+      "length": 435
+    },
+    {
+      "offset": "0x2D277",
+      "length": 404
+    },
+    {
+      "offset": "0x2D40C",
+      "length": 131
+    },
+    {
+      "offset": "0x2D490",
+      "length": 74
+    },
+    {
+      "offset": "0x2D4DB",
+      "length": 189
+    },
+    {
+      "offset": "0x2D599",
+      "length": 484
+    },
+    {
+      "offset": "0x2D77E",
+      "length": 215
+    },
+    {
+      "offset": "0x2D856",
+      "length": 374
+    },
+    {
+      "offset": "0x2D9CD",
+      "length": 201
+    },
+    {
+      "offset": "0x2DA97",
+      "length": 276
+    },
+    {
+      "offset": "0x2DBAC",
+      "length": 301
+    },
+    {
+      "offset": "0x2DCDA",
+      "length": 150
+    },
+    {
+      "offset": "0x2DD71",
+      "length": 41
+    },
+    {
+      "offset": "0x2DD9B",
+      "length": 1
+    },
+    {
+      "offset": "0x2DD9D",
+      "length": 30
+    },
+    {
+      "offset": "0x2DDBC",
+      "length": 304
+    },
+    {
+      "offset": "0x2DEED",
+      "length": 46
+    },
+    {
+      "offset": "0x2DF1C",
+      "length": 63
+    },
+    {
+      "offset": "0x2DF5C",
+      "length": 276
+    },
+    {
+      "offset": "0x2E071",
+      "length": 20
+    },
+    {
+      "offset": "0x2E086",
+      "length": 492
+    },
+    {
+      "offset": "0x2E273",
+      "length": 715
+    },
+    {
+      "offset": "0x2E53F",
+      "length": 12
+    },
+    {
+      "offset": "0x2E54C",
+      "length": 624
+    },
+    {
+      "offset": "0x2E7BD",
+      "length": 421
+    },
+    {
+      "offset": "0x2E963",
+      "length": 106
+    },
+    {
+      "offset": "0x2E9CE",
+      "length": 250
+    },
+    {
+      "offset": "0x2EAC9",
+      "length": 484
+    },
+    {
+      "offset": "0x2ECAE",
+      "length": 65
+    },
+    {
+      "offset": "0x2ECF0",
+      "length": 47
+    },
+    {
+      "offset": "0x2ED20",
+      "length": 459
+    },
+    {
+      "offset": "0x2EEEC",
+      "length": 781
+    },
+    {
+      "offset": "0x2F1FA",
+      "length": 208
+    },
+    {
+      "offset": "0x2F2CB",
+      "length": 87
+    },
+    {
+      "offset": "0x2F323",
+      "length": 200
+    },
+    {
+      "offset": "0x2F3EC",
+      "length": 1330
+    },
+    {
+      "offset": "0x2F91F",
+      "length": 33
+    },
+    {
+      "offset": "0x2F941",
+      "length": 151
+    },
+    {
+      "offset": "0x2F9D9",
+      "length": 261
+    },
+    {
+      "offset": "0x2FADF",
+      "length": 430
+    },
+    {
+      "offset": "0x2FC8E",
+      "length": 139
+    },
+    {
+      "offset": "0x2FD1A",
+      "length": 285
+    },
+    {
+      "offset": "0x2FE38",
+      "length": 223
+    },
+    {
+      "offset": "0x2FF18",
+      "length": 23
+    },
+    {
+      "offset": "0x2FF30",
+      "length": 245
+    },
+    {
+      "offset": "0x30026",
+      "length": 985
+    },
+    {
+      "offset": "0x30400",
+      "length": 682
+    },
+    {
+      "offset": "0x306AB",
+      "length": 86
+    },
+    {
+      "offset": "0x30702",
+      "length": 439
+    },
+    {
+      "offset": "0x308BA",
+      "length": 59
+    },
+    {
+      "offset": "0x308F6",
+      "length": 56
+    },
+    {
+      "offset": "0x3092F",
+      "length": 315
+    },
+    {
+      "offset": "0x30A6B",
+      "length": 649
+    },
+    {
+      "offset": "0x30CF5",
+      "length": 38
+    },
+    {
+      "offset": "0x30D1C",
+      "length": 801
+    },
+    {
+      "offset": "0x3103E",
+      "length": 128
+    },
+    {
+      "offset": "0x310BF",
+      "length": 143
+    },
+    {
+      "offset": "0x3114F",
+      "length": 141
+    },
+    {
+      "offset": "0x311DD",
+      "length": 291
+    },
+    {
+      "offset": "0x31301",
+      "length": 217
+    },
+    {
+      "offset": "0x313DB",
+      "length": 258
+    },
+    {
+      "offset": "0x314DE",
+      "length": 4
+    },
+    {
+      "offset": "0x314E3",
+      "length": 168
+    },
+    {
+      "offset": "0x3158C",
+      "length": 198
+    },
+    {
+      "offset": "0x31653",
+      "length": 22
+    },
+    {
+      "offset": "0x3166A",
+      "length": 77
+    },
+    {
+      "offset": "0x316B8",
+      "length": 435
+    },
+    {
+      "offset": "0x3186C",
+      "length": 1
+    },
+    {
+      "offset": "0x3186E",
+      "length": 12
+    },
+    {
+      "offset": "0x3187B",
+      "length": 96
+    },
+    {
+      "offset": "0x318DC",
+      "length": 4
+    },
+    {
+      "offset": "0x318E1",
+      "length": 4
+    },
+    {
+      "offset": "0x318E6",
+      "length": 9
+    },
+    {
+      "offset": "0x318F0",
+      "length": 10
+    },
+    {
+      "offset": "0x318FB",
+      "length": 1
+    },
+    {
+      "offset": "0x318FD",
+      "length": 123
+    },
+    {
+      "offset": "0x31979",
+      "length": 992
+    },
+    {
+      "offset": "0x4F354",
+      "length": 4
+    }
+  ]
+}

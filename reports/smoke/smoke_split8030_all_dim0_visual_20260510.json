@@ -1,0 +1,54 @@
+[
+  {
+    "rom": "artifacts\\generated\\TND64_480i_split8030_8076_all_dim0_core_no_menu.z64",
+    "elapsed": 60.11,
+    "main_window_seen": true,
+    "main_window": {
+      "hwnd": 2032636,
+      "title": "gopher64"
+    },
+    "key_taps": 168,
+    "exited_before_timeout": false,
+    "exit_code_before_timeout": null,
+    "stdout_path": "reports\\smoke\\TND64_480i_split8030_8076_all_dim0_core_no_menu.stdout.txt",
+    "stderr_path": "reports\\smoke\\TND64_480i_split8030_8076_all_dim0_core_no_menu.stderr.txt",
+    "stdout_bytes": 0,
+    "stderr_bytes": 3301,
+    "marker_counts": {},
+    "stderr_tail": [
+      "[WARN]: Stalled compile (graphics, d177283513a5a0f7): thread 0 - 23878.900 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, b178554ed4416e85): thread 0 - 10043.400 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (compute, 35f88fc5fb45ef46): thread 0 - 50901.400 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (compute, 5949a1b688b6ff72): thread 0 - 80330.600 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, e6b76ed8c8235cc1): thread 0 - 10749.500 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, 7d7854549a936cd2): thread 0 - 12617.700 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, d077283511f2a0f7): thread 0 - 23035.600 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, 7d7855549a936e85): thread 0 - 14048.400 us (mode: sync, success: yes)."
+    ],
+    "capture": {
+      "path": "diagnostics\\captures\\gopher64\\TND64_480i_split8030_8076_all_dim0_core_no_menu.png",
+      "returncode": 0,
+      "stderr_tail": [],
+      "window_rect": {
+        "left": 632,
+        "top": 269,
+        "right": 1288,
+        "bottom": 788,
+        "width": 656,
+        "height": 519
+      },
+      "window_stats": {
+        "crop_box": [
+          632,
+          269,
+          1288,
+          788
+        ],
+        "mean_luma": 158.54,
+        "stddev_luma": 72.08,
+        "nonblack_ratio": 0.9091,
+        "bright_ratio": 0.8226
+      }
+    }
+  }
+]

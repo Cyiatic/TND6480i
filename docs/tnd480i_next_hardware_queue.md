@@ -40,6 +40,14 @@ Date: 2026-05-08
   - `H scale only` launched from a clean Kasa power cycle and stayed pure black through 60 seconds.
   - The SC64 menu is currently visible again after `sc64deployer reset` plus Kasa power cycle, and SC64 reports `ROM write: Enabled`.
   - The independent H subfamily checks are complete: origin destabilizes/noises video, width/vsync renders with severe corruption, and scale black-screens. Stop blind H-combination uploads until a coherent TND-specific VI/mode/framebuffer patch is derived.
+- 2026-05-10 split8030 dim0 success:
+  - `TND64_480i_split8030_8076_all_dims_core_no_menu.z64` survived as a process but visually captured black in Gopher64, so it was rejected.
+  - `TND64_480i_split8030_8076_all_dim0_core_no_menu.z64` rendered a live level scene in Gopher64 and booted on real N64 with SC64 `upload --direct` plus a Kasa power cycle.
+  - Hardware output was visible over the GV-USB2 S-Video path through at least 180 seconds: Rareware logo, intro silhouettes/credits, and title branding all rendered.
+  - `TND64_480i_split8030_8076_all_dim1_core_no_menu.z64` stayed black in Gopher64 visual capture and was not uploaded.
+  - Current working candidate: `artifacts/generated/TND64_480i_split8030_8076_all_dim0_core_no_menu.z64`, MD5 `4fd6d3b38b50c2ec0a1bdd110598516c`, N64 CRC `25FD2E62 AF703620`.
+  - Verified IPS patch: `artifacts/generated/TND6480i_split8030_8076_all_dim0_from_baseline_tnd.ips`, MD5 `d08906f5353b6b0dd2d7937f00c09e58`.
+  - SC64 was restored afterward to `Bootloader -> Menu from SD card` with `ROM write: Enabled`.
 - 2026-05-08 SC64 session:
   - SC64 detected on `COM4`; firmware `v2.20.2`; SD initialized; ROM writes enabled.
   - GV-USB2 capture showed the SC64 menu clearly.

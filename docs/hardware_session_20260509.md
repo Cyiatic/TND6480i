@@ -408,3 +408,55 @@ Current hardware rule: no more uploads until a physical reset or power cycle vis
 After the N64 is physically reset/power-cycled or reset back to the SC64 menu and ROM writes are enabled again, do not retry `single8076_all_dim0` first. It black-screened on hardware.
 
 Current verified state after the H-scale-only test is safe for another SC64 upload: the SC64 menu is visible and `ROM write: Enabled`. The next useful step is offline H-function analysis against GoldenEye 480i/decomp data, not another blind H-family hardware upload.
+
+## Split8030 Dim0 Working Hardware Result
+
+After a fresh offline pass, the full two-word split candidate was rejected because a visual Gopher64 capture was black even though the emulator process survived. Two narrower split-buffer candidates were then built:
+
+| ROM | Profile | MD5 | N64 CRC | Result |
+|---|---|---|---|---|
+| `artifacts/generated/TND64_480i_split8030_8076_all_dim0_core_no_menu.z64` | `split8030_8076_all_dim0` | `4fd6d3b38b50c2ec0a1bdd110598516c` | `25FD2E62 AF703620` | Gopher64 rendered a live level scene, then real hardware booted and rendered intro/logo output |
+| `artifacts/generated/TND64_480i_split8030_8076_all_dim1_core_no_menu.z64` | `split8030_8076_all_dim1` | `c636ff45bfa1147ee72c44f1cc685679` | `258D2E7E 8DDB244B` | Gopher64 stayed black; not uploaded |
+
+The working candidate uses split framebuffers at `0x80300000` and `0x8076A000`, applies the coherent F/G/H VI-side word family, and patches only direct dimension word 0 at `0x4F354` to `0x028001E0`. It deliberately leaves direct dimension word 1 at `0x4F35C` unpatched.
+
+Gopher64 visual/input gate for `dim0`:
+
+- 60.11 seconds, 168 key taps, no early exit.
+- Capture `diagnostics/captures/gopher64/TND64_480i_split8030_8076_all_dim0_core_no_menu.png` had mean luma `158.54` and nonblack ratio `0.9091`.
+
+Gopher64 visual/input gate for `dim1`:
+
+- 60.08 seconds, 174 key taps, no early exit.
+- Capture `diagnostics/captures/gopher64/TND64_480i_split8030_8076_all_dim1_core_no_menu.png` had mean luma `5.4` and nonblack ratio `0.096`, so the candidate was rejected before hardware.
+
+Hardware launch required SC64 direct mode:
+
+```text
+sc64deployer upload --direct artifacts/generated/TND64_480i_split8030_8076_all_dim0_core_no_menu.z64
+```
+
+The normal `upload` path queued `Bootloader -> ROM`, but power cycling returned to the SC64 menu. `upload --reboot` also left the menu visible because the running menu did not respond to the AUX halt/reboot messages. Direct upload followed by a Kasa smart-plug power cycle launched the ROM.
+
+Real N64 captures came from the updated GV-USB2 S-Video-only path, split to the CRT:
+
+- `diagnostics/captures/dim0_direct_hw_wait0_20260510.png` - Rareware logo visible.
+- `diagnostics/captures/dim0_direct_hw_wait10_20260510.png` - Bond intro silhouette visible.
+- `diagnostics/captures/dim0_direct_hw_wait30_20260510.png` - intro/credits scene visible.
+- `diagnostics/captures/dim0_direct_hw_wait60_20260510.png` - title branding visible.
+- `diagnostics/captures/dim0_direct_hw_wait80_20260510.png` - intro credits still rendering.
+- `diagnostics/captures/dim0_direct_hw_wait120_20260510.png` - intro silhouette still rendering.
+- `diagnostics/captures/dim0_direct_hw_wait180_20260510.png` - logo material still rendering.
+
+SC64 was reset over USB afterward and a Kasa power cycle restored the safe state. `sc64deployer info` reported `Bootloader -> Menu from SD card` and `ROM write: Enabled`. A final ffmpeg recovery frame was not captured because LightCapture owned the GV-USB2 video pin, but SC64 USB state was clean.
+
+Patch artifact:
+
+```text
+artifacts/generated/TND6480i_split8030_8076_all_dim0_from_baseline_tnd.ips
+Patch MD5: d08906f5353b6b0dd2d7937f00c09e58
+Base MD5: 1ee22dd1d70443f5e4766d4238756949
+Target MD5: 4fd6d3b38b50c2ec0a1bdd110598516c
+```
+
+The IPS patch was verified in memory against the clean expanded TND baseline. The structured report is `reports/split8030_dim0_hardware_result_20260510.json`, and the patch manifest is `reports/tnd6480i_split8030_8076_all_dim0_ips_manifest.json`.

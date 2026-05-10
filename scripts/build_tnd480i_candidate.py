@@ -389,6 +389,8 @@ DIRECT_PATCH_PROFILES = {
     "split8030_8076_mem_fg_nodims": ["A_split_load_two_globals", "B_clear_split_8030_8076", "C_split_select_global", "D_fb_split_8030_8076", "F_vi_word", "G_mask_word"],
     "split8030_8076_mem_fg_h_width_scale_nodims": ["A_split_load_two_globals", "B_clear_split_8030_8076", "C_split_select_global", "D_fb_split_8030_8076", "F_vi_word", "G_mask_word", "H_width_scale"],
     "split8030_8076_all_nodims": ["A_split_load_two_globals", "B_clear_split_8030_8076", "C_split_select_global", "D_fb_split_8030_8076", "F_vi_word", "G_mask_word", "H_pi_dma"],
+    "split8030_8076_all_dim0": ["A_split_load_two_globals", "B_clear_split_8030_8076", "C_split_select_global", "D_fb_split_8030_8076", "E_direct_dim0", "F_vi_word", "G_mask_word", "H_pi_dma"],
+    "split8030_8076_all_dim1": ["A_split_load_two_globals", "B_clear_split_8030_8076", "C_split_select_global", "D_fb_split_8030_8076", "E_direct_dim1", "F_vi_word", "G_mask_word", "H_pi_dma"],
     "split8030_8076_all_dims": ["A_split_load_two_globals", "B_clear_split_8030_8076", "C_split_select_global", "D_fb_split_8030_8076", "E_direct_dims", "F_vi_word", "G_mask_word", "H_pi_dma"],
     "split8040_8076_mem_nodims": ["A_split_load_two_globals", "B_clear_split_8040_8076", "C_split_select_global", "D_fb_split_8040_8076"],
     "split8040_8076_mem_f_nodims": ["A_split_load_two_globals", "B_clear_split_8040_8076", "C_split_select_global", "D_fb_split_8040_8076", "F_vi_word"],

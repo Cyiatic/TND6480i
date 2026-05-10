@@ -1,0 +1,52 @@
+{
+  "candidate": "artifacts/generated/TND64_480i_split8030_8076_all_dim0_core_no_menu.z64",
+  "direct_profile": "split8030_8076_all_dim0",
+  "md5": "4fd6d3b38b50c2ec0a1bdd110598516c",
+  "n64_crc": "25FD2E62 AF703620",
+  "patch": "artifacts/generated/TND6480i_split8030_8076_all_dim0_from_baseline_tnd.ips",
+  "patch_md5": "d08906f5353b6b0dd2d7937f00c09e58",
+  "patch_base_md5": "1ee22dd1d70443f5e4766d4238756949",
+  "patch_verified": true,
+  "emulator_gate": {
+    "gopher64_dim0": {
+      "seconds": 60.11,
+      "key_taps": 168,
+      "exited_before_timeout": false,
+      "mean_luma": 158.54,
+      "nonblack_ratio": 0.9091,
+      "capture": "diagnostics/captures/gopher64/TND64_480i_split8030_8076_all_dim0_core_no_menu.png",
+      "report": "reports/smoke/smoke_split8030_all_dim0_visual_20260510.json"
+    },
+    "gopher64_dim1_rejected": {
+      "seconds": 60.08,
+      "key_taps": 174,
+      "exited_before_timeout": false,
+      "mean_luma": 5.4,
+      "nonblack_ratio": 0.096,
+      "capture": "diagnostics/captures/gopher64/TND64_480i_split8030_8076_all_dim1_core_no_menu.png",
+      "report": "reports/smoke/smoke_split8030_all_dim1_visual_20260510.json"
+    }
+  },
+  "hardware_gate": {
+    "cart": "SummerCart64 v2.20.2",
+    "upload_command": "sc64deployer upload --direct artifacts/generated/TND64_480i_split8030_8076_all_dim0_core_no_menu.z64",
+    "boot_method": "Kasa smart-plug power cycle after SC64 direct upload",
+    "capture_path": "GV-USB2 S-Video",
+    "result": "Booted and rendered visible TND intro/logo output on real N64 through at least 180 seconds.",
+    "captures": [
+      "diagnostics/captures/dim0_direct_hw_wait0_20260510.png",
+      "diagnostics/captures/dim0_direct_hw_wait10_20260510.png",
+      "diagnostics/captures/dim0_direct_hw_wait30_20260510.png",
+      "diagnostics/captures/dim0_direct_hw_wait60_20260510.png",
+      "diagnostics/captures/dim0_direct_hw_wait80_20260510.png",
+      "diagnostics/captures/dim0_direct_hw_wait120_20260510.png",
+      "diagnostics/captures/dim0_direct_hw_wait180_20260510.png"
+    ]
+  },
+  "recovery": {
+    "sc64_reset_command": "sc64deployer reset",
+    "final_sc64_boot_mode": "Bootloader -> Menu from SD card",
+    "final_rom_write": "Enabled",
+    "capture_note": "A final ffmpeg recovery frame was not captured because LightCapture owned the GV-USB2 video pin, but sc64deployer confirmed menu/write-enabled state."
+  }
+}

@@ -8,8 +8,10 @@ This repo tracks the reproducible patch/build scripts, notes, hardware queue, an
 
 - SC64 is working on `COM4` when connected.
 - The capture path can see the SC64 menu; see `diagnostics/captures/capture_sc64_menu_before_repo_migration_20260509.png`.
-- The most recent blind visual candidate, `TND64_480i_single8076_all_core_no_menu.z64`, booted far enough for a user test but did not visibly render at 480i. Decomp follow-up found it still left the direct gameplay dimension words at `320x240`/`440x330`.
-- Full `+dims` builds exist locally, but visual capture showed `single8076_all_dims` stays black in Gopher64. Follow-up one-word tests found `single8076_all_dim0` renders while `single8076_all_dim1` stays black, so the safer dim-aware visual candidate is now `artifacts/generated/TND64_480i_single8076_all_dim0_core_no_menu.z64` with MD5 `ad441669291605a3fd551b51c68bb195` and N64 CRC `CE5E1EF0 26DDA6CD`.
+- The current working candidate is `artifacts/generated/TND64_480i_split8030_8076_all_dim0_core_no_menu.z64` with MD5 `4fd6d3b38b50c2ec0a1bdd110598516c` and N64 CRC `25FD2E62 AF703620`. It uses split framebuffers at `0x80300000` and `0x8076A000`, applies the GE 480i VI-side word family, and patches only the first direct gameplay dimension word at `0x4F354`.
+- This candidate passed a 60 second Gopher64 visual/input smoke and booted on a real N64 via SC64 direct mode, producing visible TND intro/logo output through at least 180 seconds over the GV-USB2 S-Video capture path.
+- The rejected split `dim1` sibling, `artifacts/generated/TND64_480i_split8030_8076_all_dim1_core_no_menu.z64`, stayed black in Gopher64 visual capture. Do not patch the second direct dimension word at `0x4F35C` in this branch.
+- A verified IPS patch from the clean expanded TND baseline exists locally at `artifacts/generated/TND6480i_split8030_8076_all_dim0_from_baseline_tnd.ips` with MD5 `d08906f5353b6b0dd2d7937f00c09e58`.
 - Matching low-cave SC64 HVI-only debug builds now exist for the dim-aware candidates. The primary one is `artifacts/generated/TND64_480i_single8076_all_dim0_core_no_menu_sc64isv_hvionly_lowcave.z64` with MD5 `8e1c0d5b2b8b276af8558602d06a80d5` and N64 CRC `C6224ECF 7FEB4471`; it survived Gopher64 and printed repeated `TND:HVI1` markers.
 - The first SC64 debug candidate had a real-hardware runtime-address bug in its trampolines. Fixed debug builds now use the ROM load mapping `0x1000 -> 0x80000400`.
 - Corrected entry-time ISV logging still black-screened on known-good baseline TND, so entry hooks are no longer the next path.
@@ -50,9 +52,19 @@ $py = 'C:\Users\codex\.cache\codex-runtimes\codex-primary-runtime\dependencies\p
   --base-rom artifacts\roms\TND64_enh480i_core_no_menu_pigz.z64 `
   --ge480i-rom artifacts\roms\BASELINE_GE_480i_direct_from_stock.z64 `
   --variant direct_only `
-  --direct-profile single8076_all_nodims `
-  --out-rom artifacts\generated\TND64_480i_single8076_all_core_no_menu.z64 `
-  --report reports\tnd480i_single8076_all_core_no_menu_report.json
+  --direct-profile split8030_8076_all_dim0 `
+  --out-rom artifacts\generated\TND64_480i_split8030_8076_all_dim0_core_no_menu.z64 `
+  --report reports\tnd480i_split8030_8076_all_dim0_core_no_menu_report.json
+```
+
+Patch artifact from the clean expanded TND baseline:
+
+```powershell
+& $py scripts\make_ips_patch.py `
+  artifacts\roms\BASELINE_TND64_Expanded_direct_from_stock.z64 `
+  artifacts\generated\TND64_480i_split8030_8076_all_dim0_core_no_menu.z64 `
+  artifacts\generated\TND6480i_split8030_8076_all_dim0_from_baseline_tnd.ips `
+  --manifest reports\tnd6480i_split8030_8076_all_dim0_ips_manifest.json
 ```
 
 SC64 debug build:
@@ -67,4 +79,4 @@ SC64 debug build:
 
 ## Hardware Rule
 
-Only upload after GV-USB2 visibly shows the SC64 menu, EverDrive menu, or another known-good live video state. Prefer normal SC64 `upload` over `--direct` for the next attempt.
+Only upload after GV-USB2 visibly shows the SC64 menu, EverDrive menu, or another known-good live video state. For this confirmed candidate, SC64 `upload --direct` plus a Kasa power cycle was required to launch from the menu.

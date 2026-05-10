@@ -56,6 +56,8 @@ ROMS = {
     "FGH only": "TND64_480i_fghonly_core_no_menu.z64",
     "split8030 FG+width+scale": "TND64_480i_split8030_8076_mem_fg_h_width_scale_core_no_menu.z64",
     "split8030 all": "TND64_480i_split8030_8076_all_core_no_menu.z64",
+    "split8030 all dim0": "TND64_480i_split8030_8076_all_dim0_core_no_menu.z64",
+    "split8030 all dim1": "TND64_480i_split8030_8076_all_dim1_core_no_menu.z64",
     "split8030 all + dims": "TND64_480i_split8030_8076_all_dims_core_no_menu.z64",
 }
 
@@ -81,6 +83,8 @@ PROFILE_HINTS = {
     "FGH only": "fg_h_only",
     "split8030 FG+width+scale": "split8030_8076_mem_fg_h_width_scale_nodims",
     "split8030 all": "split8030_8076_all_nodims",
+    "split8030 all dim0": "split8030_8076_all_dim0",
+    "split8030 all dim1": "split8030_8076_all_dim1",
     "split8030 all + dims": "split8030_8076_all_dims",
 }
 
@@ -289,13 +293,15 @@ def write_markdown(report):
         ("H scale only", "H scale"),
         ("FGH only", "FGH only"),
         ("split8030 all", "Split8030 all"),
+        ("split8030 all dim0", "Split8030 all dim0"),
+        ("split8030 all dim1", "Split8030 all dim1"),
         ("split8030 all + dims", "Split8030 all + dims"),
     ]
     direct_columns = [col for col in direct_columns if col[0] in report["roms"]]
     lines = []
     lines.append("# TND64 480i Patch-Site Audit")
     lines.append("")
-    lines.append("Generated from local ROMs only. No hardware upload was performed.")
+    lines.append("Generated from local ROMs only. Hardware verdicts are summarized from the session docs.")
     lines.append("")
     lines.append("## Conclusions")
     lines.append("")
@@ -309,7 +315,7 @@ def write_markdown(report):
         "- `single all` and the new `single FG+origin*` builds add that origin branch family while keeping the safer `0x8076A000` single-buffer memory placement."
     )
     lines.append(
-        "- The direct gameplay dimension words at `0x4F354` and `0x4F35C` explain why the no-dims single-all hardware test could still show an aliased Bond hand, but the latest isolation results make those words dangerous to patch first."
+        "- The direct gameplay dimension words at `0x4F354` and `0x4F35C` explain why the no-dims single-all hardware test could still show an aliased Bond hand. In the split8030 branch, only the first word at `0x4F354` is currently safe."
     )
     lines.append(
         "- `dim0 only` and `dim1 only` both stayed black in Gopher64 visual capture, and the combined `single all dim0` build black-screened on real hardware. Treat direct dimension patches as a research branch, not the next hardware-first branch."
@@ -318,10 +324,10 @@ def write_markdown(report):
         "- `FGH only` keeps framebuffer placement and direct dimensions stock while applying the GE 480i F/G/H VI-side word family. It rendered in Gopher64 visual capture, but later black-screened on real hardware, so the F/G/H family now needs smaller hardware probes before any 480i payload is retried."
     )
     lines.append(
-        "- The smaller F/G/H subfamily probes all render in Gopher64, but `H only` later black-screened on real hardware and `H origin only` produced unstable/noisy hardware video. Test `H width only` and `H scale only` next to see whether the non-origin H subfamilies are independently safe."
+        "- The smaller F/G/H subfamily probes are hardware-classified: origin destabilizes/noises video, width/vsync renders with severe corruption, and scale black-screens when isolated. The successful branch applies the H family coherently with matching split framebuffers and the safe direct dimension word."
     )
     lines.append(
-        "- `split8030 all + dims` is the double-buffer fallback that avoids both the earlier `0x80400000` real-hardware failure point and the known `0x8070xxxx` TND references while also applying the direct dimension words."
+        "- `split8030 all dim0` is the current working candidate: it avoids the earlier `0x80400000` hardware failure point and the known `0x8070xxxx` TND references while applying only the first direct dimension word. `split8030 all dim1` and `split8030 all + dims` render black in Gopher64 visual capture."
     )
     lines.append("")
     lines.append("## ROM Inventory")
