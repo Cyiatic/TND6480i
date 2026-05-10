@@ -1,0 +1,262 @@
+[
+  {
+    "rom": "artifacts\\generated\\TND64_480i_frontbuf_gunbarrel_padorigin_skipfileselect_gameplayxy_tnddefaultwidthheight480i_virtualfb_reserve58000_core_no_menu.z64",
+    "elapsed": 44.07,
+    "main_window_seen": true,
+    "main_window": {
+      "hwnd": 4391098,
+      "title": "gopher64"
+    },
+    "key_taps": 0,
+    "exited_before_timeout": false,
+    "exit_code_before_timeout": null,
+    "stdout_path": "reports\\smoke\\TND64_480i_frontbuf_gunbarrel_padorigin_skipfileselect_gameplayxy_tnddefaultwidthheight480i_virtualfb_reserve58000_core_no_menu.stdout.txt",
+    "stderr_path": "reports\\smoke\\TND64_480i_frontbuf_gunbarrel_padorigin_skipfileselect_gameplayxy_tnddefaultwidthheight480i_virtualfb_reserve58000_core_no_menu.stderr.txt",
+    "stdout_bytes": 0,
+    "stderr_bytes": 2772,
+    "marker_counts": {},
+    "stderr_tail": [
+      "[WARN]: Stalled compile (compute, 1cbd9189b0a23679): thread 0 - 29306.300 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (compute, 7e74068a497f23c2): thread 0 - 995463.000 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (compute, bd9293d0d50b3e8b): thread 0 - 73615.200 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, e3b76ed8c30a5cc1): thread 0 - 18430.300 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, b178544ed4416cd2): thread 0 - 11138.700 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, d177283513a5a0f7): thread 0 - 23970.500 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, b178554ed4416e85): thread 0 - 10608.200 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (compute, 35f88fc5fb45ef46): thread 0 - 49621.500 us (mode: sync, success: yes)."
+    ],
+    "capture": {
+      "path": "diagnostics\\captures\\gopher64\\frontbuf_padorigin_stocksource_noinput44\\TND64_480i_frontbuf_gunbarrel_padorigin_skipfileselect_gameplayxy_tnddefaultwidthheight480i_virtualfb_reserve58000_core_no_menu.png",
+      "returncode": 0,
+      "stderr_tail": [],
+      "window_rect": {
+        "left": 96,
+        "top": 96,
+        "right": 752,
+        "bottom": 615,
+        "width": 656,
+        "height": 519
+      },
+      "window_stats": {
+        "crop_box": [
+          96,
+          96,
+          752,
+          615
+        ],
+        "mean_luma": 14.26,
+        "stddev_luma": 50.32,
+        "nonblack_ratio": 0.1172,
+        "bright_ratio": 0.0596
+      }
+    }
+  },
+  {
+    "rom": "artifacts\\generated\\TND64_480i_frontbuf_gunbarrel_padorigin_gameplayxy_tnddefaultwidthheight480i_virtualfb_reserve58000_core_no_menu.z64",
+    "elapsed": 44.08,
+    "main_window_seen": true,
+    "main_window": {
+      "hwnd": 11338550,
+      "title": "gopher64"
+    },
+    "key_taps": 0,
+    "exited_before_timeout": false,
+    "exit_code_before_timeout": null,
+    "stdout_path": "reports\\smoke\\TND64_480i_frontbuf_gunbarrel_padorigin_gameplayxy_tnddefaultwidthheight480i_virtualfb_reserve58000_core_no_menu.stdout.txt",
+    "stderr_path": "reports\\smoke\\TND64_480i_frontbuf_gunbarrel_padorigin_gameplayxy_tnddefaultwidthheight480i_virtualfb_reserve58000_core_no_menu.stderr.txt",
+    "stdout_bytes": 0,
+    "stderr_bytes": 2877,
+    "marker_counts": {},
+    "stderr_tail": [
+      "[WARN]: Stalled compile (compute, 7e74068a497f23c2): thread 0 - 924382.600 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (compute, bd9293d0d50b3e8b): thread 0 - 68041.200 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, e3b76ed8c30a5cc1): thread 0 - 18247.600 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, b178544ed4416cd2): thread 0 - 11512.900 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, d177283513a5a0f7): thread 0 - 25709.000 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, 5b01cde7ced266c2): thread 0 - 5122.800 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, b178554ed4416e85): thread 0 - 11132.500 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (compute, 35f88fc5fb45ef46): thread 0 - 52110.400 us (mode: sync, success: yes)."
+    ],
+    "capture": {
+      "path": "diagnostics\\captures\\gopher64\\frontbuf_padorigin_stocksource_noinput44\\TND64_480i_frontbuf_gunbarrel_padorigin_gameplayxy_tnddefaultwidthheight480i_virtualfb_reserve58000_core_no_menu.png",
+      "returncode": 0,
+      "stderr_tail": [],
+      "window_rect": {
+        "left": 96,
+        "top": 96,
+        "right": 752,
+        "bottom": 615,
+        "width": 656,
+        "height": 519
+      },
+      "window_stats": {
+        "crop_box": [
+          96,
+          96,
+          752,
+          615
+        ],
+        "mean_luma": 15.54,
+        "stddev_luma": 51.4,
+        "nonblack_ratio": 0.1313,
+        "bright_ratio": 0.0704
+      }
+    }
+  },
+  {
+    "rom": "artifacts\\generated\\TND64_480i_frontbuf_gunbarrel_padorigin_gameplayxy_tnddefaultwidth480i_virtualfb_reserve58000_core_no_menu.z64",
+    "elapsed": 44.06,
+    "main_window_seen": true,
+    "main_window": {
+      "hwnd": 11404086,
+      "title": "gopher64"
+    },
+    "key_taps": 0,
+    "exited_before_timeout": false,
+    "exit_code_before_timeout": null,
+    "stdout_path": "reports\\smoke\\TND64_480i_frontbuf_gunbarrel_padorigin_gameplayxy_tnddefaultwidth480i_virtualfb_reserve58000_core_no_menu.stdout.txt",
+    "stderr_path": "reports\\smoke\\TND64_480i_frontbuf_gunbarrel_padorigin_gameplayxy_tnddefaultwidth480i_virtualfb_reserve58000_core_no_menu.stderr.txt",
+    "stdout_bytes": 0,
+    "stderr_bytes": 2877,
+    "marker_counts": {},
+    "stderr_tail": [
+      "[WARN]: Stalled compile (compute, 7e74068a497f23c2): thread 0 - 912291.500 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (compute, bd9293d0d50b3e8b): thread 0 - 68242.700 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, e3b76ed8c30a5cc1): thread 0 - 18556.800 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, b178544ed4416cd2): thread 0 - 11385.200 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, d177283513a5a0f7): thread 0 - 22860.100 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, 5b01cde7ced266c2): thread 0 - 6010.500 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, b178554ed4416e85): thread 0 - 10826.400 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (compute, 35f88fc5fb45ef46): thread 0 - 52260.400 us (mode: sync, success: yes)."
+    ],
+    "capture": {
+      "path": "diagnostics\\captures\\gopher64\\frontbuf_padorigin_stocksource_noinput44\\TND64_480i_frontbuf_gunbarrel_padorigin_gameplayxy_tnddefaultwidth480i_virtualfb_reserve58000_core_no_menu.png",
+      "returncode": 0,
+      "stderr_tail": [],
+      "window_rect": {
+        "left": 96,
+        "top": 96,
+        "right": 752,
+        "bottom": 615,
+        "width": 656,
+        "height": 519
+      },
+      "window_stats": {
+        "crop_box": [
+          96,
+          96,
+          752,
+          615
+        ],
+        "mean_luma": 15.73,
+        "stddev_luma": 51.53,
+        "nonblack_ratio": 0.1336,
+        "bright_ratio": 0.0722
+      }
+    }
+  },
+  {
+    "rom": "artifacts\\generated\\TND64_480i_frontbuf_titletarget_stocksource_gameplayxy_tnddefaultwidthheight480i_virtualfb_reserve58000_core_no_menu.z64",
+    "elapsed": 44.07,
+    "main_window_seen": true,
+    "main_window": {
+      "hwnd": 11469622,
+      "title": "gopher64"
+    },
+    "key_taps": 0,
+    "exited_before_timeout": false,
+    "exit_code_before_timeout": null,
+    "stdout_path": "reports\\smoke\\TND64_480i_frontbuf_titletarget_stocksource_gameplayxy_tnddefaultwidthheight480i_virtualfb_reserve58000_core_no_menu.stdout.txt",
+    "stderr_path": "reports\\smoke\\TND64_480i_frontbuf_titletarget_stocksource_gameplayxy_tnddefaultwidthheight480i_virtualfb_reserve58000_core_no_menu.stderr.txt",
+    "stdout_bytes": 0,
+    "stderr_bytes": 2772,
+    "marker_counts": {},
+    "stderr_tail": [
+      "[WARN]: Stalled compile (compute, 1cbd9189b0a23679): thread 0 - 29029.400 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (compute, 7e74068a497f23c2): thread 0 - 900950.800 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (compute, bd9293d0d50b3e8b): thread 0 - 71733.200 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, e3b76ed8c30a5cc1): thread 0 - 17452.600 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, b178544ed4416cd2): thread 0 - 11137.700 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, d177283513a5a0f7): thread 0 - 24930.900 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, b178554ed4416e85): thread 0 - 10371.000 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (compute, 35f88fc5fb45ef46): thread 0 - 50205.500 us (mode: sync, success: yes)."
+    ],
+    "capture": {
+      "path": "diagnostics\\captures\\gopher64\\frontbuf_padorigin_stocksource_noinput44\\TND64_480i_frontbuf_titletarget_stocksource_gameplayxy_tnddefaultwidthheight480i_virtualfb_reserve58000_core_no_menu.png",
+      "returncode": 0,
+      "stderr_tail": [],
+      "window_rect": {
+        "left": 96,
+        "top": 96,
+        "right": 752,
+        "bottom": 615,
+        "width": 656,
+        "height": 519
+      },
+      "window_stats": {
+        "crop_box": [
+          96,
+          96,
+          752,
+          615
+        ],
+        "mean_luma": 15.63,
+        "stddev_luma": 51.47,
+        "nonblack_ratio": 0.1325,
+        "bright_ratio": 0.0713
+      }
+    }
+  },
+  {
+    "rom": "artifacts\\generated\\TND64_480i_frontbuf_titletarget_stocksource_gameplayxy_tnddefaultwidth480i_virtualfb_reserve58000_core_no_menu.z64",
+    "elapsed": 44.09,
+    "main_window_seen": true,
+    "main_window": {
+      "hwnd": 8192964,
+      "title": "gopher64"
+    },
+    "key_taps": 0,
+    "exited_before_timeout": false,
+    "exit_code_before_timeout": null,
+    "stdout_path": "reports\\smoke\\TND64_480i_frontbuf_titletarget_stocksource_gameplayxy_tnddefaultwidth480i_virtualfb_reserve58000_core_no_menu.stdout.txt",
+    "stderr_path": "reports\\smoke\\TND64_480i_frontbuf_titletarget_stocksource_gameplayxy_tnddefaultwidth480i_virtualfb_reserve58000_core_no_menu.stderr.txt",
+    "stdout_bytes": 0,
+    "stderr_bytes": 2772,
+    "marker_counts": {},
+    "stderr_tail": [
+      "[WARN]: Stalled compile (compute, 1cbd9189b0a23679): thread 0 - 28903.400 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (compute, 7e74068a497f23c2): thread 0 - 914255.700 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (compute, bd9293d0d50b3e8b): thread 0 - 72213.700 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, e3b76ed8c30a5cc1): thread 0 - 18124.600 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, b178544ed4416cd2): thread 0 - 10779.200 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, d177283513a5a0f7): thread 0 - 24125.600 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, b178554ed4416e85): thread 0 - 11718.400 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (compute, 35f88fc5fb45ef46): thread 0 - 55995.200 us (mode: sync, success: yes)."
+    ],
+    "capture": {
+      "path": "diagnostics\\captures\\gopher64\\frontbuf_padorigin_stocksource_noinput44\\TND64_480i_frontbuf_titletarget_stocksource_gameplayxy_tnddefaultwidth480i_virtualfb_reserve58000_core_no_menu.png",
+      "returncode": 0,
+      "stderr_tail": [],
+      "window_rect": {
+        "left": 96,
+        "top": 96,
+        "right": 752,
+        "bottom": 615,
+        "width": 656,
+        "height": 519
+      },
+      "window_stats": {
+        "crop_box": [
+          96,
+          96,
+          752,
+          615
+        ],
+        "mean_luma": 15.73,
+        "stddev_luma": 51.53,
+        "nonblack_ratio": 0.1336,
+        "bright_ratio": 0.0722
+      }
+    }
+  }
+]

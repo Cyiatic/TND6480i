@@ -1,0 +1,740 @@
+{
+  "base_rom": "artifacts\\roms\\TND64_enh480i_core_no_menu_pigz.z64",
+  "out_rom": "artifacts\\generated\\TND64_480i_frontbuf_gunbarrel_padorigin_gameplayxy_tnddefaultwidth480i_virtualfb_reserve58000_core_no_menu.z64",
+  "direct_profile": "split8030_8076_all_dim0_frontbuf_title640asset_gameplayxy_tnddefaultwidth480i_virtualfb",
+  "out_md5": "89566311409ee45d8147299da7ba7280",
+  "header_crc": "2FB6A18F 8F8DEE50",
+  "original_rom_len": "0x1000000",
+  "new_rom_len": "0x101A680",
+  "fullrom_changed_bytes_from_tnd_prefix": 243,
+  "source_rle": {
+    "offset": "0x29E120",
+    "width": 440,
+    "height": 299,
+    "rle_end": "0x2B8692",
+    "runs": 53940
+  },
+  "appended_rle": {
+    "start": "0x1000000",
+    "end": "0x101A680",
+    "encoded_len": "0x1A672",
+    "padded_len": "0x1A680",
+    "width": 640,
+    "height": 430,
+    "asset_mode": "pad-origin",
+    "paste_x": 0,
+    "paste_y": 0,
+    "source_width": 440,
+    "source_height": 299
+  },
+  "direct_word_patches": [
+    {
+      "group": "A_split_load_two_globals",
+      "offset": "0x3C8C",
+      "old": "0x3C010002",
+      "new": "0x8CC94180",
+      "note": "load second framebuffer global instead of adding stride"
+    },
+    {
+      "group": "A_split_load_two_globals",
+      "offset": "0x3C90",
+      "old": "0x24215800",
+      "new": "0x01214825",
+      "note": "force K1 bit before toggling to cached"
+    },
+    {
+      "group": "A_split_load_two_globals",
+      "offset": "0x3C94",
+      "old": "0x01214821",
+      "new": "0x01214826",
+      "note": "convert second framebuffer global K1->K0"
+    },
+    {
+      "group": "B_clear_split_8030_8076",
+      "offset": "0x3D24",
+      "old": "0xAFBFFFFC",
+      "new": "0xAFBFFFFC",
+      "note": "save ra before stack adjust"
+    },
+    {
+      "group": "B_clear_split_8030_8076",
+      "offset": "0x3D28",
+      "old": "0x0FC348E0",
+      "new": "0x0FC348E0",
+      "note": "zbufDeallocate"
+    },
+    {
+      "group": "B_clear_split_8030_8076",
+      "offset": "0x3D2C",
+      "old": "0x27BDFFE8",
+      "new": "0x27BDFFE8",
+      "note": "allocate stack in delay slot"
+    },
+    {
+      "group": "B_clear_split_8030_8076",
+      "offset": "0x3D30",
+      "old": "0x3C058000",
+      "new": "0x3C048030",
+      "note": "clear fb0 base upper 0x80300000"
+    },
+    {
+      "group": "B_clear_split_8030_8076",
+      "offset": "0x3D34",
+      "old": "0x8CA40318",
+      "new": "0x00000000",
+      "note": "fb0 base lower zero"
+    },
+    {
+      "group": "B_clear_split_8030_8076",
+      "offset": "0x3D38",
+      "old": "0x00852025",
+      "new": "0x3C050009",
+      "note": "fb clear size upper for 0x96000"
+    },
+    {
+      "group": "B_clear_split_8030_8076",
+      "offset": "0x3D3C",
+      "old": "0x3C050004",
+      "new": "0x34A56000",
+      "note": "fb clear size lower for 0x96000"
+    },
+    {
+      "group": "B_clear_split_8030_8076",
+      "offset": "0x3D40",
+      "old": "0x34A5B000",
+      "new": "0x0C005F10",
+      "note": "clear fb0"
+    },
+    {
+      "group": "B_clear_split_8030_8076",
+      "offset": "0x3D44",
+      "old": "0x0C005F10",
+      "new": "0x00000000",
+      "note": "clear delay slot"
+    },
+    {
+      "group": "B_clear_split_8030_8076",
+      "offset": "0x3D48",
+      "old": "0x00852023",
+      "new": "0x3C048076",
+      "note": "clear fb1 base upper 0x8076A000"
+    },
+    {
+      "group": "B_clear_split_8030_8076",
+      "offset": "0x3D4C",
+      "old": "0x8FBF0014",
+      "new": "0x3484A000",
+      "note": "clear fb1 base lower 0x8076A000"
+    },
+    {
+      "group": "B_clear_split_8030_8076",
+      "offset": "0x3D50",
+      "old": "0x03E00008",
+      "new": "0x3C050009",
+      "note": "fb clear size upper for 0x96000"
+    },
+    {
+      "group": "B_clear_split_8030_8076",
+      "offset": "0x3D54",
+      "old": "0x27BD0018",
+      "new": "0x34A56000",
+      "note": "fb clear size lower for 0x96000"
+    },
+    {
+      "group": "B_clear_split_8030_8076",
+      "offset": "0x3D58",
+      "old": "0x00000000",
+      "new": "0x0C005F10",
+      "note": "clear fb1"
+    },
+    {
+      "group": "B_clear_split_8030_8076",
+      "offset": "0x3D5C",
+      "old": "0x00000000",
+      "new": "0x00000000",
+      "note": "clear delay slot"
+    },
+    {
+      "group": "B_clear_split_8030_8076",
+      "offset": "0x3D60",
+      "old": "0x00000000",
+      "new": "0x8FBF0014",
+      "note": "restore ra"
+    },
+    {
+      "group": "B_clear_split_8030_8076",
+      "offset": "0x3D64",
+      "old": "0x00000000",
+      "new": "0x03E00008",
+      "note": "return"
+    },
+    {
+      "group": "B_clear_split_8030_8076",
+      "offset": "0x3D68",
+      "old": "0x00000000",
+      "new": "0x27BD0018",
+      "note": "restore stack in delay slot"
+    },
+    {
+      "group": "B_clear_split_8030_8076",
+      "offset": "0x3D6C",
+      "old": "0x00000000",
+      "new": "0x00000000",
+      "note": "clear old padding"
+    },
+    {
+      "group": "B_clear_split_8030_8076",
+      "offset": "0x3D70",
+      "old": "0x00000000",
+      "new": "0x00000000",
+      "note": "clear old padding"
+    },
+    {
+      "group": "B_clear_split_8030_8076",
+      "offset": "0x3D74",
+      "old": "0x00000000",
+      "new": "0x00000000",
+      "note": "clear old padding"
+    },
+    {
+      "group": "B_clear_split_8030_8076",
+      "offset": "0x3D78",
+      "old": "0x00000000",
+      "new": "0x00000000",
+      "note": "clear old padding"
+    },
+    {
+      "group": "B_clear_split_8030_8076",
+      "offset": "0x3D7C",
+      "old": "0x00000000",
+      "new": "0x00000000",
+      "note": "clear old padding"
+    },
+    {
+      "group": "B_clear_split_8030_8076",
+      "offset": "0x3D80",
+      "old": "0x00000000",
+      "new": "0x00000000",
+      "note": "clear old padding"
+    },
+    {
+      "group": "B_clear_split_8030_8076",
+      "offset": "0x3D84",
+      "old": "0x00000000",
+      "new": "0x00000000",
+      "note": "clear old padding"
+    },
+    {
+      "group": "B_clear_split_8030_8076",
+      "offset": "0x3D88",
+      "old": "0x00000000",
+      "new": "0x00000000",
+      "note": "clear old padding"
+    },
+    {
+      "group": "B_clear_split_8030_8076",
+      "offset": "0x3D8C",
+      "old": "0x00000000",
+      "new": "0x00000000",
+      "note": "clear old padding"
+    },
+    {
+      "group": "C_split_select_global_virtual",
+      "offset": "0x46B4",
+      "old": "0x3C048002",
+      "new": "0x3C038006",
+      "note": "load g_ViBackIndex base"
+    },
+    {
+      "group": "C_split_select_global_virtual",
+      "offset": "0x46B8",
+      "old": "0x0C00012B",
+      "new": "0x90780879",
+      "note": "load g_ViBackIndex"
+    },
+    {
+      "group": "C_split_select_global_virtual",
+      "offset": "0x46BC",
+      "old": "0x8C84417C",
+      "new": "0x0018C080",
+      "note": "index * sizeof(pointer)"
+    },
+    {
+      "group": "C_split_select_global_virtual",
+      "offset": "0x46C0",
+      "old": "0x3C038006",
+      "new": "0x3C198002",
+      "note": "framebuffer global base upper"
+    },
+    {
+      "group": "C_split_select_global_virtual",
+      "offset": "0x46C4",
+      "old": "0x90780879",
+      "new": "0x0338C821",
+      "note": "select framebuffer global address"
+    },
+    {
+      "group": "C_split_select_global_virtual",
+      "offset": "0x46C8",
+      "old": "0x00187880",
+      "new": "0x8F39417C",
+      "note": "load selected virtual framebuffer pointer"
+    },
+    {
+      "group": "C_split_select_global_virtual",
+      "offset": "0x46CC",
+      "old": "0x01F87821",
+      "new": "0x3C188002",
+      "note": "load g_ViBackData upper"
+    },
+    {
+      "group": "C_split_select_global_virtual",
+      "offset": "0x46D0",
+      "old": "0x000F7880",
+      "new": "0x8F1832A8",
+      "note": "load g_ViBackData"
+    },
+    {
+      "group": "C_split_select_global_virtual",
+      "offset": "0x46D4",
+      "old": "0x01F87823",
+      "new": "0x00000000",
+      "note": "clear old physical pointer conversion"
+    },
+    {
+      "group": "C_split_select_global_virtual",
+      "offset": "0x46D8",
+      "old": "0x000F7880",
+      "new": "0x00000000",
+      "note": "clear old offset calc"
+    },
+    {
+      "group": "C_split_select_global_virtual",
+      "offset": "0x46DC",
+      "old": "0x01F87823",
+      "new": "0x00000000",
+      "note": "clear old offset calc"
+    },
+    {
+      "group": "C_split_select_global_virtual",
+      "offset": "0x46E0",
+      "old": "0x3C188002",
+      "new": "0x00000000",
+      "note": "clear old offset calc"
+    },
+    {
+      "group": "C_split_select_global_virtual",
+      "offset": "0x46E4",
+      "old": "0x8F1832A8",
+      "new": "0x00000000",
+      "note": "clear old offset calc"
+    },
+    {
+      "group": "C_split_select_global_virtual",
+      "offset": "0x46E8",
+      "old": "0x000F7AC0",
+      "new": "0x00000000",
+      "note": "clear old offset calc"
+    },
+    {
+      "group": "C_split_select_global_virtual",
+      "offset": "0x46EC",
+      "old": "0x01E2C821",
+      "new": "0x00000000",
+      "note": "clear old physical pointer move"
+    },
+    {
+      "group": "C_split_select_global_virtual",
+      "offset": "0x46F0",
+      "old": "0xAF190028",
+      "new": "0xAF190028",
+      "note": "store selected virtual framebuffer pointer"
+    },
+    {
+      "group": "D_fb_split_8030_8076",
+      "offset": "0x6584",
+      "old": "0x3C048000",
+      "new": "0x3C048030",
+      "note": "fb0 base upper 0x80300000"
+    },
+    {
+      "group": "D_fb_split_8030_8076",
+      "offset": "0x6588",
+      "old": "0x8C840318",
+      "new": "0x34840000",
+      "note": "fb0 base lower 0x80300000"
+    },
+    {
+      "group": "D_fb_split_8030_8076",
+      "offset": "0x658C",
+      "old": "0x3C020002",
+      "new": "0x3C058076",
+      "note": "fb1 base upper 0x8076A000"
+    },
+    {
+      "group": "D_fb_split_8030_8076",
+      "offset": "0x6590",
+      "old": "0x24425800",
+      "new": "0x34A5A000",
+      "note": "fb1 base lower 0x8076A000"
+    },
+    {
+      "group": "D_fb_split_8030_8076",
+      "offset": "0x6594",
+      "old": "0x00822823",
+      "new": "0x3C02A000",
+      "note": "uncached segment upper"
+    },
+    {
+      "group": "D_fb_split_8030_8076",
+      "offset": "0x6598",
+      "old": "0x00A22023",
+      "new": "0x00827025",
+      "note": "fb0 uncached"
+    },
+    {
+      "group": "D_fb_split_8030_8076",
+      "offset": "0x659C",
+      "old": "0x3C02A000",
+      "new": "0x3C018002",
+      "note": "global pointer base"
+    },
+    {
+      "group": "D_fb_split_8030_8076",
+      "offset": "0x65A0",
+      "old": "0x00827025",
+      "new": "0xAC2E417C",
+      "note": "store fb0 pointer"
+    },
+    {
+      "group": "D_fb_split_8030_8076",
+      "offset": "0x65A4",
+      "old": "0x3C018002",
+      "new": "0x00A27825",
+      "note": "fb1 uncached"
+    },
+    {
+      "group": "D_fb_split_8030_8076",
+      "offset": "0x65A8",
+      "old": "0xAC2E417C",
+      "new": "0x03E00008",
+      "note": "return"
+    },
+    {
+      "group": "D_fb_split_8030_8076",
+      "offset": "0x65AC",
+      "old": "0x00A27825",
+      "new": "0xAC2F4180",
+      "note": "store fb1 pointer in delay slot"
+    },
+    {
+      "group": "D_fb_split_8030_8076",
+      "offset": "0x65B0",
+      "old": "0x03E00008",
+      "new": "0x00000000",
+      "note": "clear old return"
+    },
+    {
+      "group": "D_fb_split_8030_8076",
+      "offset": "0x65B4",
+      "old": "0xAC2F4180",
+      "new": "0x00000000",
+      "note": "clear old delay slot"
+    },
+    {
+      "group": "E_direct_dim0",
+      "offset": "0x4F354",
+      "old": "0x014000F0",
+      "new": "0x028001E0",
+      "note": "direct render dimensions table 0"
+    },
+    {
+      "group": "I_gameplay_xy_480i",
+      "offset": "0xBB730",
+      "old": "0x24020140",
+      "new": "0x24020280",
+      "note": "getWidth320or440 low-res return 640"
+    },
+    {
+      "group": "I_gameplay_xy_480i",
+      "offset": "0xBB740",
+      "old": "0x240201B8",
+      "new": "0x24020280",
+      "note": "getWidth320or440 hi-res return 640"
+    },
+    {
+      "group": "I_gameplay_xy_480i",
+      "offset": "0xBB754",
+      "old": "0x240200F0",
+      "new": "0x240201E0",
+      "note": "getHeight330or240 low-res return 480"
+    },
+    {
+      "group": "I_gameplay_xy_480i",
+      "offset": "0xBB764",
+      "old": "0x2402014A",
+      "new": "0x240201E0",
+      "note": "getHeight330or240 hi-res return 480"
+    },
+    {
+      "group": "I_gameplay_tnd_default_width_480i",
+      "offset": "0xBB7C0",
+      "old": "0x24020140",
+      "new": "0x24020280",
+      "note": "TND non-camera widescreen viewport width"
+    },
+    {
+      "group": "I_gameplay_tnd_default_width_480i",
+      "offset": "0xBB7D4",
+      "old": "0x24020140",
+      "new": "0x24020280",
+      "note": "TND non-camera default viewport width branch delay"
+    },
+    {
+      "group": "I_gameplay_tnd_default_width_480i",
+      "offset": "0xBB7DC",
+      "old": "0x24020140",
+      "new": "0x24020280",
+      "note": "TND non-camera cinema viewport width"
+    },
+    {
+      "group": "I_gameplay_tnd_default_width_480i",
+      "offset": "0xBB7E0",
+      "old": "0x24020140",
+      "new": "0x24020280",
+      "note": "TND non-camera fallback viewport width"
+    },
+    {
+      "group": "J_front_visetbuf_480i",
+      "offset": "0x4DAEC",
+      "old": "0x240401B8",
+      "new": "0x24040280",
+      "note": "front viSetBuf/menu width 640"
+    },
+    {
+      "group": "J_front_visetbuf_480i",
+      "offset": "0x4DAF4",
+      "old": "0x2405014A",
+      "new": "0x240501E0",
+      "note": "front viSetBuf/menu height 480"
+    },
+    {
+      "group": "K_title_draw_ge480_target_asset640_height430",
+      "offset": "0x4FDEC",
+      "old": "0x3C17070D",
+      "new": "0x3C170713",
+      "note": "GE 480i title texture setup upper"
+    },
+    {
+      "group": "K_title_draw_ge480_target_asset640_height430",
+      "offset": "0x4FDFC",
+      "old": "0x3C0AE46D",
+      "new": "0x3C0AE49F",
+      "note": "GE 480i title texture rectangle target width"
+    },
+    {
+      "group": "K_title_draw_ge480_target_asset640_height430",
+      "offset": "0x4FE34",
+      "old": "0x3C018005",
+      "new": "0x3C0143D7",
+      "note": "GE 480i title draw height float upper 430.0"
+    },
+    {
+      "group": "K_title_draw_ge480_target_asset640_height430",
+      "offset": "0x4FE3C",
+      "old": "0x36F7B026",
+      "new": "0x36F7F006",
+      "note": "GE 480i title texture setup lower"
+    },
+    {
+      "group": "K_title_draw_ge480_target_asset640_height430",
+      "offset": "0x4FE44",
+      "old": "0xC4301CF0",
+      "new": "0x44818000",
+      "note": "GE 480i title draw uses immediate height float"
+    },
+    {
+      "group": "K_title_draw_ge480_target_asset640_height430",
+      "offset": "0x4FF00",
+      "old": "0x3C0E006D",
+      "new": "0x3C0E009F",
+      "note": "GE 480i title texture rectangle lower width"
+    },
+    {
+      "group": "K_title_draw_ge480_target_asset640_height430",
+      "offset": "0x500EC",
+      "old": "0x25190011",
+      "new": "0x2519001D",
+      "note": "GE 480i title negative-x strip step"
+    },
+    {
+      "group": "K_title_draw_ge480_target_asset640_height430",
+      "offset": "0x500FC",
+      "old": "0x250E0010",
+      "new": "0x250E001C",
+      "note": "GE 480i title negative-x strip step"
+    },
+    {
+      "group": "K_title_draw_ge480_target_asset640_height430",
+      "offset": "0x50148",
+      "old": "0x25190011",
+      "new": "0x2519001D",
+      "note": "GE 480i title positive-x strip step"
+    },
+    {
+      "group": "K_title_draw_ge480_target_asset640_height430",
+      "offset": "0x50168",
+      "old": "0x25190010",
+      "new": "0x2519001C",
+      "note": "GE 480i title positive-x strip step"
+    },
+    {
+      "group": "K_title_draw_ge480_target_asset640_height430",
+      "offset": "0x501AC",
+      "old": "0x2921012C",
+      "new": "0x292101AE",
+      "note": "GE 480i title source row loop limit 430"
+    },
+    {
+      "group": "K_title_draw_ge480_target_asset640_height430",
+      "offset": "0x501B4",
+      "old": "0x261001B8",
+      "new": "0x26100280",
+      "note": "appended 640x430 title RLE source stride"
+    },
+    {
+      "group": "F_vi_word",
+      "offset": "0x441C",
+      "old": "0x00187840",
+      "new": "0x00187880",
+      "note": "GE 480i VI-related word"
+    },
+    {
+      "group": "G_mask_word",
+      "offset": "0x104DC",
+      "old": "0x2401FCFF",
+      "new": "0x2401FFFF",
+      "note": "GE 480i mask word"
+    },
+    {
+      "group": "H_pi_dma",
+      "offset": "0x19978",
+      "old": "0x00000000",
+      "new": "0x3C09A440",
+      "note": "GE 480i PI/DMA patch"
+    },
+    {
+      "group": "H_pi_dma",
+      "offset": "0x19980",
+      "old": "0x3C0103FF",
+      "new": "0x10000006",
+      "note": "GE 480i PI/DMA patch"
+    },
+    {
+      "group": "H_pi_dma",
+      "offset": "0x19984",
+      "old": "0x8E240004",
+      "new": "0x00000000",
+      "note": "GE 480i PI/DMA patch"
+    },
+    {
+      "group": "H_pi_dma",
+      "offset": "0x199B4",
+      "old": "0x3C18A440",
+      "new": "0x000C6040",
+      "note": "GE 480i PI/DMA patch"
+    },
+    {
+      "group": "H_pi_dma",
+      "offset": "0x199D0",
+      "old": "0xAF0E0018",
+      "new": "0xADEE0018",
+      "note": "GE 480i PI/DMA patch"
+    },
+    {
+      "group": "H_pi_dma",
+      "offset": "0x19A24",
+      "old": "0x3C0AA440",
+      "new": "0x8E2B002C",
+      "note": "GE 480i PI/DMA patch"
+    },
+    {
+      "group": "H_pi_dma",
+      "offset": "0x19A60",
+      "old": "0xAD490030",
+      "new": "0xAD890030",
+      "note": "GE 480i PI/DMA patch"
+    },
+    {
+      "group": "H_pi_dma",
+      "offset": "0x19A64",
+      "old": "0x8E2B002C",
+      "new": "0x000B5842",
+      "note": "GE 480i PI/DMA patch"
+    }
+  ],
+  "experimental_direct_words": [
+    {
+      "offset": "0x3A38C",
+      "old": "0x3C040004",
+      "new": "0x3C040009",
+      "note": "title allocation upper for 0x96040"
+    },
+    {
+      "offset": "0x3A390",
+      "old": "0x34846EA0",
+      "new": "0x34846040",
+      "note": "title allocation lower for 0x96040"
+    },
+    {
+      "offset": "0x3D934",
+      "old": "0x3C01FFFB",
+      "new": "0x3C01FFFA",
+      "note": "intro reserve subtract upper for 0x58000"
+    },
+    {
+      "offset": "0x3D938",
+      "old": "0x3421FC00",
+      "new": "0x34218000",
+      "note": "intro reserve subtract lower for 0x58000"
+    },
+    {
+      "offset": "0x3D950",
+      "old": "0x3C010004",
+      "new": "0x3C010005",
+      "note": "intro reserve add upper for 0x58000"
+    },
+    {
+      "offset": "0x3D958",
+      "old": "0x34210400",
+      "new": "0x34218000",
+      "note": "intro reserve add lower for 0x58000"
+    }
+  ],
+  "title_rle_pointer_words": [
+    {
+      "offset": "0x3D928",
+      "old": "0x3C03002A",
+      "new": "0x3C030100",
+      "note": "title RLE source upper for 0x1000000"
+    },
+    {
+      "offset": "0x3D94C",
+      "old": "0x2463E120",
+      "new": "0x24630000",
+      "note": "title RLE source lower for 0x1000000"
+    },
+    {
+      "offset": "0x3D948",
+      "old": "0x3C0B002C",
+      "new": "0x3C0B0102",
+      "note": "title RLE source end upper for 0x101A680"
+    },
+    {
+      "offset": "0x3D954",
+      "old": "0x256B85E0",
+      "new": "0x256BA680",
+      "note": "title RLE source end lower for 0x101A680"
+    }
+  ]
+}

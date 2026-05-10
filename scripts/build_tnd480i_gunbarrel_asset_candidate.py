@@ -94,6 +94,40 @@ def encode_rle_image(image, header_tail):
     return bytes(encoded)
 
 
+def build_asset_image(source_image, args):
+    if args.asset_mode == "resize-nearest":
+        image = source_image.resize((args.asset_width, args.asset_height), Image.Resampling.NEAREST)
+        return image, {"asset_mode": args.asset_mode}
+    if args.asset_mode == "resize-bilinear":
+        image = source_image.resize((args.asset_width, args.asset_height), Image.Resampling.BILINEAR)
+        return image, {"asset_mode": args.asset_mode}
+    if args.asset_mode == "resize-lanczos":
+        image = source_image.resize((args.asset_width, args.asset_height), Image.Resampling.LANCZOS)
+        return image, {"asset_mode": args.asset_mode}
+
+    image = Image.new("L", (args.asset_width, args.asset_height), 0)
+    if args.asset_mode == "pad-origin":
+        paste_x = 0
+        paste_y = 0
+    elif args.asset_mode == "pad-center":
+        paste_x = (args.asset_width - source_image.width) // 2
+        paste_y = (args.asset_height - source_image.height) // 2
+    elif args.asset_mode == "pad-custom":
+        paste_x = args.paste_x
+        paste_y = args.paste_y
+    else:
+        raise ValueError(f"unknown asset mode {args.asset_mode}")
+
+    image.paste(source_image, (paste_x, paste_y))
+    return image, {
+        "asset_mode": args.asset_mode,
+        "paste_x": paste_x,
+        "paste_y": paste_y,
+        "source_width": source_image.width,
+        "source_height": source_image.height,
+    }
+
+
 def add_experimental_word(report, rom, off, value, note):
     old = word(rom, off)
     put_word(rom, off, value)
@@ -144,12 +178,12 @@ def build(args):
 
     decoded = decode_rle_image(base, args.source_offset)
     source_image = Image.frombytes("L", (decoded["width"], decoded["height"]), decoded["raw"])
-    resized = source_image.resize((args.asset_width, args.asset_height), Image.Resampling.NEAREST)
-    encoded = encode_rle_image(resized, decoded["header_tail"])
+    asset_image, asset_transform = build_asset_image(source_image, args)
+    encoded = encode_rle_image(asset_image, decoded["header_tail"])
 
     if args.asset_png:
         args.asset_png.parent.mkdir(parents=True, exist_ok=True)
-        resized.save(args.asset_png)
+        asset_image.save(args.asset_png)
 
     direct_report = apply_direct_words(base, args.direct_profile)
     experimental_report = apply_title_alloc_and_intro_reserve(base, args.title_alloc_size, args.intro_reserve)
@@ -189,6 +223,7 @@ def build(args):
             "padded_len": f"0x{append_end - append_start:X}",
             "width": args.asset_width,
             "height": args.asset_height,
+            **asset_transform,
         },
         "direct_word_patches": direct_report,
         "experimental_direct_words": experimental_report,
@@ -209,6 +244,13 @@ def main():
     parser.add_argument("--source-offset", type=lambda x: int(x, 0), default=TND_GUNBARREL_RLE_OFFSET)
     parser.add_argument("--asset-width", type=int, default=640)
     parser.add_argument("--asset-height", type=int, default=430)
+    parser.add_argument(
+        "--asset-mode",
+        choices=("resize-nearest", "resize-bilinear", "resize-lanczos", "pad-origin", "pad-center", "pad-custom"),
+        default="resize-nearest",
+    )
+    parser.add_argument("--paste-x", type=int, default=0)
+    parser.add_argument("--paste-y", type=int, default=0)
     parser.add_argument("--append-align", type=lambda x: int(x, 0), default=0x1000)
     parser.add_argument("--title-alloc-size", type=lambda x: int(x, 0), default=0x96040)
     parser.add_argument("--intro-reserve", type=lambda x: int(x, 0), default=0x58000)

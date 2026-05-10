@@ -48,6 +48,19 @@ Date: 2026-05-08
   - Current working candidate: `artifacts/generated/TND64_480i_split8030_8076_all_dim0_core_no_menu.z64`, MD5 `4fd6d3b38b50c2ec0a1bdd110598516c`, N64 CRC `25FD2E62 AF703620`.
   - Verified IPS patch: `artifacts/generated/TND6480i_split8030_8076_all_dim0_from_baseline_tnd.ips`, MD5 `d08906f5353b6b0dd2d7937f00c09e58`.
   - SC64 was restored afterward to `Bootloader -> Menu from SD card` with `ROM write: Enabled`.
+- 2026-05-10 overnight SC64/Kasa follow-up:
+  - Added `scripts/hardware/cycle_kasa_n64_buttons.ps1`, which uses the Kasa Smart Control WinForms On/Off button handles directly instead of mouse coordinates.
+  - The helper successfully power-cycled the N64 and recovered a visible SC64 menu with `ROM write: Enabled`.
+  - Hardware canary `TND64_480i_title640draw_tndstride430_nogameplay_reserve58000_core_no_menu.z64` reached the Rare splash, then stuck on a static narrow vertical-bar image for 180 seconds. Reject.
+  - Hardware canary `TND64_480i_tndrect508src430_gameplayxy_tnddefaultwidthheight480i_reserve58000_core_no_menu.z64` used the corrected active TND title RLE source stride `508`, but still stuck on a static vertical-bar image for 180 seconds. Reject.
+  - SC64 was restored afterward to `Bootloader -> Menu from SD card`; GV-USB2 shows the SC64 menu, and `sc64deployer info` reports `ROM write: Enabled`.
+- 2026-05-10 later unattended hardware follow-up:
+  - From a confirmed SC64 menu, `TND64_480i_gunbufBE200_gameplayxy_tnddefaultwidthheight_reserve58000_core_no_menu.z64` was uploaded with EEPROM 4k save type and launched by Kasa power cycle.
+  - It booted and looped the title/gunbarrel/credits path for 180 seconds without the rejected vertical-bar failure, but it did not auto-enter a gameplay demo.
+  - Cadence was still stock-like: high-red detector intervals were `4.771s`, `4.771s`, and `4.838s` versus GE 480i reference `7.908s`.
+  - From a confirmed SC64 menu, `TND64_480i_frontbufsizes_gameplayxy_tnddefaultwidthheight_reserve58000_core_no_menu.z64` was uploaded next. It also booted and looped title/gunbarrel/credits for 165 seconds without entering gameplay.
+  - Its high-red detector intervals were `4.705s` and `4.805s`, again matching the known width/height branch rather than GE 480i.
+  - SC64 was restored afterward to `Bootloader -> Menu from SD card`; GV-USB2 shows the SC64 menu, and `sc64deployer info` reports `ROM write: Enabled`.
 - 2026-05-08 SC64 session:
   - SC64 detected on `COM4`; firmware `v2.20.2`; SD initialized; ROM writes enabled.
   - GV-USB2 capture showed the SC64 menu clearly.
@@ -131,21 +144,50 @@ Date: 2026-05-08
 
 ## Current Safest Hardware Candidate
 
-There is no proven-safe hardware candidate right now. Only resume uploads if the capture card visibly shows the SC64 menu, EverDrive menu, or another known-good live video state after a physical reset or power-cycle, and SC64 reports `ROM write: Enabled`.
+There is still no proven-good 480i hardware patch. The current live hardware candidate is the width+height/no-top viewport probe. It keeps the working split framebuffer package, the first direct dimension word, the title allocation/reserve experiment, the GE 480i `getWidth320or440()` / `getHeight330or240()` return values, and changes only the normal player viewport width/height path to GE-style width `640` and height `440`. It deliberately leaves camera/intro viewport tops and the normal top offset alone.
+
+Only upload it from a visible SC64 menu or another known-good live video state, with SC64 reporting `ROM write: Enabled`, and use EEPROM 4k save type if the launcher asks.
+
+`TND64_480i_gameplayxy_tnddefaultwidthheight480i_reserve58000_core_no_menu.z64`
+
+- Path: `artifacts/generated/TND64_480i_gameplayxy_tnddefaultwidthheight480i_reserve58000_core_no_menu.z64`
+- Profile: `split8030_8076_all_dim0_gameplayxy_tnddefaultwidthheight480i`, plus title allocation `0x96040` and intro reserve `0x58000`
+- MD5: `a17be68fd0eeb2e88bfd2d316e4b40db`
+- N64 CRC: `25FDE5A6 EAB65D42`
+- IPS patch from clean baseline: `artifacts/generated/TND6480i_gameplayxy_tnddefaultwidthheight480i_reserve58000_from_baseline_tnd.ips`
+- IPS MD5: `1839e41e019e0c25db1f6321e0867f4a`
+- Verification: Gopher64 75 second input smoke survived and captured a full watch/player viewport.
+- Hardware status: uploaded to SC64 and launched on real N64 on 2026-05-10. Startup/cast capture succeeded, but it did not auto-enter a level within 75 seconds; controller-side gameplay test is pending.
+
+Why this is first in line: the previous `tndfullscreen` hardware probe fixed save-slot freezes and expanded the view out of the upper-left, but forcing raw `640x480` and camera top `0` created the blue split/camera-path corruption. The default-view-only probe still had blue split on hardware, so the current probe removes the `top 20` change and keeps only normal width/height.
 
 Do not retest these first:
 
 - `TND64_480i_single8076_all_dim0_core_no_menu.z64` - black-screened on real hardware through 60 seconds.
 - `TND64_480i_fghonly_core_no_menu.z64` - black-screened on real hardware through 60 seconds.
 - `TND64_480i_dim0only_core_no_menu.z64` / `TND64_480i_dim1only_core_no_menu.z64` - both black-screened in Gopher64 visual capture.
+- `TND64_480i_split8030_8076_all_dim0_gameplay480i_reserve58000_core_no_menu.z64` - booted on hardware and made progress, but save slots 1/3/4 froze, gunbarrel was still not 480i, and Bazaar/watch/report composition was badly corrupted.
+- `TND64_480i_gameplayxy480i_reserve58000_core_no_menu.z64` - booted on hardware and preserved cleaner watch text, but rendered the game/watch only in the upper-left quadrant.
+- `TND64_480i_gameplayxy_tndfullscreen480i_reserve58000_core_no_menu.z64` - booted on hardware; all save slots worked, but gunbarrel was not 480i and gameplay had blue/split viewport corruption.
+- `TND64_480i_gameplayxy_tnddefaultgeview480i_reserve58000_core_no_menu.z64` - booted on hardware; menu/briefing composition was sane, but gameplay/demo still showed the blue split with a narrow world band.
+- `TND64_480i_gameplayxy_tndgeview480i_reserve58000_core_no_menu.z64` - Gopher64 reintroduced blue split/camera-path corruption; do not upload before the default-view-only probe.
+- `TND64_480i_gameplayxy_tndcamerageview480i_reserve58000_core_no_menu.z64` - Gopher64 still showed the player/watch state in the upper-left mini-frame.
+- `TND64_480i_gunbufBE200_gameplayxy_tnddefaultwidthheight_reserve58000_core_no_menu.z64` - booted on hardware, but the gunbarrel cadence matched the known stock-like width/height branch.
+- `TND64_480i_frontbufsizes_gameplayxy_tnddefaultwidthheight_reserve58000_core_no_menu.z64` - booted on hardware, but the gunbarrel cadence matched the known stock-like width/height branch.
+- `TND64_480i_split8030_8076_all_dim0_frontgameplay480i_core_no_menu.z64` - severe striped/corrupted hardware capture.
+- `TND64_480i_split8030_8076_all_dim0_frontres_gameplay480i_core_no_menu.z64` - severe striped/corrupted hardware capture.
+- Broad GE safe title/front transplants - emulator smoke can pass while title/cast output corrupts.
+- Any `K_rectloop_*` / `K_title_draw_*` title-blitter candidate - both wrong-stride and corrected-stride hardware canaries freeze the shared title blitter into static vertical bars before the gunbarrel.
 
 Most informative next step:
 
-Offline H-function analysis and coherent VI/mode/framebuffer patch derivation.
+Controller-side hardware test should return to the best non-title-blitter branch, not the rejected title/rectloop probes. If a human is available, retest or refine `TND64_480i_gameplayxy_tnddefaultwidthheight480i_reserve58000_core_no_menu.z64`: check save slots 1-4, gunbarrel cadence, level intro, Bazaar/Bond hand composition, watch/pause text, and whether normal gameplay fills the screen without the blue split. Expect gunbarrel cadence to remain a separate follow-up problem.
 
 - Do not upload another H-family combination just because it renders in Gopher64.
 - Compare TND's libultra `__osViSwapContext` and higher-level `fr.c`/`VideoSettings` flow against GoldenEye 480i and/or `n64decomp/007`.
 - The H-offset code itself is aligned with GE stock, so the next target is likely coherency between mode tables, framebuffer dimensions, direct gameplay dimensions, and the GE 480i libultra behavior.
+- The GE 480i `video_related_8` frame stride group around `0x46B4-0x46F0` collides with the current split-buffer selector. Do not directly transplant GE's `0x46C8` stride math; derive a split-buffer-aware equivalent that preserves `cfb_16[0] = 0x80300000` and `cfb_16[1] = 0x8076A000` while matching the GE 480i mode/framebuf handoff.
+- The `menu_only` compressed-main ranges currently overflow the 1172 stream slot (`0x11BC8 > 0xFDA7`), so pause/menu text correction needs a separate space-management pass.
 - Optional hardware sanity check after offline analysis: run `F only`, `G only`, or `FG only` to confirm the non-H side patches are not independently fatal, but these are not expected to prove 480i on their own.
 
 Baseline controls already run:
@@ -325,6 +367,30 @@ Only start this queue from a known-good EverDrive menu. If any step black-screen
 ## Diagnostic Follow-ups
 
 Use these only after the earlier steps have a clear result. If any candidate black-screens or locks, stop until a physical power-cycle is available.
+
+## Current Loaded Probe, 2026-05-10
+
+The N64 currently has this SC64 direct-boot candidate loaded:
+
+```text
+artifacts/generated/TND64_480i_frontbuf_gunbarrel_padorigin_gameplayxy_tnddefaultwidthheight480i_virtualfb_reserve58000_core_no_menu.z64
+MD5: 8595e4f1416fdca1bf96ad86c8907d6f
+N64 CRC: 2FB6A3F7 556AA840
+```
+
+Purpose:
+
+- Replaces the stretched 640x430 gunbarrel source with a 640x430 padded canvas containing the original 440x299 source at origin.
+- Restores the file-select backdrop call, so this should be tested specifically for the former slot 1/3/4 freeze.
+- Keeps the same `frontbuf`, virtual framebuffer, and gameplay width/height patch set as the previous hardware candidate that had working reticle/HUD size.
+
+Controller-side test order:
+
+1. Confirm whether the folder background is visible.
+2. Open save slots 1, 2, 3, and 4.
+3. Watch the gunbarrel for duplicate aperture/swiss-cheese artifacts.
+4. Enter a level and check the known blue skybox/world-band behavior.
+5. Open pause/watch and compare text placement to enhanced480i.
 
 ### A. F/G + H Origin Bypass
 

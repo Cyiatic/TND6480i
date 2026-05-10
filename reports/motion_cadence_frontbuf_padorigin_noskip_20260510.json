@@ -1,0 +1,74 @@
+[
+  {
+    "video": "diagnostics\\captures\\videos\\frontbuf_padorigin_noskip_offupload_poweron_startup_20260510.mkv",
+    "frames": 299,
+    "frame_diffs": 298,
+    "mean_diff": 0.9626,
+    "median_diff": 0.6885,
+    "p90_diff": 3.0404,
+    "near_duplicate_ratio": 0.6242,
+    "active_ratio": 0.151,
+    "estimated_updates_per_second": 4.526,
+    "label": "padorigin",
+    "start": 32.0,
+    "duration": 10.0,
+    "scale": [
+      180,
+      120
+    ]
+  },
+  {
+    "video": "diagnostics\\captures\\videos\\frontbuf_asset640_skipfileselect_offupload_poweron_startup_20260510.mkv",
+    "frames": 299,
+    "frame_diffs": 298,
+    "mean_diff": 0.8226,
+    "median_diff": 0.6577,
+    "p90_diff": 2.3533,
+    "near_duplicate_ratio": 0.6074,
+    "active_ratio": 0.1409,
+    "estimated_updates_per_second": 4.224,
+    "label": "prev_frontbuf",
+    "start": 32.0,
+    "duration": 10.0,
+    "scale": [
+      180,
+      120
+    ]
+  },
+  {
+    "video": "diagnostics\\captures\\videos\\stock_tnd64_expanded_offupload_poweron_startup_20260510.mkv",
+    "frames": 299,
+    "frame_diffs": 298,
+    "mean_diff": 1.9339,
+    "median_diff": 1.3433,
+    "p90_diff": 4.4246,
+    "near_duplicate_ratio": 0.3423,
+    "active_ratio": 0.3289,
+    "estimated_updates_per_second": 9.856,
+    "label": "stock_tnd",
+    "start": 30.9,
+    "duration": 10.0,
+    "scale": [
+      180,
+      120
+    ]
+  },
+  {
+    "video": "diagnostics\\captures\\videos\\ge480i_reference_startup_controller_svideo_20260510.mkv",
+    "frames": 479,
+    "frame_diffs": 478,
+    "mean_diff": 1.487,
+    "median_diff": 0.8369,
+    "p90_diff": 5.0672,
+    "near_duplicate_ratio": 0.4331,
+    "active_ratio": 0.2824,
+    "estimated_updates_per_second": 8.464,
+    "label": "ge480",
+    "start": 19.1,
+    "duration": 16.0,
+    "scale": [
+      180,
+      120
+    ]
+  }
+]
