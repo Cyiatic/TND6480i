@@ -119,3 +119,37 @@ LightCapture may still help if it exposes:
 - capture format
 
 If the LightCapture options dialog is visible, capture a desktop screenshot and inspect the Japanese labels before changing settings.
+
+## 2026-05-11 External Tool / Reference Triage
+
+User-installed tools:
+
+- Cheat Engine:
+  - useful as an emulator-side observer for temporary memory watchlists, active level/state detection, RDRAM base discovery, and crash-adjacent value hunting
+  - attach only to an emulator process for this project; do not use it as the authoritative patching path
+  - any useful finding should be converted back into scripted ROM offsets, Ghidra labels, or notes before it affects a release candidate
+- HxD:
+  - useful for quick byte inspection, one-off binary comparisons, and sanity-checking ROM/header data
+  - final ROM edits should stay scripted so offsets, old values, new values, MD5, and N64 CRC remain reproducible
+
+User-provided references:
+
+- `https://github.com/mitchasdf/N64-Rom-Disassembler`
+  - older Python-era ROM disassembler; potentially useful for quick opcode dumps, but lower priority than the existing Ghidra plus scripted disassembly flow
+- `https://github.com/DavidSM64/David-s-N64-RSP-Disassembler`
+  - RSP/microcode-oriented disassembler; useful only if the Hotel/Volcano prism corruption points toward display-list or microcode task setup rather than framebuffer/viewport state
+- `https://github.com/command-tab/awesome-n64-development`
+  - useful curated index; highest-value entries for this project are `rabbitizer`, `spimdisasm`, RI Probe-style RDRAM inspection ideas, N64 assembly references, and toolchain notes
+- `https://www.retroreversing.com/n64-decompiling`
+  - useful Ghidra workflow reminder: N64 loader, SDK signatures, and imported SDK types can improve label quality around libultra VI/display code
+- `https://www.reddit.com/r/n64/comments/ssas1b/every_n64_decompilation_project_2_microcode/`
+  - use as a discovery/index post only, not as primary technical authority; it is still helpful for locating N64 decomp/microcode projects such as GoldenEye/Perfect Dark/F3DEX2 references
+
+Immediate practical takeaway:
+
+1. Keep Cheat Engine and HxD as support tools, not the main editing lane.
+2. Add `spimdisasm` / `rabbitizer` only if the next pass needs more structured disassembly than Capstone/Ghidra exports are giving.
+3. Spend the next technical pass on level-specific fault isolation:
+   - compare `game_h460_top10_current` vs the stable gameplay/pause rollback vs base/enhanced TND on the same complete save
+   - prioritize Party/City/The End load failure, Tower intro crash, Labs encoder freeze, and Hotel/Volcano prism corruption
+   - preserve Press/Bridge/Alaska as good-level controls
