@@ -41,7 +41,8 @@ Hardware feedback on this canary:
 
 Broader user level test matrix on the same active canary:
 
-- Overall: all level intro/outro cutscenes render at a proportionally too-small height; text is not at the same clean resolution/scale as the stock 480i patch, especially on hardware.
+- Overall: all level intro/outro cutscenes render at a proportionally too-small height; text is not at the same clean resolution/scale as the stock 480i patch, especially on hardware. The intro character/credits cards also run offscreen.
+- Current emulator route probes into non-Bazaar missions show the same camera/cutscene top-rectangle failure and partial/missing world geometry. Treat "objects not rendering" as part of the camera/cutscene render-path bug until proven otherwise.
 - Bazaar: top/bottom flicker remains and appears to be Bazaar-specific.
 - Party: does not load.
 - Labs: playable until grabbing the encoder, then appears to freeze.
@@ -58,6 +59,47 @@ Broader user level test matrix on the same active canary:
 - The End: does not load, similar to Party and City.
 
 Implication: do not spend the next pass on another tiny Bazaar viewport crop. The highest-value next comparison is to test the same save/levels against the stable rollback ROM and then the unpatched/enhanced TND base. If the same levels fail only on the 480i branch, isolate load/freezes around the framebuffer/VI allocation and camera/cutscene viewport patch stack. If they fail on base TND64, separate romhack bugs from 480i bugs before patching.
+
+Credit-aware test plan:
+
+1. Use the imported complete save to run short emulator probes first, not fresh hardware uploads.
+2. Compare only three reference ROMs at first: current canary, stable gameplay/pause rollback, and base/enhanced TND.
+3. Prioritize representative levels rather than every level immediately:
+   - Press/Bridge/Alaska as good controls.
+   - Bazaar for flicker/fit.
+   - Party/City/The End for load failure.
+   - Tower for intro crash.
+   - Labs for encoder freeze.
+   - Hotel/Volcano for prism corruption.
+4. Use hardware only after emulator says which failures are unique to the 480i branch.
+
+## 2026-05-12 Emulator A/B Cutscene Finding
+
+Short save-backed Gopher64 route probes compared the current canary, the stable rollback, and the base/enhanced TND reference on the same early mission route.
+
+Result:
+
+- `game_h460_top10_current.z64` and the stable gameplay/pause rollback both show the cutscene/camera path rendered as a top rectangle with missing/partial world geometry.
+- `artifacts/roms/TND64_enh480i_core_no_menu_pigz.z64` renders the same scene across the normal frame in emulator.
+- Therefore the cutscene/object issue is not caused by the tiny `h460/top10` gameplay crop. It is inherited from the older 480i framebuffer/camera/viewport stack.
+
+Evidence:
+
+```text
+diagnostics/captures/gopher64/route_s1_h460_20260512/game_h460_top10_current_t048p0s.png
+diagnostics/captures/gopher64/ab_route_TND64_480i_frontbuf_padorigin_watch_hud_menutable_menuxy_tndgeview_physicalfb_camfullheight_gamefulltop0_reserve58000_core_no_menu_20260512/TND64_480i_frontbuf_padorigin_watch_hud_menutable_menuxy_tndgeview_physicalfb_camfullheight_gamefulltop0_reserve58000_core_no_menu_t048p0s.png
+diagnostics/captures/gopher64/ab_route_TND64_enh480i_core_no_menu_pigz_20260512/TND64_enh480i_core_no_menu_pigz_t048p0s.png
+```
+
+Generated but do not promote/upload yet:
+
+```text
+artifacts/generated/game_h460_top10_camheightstock_current.z64
+MD5: 1ffb6619346bfb709bbe51fd8cfd9dd0
+N64 CRC: CD67966A 710E39F3
+```
+
+This candidate changes only the three camera viewport-height words (`0xBB89C`, `0xBB8B8`, `0xBB8C0`) back to stock TND values. The Gopher64 route did not produce a clean comparable cutscene; a confirm-spam retry produced black/invalid captures while the process stayed alive. Treat it as inconclusive/offline, not a hardware candidate.
 
 If this improves fit but still shows top/bottom issues, the next tight candidate should be a nearby viewport crop/center probe, not title/menu work. If it regresses gameplay, roll back to:
 

@@ -1,0 +1,40 @@
+{
+  "base_rom": "artifacts\\generated\\game_h460_top10_current.z64",
+  "ge480i_rom": "artifacts\\roms\\BASELINE_GE_480i_direct_from_stock.z64",
+  "out_rom": "artifacts\\generated\\game_h460_top10_camheightstock_current.z64",
+  "variant": "direct_only",
+  "direct_profile": "camera_height_stock_only",
+  "out_md5": "1ffb6619346bfb709bbe51fd8cfd9dd0",
+  "header_crc": "CD67966A710E39F3",
+  "main_raw_md5": "1fc4c52315a82b40633fc8bde9e2fe61",
+  "verify_main_raw_md5": "1fc4c52315a82b40633fc8bde9e2fe61",
+  "slot_len": "0x1007A",
+  "packed_len": "0x0",
+  "zopfli_iterations": 15,
+  "verify_consumed": "0x1007A",
+  "main_changed_bytes_from_tnd": 0,
+  "main_ranges": [],
+  "direct_word_patches": [
+    {
+      "group": "I_gameplay_tnd_camera_height_stock",
+      "offset": "0xBB89C",
+      "old": "0x240201E0",
+      "new": "0x240200F8",
+      "note": "stock camera widescreen viewport height"
+    },
+    {
+      "group": "I_gameplay_tnd_camera_height_stock",
+      "offset": "0xBB8B8",
+      "old": "0x240201E0",
+      "new": "0x240200BE",
+      "note": "stock camera cinema viewport height"
+    },
+    {
+      "group": "I_gameplay_tnd_camera_height_stock",
+      "offset": "0xBB8C0",
+      "old": "0x240201E0",
+      "new": "0x24020130",
+      "note": "stock camera fullscreen viewport height"
+    }
+  ]
+}
