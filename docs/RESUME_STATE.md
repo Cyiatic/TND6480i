@@ -1,6 +1,6 @@
 # TND6480i Resume State
 
-Last updated: 2026-05-11 after user playability-priority reset and upload of the in-game viewport centering canary.
+Last updated: 2026-05-11 after user playability-priority reset, h460/top10 hardware feedback, and save import.
 
 Scope reminder: keep work limited to this N64/TND6480i project and directly related tools/devices.
 
@@ -31,6 +31,14 @@ diagnostics/captures/current/after_upload_game_h460_top10_wait10_20260511.png
 reports/tnd480i_game_h460_top10_current_report.json
 ```
 
+Hardware feedback on this canary:
+
+- Bazaar vertical fit is somewhat better; the character dialogue box at the top fits better.
+- Top/bottom flicker did not noticeably improve.
+- Pause/watch is usable and appears correctly formatted, but still flickers.
+- Countdown timer is misaligned left instead of centered at the bottom.
+- Party still does not load; it reaches audio and then fails/crashes on hardware.
+
 If this improves fit but still shows top/bottom issues, the next tight candidate should be a nearby viewport crop/center probe, not title/menu work. If it regresses gameplay, roll back to:
 
 ```text
@@ -48,6 +56,40 @@ N64 CRC: CD67980E 8DF351CC
 ```
 
 Use `h440/top20` only if `h460/top10` still draws too far into the CRT overscan or keeps text boxes/countdown outside the visible field.
+
+## Clean Handoff ROMs
+
+Most relevant current test ROM:
+
+```text
+artifacts/generated/game_h460_top10_current.z64
+MD5: 892cbd5e8253e9cc3c6c4c4645bd69c0
+N64 CRC: CD679836 961D35FD
+```
+
+Most stable gameplay/pause rollback ROM:
+
+```text
+artifacts/generated/TND64_480i_frontbuf_padorigin_watch_hud_menutable_menuxy_tndgeview_physicalfb_camfullheight_gamefulltop0_reserve58000_core_no_menu.z64
+MD5: 17d4ea3194d02d5ea121b1e42aa59469
+N64 CRC: CD6799DE DAD61991
+```
+
+Use the rollback ROM if the next experiment makes gameplay, saves, or pause/watch worse. Do not use the later gunbarrel/menu branches as gameplay baselines.
+
+## Save State
+
+The complete EEPROM save supplied by the user is:
+
+```text
+C:\Users\codex\Documents\007 - Tomorrow Never Dies (USA).sav
+size: 512 bytes
+MD5: f02bb8224a4dc25079721d7a3f0d38e0
+```
+
+It was imported into Gopher64 by padding it to 2048 bytes and writing it to the per-ROM `.eep` files for `game_h460_top10_current`, the stable rollback ROM, `TND64_enh480i_core_no_menu_pigz`, and `BASELINE_TND64_Expanded_direct_from_stock`. Existing Gopher saves were backed up with a timestamp suffix before overwrite.
+
+Current emulator route status: Start/A automation with the imported save reliably reaches Bazaar, but has not yet found a reliable Party selection route. `reports/smoke/smoke_party_route_probe2_h460_downspam_20260511.json` survived 95 seconds but still landed in Bazaar.
 
 ## Current Priority Reset
 

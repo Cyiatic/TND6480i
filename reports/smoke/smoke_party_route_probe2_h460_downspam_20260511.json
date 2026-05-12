@@ -1,0 +1,250 @@
+[
+  {
+    "rom": "artifacts\\generated\\game_h460_top10_current.z64",
+    "elapsed": 95.1,
+    "main_window_seen": true,
+    "main_window": {
+      "hwnd": 1836274,
+      "title": "gopher64"
+    },
+    "key_taps": 188,
+    "scripted_key_events": 15,
+    "input_events_total": 15,
+    "input_events_consumed": 15,
+    "exited_before_timeout": false,
+    "exit_code_before_timeout": null,
+    "stdout_path": "reports\\smoke\\game_h460_top10_current.stdout.txt",
+    "stderr_path": "reports\\smoke\\game_h460_top10_current.stderr.txt",
+    "stdout_bytes": 0,
+    "stderr_bytes": 3384,
+    "marker_counts": {},
+    "stderr_tail": [
+      "[WARN]: Stalled compile (graphics, 7d7854549a936cd2): thread 0 - 11956.700 us (mode: sync, success: yes).",
+      "[INFO]: Using present mode: 2.",
+      "[INFO]: Current transform is enum 0x1.",
+      "[INFO]: Supported transform 0x1: IDENTITY_BIT_KHR.",
+      "[INFO]: Swapchain current extent: 802 x 602",
+      "[INFO]: Targeting 3 swapchain images.",
+      "[INFO]: Created swapchain 802 x 602 (fmt: 64, transform: 1).",
+      "[INFO]: Got 3 swapchain images."
+    ],
+    "captures": [
+      {
+        "path": "diagnostics\\captures\\gopher64\\party_route_probe2\\game_h460_top10_current_t030p0s.png",
+        "returncode": 0,
+        "capture_method": "ffmpeg_gdigrab_title",
+        "stderr_tail": [],
+        "window_rect": {
+          "left": 0,
+          "top": 0,
+          "right": 802,
+          "bottom": 602,
+          "width": 802,
+          "height": 602
+        },
+        "window_stats": {
+          "crop_box": [
+            0,
+            0,
+            802,
+            602
+          ],
+          "mean_luma": 173.45,
+          "stddev_luma": 50.99,
+          "nonblack_ratio": 0.9455,
+          "bright_ratio": 0.9305
+        },
+        "elapsed": 30.04
+      },
+      {
+        "path": "diagnostics\\captures\\gopher64\\party_route_probe2\\game_h460_top10_current_t040p0s.png",
+        "returncode": 0,
+        "capture_method": "ffmpeg_gdigrab_title",
+        "stderr_tail": [],
+        "window_rect": {
+          "left": 0,
+          "top": 0,
+          "right": 802,
+          "bottom": 602,
+          "width": 802,
+          "height": 602
+        },
+        "window_stats": {
+          "crop_box": [
+            0,
+            0,
+            802,
+            602
+          ],
+          "mean_luma": 90.94,
+          "stddev_luma": 89.02,
+          "nonblack_ratio": 0.6803,
+          "bright_ratio": 0.4859
+        },
+        "elapsed": 40.02
+      },
+      {
+        "path": "diagnostics\\captures\\gopher64\\party_route_probe2\\game_h460_top10_current_t050p0s.png",
+        "returncode": 0,
+        "capture_method": "ffmpeg_gdigrab_title",
+        "stderr_tail": [],
+        "window_rect": {
+          "left": 0,
+          "top": 0,
+          "right": 802,
+          "bottom": 602,
+          "width": 802,
+          "height": 602
+        },
+        "window_stats": {
+          "crop_box": [
+            0,
+            0,
+            802,
+            602
+          ],
+          "mean_luma": 177.84,
+          "stddev_luma": 59.55,
+          "nonblack_ratio": 0.9258,
+          "bright_ratio": 0.9102
+        },
+        "elapsed": 50.0
+      },
+      {
+        "path": "diagnostics\\captures\\gopher64\\party_route_probe2\\game_h460_top10_current_t060p0s.png",
+        "returncode": 0,
+        "capture_method": "ffmpeg_gdigrab_title",
+        "stderr_tail": [],
+        "window_rect": {
+          "left": 0,
+          "top": 0,
+          "right": 802,
+          "bottom": 602,
+          "width": 802,
+          "height": 602
+        },
+        "window_stats": {
+          "crop_box": [
+            0,
+            0,
+            802,
+            602
+          ],
+          "mean_luma": 177.73,
+          "stddev_luma": 59.82,
+          "nonblack_ratio": 0.9255,
+          "bright_ratio": 0.9093
+        },
+        "elapsed": 60.07
+      },
+      {
+        "path": "diagnostics\\captures\\gopher64\\party_route_probe2\\game_h460_top10_current_t070p0s.png",
+        "returncode": 0,
+        "capture_method": "ffmpeg_gdigrab_title",
+        "stderr_tail": [],
+        "window_rect": {
+          "left": 0,
+          "top": 0,
+          "right": 802,
+          "bottom": 602,
+          "width": 802,
+          "height": 602
+        },
+        "window_stats": {
+          "crop_box": [
+            0,
+            0,
+            802,
+            602
+          ],
+          "mean_luma": 178.52,
+          "stddev_luma": 58.64,
+          "nonblack_ratio": 0.9287,
+          "bright_ratio": 0.9136
+        },
+        "elapsed": 70.09
+      },
+      {
+        "path": "diagnostics\\captures\\gopher64\\party_route_probe2\\game_h460_top10_current_t080p0s.png",
+        "returncode": 0,
+        "capture_method": "ffmpeg_gdigrab_title",
+        "stderr_tail": [],
+        "window_rect": {
+          "left": 0,
+          "top": 0,
+          "right": 802,
+          "bottom": 602,
+          "width": 802,
+          "height": 602
+        },
+        "window_stats": {
+          "crop_box": [
+            0,
+            0,
+            802,
+            602
+          ],
+          "mean_luma": 177.58,
+          "stddev_luma": 59.97,
+          "nonblack_ratio": 0.9248,
+          "bright_ratio": 0.9086
+        },
+        "elapsed": 80.03
+      },
+      {
+        "path": "diagnostics\\captures\\gopher64\\party_route_probe2\\game_h460_top10_current_t090p0s.png",
+        "returncode": 0,
+        "capture_method": "ffmpeg_gdigrab_title",
+        "stderr_tail": [],
+        "window_rect": {
+          "left": 0,
+          "top": 0,
+          "right": 802,
+          "bottom": 602,
+          "width": 802,
+          "height": 602
+        },
+        "window_stats": {
+          "crop_box": [
+            0,
+            0,
+            802,
+            602
+          ],
+          "mean_luma": 181.74,
+          "stddev_luma": 57.5,
+          "nonblack_ratio": 0.9467,
+          "bright_ratio": 0.9235
+        },
+        "elapsed": 90.06
+      }
+    ],
+    "capture": {
+      "path": "diagnostics\\captures\\gopher64\\party_route_probe2\\game_h460_top10_current_final.png",
+      "returncode": 0,
+      "capture_method": "ffmpeg_gdigrab_title",
+      "stderr_tail": [],
+      "window_rect": {
+        "left": 0,
+        "top": 0,
+        "right": 802,
+        "bottom": 602,
+        "width": 802,
+        "height": 602
+      },
+      "window_stats": {
+        "crop_box": [
+          0,
+          0,
+          802,
+          602
+        ],
+        "mean_luma": 108.36,
+        "stddev_luma": 79.36,
+        "nonblack_ratio": 0.8127,
+        "bright_ratio": 0.6031
+      },
+      "elapsed": 95.1
+    }
+  }
+]

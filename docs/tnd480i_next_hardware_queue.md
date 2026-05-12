@@ -13,6 +13,12 @@ Date: 2026-05-08
     `0xBB91C = 460`, `0xBB954 = 460`, `0xBBA80 = top 10`.
   - Goal: reduce in-game top/bottom flicker and CRT overscan while preserving the working 640-wide gameplay, correct reticle size, and acceptable watch scale.
   - Hardware sanity after upload: `diagnostics/captures/current/after_upload_game_h460_top10_wait10_20260511.png` shows TND credits output, so the direct upload booted.
+  - User hardware feedback: Bazaar dialogue/text box fit is better, pause/watch is usable and formatted correctly, flicker is not noticeably improved, countdown is shifted left instead of centered bottom, and Party still fails after audio starts.
+  - Clean handoff ROM names:
+    - Active canary: `artifacts/generated/game_h460_top10_current.z64` (`MD5 892cbd5e8253e9cc3c6c4c4645bd69c0`, `N64 CRC CD679836 961D35FD`).
+    - Most stable gameplay/pause rollback: `artifacts/generated/TND64_480i_frontbuf_padorigin_watch_hud_menutable_menuxy_tndgeview_physicalfb_camfullheight_gamefulltop0_reserve58000_core_no_menu.z64` (`MD5 17d4ea3194d02d5ea121b1e42aa59469`, `N64 CRC CD6799DE DAD61991`).
+  - The user-provided complete save `C:\Users\codex\Documents\007 - Tomorrow Never Dies (USA).sav` is a 512-byte EEPROM image (`MD5 f02bb8224a4dc25079721d7a3f0d38e0`). It has been padded to 2048 bytes and imported into Gopher64 save slots for the active canary, rollback ROM, `TND64_enh480i_core_no_menu_pigz`, and baseline TND.
+  - Emulator automation with that save still lands in Bazaar, not Party. The latest probe is `reports/smoke/smoke_party_route_probe2_h460_downspam_20260511.json`.
   - Gopher evidence: `diagnostics/captures/contact_sheets/game_viewport_centering_input70_20260510.jpg` and `reports/smoke/smoke_game_viewport_centering_input70_20260510.json`.
   - Saturday/user-driven test focus for this ROM: Bazaar in-game fit, top/bottom flicker, dialogue/text boxes, countdown position, watch flicker, save/mission flow only as needed to reach gameplay, then Party crash/repro.
   - If `h460/top10` still runs too tall, the already-built `artifacts/generated/game_h440_top20_current.z64` is the next narrow crop candidate. If `h460/top10` regresses gameplay, roll back to `artifacts/generated/TND64_480i_frontbuf_padorigin_watch_hud_menutable_menuxy_tndgeview_physicalfb_camfullheight_gamefulltop0_reserve58000_core_no_menu.z64`.
