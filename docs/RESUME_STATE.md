@@ -623,3 +623,27 @@ Result: reject/non-promote. `displaycast_rects` was hardware-tested and kept the
 3. For intro cutscene framing, investigate callsite-specific use of the second direct render dimension word (`0x4F35C`) rather than static global table-1 patches.
 4. For menus/level select, compare GE enhanced480i text/grid callsites before another blind coordinate overlay.
 5. Keep updating this file and `docs/decomp_480i_findings.md` after each hardware result.
+
+## 2026-05-12 Dossier Stock-Revert Probes
+
+User feedback: `game_h460_top10_current.z64` is still the best overall candidate, but the mission-select dossier remains badly aligned. The requested low-cost direction is to leave gameplay alone and revert the broken dossier/front text toward stock rather than keep chasing full 480i menu polish.
+
+Built on `artifacts/generated/game_h460_top10_current.z64`:
+
+```text
+artifacts/generated/game_h460_top10_stock_dossier_tables_current.z64
+MD5: f8d146a4a9edd57a2dd2169a4aa9bd21
+N64 CRC: 84B7F86D A3B63A65
+```
+
+This is the first hardware test candidate. It reverts only the compressed front/menu display tables at raw main offsets `0x9C3C-0x9D24` and `0xA240-0xA264` to stock TND values. The current gameplay crop words at `0xBB91C`, `0xBB954`, and `0xBBA80` are unchanged, as are the direct front 480i words, watch/pause/HUD text work, and the already-rejected `J_mission_select_text_480i` offsets. Gopher no-input capture was inconclusive because the unmodified `game_h460_top10_current.z64` produced the same black capture behavior in the current RDP/Gopher capture path.
+
+Fallback only if the table-only candidate still has unusable dossier/classification layout:
+
+```text
+artifacts/generated/game_h460_top10_stock_front_dossier_current.z64
+MD5: b712eee26aca645d225b7cbf3d449cc3
+N64 CRC: 84B7F529 15121F51
+```
+
+This broader fallback also restores direct front/menu sizing words at `0x4DAE0`, `0x4DAE8`, `0x4DAEC`, `0x4DAF4`, `0x106ED4`, `0x106EE4`, `0x106EF0`, `0x106F10`, and `0x106F24` to stock. It is more likely to make front screens stock-looking, but it changes more of the front path, so do not test it before `stock_dossier_tables`.

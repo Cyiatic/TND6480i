@@ -1,0 +1,279 @@
+{
+  "base_rom": "artifacts\\generated\\game_h460_top10_current.z64",
+  "stock_source_rom": "artifacts\\roms\\BASELINE_TND64_Expanded_direct_from_stock.z64",
+  "out_rom": "artifacts\\generated\\game_h460_top10_stock_front_dossier_current.z64",
+  "purpose": "Revert front/dossier/menu sizing to stock while preserving game_h460_top10 gameplay/pause work.",
+  "out_md5": "b712eee26aca645d225b7cbf3d449cc3",
+  "header_crc": "84B7F529 15121F51",
+  "original_stream_consumed": "0x1007A",
+  "packed_len": "0x10038",
+  "verify_consumed": "0x10035",
+  "main_raw_md5": "b77ac94fd19847299613d6ab600047a2",
+  "verify_main_raw_md5": "b77ac94fd19847299613d6ab600047a2",
+  "main_stock_ranges": [
+    {
+      "start": "0x9C3C",
+      "end": "0x9D24",
+      "label": "stock menu/display table A",
+      "changed_words": [
+        {
+          "offset": "0x9C3C",
+          "old": "0x00000140",
+          "new": "0x000000DC"
+        },
+        {
+          "offset": "0x9C40",
+          "old": "0x0000003C",
+          "new": "0x0000001E"
+        },
+        {
+          "offset": "0x9C50",
+          "old": "0x00000032",
+          "new": "0x00000022"
+        },
+        {
+          "offset": "0x9C54",
+          "old": "0x0000007E",
+          "new": "0x00000053"
+        },
+        {
+          "offset": "0x9C64",
+          "old": "0x00000189",
+          "new": "0x000000E2"
+        },
+        {
+          "offset": "0x9C68",
+          "old": "0x0000007E",
+          "new": "0x00000054"
+        },
+        {
+          "offset": "0x9C78",
+          "old": "0x00000189",
+          "new": "0x000000E2"
+        },
+        {
+          "offset": "0x9C7C",
+          "old": "0x0000008D",
+          "new": "0x00000061"
+        },
+        {
+          "offset": "0x9C8C",
+          "old": "0x00000189",
+          "new": "0x000000E2"
+        },
+        {
+          "offset": "0x9C90",
+          "old": "0x0000009C",
+          "new": "0x0000006E"
+        },
+        {
+          "offset": "0x9CA0",
+          "old": "0x00000189",
+          "new": "0x000000E2"
+        },
+        {
+          "offset": "0x9CA4",
+          "old": "0x000000AB",
+          "new": "0x0000007A"
+        },
+        {
+          "offset": "0x9CB4",
+          "old": "0x0000018A",
+          "new": "0x000000E3"
+        },
+        {
+          "offset": "0x9CB8",
+          "old": "0x000000BA",
+          "new": "0x00000086"
+        },
+        {
+          "offset": "0x9CC8",
+          "old": "0x000001C0",
+          "new": "0x000000DB"
+        },
+        {
+          "offset": "0x9CCC",
+          "old": "0x00000133",
+          "new": "0x000000D3"
+        },
+        {
+          "offset": "0x9CD0",
+          "old": "0x00000001",
+          "new": "0x00000000"
+        },
+        {
+          "offset": "0x9CDC",
+          "old": "0x00000057",
+          "new": "0x0000003C"
+        },
+        {
+          "offset": "0x9CE0",
+          "old": "0x000000F6",
+          "new": "0x000000A9"
+        },
+        {
+          "offset": "0x9CF0",
+          "old": "0x00000057",
+          "new": "0x0000003C"
+        },
+        {
+          "offset": "0x9CF4",
+          "old": "0x00000124",
+          "new": "0x000000C9"
+        },
+        {
+          "offset": "0x9D04",
+          "old": "0x00000140",
+          "new": "0x00000063"
+        },
+        {
+          "offset": "0x9D08",
+          "old": "0x00000173",
+          "new": "0x0000010A"
+        },
+        {
+          "offset": "0x9D0C",
+          "old": "0x00000001",
+          "new": "0x00000000"
+        },
+        {
+          "offset": "0x9D18",
+          "old": "0x00000140",
+          "new": "0x00000050"
+        },
+        {
+          "offset": "0x9D1C",
+          "old": "0x00000182",
+          "new": "0x00000118"
+        },
+        {
+          "offset": "0x9D20",
+          "old": "0x00000001",
+          "new": "0x00000000"
+        }
+      ]
+    },
+    {
+      "start": "0xA240",
+      "end": "0xA264",
+      "label": "stock menu/display table B",
+      "changed_words": [
+        {
+          "offset": "0xA240",
+          "old": "0x0000006A",
+          "new": "0x00000049"
+        },
+        {
+          "offset": "0xA244",
+          "old": "0x000000CF",
+          "new": "0x0000008E"
+        },
+        {
+          "offset": "0xA248",
+          "old": "0x00000134",
+          "new": "0x000000D4"
+        },
+        {
+          "offset": "0xA24C",
+          "old": "0x00000199",
+          "new": "0x0000011A"
+        },
+        {
+          "offset": "0xA250",
+          "old": "0x000001FE",
+          "new": "0x00000160"
+        },
+        {
+          "offset": "0xA254",
+          "old": "0x0000005A",
+          "new": "0x0000003E"
+        },
+        {
+          "offset": "0xA258",
+          "old": "0x000000BF",
+          "new": "0x00000083"
+        },
+        {
+          "offset": "0xA25C",
+          "old": "0x00000124",
+          "new": "0x000000C9"
+        },
+        {
+          "offset": "0xA260",
+          "old": "0x00000189",
+          "new": "0x0000010E"
+        }
+      ]
+    }
+  ],
+  "direct_stock_words": [
+    {
+      "offset": "0x4DAE0",
+      "label": "stock front viSetXY/menu width",
+      "old": "0x24040280",
+      "new": "0x240401B8",
+      "changed": true
+    },
+    {
+      "offset": "0x4DAE8",
+      "label": "stock front viSetXY/menu height",
+      "old": "0x240501E0",
+      "new": "0x2405014A",
+      "changed": true
+    },
+    {
+      "offset": "0x4DAEC",
+      "label": "stock front viSetBuf/menu width",
+      "old": "0x24040280",
+      "new": "0x240401B8",
+      "changed": true
+    },
+    {
+      "offset": "0x4DAF4",
+      "label": "stock front viSetBuf/menu height",
+      "old": "0x240501E0",
+      "new": "0x2405014A",
+      "changed": true
+    },
+    {
+      "offset": "0x106ED4",
+      "label": "stock expanded menu width",
+      "old": "0x240F0280",
+      "new": "0x240F01B8",
+      "changed": true
+    },
+    {
+      "offset": "0x106EE4",
+      "label": "stock expanded menu height",
+      "old": "0x241801E0",
+      "new": "0x2418014A",
+      "changed": true
+    },
+    {
+      "offset": "0x106EF0",
+      "label": "stock expanded low-res menu width",
+      "old": "0x24190280",
+      "new": "0x24190140",
+      "changed": true
+    },
+    {
+      "offset": "0x106F10",
+      "label": "stock expanded low-res menu height",
+      "old": "0x240801E0",
+      "new": "0x240800F0",
+      "changed": true
+    },
+    {
+      "offset": "0x106F24",
+      "label": "stock expanded split viewport height",
+      "old": "0x240901E0",
+      "new": "0x24090078",
+      "changed": true
+    }
+  ],
+  "notes": [
+    "Does not touch gameplay viewport crop words at 0xBB91C, 0xBB954, 0xBBA80.",
+    "Does not revert watch/pause/HUD safe text work.",
+    "Does not apply rejected J_mission_select_text_480i offsets."
+  ]
+}
