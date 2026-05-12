@@ -39,6 +39,26 @@ Hardware feedback on this canary:
 - Countdown timer is misaligned left instead of centered at the bottom.
 - Party still does not load; it reaches audio and then fails/crashes on hardware.
 
+Broader user level test matrix on the same active canary:
+
+- Overall: all level intro/outro cutscenes render at a proportionally too-small height; text is not at the same clean resolution/scale as the stock 480i patch, especially on hardware.
+- Bazaar: top/bottom flicker remains and appears to be Bazaar-specific.
+- Party: does not load.
+- Labs: playable until grabbing the encoder, then appears to freeze.
+- Press: most playable level so far; no obvious first-glance issue.
+- Hotel: severe flashing/rainbow prism effect that is painful to view; dossier text misalignment makes selection impossible.
+- Parkhaus: similar to Press; playable.
+- Wreck: playable.
+- Tower: crashes during the intro cutscene.
+- City: crashes before the cutscene loads, similar to Party.
+- Stealth Ship: same selection issue as Hotel; because City is not playable, it is effectively blocked.
+- Bridge: appears to run fine.
+- Volcano: prism issue similar to Hotel but slightly less severe.
+- Alaska / Shadow Moses Island: appears to run fine.
+- The End: does not load, similar to Party and City.
+
+Implication: do not spend the next pass on another tiny Bazaar viewport crop. The highest-value next comparison is to test the same save/levels against the stable rollback ROM and then the unpatched/enhanced TND base. If the same levels fail only on the 480i branch, isolate load/freezes around the framebuffer/VI allocation and camera/cutscene viewport patch stack. If they fail on base TND64, separate romhack bugs from 480i bugs before patching.
+
 If this improves fit but still shows top/bottom issues, the next tight candidate should be a nearby viewport crop/center probe, not title/menu work. If it regresses gameplay, roll back to:
 
 ```text
@@ -128,7 +148,7 @@ diagnostics/captures/contact_sheets/gbslow_menu05_09_moving_post_gunbarrel_24_74
 reports/capture_cadence/motion_gbslow_menu05_09_moving_post_vs_refs_20260511.json
 ```
 
-Result: promote as the current best test candidate. Compared with `gamefulltop0_gbslow_shared_blitter_stock_texture_setup`, the early doubled white aperture/dot phase is reduced while preserving the slow/GE-like cadence. The first sustained red is `44.845s`, and white-to-red is `5.973s`.
+Historical result at the time: promoted for gunbarrel/front cadence only. Compared with `gamefulltop0_gbslow_shared_blitter_stock_texture_setup`, the early doubled white aperture/dot phase is reduced while preserving the slow/GE-like cadence. Later gameplay testing superseded this branch; do not use it as the gameplay baseline.
 
 A later long no-input hardware capture of the same loaded build confirmed the cadence is stable across a fresh Kasa coldboot:
 

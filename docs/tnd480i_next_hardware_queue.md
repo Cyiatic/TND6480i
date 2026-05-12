@@ -14,6 +14,23 @@ Date: 2026-05-08
   - Goal: reduce in-game top/bottom flicker and CRT overscan while preserving the working 640-wide gameplay, correct reticle size, and acceptable watch scale.
   - Hardware sanity after upload: `diagnostics/captures/current/after_upload_game_h460_top10_wait10_20260511.png` shows TND credits output, so the direct upload booted.
   - User hardware feedback: Bazaar dialogue/text box fit is better, pause/watch is usable and formatted correctly, flicker is not noticeably improved, countdown is shifted left instead of centered bottom, and Party still fails after audio starts.
+  - Expanded level matrix on the same active canary:
+    - Overall: all level cutscenes render with too-small proportional height; text does not look like the stock 480i patch resolution/scale.
+    - Bazaar: top/bottom flicker remains, apparently Bazaar-specific.
+    - Party: does not load.
+    - Labs: playable until grabbing the encoder, then freezes.
+    - Press: most playable; no obvious issue at first glance.
+    - Hotel: severe flashing/rainbow prism effect; dossier text misalignment also makes it impossible to select.
+    - Parkhaus: similar to Press; playable.
+    - Wreck: playable.
+    - Tower: crashes during intro cutscene.
+    - City: crashes before cutscene loads, similar to Party.
+    - Stealth Ship: same selection issue as Hotel and blocked by City.
+    - Bridge: appears fine.
+    - Volcano: prism issue like Hotel, slightly less severe.
+    - Alaska / Shadow Moses Island: appears fine.
+    - The End: does not load, similar to Party/City.
+  - This matrix changes the next priority: stop spending the next pass on tiny Bazaar viewport crops. Compare the same complete save against the stable rollback ROM and base/enhanced TND first, then isolate whether the broken levels are caused by the 480i framebuffer/VI/cutscene stack or by the underlying romhack.
   - Clean handoff ROM names:
     - Active canary: `artifacts/generated/game_h460_top10_current.z64` (`MD5 892cbd5e8253e9cc3c6c4c4645bd69c0`, `N64 CRC CD679836 961D35FD`).
     - Most stable gameplay/pause rollback: `artifacts/generated/TND64_480i_frontbuf_padorigin_watch_hud_menutable_menuxy_tndgeview_physicalfb_camfullheight_gamefulltop0_reserve58000_core_no_menu.z64` (`MD5 17d4ea3194d02d5ea121b1e42aa59469`, `N64 CRC CD6799DE DAD61991`).
