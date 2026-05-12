@@ -292,3 +292,520 @@ N64 CRC: 2FB6A3F7 556AA840
 ```
 
 The S-video startup capture `diagnostics/captures/videos/frontbuf_padorigin_noskip_offupload_poweron_startup_20260510.mkv` confirms that the obvious second gunbarrel is gone at `frame_035s.png`, and the 150-second no-input capture did not lock. The unresolved question is whether restoring the file-select backdrop call reintroduces save-slot freezes on hardware.
+
+## 2026-05-10 Current Hardware Feedback
+
+Latest controller-side testing narrows the remaining issues:
+
+- In-game rendering is now broadly good; the visible gameplay problem is flicker rather than the previous top-rectangle/world-band failure.
+- Level-select text is misaligned.
+- Still needing focused fixes: gunbarrel cadence/composition, opening credits, menu scale/text/layout, intro cutscene/gameplay polish, and pause/watch text layout.
+
+Implication: preserve the current gameplay viewport path while iterating. The next candidates should avoid broad front/title transplants that risk regressing gameplay and should split work into title/front fixes versus UI text/layout fixes.
+
+After the user returned, `diagnostics/captures/current_state_user_back_20260510_1838.png` was clarified as an intentionally user-driven in-game state. Keep it as evidence for the remaining top/bottom gameplay flicker, but do not use it as a cold-boot/title timing sample.
+
+The clean no-input timing reference for the current `gamefulltop0` fallback is now `diagnostics/captures/videos/gamefulltop0_neutral_start_recheck_20260510_1840.mkv`, with sheet `diagnostics/captures/contact_sheets/gamefulltop0_neutral_start_recheck_labeled_20260510_1840.jpg` and report `reports/capture_cadence/motion_gamefulltop0_neutral_recheck_20260510_1840.json`. That capture loops the title/credits path and confirms the gunbarrel remains stock/TND-like. Because the GE 480i ROM diff does not change the likely title state-machine timing region, the GE-style slowdown is more likely an emergent effect of the 480i render/VI/framebuffer path than a simple front-end timer constant.
+
+## 2026-05-10 Mission Select Text Candidate
+
+Built and uploaded a narrow level-select text alignment candidate from the current good gameplay baseline:
+
+```text
+artifacts/generated/TND64_480i_frontbuf_padorigin_watch_hud_menutable_menuxy_tndgeview_physicalfb_missiontext_reserve58000_core_no_menu.z64
+MD5: c4d0c2b56ae5fab0617521cb0978147e
+N64 CRC: CD679B28 2D5C5F47
+```
+
+This candidate only changes four GE 480i mission-select constructor words:
+
+- `0x43148`: `+0x1D` -> `+0x2A`
+- `0x43150`: `-0x1F` -> `-0x2D`
+- `0x431E0`: `+0x1D` -> `+0x2A`
+- `0x431E4`: `-0x1F` -> `-0x2D`
+
+Gopher64 smoke survived 90 seconds with input and reached the watch/gameplay path. The ROM was uploaded through SC64 direct boot with EEPROM 4k and power-cycled by Kasa. Hardware capture after upload: `diagnostics/captures/after_missiontext_upload_boot_20260510.png`.
+
+Hardware result: rejected. The user reported that level text alignment was worse, while the in-game viewport improvements and flicker were unchanged. Do not carry `J_mission_select_text_480i` into the next patch.
+
+## 2026-05-10 Camera Intro Viewport Candidate
+
+Built and uploaded a camera-only overlay from the previous physicalfb gameplay baseline, deliberately excluding the rejected mission-select text patch:
+
+```text
+artifacts/generated/TND64_480i_frontbuf_padorigin_watch_hud_menutable_menuxy_tndgeview_physicalfb_camfulltop0_reserve58000_core_no_menu.z64
+MD5: aaf0f43f486c729311d38880994dc7af
+N64 CRC: CD6798E0 24E50396
+```
+
+This candidate changes only six camera/intro viewport words:
+
+- `0xBB89C`, `0xBB8B8`, `0xBB8C0`: force camera-mode viewport heights to `480`.
+- `0xBBA00`, `0xBBA1C`, `0xBBA24`: force camera-mode viewport top offsets to `0`.
+
+Gopher64 smoke survived 85 seconds with input and reached a clean full gameplay frame. The stock-height rollback overlay produced visible top corruption in Gopher64, so it should not be uploaded first. The combined camera height/top candidate was uploaded through SC64 direct boot with EEPROM 4k and power-cycled by Kasa. Hardware capture after upload: `diagnostics/captures/after_camfulltop0_upload_boot_20260510.png`.
+
+Hardware result: rejected as a direction. The user reported that level text alignment was still bad, in-game retained the same improved viewport plus flicker, and the level intro moved more than it should while remaining confined to the smaller rectangle. Treat the top-zero camera offsets as harmful until there is a better cutscene-specific reason to revisit them.
+
+Next uploaded probe:
+
+```text
+artifacts/generated/TND64_480i_frontbuf_padorigin_watch_hud_menutable_menuxy_tndgeview_physicalfb_camfullheight_reserve58000_core_no_menu.z64
+MD5: 9eaf413cdb765a33cf164095f897fc14
+N64 CRC: CD67980E 8DF351CC
+```
+
+This candidate changes only the three camera-mode viewport heights at `0xBB89C`, `0xBB8B8`, and `0xBB8C0` to `480`, deliberately restoring the prior camera top offsets. SC64 upload and Kasa power cycle completed; boot capture is `diagnostics/captures/after_camfullheight_upload_boot_20260510.png`.
+
+Hardware result: promoted to best gameplay baseline so far. The user reported that in-game rendering looked better, with flicker now limited to the top and bottom of the image. Other sections still require more work.
+
+To test whether the remaining top/bottom flicker comes from the non-camera `640x440` viewport centered at top `20`, a new probe was built from the `camfullheight` baseline:
+
+```text
+artifacts/generated/TND64_480i_frontbuf_padorigin_watch_hud_menutable_menuxy_tndgeview_physicalfb_camfullheight_gamefulltop0_reserve58000_core_no_menu.z64
+MD5: 17d4ea3194d02d5ea121b1e42aa59469
+N64 CRC: CD6799DE DAD61991
+```
+
+This candidate keeps the camera-height-only changes and only modifies the non-camera gameplay view:
+
+- `0xBB91C`, `0xBB954`: non-camera default/fallback viewport height `440 -> 480`.
+- `0xBBA80`: non-camera default viewport top `20 -> 0`.
+
+Gopher64 smoke survived 85 seconds with input and reached the watch path (`reports/smoke/smoke_physicalfb_camfullheight_gamefulltop0_input_until52_20260510.json`). SC64 upload and Kasa power cycle completed; boot capture is `diagnostics/captures/after_gamefulltop0_upload_boot_20260510.png`.
+
+Hardware result: promoted to the current best gameplay/pause baseline. The user verified the pause menu is good, and in-game appears slightly more stable than the prior `camfullheight` baseline. Leave this as the fallback while front/title/menu experiments continue.
+
+Two isolated gunbarrel RLE workload probes were then generated from this baseline after adding workload padding controls to `scripts/build_tnd480i_gunbarrel_asset_candidate.py`:
+
+- `TND64_480i_frontbuf_padorigin_watch_hud_menutable_menuxy_tndgeview_physicalfb_camfullheight_gamefulltop0_gunwork259f4_reserve58000_core_no_menu.z64`, MD5 `119710751ac49ec46e95949001fe3fd0`, N64 CRC `CD6790DE 0FA4B3BD`. This padded below the original 440x299 source to match the earlier GE-like stretched asset's encoded RLE length (`0x259F4`). Hardware booted and reached title/menu/demo paths, but produced obvious title/gunbarrel geometry/artifacting. Reject as-is.
+- `TND64_480i_frontbuf_padorigin_watch_hud_menutable_menuxy_tndgeview_physicalfb_camfullheight_gamefulltop0_gunwork259f4right_reserve58000_core_no_menu.z64`, MD5 `ce7d9e8415b36c56d2d1585db418cb79`, N64 CRC `CD6790DE 0FA4B3BD`. This used the same workload target but padded the right-of-source strip instead. It still showed stray top-row garbage and a misframed gunbarrel on hardware. Reject as-is.
+
+After those rejects, the SC64 was restored to the `gamefulltop0` baseline with EEPROM 4k direct boot. Confirmation captures: `diagnostics/captures/after_restore_gamefulltop0_wait5_20260510.png` and `diagnostics/captures/after_restore_gamefulltop0_wait15_20260510.png`.
+
+A cleaner RLE workload candidate was then built by splitting existing zero-value RLE runs instead of changing decoded pixels:
+
+```text
+artifacts/generated/TND64_480i_frontbuf_padorigin_watch_hud_menutable_menuxy_tndgeview_physicalfb_camfullheight_gamefulltop0_gunsplit259f4_reserve58000_core_no_menu.z64
+MD5: 3f70b554d8363112d1cc03e7cf53a62c
+N64 CRC: CD6790DE 0FA4B3BD
+```
+
+This candidate keeps the decoded 640x430 pad-origin gunbarrel bitmap identical to the prior clean baseline, but inflates the encoded RLE stream from `0x1A672` to `0x259F4` by adding `22977` extra zero-run records (`decoded_pixels_modified: 0`). Gopher64 survived 85 seconds and reached the watch/gameplay path (`reports/smoke/smoke_gunsplit259f4_input_until52_20260510.json`). The ROM was uploaded to SC64 with EEPROM 4k and is currently the live console build.
+
+Hardware captures:
+
+- Startup spot checks: `diagnostics/captures/after_gunsplit259f4_upload_boot_20260510.png`, `diagnostics/captures/after_gunsplit259f4_wait5_20260510.png`, `diagnostics/captures/after_gunsplit259f4_wait15_20260510.png`.
+- Controlled power-cycle video: `diagnostics/captures/videos/gunsplit259f4_powercycle_startup_20260510.mp4`.
+- Contact sheet: `diagnostics/captures/contact_sheets/gunsplit259f4_powercycle_startup_20260510_sheet.jpg`.
+- Motion cadence report: `reports/motion_cadence_gunsplit259f4_powercycle_20260510.json` measured about `6.608` updates/sec for the broad `28-45s` segment and `7.316` updates/sec for the later `35-52s` segment. This suggests the run-split idea can affect cadence, but the segment alignment needs user visual confirmation against the real gunbarrel.
+
+Operational note: the disk filled while recording FFV1 captures. Large generated non-reference `.mkv` files under `diagnostics/captures/videos` were removed, preserving reports, still captures, contact sheets, ROMs, docs, and the reference/user clips. Future captures should use compressed H.264/MP4 unless lossless is specifically needed.
+
+Follow-up emulator-only note: the gameplay-good baseline still has `direct render dimensions table 1` at stock `440x330` (`0x4F35C = 0x01B8014A`) while table 0 is `640x480`. Three one-word table-1 probes were generated from the physicalfb baseline:
+
+- `physicalfb_dim1`: `0x4F35C = 0x028001E0`, MD5 `eaea60e5c6a33106ff7ed29600a77d37`.
+- `physicalfb_dim1width`: `0x4F35C = 0x0280014A`, MD5 `b6cb6785708e8e911273fe3b906dd13b`.
+- `physicalfb_dim1height`: `0x4F35C = 0x01B801E0`, MD5 `2b2ab3e7fa3fd3209315bc88de45ddef`.
+
+All three survived Gopher64 smoke but remained on the TND logo after 85 seconds with input (`reports/smoke/smoke_physicalfb_dim1_input_until52_20260510.json` and `reports/smoke/smoke_physicalfb_dim1_split_input_until52_20260510.json`). Do not upload these table-1 static patches without a more targeted runtime or callsite-specific guard.
+
+Exact GE 480i title asset follow-up: the GE 480i gunbarrel RLE at `0x2A4D50` was appended exactly to the `gamefulltop0` baseline and redirected through the existing 640x430 title path:
+
+```text
+artifacts/generated/TND64_480i_gamefulltop0_ge480i_titleasset_exact_20260510.z64
+MD5: c48310588beb3ac33373ca378c27e902
+N64 CRC: CD6673DE C4A34147
+```
+
+Hardware result: reject as a gameplay-safe baseline. It booted and reached the title path, but the live GV-USB2 state after return showed persistent gameplay corruption: a left-side world view, large grayscale/right-side residue, top color bars, and a blue bottom band. The capture evidence is `diagnostics/captures/current_state_after_return_20260510.png` and `diagnostics/captures/contact_sheets/current_live_ingame_after_return_20260510_sheet.jpg`. The console was restored to `gamefulltop0` afterward; confirmation capture is `diagnostics/captures/after_restore_gamefulltop0_return_wait8_20260510.png`.
+
+The exact GE asset result means the visible gunbarrel problem is not solved by copying the source RLE bitmap alone. It also suggests the title decode/draw path can leave persistent display state damage, so future title-asset candidates should be treated as hardware-risky until they pass an emulator smoke and a short hardware startup/gameplay capture.
+
+Backdrop transform follow-up: a targeted matrix of `insert_sight_backdrop_eye_intro` patches was generated with `scripts/build_tnd480i_backdrop_matrix.py`. The tested knobs were early return, X/Y scale, and the X/Y translate addends at ROM offsets `0x3C6CC`, `0x3C6DC`, `0x3C734/0x3C744`, and `0x3C738/0x3C740`.
+
+Gopher64 result: reject the family for now. All variants survived 36 seconds, but the labeled sheet `diagnostics/captures/contact_sheets/backdrop_matrix_gopher36_20260510.jpg` showed the exact-asset baseline cleaner than the backdrop skip/scale/translate variants. Several variants exposed two white circles in the sampled gunbarrel phase, so there is no hardware-worthy improvement. Report: `reports/smoke/smoke_ge480i_titleasset_backdrop_matrix_36s_20260510.json`.
+
+Front z-buffer follow-up: a two-word `frontzbuf` overlay was tested from the current `gamefulltop0` fallback to see whether matching GE's front-title z-buffer dimensions would reduce the title/gunbarrel mismatch:
+
+```text
+artifacts/generated/TND64_480i_frontbuf_padorigin_watch_hud_menutable_menuxy_tndgeview_physicalfb_camfullheight_gamefulltop0_frontzbuf_reserve58000_core_no_menu.z64
+```
+
+It changes only:
+
+- `0x4D42C`: `0x240501B8 -> 0x24050280`
+- `0x4D434`: `0x2406014A -> 0x240601E0`
+
+Hardware result: reject. The ROM booted and looped through logos/gunbarrel/credits, but the front/title path had heavy horizontal white striping and the motion cadence did not improve toward GE 480i. Evidence:
+
+- Startup video: `diagnostics/captures/videos/frontzbuf_retest_powercycle_20260510.mkv`
+- Contact sheet: `diagnostics/captures/contact_sheets/frontzbuf_retest_powercycle_labeled_20260510.jpg`
+- Motion report: `reports/capture_cadence/motion_frontzbuf_retest_vs_refs_20260510.json`
+- Restore confirmation after rejection: `diagnostics/captures/current/after_restore_gamefulltop0_after_frontzbuf_reject_wait8_20260510.png`
+
+Do not carry `J_front_zbuffer_480i` into the current fallback.
+
+## 2026-05-10 SC64 VI Diagnostic Note
+
+`scripts/build_sc64_vidiag.py` was used to build a direct SC64 HVI diagnostic from the current `gamefulltop0` fallback:
+
+```text
+artifacts/generated/TND64_480i_frontbuf_padorigin_watch_hud_menutable_menuxy_tndgeview_physicalfb_camfullheight_gamefulltop0_sc64vidiag_hvi_20260510.z64
+```
+
+The ROM booted visually in Gopher64 and on hardware, but SC64 buffer dumps at the expected BlockRAM/data-buffer locations did not contain the expected diagnostic words. `0x05001000` and nearby candidate offsets read back zero, while `0x05000000` contained unrelated data. Conclusion: direct CPU stores to the SC64 data-buffer mapping are not a reliable telemetry path here, or the hook is not executing as assumed. Rework this around the SC64 DMA/USB path used by the GE decomp-style `usb.c` code before using it for VI register truth.
+
+## 2026-05-10 Front/Menu Layout Split
+
+The broad GE 480i front/title layout transplant was split into small groups in `scripts/build_tnd480i_candidate.py`:
+
+- `J_front_layout_43a_480i`
+- `J_front_layout_460_480i`
+- `J_front_layout_float_480i`
+- `J_front_layout_y_480i`
+- `J_front_layout_4aaa_480i`
+- `J_front_layout_gridstep_480i`
+
+Short ROMs were generated from the current fallback (`fl43a`, `fl460`, `flflt`, `fly`, `fl4aaa`, `flgrid`, `fl43a460`, `flsafe`) and smoked with timed Gopher64 captures. All survived no-input startup, but the visual sheets did not show a clear front text/layout improvement. Input smokes also showed `flgrid` as a weak candidate, with noisy watch/menu behavior. Keep these offline unless a later hypothesis needs one specific cluster.
+
+Evidence:
+
+- `diagnostics/captures/contact_sheets/layout_subclusters_gopher_20260510.jpg`
+- `diagnostics/captures/contact_sheets/layout_flsafe_input_gopher_20260510.jpg`
+- `diagnostics/captures/contact_sheets/layout_individual_input_gopher_20260510.jpg`
+
+## 2026-05-10 Front Text-Box Cluster
+
+A very small front text-box probe was retested with short filenames:
+
+```text
+artifacts/generated/flbox.z64
+source: artifacts/generated/TND64_480i_gamefulltop0_frontbox_cluster_safe_20260510.z64
+```
+
+It applies only five safe GE 480i full-ROM words:
+
+- `0x3EC18`: `0x2408019B -> 0x2408024E`
+- `0x3EC1C`: `0x240F0033 -> 0x240F004A`
+- `0x3EC44`: `0x240A0075 -> 0x240A00AA`
+- `0x3EC5C`: `0x24060033 -> 0x2406004A`
+- `0x3EC78`: `0x240E0054 -> 0x240E007A`
+
+Gopher64 survived and hardware booted/looped, but the credits and gunbarrel remained essentially stock-like and the visible front text issue did not materially improve. Reject as non-improving. The console was restored to `gamefulltop0` afterward.
+
+Evidence:
+
+- `diagnostics/captures/contact_sheets/frontbox_noinput_gopher_20260510.jpg`
+- `diagnostics/captures/contact_sheets/flbox_powercycle_startup_20260510_sheet.jpg`
+- `diagnostics/captures/contact_sheets/flbox_live_followup_20260510_sheet.jpg`
+- `diagnostics/captures/current/after_restore_gamefulltop0_after_flbox_reject_20260510.png`
+
+## 2026-05-10 GE Decomp Refresh and Hlimit Canary
+
+The user pointed out the upstream GE decomp at `https://github.com/n64decomp/007`; a fresh local checkout now lives at:
+
+```text
+C:\Users\codex\Documents\GitHub\007
+```
+
+Key title/gameplay mapping from that source:
+
+- `src/fr.c` programs the VI context from `g_ViBackData` after higher-level code calls `viSetXY`, `viSetBuf`, `viSetViewSize`, and `viSetViewPosition`.
+- `src/game/bondview.c` is still the strongest guide for gameplay viewport work; it separates buffer dimensions from view size/position.
+- `src/game/title.c` shows the gunbarrel is layered: `manipulateGunbarrelAndLogoMatrices` draws the moving gunbarrel/logo, then the state machine can draw `insert_sniper_sight_eye_intro` and `insert_sight_backdrop_eye_intro` in several phases before and after the blood overlay.
+- `src/game/lvl.c` resets non-title stage loading through `viSetVideoMode(MD_NORMAL)`, which explains why gameplay and title/front experiments can have different failure modes.
+
+The current fallback already includes the direct front `viSetXY`/`viSetBuf` words and expanded menu dimension words, so three new direct overlays were intentionally no-ops:
+
+```text
+artifacts/generated/gamefulltop0_expandedmenu_current_20260510.z64
+artifacts/generated/gamefulltop0_frontxy_expandedmenu_current_20260510.z64
+artifacts/generated/gamefulltop0_frontxybuf_expandedmenu_current_20260510.z64
+MD5 for all three: 17d4ea3194d02d5ea121b1e42aa59469
+```
+
+A one-word title/menu height-limit canary was added as `front_height_limit_480i_only`:
+
+```text
+artifacts/generated/gamefulltop0_hlimit_current_20260510.z64
+MD5: b68122a8982d25305046caef3398f207
+N64 CRC: CD6799C2 7544831F
+Report: reports/tnd480i_gamefulltop0_hlimit_current_20260510_report.json
+Only direct patch: 0x46F18, 0x2418014A -> 0x241801E0
+```
+
+Gopher64 process-smoked this ROM without exit (`reports/smoke/smoke_gamefulltop0_hlimit_noinput52_20260510.json`), but the local emulator visual capture path was degraded during the smoke: ffmpeg `gdigrab` failed with error 5, Pillow `ImageGrab` failed, and the Win32 `PrintWindow` fallback captured only the Gopher64 title bar plus black client area (`reports/smoke/smoke_hlimit_printwindow20_20260510.json`).
+
+Hardware follow-up with the capture-then-Kasa-cycle helper rejected this canary as a gunbarrel/title fix. The clip reaches the title/credits loop and looks materially like the fallback: the double aperture remains and red timing is unchanged (`40.307s` vs fallback `40.340s`). Evidence:
+
+- `diagnostics/captures/videos/hlimit_current_coldboot_20260510.mp4`
+- `diagnostics/captures/contact_sheets/hlimit_current_coldboot_20260510_sheet.jpg`
+- `diagnostics/captures/contact_sheets/hlimit_current_gunbarrel_24_60_2fps_20260510.jpg`
+- `reports/capture_cadence/motion_hlimit_current_vs_helper_fallback_20260510.json`
+
+Do not keep spending hardware cycles on the plain `front_height_limit_480i_only` patch by itself.
+
+Next title direction: isolate title state-machine layers around `insert_sniper_sight_eye_intro` and `insert_sight_backdrop_eye_intro` by callsite, using the current fallback as base. Global title blitter edits, global z-buffer/front-buffer edits, whole-asset swaps, and the single height-limit change have already shown bad hardware side effects or no useful gunbarrel effect.
+
+## 2026-05-10 Early Title Layer Isolation
+
+Using the GE decomp state-machine map, early callsite skip groups were added for the layers before the post-blood states:
+
+| Layer | State 1 | State 2 | State 3 |
+|---|---:|---:|---:|
+| `insert_sniper_sight_eye_intro` | `0x3DEB4` | `0x3DF58` | `0x3E00C` |
+| `insert_sight_backdrop_eye_intro` | `0x3DEBC` | `0x3DF60` | `0x3E014` |
+
+Generated ROMs from the current fallback:
+
+| ROM | MD5 | N64 CRC | Patches |
+|---|---|---|---:|
+| `gamefulltop0_skip_case1_sniper_20260510.z64` | `dbe6af2893c3b2a33977d07937756a12` | `F367A65A C7CCE752` | 1 |
+| `gamefulltop0_skip_case1_backdrop_20260510.z64` | `ca5ea150976e2c4665f369dc01d13113` | `F367A45E 3082C162` | 1 |
+| `gamefulltop0_skip_case1_layers_20260510.z64` | `dc3ed2a7e7d9f9ab26c542d22627d24b` | `ECE7BA5A 441178C0` | 2 |
+| `gamefulltop0_skip_cases1_3_sniper_20260510.z64` | `a45b83f5b84d807180ad0a75dbe764e2` | `ECE7C4DE 40F37420` | 3 |
+| `gamefulltop0_skip_cases1_3_backdrop_20260510.z64` | `add0de788c4b2db436c8e8eb99854870` | `ECE7C2DE 4DBADBF2` | 3 |
+
+All five survived Gopher64 process smokes, but visuals remain unavailable from emulator capture in the current session.
+
+Hardware follow-up first tested the narrowest backdrop canary, `gamefulltop0_skip_case1_backdrop_20260510.z64`. It booted and looped through title/gunbarrel/credits (`diagnostics/captures/contact_sheets/skip_case1_backdrop_powercycle_startup_20260510_sheet.jpg`), but the useful clip started after the beginning of the coldboot path and did not show a compelling improvement. A subsequent attempt to record a coldboot clip by starting ffmpeg in the background failed with exit `-5`, and the immediate capture afterward was black. The SC64 menu was recovered and the current fallback restored.
+
+After adding `scripts/hardware/record_gvusb2_kasa_cycle.ps1`, the wider backdrop canary `gamefulltop0_skip_cases1_3_backdrop_20260510.z64` was tested with a true capture-then-Kasa-cycle recording. It also looked materially like the fallback: the double white aperture phase and stock-like gunbarrel timing remained visible in `diagnostics/captures/contact_sheets/skip_cases1_3_backdrop_coldboot_20260510_sheet.jpg`. The cadence analyzer reported essentially unchanged red timing on the same helper workflow: fallback first sustained red `40.340s`, backdrop-skip first sustained red `40.174s` (`reports/capture_cadence/motion_skip_cases1_3_backdrop_vs_helper_fallback_20260510.json`).
+
+The complementary `gamefulltop0_skip_cases1_3_sniper_20260510.z64` canary was then captured with the same helper. It removed the normal gunbarrel/title progression and left the intro stuck on a small white crescent for the rest of the 82-second clip (`diagnostics/captures/contact_sheets/skip_cases1_3_sniper_coldboot_20260510_sheet.jpg`). The cadence analyzer found no sustained red phase (`reports/capture_cadence/motion_skip_cases1_3_sniper_20260510.json`).
+
+Conclusion: the sniper/RLE layer is essential to advance the state-machine visuals and cannot simply be skipped. The useful insight is narrower: the double-aperture problem is not from the backdrop layer alone, and the fix probably needs to adjust how `insert_sniper_sight_eye_intro` computes/draws its RLE slice under the 480i dimensions rather than removing or replacing the whole layer.
+
+## 2026-05-10 Sniper/RLE Slice Argument Canaries
+
+The next canaries kept `insert_sniper_sight_eye_intro` alive and changed only the argument setup immediately before its call to `sub_GAME_7F007CC8`.
+
+Divisor probes changed the `1280.0f` high word at `0x3C95C`:
+
+| ROM | MD5 | N64 CRC | Patch |
+|---|---|---|---|
+| `gamefulltop0_sniper_div640_20260510.z64` | `1ba3dfa574477439e97b9ab2e712208c` | `CD6798DE 9FD2A8B7` | `0x3C0144A0 -> 0x3C014420` |
+| `gamefulltop0_sniper_div960_20260510.z64` | `f41a7ad5776641b93793b8de5ac64d0d` | `CD6798FE E6DBBD85` | `0x3C0144A0 -> 0x3C014470` |
+| `gamefulltop0_sniper_div2560_20260510.z64` | `ac27081891a4f69ca0d40eabf4aad462` | `CD6798DE 47E115B8` | `0x3C0144A0 -> 0x3C014520` |
+
+All three process-smoked in Gopher64 (`reports/smoke/smoke_sniper_divisors_20260510.json`) and booted on hardware. They reached the title/credits path, but none removed the paired white aperture or produced a GE 480i-like cadence shift. Evidence:
+
+- `diagnostics/captures/contact_sheets/sniper_div640_coldboot_20260510_sheet.jpg`
+- `diagnostics/captures/contact_sheets/sniper_div960_coldboot_20260510_sheet.jpg`
+- `diagnostics/captures/contact_sheets/sniper_div2560_coldboot_20260510_sheet.jpg`
+- `reports/capture_cadence/motion_sniper_div640_vs_helper_fallback_20260510.json`
+- `reports/capture_cadence/motion_sniper_div960_vs_helper_fallback_20260510.json`
+- `reports/capture_cadence/motion_sniper_div2560_vs_helper_fallback_20260510.json`
+
+The second group changed the final x argument at `0x3C980`, replacing `mfc1 a1,f18` with constant `a1` values:
+
+| ROM | MD5 | N64 CRC | Patch |
+|---|---|---|---|
+| `gamefulltop0_sniper_x0_20260510.z64` | `148ee74db44750692d5c1e5693156177` | `CD6D49DE 0E96ACFD` | `0x44059000 -> 0x00002825` |
+| `gamefulltop0_sniper_xleft160_20260510.z64` | `68657693a9e4d1f1b71e619647eec008` | `8D6647DE C9E7394F` | `0x44059000 -> 0x2405FF60` |
+| `gamefulltop0_sniper_xright160_20260510.z64` | `f34fc3e88a6bea4a2832e4a69c092d9c` | `8D67B9DE 9360E9F4` | `0x44059000 -> 0x240500A0` |
+
+All three process-smoked in Gopher64 (`reports/smoke/smoke_sniper_xargs_20260510.json`) and booted on hardware. They are rejected as fixes, but they proved that the RLE slice is composited separately from the moving barrel layer: forcing or biasing `a1` visibly separates the two barrel images. Evidence:
+
+- `diagnostics/captures/contact_sheets/sniper_x0_coldboot_20260510_sheet.jpg`
+- `diagnostics/captures/contact_sheets/sniper_xleft160_coldboot_20260510_sheet.jpg`
+- `diagnostics/captures/contact_sheets/sniper_xright160_coldboot_20260510_sheet.jpg`
+- `reports/capture_cadence/motion_sniper_x0_vs_helper_fallback_20260510.json`
+- `reports/capture_cadence/motion_sniper_xleft160_vs_helper_fallback_20260510.json`
+- `reports/capture_cadence/motion_sniper_xright160_vs_helper_fallback_20260510.json`
+
+Updated conclusion: this is not a simple sniper-slice divisor problem. The double-barrel symptom is a two-layer composition problem between `insert_sniper_sight_eye_intro` and the moving gunbarrel layer. The next title candidates should target when the RLE slice layer is drawn, which source/destination state it uses, or the display-list state around the layer handoff, rather than shifting its final x coordinate.
+
+## 2026-05-10 Internal RLE and Moving-Barrel Display-List Canaries
+
+The next probes separated the inner RLE blit from the moving gunbarrel display-list draws in `src/game/title.c`.
+
+| ROM | MD5 | N64 CRC | Direct patch |
+|---|---|---|---|
+| `gamefulltop0_sniper_internal_rle_skip_20260510.z64` | `7af2e7bb1c53f3ef5b423a78a7dbccac` | `CE67A5DA A1AD2863` | `0x3C984: jal sub_GAME_7F007CC8 -> move v0,s0` |
+| `gamefulltop0_moving_skip_prebarrel_20260510.z64` | `b468a4d4460c9f92b645b31919d7415a` | `ED6795DE D941C24E` | `0x3C624: lui t8,0x0600 -> addiu t8,zero,0` |
+| `gamefulltop0_moving_skip_postbarrel_20260510.z64` | `fd5e75b9f3bc940a9807810eb3e51a8d` | `ED6795DE 394185AD` | `0x3C68C: lui t7,0x0600 -> addiu t7,zero,0` |
+| `gamefulltop0_moving_skip_bothbarrels_20260510.z64` | `a6e42abfdf7bed3dabb9ff2ea43bf109` | `9D67ADDE CB6F1824` | both moving display-list suppressions |
+
+All four process-smoked in Gopher64 (`reports/smoke/smoke_internal_rle_and_moving_barrel_skips_20260510.json`) and were hardware-tested with capture-then-Kasa-cycle clips.
+
+The internal-RLE skip is not a final patch because it removes too much gunbarrel art and advances the red phase too early, but it is the clearest diagnostic so far: the doubled rifled-barrel/RLE image largely disappears when the call at `0x3C984` is bypassed. That makes `sub_GAME_7F007CC8` or the `sub_GAME_7F01B240` blitter/source state the primary target. Evidence:
+
+- `diagnostics/captures/contact_sheets/sniper_internal_rle_skip_coldboot_20260510_sheet.jpg`
+- `reports/capture_cadence/motion_sniper_internal_rle_skip_vs_helper_fallback_20260510.json` (`first_sustained_red`: fallback `40.340s`, canary `38.172s`)
+
+The moving display-list suppressions are also rejects as fixes. They reduce some early paired-dot/aperture clutter and preserve more art than the internal-RLE skip, but the cadence remains stock-like:
+
+- `diagnostics/captures/contact_sheets/moving_skip_prebarrel_coldboot_20260510_sheet.jpg`, red `40.440s`
+- `diagnostics/captures/contact_sheets/moving_skip_postbarrel_coldboot_20260510_sheet.jpg`, red `40.474s`
+- `diagnostics/captures/contact_sheets/moving_skip_bothbarrels_coldboot_20260510_sheet.jpg`, red `40.407s`
+
+Updated conclusion: the useful fix is unlikely to be another whole-layer skip. The RLE path must remain active enough to advance the intro, but its source rectangle, destination rectangle, clipping, or per-state draw timing needs to be corrected for the 480i/front-buffer dimensions so it does not composite a second misaligned gunbarrel over the moving layer.
+
+## 2026-05-10 Single-State Sniper and RLE Color Canaries
+
+The narrow state-1 sniper skip was tested after the wider state-1-3 sniper skip to verify whether only the first pre-blood sniper/RLE call was expendable:
+
+| ROM | MD5 | N64 CRC | Result |
+|---|---|---|---|
+| `gamefulltop0_skip_case1_sniper_20260510.z64` | `dbe6af2893c3b2a33977d07937756a12` | `F367A65A C7CCE752` | Reject: strands the intro on a small crescent and never reaches sustained red. |
+
+Evidence:
+
+- `diagnostics/captures/videos/skip_case1_sniper_coldboot_20260510.mp4`
+- `diagnostics/captures/contact_sheets/skip_case1_sniper_coldboot_20260510_sheet.jpg`
+- `reports/capture_cadence/motion_skip_case1_sniper_vs_helper_fallback_20260510.json`
+
+The next probes kept the RLE blit active but replaced the three end-color loads for `D_8002A7E8` before the `sub_GAME_7F007CC8` call at `0x3C984`. They test whether the doubled rifled layer is mostly the bright end of the grayscale ramp.
+
+| ROM | MD5 | N64 CRC | End color |
+|---|---|---|---:|
+| `gamefulltop0_sniper_rle_endcolor0_20260510.z64` | `c465c11faec8be0f8e4f389a02fb41ed` | `E81C7992 D3503108` | `0x00` |
+| `gamefulltop0_sniper_rle_endcolor32_20260510.z64` | `dd0a0cba5b692cfc24e78f9ecaff8a97` | `38E79981 5FE5BF84` | `0x20` |
+| `gamefulltop0_sniper_rle_endcolor128_20260510.z64` | `22e65ee67c5dfe5a19d3785ef27cf5cb` | `38E79AC1 5D09DD3D` | `0x80` |
+
+Evidence:
+
+- `reports/smoke/smoke_sniper_rle_endcolors_20260510.json`
+- `diagnostics/captures/contact_sheets/sniper_rle_endcolor0_coldboot_20260510_sheet.jpg`
+- `diagnostics/captures/contact_sheets/sniper_rle_endcolor32_coldboot_20260510_sheet.jpg`
+- `diagnostics/captures/contact_sheets/sniper_rle_endcolor128_coldboot_20260510_sheet.jpg`
+- `reports/capture_cadence/motion_sniper_rle_endcolors_vs_helper_fallback_20260510.json`
+
+Result: `endcolor0` and `endcolor32` largely suppress the doubled RLE/rifling layer while preserving progression through the red/title/credits sequence, but they also remove too much barrel art. `endcolor128` keeps the doubled look. All three remain stock-like in cadence: fallback first sustained red `40.340s`, `endcolor0` `40.307s`, `endcolor32` `40.474s`, and `endcolor128` `40.507s`.
+
+Updated conclusion: RLE color ramp control is useful as a visual diagnostic and may become part of a selective/per-state cleanup, but it does not create the GE 480i-style gunbarrel slowdown. The remaining cadence problem is still likely in the front/title render workload, VI/framebuffer path, or state timing around the gunbarrel sequence.
+
+## 2026-05-11 Gunbarrel Case-1 Timing Canaries
+
+The next pass isolated the state-machine timing in `sub_GAME_7F009254` case 1. In the fallback ROM, the Bond-on-screen phase calls `insert_sniper_sight_eye_intro` and `insert_sight_backdrop_eye_intro`, then decrements `g_TitleX` by loading the NTSC `5.8183274f` constant through the instructions at ROM `0x3DF04/0x3DF08`. The timing canary replaces only those two instructions with a literal `3.625f` decrement and keeps the `-80.0f` threshold at `0x3DF0C/0x3DF10` intact.
+
+| ROM | MD5 | N64 CRC | Result |
+|---|---|---|---|
+| `gamefulltop0_gunbarrel_case1_slow3625_20260510.z64` | `5b5d99331565d65ef13e7e255fe372d7` | `CD26F5CF BD500799` | Useful diagnostic: delays first sustained red from fallback `40.340s` to `45.078s`, giving the expected slower Bond-on-screen gunbarrel phase, but the doubled RLE barrel remains. |
+| `gamefulltop0_gunbarrel_slow3625_endcolor64_20260510.z64` | `96c05a35d0d064814a2613487fd1951a` | `3826F4CE 0020B8DC` | Reject as final: preserves the slow timing (`45.045s`) and dims the duplicate layer, but the barrel art is too dark/underpowered. |
+| `gamefulltop0_gunbarrel_slow3625_endcolor96_20260510.z64` | `c42feb1742b8eed834bc1b82dd87504c` | `3826F44E 3FE40BE9` | Reject as final: survives emulator and hardware, with slow timing (`44.745s`), but still leaves an underpowered/miscomposited barrel and does not solve the duplicate aperture/rifling problem cleanly. |
+
+Evidence:
+
+- `reports/smoke/smoke_gunbarrel_case1_slow3625_20260510.json`
+- `reports/smoke/smoke_gunbarrel_slow3625_endcolor64_20260510.json`
+- `reports/smoke/smoke_gunbarrel_slow3625_endcolor96_20260510.json`
+- `diagnostics/captures/contact_sheets/gunbarrel_case1_slow3625_gunbarrel_24_74_2fps_20260510.jpg`
+- `diagnostics/captures/contact_sheets/gunbarrel_slow3625_endcolor64_gunbarrel_24_74_2fps_20260510.jpg`
+- `diagnostics/captures/contact_sheets/gunbarrel_slow3625_endcolor96_gunbarrel_24_74_2fps_20260510.jpg`
+- `reports/capture_cadence/motion_gunbarrel_case1_slow3625_vs_helper_fallback_20260510.json`
+- `reports/capture_cadence/motion_gunbarrel_slow3625_endcolor64_vs_refs_20260510.json`
+- `reports/capture_cadence/motion_gunbarrel_slow3625_endcolor96_vs_refs_20260510.json`
+
+Conclusion: the GE-like gunbarrel slowdown can be mimicked by slowing the case-1 `g_TitleX` advance, so cadence is now a controllable state-machine dimension. It should not be mistaken for the full 480i fix: the visible composition failure is still the RLE/blitter layer interaction. Keep the `3.625f` timing patch available as a later polish ingredient, but the next useful work is source/destination/clipping or per-state gating around the inner RLE blit rather than more color-only or global asset tests.
+
+## 2026-05-11 Sniper Wrapper Alt-640 Blitter Canary
+
+The GE decomp comparison shows an adjacent 640-stride sibling to the active sniper/title blitter:
+
+- `sub_GAME_7F01B240` is what `insert_sniper_sight_eye_intro` reaches through the wrapper at ROM `0x3C7F8`; it advances source rows by `0x1B8` in stock GE and is globally patched by the GE 480i ROM to `0x280` plus wider texture-rectangle constants.
+- `sub_GAME_7F01B6E0` already has a `0x280` source stride and a different row loop/argument contract.
+
+Because global `K_title_draw_*` patches already froze TND's shared title blitter into vertical bars, the new canary changed only the sniper wrapper's final call at `0x3C8A4`:
+
+```text
+artifacts/generated/gamefulltop0_sniper_call_alt640_blitter_20260511.z64
+MD5: 5633d9bf60a79da22cdd2aa5b1085306
+N64 CRC: CD679BDE 85B1D274
+Direct patch: 0x3C8A4, jal sub_GAME_7F01B240 -> jal sub_GAME_7F01B6E0
+Smoke: reports/smoke/smoke_sniper_call_alt640_blitter_20260511.json
+```
+
+Hardware result: reject as a patch, but keep as a useful map clue. The ROM survives, loops through title/credits, and does not recreate the old vertical-bar freeze. The gunbarrel, however, becomes visibly worse: the RLE layer turns into a large magenta/pink miscomposited barrel over the moving aperture, with stock-like/early red timing (`39.873s` first sustained red). Evidence:
+
+- `diagnostics/captures/videos/sniper_call_alt640_blitter_coldboot_20260511.mp4`
+- `diagnostics/captures/contact_sheets/sniper_call_alt640_blitter_gunbarrel_24_74_2fps_20260511.jpg`
+- `reports/capture_cadence/motion_sniper_call_alt640_blitter_vs_refs_20260511.json`
+- `diagnostics/captures/current/after_restore_fallback_from_alt640_blitter_20260511.png`
+
+Conclusion: a callsite-specific blitter route is viable mechanically, but the raw sibling routine is not ABI-compatible enough to use directly. The next useful static target is not another raw call redirect; it is to compare `sub_GAME_7F01B240` and `sub_GAME_7F01B6E0` instruction-by-instruction and selectively borrow only the source stride, tile size, row loop, or texture-rectangle setup pieces into a guarded/callsite-specific path.
+
+## 2026-05-11 Menu05-09 and Moving-Post Promotion
+
+The best hardware branch after the slow-timing and stock-texture-setup work is now:
+
+```text
+artifacts/generated/gbslow_menu05_09_moving_post_20260511.z64
+MD5: 739ae518dddfc423482a859b63e6f33e
+N64 CRC: 735E38D7 95D565A3
+```
+
+Direct ingredients added on top of `gamefulltop0_gbslow_shared_blitter_stock_texture_setup_20260511.z64`:
+
+| Ingredient | Direct range/site | Result |
+|---|---:|---|
+| `menu05_09_safe` | `0x403DC:0x45138` | Applies 161 safe GE-enhanced-480i direct front/menu words. Gopher64 menu-flow sheets show better document/paper menu behavior than the old current-best branch. |
+| `moving_skip_post_matrix_barrel_only` | `0x3C68C` | Reduces the initial paired white aperture/dot phase while preserving the slow cadence and most moving-barrel art. |
+
+Hardware evidence:
+
+- `diagnostics/captures/videos/gbslow_menu05_09_moving_post_coldboot_20260511.mp4`
+- `diagnostics/captures/contact_sheets/gbslow_menu05_09_moving_post_gunbarrel_24_74_2fps_20260511.jpg`
+- `diagnostics/captures/contact_sheets/gbslow_menu05_09_moving_post_long_noinput_8s_20260511.jpg`
+- `reports/capture_cadence/motion_gbslow_menu05_09_moving_post_long_vs_short_20260511.json`
+
+Cadence stayed in the GE-like slow band: first sustained red `44.845s` in the short capture and `44.978s` in the long capture, with white-to-red just under six seconds. The long no-input recording still loops title/credits/gunbarrel and does not reach gameplay/demo, so intro/gameplay proof still requires emulator automation or user-driven console input.
+
+The remaining visible hardware issues on this branch are not solved by the promoted ingredients: title/credits/cast composition can still clip or mirror, menu/level-select alignment is not final, and intro/gameplay framing/flicker need another driven check.
+
+Offline blitter microprobes from this branch are rejected:
+
+| ROM | Change | Result |
+|---|---|---|
+| `gbslow_menu05_09_moving_post_stock_stripsteps_20260511.z64` | Restores stock strip-step words at `0x500EC/0x500FC/0x50148/0x50168` | Startup/progression differs but no clear visual win. |
+| `gbslow_menu05_09_moving_post_stock_rowcount_20260511.z64` | Restores stock row limit at `0x501AC` | Reintroduces static/garbage in Gopher64. |
+| `gbslow_menu05_09_moving_post_stock_stride_20260511.z64` | Restores stock stride at `0x501B4` | Reintroduces static/garbage in Gopher64. |
+
+This reinforces the current callsite/blitter interpretation: TND needs the stock texture setup words, but the GE 480i-style strip/row/stride behavior is still necessary in the shared blitter context. The next work should focus on higher-level title/front state, menu layout words after `0x454E8`, and callsite-specific RLE clipping/timing rather than reverting the blitter's row-count or stride.
+
+## 2026-05-11 Display-Cast Rect/Text Rejection
+
+The display-cast/front credits path was probed from the current-best `gbslow_menu05_09_moving_post_20260511.z64` branch because the no-input hardware loop still showed clipped or mirrored cast/credits screens after the gunbarrel. Five safe-range candidates were built:
+
+| ROM | MD5 | Result |
+|---|---|---|
+| `gbslow_moving_post_displaycast_iface_20260511.z64` | `a257d6d50bb308fcf2115ccf51677070` | Gopher-safe, but visually no clear improvement over the promoted baseline. |
+| `gbslow_moving_post_displaycast_rects_20260511.z64` | `a7fa5c4ae331eaa48e45a6e9d055e15c` | Hardware reject: cadence stayed good, but the no-input front loop blanked after the gunbarrel instead of continuing into the visible cast/credits sequence. |
+| `gbslow_moving_post_displaycast_text_20260511.z64` | `e9f5548dd5b9c63a0861826880bda1bf` | Gopher reject: pushes display-cast text off the right side. |
+| `gbslow_moving_post_displaycast_rects_text_20260511.z64` | `754e115b61799c912161879a52ca47cb` | Gopher reject: same text-position failure. |
+| `gbslow_moving_post_displaycast_iface_rects_text_20260511.z64` | `c32678948da0a5d860e1de10a6af8634` | Gopher reject: same text-position failure. |
+
+Hardware evidence for the only uploaded candidate:
+
+- `diagnostics/captures/videos/gbslow_displaycast_rects_coldboot_20260511.mp4`
+- `diagnostics/captures/contact_sheets/gbslow_displaycast_rects_coldboot_8s_labeled_20260511.jpg`
+- `diagnostics/captures/contact_sheets/gbslow_displaycast_rects_gunbarrel_24_74_2fps_20260511.jpg`
+- `reports/capture_cadence/motion_gbslow_displaycast_rects_vs_moving_post_20260511.json`
+
+Conclusion: do not upload more display-cast rectangle/text overlays until the front loop state is better understood. The current-best ROM was restored to SC64 afterward.
+
+## 2026-05-11 Playability Priority Reset
+
+User testing showed the project is not yet playable enough to justify spending the next pass on gunbarrel/front polish. The new order is in-game playability first, pause/watch second, level intro/outro third, dossier/mission menu usability fourth, then front/title/gunbarrel/logos/demos.
+
+The live console candidate was changed to:
+
+```text
+artifacts/generated/game_h460_top10_current.z64
+MD5: 892cbd5e8253e9cc3c6c4c4645bd69c0
+N64 CRC: CD679836 961D35FD
+```
+
+This candidate is based on the last solid gameplay/watch fallback, not the later gunbarrel/menu branch. It changes only the normal gameplay viewport height/top pair:
+
+| Offset | Change | Purpose |
+|---:|---|---|
+| `0xBB91C` | `480 -> 460` | non-camera default viewport height |
+| `0xBB954` | `480 -> 460` | non-camera fallback viewport height |
+| `0xBBA80` | `0 -> 10` | non-camera default viewport top |
+
+Hardware sanity after upload showed TND credits output at `diagnostics/captures/current/after_upload_game_h460_top10_wait10_20260511.png`. Gopher64 input evidence is `diagnostics/captures/contact_sheets/game_viewport_centering_input70_20260510.jpg`.
+
+Next useful work: test Bazaar on hardware for top/bottom flicker, overscan, text boxes, countdown placement, and watch flicker. If it is still too tall, try the already-built `game_h440_top20_current.z64`. If it regresses, roll back to `TND64_480i_frontbuf_padorigin_watch_hud_menutable_menuxy_tndgeview_physicalfb_camfullheight_gamefulltop0_reserve58000_core_no_menu.z64`.
