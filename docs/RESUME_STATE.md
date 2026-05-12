@@ -638,6 +638,8 @@ N64 CRC: 84B7F86D A3B63A65
 
 This is the first hardware test candidate. It reverts only the compressed front/menu display tables at raw main offsets `0x9C3C-0x9D24` and `0xA240-0xA264` to stock TND values. The current gameplay crop words at `0xBB91C`, `0xBB954`, and `0xBBA80` are unchanged, as are the direct front 480i words, watch/pause/HUD text work, and the already-rejected `J_mission_select_text_480i` offsets. Gopher no-input capture was inconclusive because the unmodified `game_h460_top10_current.z64` produced the same black capture behavior in the current RDP/Gopher capture path.
 
+Hardware result: promote as current best. User reported the mission text misalignment appears resolved, and the ROM appears to keep the same level stability as the previous h460/top10 baseline. Hotel still has the rainbow/prism flashing issue, and Stealth Boat freezes during the intro cutscene. The file-select screen background remains misaligned and does not match stock TND64 or the stock 480i patch; fix that next as a narrow file-select/background pass.
+
 Fallback only if the table-only candidate still has unusable dossier/classification layout:
 
 ```text
@@ -647,3 +649,7 @@ N64 CRC: 84B7F529 15121F51
 ```
 
 This broader fallback also restores direct front/menu sizing words at `0x4DAE0`, `0x4DAE8`, `0x4DAEC`, `0x4DAF4`, `0x106ED4`, `0x106EE4`, `0x106EF0`, `0x106F10`, and `0x106F24` to stock. It is more likely to make front screens stock-looking, but it changes more of the front path, so do not test it before `stock_dossier_tables`.
+
+Hardware result: reject. User reported it regressed too hard and made the Bazaar-style blue outline render issue appear on Wreck, which previously worked. Do not use this as a base.
+
+Current screen taxonomy to keep in mind for future context gathering: Board classification, TJ logo, Rare logo, right-moving white circle effect, left-moving gunbarrel, intro character credits, dossier/file select, singleplayer/multiplayer/cheats screen, mission-select dossier, difficulty select, briefing/objectives, level intro, in-game, pause/watch, level outro, and mission-complete dossier.
