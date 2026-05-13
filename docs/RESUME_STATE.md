@@ -670,30 +670,30 @@ All are MPEG2 `720x480`, `29.97fps`, top-field-first interlaced captures from GV
 TND6480i timestamp index:
 
 ```text
-00:00 CMK Board Game of Classification
-00:04 TiJayFly Logo
-00:12 Rare Logo
-00:16 Gunbarrel
-00:37 TND Logo
-00:41 Opening Credits
-01:14 File Select Dossier Screen
-01:28 Single/Multiplayer/Cheat Select
-01:38 Mission Select
-01:46 Difficulty Select
-01:55 Mission Briefing
-02:01 Bazaar
-03:40 Party
-04:17 Labs
-06:44 Press
-09:50 Hotel
-10:56 Parkhaus
-13:32 Wreck
-16:04 Tower
-16:48 City
-17:39 Boat
-18:09 Bridge
-24:25 Volcano
-25:00 Alaska
+00:00 CMK Board Game of Classification - unsure
+00:04 TiJayFly Logo - unsure
+00:12 Rare Logo - unsure
+00:16 Gunbarrel - not 480i
+00:37 TND Logo - not 480i
+00:41 Opening Credits - not scaled right / runs offscreen compared to regular
+01:14 File Select Dossier Screen - not 480i
+01:28 Single/Multiplayer/Cheat Select - not 480i
+01:38 Mission Select - not 480i
+01:46 Difficulty Select - not 480i
+01:55 Mission Briefing - not 480i
+02:01 Bazaar - 480i with top/bottom flickering
+03:40 Party - does not load; appears to hard-lock console and requires power cycle
+04:17 Labs - crashes/freezes upon recorder pickup; item-get sound can be heard; reset is enough to recover
+06:44 Press - seems to work fine
+09:50 Hotel - rainbow/prism flashing corruption
+10:56 Parkhaus - seems to work fine
+13:32 Wreck - seems to work fine
+16:04 Tower - crashes during level intro; reset is enough to recover
+16:48 City - does not load; appears to lock up and requires power cycle
+17:39 Boat - crashes during level intro
+18:09 Bridge - seems to work fine
+24:25 Volcano - rainbow/prism flashing corruption
+25:00 Alaska - seems to work fine
 ```
 
-Use this clip as an atlas for screen-family analysis and avoid brute-force hardware uploads. Compare each screen family against stock TND64 and GE480i references before building a new candidate.
+Use this clip as an atlas for screen-family analysis and avoid brute-force hardware uploads. The user's highest priority is now making the rest of the romhack playable. The only front-end/menu fix to preserve is the already-promoted dossier table stock revert; other non-pause menu scaling can wait. Next analysis should compare working levels (`Press`, `Parkhaus`, `Wreck`, `Bridge`, `Alaska`) against failing/corrupt levels (`Party`, `Labs recorder pickup`, `Hotel`, `Tower intro`, `City`, `Boat intro`, `Volcano`) and identify whether the breakage is tied to level intro/camera paths, framebuffer selection, or level-specific assets/effects.

@@ -39,7 +39,17 @@ Date: 2026-05-08
     - Previous h460 canary: `artifacts/generated/game_h460_top10_current.z64` (`MD5 892cbd5e8253e9cc3c6c4c4645bd69c0`, `N64 CRC CD679836 961D35FD`).
     - Most stable gameplay/pause rollback: `artifacts/generated/TND64_480i_frontbuf_padorigin_watch_hud_menutable_menuxy_tndgeview_physicalfb_camfullheight_gamefulltop0_reserve58000_core_no_menu.z64` (`MD5 17d4ea3194d02d5ea121b1e42aa59469`, `N64 CRC CD6799DE DAD61991`).
     - Rejected broader dossier/classification probe: `artifacts/generated/game_h460_top10_stock_front_dossier_current.z64` (`MD5 b712eee26aca645d225b7cbf3d449cc3`, `N64 CRC 84B7F529 15121F51`). User hardware feedback: it regressed too hard and caused the Bazaar-style blue outline render issue to appear on Wreck, which previously worked. Do not use it as a base.
-  - Current front-end issue on the active/best canary: file-select background is still misaligned and does not look like stock TND64 or the stock 480i patch. The next narrow probe should target the file-select/background path only, starting from `game_h460_top10_stock_dossier_tables_current.z64`.
+  - Current front-end issue on the active/best canary: file-select background is still misaligned and does not look like stock TND64 or the stock 480i patch. However, user priority is now playability over menu/front polish, so do not spend the next quota on this unless it is an easy side effect of a safer fix.
+  - Current playability priority from the LightCapture atlas:
+    - Highest priority: make the romhack playable beyond the currently stable levels. Other menus aside from the already-scaled pause/watch and promoted dossier-table fix can wait.
+    - Good/mostly good levels: Press, Parkhaus, Wreck, Bridge, Alaska.
+    - Bazaar: 480i but top/bottom flicker remains.
+    - Party: does not load and appears to hard-lock the console; requires power cycle.
+    - Labs: freezes when recorder is picked up; item-get sound can be heard; reset recovers.
+    - Hotel and Volcano: rainbow/prism flashing corruption.
+    - Tower and Boat: crash during level intro; Tower reset recovers.
+    - City: does not load and appears to hard-lock; requires power cycle.
+    - Next analysis should compare working vs failing level segments in the LightCapture clips before making another ROM candidate.
   - The user-provided complete save `C:\Users\codex\Documents\007 - Tomorrow Never Dies (USA).sav` is a 512-byte EEPROM image (`MD5 f02bb8224a4dc25079721d7a3f0d38e0`). It has been padded to 2048 bytes and imported into Gopher64 save slots for the active canary, rollback ROM, `TND64_enh480i_core_no_menu_pigz`, and baseline TND.
   - Emulator automation with that save still lands in Bazaar, not Party. The latest probe is `reports/smoke/smoke_party_route_probe2_h460_downspam_20260511.json`.
   - Gopher evidence: `diagnostics/captures/contact_sheets/game_viewport_centering_input70_20260510.jpg` and `reports/smoke/smoke_game_viewport_centering_input70_20260510.json`.
