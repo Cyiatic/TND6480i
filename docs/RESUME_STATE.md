@@ -653,3 +653,47 @@ This broader fallback also restores direct front/menu sizing words at `0x4DAE0`,
 Hardware result: reject. User reported it regressed too hard and made the Bazaar-style blue outline render issue appear on Wreck, which previously worked. Do not use this as a base.
 
 Current screen taxonomy to keep in mind for future context gathering: Board classification, TJ logo, Rare logo, right-moving white circle effect, left-moving gunbarrel, intro character credits, dossier/file select, singleplayer/multiplayer/cheats screen, mission-select dossier, difficulty select, briefing/objectives, level intro, in-game, pause/watch, level outro, and mission-complete dossier.
+
+## 2026-05-12 LightCapture Reference Videos
+
+User recorded four hardware reference clips in the LightCapture output folder under `Documents`:
+
+```text
+1. GoldenEye 007.mpg
+2. GoldenEye 480i.mpg
+3. Tomorrow Never DIes 64.mpg
+4. Tomorrow Never Dies 6480i.mpg
+```
+
+All are MPEG2 `720x480`, `29.97fps`, top-field-first interlaced captures from GV-USB2/S-video. The TND6480i clip is confirmed to be `game_h460_top10_stock_dossier_tables_current.z64`, now the current best base.
+
+TND6480i timestamp index:
+
+```text
+00:00 CMK Board Game of Classification
+00:04 TiJayFly Logo
+00:12 Rare Logo
+00:16 Gunbarrel
+00:37 TND Logo
+00:41 Opening Credits
+01:14 File Select Dossier Screen
+01:28 Single/Multiplayer/Cheat Select
+01:38 Mission Select
+01:46 Difficulty Select
+01:55 Mission Briefing
+02:01 Bazaar
+03:40 Party
+04:17 Labs
+06:44 Press
+09:50 Hotel
+10:56 Parkhaus
+13:32 Wreck
+16:04 Tower
+16:48 City
+17:39 Boat
+18:09 Bridge
+24:25 Volcano
+25:00 Alaska
+```
+
+Use this clip as an atlas for screen-family analysis and avoid brute-force hardware uploads. Compare each screen family against stock TND64 and GE480i references before building a new candidate.
