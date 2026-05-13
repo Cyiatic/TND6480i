@@ -49,6 +49,7 @@ Date: 2026-05-08
     - Hotel and Volcano: rainbow/prism flashing corruption.
     - Tower and Boat: crash during level intro; Tower reset recovers.
     - City: does not load and appears to hard-lock; requires power cycle.
+    - Global cutscene issue: level cutscenes are still vertically too short / compressed. Treat this as part of the active level intro/camera/render-path problem, not as a postponed menu polish task.
     - Next analysis should compare working vs failing level segments in the LightCapture clips before making another ROM candidate.
   - The user-provided complete save `C:\Users\codex\Documents\007 - Tomorrow Never Dies (USA).sav` is a 512-byte EEPROM image (`MD5 f02bb8224a4dc25079721d7a3f0d38e0`). It has been padded to 2048 bytes and imported into Gopher64 save slots for the active canary, rollback ROM, `TND64_enh480i_core_no_menu_pigz`, and baseline TND.
   - Emulator automation with that save still lands in Bazaar, not Party. The latest probe is `reports/smoke/smoke_party_route_probe2_h460_downspam_20260511.json`.
