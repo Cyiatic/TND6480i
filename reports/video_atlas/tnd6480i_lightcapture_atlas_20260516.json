@@ -1,0 +1,2020 @@
+{
+  "video": "C:\\Users\\codex\\Documents\\Light Capture \u02dc^\u2030\u00e6\u0192t\u0192H\u0192\u2039\u0192_\\n64\\4. Tomorrow Never Dies 6480i.mpg",
+  "clip_dir": "C:\\Users\\codex\\Documents\\Light Capture \u02dc^\u2030\u00e6\u0192t\u0192H\u0192\u2039\u0192_\\n64",
+  "screen_atlas": [
+    {
+      "timestamp": "00:00",
+      "seconds": 0,
+      "label": "CMK board",
+      "family": "front",
+      "path": "diagnostics\\captures\\contact_sheets\\lightcapture_20260516\\frames\\screen_atlas\\00_0000_CMK_board.png",
+      "metrics": {
+        "mean_luma": 0.0,
+        "nonblack_ratio": 0.0,
+        "bright_ratio": 0.0,
+        "saturated_ratio": 0.0,
+        "prism_ratio": 0.0,
+        "active_bbox": null,
+        "bright_bbox": null
+      }
+    },
+    {
+      "timestamp": "00:04",
+      "seconds": 4,
+      "label": "TiJayFly logo",
+      "family": "front",
+      "path": "diagnostics\\captures\\contact_sheets\\lightcapture_20260516\\frames\\screen_atlas\\01_0004_TiJayFly_logo.png",
+      "metrics": {
+        "mean_luma": 0.001,
+        "nonblack_ratio": 1.4e-05,
+        "bright_ratio": 0.0,
+        "saturated_ratio": 0.0,
+        "prism_ratio": 0.0,
+        "active_bbox": {
+          "left": 355,
+          "top": 237,
+          "right": 360,
+          "bottom": 238,
+          "width": 5,
+          "height": 1
+        },
+        "bright_bbox": null
+      }
+    },
+    {
+      "timestamp": "00:12",
+      "seconds": 12,
+      "label": "Rare logo",
+      "family": "front",
+      "path": "diagnostics\\captures\\contact_sheets\\lightcapture_20260516\\frames\\screen_atlas\\02_0012_Rare_logo.png",
+      "metrics": {
+        "mean_luma": 0.0,
+        "nonblack_ratio": 0.0,
+        "bright_ratio": 0.0,
+        "saturated_ratio": 0.0,
+        "prism_ratio": 0.0,
+        "active_bbox": null,
+        "bright_bbox": null
+      }
+    },
+    {
+      "timestamp": "00:16",
+      "seconds": 16,
+      "label": "Gunbarrel",
+      "family": "front",
+      "path": "diagnostics\\captures\\contact_sheets\\lightcapture_20260516\\frames\\screen_atlas\\03_0016_Gunbarrel.png",
+      "metrics": {
+        "mean_luma": 0.0,
+        "nonblack_ratio": 0.0,
+        "bright_ratio": 0.0,
+        "saturated_ratio": 0.0,
+        "prism_ratio": 0.0,
+        "active_bbox": null,
+        "bright_bbox": null
+      }
+    },
+    {
+      "timestamp": "00:37",
+      "seconds": 37,
+      "label": "TND logo",
+      "family": "front",
+      "path": "diagnostics\\captures\\contact_sheets\\lightcapture_20260516\\frames\\screen_atlas\\04_0037_TND_logo.png",
+      "metrics": {
+        "mean_luma": 4.711,
+        "nonblack_ratio": 0.0,
+        "bright_ratio": 0.0,
+        "saturated_ratio": 0.0,
+        "prism_ratio": 0.0,
+        "active_bbox": null,
+        "bright_bbox": null
+      }
+    },
+    {
+      "timestamp": "00:41",
+      "seconds": 41,
+      "label": "Opening credits",
+      "family": "front",
+      "path": "diagnostics\\captures\\contact_sheets\\lightcapture_20260516\\frames\\screen_atlas\\05_0041_Opening_credits.png",
+      "metrics": {
+        "mean_luma": 0.0,
+        "nonblack_ratio": 0.0,
+        "bright_ratio": 0.0,
+        "saturated_ratio": 0.0,
+        "prism_ratio": 0.0,
+        "active_bbox": null,
+        "bright_bbox": null
+      }
+    },
+    {
+      "timestamp": "01:14",
+      "seconds": 74,
+      "label": "File select dossier",
+      "family": "menu",
+      "path": "diagnostics\\captures\\contact_sheets\\lightcapture_20260516\\frames\\screen_atlas\\06_0114_File_select_dossier.png",
+      "metrics": {
+        "mean_luma": 26.264,
+        "nonblack_ratio": 0.309887,
+        "bright_ratio": 0.092153,
+        "saturated_ratio": 0.006817,
+        "prism_ratio": 0.005735,
+        "active_bbox": {
+          "left": 11,
+          "top": 45,
+          "right": 708,
+          "bottom": 474,
+          "width": 697,
+          "height": 429
+        },
+        "bright_bbox": {
+          "left": 63,
+          "top": 54,
+          "right": 663,
+          "bottom": 434,
+          "width": 600,
+          "height": 380
+        }
+      }
+    },
+    {
+      "timestamp": "01:28",
+      "seconds": 88,
+      "label": "Single/Multi/Cheats",
+      "family": "menu",
+      "path": "diagnostics\\captures\\contact_sheets\\lightcapture_20260516\\frames\\screen_atlas\\07_0128_Single_Multi_Cheats.png",
+      "metrics": {
+        "mean_luma": 168.115,
+        "nonblack_ratio": 0.788886,
+        "bright_ratio": 0.70386,
+        "saturated_ratio": 0.004769,
+        "prism_ratio": 0.004737,
+        "active_bbox": {
+          "left": 11,
+          "top": 0,
+          "right": 702,
+          "bottom": 474,
+          "width": 691,
+          "height": 474
+        },
+        "bright_bbox": {
+          "left": 63,
+          "top": 6,
+          "right": 665,
+          "bottom": 474,
+          "width": 602,
+          "height": 468
+        }
+      }
+    },
+    {
+      "timestamp": "01:38",
+      "seconds": 98,
+      "label": "Mission select",
+      "family": "menu",
+      "path": "diagnostics\\captures\\contact_sheets\\lightcapture_20260516\\frames\\screen_atlas\\08_0138_Mission_select.png",
+      "metrics": {
+        "mean_luma": 77.05,
+        "nonblack_ratio": 0.588953,
+        "bright_ratio": 0.388429,
+        "saturated_ratio": 0.002101,
+        "prism_ratio": 0.002089,
+        "active_bbox": {
+          "left": 15,
+          "top": 0,
+          "right": 699,
+          "bottom": 474,
+          "width": 684,
+          "height": 474
+        },
+        "bright_bbox": {
+          "left": 64,
+          "top": 45,
+          "right": 665,
+          "bottom": 474,
+          "width": 601,
+          "height": 429
+        }
+      }
+    },
+    {
+      "timestamp": "01:46",
+      "seconds": 106,
+      "label": "Difficulty select",
+      "family": "menu",
+      "path": "diagnostics\\captures\\contact_sheets\\lightcapture_20260516\\frames\\screen_atlas\\09_0146_Difficulty_select.png",
+      "metrics": {
+        "mean_luma": 184.644,
+        "nonblack_ratio": 0.829225,
+        "bright_ratio": 0.744034,
+        "saturated_ratio": 0.009204,
+        "prism_ratio": 0.009013,
+        "active_bbox": {
+          "left": 10,
+          "top": 0,
+          "right": 702,
+          "bottom": 474,
+          "width": 692,
+          "height": 474
+        },
+        "bright_bbox": {
+          "left": 64,
+          "top": 40,
+          "right": 665,
+          "bottom": 474,
+          "width": 601,
+          "height": 434
+        }
+      }
+    },
+    {
+      "timestamp": "01:55",
+      "seconds": 115,
+      "label": "Mission briefing",
+      "family": "menu",
+      "path": "diagnostics\\captures\\contact_sheets\\lightcapture_20260516\\frames\\screen_atlas\\10_0155_Mission_briefing.png",
+      "metrics": {
+        "mean_luma": 168.407,
+        "nonblack_ratio": 0.822002,
+        "bright_ratio": 0.734725,
+        "saturated_ratio": 0.007127,
+        "prism_ratio": 0.007028,
+        "active_bbox": {
+          "left": 10,
+          "top": 0,
+          "right": 702,
+          "bottom": 474,
+          "width": 692,
+          "height": 474
+        },
+        "bright_bbox": {
+          "left": 63,
+          "top": 6,
+          "right": 672,
+          "bottom": 474,
+          "width": 609,
+          "height": 468
+        }
+      }
+    },
+    {
+      "timestamp": "02:01",
+      "seconds": 121,
+      "label": "Bazaar",
+      "family": "level_flicker",
+      "path": "diagnostics\\captures\\contact_sheets\\lightcapture_20260516\\frames\\screen_atlas\\11_0201_Bazaar.png",
+      "metrics": {
+        "mean_luma": 0.0,
+        "nonblack_ratio": 0.0,
+        "bright_ratio": 0.0,
+        "saturated_ratio": 0.0,
+        "prism_ratio": 0.0,
+        "active_bbox": null,
+        "bright_bbox": null
+      }
+    },
+    {
+      "timestamp": "03:40",
+      "seconds": 220,
+      "label": "Party lock",
+      "family": "level_lock",
+      "path": "diagnostics\\captures\\contact_sheets\\lightcapture_20260516\\frames\\screen_atlas\\12_0340_Party_lock.png",
+      "metrics": {
+        "mean_luma": 160.392,
+        "nonblack_ratio": 0.788741,
+        "bright_ratio": 0.657989,
+        "saturated_ratio": 0.006661,
+        "prism_ratio": 0.00649,
+        "active_bbox": {
+          "left": 11,
+          "top": 0,
+          "right": 702,
+          "bottom": 474,
+          "width": 691,
+          "height": 474
+        },
+        "bright_bbox": {
+          "left": 63,
+          "top": 6,
+          "right": 666,
+          "bottom": 474,
+          "width": 603,
+          "height": 468
+        }
+      }
+    },
+    {
+      "timestamp": "04:17",
+      "seconds": 257,
+      "label": "Labs pickup freeze",
+      "family": "level_freeze",
+      "path": "diagnostics\\captures\\contact_sheets\\lightcapture_20260516\\frames\\screen_atlas\\13_0417_Labs_pickup_freeze.png",
+      "metrics": {
+        "mean_luma": 72.76,
+        "nonblack_ratio": 0.309444,
+        "bright_ratio": 0.309181,
+        "saturated_ratio": 0.0,
+        "prism_ratio": 0.0,
+        "active_bbox": {
+          "left": 6,
+          "top": 0,
+          "right": 711,
+          "bottom": 153,
+          "width": 705,
+          "height": 153
+        },
+        "bright_bbox": {
+          "left": 6,
+          "top": 0,
+          "right": 710,
+          "bottom": 153,
+          "width": 704,
+          "height": 153
+        }
+      }
+    },
+    {
+      "timestamp": "06:44",
+      "seconds": 404,
+      "label": "Press good",
+      "family": "level_good",
+      "path": "diagnostics\\captures\\contact_sheets\\lightcapture_20260516\\frames\\screen_atlas\\14_0644_Press_good.png",
+      "metrics": {
+        "mean_luma": 72.778,
+        "nonblack_ratio": 0.309404,
+        "bright_ratio": 0.309184,
+        "saturated_ratio": 0.0,
+        "prism_ratio": 0.0,
+        "active_bbox": {
+          "left": 6,
+          "top": 0,
+          "right": 710,
+          "bottom": 153,
+          "width": 704,
+          "height": 153
+        },
+        "bright_bbox": {
+          "left": 6,
+          "top": 0,
+          "right": 710,
+          "bottom": 153,
+          "width": 704,
+          "height": 153
+        }
+      }
+    },
+    {
+      "timestamp": "09:50",
+      "seconds": 590,
+      "label": "Hotel prism",
+      "family": "level_prism",
+      "path": "diagnostics\\captures\\contact_sheets\\lightcapture_20260516\\frames\\screen_atlas\\15_0950_Hotel_prism.png",
+      "metrics": {
+        "mean_luma": 0.0,
+        "nonblack_ratio": 0.0,
+        "bright_ratio": 0.0,
+        "saturated_ratio": 0.0,
+        "prism_ratio": 0.0,
+        "active_bbox": null,
+        "bright_bbox": null
+      }
+    },
+    {
+      "timestamp": "10:56",
+      "seconds": 656,
+      "label": "Parkhaus good",
+      "family": "level_good",
+      "path": "diagnostics\\captures\\contact_sheets\\lightcapture_20260516\\frames\\screen_atlas\\16_1056_Parkhaus_good.png",
+      "metrics": {
+        "mean_luma": 72.624,
+        "nonblack_ratio": 0.308811,
+        "bright_ratio": 0.308585,
+        "saturated_ratio": 0.0,
+        "prism_ratio": 0.0,
+        "active_bbox": {
+          "left": 6,
+          "top": 0,
+          "right": 710,
+          "bottom": 152,
+          "width": 704,
+          "height": 152
+        },
+        "bright_bbox": {
+          "left": 6,
+          "top": 0,
+          "right": 710,
+          "bottom": 152,
+          "width": 704,
+          "height": 152
+        }
+      }
+    },
+    {
+      "timestamp": "13:32",
+      "seconds": 812,
+      "label": "Wreck good",
+      "family": "level_good",
+      "path": "diagnostics\\captures\\contact_sheets\\lightcapture_20260516\\frames\\screen_atlas\\17_1332_Wreck_good.png",
+      "metrics": {
+        "mean_luma": 0.0,
+        "nonblack_ratio": 0.0,
+        "bright_ratio": 0.0,
+        "saturated_ratio": 0.0,
+        "prism_ratio": 0.0,
+        "active_bbox": null,
+        "bright_bbox": null
+      }
+    },
+    {
+      "timestamp": "16:04",
+      "seconds": 964,
+      "label": "Tower intro crash",
+      "family": "level_crash",
+      "path": "diagnostics\\captures\\contact_sheets\\lightcapture_20260516\\frames\\screen_atlas\\18_1604_Tower_intro_crash.png",
+      "metrics": {
+        "mean_luma": 79.316,
+        "nonblack_ratio": 0.360564,
+        "bright_ratio": 0.32252,
+        "saturated_ratio": 0.0018,
+        "prism_ratio": 0.001635,
+        "active_bbox": {
+          "left": 12,
+          "top": 0,
+          "right": 702,
+          "bottom": 473,
+          "width": 690,
+          "height": 473
+        },
+        "bright_bbox": {
+          "left": 64,
+          "top": 6,
+          "right": 689,
+          "bottom": 473,
+          "width": 625,
+          "height": 467
+        }
+      }
+    },
+    {
+      "timestamp": "16:48",
+      "seconds": 1008,
+      "label": "City lock",
+      "family": "level_lock",
+      "path": "diagnostics\\captures\\contact_sheets\\lightcapture_20260516\\frames\\screen_atlas\\19_1648_City_lock.png",
+      "metrics": {
+        "mean_luma": 0.0,
+        "nonblack_ratio": 0.0,
+        "bright_ratio": 0.0,
+        "saturated_ratio": 0.0,
+        "prism_ratio": 0.0,
+        "active_bbox": null,
+        "bright_bbox": null
+      }
+    },
+    {
+      "timestamp": "17:39",
+      "seconds": 1059,
+      "label": "Boat intro crash",
+      "family": "level_crash",
+      "path": "diagnostics\\captures\\contact_sheets\\lightcapture_20260516\\frames\\screen_atlas\\20_1739_Boat_intro_crash.png",
+      "metrics": {
+        "mean_luma": 0.0,
+        "nonblack_ratio": 0.0,
+        "bright_ratio": 0.0,
+        "saturated_ratio": 0.0,
+        "prism_ratio": 0.0,
+        "active_bbox": null,
+        "bright_bbox": null
+      }
+    },
+    {
+      "timestamp": "18:09",
+      "seconds": 1089,
+      "label": "Bridge good",
+      "family": "level_good",
+      "path": "diagnostics\\captures\\contact_sheets\\lightcapture_20260516\\frames\\screen_atlas\\21_1809_Bridge_good.png",
+      "metrics": {
+        "mean_luma": 72.806,
+        "nonblack_ratio": 0.309404,
+        "bright_ratio": 0.309198,
+        "saturated_ratio": 0.0,
+        "prism_ratio": 0.0,
+        "active_bbox": {
+          "left": 6,
+          "top": 0,
+          "right": 710,
+          "bottom": 153,
+          "width": 704,
+          "height": 153
+        },
+        "bright_bbox": {
+          "left": 6,
+          "top": 0,
+          "right": 710,
+          "bottom": 153,
+          "width": 704,
+          "height": 153
+        }
+      }
+    },
+    {
+      "timestamp": "24:25",
+      "seconds": 1465,
+      "label": "Volcano prism",
+      "family": "level_prism",
+      "path": "diagnostics\\captures\\contact_sheets\\lightcapture_20260516\\frames\\screen_atlas\\22_2425_Volcano_prism.png",
+      "metrics": {
+        "mean_luma": 72.594,
+        "nonblack_ratio": 0.308501,
+        "bright_ratio": 0.308278,
+        "saturated_ratio": 0.0,
+        "prism_ratio": 0.0,
+        "active_bbox": {
+          "left": 6,
+          "top": 0,
+          "right": 710,
+          "bottom": 152,
+          "width": 704,
+          "height": 152
+        },
+        "bright_bbox": {
+          "left": 6,
+          "top": 0,
+          "right": 710,
+          "bottom": 152,
+          "width": 704,
+          "height": 152
+        }
+      }
+    },
+    {
+      "timestamp": "25:00",
+      "seconds": 1500,
+      "label": "Alaska good",
+      "family": "level_good",
+      "path": "diagnostics\\captures\\contact_sheets\\lightcapture_20260516\\frames\\screen_atlas\\23_2500_Alaska_good.png",
+      "metrics": {
+        "mean_luma": 79.754,
+        "nonblack_ratio": 0.376687,
+        "bright_ratio": 0.333235,
+        "saturated_ratio": 0.001612,
+        "prism_ratio": 0.001563,
+        "active_bbox": {
+          "left": 14,
+          "top": 0,
+          "right": 702,
+          "bottom": 473,
+          "width": 688,
+          "height": 473
+        },
+        "bright_bbox": {
+          "left": 64,
+          "top": 6,
+          "right": 673,
+          "bottom": 473,
+          "width": 609,
+          "height": 467
+        }
+      }
+    }
+  ],
+  "level_probes": [
+    {
+      "level": "Bazaar",
+      "timestamp": "02:01",
+      "seconds": 121,
+      "offset_from_level_start": 0,
+      "path": "diagnostics\\captures\\contact_sheets\\lightcapture_20260516\\frames\\level_probes\\Bazaar_0201_p000.png",
+      "metrics": {
+        "mean_luma": 0.0,
+        "nonblack_ratio": 0.0,
+        "bright_ratio": 0.0,
+        "saturated_ratio": 0.0,
+        "prism_ratio": 0.0,
+        "active_bbox": null,
+        "bright_bbox": null
+      }
+    },
+    {
+      "level": "Bazaar",
+      "timestamp": "02:05",
+      "seconds": 125,
+      "offset_from_level_start": 4,
+      "path": "diagnostics\\captures\\contact_sheets\\lightcapture_20260516\\frames\\level_probes\\Bazaar_0205_p004.png",
+      "metrics": {
+        "mean_luma": 45.6,
+        "nonblack_ratio": 0.351641,
+        "bright_ratio": 0.288788,
+        "saturated_ratio": 0.009401,
+        "prism_ratio": 0.007202,
+        "active_bbox": {
+          "left": 6,
+          "top": 29,
+          "right": 710,
+          "bottom": 209,
+          "width": 704,
+          "height": 180
+        },
+        "bright_bbox": {
+          "left": 7,
+          "top": 29,
+          "right": 709,
+          "bottom": 209,
+          "width": 702,
+          "height": 180
+        }
+      }
+    },
+    {
+      "level": "Bazaar",
+      "timestamp": "02:13",
+      "seconds": 133,
+      "offset_from_level_start": 12,
+      "path": "diagnostics\\captures\\contact_sheets\\lightcapture_20260516\\frames\\level_probes\\Bazaar_0213_p012.png",
+      "metrics": {
+        "mean_luma": 69.038,
+        "nonblack_ratio": 0.708163,
+        "bright_ratio": 0.379198,
+        "saturated_ratio": 0.026152,
+        "prism_ratio": 0.025726,
+        "active_bbox": {
+          "left": 6,
+          "top": 9,
+          "right": 710,
+          "bottom": 469,
+          "width": 704,
+          "height": 460
+        },
+        "bright_bbox": {
+          "left": 7,
+          "top": 9,
+          "right": 709,
+          "bottom": 469,
+          "width": 702,
+          "height": 460
+        }
+      }
+    },
+    {
+      "level": "Bazaar",
+      "timestamp": "02:29",
+      "seconds": 149,
+      "offset_from_level_start": 28,
+      "path": "diagnostics\\captures\\contact_sheets\\lightcapture_20260516\\frames\\level_probes\\Bazaar_0229_p028.png",
+      "metrics": {
+        "mean_luma": 20.22,
+        "nonblack_ratio": 0.141415,
+        "bright_ratio": 0.115602,
+        "saturated_ratio": 0.035911,
+        "prism_ratio": 0.02434,
+        "active_bbox": {
+          "left": 6,
+          "top": 9,
+          "right": 708,
+          "bottom": 469,
+          "width": 702,
+          "height": 460
+        },
+        "bright_bbox": {
+          "left": 7,
+          "top": 9,
+          "right": 667,
+          "bottom": 469,
+          "width": 660,
+          "height": 460
+        }
+      }
+    },
+    {
+      "level": "Party",
+      "timestamp": "03:40",
+      "seconds": 220,
+      "offset_from_level_start": 0,
+      "path": "diagnostics\\captures\\contact_sheets\\lightcapture_20260516\\frames\\level_probes\\Party_0340_p000.png",
+      "metrics": {
+        "mean_luma": 160.392,
+        "nonblack_ratio": 0.788741,
+        "bright_ratio": 0.657989,
+        "saturated_ratio": 0.006661,
+        "prism_ratio": 0.00649,
+        "active_bbox": {
+          "left": 11,
+          "top": 0,
+          "right": 702,
+          "bottom": 474,
+          "width": 691,
+          "height": 474
+        },
+        "bright_bbox": {
+          "left": 63,
+          "top": 6,
+          "right": 666,
+          "bottom": 474,
+          "width": 603,
+          "height": 468
+        }
+      }
+    },
+    {
+      "level": "Party",
+      "timestamp": "03:44",
+      "seconds": 224,
+      "offset_from_level_start": 4,
+      "path": "diagnostics\\captures\\contact_sheets\\lightcapture_20260516\\frames\\level_probes\\Party_0344_p004.png",
+      "metrics": {
+        "mean_luma": 0.0,
+        "nonblack_ratio": 0.0,
+        "bright_ratio": 0.0,
+        "saturated_ratio": 0.0,
+        "prism_ratio": 0.0,
+        "active_bbox": null,
+        "bright_bbox": null
+      }
+    },
+    {
+      "level": "Party",
+      "timestamp": "03:52",
+      "seconds": 232,
+      "offset_from_level_start": 12,
+      "path": "diagnostics\\captures\\contact_sheets\\lightcapture_20260516\\frames\\level_probes\\Party_0352_p012.png",
+      "metrics": {
+        "mean_luma": 0.0,
+        "nonblack_ratio": 0.0,
+        "bright_ratio": 0.0,
+        "saturated_ratio": 0.0,
+        "prism_ratio": 0.0,
+        "active_bbox": null,
+        "bright_bbox": null
+      }
+    },
+    {
+      "level": "Party",
+      "timestamp": "04:04",
+      "seconds": 244,
+      "offset_from_level_start": 24,
+      "path": "diagnostics\\captures\\contact_sheets\\lightcapture_20260516\\frames\\level_probes\\Party_0404_p024.png",
+      "metrics": {
+        "mean_luma": 0.0,
+        "nonblack_ratio": 0.0,
+        "bright_ratio": 0.0,
+        "saturated_ratio": 0.0,
+        "prism_ratio": 0.0,
+        "active_bbox": null,
+        "bright_bbox": null
+      }
+    },
+    {
+      "level": "Labs",
+      "timestamp": "04:17",
+      "seconds": 257,
+      "offset_from_level_start": 0,
+      "path": "diagnostics\\captures\\contact_sheets\\lightcapture_20260516\\frames\\level_probes\\Labs_0417_p000.png",
+      "metrics": {
+        "mean_luma": 72.76,
+        "nonblack_ratio": 0.309444,
+        "bright_ratio": 0.309181,
+        "saturated_ratio": 0.0,
+        "prism_ratio": 0.0,
+        "active_bbox": {
+          "left": 6,
+          "top": 0,
+          "right": 711,
+          "bottom": 153,
+          "width": 705,
+          "height": 153
+        },
+        "bright_bbox": {
+          "left": 6,
+          "top": 0,
+          "right": 710,
+          "bottom": 153,
+          "width": 704,
+          "height": 153
+        }
+      }
+    },
+    {
+      "level": "Labs",
+      "timestamp": "04:29",
+      "seconds": 269,
+      "offset_from_level_start": 12,
+      "path": "diagnostics\\captures\\contact_sheets\\lightcapture_20260516\\frames\\level_probes\\Labs_0429_p012.png",
+      "metrics": {
+        "mean_luma": 31.188,
+        "nonblack_ratio": 0.583793,
+        "bright_ratio": 0.072471,
+        "saturated_ratio": 0.023186,
+        "prism_ratio": 0.023186,
+        "active_bbox": {
+          "left": 6,
+          "top": 0,
+          "right": 710,
+          "bottom": 469,
+          "width": 704,
+          "height": 469
+        },
+        "bright_bbox": {
+          "left": 6,
+          "top": 0,
+          "right": 710,
+          "bottom": 469,
+          "width": 704,
+          "height": 469
+        }
+      }
+    },
+    {
+      "level": "Labs",
+      "timestamp": "05:17",
+      "seconds": 317,
+      "offset_from_level_start": 60,
+      "path": "diagnostics\\captures\\contact_sheets\\lightcapture_20260516\\frames\\level_probes\\Labs_0517_p060.png",
+      "metrics": {
+        "mean_luma": 53.179,
+        "nonblack_ratio": 0.910249,
+        "bright_ratio": 0.154178,
+        "saturated_ratio": 4.6e-05,
+        "prism_ratio": 4.6e-05,
+        "active_bbox": {
+          "left": 6,
+          "top": 9,
+          "right": 710,
+          "bottom": 469,
+          "width": 704,
+          "height": 460
+        },
+        "bright_bbox": {
+          "left": 352,
+          "top": 148,
+          "right": 709,
+          "bottom": 469,
+          "width": 357,
+          "height": 321
+        }
+      }
+    },
+    {
+      "level": "Labs",
+      "timestamp": "06:12",
+      "seconds": 372,
+      "offset_from_level_start": 115,
+      "path": "diagnostics\\captures\\contact_sheets\\lightcapture_20260516\\frames\\level_probes\\Labs_0612_p115.png",
+      "metrics": {
+        "mean_luma": 71.604,
+        "nonblack_ratio": 0.886678,
+        "bright_ratio": 0.368035,
+        "saturated_ratio": 0.012668,
+        "prism_ratio": 0.00445,
+        "active_bbox": {
+          "left": 6,
+          "top": 9,
+          "right": 710,
+          "bottom": 469,
+          "width": 704,
+          "height": 460
+        },
+        "bright_bbox": {
+          "left": 7,
+          "top": 9,
+          "right": 709,
+          "bottom": 469,
+          "width": 702,
+          "height": 460
+        }
+      }
+    },
+    {
+      "level": "Press",
+      "timestamp": "06:44",
+      "seconds": 404,
+      "offset_from_level_start": 0,
+      "path": "diagnostics\\captures\\contact_sheets\\lightcapture_20260516\\frames\\level_probes\\Press_0644_p000.png",
+      "metrics": {
+        "mean_luma": 72.778,
+        "nonblack_ratio": 0.309404,
+        "bright_ratio": 0.309184,
+        "saturated_ratio": 0.0,
+        "prism_ratio": 0.0,
+        "active_bbox": {
+          "left": 6,
+          "top": 0,
+          "right": 710,
+          "bottom": 153,
+          "width": 704,
+          "height": 153
+        },
+        "bright_bbox": {
+          "left": 6,
+          "top": 0,
+          "right": 710,
+          "bottom": 153,
+          "width": 704,
+          "height": 153
+        }
+      }
+    },
+    {
+      "level": "Press",
+      "timestamp": "06:52",
+      "seconds": 412,
+      "offset_from_level_start": 8,
+      "path": "diagnostics\\captures\\contact_sheets\\lightcapture_20260516\\frames\\level_probes\\Press_0652_p008.png",
+      "metrics": {
+        "mean_luma": 20.937,
+        "nonblack_ratio": 0.572535,
+        "bright_ratio": 0.041988,
+        "saturated_ratio": 0.0,
+        "prism_ratio": 0.0,
+        "active_bbox": {
+          "left": 6,
+          "top": 9,
+          "right": 709,
+          "bottom": 469,
+          "width": 703,
+          "height": 460
+        },
+        "bright_bbox": {
+          "left": 7,
+          "top": 103,
+          "right": 108,
+          "bottom": 375,
+          "width": 101,
+          "height": 272
+        }
+      }
+    },
+    {
+      "level": "Press",
+      "timestamp": "07:12",
+      "seconds": 432,
+      "offset_from_level_start": 28,
+      "path": "diagnostics\\captures\\contact_sheets\\lightcapture_20260516\\frames\\level_probes\\Press_0712_p028.png",
+      "metrics": {
+        "mean_luma": 46.849,
+        "nonblack_ratio": 0.714815,
+        "bright_ratio": 0.343747,
+        "saturated_ratio": 0.000119,
+        "prism_ratio": 0.000119,
+        "active_bbox": {
+          "left": 7,
+          "top": 9,
+          "right": 709,
+          "bottom": 469,
+          "width": 702,
+          "height": 460
+        },
+        "bright_bbox": {
+          "left": 355,
+          "top": 9,
+          "right": 709,
+          "bottom": 469,
+          "width": 354,
+          "height": 460
+        }
+      }
+    },
+    {
+      "level": "Press",
+      "timestamp": "08:04",
+      "seconds": 484,
+      "offset_from_level_start": 80,
+      "path": "diagnostics\\captures\\contact_sheets\\lightcapture_20260516\\frames\\level_probes\\Press_0804_p080.png",
+      "metrics": {
+        "mean_luma": 82.281,
+        "nonblack_ratio": 0.795697,
+        "bright_ratio": 0.632775,
+        "saturated_ratio": 0.038545,
+        "prism_ratio": 0.038545,
+        "active_bbox": {
+          "left": 6,
+          "top": 9,
+          "right": 709,
+          "bottom": 469,
+          "width": 703,
+          "height": 460
+        },
+        "bright_bbox": {
+          "left": 6,
+          "top": 9,
+          "right": 708,
+          "bottom": 469,
+          "width": 702,
+          "height": 460
+        }
+      }
+    },
+    {
+      "level": "Hotel",
+      "timestamp": "09:50",
+      "seconds": 590,
+      "offset_from_level_start": 0,
+      "path": "diagnostics\\captures\\contact_sheets\\lightcapture_20260516\\frames\\level_probes\\Hotel_0950_p000.png",
+      "metrics": {
+        "mean_luma": 0.0,
+        "nonblack_ratio": 0.0,
+        "bright_ratio": 0.0,
+        "saturated_ratio": 0.0,
+        "prism_ratio": 0.0,
+        "active_bbox": null,
+        "bright_bbox": null
+      }
+    },
+    {
+      "level": "Hotel",
+      "timestamp": "09:55",
+      "seconds": 595,
+      "offset_from_level_start": 5,
+      "path": "diagnostics\\captures\\contact_sheets\\lightcapture_20260516\\frames\\level_probes\\Hotel_0955_p005.png",
+      "metrics": {
+        "mean_luma": 105.918,
+        "nonblack_ratio": 0.544543,
+        "bright_ratio": 0.495041,
+        "saturated_ratio": 0.069876,
+        "prism_ratio": 0.069829,
+        "active_bbox": {
+          "left": 6,
+          "top": 1,
+          "right": 711,
+          "bottom": 404,
+          "width": 705,
+          "height": 403
+        },
+        "bright_bbox": {
+          "left": 6,
+          "top": 1,
+          "right": 710,
+          "bottom": 404,
+          "width": 704,
+          "height": 403
+        }
+      }
+    },
+    {
+      "level": "Hotel",
+      "timestamp": "10:02",
+      "seconds": 602,
+      "offset_from_level_start": 12,
+      "path": "diagnostics\\captures\\contact_sheets\\lightcapture_20260516\\frames\\level_probes\\Hotel_1002_p012.png",
+      "metrics": {
+        "mean_luma": 125.046,
+        "nonblack_ratio": 0.836091,
+        "bright_ratio": 0.604175,
+        "saturated_ratio": 0.150535,
+        "prism_ratio": 0.148672,
+        "active_bbox": {
+          "left": 6,
+          "top": 1,
+          "right": 710,
+          "bottom": 469,
+          "width": 704,
+          "height": 468
+        },
+        "bright_bbox": {
+          "left": 6,
+          "top": 1,
+          "right": 710,
+          "bottom": 469,
+          "width": 704,
+          "height": 468
+        }
+      }
+    },
+    {
+      "level": "Hotel",
+      "timestamp": "10:15",
+      "seconds": 615,
+      "offset_from_level_start": 25,
+      "path": "diagnostics\\captures\\contact_sheets\\lightcapture_20260516\\frames\\level_probes\\Hotel_1015_p025.png",
+      "metrics": {
+        "mean_luma": 147.451,
+        "nonblack_ratio": 0.947685,
+        "bright_ratio": 0.823571,
+        "saturated_ratio": 0.469494,
+        "prism_ratio": 0.442564,
+        "active_bbox": {
+          "left": 5,
+          "top": 0,
+          "right": 710,
+          "bottom": 469,
+          "width": 705,
+          "height": 469
+        },
+        "bright_bbox": {
+          "left": 6,
+          "top": 0,
+          "right": 709,
+          "bottom": 469,
+          "width": 703,
+          "height": 469
+        }
+      }
+    },
+    {
+      "level": "Parkhaus",
+      "timestamp": "10:56",
+      "seconds": 656,
+      "offset_from_level_start": 0,
+      "path": "diagnostics\\captures\\contact_sheets\\lightcapture_20260516\\frames\\level_probes\\Parkhaus_1056_p000.png",
+      "metrics": {
+        "mean_luma": 72.624,
+        "nonblack_ratio": 0.308811,
+        "bright_ratio": 0.308585,
+        "saturated_ratio": 0.0,
+        "prism_ratio": 0.0,
+        "active_bbox": {
+          "left": 6,
+          "top": 0,
+          "right": 710,
+          "bottom": 152,
+          "width": 704,
+          "height": 152
+        },
+        "bright_bbox": {
+          "left": 6,
+          "top": 0,
+          "right": 710,
+          "bottom": 152,
+          "width": 704,
+          "height": 152
+        }
+      }
+    },
+    {
+      "level": "Parkhaus",
+      "timestamp": "11:04",
+      "seconds": 664,
+      "offset_from_level_start": 8,
+      "path": "diagnostics\\captures\\contact_sheets\\lightcapture_20260516\\frames\\level_probes\\Parkhaus_1104_p008.png",
+      "metrics": {
+        "mean_luma": 20.074,
+        "nonblack_ratio": 0.429005,
+        "bright_ratio": 0.067514,
+        "saturated_ratio": 0.000188,
+        "prism_ratio": 0.000188,
+        "active_bbox": {
+          "left": 6,
+          "top": 9,
+          "right": 709,
+          "bottom": 469,
+          "width": 703,
+          "height": 460
+        },
+        "bright_bbox": {
+          "left": 7,
+          "top": 57,
+          "right": 708,
+          "bottom": 448,
+          "width": 701,
+          "height": 391
+        }
+      }
+    },
+    {
+      "level": "Parkhaus",
+      "timestamp": "11:24",
+      "seconds": 684,
+      "offset_from_level_start": 28,
+      "path": "diagnostics\\captures\\contact_sheets\\lightcapture_20260516\\frames\\level_probes\\Parkhaus_1124_p028.png",
+      "metrics": {
+        "mean_luma": 9.432,
+        "nonblack_ratio": 0.080269,
+        "bright_ratio": 0.054844,
+        "saturated_ratio": 0.060749,
+        "prism_ratio": 0.053822,
+        "active_bbox": {
+          "left": 6,
+          "top": 9,
+          "right": 709,
+          "bottom": 469,
+          "width": 703,
+          "height": 460
+        },
+        "bright_bbox": {
+          "left": 7,
+          "top": 9,
+          "right": 554,
+          "bottom": 469,
+          "width": 547,
+          "height": 460
+        }
+      }
+    },
+    {
+      "level": "Parkhaus",
+      "timestamp": "12:16",
+      "seconds": 736,
+      "offset_from_level_start": 80,
+      "path": "diagnostics\\captures\\contact_sheets\\lightcapture_20260516\\frames\\level_probes\\Parkhaus_1216_p080.png",
+      "metrics": {
+        "mean_luma": 33.566,
+        "nonblack_ratio": 0.692853,
+        "bright_ratio": 0.189332,
+        "saturated_ratio": 0.002381,
+        "prism_ratio": 0.002381,
+        "active_bbox": {
+          "left": 6,
+          "top": 9,
+          "right": 709,
+          "bottom": 469,
+          "width": 703,
+          "height": 460
+        },
+        "bright_bbox": {
+          "left": 7,
+          "top": 9,
+          "right": 709,
+          "bottom": 363,
+          "width": 702,
+          "height": 354
+        }
+      }
+    },
+    {
+      "level": "Wreck",
+      "timestamp": "13:32",
+      "seconds": 812,
+      "offset_from_level_start": 0,
+      "path": "diagnostics\\captures\\contact_sheets\\lightcapture_20260516\\frames\\level_probes\\Wreck_1332_p000.png",
+      "metrics": {
+        "mean_luma": 0.0,
+        "nonblack_ratio": 0.0,
+        "bright_ratio": 0.0,
+        "saturated_ratio": 0.0,
+        "prism_ratio": 0.0,
+        "active_bbox": null,
+        "bright_bbox": null
+      }
+    },
+    {
+      "level": "Wreck",
+      "timestamp": "13:40",
+      "seconds": 820,
+      "offset_from_level_start": 8,
+      "path": "diagnostics\\captures\\contact_sheets\\lightcapture_20260516\\frames\\level_probes\\Wreck_1340_p008.png",
+      "metrics": {
+        "mean_luma": 28.804,
+        "nonblack_ratio": 0.621296,
+        "bright_ratio": 0.091288,
+        "saturated_ratio": 0.409959,
+        "prism_ratio": 0.328027,
+        "active_bbox": {
+          "left": 6,
+          "top": 9,
+          "right": 709,
+          "bottom": 469,
+          "width": 703,
+          "height": 460
+        },
+        "bright_bbox": {
+          "left": 7,
+          "top": 9,
+          "right": 691,
+          "bottom": 358,
+          "width": 684,
+          "height": 349
+        }
+      }
+    },
+    {
+      "level": "Wreck",
+      "timestamp": "14:00",
+      "seconds": 840,
+      "offset_from_level_start": 28,
+      "path": "diagnostics\\captures\\contact_sheets\\lightcapture_20260516\\frames\\level_probes\\Wreck_1400_p028.png",
+      "metrics": {
+        "mean_luma": 17.884,
+        "nonblack_ratio": 0.575032,
+        "bright_ratio": 0.012454,
+        "saturated_ratio": 0.009714,
+        "prism_ratio": 0.009659,
+        "active_bbox": {
+          "left": 7,
+          "top": 9,
+          "right": 709,
+          "bottom": 469,
+          "width": 702,
+          "height": 460
+        },
+        "bright_bbox": {
+          "left": 381,
+          "top": 207,
+          "right": 667,
+          "bottom": 469,
+          "width": 286,
+          "height": 262
+        }
+      }
+    },
+    {
+      "level": "Wreck",
+      "timestamp": "14:52",
+      "seconds": 892,
+      "offset_from_level_start": 80,
+      "path": "diagnostics\\captures\\contact_sheets\\lightcapture_20260516\\frames\\level_probes\\Wreck_1452_p080.png",
+      "metrics": {
+        "mean_luma": 8.734,
+        "nonblack_ratio": 0.065987,
+        "bright_ratio": 0.00322,
+        "saturated_ratio": 4.9e-05,
+        "prism_ratio": 4.9e-05,
+        "active_bbox": {
+          "left": 7,
+          "top": 9,
+          "right": 708,
+          "bottom": 469,
+          "width": 701,
+          "height": 460
+        },
+        "bright_bbox": {
+          "left": 37,
+          "top": 205,
+          "right": 676,
+          "bottom": 455,
+          "width": 639,
+          "height": 250
+        }
+      }
+    },
+    {
+      "level": "Tower",
+      "timestamp": "16:04",
+      "seconds": 964,
+      "offset_from_level_start": 0,
+      "path": "diagnostics\\captures\\contact_sheets\\lightcapture_20260516\\frames\\level_probes\\Tower_1604_p000.png",
+      "metrics": {
+        "mean_luma": 79.316,
+        "nonblack_ratio": 0.360564,
+        "bright_ratio": 0.32252,
+        "saturated_ratio": 0.0018,
+        "prism_ratio": 0.001635,
+        "active_bbox": {
+          "left": 12,
+          "top": 0,
+          "right": 702,
+          "bottom": 473,
+          "width": 690,
+          "height": 473
+        },
+        "bright_bbox": {
+          "left": 64,
+          "top": 6,
+          "right": 689,
+          "bottom": 473,
+          "width": 625,
+          "height": 467
+        }
+      }
+    },
+    {
+      "level": "Tower",
+      "timestamp": "16:09",
+      "seconds": 969,
+      "offset_from_level_start": 5,
+      "path": "diagnostics\\captures\\contact_sheets\\lightcapture_20260516\\frames\\level_probes\\Tower_1609_p005.png",
+      "metrics": {
+        "mean_luma": 2.108,
+        "nonblack_ratio": 0.036768,
+        "bright_ratio": 0.012755,
+        "saturated_ratio": 0.000315,
+        "prism_ratio": 0.000258,
+        "active_bbox": {
+          "left": 122,
+          "top": 47,
+          "right": 500,
+          "bottom": 199,
+          "width": 378,
+          "height": 152
+        },
+        "bright_bbox": {
+          "left": 125,
+          "top": 48,
+          "right": 451,
+          "bottom": 149,
+          "width": 326,
+          "height": 101
+        }
+      }
+    },
+    {
+      "level": "Tower",
+      "timestamp": "16:16",
+      "seconds": 976,
+      "offset_from_level_start": 12,
+      "path": "diagnostics\\captures\\contact_sheets\\lightcapture_20260516\\frames\\level_probes\\Tower_1616_p012.png",
+      "metrics": {
+        "mean_luma": 37.452,
+        "nonblack_ratio": 0.520671,
+        "bright_ratio": 0.138825,
+        "saturated_ratio": 0.02906,
+        "prism_ratio": 0.02906,
+        "active_bbox": {
+          "left": 14,
+          "top": 2,
+          "right": 709,
+          "bottom": 476,
+          "width": 695,
+          "height": 474
+        },
+        "bright_bbox": {
+          "left": 51,
+          "top": 34,
+          "right": 709,
+          "bottom": 458,
+          "width": 658,
+          "height": 424
+        }
+      }
+    },
+    {
+      "level": "Tower",
+      "timestamp": "16:29",
+      "seconds": 989,
+      "offset_from_level_start": 25,
+      "path": "diagnostics\\captures\\contact_sheets\\lightcapture_20260516\\frames\\level_probes\\Tower_1629_p025.png",
+      "metrics": {
+        "mean_luma": 2.386,
+        "nonblack_ratio": 0.040848,
+        "bright_ratio": 0.013984,
+        "saturated_ratio": 0.032989,
+        "prism_ratio": 0.011869,
+        "active_bbox": {
+          "left": 222,
+          "top": 193,
+          "right": 406,
+          "bottom": 294,
+          "width": 184,
+          "height": 101
+        },
+        "bright_bbox": {
+          "left": 286,
+          "top": 204,
+          "right": 405,
+          "bottom": 282,
+          "width": 119,
+          "height": 78
+        }
+      }
+    },
+    {
+      "level": "City",
+      "timestamp": "16:48",
+      "seconds": 1008,
+      "offset_from_level_start": 0,
+      "path": "diagnostics\\captures\\contact_sheets\\lightcapture_20260516\\frames\\level_probes\\City_1648_p000.png",
+      "metrics": {
+        "mean_luma": 0.0,
+        "nonblack_ratio": 0.0,
+        "bright_ratio": 0.0,
+        "saturated_ratio": 0.0,
+        "prism_ratio": 0.0,
+        "active_bbox": null,
+        "bright_bbox": null
+      }
+    },
+    {
+      "level": "City",
+      "timestamp": "16:52",
+      "seconds": 1012,
+      "offset_from_level_start": 4,
+      "path": "diagnostics\\captures\\contact_sheets\\lightcapture_20260516\\frames\\level_probes\\City_1652_p004.png",
+      "metrics": {
+        "mean_luma": 0.0,
+        "nonblack_ratio": 0.0,
+        "bright_ratio": 0.0,
+        "saturated_ratio": 0.0,
+        "prism_ratio": 0.0,
+        "active_bbox": null,
+        "bright_bbox": null
+      }
+    },
+    {
+      "level": "City",
+      "timestamp": "17:00",
+      "seconds": 1020,
+      "offset_from_level_start": 12,
+      "path": "diagnostics\\captures\\contact_sheets\\lightcapture_20260516\\frames\\level_probes\\City_1700_p012.png",
+      "metrics": {
+        "mean_luma": 31.607,
+        "nonblack_ratio": 0.441238,
+        "bright_ratio": 0.119789,
+        "saturated_ratio": 0.017216,
+        "prism_ratio": 0.017216,
+        "active_bbox": {
+          "left": 15,
+          "top": 2,
+          "right": 710,
+          "bottom": 472,
+          "width": 695,
+          "height": 470
+        },
+        "bright_bbox": {
+          "left": 51,
+          "top": 34,
+          "right": 709,
+          "bottom": 458,
+          "width": 658,
+          "height": 424
+        }
+      }
+    },
+    {
+      "level": "City",
+      "timestamp": "17:12",
+      "seconds": 1032,
+      "offset_from_level_start": 24,
+      "path": "diagnostics\\captures\\contact_sheets\\lightcapture_20260516\\frames\\level_probes\\City_1712_p024.png",
+      "metrics": {
+        "mean_luma": 12.477,
+        "nonblack_ratio": 0.151745,
+        "bright_ratio": 0.044676,
+        "saturated_ratio": 0.002005,
+        "prism_ratio": 0.001444,
+        "active_bbox": {
+          "left": 11,
+          "top": 45,
+          "right": 708,
+          "bottom": 474,
+          "width": 697,
+          "height": 429
+        },
+        "bright_bbox": {
+          "left": 63,
+          "top": 55,
+          "right": 663,
+          "bottom": 434,
+          "width": 600,
+          "height": 379
+        }
+      }
+    },
+    {
+      "level": "Boat",
+      "timestamp": "17:39",
+      "seconds": 1059,
+      "offset_from_level_start": 0,
+      "path": "diagnostics\\captures\\contact_sheets\\lightcapture_20260516\\frames\\level_probes\\Boat_1739_p000.png",
+      "metrics": {
+        "mean_luma": 0.0,
+        "nonblack_ratio": 0.0,
+        "bright_ratio": 0.0,
+        "saturated_ratio": 0.0,
+        "prism_ratio": 0.0,
+        "active_bbox": null,
+        "bright_bbox": null
+      }
+    },
+    {
+      "level": "Boat",
+      "timestamp": "17:44",
+      "seconds": 1064,
+      "offset_from_level_start": 5,
+      "path": "diagnostics\\captures\\contact_sheets\\lightcapture_20260516\\frames\\level_probes\\Boat_1744_p005.png",
+      "metrics": {
+        "mean_luma": 0.174,
+        "nonblack_ratio": 0.00259,
+        "bright_ratio": 1.7e-05,
+        "saturated_ratio": 0.0,
+        "prism_ratio": 0.0,
+        "active_bbox": {
+          "left": 293,
+          "top": 90,
+          "right": 688,
+          "bottom": 183,
+          "width": 395,
+          "height": 93
+        },
+        "bright_bbox": {
+          "left": 325,
+          "top": 118,
+          "right": 340,
+          "bottom": 169,
+          "width": 15,
+          "height": 51
+        }
+      }
+    },
+    {
+      "level": "Boat",
+      "timestamp": "17:51",
+      "seconds": 1071,
+      "offset_from_level_start": 12,
+      "path": "diagnostics\\captures\\contact_sheets\\lightcapture_20260516\\frames\\level_probes\\Boat_1751_p012.png",
+      "metrics": {
+        "mean_luma": 31.436,
+        "nonblack_ratio": 0.434847,
+        "bright_ratio": 0.120162,
+        "saturated_ratio": 0.01717,
+        "prism_ratio": 0.01717,
+        "active_bbox": {
+          "left": 15,
+          "top": 2,
+          "right": 710,
+          "bottom": 475,
+          "width": 695,
+          "height": 473
+        },
+        "bright_bbox": {
+          "left": 51,
+          "top": 34,
+          "right": 709,
+          "bottom": 458,
+          "width": 658,
+          "height": 424
+        }
+      }
+    },
+    {
+      "level": "Boat",
+      "timestamp": "18:04",
+      "seconds": 1084,
+      "offset_from_level_start": 25,
+      "path": "diagnostics\\captures\\contact_sheets\\lightcapture_20260516\\frames\\level_probes\\Boat_1804_p025.png",
+      "metrics": {
+        "mean_luma": 12.435,
+        "nonblack_ratio": 0.150839,
+        "bright_ratio": 0.044737,
+        "saturated_ratio": 0.002014,
+        "prism_ratio": 0.001432,
+        "active_bbox": {
+          "left": 11,
+          "top": 45,
+          "right": 708,
+          "bottom": 474,
+          "width": 697,
+          "height": 429
+        },
+        "bright_bbox": {
+          "left": 63,
+          "top": 55,
+          "right": 663,
+          "bottom": 434,
+          "width": 600,
+          "height": 379
+        }
+      }
+    },
+    {
+      "level": "Bridge",
+      "timestamp": "18:09",
+      "seconds": 1089,
+      "offset_from_level_start": 0,
+      "path": "diagnostics\\captures\\contact_sheets\\lightcapture_20260516\\frames\\level_probes\\Bridge_1809_p000.png",
+      "metrics": {
+        "mean_luma": 72.806,
+        "nonblack_ratio": 0.309404,
+        "bright_ratio": 0.309198,
+        "saturated_ratio": 0.0,
+        "prism_ratio": 0.0,
+        "active_bbox": {
+          "left": 6,
+          "top": 0,
+          "right": 710,
+          "bottom": 153,
+          "width": 704,
+          "height": 153
+        },
+        "bright_bbox": {
+          "left": 6,
+          "top": 0,
+          "right": 710,
+          "bottom": 153,
+          "width": 704,
+          "height": 153
+        }
+      }
+    },
+    {
+      "level": "Bridge",
+      "timestamp": "18:17",
+      "seconds": 1097,
+      "offset_from_level_start": 8,
+      "path": "diagnostics\\captures\\contact_sheets\\lightcapture_20260516\\frames\\level_probes\\Bridge_1817_p008.png",
+      "metrics": {
+        "mean_luma": 31.374,
+        "nonblack_ratio": 0.298874,
+        "bright_ratio": 0.214821,
+        "saturated_ratio": 0.148244,
+        "prism_ratio": 0.148154,
+        "active_bbox": {
+          "left": 10,
+          "top": 9,
+          "right": 709,
+          "bottom": 468,
+          "width": 699,
+          "height": 459
+        },
+        "bright_bbox": {
+          "left": 215,
+          "top": 9,
+          "right": 709,
+          "bottom": 459,
+          "width": 494,
+          "height": 450
+        }
+      }
+    },
+    {
+      "level": "Bridge",
+      "timestamp": "18:37",
+      "seconds": 1117,
+      "offset_from_level_start": 28,
+      "path": "diagnostics\\captures\\contact_sheets\\lightcapture_20260516\\frames\\level_probes\\Bridge_1837_p028.png",
+      "metrics": {
+        "mean_luma": 44.872,
+        "nonblack_ratio": 0.494227,
+        "bright_ratio": 0.364398,
+        "saturated_ratio": 0.285263,
+        "prism_ratio": 0.272899,
+        "active_bbox": {
+          "left": 6,
+          "top": 9,
+          "right": 709,
+          "bottom": 459,
+          "width": 703,
+          "height": 450
+        },
+        "bright_bbox": {
+          "left": 7,
+          "top": 9,
+          "right": 709,
+          "bottom": 459,
+          "width": 702,
+          "height": 450
+        }
+      }
+    },
+    {
+      "level": "Bridge",
+      "timestamp": "19:29",
+      "seconds": 1169,
+      "offset_from_level_start": 80,
+      "path": "diagnostics\\captures\\contact_sheets\\lightcapture_20260516\\frames\\level_probes\\Bridge_1929_p080.png",
+      "metrics": {
+        "mean_luma": 15.345,
+        "nonblack_ratio": 0.21794,
+        "bright_ratio": 0.073157,
+        "saturated_ratio": 0.087118,
+        "prism_ratio": 0.079659,
+        "active_bbox": {
+          "left": 7,
+          "top": 9,
+          "right": 709,
+          "bottom": 469,
+          "width": 702,
+          "height": 460
+        },
+        "bright_bbox": {
+          "left": 64,
+          "top": 88,
+          "right": 652,
+          "bottom": 459,
+          "width": 588,
+          "height": 371
+        }
+      }
+    },
+    {
+      "level": "Volcano",
+      "timestamp": "24:25",
+      "seconds": 1465,
+      "offset_from_level_start": 0,
+      "path": "diagnostics\\captures\\contact_sheets\\lightcapture_20260516\\frames\\level_probes\\Volcano_2425_p000.png",
+      "metrics": {
+        "mean_luma": 72.594,
+        "nonblack_ratio": 0.308501,
+        "bright_ratio": 0.308278,
+        "saturated_ratio": 0.0,
+        "prism_ratio": 0.0,
+        "active_bbox": {
+          "left": 6,
+          "top": 0,
+          "right": 710,
+          "bottom": 152,
+          "width": 704,
+          "height": 152
+        },
+        "bright_bbox": {
+          "left": 6,
+          "top": 0,
+          "right": 710,
+          "bottom": 152,
+          "width": 704,
+          "height": 152
+        }
+      }
+    },
+    {
+      "level": "Volcano",
+      "timestamp": "24:30",
+      "seconds": 1470,
+      "offset_from_level_start": 5,
+      "path": "diagnostics\\captures\\contact_sheets\\lightcapture_20260516\\frames\\level_probes\\Volcano_2430_p005.png",
+      "metrics": {
+        "mean_luma": 7.195,
+        "nonblack_ratio": 0.116849,
+        "bright_ratio": 0.025741,
+        "saturated_ratio": 0.000243,
+        "prism_ratio": 0.000243,
+        "active_bbox": {
+          "left": 7,
+          "top": 29,
+          "right": 709,
+          "bottom": 209,
+          "width": 702,
+          "height": 180
+        },
+        "bright_bbox": {
+          "left": 7,
+          "top": 29,
+          "right": 709,
+          "bottom": 209,
+          "width": 702,
+          "height": 180
+        }
+      }
+    },
+    {
+      "level": "Volcano",
+      "timestamp": "24:37",
+      "seconds": 1477,
+      "offset_from_level_start": 12,
+      "path": "diagnostics\\captures\\contact_sheets\\lightcapture_20260516\\frames\\level_probes\\Volcano_2437_p012.png",
+      "metrics": {
+        "mean_luma": 85.466,
+        "nonblack_ratio": 0.503927,
+        "bright_ratio": 0.38042,
+        "saturated_ratio": 0.07901,
+        "prism_ratio": 0.069433,
+        "active_bbox": {
+          "left": 6,
+          "top": 0,
+          "right": 710,
+          "bottom": 469,
+          "width": 704,
+          "height": 469
+        },
+        "bright_bbox": {
+          "left": 7,
+          "top": 0,
+          "right": 710,
+          "bottom": 469,
+          "width": 703,
+          "height": 469
+        }
+      }
+    },
+    {
+      "level": "Volcano",
+      "timestamp": "24:50",
+      "seconds": 1490,
+      "offset_from_level_start": 25,
+      "path": "diagnostics\\captures\\contact_sheets\\lightcapture_20260516\\frames\\level_probes\\Volcano_2450_p025.png",
+      "metrics": {
+        "mean_luma": 53.79,
+        "nonblack_ratio": 0.271927,
+        "bright_ratio": 0.239491,
+        "saturated_ratio": 0.048944,
+        "prism_ratio": 0.042104,
+        "active_bbox": {
+          "left": 6,
+          "top": 0,
+          "right": 710,
+          "bottom": 469,
+          "width": 704,
+          "height": 469
+        },
+        "bright_bbox": {
+          "left": 6,
+          "top": 0,
+          "right": 710,
+          "bottom": 469,
+          "width": 704,
+          "height": 469
+        }
+      }
+    },
+    {
+      "level": "Alaska",
+      "timestamp": "25:00",
+      "seconds": 1500,
+      "offset_from_level_start": 0,
+      "path": "diagnostics\\captures\\contact_sheets\\lightcapture_20260516\\frames\\level_probes\\Alaska_2500_p000.png",
+      "metrics": {
+        "mean_luma": 79.754,
+        "nonblack_ratio": 0.376687,
+        "bright_ratio": 0.333235,
+        "saturated_ratio": 0.001612,
+        "prism_ratio": 0.001563,
+        "active_bbox": {
+          "left": 14,
+          "top": 0,
+          "right": 702,
+          "bottom": 473,
+          "width": 688,
+          "height": 473
+        },
+        "bright_bbox": {
+          "left": 64,
+          "top": 6,
+          "right": 673,
+          "bottom": 473,
+          "width": 609,
+          "height": 467
+        }
+      }
+    },
+    {
+      "level": "Alaska",
+      "timestamp": "25:08",
+      "seconds": 1508,
+      "offset_from_level_start": 8,
+      "path": "diagnostics\\captures\\contact_sheets\\lightcapture_20260516\\frames\\level_probes\\Alaska_2508_p008.png",
+      "metrics": {
+        "mean_luma": 23.024,
+        "nonblack_ratio": 0.562439,
+        "bright_ratio": 0.032948,
+        "saturated_ratio": 0.053527,
+        "prism_ratio": 0.053527,
+        "active_bbox": {
+          "left": 7,
+          "top": 9,
+          "right": 709,
+          "bottom": 469,
+          "width": 702,
+          "height": 460
+        },
+        "bright_bbox": {
+          "left": 7,
+          "top": 93,
+          "right": 708,
+          "bottom": 469,
+          "width": 701,
+          "height": 376
+        }
+      }
+    },
+    {
+      "level": "Alaska",
+      "timestamp": "25:28",
+      "seconds": 1528,
+      "offset_from_level_start": 28,
+      "path": "diagnostics\\captures\\contact_sheets\\lightcapture_20260516\\frames\\level_probes\\Alaska_2528_p028.png",
+      "metrics": {
+        "mean_luma": 8.427,
+        "nonblack_ratio": 0.084997,
+        "bright_ratio": 0.006149,
+        "saturated_ratio": 0.0,
+        "prism_ratio": 0.0,
+        "active_bbox": {
+          "left": 7,
+          "top": 9,
+          "right": 709,
+          "bottom": 469,
+          "width": 702,
+          "height": 460
+        },
+        "bright_bbox": {
+          "left": 330,
+          "top": 97,
+          "right": 709,
+          "bottom": 455,
+          "width": 379,
+          "height": 358
+        }
+      }
+    },
+    {
+      "level": "Alaska",
+      "timestamp": "26:20",
+      "seconds": 1580,
+      "offset_from_level_start": 80,
+      "path": "diagnostics\\captures\\contact_sheets\\lightcapture_20260516\\frames\\level_probes\\Alaska_2620_p080.png",
+      "metrics": {
+        "mean_luma": 43.832,
+        "nonblack_ratio": 0.57877,
+        "bright_ratio": 0.447436,
+        "saturated_ratio": 0.003032,
+        "prism_ratio": 0.00241,
+        "active_bbox": {
+          "left": 120,
+          "top": 9,
+          "right": 709,
+          "bottom": 469,
+          "width": 589,
+          "height": 460
+        },
+        "bright_bbox": {
+          "left": 182,
+          "top": 9,
+          "right": 709,
+          "bottom": 469,
+          "width": 527,
+          "height": 460
+        }
+      }
+    }
+  ],
+  "outputs": {
+    "screen_sheet": "diagnostics\\captures\\contact_sheets\\lightcapture_20260516\\tnd6480i_screen_atlas_20260516.jpg",
+    "level_sheet": "diagnostics\\captures\\contact_sheets\\lightcapture_20260516\\tnd6480i_level_probe_20260516.jpg",
+    "json": "reports\\video_atlas\\tnd6480i_lightcapture_atlas_20260516.json"
+  }
+}

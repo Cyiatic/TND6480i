@@ -697,3 +697,36 @@ TND6480i timestamp index:
 ```
 
 Use this clip as an atlas for screen-family analysis and avoid brute-force hardware uploads. The user's highest priority is now making the rest of the romhack playable. The only front-end/menu fix to preserve is the already-promoted dossier table stock revert; other non-pause menu scaling can wait. All level cutscenes are still vertically too short / compressed, so cutscene framing remains part of the active playability problem rather than postponed front-end polish. Next analysis should compare working levels (`Press`, `Parkhaus`, `Wreck`, `Bridge`, `Alaska`) against failing/corrupt levels (`Party`, `Labs recorder pickup`, `Hotel`, `Tower intro`, `City`, `Boat intro`, `Volcano`) and identify whether the breakage is tied to level intro/camera paths, framebuffer selection, or level-specific assets/effects.
+
+## 2026-05-16 Cooldown Resume
+
+Hardware is reconnected and live. GV-USB2 capture succeeds from `GV-USB2, Analog Capture`, and the fresh resume frame shows the SummerCart64 menu rather than a blue/no-signal state:
+
+```text
+diagnostics/captures/current/resume_live_gvusb2_20260516_2.png
+```
+
+Current best ROM remains:
+
+```text
+artifacts/generated/game_h460_top10_stock_dossier_tables_current.z64
+MD5: f8d146a4a9edd57a2dd2169a4aa9bd21
+N64 CRC: 84B7F86D A3B63A65
+```
+
+Added a reusable LightCapture atlas builder:
+
+```text
+scripts/build_lightcapture_atlas.py
+reports/video_atlas/tnd6480i_lightcapture_atlas_20260516.json
+diagnostics/captures/contact_sheets/lightcapture_20260516/tnd6480i_screen_atlas_20260516.jpg
+diagnostics/captures/contact_sheets/lightcapture_20260516/tnd6480i_level_probe_20260516.jpg
+```
+
+First atlas read:
+
+- The dossier/menu table revert should stay: file/mission text alignment is visibly better than the rejected broader front revert path.
+- The level intro/cutscene problem is still distinct from ordinary gameplay. Several level-start frames show the briefing/dossier, while early cutscene frames show a short active render strip before gameplay fills roughly the 460-line active area.
+- Party, City, and Boat frames in the recorded clip fall back to SC64/menu/file-select shortly after their start points, matching user reports that those paths crash or lock.
+- Hotel and Volcano show the most obvious severe color/prism corruption in the level probe sheet.
+- Resume direction: do not upload a new ROM until an offline/emulator delta points at a small change. Work from `game_h460_top10_stock_dossier_tables_current.z64`, preserve the dossier table stock revert, and isolate level/cutscene/framebuffer state before revisiting gunbarrel/front-end polish.
