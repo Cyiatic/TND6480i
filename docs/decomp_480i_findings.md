@@ -4,6 +4,49 @@ Date: 2026-05-09
 
 Source context: local GoldenEye decomp checkout at `C:\Users\codex\Documents\Codex\2026-05-06\files-mentioned-by-the-user-tnd64\parallel_diag\goldeneye_decomp_007\007-master`.
 
+## 2026-05-16 Expansion Pak TLB Cache Correction
+
+The earlier framebuffer safety model was wrong in an important way. It treated the low framebuffer at `0x80300000-0x80395FFF` as the most likely TLB/cache collision. The direct ROM startup code shows the risky overlap is instead the high framebuffer on 8 MB systems.
+
+Relevant direct-ROM code:
+
+| ROM offset | Stock/current instruction | Meaning |
+|---:|---:|---|
+| `0x241C` | `0x3C08802F` | `lui t0,0x802F` |
+| `0x2420` | `0x25086000` | `addiu t0,t0,0x6000` |
+| `0x2424-0x2430` | load/add/store via `0x8000050C` | add expansion-memory delta and store `g_tlbmanageTlbAllocatedBlock` |
+| `0x24A8-0x24BC` | `osMemSize - 0x400000` | initializes the expansion-memory delta |
+
+On a 4 MB console the page-cache base is about `0x802F6000`. On an 8 MB Expansion Pak console the delta is `0x00400000`, so the page-cache base becomes about `0x806F6000`. With 90 pages of `0x2000` bytes, the expected cache range is approximately `0x806F6000-0x807A9FFF`.
+
+That overlaps the high 640x480x16 framebuffer used by the current working split layout:
+
+```text
+fb0: 0x80300000-0x80395FFF
+fb1: 0x8076A000-0x807FFFFF
+```
+
+This better explains the level-specific failures reported by hardware testing: only levels or events that page enough data through the TLB cache would corrupt high framebuffer contents or the cache metadata.
+
+Current tested canary:
+
+```text
+artifacts/generated/game_h460_top10_stock_dossier_tlb8060_current.z64
+MD5: f449b66024efc95069f46990fa837e8d
+N64 CRC: 84B77873 803478C8
+```
+
+It changes only the TLB cache base math:
+
+```text
+ROM 0x241C: 3C08802F -> 3C088020
+ROM 0x2420: 25086000 -> 25080000
+```
+
+Expected 8 MB TLB cache range becomes `0x80600000-0x806B3FFF`, below `fb1`. The canary boots on real N64 and reaches no-input gameplay/demo after the PC reboot, but still shows top-band visual corruption. Treat it as a stability/playability canary, not a visual completion patch.
+
+Rejected adjacent approach: moving `fb1` down to `0x8066A000` black-screened on real hardware. Continue by moving cache placement first, not framebuffer placement.
+
 ## Why the No-Dims Candidate Was Suspicious
 
 The user-tested `TND64_480i_single8076_all_core_no_menu.z64` included the single-high framebuffer placement and the GE 480i VI-side word family, but it did not patch the direct gameplay dimension constants at ROM offsets `0x4F354` and `0x4F35C`.
@@ -809,3 +852,35 @@ This candidate is based on the last solid gameplay/watch fallback, not the later
 Hardware sanity after upload showed TND credits output at `diagnostics/captures/current/after_upload_game_h460_top10_wait10_20260511.png`. Gopher64 input evidence is `diagnostics/captures/contact_sheets/game_viewport_centering_input70_20260510.jpg`.
 
 Next useful work: test Bazaar on hardware for top/bottom flicker, overscan, text boxes, countdown placement, and watch flicker. If it is still too tall, try the already-built `game_h440_top20_current.z64`. If it regresses, roll back to `TND64_480i_frontbuf_padorigin_watch_hud_menutable_menuxy_tndgeview_physicalfb_camfullheight_gamefulltop0_reserve58000_core_no_menu.z64`.
+
+## 2026-05-17 Stage Z-Buffer Memory Diagnostic
+
+After `tlbpages58` made Wreck clean/slow but left Party/City/Credits and the prism/crash levels broken, the stock-camera fallback was tested and behaved the same. That reduces confidence in the camera-viewport explanation. The next narrow hypothesis is that the active 640x480 stage z-buffer allocation is too expensive for some TND64 stages/effects.
+
+The GE-style z-buffer allocation words are already present in the current branch:
+
+| Offset | Current word | Meaning |
+|---:|---|---|
+| `0x106ED4` | `0x240F0280` | resolution-path z-buffer width 640 |
+| `0x106EE4` | `0x241801E0` | resolution-path z-buffer height 480 |
+| `0x106EF0` | `0x24190280` | low-res path z-buffer width 640 |
+| `0x106F10` | `0x240801E0` | single-player z-buffer height 480 |
+| `0x106F24` | `0x240901E0` | split/multiplayer z-buffer height 480 |
+
+The first hardware-worthy diagnostic keeps the two 640-wide rows but restores stock heights:
+
+```text
+artifacts/generated/game_h460_top10_stock_dossier_tlbpages58_zbuf640hstock_007label_current.z64
+MD5: dfd0af4e1ca054ad940d18e3ba89f713
+BPS MD5: b943e4ea0e79fe93ac5ac3751a404409
+```
+
+It changes only:
+
+| Offset | Change |
+|---:|---|
+| `0x106EE4` | `480 -> 330` |
+| `0x106F10` | `480 -> 240` |
+| `0x106F24` | `480 -> 120` |
+
+Hardware startup passed through CMK/logos/gunbarrel/title/cast (`diagnostics/captures/contact_sheets/zbuf640hstock_007label_powercycle_startup_20260517.jpg`). This is now the live SC64 direct-ROM candidate. Manual test priority is Party/Credits/City, Hotel/Volcano, Tower/Boat, Labs, then Wreck/Bridge/Press/Alaska controls.

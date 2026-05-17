@@ -1,0 +1,88 @@
+{
+  "source_save": "C:\\Users\\codex\\Documents\\007 - Tomorrow Never Dies (USA).sav",
+  "source_save_bytes": 512,
+  "source_save_md5": "f02bb8224a4dc25079721d7a3f0d38e0",
+  "gopher_save_dir": "C:\\Users\\codex\\AppData\\Roaming\\gopher64\\saves",
+  "parallel_save_dir": "C:\\Users\\codex\\AppData\\Local\\parallel-launcher\\data\\retro-data\\saves",
+  "parallel_srm_template": null,
+  "roms": [
+    {
+      "rom": "artifacts\\generated\\game_h460_top10_stock_dossier_tlbpages58_zbuf640hstock_007label_current.z64",
+      "rom_md5": "dfd0af4e1ca054ad940d18e3ba89f713",
+      "rom_sha256": "65D467AA875CB6CC1066DA663393DB9B942B73BF05B985E988DCE7535D843DB6",
+      "internal_title": "GOLDENEYE",
+      "writes": [
+        {
+          "path": "artifacts\\generated\\game_h460_top10_stock_dossier_tlbpages58_zbuf640hstock_007label_current.sav",
+          "bytes": 512,
+          "backup": "artifacts\\generated\\game_h460_top10_stock_dossier_tlbpages58_zbuf640hstock_007label_current.sav.bak_20260517_081726",
+          "changed": true
+        },
+        {
+          "path": "artifacts\\generated\\game_h460_top10_stock_dossier_tlbpages58_zbuf640hstock_007label_current.eep",
+          "bytes": 2048,
+          "backup": "artifacts\\generated\\game_h460_top10_stock_dossier_tlbpages58_zbuf640hstock_007label_current.eep.bak_20260517_081726",
+          "changed": true
+        },
+        {
+          "path": "C:\\Users\\codex\\AppData\\Roaming\\gopher64\\saves\\GOLDENEYE-65D467AA875CB6CC1066DA663393DB9B942B73BF05B985E988DCE7535D843DB6.eep",
+          "bytes": 2048,
+          "backup": null,
+          "changed": true
+        }
+      ]
+    },
+    {
+      "rom": "artifacts\\generated\\game_h460_top10_stock_dossier_tlbpages58_zbuf640h360_007label_current.z64",
+      "rom_md5": "38339a0ff68eaf4198e3d620bd52ef7f",
+      "rom_sha256": "7F88EAC80F3C0FA0310F2D2511A6C3BD92EBCAFBB9E68ECB3BA4CB904BF785C9",
+      "internal_title": "GOLDENEYE",
+      "writes": [
+        {
+          "path": "artifacts\\generated\\game_h460_top10_stock_dossier_tlbpages58_zbuf640h360_007label_current.sav",
+          "bytes": 512,
+          "backup": "artifacts\\generated\\game_h460_top10_stock_dossier_tlbpages58_zbuf640h360_007label_current.sav.bak_20260517_081726",
+          "changed": true
+        },
+        {
+          "path": "artifacts\\generated\\game_h460_top10_stock_dossier_tlbpages58_zbuf640h360_007label_current.eep",
+          "bytes": 2048,
+          "backup": "artifacts\\generated\\game_h460_top10_stock_dossier_tlbpages58_zbuf640h360_007label_current.eep.bak_20260517_081726",
+          "changed": true
+        },
+        {
+          "path": "C:\\Users\\codex\\AppData\\Roaming\\gopher64\\saves\\GOLDENEYE-7F88EAC80F3C0FA0310F2D2511A6C3BD92EBCAFBB9E68ECB3BA4CB904BF785C9.eep",
+          "bytes": 2048,
+          "backup": null,
+          "changed": true
+        }
+      ]
+    },
+    {
+      "rom": "artifacts\\generated\\game_h460_top10_stock_dossier_tlbpages58_zbufstock_007label_current.z64",
+      "rom_md5": "6d2ad092a8e36d8e77516f8b1eb0de34",
+      "rom_sha256": "044E805484E8401A0FE4EB85745AF2EC856558AAEB20C2F5F03AE91E0BE16561",
+      "internal_title": "GOLDENEYE",
+      "writes": [
+        {
+          "path": "artifacts\\generated\\game_h460_top10_stock_dossier_tlbpages58_zbufstock_007label_current.sav",
+          "bytes": 512,
+          "backup": "artifacts\\generated\\game_h460_top10_stock_dossier_tlbpages58_zbufstock_007label_current.sav.bak_20260517_081726",
+          "changed": true
+        },
+        {
+          "path": "artifacts\\generated\\game_h460_top10_stock_dossier_tlbpages58_zbufstock_007label_current.eep",
+          "bytes": 2048,
+          "backup": "artifacts\\generated\\game_h460_top10_stock_dossier_tlbpages58_zbufstock_007label_current.eep.bak_20260517_081726",
+          "changed": true
+        },
+        {
+          "path": "C:\\Users\\codex\\AppData\\Roaming\\gopher64\\saves\\GOLDENEYE-044E805484E8401A0FE4EB85745AF2EC856558AAEB20C2F5F03AE91E0BE16561.eep",
+          "bytes": 2048,
+          "backup": null,
+          "changed": true
+        }
+      ]
+    }
+  ]
+}

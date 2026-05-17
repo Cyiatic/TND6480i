@@ -1,53 +1,70 @@
 # TND6480i Resume State
 
-Last updated: 2026-05-17 after uploading the `tlbpages58` 007-label stage-memory/TLB-cache diagnostic to SC64.
+Last updated: 2026-05-17 after uploading the `zbuf640hstock` 007-label stage z-buffer memory diagnostic to SC64.
 
 Scope reminder: keep work limited to this N64/TND6480i project and directly related tools/devices.
 
 ## Current Console State
 
-The SC64 is in direct-ROM mode with EEPROM 4k. The console currently has the `tlbpages58` 007-label candidate loaded:
+The SC64 is in direct-ROM mode with EEPROM 4k. The console currently has the `zbuf640hstock` 007-label candidate loaded:
 
 ```text
-artifacts/generated/game_h460_top10_stock_dossier_tlbpages58_007label_current.z64
-MD5: 25cd6b104b4cbdf3b2cdf4e1d02354da
+artifacts/generated/game_h460_top10_stock_dossier_tlbpages58_zbuf640hstock_007label_current.z64
+MD5: dfd0af4e1ca054ad940d18e3ba89f713
 N64 CRC: 84B7FBED 3ED1CF90
 ```
 
-Purpose: preserve the current in-game-480i/camera-480i/007-label branch, but change the Expansion Pak TLB cache from the `tlb806b6` compromise to a smaller stock-start cache:
+Purpose: preserve the `tlbpages58` in-game-480i/camera-480i/007-label branch and test whether the full 640x480 stage z-buffer is starving/colliding with stage memory. This candidate keeps the z-buffer width at 640, but restores stock z-buffer heights:
 
 ```text
-0x241C: TLB direct base upper 0x802B -> 0x802F
-0x2420: TLB direct base lower remains 0x6000
-0x2618: TLB round-robin wrap count 90 -> 58
+0x106EE4: resolution z-buffer height 480 -> 330
+0x106F10: single-player low-res z-buffer height 480 -> 240
+0x106F24: split/multiplayer z-buffer height 480 -> 120
 
-Expected 8 MB cache range:
-  stock 90 pages:    0x806F6000-0x807A9FFF (overlaps fb1)
-  tlb806b6 90 pages: 0x806B6000-0x80769FFF (safe, but steals 0x40000 extra stage memory)
-  tlbpages58:        0x806F6000-0x80769FFF (stock stage limit, no fb1 overlap)
+Kept:
+0x106ED4: resolution z-buffer width 640
+0x106EF0: low-res z-buffer width 640
 ```
 
-This is the next best playability diagnostic because it gives back the stock stage-memory ceiling while still avoiding the high framebuffer overlap. It does not intentionally change the normal in-game framebuffer/viewport work or the camera 480i words.
+Expected allocation change: current full path was up to `640x480 -> 614,400 bytes + 64`; this candidate uses `640x330 -> 422,400 bytes + 64` in the resolution path and `640x240 -> 307,200 bytes + 64` in the single-player low-res path. It intentionally avoids returning to stock 320/440-wide depth rows on the first pass, because that would reintroduce possible horizontal RDP/z-buffer wrap while giving back memory.
 
 Reports/evidence:
 
 ```text
-reports/tnd480i_game_h460_top10_stock_dossier_tlbpages58_007label_current_report.json
-reports/tnd480i_tlb_pagecount_candidates_20260517.json
-reports/save_pairing_tlb_pagecount_all_missions_20260517.json
-reports/smoke/smoke_tlb_pagecount_candidates_input30_20260517.json
-reports/smoke/smoke_tlbpages58_007label_allmissions_input30_20260517.json
-diagnostics/captures/videos/tlbpages58_007label_powercycle_startup_20260517.mp4
-diagnostics/captures/contact_sheets/tlbpages58_007label_powercycle_startup_20260517.jpg
-artifacts/generated/TND6480i_game_h460_top10_stock_dossier_tlbpages58_007label_from_baseline_tnd.bps
-reports/tnd6480i_game_h460_top10_stock_dossier_tlbpages58_007label_bps_manifest.json
+reports/tnd480i_game_h460_top10_stock_dossier_tlbpages58_zbuf640hstock_007label_current_report.json
+reports/tnd480i_stage_zbuf_candidates_20260517.json
+reports/save_pairing_stage_zbuf_20260517.json
+reports/smoke/smoke_zbuf640hstock_input30_20260517.json
+reports/smoke/smoke_zbuf640hstock_partyroute_20260517.json
+diagnostics/captures/videos/zbuf640hstock_007label_powercycle_startup_20260517.mp4
+diagnostics/captures/contact_sheets/zbuf640hstock_007label_powercycle_startup_20260517.jpg
+diagnostics/captures/videos/zbuf640hstock_007label_idle_followup_20260517.mp4
+diagnostics/captures/contact_sheets/zbuf640hstock_007label_idle_followup_20260517.jpg
+artifacts/generated/TND6480i_game_h460_top10_stock_dossier_tlbpages58_zbuf640hstock_007label_current_from_baseline_tnd.bps
+reports/tnd6480i_game_h460_top10_stock_dossier_tlbpages58_zbuf640hstock_007label_current_bps_manifest.json
 ```
 
-Verified BPS patch MD5: `7e576a51f9467c7a29374dfb7d65221a`. Paired save is the generated all-missions EEPROM (`MD5 79ed3fe6851b080ff21de69fd12f034d`), not the earlier blank Documents save.
+Verified BPS patch MD5: `b943e4ea0e79fe93ac5ac3751a404409`. Paired save is the user-provided complete EEPROM from Documents (`MD5 f02bb8224a4dc25079721d7a3f0d38e0`).
 
-Hardware startup evidence: SC64 accepted the direct ROM and EEPROM 4k save upload, then a Kasa power-cycle plus GV-USB2 capture showed live CMK/logos/gunbarrel/title/opening-cast output. The console is currently left on this ROM for the next manual level test.
+Hardware startup evidence: SC64 accepted the direct ROM and EEPROM 4k save upload, then a Kasa power-cycle plus GV-USB2 capture showed live CMK/logos/gunbarrel/title/opening-cast output. A 150-second no-cycle idle follow-up continued looping front/title/cast output; it did not provide a useful gameplay/demo validation.
 
-Next required manual hardware test for the currently loaded ROM: Party and Credits first, then City, Tower intro, Boat intro, Hotel/Volcano prism, Labs encoder/door, and control stages Parkhaus/Wreck/Bridge/Alaska. If Party/City/Credits improve, the old failure was likely stage-memory pressure from the `tlb806b6` workaround. If they behave the same, test the already-built `tlbpages58_camviewstock` combination only after weighing the risk, because its emulator visual capture stalled around the title in the current capture path.
+Manual test focus for this loaded ROM: Party/Credits/City load first, then Hotel/Volcano prism, Tower/Boat intro freezes, Labs encoder/door freeze, and Wreck/Bridge/Press/Alaska controls. Watch specifically for whether Wreck remains clean/slow and whether Bazaar/Labs top-bottom flicker changes.
+
+Latest diagnostic interpretation: the user tested `tlbpages58_camviewstock_007label` and reported that everything else was the same. Demote the stock-camera-viewport theory. The relevant clue is now that `tlbpages58` made Wreck clean/slow but did not fix Party/City/Credits or the prism/crash levels; the z-buffer-height pass tests whether the remaining failures are from stage memory pressure caused by the full 640x480 z-buffer.
+
+Next candidates are already built but should not be uploaded until `zbuf640hstock` is manually tested:
+
+```text
+artifacts/generated/game_h460_top10_stock_dossier_tlbpages58_zbuf640h360_007label_current.z64
+MD5: 38339a0ff68eaf4198e3d620bd52ef7f
+BPS MD5: 358eb533bd0473dee43e508ef9142118
+
+artifacts/generated/game_h460_top10_stock_dossier_tlbpages58_zbufstock_007label_current.z64
+MD5: 6d2ad092a8e36d8e77516f8b1eb0de34
+BPS MD5: e35a1590408bff0e30b7ce9ced07f99f
+```
+
+Use `zbuf640h360` if `zbuf640hstock` changes failures in a useful direction but causes too much vertical/depth cutoff. Use `zbufstock` only if the 640-wide candidates do not restore playability, because stock 320/440-wide depth rows are more likely to regress 480i composition.
 
 Previous loaded diagnostic:
 

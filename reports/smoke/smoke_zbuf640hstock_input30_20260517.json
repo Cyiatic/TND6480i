@@ -1,0 +1,34 @@
+[
+  {
+    "rom": "artifacts\\generated\\game_h460_top10_stock_dossier_tlbpages58_zbuf640hstock_007label_current.z64",
+    "elapsed": 75.06,
+    "main_window_seen": true,
+    "main_window": {
+      "hwnd": 6292652,
+      "title": "gopher64"
+    },
+    "key_taps": 88,
+    "scripted_key_events": 0,
+    "input_events_total": 0,
+    "input_events_consumed": 0,
+    "exited_before_timeout": false,
+    "exit_code_before_timeout": null,
+    "stdout_path": "reports\\smoke\\game_h460_top10_stock_dossier_tlbpages58_zbuf640hstock_007label_current.stdout.txt",
+    "stderr_path": "reports\\smoke\\game_h460_top10_stock_dossier_tlbpages58_zbuf640hstock_007label_current.stderr.txt",
+    "stdout_bytes": 0,
+    "stderr_bytes": 3299,
+    "marker_counts": {},
+    "stderr_tail": [
+      "[WARN]: Stalled compile (graphics, d177283513a5a0f7): thread 0 - 26683.200 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, 5b01cde7ced266c2): thread 0 - 5171.300 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, b178554ed4416e85): thread 0 - 11870.800 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (compute, 35f88fc5fb45ef46): thread 0 - 54942.400 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (compute, 5949a1b688b6ff72): thread 0 - 104080.200 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (compute, 8b3dfa11b8cf196e): thread 0 - 5040.200 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, e6b76ed8c8235cc1): thread 0 - 23143.400 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, 7d7854549a936cd2): thread 0 - 15487.100 us (mode: sync, success: yes)."
+    ],
+    "captures": [],
+    "capture": null
+  }
+]

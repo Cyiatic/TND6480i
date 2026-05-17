@@ -1,0 +1,73 @@
+{
+  "name": "game_h460_top10_stock_dossier_tlbpages58_zbuf640hstock_007label_current",
+  "purpose": "Keep 640-wide z-buffer rows, but restore stock z-buffer heights. This tests whether the current full 640x480 stage z-buffer is starving or colliding with stage memory while preserving horizontal 480i depth layout.",
+  "base_rom": "artifacts\\generated\\game_h460_top10_stock_dossier_tlbpages58_007label_current.z64",
+  "base_md5": "25cd6b104b4cbdf3b2cdf4e1d02354da",
+  "out_rom": "artifacts\\generated\\game_h460_top10_stock_dossier_tlbpages58_zbuf640hstock_007label_current.z64",
+  "out_md5": "dfd0af4e1ca054ad940d18e3ba89f713",
+  "header_crc": "84B7FBED 3ED1CF90",
+  "patches": [
+    {
+      "offset": "0x106ED4",
+      "field": "resolution_width",
+      "old": "0x240F0280",
+      "new": "0x240F0280",
+      "word_key": "width_640_t7",
+      "changed": false
+    },
+    {
+      "offset": "0x106EE4",
+      "field": "resolution_height",
+      "old": "0x241801E0",
+      "new": "0x2418014A",
+      "word_key": "height_330_t8",
+      "changed": true
+    },
+    {
+      "offset": "0x106EF0",
+      "field": "lowres_width",
+      "old": "0x24190280",
+      "new": "0x24190280",
+      "word_key": "width_640_t9",
+      "changed": false
+    },
+    {
+      "offset": "0x106F10",
+      "field": "single_height",
+      "old": "0x240801E0",
+      "new": "0x240800F0",
+      "word_key": "height_240_t0",
+      "changed": true
+    },
+    {
+      "offset": "0x106F24",
+      "field": "split_height",
+      "old": "0x240901E0",
+      "new": "0x24090078",
+      "word_key": "height_120_t1",
+      "changed": true
+    }
+  ],
+  "expected_allocations": {
+    "resolution": "640x330 -> 422,400 bytes + 64",
+    "single_player_lowres": "640x240 -> 307,200 bytes + 64",
+    "current_full_reference": "640x480 -> 614,400 bytes + 64"
+  },
+  "save_writes": [
+    {
+      "path": "artifacts\\generated\\game_h460_top10_stock_dossier_tlbpages58_zbuf640hstock_007label_current.sav",
+      "bytes": 512,
+      "md5": "f02bb8224a4dc25079721d7a3f0d38e0"
+    },
+    {
+      "path": "artifacts\\generated\\game_h460_top10_stock_dossier_tlbpages58_zbuf640hstock_007label_current.eep",
+      "bytes": 2048,
+      "md5": "08ab54b804b8f9f416d7dbbd8315b411"
+    }
+  ],
+  "bps_patch": "artifacts\\generated\\TND6480i_game_h460_top10_stock_dossier_tlbpages58_zbuf640hstock_007label_current_from_baseline_tnd.bps",
+  "bps_patch_md5": "b943e4ea0e79fe93ac5ac3751a404409",
+  "bps_manifest": "reports\\tnd6480i_game_h460_top10_stock_dossier_tlbpages58_zbuf640hstock_007label_current_bps_manifest.json",
+  "hardware_priority": 1,
+  "test_note": "Upload only one z-buffer candidate at a time. Test Party/Credits/City load, Hotel/Volcano prism, Tower/Boat intros, Labs encoder/door, then Wreck/Bridge/Press/Alaska controls."
+}

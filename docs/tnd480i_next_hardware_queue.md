@@ -4,7 +4,25 @@ Date: 2026-05-08
 
 ## Current Hardware State
 
-- 2026-05-17 `tlbpages58` 007-label stage-memory/TLB-cache diagnostic, active on hardware:
+- 2026-05-17 `zbuf640hstock` 007-label stage z-buffer memory diagnostic, active on hardware:
+  - SC64 reports direct-ROM mode with EEPROM 4k. The active console ROM is:
+    `artifacts/generated/game_h460_top10_stock_dossier_tlbpages58_zbuf640hstock_007label_current.z64`.
+  - MD5: `dfd0af4e1ca054ad940d18e3ba89f713`; N64 CRC: `84B7FBED 3ED1CF90`.
+  - This preserves the `tlbpages58` in-game-480i/camera-480i/007-label branch, but reduces the stage z-buffer footprint:
+    `0x106EE4` height `480 -> 330`, `0x106F10` height `480 -> 240`, and `0x106F24` height `480 -> 120`.
+  - It deliberately keeps the z-buffer widths at 640 (`0x106ED4` and `0x106EF0`) so the RDP depth rows still match the 640-wide 480i viewport while recovering stage memory from the full 640x480 depth buffer.
+  - Why this is first: `tlbpages58` made Wreck clean/slow but did not fix Party/City/Credits or prism/crash levels, and `tlbpages58_camviewstock` behaved the same. That demotes the stock-camera theory and points at stage render memory/z-buffer footprint as the next narrow test.
+  - Paired save: user-provided complete EEPROM `C:\Users\codex\Documents\007 - Tomorrow Never Dies (USA).sav` (`MD5 f02bb8224a4dc25079721d7a3f0d38e0`), copied beside the ROM and into Gopher64's per-ROM save slot.
+  - Gopher64 smoke: `reports/smoke/smoke_zbuf640hstock_input30_20260517.json`, survived 75 seconds. A deliberate Party route attempt is logged at `reports/smoke/smoke_zbuf640hstock_partyroute_20260517.json`, but the route is not yet reliable enough to validate Party in emulator.
+  - Hardware startup evidence: `diagnostics/captures/videos/zbuf640hstock_007label_powercycle_startup_20260517.mp4` and `diagnostics/captures/contact_sheets/zbuf640hstock_007label_powercycle_startup_20260517.jpg`; GV-USB2 showed live CMK/logos/gunbarrel/title/opening cast after Kasa power-cycle.
+  - Idle follow-up evidence: `diagnostics/captures/videos/zbuf640hstock_007label_idle_followup_20260517.mp4` and `diagnostics/captures/contact_sheets/zbuf640hstock_007label_idle_followup_20260517.jpg`; useful as a no-crash front-loop sanity only.
+  - Verified BPS: `artifacts/generated/TND6480i_game_h460_top10_stock_dossier_tlbpages58_zbuf640hstock_007label_current_from_baseline_tnd.bps` (`MD5 b943e4ea0e79fe93ac5ac3751a404409`).
+  - Manual test focus: Party/Credits/City load first; then Hotel/Volcano prism; Tower/Boat intro freezes; Labs encoder/door freeze; Wreck/Bridge/Press/Alaska controls; Bazaar/Labs top-bottom flicker.
+  - If this changes failures in a useful direction but causes too much vertical/depth cutoff, test `artifacts/generated/game_h460_top10_stock_dossier_tlbpages58_zbuf640h360_007label_current.z64` next (`MD5 38339a0ff68eaf4198e3d620bd52ef7f`).
+  - If this does not improve playability, use `artifacts/generated/game_h460_top10_stock_dossier_tlbpages58_zbufstock_007label_current.z64` only as the more aggressive memory-reclaim diagnostic (`MD5 6d2ad092a8e36d8e77516f8b1eb0de34`).
+  - If normal gameplay regresses badly, restore `artifacts/generated/game_h460_top10_stock_dossier_tlbpages58_007label_current.z64` or `artifacts/generated/game_h460_top10_stock_dossier_tables_007label_current.z64`.
+
+- 2026-05-17 `tlbpages58` 007-label stage-memory/TLB-cache diagnostic, previous hardware diagnostic:
   - SC64 reports direct-ROM mode with EEPROM 4k. The active console ROM is:
     `artifacts/generated/game_h460_top10_stock_dossier_tlbpages58_007label_current.z64`.
   - MD5: `25cd6b104b4cbdf3b2cdf4e1d02354da`; N64 CRC: `84B7FBED 3ED1CF90`.
@@ -14,8 +32,10 @@ Date: 2026-05-08
   - Paired save: generated all-missions EEPROM `artifacts/generated/tnd_test_all_missions.sav` (`MD5 79ed3fe6851b080ff21de69fd12f034d`), copied beside the ROM and into Gopher64's per-ROM save slot.
   - Hardware startup evidence: `diagnostics/captures/videos/tlbpages58_007label_powercycle_startup_20260517.mp4` and `diagnostics/captures/contact_sheets/tlbpages58_007label_powercycle_startup_20260517.jpg`; GV-USB2 showed live CMK/logos/gunbarrel/title/opening cast after Kasa power-cycle.
   - Verified BPS: `artifacts/generated/TND6480i_game_h460_top10_stock_dossier_tlbpages58_007label_from_baseline_tnd.bps` (`MD5 7e576a51f9467c7a29374dfb7d65221a`).
-  - Next manual test focus: Party and Credits first; City; Tower intro; Boat intro; Hotel/Volcano prism; Labs encoder/door; then Parkhaus/Wreck/Bridge/Alaska controls.
-  - If this regresses badly, restore `artifacts/generated/game_h460_top10_stock_dossier_tlb806b6_007label_current.z64` or `artifacts/generated/game_h460_top10_stock_dossier_tables_007label_current.z64`. If it behaves the same but boots cleanly, the next non-first-line candidate is `artifacts/generated/game_h460_top10_stock_dossier_tlbpages58_camviewstock_007label_current.z64`.
+  - User hardware feedback: Wreck is clean and runs slow, so the in-game 480i path is still active. Hotel's rainbow/prism effect changed, Volcano now has a new lower-screen navy-blue flash, and Boat intro appears to freeze slightly sooner. Everything else is effectively the same, so Party/Credits/City and the broader level matrix are not fixed.
+  - Interpretation: `tlbpages58` is an informative partial miss. The changed corruption shape implies TLB/stage-memory placement contributes, but it is not the root fix.
+  - Follow-up result: `tlbpages58_camviewstock_007label` was tested after this and the user reported everything else was the same. Treat stock-camera viewport reverts as deprioritized unless new evidence appears.
+  - Current follow-up is the active `zbuf640hstock` candidate above.
 
 - 2026-05-17 `tlb806b6_camviewstock` 007-label stock-camera fallback, previous loaded diagnostic:
   - Previous direct-ROM mode with EEPROM 4k. The ROM was:
