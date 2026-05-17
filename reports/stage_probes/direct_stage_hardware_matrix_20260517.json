@@ -1,0 +1,101 @@
+{
+  "date": "2026-05-17",
+  "base": {
+    "rom": "artifacts/generated/tnd58.z64",
+    "md5": "25cd6b104b4cbdf3b2cdf4e1d02354da",
+    "save": "artifacts/generated/tnd58.sav",
+    "save_md5": "79ed3fe6851b080ff21de69fd12f034d"
+  },
+  "method": {
+    "builder": "scripts/build_direct_stage_probe_roms.py",
+    "capture_device": "GV-USB2 over S-Video",
+    "flashcart": "SummerCart64 direct ROM mode, EEPROM 4k",
+    "cycle": "Kasa power-cycle per probe",
+    "clip_seconds": 35
+  },
+  "summary": [
+    {
+      "probe": "p00bzr",
+      "level": "Bazaar",
+      "video": "diagnostics/captures/videos/direct_p00bzr_hardware_20260517.mp4",
+      "contact_sheet": "diagnostics/captures/contact_sheets/direct_p00bzr_hardware_20260517.jpg",
+      "result": "Boots through the blue transition rectangle into live outdoor gameplay. Stable enough as a gameplay render reference, with the known upper/lower composition issue still visible around transition/start."
+    },
+    {
+      "probe": "p01pty",
+      "level": "Party",
+      "video": "diagnostics/captures/videos/direct_p01pty_hardware_20260517.mp4",
+      "contact_sheet": "diagnostics/captures/contact_sheets/direct_p01pty_hardware_20260517.jpg",
+      "result": "Briefly reaches a first-person Party render, then collapses to the blue rectangle and black. This separates Party from City/The End: it can enter the stage before the render path dies."
+    },
+    {
+      "probe": "p02lab",
+      "level": "Labs",
+      "video": "diagnostics/captures/videos/direct_p02lab_hardware_20260517.mp4",
+      "contact_sheet": "diagnostics/captures/contact_sheets/direct_p02lab_hardware_20260517.jpg",
+      "result": "Boots into live first-person Labs rendering for the sampled window. Encoder/door freeze is not covered by this direct no-input probe."
+    },
+    {
+      "probe": "p04hot",
+      "level": "Hotel",
+      "video": "diagnostics/captures/videos/direct_p04hot_hardware_20260517.mp4",
+      "contact_sheet": "diagnostics/captures/contact_sheets/direct_p04hot_hardware_20260517.jpg",
+      "result": "Boots into Hotel geometry but alternates with blown-out sky/white-blue frames. This reproduces the prism class as live render-state corruption, not a simple load failure."
+    },
+    {
+      "probe": "p07twr",
+      "level": "Tower",
+      "video": "diagnostics/captures/videos/direct_p07twr_hardware_20260517.mp4",
+      "contact_sheet": "diagnostics/captures/contact_sheets/direct_p07twr_hardware_20260517.jpg",
+      "result": "Gets past the transition rectangle into a stable-looking rendered scene for the sampled window. Prior Tower freeze is likely tied to intro/menu transition flow rather than basic stage load."
+    },
+    {
+      "probe": "p08cty",
+      "level": "City",
+      "video": "diagnostics/captures/videos/direct_p08cty_hardware_20260517.mp4",
+      "contact_sheet": "diagnostics/captures/contact_sheets/direct_p08cty_hardware_20260517.jpg",
+      "result": "Shows only the blue transition rectangle followed by black. No useful world render was captured."
+    },
+    {
+      "probe": "p09bot",
+      "level": "Boat",
+      "video": "diagnostics/captures/videos/direct_p09bot_hardware_20260517.mp4",
+      "contact_sheet": "diagnostics/captures/contact_sheets/direct_p09bot_hardware_20260517.jpg",
+      "result": "Gets past the transition rectangle into a very dark stage render. Prior Boat intro freeze may be transition/camera-flow related rather than a total stage-load failure."
+    },
+    {
+      "probe": "p11vol",
+      "level": "Volcano",
+      "video": "diagnostics/captures/videos/direct_p11vol_hardware_20260517.mp4",
+      "contact_sheet": "diagnostics/captures/contact_sheets/direct_p11vol_hardware_20260517.jpg",
+      "result": "Boots into live Volcano gameplay but produces the same prism/blown-out frame family as Hotel."
+    },
+    {
+      "probe": "p13end",
+      "level": "The End",
+      "video": "diagnostics/captures/videos/direct_p13end_hardware_20260517.mp4",
+      "contact_sheet": "diagnostics/captures/contact_sheets/direct_p13end_hardware_20260517.jpg",
+      "result": "Matches City: blue transition rectangle followed by black, with no useful world render captured."
+    }
+  ],
+  "working_groups": {
+    "loads_to_live_render": [
+      "Bazaar",
+      "Labs",
+      "Tower",
+      "Boat"
+    ],
+    "loads_but_render_state_corrupts": [
+      "Hotel",
+      "Volcano"
+    ],
+    "partial_stage_entry_then_collapse": [
+      "Party"
+    ],
+    "transition_rectangle_then_black": [
+      "City",
+      "The End"
+    ]
+  },
+  "implication": "The failures are not one uniform 'stage too large' problem. Direct boot shows several reported problem stages can load enough to render gameplay, while City/The End die before useful world rendering and Hotel/Volcano corrupt during live rendering. The next patch pass should target shared render/camera/VI state transitions and framebuffer/zbuffer ownership rather than menu text or another broad manual playthrough."
+}

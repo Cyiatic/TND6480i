@@ -85,6 +85,22 @@ diagnostics/captures/contact_sheets/direct_p06wrk_hardware_20260517.jpg
 
 Hardware result: `p06wrk` booted directly into Wreck on real N64 + SC64 after Kasa power-cycle. Gopher64 also reaches live Wreck rendering. `p01pty` reproduces the black/hard-hang path without menu input in Gopher64. This confirms the direct-stage harness is good enough to replace repeated manual dossier navigation for most troubleshooting.
 
+Follow-up hardware matrix captured with the direct probes:
+
+```text
+reports/stage_probes/direct_stage_hardware_matrix_20260517.json
+```
+
+Key results:
+
+- Bazaar and Labs boot into live gameplay through the standard blue transition rectangle.
+- Party briefly reaches a first-person render, then falls to the blue rectangle and black.
+- City and The End show the blue rectangle then black with no useful world render captured.
+- Tower and Boat get past the transition rectangle into rendered scenes, which suggests their manual intro freezes are tied to transition/camera flow rather than basic stage-load failure.
+- Hotel and Volcano boot into gameplay but reproduce the prism/blown-out render-state corruption class.
+
+Current implication: stop treating the problem as one uniform "stage too large" failure. The next patch pass should focus on shared render/camera/VI state transitions and framebuffer/z-buffer ownership, with City/The End and Hotel/Volcano as separate signatures.
+
 Rejected immediate diagnostic:
 
 ```text
