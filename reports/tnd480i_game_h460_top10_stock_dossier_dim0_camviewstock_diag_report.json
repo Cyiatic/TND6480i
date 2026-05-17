@@ -1,0 +1,46 @@
+{
+  "base_rom": "artifacts\\generated\\game_h460_top10_stock_dossier_tables_current.z64",
+  "stock_source_rom": "artifacts\\roms\\BASELINE_TND64_Expanded_direct_from_stock.z64",
+  "out_rom": "artifacts\\generated\\game_h460_top10_stock_dossier_dim0_camviewstock_diag.z64",
+  "purpose": "Diagnostic only: additionally restore direct render dimension table 0 to stock to test whether table0 drives cutscene/playability failures.",
+  "out_md5": "d2b35dd6c0676eb9c4fd87b85ad455b0",
+  "header_crc": "8437F561 91D726C4",
+  "patches": [
+    {
+      "offset": "0x4F354",
+      "old": "0x028001E0",
+      "new": "0x014000F0",
+      "note": "direct render dimensions table 0"
+    },
+    {
+      "offset": "0xBB7A4",
+      "old": "0x24020280",
+      "new": "0x240201B8",
+      "note": "camera viewport width"
+    },
+    {
+      "offset": "0xBB89C",
+      "old": "0x240201E0",
+      "new": "0x240200F8",
+      "note": "camera widescreen viewport height"
+    },
+    {
+      "offset": "0xBB8B8",
+      "old": "0x240201E0",
+      "new": "0x240200BE",
+      "note": "camera cinema viewport height"
+    },
+    {
+      "offset": "0xBB8C0",
+      "old": "0x240201E0",
+      "new": "0x24020130",
+      "note": "camera fullscreen viewport height"
+    }
+  ],
+  "notes": [
+    "Built from the promoted current best ROM.",
+    "Preserves the stock dossier table revert.",
+    "Does not touch non-camera gameplay h460/top10 viewport crop words.",
+    "Do not upload until emulator/offline comparison identifies a useful delta."
+  ]
+}

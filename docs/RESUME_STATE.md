@@ -730,3 +730,51 @@ First atlas read:
 - Party, City, and Boat frames in the recorded clip fall back to SC64/menu/file-select shortly after their start points, matching user reports that those paths crash or lock.
 - Hotel and Volcano show the most obvious severe color/prism corruption in the level probe sheet.
 - Resume direction: do not upload a new ROM until an offline/emulator delta points at a small change. Work from `game_h460_top10_stock_dossier_tables_current.z64`, preserve the dossier table stock revert, and isolate level/cutscene/framebuffer state before revisiting gunbarrel/front-end polish.
+
+## 2026-05-16 Camera View Stock Hardware Candidate
+
+Built three narrow current-best derivatives with:
+
+```text
+scripts/build_current_camera_revert_candidates.py
+```
+
+Current hardware-loaded candidate:
+
+```text
+artifacts/generated/game_h460_top10_stock_dossier_camviewstock_current.z64
+MD5: c36342a91e41edf2efa0f8df0c7c24c5
+N64 CRC: 84B7F741 9A97BB46
+Report: reports/tnd480i_game_h460_top10_stock_dossier_camviewstock_current_report.json
+```
+
+This ROM is based on the promoted `game_h460_top10_stock_dossier_tables_current.z64` and changes only four camera-mode viewport words back to stock TND values:
+
+```text
+0xBB7A4: camera viewport width 640 -> stock 440
+0xBB89C: camera widescreen viewport height 480 -> stock 248
+0xBB8B8: camera cinema viewport height 480 -> stock 190
+0xBB8C0: camera fullscreen viewport height 480 -> stock 304
+```
+
+It deliberately preserves the current dossier table revert and the non-camera gameplay `h460/top10` crop words.
+
+Hardware actions completed:
+
+- Confirmed SC64 menu and GV-USB2 were live after reboot: `diagnostics/captures/current/resume_sc64_menu_check_20260516_after_reboot.png`.
+- Uploaded `game_h460_top10_stock_dossier_camviewstock_current.z64` with SC64 direct boot / EEPROM 4k.
+- Kasa GUI automation successfully power-cycled the N64 through the installed Kasa app.
+- Boot capture after power cycle reached the title/opening path: `diagnostics/captures/current/after_kasa_cycle_camviewstock_wait12_20260516.png`.
+- A 75s no-input GV-USB2 clip showed the ROM continuing through/looping front/title screens without immediate boot crash:
+  - `diagnostics/captures/videos/camviewstock_noinput_boot_20260516.mp4`
+  - `diagnostics/captures/contact_sheets/camviewstock_noinput_boot_20260516.jpg`
+
+Manual hardware test priority for this loaded ROM:
+
+1. Bazaar: confirm normal gameplay still has the same or better viewport/pause/watch behavior as current best.
+2. Level intro/cutscene height: check whether the top-rectangle/compressed cutscene issue changes.
+3. Party, City, Boat: check whether load/crash behavior changes.
+4. Hotel and Volcano: check whether the rainbow/prism corruption changes.
+5. Labs: check whether recorder pickup still freezes.
+
+Do not promote yet. This is a focused camera-path diagnostic candidate, not a finished patch.

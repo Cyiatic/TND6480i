@@ -1,0 +1,40 @@
+{
+  "base_rom": "artifacts\\generated\\game_h460_top10_stock_dossier_tables_current.z64",
+  "stock_source_rom": "artifacts\\roms\\BASELINE_TND64_Expanded_direct_from_stock.z64",
+  "out_rom": "artifacts\\generated\\game_h460_top10_stock_dossier_camviewstock_current.z64",
+  "purpose": "Preserve current best gameplay/dossier work, but restore camera viewport width and heights to stock.",
+  "out_md5": "c36342a91e41edf2efa0f8df0c7c24c5",
+  "header_crc": "84B7F741 9A97BB46",
+  "patches": [
+    {
+      "offset": "0xBB7A4",
+      "old": "0x24020280",
+      "new": "0x240201B8",
+      "note": "camera viewport width"
+    },
+    {
+      "offset": "0xBB89C",
+      "old": "0x240201E0",
+      "new": "0x240200F8",
+      "note": "camera widescreen viewport height"
+    },
+    {
+      "offset": "0xBB8B8",
+      "old": "0x240201E0",
+      "new": "0x240200BE",
+      "note": "camera cinema viewport height"
+    },
+    {
+      "offset": "0xBB8C0",
+      "old": "0x240201E0",
+      "new": "0x24020130",
+      "note": "camera fullscreen viewport height"
+    }
+  ],
+  "notes": [
+    "Built from the promoted current best ROM.",
+    "Preserves the stock dossier table revert.",
+    "Does not touch non-camera gameplay h460/top10 viewport crop words.",
+    "Do not upload until emulator/offline comparison identifies a useful delta."
+  ]
+}
