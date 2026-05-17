@@ -4,6 +4,117 @@ Date: 2026-05-08
 
 ## Current Hardware State
 
+- 2026-05-17 `tlbpages58` 007-label stage-memory/TLB-cache diagnostic, active on hardware:
+  - SC64 reports direct-ROM mode with EEPROM 4k. The active console ROM is:
+    `artifacts/generated/game_h460_top10_stock_dossier_tlbpages58_007label_current.z64`.
+  - MD5: `25cd6b104b4cbdf3b2cdf4e1d02354da`; N64 CRC: `84B7FBED 3ED1CF90`.
+  - This preserves the current in-game-480i/camera-480i/007-label branch, restores the Expansion Pak TLB cache start to the stock 8 MB base `0x806F6000`, and reduces the TLB round-robin page count from 90 to 58.
+  - Resulting cache range: `0x806F6000-0x80769FFF`, which keeps the stock stage-memory ceiling while ending exactly before `fb1 = 0x8076A000`.
+  - Why this is first: `tlb806b6` avoided the high-framebuffer overlap by moving the full 90-page cache down to `0x806B6000`, but that stole an extra `0x40000` of stage memory. This candidate tests whether Party/City/Credits/Tower/Boat failures are from that lost stage memory rather than camera viewport dimensions.
+  - Paired save: generated all-missions EEPROM `artifacts/generated/tnd_test_all_missions.sav` (`MD5 79ed3fe6851b080ff21de69fd12f034d`), copied beside the ROM and into Gopher64's per-ROM save slot.
+  - Hardware startup evidence: `diagnostics/captures/videos/tlbpages58_007label_powercycle_startup_20260517.mp4` and `diagnostics/captures/contact_sheets/tlbpages58_007label_powercycle_startup_20260517.jpg`; GV-USB2 showed live CMK/logos/gunbarrel/title/opening cast after Kasa power-cycle.
+  - Verified BPS: `artifacts/generated/TND6480i_game_h460_top10_stock_dossier_tlbpages58_007label_from_baseline_tnd.bps` (`MD5 7e576a51f9467c7a29374dfb7d65221a`).
+  - Next manual test focus: Party and Credits first; City; Tower intro; Boat intro; Hotel/Volcano prism; Labs encoder/door; then Parkhaus/Wreck/Bridge/Alaska controls.
+  - If this regresses badly, restore `artifacts/generated/game_h460_top10_stock_dossier_tlb806b6_007label_current.z64` or `artifacts/generated/game_h460_top10_stock_dossier_tables_007label_current.z64`. If it behaves the same but boots cleanly, the next non-first-line candidate is `artifacts/generated/game_h460_top10_stock_dossier_tlbpages58_camviewstock_007label_current.z64`.
+
+- 2026-05-17 `tlb806b6_camviewstock` 007-label stock-camera fallback, previous loaded diagnostic:
+  - Previous direct-ROM mode with EEPROM 4k. The ROM was:
+    `artifacts/generated/game_h460_top10_stock_dossier_tlb806b6_camviewstock_007label_current.z64`.
+  - MD5: `0562389b4409e062f5c3e154d7327642`; N64 CRC: `84B7F759 2827B29D`.
+  - This preserves the current in-game-480i/TLB/dossier/007-label branch and restores only four camera viewport return values to stock TND dimensions: `0xBB7A4`, `0xBB89C`, `0xBB8B8`, and `0xBB8C0`.
+  - Purpose: give up broken camera/cutscene 480i geometry first and test whether Party/Credits/Tower/Boat/City become playable when the camera path no longer uses 640x480 viewport dimensions.
+  - Gopher64 smoke: `reports/smoke/smoke_tlb806b6_camviewstock_007label_input30_20260517.json`, survived 75 seconds and reached live rendering.
+  - Hardware evidence: `diagnostics/captures/videos/tlb806b6_camviewstock_007label_powercycle_startup_20260517.mp4` and `diagnostics/captures/contact_sheets/tlb806b6_camviewstock_007label_powercycle_startup_20260517.jpg`.
+  - Verified BPS: `artifacts/generated/TND6480i_game_h460_top10_stock_dossier_tlb806b6_camviewstock_007label_from_baseline_tnd.bps` (`MD5 71f64ed3833aa1ac635356c75cc8ed78`).
+  - Next manual test focus: Party/Credits rectangle-lock first; City load failure; Tower/Boat intro freezes; Hotel/Volcano prism; Labs encoder/door freeze; then Parkhaus/Wreck/Bridge/Alaska controls. Expected tradeoff: level intro/camera cutscenes may be stock-sized/not 480i, but that is acceptable if playability improves.
+  - If this regresses normal menu or gameplay behavior, restore `artifacts/generated/game_h460_top10_stock_dossier_tlb806b6_007label_current.z64` or the older `artifacts/generated/game_h460_top10_stock_dossier_tables_007label_current.z64`.
+
+- 2026-05-16 `tlb806b6_noresfb` 007-label camera-framebuffer diagnostic, previous hardware diagnostic:
+  - Previous direct-ROM mode with EEPROM 4k diagnostic:
+    `artifacts/generated/game_h460_top10_stock_dossier_tlb806b6_noresfb_007label_current.z64`.
+  - MD5: `d2f7ae37494601121deed50d50c6deb1`; N64 CRC: `84B7E78B 4366546B`.
+  - This preserves the previous in-game-480i/TLB/007-label branch and changes one instruction at ROM offset `0xBBB8C`: `jal viSetFrameBuf2(resolution)` -> `nop`.
+  - Working theory: the active camera viewport path is 640x480, but the engine's temporary `resolution` buffer is still stock-sized. Disabling only that redirect may prevent Party/Credits/Tower/Boat intro paths from overrunning a small stage buffer while leaving normal fixed-framebuffer gameplay intact.
+  - Gopher64 smoke: `reports/smoke/smoke_tlb806b6_noresfb_007label_input30_20260516.json`, survived 75 seconds. Additional save-paired Gopher tests reached the title/file-select front end, but the emulator route is not yet reliable enough to validate Party.
+  - Hardware evidence: `diagnostics/captures/videos/tlb806b6_noresfb_007label_powercycle_startup_20260516.mp4`, `diagnostics/captures/contact_sheets/tlb806b6_noresfb_007label_powercycle_startup_20260516.jpg`, `diagnostics/captures/videos/tlb806b6_noresfb_007label_noinput_followup_20260516.mp4`, and `diagnostics/captures/contact_sheets/tlb806b6_noresfb_007label_noinput_followup_20260516.jpg`.
+  - Verified BPS: `artifacts/generated/TND6480i_game_h460_top10_stock_dossier_tlb806b6_noresfb_007label_from_baseline_tnd.bps` (`MD5 761203df00dca3775d5dc541c6f1d36f`).
+  - User hardware feedback: everything seems the same. Treat this as an informative miss: disabling only the resolution-framebuffer redirect did not fix the Party/Credits rectangle-lock or broader cutscene/load failures, and no explicit regression was reported.
+  - Next direction: promote the stock-camera-viewport fallback on the same TLB/007/in-game base. This intentionally prioritizes playability over forcing broken camera/cutscene 480i dimensions.
+  - Next manual test focus: Party/Credits rectangle-lock first; City load failure; Tower/Boat intro freezes; Hotel/Volcano prism; Labs encoder/door freeze; then Parkhaus/Wreck/Bridge/Alaska controls.
+  - If this regresses normal menu or gameplay behavior, restore `artifacts/generated/game_h460_top10_stock_dossier_tlb806b6_007label_current.z64` or the older `artifacts/generated/game_h460_top10_stock_dossier_tables_007label_current.z64`.
+
+- 2026-05-16 precise `tlb806b6` 007-label candidate, previous active hardware baseline:
+  - Previous direct-ROM mode with EEPROM 4k baseline:
+    `artifacts/generated/game_h460_top10_stock_dossier_tlb806b6_007label_current.z64`.
+  - MD5: `dabab8bad8b5ebee0f58f384102af658`; N64 CRC: `84B7F875 89A76790`.
+  - This preserves the previous in-game-480i and `007` label path, but moves the Expansion Pak TLB page cache to `0x806B6000-0x80769FFF`, ending exactly before `fb1 = 0x8076A000`.
+  - Compared with the older `tlb8060` canary, this preserves `0xB6000` more stage memory while still removing the TLB/fb1 overlap.
+  - Paired all-missions save: `artifacts/generated/game_h460_top10_stock_dossier_tlb806b6_007label_current.sav` (`MD5 79ed3fe6851b080ff21de69fd12f034d`).
+  - Hardware evidence: `diagnostics/captures/videos/tlb806b6_007label_powercycle_startup_20260516.mp4` and `diagnostics/captures/contact_sheets/tlb806b6_007label_powercycle_startup_20260516.jpg`.
+  - Gopher64 smoke: `reports/smoke/smoke_tlb806b6_007label_input30_20260516.json`, survived 75 seconds.
+  - Verified BPS: `artifacts/generated/TND6480i_game_h460_top10_stock_dossier_tlb806b6_007label_from_baseline_tnd.bps` (`MD5 1525f4e65b3bac548a0c881cbfecace3`).
+  - User hardware feedback: Party now flashes a white rectangle shaped like the same too-short cutscene render area in the upper portion of the screen, then does not load. Credits behaves the same way as Party. Everything else appears to behave the same as the previous label-fixed in-game-480i fallback.
+  - Current interpretation: the failure moved from a plain load/black-screen symptom to a visible shared cutscene/camera rectangle symptom. Prioritize level-intro/camera framebuffer state next; avoid another broad TLB/framebuffer relocation unless a narrow camera-path diagnostic disproves this.
+  - Next manual test focus: Party/Credits rectangle-lock and City load failure first; Tower/Boat intro freezes; Hotel/Volcano prism; Labs encoder/door freeze; then Parkhaus/Wreck/Bridge/Alaska controls.
+  - If this regresses, restore `artifacts/generated/game_h460_top10_stock_dossier_tables_007label_current.z64`.
+
+- 2026-05-16 stock-dossier-tables 007-label fallback, previous active hardware baseline:
+  - Previous direct-ROM mode with EEPROM 4k baseline:
+    `artifacts/generated/game_h460_top10_stock_dossier_tables_007label_current.z64`.
+  - MD5: `95b2e60bdd68626086cec548cb783e2d`; N64 CRC: `84B7F86D A3B63A65`.
+  - This restores the previous known in-game-480i path while keeping the title text-bank difficulty labels as `007` instead of `Custom`.
+  - Paired save: `artifacts/generated/game_h460_top10_stock_dossier_tables_007label_current.sav`.
+  - Hardware evidence: `diagnostics/captures/videos/restore_tables_007label_powercycle_startup_20260516.mp4`, `diagnostics/captures/contact_sheets/restore_tables_007label_powercycle_startup_20260516.jpg`, and `diagnostics/captures/current/restore_tables_007label_t54_20260516.png`.
+  - Verified BPS: `artifacts/generated/TND6480i_game_h460_top10_stock_dossier_tables_007label_from_baseline_tnd.bps` (`MD5 44b1d5a082cdab12168cdf04de796194`).
+  - User hardware feedback: font appears to render at the correct resolution, maybe slightly close to the upper-left. Bazaar top/bottom flashing persists. Labs flicker appears reduced, but encoder/door freezes are inconsistent. Printworks intro appears taller than before. Party, City, and Credits still refuse to load. Tower and Boat still freeze during intro. Hotel and Volcano still show rainbow/prism corruption. Parkhaus, Wreck, Bridge, and Alaska are fine.
+  - Current interpretation: preserve this as the active in-game-480i fallback, but stop treating the remaining failures as menu/font problems. The next pass should target level-load/cutscene/framebuffer memory behavior, especially paths that are large, intro-heavy, or use special visual effects.
+
+- 2026-05-16 enhanced-reference split8030+dim0 direct probe, rejected:
+  - Rejected ROM:
+    `artifacts/generated/TND64_enh480i_ref_direct_split8030_dim0_007label_probe.z64`.
+  - MD5: `513f2109d90a50f6f5092ae99475ddb5`; SHA256: `FF9F8A3F72EC71EDCB420468731D7E75325FCC12F369A7AA2A40918E3769FB9E`; N64 CRC: `B2E39E87 B1CE26F6`.
+  - The label fix worked: the user confirmed it showed `007`, and a full text/1172-stream scan found `Custom` count `0`.
+  - Hardware rejection reason: user confirmed in-game was no longer 480i. Do not use this as the gameplay base even though Gopher64 showed clean gameplay/watch without top prism.
+  - Useful finding: adding the direct gameplay viewport helper/h460/top10 family back on top of the enhanced reference reintroduced the top-prism/split-skybox corruption in emulator, but removing it also appears to remove hardware in-game 480i. The next real fix likely needs a narrower callsite/runtime guard instead of a static all-or-nothing helper-word revert.
+
+- 2026-05-16 label-only `tlb805c` follow-up, now fallback/non-promoted:
+  - The previously loaded console ROM was:
+    `artifacts/generated/game_h460_top10_stock_dossier_tlb805c_007label_current.z64`.
+  - MD5: `a6a511de202b999c6d231f4b1efc3b66`; N64 CRC: `84B77BB3 D6366555`.
+  - This preserves the latest `tlb805c` canary behavior and changes only the TND64 title text bank difficulty labels: `Custom` -> `007` and `Custom\n` -> `007\n`.
+  - Paired save: `artifacts/generated/game_h460_top10_stock_dossier_tlb805c_007label_current.sav`.
+  - Post-upload capture: `diagnostics/captures/current/after_007label_tlb805c_upload_20260516.png`, showing the game alive in the intro/cast sequence.
+  - Reports: `reports/title_custom_to_007_tlb805c_20260516.json` and `reports/save_pairing_007label_20260516.json`.
+  - Verified BPS: `artifacts/generated/TND6480i_game_h460_top10_stock_dossier_tlb805c_007label_from_baseline_tnd.bps` (`MD5 6a59e2992ff40efe7aeed15ba1156579`).
+  - User feedback just before this label fix: Labs now has the same top/bottom flicker issue as Bazaar; otherwise behavior appears the same. The `tlb805c` branch did not resolve the broader playability failures and is not promoted over `stock_dossier_tables` for stability work yet.
+  - Fallback label-fixed build on the previously promoted dossier-table base:
+    `artifacts/generated/game_h460_top10_stock_dossier_tables_007label_current.z64` (`MD5 95b2e60bdd68626086cec548cb783e2d`, N64 CRC `84B7F86D A3B63A65`).
+    Verified BPS: `artifacts/generated/TND6480i_game_h460_top10_stock_dossier_tables_007label_from_baseline_tnd.bps` (`MD5 44b1d5a082cdab12168cdf04de796194`).
+
+- 2026-05-16 TLB-cache relocation context:
+  - Previous TLB canary:
+    `artifacts/generated/game_h460_top10_stock_dossier_tlb8060_current.z64`.
+  - MD5: `f449b66024efc95069f46990fa837e8d`; N64 CRC: `84B77873 803478C8`.
+  - This candidate keeps the best stock-dossier/gameplay branch and changes only the TLB page-cache base instructions at `0x241C` and `0x2420`.
+  - Corrected memory theory: on Expansion Pak hardware, `tlbmanageEstablishManagementTable` computes the cache base as `0x802F6000 + (osMemSize - 0x400000)`, so the 90-page cache moves to about `0x806F6000-0x807A9FFF`. That overlaps the high framebuffer at `0x8076A000-0x807FFFFF`.
+  - `tlb8060` changes the base to `0x80200000 + expansion_delta`, so the expected 8 MB cache range is `0x80600000-0x806B3FFF`, below the high framebuffer.
+  - Hardware evidence: `after_tlb8060_upload_boot_wait12_20260516.png`, `after_tlb8060_upload_boot_wait32_20260516.png`, `tlb8060_noinput_boot_20260516.mp4`, `tlb8060_noinput_boot_20260516.jpg`, and `post_reboot_tlb8060_state_20260516.png`.
+  - Save pairing is explicit now. Before emulator tests or future uploads, run `python scripts\prepare_save_for_rom.py <rom.z64> --manifest reports\save_pairing_<candidate>.json`. This writes same-stem `.sav` / padded `.eep` files and the Gopher64 hashed EEPROM save. Add `--parallel-srm-template <known-good .srm>` when staging for Parallel Launcher. SC64 uploads should use `--save "C:\Users\codex\Documents\007 - Tomorrow Never Dies (USA).sav" --save-type eeprom4k`.
+  - Gopher64 is staged at `tools/emulators/gopher64.exe` (`v1.1.20`) and was added to the user PATH. Save-backed smokes for `tlb8060` and `tlb805c` reached a mission and survived 75 seconds.
+  - 2026-05-16 save refresh: `tlb8060` was reuploaded to SC64 with explicit EEPROM 4k save data. Parallel Launcher same-stem saves were staged at `C:\Users\codex\AppData\Local\parallel-launcher\data\retro-data\saves\game_h460_top10_stock_dossier_tlb8060_current.srm` and `...\game_h460_top10_stock_dossier_tlb805c_current.srm`; manifest is `reports/save_pairing_all_targets_refresh_20260516.json`.
+  - 2026-05-16 hardware feedback after Bazaar -> Party: Party still black-screened/locked, so the `tlb8060` TLB-cache relocation did not fix that level load failure.
+  - Standard emulator smoke should use short input only: `--input --input-until 30 --tap-interval 0.55`. Longer Start/A mashing spills into gameplay, repeatedly toggles pause/watch, and creates the misleading Bond-nodding visual artifact.
+  - Clean smoke evidence: `reports/smoke/smoke_tlb8060_savebacked_input30_20260516.json`, `reports/smoke/smoke_tlb805c_savebacked_input30_20260516.json`, `diagnostics/captures/contact_sheets/tlb8060_savebacked_input30_20260516.jpg`, and `diagnostics/captures/contact_sheets/tlb805c_savebacked_input30_20260516.jpg`.
+  - User timing note: if TiJayFly/logo/front sequences run slower than stock in emulator, that may be positive evidence that the interlaced path is active. Emulators often assume stock internal resolution/timing, so ugly composition and slower cadence can coexist.
+  - Result so far: boots through gunbarrel/opening credits and reaches no-input gameplay/demo. The top-band/prism-like corruption is still visible, so this is a stability candidate, not a finished visual fix.
+  - Next manual test focus for this exact loaded ROM: Party/City/The End load failures, Tower/Boat intro crashes, Labs recorder pickup freeze, Hotel/Volcano prism corruption, then Press/Parkhaus/Wreck/Bridge/Alaska as controls.
+  - If it still hard-locks the same levels, test the already-built lower-cache canary next: `artifacts/generated/game_h460_top10_stock_dossier_tlb805c_current.z64` (`MD5 11a3594b1c27e96c4b6fd976a3c21080`, `N64 CRC 84B77BB3 D6366555`).
+  - Do not test framebuffer-relocation variants first. `game_h460_top10_stock_dossier_fb1_8066_current.z64` black-screened on real N64, while moving the TLB cache kept the known-good framebuffer placement and booted.
+  - Verified BPS patches now exist because classic IPS is not suitable for the current `0x101A680`-byte expanded targets:
+    - `artifacts/generated/TND6480i_game_h460_top10_stock_dossier_tlb8060_from_baseline_tnd.bps` (`MD5 d7b00e9f4ea8b0cb43452cc85d6c0aa8`).
+    - `artifacts/generated/TND6480i_game_h460_top10_stock_dossier_tlb805c_from_baseline_tnd.bps` (`MD5 3e2b918632b019d67383d068d2821378`).
+  - Both BPS patches apply to `artifacts/roms/BASELINE_TND64_Expanded_direct_from_stock.z64` (`MD5 1ee22dd1d70443f5e4766d4238756949`) and were self-verified with `scripts/make_bps_patch.py`.
+
 - 2026-05-11 playability reset:
   - User testing made the priorities explicit: gameplay first, pause/watch second, level intro/outro third, then dossier/mission menus, then front/title/gunbarrel/logos/demos.
   - The active console ROM is now the small in-game viewport centering canary:
@@ -186,6 +297,9 @@ Date: 2026-05-08
 
 ## Static Memory Notes
 
+- 2026-05-16 correction: the Expansion Pak TLB page cache overlaps the current high framebuffer unless moved. Direct code around `0x241C-0x2430` computes `g_tlbmanageTlbAllocatedBlock = 0x802F6000 + *(0x8000050C)`, and code around `0x24A8-0x24BC` sets `0x8000050C = osMemSize - 0x400000`. On 8 MB hardware, this places the cache at about `0x806F6000-0x807A9FFF`, which overlaps `fb1 = 0x8076A000-0x807FFFFF`.
+- The current `tlb8060` candidate moves that cache to about `0x80600000-0x806B3FFF` while keeping `fb0 = 0x80300000-0x80395FFF` and `fb1 = 0x8076A000-0x807FFFFF`.
+- Notes below that describe `split8030_8076` as safe solely because `fb0` ends below `0x803Axxxx` are superseded by this Expansion Pak cache finding. The low framebuffer can still be reasonable; the high framebuffer/cache interaction is the risk.
 - TND's decompressed main has real-looking `0x8070xxxx` code/data references around `0x80700100` and `0x80702000`. Avoid framebuffer layouts that cover `0x80700000-0x8076A000`.
 - The split layout leaves that area clear: fb0 is `0x80400000-0x80495FFF`; fb1 is `0x8076A000-0x807FFFFF`.
 - The single-high layout uses only `0x8076A000-0x807FFFFF` and points both framebuffer globals at the same buffer. This avoids the suspected `0x80400000` collision, but it is a diagnostic single-buffer layout and may tear or flicker even if it boots.
@@ -556,6 +670,7 @@ SC64 diagnostic caution:
 
 - The current HVI diagnostic ROM booted visually, but SC64 data-buffer dumps did not contain the expected words. Do not rely on the direct-store SC64 diagnostic path until it is reworked around a DMA/USB-style write.
 - The USB-C cable is not the current blocker: SC64 upload, `info`, and raw `CMDv` serial probing all work. Replacing the cable is only worth revisiting if uploads or `sc64deployer info` become intermittent.
+- Current hardware queue item: after a physical N64 reset/power cycle, test `artifacts/generated/game_h460_top10_stock_dossier_tlb805c_current.z64` with `artifacts/generated/game_h460_top10_stock_dossier_tlb805c_current.sav`. The save is the generated all-missions EEPROM image from `scripts/make_tnd_test_save.py`, not the blank Documents `.sav`. First check whether file select shows completed folders, then launch Party directly. `tlb8060` already failed Party after the user power-cycled, so do not re-test `tlb8060` for Party unless a save-only comparison is explicitly needed.
 - `gamefulltop0_hlimit_current_20260510.z64` is now hardware-rejected as a gunbarrel/title fix. It changes only the title/menu height limit at `0x46F18`; it booted and looped, but the double aperture remained and red timing stayed stock-like (`40.307s` vs fallback `40.340s`). Evidence: `diagnostics/captures/contact_sheets/hlimit_current_gunbarrel_24_60_2fps_20260510.jpg` and `reports/capture_cadence/motion_hlimit_current_vs_helper_fallback_20260510.json`.
 - Early title-layer skip canaries now exist and process-smoke in Gopher64. Do not upload them as a batch. The narrow `gamefulltop0_skip_case1_backdrop_20260510.z64` hardware canary booted and looped but did not show a compelling improvement. The wider `gamefulltop0_skip_cases1_3_backdrop_20260510.z64` coldboot canary also left the double white aperture / stock-like gunbarrel behavior visible. The complementary `gamefulltop0_skip_cases1_3_sniper_20260510.z64` canary is rejected as a functional patch because it strands the intro on a white crescent and never reaches the red/title progression. The current fallback has been restored.
 - Sniper/RLE final-argument canaries have now been tested and rejected as fixes. Divisor probes (`gamefulltop0_sniper_div640_20260510.z64`, `gamefulltop0_sniper_div960_20260510.z64`, `gamefulltop0_sniper_div2560_20260510.z64`) preserved the paired aperture and stock-like timing. Constant-x probes (`gamefulltop0_sniper_x0_20260510.z64`, `gamefulltop0_sniper_xleft160_20260510.z64`, `gamefulltop0_sniper_xright160_20260510.z64`) visibly separated the RLE slice from the moving gunbarrel layer, proving this is a two-layer composition issue. Do not keep testing simple final-x shifts; target draw order/state/source selection around `insert_sniper_sight_eye_intro`.

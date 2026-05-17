@@ -1,0 +1,59 @@
+{
+  "name": "game_h460_top10_stock_dossier_tlbpages58_007label_current",
+  "purpose": "Preserve the current in-game-480i/camera-480i/007-label branch, but restore the TLB cache start to the stock Expansion Pak base and reduce the round-robin page count so the cache ends exactly before fb1 instead of overlapping it.",
+  "base_rom": "artifacts\\generated\\game_h460_top10_stock_dossier_tlb806b6_007label_current.z64",
+  "base_md5": "dabab8bad8b5ebee0f58f384102af658",
+  "stock_source_rom": "artifacts\\roms\\BASELINE_TND64_Expanded_direct_from_stock.z64",
+  "out_rom": "artifacts\\generated\\game_h460_top10_stock_dossier_tlbpages58_007label_current.z64",
+  "out_md5": "25cd6b104b4cbdf3b2cdf4e1d02354da",
+  "header_crc": "84B7FBED 3ED1CF90",
+  "framebuffer_layout": {
+    "fb0": "0x80300000-0x80395FFF",
+    "fb1": "0x8076A000-0x807FFFFF",
+    "unchanged": true
+  },
+  "tlb_cache_layout": {
+    "page_count": 58,
+    "page_size": "0x2000",
+    "direct_base_no_expansion_delta": "0x802F6000",
+    "expected_expansion_base": "0x806F6000",
+    "expected_expansion_range": "0x806F6000-0x80769FFF",
+    "stock_90_page_range_on_8mb": "0x806F6000-0x807A9FFF",
+    "current_tlb806b6_90_page_range": "0x806B6000-0x80769FFF",
+    "gap_to_fb1": 0
+  },
+  "patches": [
+    {
+      "offset": "0x241C",
+      "old": "0x3C08802B",
+      "new": "0x3C08802F",
+      "note": "TLB cache direct base upper for 0x802F6000",
+      "changed": true
+    },
+    {
+      "offset": "0x2420",
+      "old": "0x25086000",
+      "new": "0x25086000",
+      "note": "TLB cache direct base lower for 0x802F6000",
+      "changed": false
+    },
+    {
+      "offset": "0x2618",
+      "old": "0x2C81005A",
+      "new": "0x2C81003A",
+      "note": "TLB round-robin wrap count 90 -> 58",
+      "changed": true
+    }
+  ],
+  "save_writes": [
+    {
+      "path": "artifacts\\generated\\game_h460_top10_stock_dossier_tlbpages58_007label_current.sav",
+      "bytes": 512
+    },
+    {
+      "path": "artifacts\\generated\\game_h460_top10_stock_dossier_tlbpages58_007label_current.eep",
+      "bytes": 2048
+    }
+  ],
+  "hardware_priority": "Do not upload ahead of the currently loaded camviewstock test. If camviewstock still behaves the same, test pages58_007label first to restore stock stage memory while keeping the 480i camera path. If that fails, test the pages58_camviewstock combination."
+}

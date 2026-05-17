@@ -1,0 +1,124 @@
+{
+  "source": "artifacts\\roms\\BASELINE_TND64_Expanded_direct_from_stock.z64",
+  "target": "artifacts\\generated\\game_h460_top10_stock_dossier_tlbpages64_007label_current.z64",
+  "source_md5": "1ee22dd1d70443f5e4766d4238756949",
+  "target_md5": "dae46a090f78198694f6c53537448903",
+  "source_sha256": "ba5e040de292d7d192d0f88f12dcf4cbde7eb4d643926830d7d77557bf6df502",
+  "target_sha256": "a133b18df80f5fa4240a016d6e0071db39fa0ed8abb14a64f82ad8d0c5125438",
+  "note": "TND6480i TLB page-count 64 007-label current diagnostic",
+  "patch": "artifacts\\generated\\TND6480i_game_h460_top10_stock_dossier_tlbpages64_007label_from_baseline_tnd.bps",
+  "patch_bytes": 179156,
+  "patch_md5": "dfb22faa7da73163d851ab90d304a29f",
+  "patch_sha256": "c7fcb1e824ab1af6bb5dc97f47735004a3f863546c2b3ce97d2035b2d077bb25",
+  "source_bytes": 16777216,
+  "target_bytes": 16885376,
+  "source_crc32": "321C1845",
+  "target_crc32": "F191BBAC",
+  "patch_crc32": "27FA5C9E",
+  "verified": true,
+  "action_count": 402,
+  "source_read_bytes": 16707324,
+  "target_read_bytes": 178052,
+  "actions_preview": [
+    {
+      "type": "SourceRead",
+      "offset": 0,
+      "length": 16
+    },
+    {
+      "type": "TargetRead",
+      "offset": 16,
+      "length": 8
+    },
+    {
+      "type": "SourceRead",
+      "offset": 24,
+      "length": 9226
+    },
+    {
+      "type": "TargetRead",
+      "offset": 9250,
+      "length": 1
+    },
+    {
+      "type": "SourceRead",
+      "offset": 9251,
+      "length": 504
+    },
+    {
+      "type": "TargetRead",
+      "offset": 9755,
+      "length": 1
+    },
+    {
+      "type": "SourceRead",
+      "offset": 9756,
+      "length": 5744
+    },
+    {
+      "type": "TargetRead",
+      "offset": 15500,
+      "length": 12
+    },
+    {
+      "type": "SourceRead",
+      "offset": 15512,
+      "length": 153
+    },
+    {
+      "type": "TargetRead",
+      "offset": 15665,
+      "length": 59
+    },
+    {
+      "type": "SourceRead",
+      "offset": 15724,
+      "length": 1715
+    },
+    {
+      "type": "TargetRead",
+      "offset": 17439,
+      "length": 1
+    },
+    {
+      "type": "SourceRead",
+      "offset": 17440,
+      "length": 661
+    },
+    {
+      "type": "TargetRead",
+      "offset": 18101,
+      "length": 59
+    },
+    {
+      "type": "SourceRead",
+      "offset": 18160,
+      "length": 7831
+    },
+    {
+      "type": "TargetRead",
+      "offset": 25991,
+      "length": 49
+    },
+    {
+      "type": "SourceRead",
+      "offset": 26040,
+      "length": 40742
+    },
+    {
+      "type": "TargetRead",
+      "offset": 66782,
+      "length": 1
+    },
+    {
+      "type": "SourceRead",
+      "offset": 66783,
+      "length": 38041
+    },
+    {
+      "type": "TargetRead",
+      "offset": 104824,
+      "length": 16
+    }
+  ]
+}

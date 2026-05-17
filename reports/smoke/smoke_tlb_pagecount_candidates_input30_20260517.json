@@ -1,0 +1,576 @@
+[
+  {
+    "rom": "artifacts\\generated\\game_h460_top10_stock_dossier_tlbpages58_007label_current.z64",
+    "elapsed": 75.03,
+    "main_window_seen": true,
+    "main_window": {
+      "hwnd": 722270,
+      "title": "gopher64"
+    },
+    "key_taps": 64,
+    "scripted_key_events": 0,
+    "input_events_total": 0,
+    "input_events_consumed": 0,
+    "exited_before_timeout": false,
+    "exit_code_before_timeout": null,
+    "stdout_path": "reports\\smoke\\game_h460_top10_stock_dossier_tlbpages58_007label_current.stdout.txt",
+    "stderr_path": "reports\\smoke\\game_h460_top10_stock_dossier_tlbpages58_007label_current.stderr.txt",
+    "stdout_bytes": 0,
+    "stderr_bytes": 3299,
+    "marker_counts": {},
+    "stderr_tail": [
+      "[WARN]: Stalled compile (graphics, d177283513a5a0f7): thread 0 - 24349.600 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, 5b01cde7ced266c2): thread 0 - 5128.600 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, b178554ed4416e85): thread 0 - 11676.000 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (compute, 35f88fc5fb45ef46): thread 0 - 68326.500 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (compute, 5949a1b688b6ff72): thread 0 - 173156.400 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (compute, 8b3dfa11b8cf196e): thread 0 - 6572.500 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, e6b76ed8c8235cc1): thread 0 - 20394.300 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, 7d7854549a936cd2): thread 0 - 22212.100 us (mode: sync, success: yes)."
+    ],
+    "captures": [
+      {
+        "path": "diagnostics\\captures\\gopher64\\tlb_pagecount_candidates_input30_20260517\\game_h460_top10_stock_dossier_tlbpages58_007label_current_t025p0s.png",
+        "returncode": 0,
+        "capture_method": "ffmpeg_gdigrab_desktop",
+        "stderr_tail": [],
+        "previous_error": {
+          "path": "diagnostics\\captures\\gopher64\\tlb_pagecount_candidates_input30_20260517\\game_h460_top10_stock_dossier_tlbpages58_007label_current_t025p0s.png",
+          "returncode": 0,
+          "capture_method": "ffmpeg_gdigrab_title",
+          "stderr_tail": []
+        },
+        "window_rect": {
+          "left": 96,
+          "top": 96,
+          "right": 752,
+          "bottom": 615,
+          "width": 656,
+          "height": 519
+        },
+        "window_stats": {
+          "crop_box": [
+            96,
+            96,
+            752,
+            615
+          ],
+          "mean_luma": 57.56,
+          "stddev_luma": 85.99,
+          "nonblack_ratio": 0.4114,
+          "bright_ratio": 0.3016
+        },
+        "elapsed": 25.09
+      },
+      {
+        "path": "diagnostics\\captures\\gopher64\\tlb_pagecount_candidates_input30_20260517\\game_h460_top10_stock_dossier_tlbpages58_007label_current_t045p0s.png",
+        "returncode": 0,
+        "capture_method": "ffmpeg_gdigrab_title",
+        "stderr_tail": [],
+        "window_rect": {
+          "left": 0,
+          "top": 0,
+          "right": 640,
+          "bottom": 480,
+          "width": 640,
+          "height": 480
+        },
+        "window_stats": {
+          "crop_box": [
+            0,
+            0,
+            640,
+            480
+          ],
+          "mean_luma": 179.6,
+          "stddev_luma": 55.52,
+          "nonblack_ratio": 0.9359,
+          "bright_ratio": 0.9244
+        },
+        "elapsed": 45.09
+      },
+      {
+        "path": "diagnostics\\captures\\gopher64\\tlb_pagecount_candidates_input30_20260517\\game_h460_top10_stock_dossier_tlbpages58_007label_current_t065p0s.png",
+        "returncode": 0,
+        "capture_method": "ffmpeg_gdigrab_title",
+        "stderr_tail": [],
+        "window_rect": {
+          "left": 0,
+          "top": 0,
+          "right": 640,
+          "bottom": 480,
+          "width": 640,
+          "height": 480
+        },
+        "window_stats": {
+          "crop_box": [
+            0,
+            0,
+            640,
+            480
+          ],
+          "mean_luma": 175.07,
+          "stddev_luma": 61.42,
+          "nonblack_ratio": 0.9285,
+          "bright_ratio": 0.8996
+        },
+        "elapsed": 65.07
+      }
+    ],
+    "capture": {
+      "path": "diagnostics\\captures\\gopher64\\tlb_pagecount_candidates_input30_20260517\\game_h460_top10_stock_dossier_tlbpages58_007label_current_final.png",
+      "returncode": 0,
+      "capture_method": "ffmpeg_gdigrab_title",
+      "stderr_tail": [],
+      "window_rect": {
+        "left": 0,
+        "top": 0,
+        "right": 640,
+        "bottom": 480,
+        "width": 640,
+        "height": 480
+      },
+      "window_stats": {
+        "crop_box": [
+          0,
+          0,
+          640,
+          480
+        ],
+        "mean_luma": 175.03,
+        "stddev_luma": 61.22,
+        "nonblack_ratio": 0.929,
+        "bright_ratio": 0.9007
+      },
+      "elapsed": 75.03
+    }
+  },
+  {
+    "rom": "artifacts\\generated\\game_h460_top10_stock_dossier_tlbpages58_camviewstock_007label_current.z64",
+    "elapsed": 75.01,
+    "main_window_seen": true,
+    "main_window": {
+      "hwnd": 787806,
+      "title": "gopher64"
+    },
+    "key_taps": 62,
+    "scripted_key_events": 0,
+    "input_events_total": 0,
+    "input_events_consumed": 0,
+    "exited_before_timeout": false,
+    "exit_code_before_timeout": null,
+    "stdout_path": "reports\\smoke\\game_h460_top10_stock_dossier_tlbpages58_camviewstock_007label_current.stdout.txt",
+    "stderr_path": "reports\\smoke\\game_h460_top10_stock_dossier_tlbpages58_camviewstock_007label_current.stderr.txt",
+    "stdout_bytes": 0,
+    "stderr_bytes": 3088,
+    "marker_counts": {},
+    "stderr_tail": [
+      "[WARN]: Stalled compile (compute, bf3dfa0bf27d196e): thread 0 - 5438.500 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, e3b76ed8c30a5cc1): thread 0 - 29779.200 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, 9d0b2ccf3e83a80b): thread 0 - 5962.900 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, b178544ed4416cd2): thread 0 - 18043.700 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, d177283513a5a0f7): thread 0 - 45738.100 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, 5b01cde7ced266c2): thread 0 - 7524.100 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, b178554ed4416e85): thread 0 - 20149.500 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (compute, 35f88fc5fb45ef46): thread 0 - 59749.600 us (mode: sync, success: yes)."
+    ],
+    "captures": [
+      {
+        "path": "diagnostics\\captures\\gopher64\\tlb_pagecount_candidates_input30_20260517\\game_h460_top10_stock_dossier_tlbpages58_camviewstock_007label_current_t025p0s.png",
+        "returncode": 0,
+        "capture_method": "ffmpeg_gdigrab_title",
+        "stderr_tail": [
+          "[in#0/gdigrab @ 000002a8fcfb5600] Couldn't get cursor info (error 5)"
+        ],
+        "window_rect": {
+          "left": 0,
+          "top": 0,
+          "right": 640,
+          "bottom": 480,
+          "width": 640,
+          "height": 480
+        },
+        "window_stats": {
+          "crop_box": [
+            0,
+            0,
+            640,
+            480
+          ],
+          "mean_luma": 8.36,
+          "stddev_luma": 36.55,
+          "nonblack_ratio": 0.0531,
+          "bright_ratio": 0.0469
+        },
+        "elapsed": 25.07
+      },
+      {
+        "path": "diagnostics\\captures\\gopher64\\tlb_pagecount_candidates_input30_20260517\\game_h460_top10_stock_dossier_tlbpages58_camviewstock_007label_current_t045p0s.png",
+        "returncode": 0,
+        "capture_method": "ffmpeg_gdigrab_title",
+        "stderr_tail": [
+          "[in#0/gdigrab @ 00000165c35b3900] Couldn't get cursor info (error 5)"
+        ],
+        "window_rect": {
+          "left": 0,
+          "top": 0,
+          "right": 640,
+          "bottom": 480,
+          "width": 640,
+          "height": 480
+        },
+        "window_stats": {
+          "crop_box": [
+            0,
+            0,
+            640,
+            480
+          ],
+          "mean_luma": 8.36,
+          "stddev_luma": 36.55,
+          "nonblack_ratio": 0.0531,
+          "bright_ratio": 0.0469
+        },
+        "elapsed": 45.07
+      },
+      {
+        "path": "diagnostics\\captures\\gopher64\\tlb_pagecount_candidates_input30_20260517\\game_h460_top10_stock_dossier_tlbpages58_camviewstock_007label_current_t065p0s.png",
+        "returncode": 0,
+        "capture_method": "ffmpeg_gdigrab_title",
+        "stderr_tail": [
+          "[in#0/gdigrab @ 0000023650714100] Couldn't get cursor info (error 5)"
+        ],
+        "window_rect": {
+          "left": 0,
+          "top": 0,
+          "right": 640,
+          "bottom": 480,
+          "width": 640,
+          "height": 480
+        },
+        "window_stats": {
+          "crop_box": [
+            0,
+            0,
+            640,
+            480
+          ],
+          "mean_luma": 8.36,
+          "stddev_luma": 36.55,
+          "nonblack_ratio": 0.0531,
+          "bright_ratio": 0.0469
+        },
+        "elapsed": 65.01
+      }
+    ],
+    "capture": {
+      "path": "diagnostics\\captures\\gopher64\\tlb_pagecount_candidates_input30_20260517\\game_h460_top10_stock_dossier_tlbpages58_camviewstock_007label_current_final.png",
+      "returncode": 0,
+      "capture_method": "ffmpeg_gdigrab_title",
+      "stderr_tail": [
+        "[in#0/gdigrab @ 000002803f725cc0] Couldn't get cursor info (error 5)"
+      ],
+      "window_rect": {
+        "left": 0,
+        "top": 0,
+        "right": 640,
+        "bottom": 480,
+        "width": 640,
+        "height": 480
+      },
+      "window_stats": {
+        "crop_box": [
+          0,
+          0,
+          640,
+          480
+        ],
+        "mean_luma": 8.36,
+        "stddev_luma": 36.55,
+        "nonblack_ratio": 0.0531,
+        "bright_ratio": 0.0469
+      },
+      "elapsed": 75.01
+    }
+  },
+  {
+    "rom": "artifacts\\generated\\game_h460_top10_stock_dossier_tlbpages64_007label_current.z64",
+    "elapsed": 75.01,
+    "main_window_seen": true,
+    "main_window": {
+      "hwnd": 4456926,
+      "title": "gopher64"
+    },
+    "key_taps": 64,
+    "scripted_key_events": 0,
+    "input_events_total": 0,
+    "input_events_consumed": 0,
+    "exited_before_timeout": false,
+    "exit_code_before_timeout": null,
+    "stdout_path": "reports\\smoke\\game_h460_top10_stock_dossier_tlbpages64_007label_current.stdout.txt",
+    "stderr_path": "reports\\smoke\\game_h460_top10_stock_dossier_tlbpages64_007label_current.stderr.txt",
+    "stdout_bytes": 0,
+    "stderr_bytes": 3389,
+    "marker_counts": {},
+    "stderr_tail": [
+      "[WARN]: Stalled compile (graphics, 1490b6f397f0c100): thread 0 - 15395.500 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, 8743901d06d41e7d): thread 0 - 35136.300 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, 8bc0f28d1cc4eacc): thread 0 - 9474.600 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, f62d282b5aa1bfe6): thread 0 - 78054.200 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, 1e43ff1c5f4eae55): thread 0 - 23364.800 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, 87438f1d06d41cca): thread 0 - 35852.800 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, 1a7e4fb2f5b2be93): thread 0 - 9113.900 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (compute, 5e969bd158b09fb3): thread 0 - 92922.600 us (mode: sync, success: yes)."
+    ],
+    "captures": [
+      {
+        "path": "diagnostics\\captures\\gopher64\\tlb_pagecount_candidates_input30_20260517\\game_h460_top10_stock_dossier_tlbpages64_007label_current_t025p0s.png",
+        "returncode": 0,
+        "capture_method": "win32_printwindow",
+        "stderr_tail": [],
+        "desktop_window_rect": {
+          "left": 96,
+          "top": 96,
+          "right": 752,
+          "bottom": 615,
+          "width": 656,
+          "height": 519
+        },
+        "window_rect": {
+          "left": 0,
+          "top": 0,
+          "right": 656,
+          "bottom": 519,
+          "width": 656,
+          "height": 519
+        },
+        "previous_error": {
+          "path": "diagnostics\\captures\\gopher64\\tlb_pagecount_candidates_input30_20260517\\game_h460_top10_stock_dossier_tlbpages64_007label_current_t025p0s.png",
+          "returncode": 1,
+          "capture_method": "pil_imagegrab_window",
+          "stderr_tail": [
+            "OSError('screen grab failed')"
+          ],
+          "desktop_window_rect": {
+            "left": 96,
+            "top": 96,
+            "right": 752,
+            "bottom": 615,
+            "width": 656,
+            "height": 519
+          },
+          "ffmpeg_error": {
+            "path": "diagnostics\\captures\\gopher64\\tlb_pagecount_candidates_input30_20260517\\game_h460_top10_stock_dossier_tlbpages64_007label_current_t025p0s.png",
+            "returncode": 4294967274,
+            "capture_method": "ffmpeg_gdigrab_desktop",
+            "stderr_tail": [
+              "[in#0/gdigrab @ 000001f687f5dd40] Failed to capture image (error 5)",
+              "[out#0/image2 @ 000001f687f788c0] Output file does not contain any stream",
+              "Error opening output file diagnostics\\captures\\gopher64\\tlb_pagecount_candidates_input30_20260517\\game_h460_top10_stock_dossier_tlbpages64_007label_current_t025p0s.png.",
+              "Error opening output files: Invalid argument"
+            ]
+          }
+        },
+        "window_stats": {
+          "crop_box": [
+            0,
+            0,
+            656,
+            519
+          ],
+          "mean_luma": 2.08,
+          "stddev_luma": 9.63,
+          "nonblack_ratio": 0.0597,
+          "bright_ratio": 0.0014
+        },
+        "elapsed": 25.06
+      },
+      {
+        "path": "diagnostics\\captures\\gopher64\\tlb_pagecount_candidates_input30_20260517\\game_h460_top10_stock_dossier_tlbpages64_007label_current_t045p0s.png",
+        "returncode": 0,
+        "capture_method": "win32_printwindow",
+        "stderr_tail": [],
+        "desktop_window_rect": {
+          "left": 96,
+          "top": 96,
+          "right": 752,
+          "bottom": 615,
+          "width": 656,
+          "height": 519
+        },
+        "window_rect": {
+          "left": 0,
+          "top": 0,
+          "right": 656,
+          "bottom": 519,
+          "width": 656,
+          "height": 519
+        },
+        "previous_error": {
+          "path": "diagnostics\\captures\\gopher64\\tlb_pagecount_candidates_input30_20260517\\game_h460_top10_stock_dossier_tlbpages64_007label_current_t045p0s.png",
+          "returncode": 1,
+          "capture_method": "pil_imagegrab_window",
+          "stderr_tail": [
+            "OSError('screen grab failed')"
+          ],
+          "desktop_window_rect": {
+            "left": 96,
+            "top": 96,
+            "right": 752,
+            "bottom": 615,
+            "width": 656,
+            "height": 519
+          },
+          "ffmpeg_error": {
+            "path": "diagnostics\\captures\\gopher64\\tlb_pagecount_candidates_input30_20260517\\game_h460_top10_stock_dossier_tlbpages64_007label_current_t045p0s.png",
+            "returncode": 4294967274,
+            "capture_method": "ffmpeg_gdigrab_desktop",
+            "stderr_tail": [
+              "[in#0/gdigrab @ 000001e8d757ed40] Failed to capture image (error 5)",
+              "[out#0/image2 @ 000001e8d7607780] Output file does not contain any stream",
+              "Error opening output file diagnostics\\captures\\gopher64\\tlb_pagecount_candidates_input30_20260517\\game_h460_top10_stock_dossier_tlbpages64_007label_current_t045p0s.png.",
+              "Error opening output files: Invalid argument"
+            ]
+          }
+        },
+        "window_stats": {
+          "crop_box": [
+            0,
+            0,
+            656,
+            519
+          ],
+          "mean_luma": 2.08,
+          "stddev_luma": 9.63,
+          "nonblack_ratio": 0.0597,
+          "bright_ratio": 0.0014
+        },
+        "elapsed": 45.02
+      },
+      {
+        "path": "diagnostics\\captures\\gopher64\\tlb_pagecount_candidates_input30_20260517\\game_h460_top10_stock_dossier_tlbpages64_007label_current_t065p0s.png",
+        "returncode": 0,
+        "capture_method": "win32_printwindow",
+        "stderr_tail": [],
+        "desktop_window_rect": {
+          "left": 96,
+          "top": 96,
+          "right": 752,
+          "bottom": 615,
+          "width": 656,
+          "height": 519
+        },
+        "window_rect": {
+          "left": 0,
+          "top": 0,
+          "right": 656,
+          "bottom": 519,
+          "width": 656,
+          "height": 519
+        },
+        "previous_error": {
+          "path": "diagnostics\\captures\\gopher64\\tlb_pagecount_candidates_input30_20260517\\game_h460_top10_stock_dossier_tlbpages64_007label_current_t065p0s.png",
+          "returncode": 1,
+          "capture_method": "pil_imagegrab_window",
+          "stderr_tail": [
+            "OSError('screen grab failed')"
+          ],
+          "desktop_window_rect": {
+            "left": 96,
+            "top": 96,
+            "right": 752,
+            "bottom": 615,
+            "width": 656,
+            "height": 519
+          },
+          "ffmpeg_error": {
+            "path": "diagnostics\\captures\\gopher64\\tlb_pagecount_candidates_input30_20260517\\game_h460_top10_stock_dossier_tlbpages64_007label_current_t065p0s.png",
+            "returncode": 4294967274,
+            "capture_method": "ffmpeg_gdigrab_desktop",
+            "stderr_tail": [
+              "[in#0/gdigrab @ 000002442c4f4fc0] Failed to capture image (error 5)",
+              "[out#0/image2 @ 000002442c47a940] Output file does not contain any stream",
+              "Error opening output file diagnostics\\captures\\gopher64\\tlb_pagecount_candidates_input30_20260517\\game_h460_top10_stock_dossier_tlbpages64_007label_current_t065p0s.png.",
+              "Error opening output files: Invalid argument"
+            ]
+          }
+        },
+        "window_stats": {
+          "crop_box": [
+            0,
+            0,
+            656,
+            519
+          ],
+          "mean_luma": 2.08,
+          "stddev_luma": 9.63,
+          "nonblack_ratio": 0.0597,
+          "bright_ratio": 0.0014
+        },
+        "elapsed": 65.08
+      }
+    ],
+    "capture": {
+      "path": "diagnostics\\captures\\gopher64\\tlb_pagecount_candidates_input30_20260517\\game_h460_top10_stock_dossier_tlbpages64_007label_current_final.png",
+      "returncode": 0,
+      "capture_method": "win32_printwindow",
+      "stderr_tail": [],
+      "desktop_window_rect": {
+        "left": 96,
+        "top": 96,
+        "right": 752,
+        "bottom": 615,
+        "width": 656,
+        "height": 519
+      },
+      "window_rect": {
+        "left": 0,
+        "top": 0,
+        "right": 656,
+        "bottom": 519,
+        "width": 656,
+        "height": 519
+      },
+      "previous_error": {
+        "path": "diagnostics\\captures\\gopher64\\tlb_pagecount_candidates_input30_20260517\\game_h460_top10_stock_dossier_tlbpages64_007label_current_final.png",
+        "returncode": 1,
+        "capture_method": "pil_imagegrab_window",
+        "stderr_tail": [
+          "OSError('screen grab failed')"
+        ],
+        "desktop_window_rect": {
+          "left": 96,
+          "top": 96,
+          "right": 752,
+          "bottom": 615,
+          "width": 656,
+          "height": 519
+        },
+        "ffmpeg_error": {
+          "path": "diagnostics\\captures\\gopher64\\tlb_pagecount_candidates_input30_20260517\\game_h460_top10_stock_dossier_tlbpages64_007label_current_final.png",
+          "returncode": 4294967274,
+          "capture_method": "ffmpeg_gdigrab_desktop",
+          "stderr_tail": [
+            "[in#0/gdigrab @ 0000021f1cd71ac0] Failed to capture image (error 5)",
+            "[out#0/image2 @ 0000021f1cd87e80] Output file does not contain any stream",
+            "Error opening output file diagnostics\\captures\\gopher64\\tlb_pagecount_candidates_input30_20260517\\game_h460_top10_stock_dossier_tlbpages64_007label_current_final.png.",
+            "Error opening output files: Invalid argument"
+          ]
+        }
+      },
+      "window_stats": {
+        "crop_box": [
+          0,
+          0,
+          656,
+          519
+        ],
+        "mean_luma": 2.08,
+        "stddev_luma": 9.63,
+        "nonblack_ratio": 0.0597,
+        "bright_ratio": 0.0014
+      },
+      "elapsed": 75.01
+    }
+  }
+]
