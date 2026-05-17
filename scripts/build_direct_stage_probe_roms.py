@@ -8,7 +8,7 @@ from pathlib import Path
 from build_tnd480i_candidate import update_n64_crc_6102
 
 
-OUT_DIR = Path("artifacts/generated/stage_probes")
+DEFAULT_OUT_DIR = Path("artifacts/generated/stage_probes")
 REPORT_DIR = Path("reports/stage_probes")
 DEFAULT_BASE = Path("artifacts/generated/tnd58.z64")
 DEFAULT_SAVE = Path("artifacts/generated/tnd58.sav")
@@ -54,7 +54,7 @@ def write_word(data, offset, value):
     struct.pack_into(">I", data, offset, value)
 
 
-def build_probe(base_path, save_path, level):
+def build_probe(base_path, save_path, level, out_dir):
     rom = bytearray(base_path.read_bytes())
     patches = []
     for offset, value, note in BOOT_STAGE_PATCH:
@@ -73,16 +73,16 @@ def build_probe(base_path, save_path, level):
         )
 
     crc1, crc2 = update_n64_crc_6102(rom)
-    OUT_DIR.mkdir(parents=True, exist_ok=True)
+    out_dir.mkdir(parents=True, exist_ok=True)
     stem = f"p{level['index']:02d}{level['short']}"
-    out_rom = OUT_DIR / f"{stem}.z64"
+    out_rom = out_dir / f"{stem}.z64"
     out_rom.write_bytes(rom)
 
     save_outputs = []
     if save_path and save_path.exists():
         save_bytes = save_path.read_bytes()
-        out_sav = OUT_DIR / f"{stem}.sav"
-        out_eep = OUT_DIR / f"{stem}.eep"
+        out_sav = out_dir / f"{stem}.sav"
+        out_eep = out_dir / f"{stem}.eep"
         out_sav.write_bytes(save_bytes)
         out_eep.write_bytes(save_bytes if len(save_bytes) >= 2048 else save_bytes + b"\0" * (2048 - len(save_bytes)))
         save_outputs = [str(out_sav), str(out_eep)]
@@ -106,6 +106,7 @@ def select_levels(names):
         keys = {
             str(level["index"]),
             level["short"].lower(),
+            f"p{level['index']:02d}{level['short']}".lower(),
             level["name"].lower(),
             level["ge_slot"].lower(),
         }
@@ -114,6 +115,7 @@ def select_levels(names):
     missing = sorted(wanted - {k for level in selected for k in (
         str(level["index"]),
         level["short"].lower(),
+        f"p{level['index']:02d}{level['short']}".lower(),
         level["name"].lower(),
         level["ge_slot"].lower(),
     )})
@@ -126,6 +128,8 @@ def main():
     parser = argparse.ArgumentParser(description="Build short direct-stage TND6480i probe ROMs.")
     parser.add_argument("--base", type=Path, default=DEFAULT_BASE)
     parser.add_argument("--save", type=Path, default=DEFAULT_SAVE)
+    parser.add_argument("--out-dir", type=Path, default=DEFAULT_OUT_DIR)
+    parser.add_argument("--report", type=Path, default=REPORT_DIR / "direct_stage_probes_latest.json")
     parser.add_argument("levels", nargs="*", help="Optional level names, indexes, shorts, or GE slots.")
     args = parser.parse_args()
 
@@ -133,18 +137,18 @@ def main():
         raise SystemExit(f"base ROM not found: {args.base}")
 
     base_bytes = args.base.read_bytes()
-    outputs = [build_probe(args.base, args.save, level) for level in select_levels(args.levels)]
+    outputs = [build_probe(args.base, args.save, level, args.out_dir) for level in select_levels(args.levels)]
     report = {
         "base": str(args.base),
         "base_md5": md5_bytes(base_bytes),
         "save": str(args.save) if args.save else None,
+        "out_dir": str(args.out_dir),
         "purpose": "Direct-boot per-stage probes to reduce manual hardware menu testing.",
         "outputs": outputs,
     }
 
-    REPORT_DIR.mkdir(parents=True, exist_ok=True)
-    report_path = REPORT_DIR / "direct_stage_probes_latest.json"
-    report_path.write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")
+    args.report.parent.mkdir(parents=True, exist_ok=True)
+    args.report.write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")
     print(json.dumps(report, indent=2))
 
 

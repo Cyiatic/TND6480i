@@ -101,6 +101,24 @@ Key results:
 
 Current implication: stop treating the problem as one uniform "stage too large" failure. The next patch pass should focus on shared render/camera/VI state transitions and framebuffer/z-buffer ownership, with City/The End and Hotel/Volcano as separate signatures.
 
+Follow-up memory-token hardware pass:
+
+```text
+scripts/build_stage_mem_budget_candidates.py
+reports/tnd480i_stage_mem_budget_candidates_20260517.json
+reports/stage_probes/direct_stage_mem_budget_hardware_20260517.json
+```
+
+Generated candidate families:
+
+- `artifacts/generated/tnd58mem_mtdown.z64`: lowers only `-mt` texture-cache budgets for Party, Hotel, City, Volcano, and The End.
+- `artifacts/generated/tnd58mem_gfxvtx_keep.z64`: raises `-mgfx`/`-mvtx` on the same failure groups while leaving `-mt`/`-ma` intact.
+- `artifacts/generated/tnd58mem_gfxvtx_bal.z64`: raises `-mgfx`/`-mvtx` but lowers `-mt` enough to keep total named allocations near the current budget.
+
+Hardware result: none of the memory-token variants fixed the failure groups. `gfxvtx_bal` still leaves Party as one live first-person frame followed by blue/black, City and The End as blue/black, and Hotel/Volcano as live prism/blown-out corruption. `mtdown` regresses Party and does not cure Hotel/Volcano/City. `gfxvtx_keep` also regresses Party and does not cure Hotel/Volcano. This effectively demotes simple per-stage `-mgfx`/`-mvtx`/`-mt`/`-ma` sizing as the root fix.
+
+Current restored console state after that pass: `artifacts/generated/tnd58.z64` with `artifacts/generated/tnd58.sav`, direct ROM mode, EEPROM 4k. SC64 upload and `sc64deployer info` succeeded after restore.
+
 Rejected immediate diagnostic:
 
 ```text

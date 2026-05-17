@@ -1,0 +1,203 @@
+[
+  {
+    "name": "tnd58mem_mtdown",
+    "purpose": "Reduce texture-cache pressure only on the direct-stage failure groups. This tests whether the 480i stage path is simply running out of stage bank headroom before or during world render.",
+    "base_rom": "artifacts\\generated\\tnd58.z64",
+    "base_md5": "25cd6b104b4cbdf3b2cdf4e1d02354da",
+    "out_rom": "artifacts\\generated\\tnd58mem_mtdown.z64",
+    "out_md5": "197fefaaf4b403b10a930701db7e67c1",
+    "header_crc": "B799C983 900CD338",
+    "slot_len": "0x10035",
+    "allowed_packed_len": "0x103CC",
+    "zero_pad_growth": "0x397",
+    "packed_len": "0x100F0",
+    "verify_consumed": "0x100EB",
+    "main_raw_md5": "e2c274dbf248cfb2a0686496ec9daadc",
+    "verify_main_raw_md5": "e2c274dbf248cfb2a0686496ec9daadc",
+    "patches": [
+      {
+        "stage": "Party",
+        "raw_offset": "0x7D0C",
+        "old": "-ml0 -me0 -mgfx70  -mvtx50 -mt900 -ma200",
+        "new": "-ml0 -me0 -mgfx70  -mvtx50 -mt800 -ma200"
+      },
+      {
+        "stage": "Hotel",
+        "raw_offset": "0x7D90",
+        "old": "-ml0 -me0 -mgfx100 -mvtx50 -mt950 -ma220",
+        "new": "-ml0 -me0 -mgfx100 -mvtx50 -mt850 -ma220"
+      },
+      {
+        "stage": "City",
+        "raw_offset": "0x7E40",
+        "old": "-ml0 -me0 -mgfx100 -mvtx50 -mt850 -ma200",
+        "new": "-ml0 -me0 -mgfx100 -mvtx50 -mt750 -ma200"
+      },
+      {
+        "stage": "Volcano",
+        "raw_offset": "0x7EC4",
+        "old": "-ml0 -me0 -mgfx60  -mvtx40 -mt850 -ma300",
+        "new": "-ml0 -me0 -mgfx60  -mvtx40 -mt750 -ma300"
+      },
+      {
+        "stage": "The End",
+        "raw_offset": "0x7F1C",
+        "old": "-ml0 -me0 -mgfx100 -mvtx50 -mt700 -ma150",
+        "new": "-ml0 -me0 -mgfx100 -mvtx50 -mt600 -ma150"
+      }
+    ],
+    "save_outputs": [
+      {
+        "path": "artifacts\\generated\\tnd58mem_mtdown.sav",
+        "bytes": 512,
+        "md5": "79ed3fe6851b080ff21de69fd12f034d"
+      },
+      {
+        "path": "artifacts\\generated\\tnd58mem_mtdown.eep",
+        "bytes": 2048,
+        "md5": "e47f5c07623838e875761a0493388e03"
+      }
+    ],
+    "direct_probe_focus": [
+      "Party",
+      "Hotel",
+      "City",
+      "Volcano",
+      "The End"
+    ]
+  },
+  {
+    "name": "tnd58mem_gfxvtx_keep",
+    "purpose": "Increase display-list and dynamic-vertex/matrix pools for the failure groups while leaving texture and mema budgets unchanged. This isolates gfx/vtx overflow as a possible cause, at the risk of using more stage RAM.",
+    "base_rom": "artifacts\\generated\\tnd58.z64",
+    "base_md5": "25cd6b104b4cbdf3b2cdf4e1d02354da",
+    "out_rom": "artifacts\\generated\\tnd58mem_gfxvtx_keep.z64",
+    "out_md5": "efc7ad2f1ff54cba2941d988e4eeabf4",
+    "header_crc": "33AD0BD6 76D734C8",
+    "slot_len": "0x10035",
+    "allowed_packed_len": "0x103CC",
+    "zero_pad_growth": "0x397",
+    "packed_len": "0x10100",
+    "verify_consumed": "0x100FB",
+    "main_raw_md5": "247da8879fea5411845910880f80ba89",
+    "verify_main_raw_md5": "247da8879fea5411845910880f80ba89",
+    "patches": [
+      {
+        "stage": "Party",
+        "raw_offset": "0x7D0C",
+        "old": "-ml0 -me0 -mgfx70  -mvtx50 -mt900 -ma200",
+        "new": "-ml0 -me0 -mgfx100 -mvtx70 -mt900 -ma200"
+      },
+      {
+        "stage": "Hotel",
+        "raw_offset": "0x7D90",
+        "old": "-ml0 -me0 -mgfx100 -mvtx50 -mt950 -ma220",
+        "new": "-ml0 -me0 -mgfx130 -mvtx70 -mt950 -ma220"
+      },
+      {
+        "stage": "City",
+        "raw_offset": "0x7E40",
+        "old": "-ml0 -me0 -mgfx100 -mvtx50 -mt850 -ma200",
+        "new": "-ml0 -me0 -mgfx130 -mvtx70 -mt850 -ma200"
+      },
+      {
+        "stage": "Volcano",
+        "raw_offset": "0x7EC4",
+        "old": "-ml0 -me0 -mgfx60  -mvtx40 -mt850 -ma300",
+        "new": "-ml0 -me0 -mgfx100 -mvtx70 -mt850 -ma300"
+      },
+      {
+        "stage": "The End",
+        "raw_offset": "0x7F1C",
+        "old": "-ml0 -me0 -mgfx100 -mvtx50 -mt700 -ma150",
+        "new": "-ml0 -me0 -mgfx130 -mvtx70 -mt700 -ma150"
+      }
+    ],
+    "save_outputs": [
+      {
+        "path": "artifacts\\generated\\tnd58mem_gfxvtx_keep.sav",
+        "bytes": 512,
+        "md5": "79ed3fe6851b080ff21de69fd12f034d"
+      },
+      {
+        "path": "artifacts\\generated\\tnd58mem_gfxvtx_keep.eep",
+        "bytes": 2048,
+        "md5": "e47f5c07623838e875761a0493388e03"
+      }
+    ],
+    "direct_probe_focus": [
+      "Party",
+      "Hotel",
+      "City",
+      "Volcano",
+      "The End"
+    ]
+  },
+  {
+    "name": "tnd58mem_gfxvtx_bal",
+    "purpose": "Increase gfx/vtx pools but pay for most or all of that increase by lowering texture-cache budgets. This keeps the total named allocations near the current tnd58 budget while checking for display-list pressure.",
+    "base_rom": "artifacts\\generated\\tnd58.z64",
+    "base_md5": "25cd6b104b4cbdf3b2cdf4e1d02354da",
+    "out_rom": "artifacts\\generated\\tnd58mem_gfxvtx_bal.z64",
+    "out_md5": "8beb24f792f43058b27552bc542f56c7",
+    "header_crc": "C246EE8A BFD59019",
+    "slot_len": "0x10035",
+    "allowed_packed_len": "0x103CC",
+    "zero_pad_growth": "0x397",
+    "packed_len": "0x10000",
+    "verify_consumed": "0xFFF9",
+    "main_raw_md5": "1f7ab72d2329a2cc764c12c9ae7d2918",
+    "verify_main_raw_md5": "1f7ab72d2329a2cc764c12c9ae7d2918",
+    "patches": [
+      {
+        "stage": "Party",
+        "raw_offset": "0x7D0C",
+        "old": "-ml0 -me0 -mgfx70  -mvtx50 -mt900 -ma200",
+        "new": "-ml0 -me0 -mgfx100 -mvtx70 -mt800 -ma200"
+      },
+      {
+        "stage": "Hotel",
+        "raw_offset": "0x7D90",
+        "old": "-ml0 -me0 -mgfx100 -mvtx50 -mt950 -ma220",
+        "new": "-ml0 -me0 -mgfx130 -mvtx70 -mt850 -ma220"
+      },
+      {
+        "stage": "City",
+        "raw_offset": "0x7E40",
+        "old": "-ml0 -me0 -mgfx100 -mvtx50 -mt850 -ma200",
+        "new": "-ml0 -me0 -mgfx130 -mvtx70 -mt750 -ma200"
+      },
+      {
+        "stage": "Volcano",
+        "raw_offset": "0x7EC4",
+        "old": "-ml0 -me0 -mgfx60  -mvtx40 -mt850 -ma300",
+        "new": "-ml0 -me0 -mgfx100 -mvtx70 -mt710 -ma300"
+      },
+      {
+        "stage": "The End",
+        "raw_offset": "0x7F1C",
+        "old": "-ml0 -me0 -mgfx100 -mvtx50 -mt700 -ma150",
+        "new": "-ml0 -me0 -mgfx130 -mvtx70 -mt600 -ma150"
+      }
+    ],
+    "save_outputs": [
+      {
+        "path": "artifacts\\generated\\tnd58mem_gfxvtx_bal.sav",
+        "bytes": 512,
+        "md5": "79ed3fe6851b080ff21de69fd12f034d"
+      },
+      {
+        "path": "artifacts\\generated\\tnd58mem_gfxvtx_bal.eep",
+        "bytes": 2048,
+        "md5": "e47f5c07623838e875761a0493388e03"
+      }
+    ],
+    "direct_probe_focus": [
+      "Party",
+      "Hotel",
+      "City",
+      "Volcano",
+      "The End"
+    ]
+  }
+]

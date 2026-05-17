@@ -1,0 +1,249 @@
+{
+  "base": "artifacts\\generated\\tnd58mem_gfxvtx_bal.z64",
+  "base_md5": "8beb24f792f43058b27552bc542f56c7",
+  "save": "artifacts\\generated\\tnd58mem_gfxvtx_bal.sav",
+  "out_dir": "artifacts\\generated\\stage_probes_gfxvtx_bal",
+  "purpose": "Direct-boot per-stage probes to reduce manual hardware menu testing.",
+  "outputs": [
+    {
+      "level": {
+        "index": 1,
+        "short": "pty",
+        "name": "Party",
+        "stage_id": 34,
+        "ge_slot": "Facility"
+      },
+      "rom": "artifacts\\generated\\stage_probes_gfxvtx_bal\\p01pty.z64",
+      "md5": "a692ceb988cfb6e2f9260603d80c43cb",
+      "header_crc": "CB759082 7C430B2E",
+      "saves": [
+        "artifacts\\generated\\stage_probes_gfxvtx_bal\\p01pty.sav",
+        "artifacts\\generated\\stage_probes_gfxvtx_bal\\p01pty.eep"
+      ],
+      "patches": [
+        {
+          "offset": "0x6C94",
+          "old": "0x3C058003",
+          "new": "0x3C018002",
+          "note": "lui at, 0x8002"
+        },
+        {
+          "offset": "0x6C98",
+          "old": "0x24A59104",
+          "new": "0x24020022",
+          "note": "addiu v0, zero, <stage>"
+        },
+        {
+          "offset": "0x6C9C",
+          "old": "0x0C0029A8",
+          "new": "0xAC2241A8",
+          "note": "sw v0, g_StageNum"
+        },
+        {
+          "offset": "0x6CA0",
+          "old": "0x24040001",
+          "new": "0x1000000E",
+          "note": "b after -level_ token parser"
+        },
+        {
+          "offset": "0x6CA4",
+          "old": "0x1040000D",
+          "new": "0x00000000",
+          "note": "nop"
+        }
+      ]
+    },
+    {
+      "level": {
+        "index": 4,
+        "short": "hot",
+        "name": "Hotel",
+        "stage_id": 9,
+        "ge_slot": "Bunker 1"
+      },
+      "rom": "artifacts\\generated\\stage_probes_gfxvtx_bal\\p04hot.z64",
+      "md5": "558a7bcab7207c738c51547e60ce13fa",
+      "header_crc": "CB759080 CEC7743A",
+      "saves": [
+        "artifacts\\generated\\stage_probes_gfxvtx_bal\\p04hot.sav",
+        "artifacts\\generated\\stage_probes_gfxvtx_bal\\p04hot.eep"
+      ],
+      "patches": [
+        {
+          "offset": "0x6C94",
+          "old": "0x3C058003",
+          "new": "0x3C018002",
+          "note": "lui at, 0x8002"
+        },
+        {
+          "offset": "0x6C98",
+          "old": "0x24A59104",
+          "new": "0x24020009",
+          "note": "addiu v0, zero, <stage>"
+        },
+        {
+          "offset": "0x6C9C",
+          "old": "0x0C0029A8",
+          "new": "0xAC2241A8",
+          "note": "sw v0, g_StageNum"
+        },
+        {
+          "offset": "0x6CA0",
+          "old": "0x24040001",
+          "new": "0x1000000E",
+          "note": "b after -level_ token parser"
+        },
+        {
+          "offset": "0x6CA4",
+          "old": "0x1040000D",
+          "new": "0x00000000",
+          "note": "nop"
+        }
+      ]
+    },
+    {
+      "level": {
+        "index": 8,
+        "short": "cty",
+        "name": "City",
+        "stage_id": 27,
+        "ge_slot": "Bunker 2"
+      },
+      "rom": "artifacts\\generated\\stage_probes_gfxvtx_bal\\p08cty.z64",
+      "md5": "d8916ee50e378d41c284beb97eefb460",
+      "header_crc": "CB759080 2957BB8F",
+      "saves": [
+        "artifacts\\generated\\stage_probes_gfxvtx_bal\\p08cty.sav",
+        "artifacts\\generated\\stage_probes_gfxvtx_bal\\p08cty.eep"
+      ],
+      "patches": [
+        {
+          "offset": "0x6C94",
+          "old": "0x3C058003",
+          "new": "0x3C018002",
+          "note": "lui at, 0x8002"
+        },
+        {
+          "offset": "0x6C98",
+          "old": "0x24A59104",
+          "new": "0x2402001B",
+          "note": "addiu v0, zero, <stage>"
+        },
+        {
+          "offset": "0x6C9C",
+          "old": "0x0C0029A8",
+          "new": "0xAC2241A8",
+          "note": "sw v0, g_StageNum"
+        },
+        {
+          "offset": "0x6CA0",
+          "old": "0x24040001",
+          "new": "0x1000000E",
+          "note": "b after -level_ token parser"
+        },
+        {
+          "offset": "0x6CA4",
+          "old": "0x1040000D",
+          "new": "0x00000000",
+          "note": "nop"
+        }
+      ]
+    },
+    {
+      "level": {
+        "index": 11,
+        "short": "vol",
+        "name": "Volcano",
+        "stage_id": 29,
+        "ge_slot": "Streets"
+      },
+      "rom": "artifacts\\generated\\stage_probes_gfxvtx_bal\\p11vol.z64",
+      "md5": "68b2fd932c0ef2ee691eaccb87451d13",
+      "header_crc": "CB7590B8 BD635158",
+      "saves": [
+        "artifacts\\generated\\stage_probes_gfxvtx_bal\\p11vol.sav",
+        "artifacts\\generated\\stage_probes_gfxvtx_bal\\p11vol.eep"
+      ],
+      "patches": [
+        {
+          "offset": "0x6C94",
+          "old": "0x3C058003",
+          "new": "0x3C018002",
+          "note": "lui at, 0x8002"
+        },
+        {
+          "offset": "0x6C98",
+          "old": "0x24A59104",
+          "new": "0x2402001D",
+          "note": "addiu v0, zero, <stage>"
+        },
+        {
+          "offset": "0x6C9C",
+          "old": "0x0C0029A8",
+          "new": "0xAC2241A8",
+          "note": "sw v0, g_StageNum"
+        },
+        {
+          "offset": "0x6CA0",
+          "old": "0x24040001",
+          "new": "0x1000000E",
+          "note": "b after -level_ token parser"
+        },
+        {
+          "offset": "0x6CA4",
+          "old": "0x1040000D",
+          "new": "0x00000000",
+          "note": "nop"
+        }
+      ]
+    },
+    {
+      "level": {
+        "index": 13,
+        "short": "end",
+        "name": "The End",
+        "stage_id": 25,
+        "ge_slot": "Train"
+      },
+      "rom": "artifacts\\generated\\stage_probes_gfxvtx_bal\\p13end.z64",
+      "md5": "484383bc486e7d790f04567fef06f9d6",
+      "header_crc": "CB759080 17EE13E0",
+      "saves": [
+        "artifacts\\generated\\stage_probes_gfxvtx_bal\\p13end.sav",
+        "artifacts\\generated\\stage_probes_gfxvtx_bal\\p13end.eep"
+      ],
+      "patches": [
+        {
+          "offset": "0x6C94",
+          "old": "0x3C058003",
+          "new": "0x3C018002",
+          "note": "lui at, 0x8002"
+        },
+        {
+          "offset": "0x6C98",
+          "old": "0x24A59104",
+          "new": "0x24020019",
+          "note": "addiu v0, zero, <stage>"
+        },
+        {
+          "offset": "0x6C9C",
+          "old": "0x0C0029A8",
+          "new": "0xAC2241A8",
+          "note": "sw v0, g_StageNum"
+        },
+        {
+          "offset": "0x6CA0",
+          "old": "0x24040001",
+          "new": "0x1000000E",
+          "note": "b after -level_ token parser"
+        },
+        {
+          "offset": "0x6CA4",
+          "old": "0x1040000D",
+          "new": "0x00000000",
+          "note": "nop"
+        }
+      ]
+    }
+  ]
+}

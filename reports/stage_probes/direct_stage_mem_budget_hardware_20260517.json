@@ -1,0 +1,146 @@
+{
+  "date": "2026-05-17",
+  "base": {
+    "rom": "artifacts/generated/tnd58.z64",
+    "md5": "25cd6b104b4cbdf3b2cdf4e1d02354da",
+    "save": "artifacts/generated/tnd58.sav",
+    "save_md5": "79ed3fe6851b080ff21de69fd12f034d"
+  },
+  "purpose": "Direct-stage hardware test of per-stage memory-token hypotheses for the remaining playability failures.",
+  "method": {
+    "builder": "scripts/build_stage_mem_budget_candidates.py",
+    "probe_builder": "scripts/build_direct_stage_probe_roms.py",
+    "capture_device": "GV-USB2 over S-Video",
+    "flashcart": "SummerCart64 direct ROM mode, EEPROM 4k",
+    "cycle": "Kasa power-cycle per probe",
+    "clip_seconds": 35
+  },
+  "candidates": [
+    {
+      "name": "tnd58mem_gfxvtx_bal",
+      "rom": "artifacts/generated/tnd58mem_gfxvtx_bal.z64",
+      "md5": "8beb24f792f43058b27552bc542f56c7",
+      "intent": "Increase gfx/vtx pools for Party, Hotel, City, Volcano, and The End while lowering texture cache enough to keep total named allocations near the current budget.",
+      "results": [
+        {
+          "probe": "p01pty",
+          "level": "Party",
+          "video": "diagnostics/captures/videos/gfxvtx_bal_p01pty_hardware_20260517.mp4",
+          "contact_sheet": "diagnostics/captures/contact_sheets/gfxvtx_bal_p01pty_hardware_20260517.jpg",
+          "result": "Still briefly reaches a first-person Party frame, then falls to blue rectangle/black. No useful improvement over tnd58."
+        },
+        {
+          "probe": "p04hot",
+          "level": "Hotel",
+          "video": "diagnostics/captures/videos/gfxvtx_bal_p04hot_hardware_20260517.mp4",
+          "contact_sheet": "diagnostics/captures/contact_sheets/gfxvtx_bal_p04hot_hardware_20260517.jpg",
+          "result": "Still reaches Hotel geometry but alternates with sky/white-blue/prism-style corrupt frames."
+        },
+        {
+          "probe": "p08cty",
+          "level": "City",
+          "video": "diagnostics/captures/videos/gfxvtx_bal_p08cty_hardware_20260517.mp4",
+          "contact_sheet": "diagnostics/captures/contact_sheets/gfxvtx_bal_p08cty_hardware_20260517.jpg",
+          "result": "Still blue transition rectangle then black, no useful world render."
+        },
+        {
+          "probe": "p11vol",
+          "level": "Volcano",
+          "video": "diagnostics/captures/videos/gfxvtx_bal_p11vol_hardware_20260517.mp4",
+          "contact_sheet": "diagnostics/captures/contact_sheets/gfxvtx_bal_p11vol_hardware_20260517.jpg",
+          "result": "Still live-renders Volcano but keeps the prism/blown-out frame family."
+        },
+        {
+          "probe": "p13end",
+          "level": "The End",
+          "video": "diagnostics/captures/videos/gfxvtx_bal_p13end_hardware_20260517.mp4",
+          "contact_sheet": "diagnostics/captures/contact_sheets/gfxvtx_bal_p13end_hardware_20260517.jpg",
+          "result": "Still blue transition rectangle then black, no useful world render."
+        }
+      ]
+    },
+    {
+      "name": "tnd58mem_mtdown",
+      "rom": "artifacts/generated/tnd58mem_mtdown.z64",
+      "md5": "197fefaaf4b403b10a930701db7e67c1",
+      "intent": "Lower texture-cache budgets only, testing whether the failures are caused by general stage-bank pressure.",
+      "results": [
+        {
+          "probe": "p01pty",
+          "level": "Party",
+          "video": "diagnostics/captures/videos/mtdown_p01pty_hardware_20260517.mp4",
+          "contact_sheet": "diagnostics/captures/contact_sheets/mtdown_p01pty_hardware_20260517.jpg",
+          "result": "Worse than tnd58/gfxvtx_bal: blue rectangle/black without the earlier useful live Party frame."
+        },
+        {
+          "probe": "p04hot",
+          "level": "Hotel",
+          "video": "diagnostics/captures/videos/mtdown_p04hot_hardware_20260517.mp4",
+          "contact_sheet": "diagnostics/captures/contact_sheets/mtdown_p04hot_hardware_20260517.jpg",
+          "result": "Still corrupts between Hotel geometry and blown-out/sky frames."
+        },
+        {
+          "probe": "p08cty",
+          "level": "City",
+          "video": "diagnostics/captures/videos/mtdown_p08cty_hardware_20260517.mp4",
+          "contact_sheet": "diagnostics/captures/contact_sheets/mtdown_p08cty_hardware_20260517.jpg",
+          "result": "Still blue transition rectangle then black."
+        },
+        {
+          "probe": "p11vol",
+          "level": "Volcano",
+          "video": "diagnostics/captures/videos/mtdown_p11vol_hardware_20260517.mp4",
+          "contact_sheet": "diagnostics/captures/contact_sheets/mtdown_p11vol_hardware_20260517.jpg",
+          "result": "Still shows the Volcano prism/blown-out corruption family."
+        },
+        {
+          "probe": "p13end",
+          "level": "The End",
+          "video": "diagnostics/captures/videos/mtdown_p13end_hardware_20260517.mp4",
+          "contact_sheet": "diagnostics/captures/contact_sheets/mtdown_p13end_hardware_20260517.jpg",
+          "result": "Do not trust as an End result: SC64 upload reported a timeout and the capture shows the SC64 menu."
+        }
+      ]
+    },
+    {
+      "name": "tnd58mem_gfxvtx_keep",
+      "rom": "artifacts/generated/tnd58mem_gfxvtx_keep.z64",
+      "md5": "efc7ad2f1ff54cba2941d988e4eeabf4",
+      "intent": "Increase gfx/vtx pools without lowering texture cache, isolating display-list/vertex pressure at the cost of more stage RAM.",
+      "results": [
+        {
+          "probe": "p01pty",
+          "level": "Party",
+          "video": "diagnostics/captures/videos/gfxvtx_keep_p01pty_hardware_20260517.mp4",
+          "contact_sheet": "diagnostics/captures/contact_sheets/gfxvtx_keep_p01pty_hardware_20260517.jpg",
+          "result": "Worse than tnd58/gfxvtx_bal: capture shows SC64 menu before cycle, then blue rectangle/black with no useful Party render."
+        },
+        {
+          "probe": "p04hot",
+          "level": "Hotel",
+          "video": "diagnostics/captures/videos/gfxvtx_keep_p04hot_hardware_20260517.mp4",
+          "contact_sheet": "diagnostics/captures/contact_sheets/gfxvtx_keep_p04hot_hardware_20260517.jpg",
+          "result": "Still corrupts, with sky/prism edge artifacts and normal Hotel frames alternating."
+        },
+        {
+          "probe": "p11vol",
+          "level": "Volcano",
+          "video": "diagnostics/captures/videos/gfxvtx_keep_p11vol_hardware_20260517.mp4",
+          "contact_sheet": "diagnostics/captures/contact_sheets/gfxvtx_keep_p11vol_hardware_20260517.jpg",
+          "result": "Still renders Volcano but shows bad gray/white frame-state bars and does not cure the corruption."
+        }
+      ]
+    }
+  ],
+  "conclusion": [
+    "Per-stage token changes do not fix the major failure groups.",
+    "Texture-cache reduction alone regresses Party and does not fix Hotel/Volcano/City.",
+    "Gfx/vtx increases, with or without texture-cache balancing, do not fix Party, City, The End, Hotel, or Volcano.",
+    "The remaining root cause is more likely a shared render/camera/VI/framebuffer state issue or stage transition ownership issue than simple per-stage -mgfx/-mvtx/-mt/-ma sizing."
+  ],
+  "restore": {
+    "rom": "artifacts/generated/tnd58.z64",
+    "save": "artifacts/generated/tnd58.sav",
+    "sc64_state_after_restore": "Direct ROM mode, EEPROM 4k; upload succeeded and sc64deployer info reported CIC compare algorithm."
+  }
+}

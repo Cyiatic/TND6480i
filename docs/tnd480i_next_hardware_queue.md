@@ -19,7 +19,13 @@ Date: 2026-05-08
     - Party: briefly reaches first-person render, then blue rectangle/black.
     - City/The End: blue transition rectangle then black, no useful world render.
     - Tower/Boat: direct boot reaches rendered scenes, so prior intro freezes likely involve transition/camera flow.
-    - Hotel/Volcano: direct boot reaches gameplay but reproduces the prism/blown-out live render corruption.
+  - Hotel/Volcano: direct boot reaches gameplay but reproduces the prism/blown-out live render corruption.
+  - Follow-up memory-token pass: `reports/stage_probes/direct_stage_mem_budget_hardware_20260517.json`.
+    - Built with `scripts/build_stage_mem_budget_candidates.py`.
+    - `tnd58mem_mtdown` lowered texture cache only and made Party worse while not fixing Hotel/Volcano/City.
+    - `tnd58mem_gfxvtx_keep` raised gfx/vtx only and made Party worse while not fixing Hotel/Volcano.
+    - `tnd58mem_gfxvtx_bal` raised gfx/vtx while lowering texture cache and still left Party, City, The End, Hotel, and Volcano in their previous failure classes.
+    - Current conclusion: do not spend the next pass on simple per-stage `-mgfx`/`-mvtx`/`-mt`/`-ma` tuning. Move back to shared camera/render/VI/framebuffer state or transition ownership.
 
 - 2026-05-17 `tlbpages58` 007-label restore, active on hardware with short SC64 upload names:
   - SC64 reports direct-ROM mode with EEPROM 4k. The active console ROM was uploaded as:
