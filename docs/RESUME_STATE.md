@@ -4,6 +4,37 @@ Last updated: 2026-05-17 after rejecting `t8040vmenuscales` and restoring `t8040
 
 Scope reminder: keep work limited to this N64/TND6480i project and directly related tools/devices.
 
+## Current Performance Finding
+
+User Analogue 3D feedback on `t8040viewge`: gameplay is viable but performance is poor, with Printworks and Wreck reportedly running slower than expected even with Analogue overclock. Treat this as a first-class issue, not just visual polish.
+
+Current interpretation: the active branch is probably paying for a true high-workload render path, not merely switching VI output to interlace. `t8040viewge`, `t8040camge`, `tnd8040`, and `tnd58` all share the expensive stage z-buffer path at:
+
+```text
+0x106ED4 = width 640
+0x106EE4 = height 480
+0x106EF0 = low-res width 640
+0x106F10 = single-player height 480
+0x106F24 = split height 480
+```
+
+That means UI placement or 480i capture output is not enough to prove the 3D scene is being rendered in the same way as GE's enhanced 480i patch. The next gameplay work should quantify performance against GE480i and test whether a lower-cost internal render/depth path can preserve the 480i visual target without the current slowdown.
+
+Analogue comparison pack:
+
+```text
+artifacts/analogue_test/TNDVIABL.Z64  = t8040viewge, current viable baseline
+artifacts/analogue_test/TNDCAMGE.Z64  = t8040camge, previous all-level boot baseline
+artifacts/analogue_test/TND8040.Z64   = tnd8040 control before GE camera/view constants
+artifacts/analogue_test/TND58.Z64     = older tlbpages58 fallback/control
+```
+
+Motion-cadence report:
+
+```text
+reports/capture_cadence/performance_ge480i_vs_tnd6480i_wreck_20260517.json
+```
+
 ## Current Console State
 
 Promoted candidate currently loaded on the SC64 for the next manual full-romhack visual-fit test:

@@ -1,0 +1,386 @@
+[
+  {
+    "name": "t8040ms00_02",
+    "purpose": "First scale-load triplet around 0x419F0-0x41A10.",
+    "base_rom": "artifacts\\generated\\t8040viewge.z64",
+    "base_md5": "763f94bd1fb364e3d9eb8809bde4900b",
+    "out_rom": "artifacts\\generated\\t8040ms00_02.z64",
+    "out_md5": "2f028a9a9f370e90292f921025dfeb7e",
+    "header_crc": "84D5FD82 20AB5A64",
+    "patch_count": 3,
+    "changed_patch_count": 3,
+    "patches": [
+      {
+        "index": 0,
+        "offset": "0x419F0",
+        "old": "0x3C014361",
+        "new": "0x3C0143A4",
+        "changed": true,
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe"
+      },
+      {
+        "index": 1,
+        "offset": "0x41A04",
+        "old": "0x3C018005",
+        "new": "0x3C0143CF",
+        "changed": true,
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe"
+      },
+      {
+        "index": 2,
+        "offset": "0x41A10",
+        "old": "0xC4321A28",
+        "new": "0x44819000",
+        "changed": true,
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe"
+      }
+    ],
+    "save_outputs": [
+      {
+        "path": "artifacts\\generated\\t8040ms00_02.sav",
+        "bytes": 512,
+        "md5": "79ed3fe6851b080ff21de69fd12f034d"
+      },
+      {
+        "path": "artifacts\\generated\\t8040ms00_02.eep",
+        "bytes": 2048,
+        "md5": "e47f5c07623838e875761a0493388e03"
+      }
+    ]
+  },
+  {
+    "name": "t8040ms03_06",
+    "purpose": "Second/third scale-load pair around 0x41B24-0x41B34.",
+    "base_rom": "artifacts\\generated\\t8040viewge.z64",
+    "base_md5": "763f94bd1fb364e3d9eb8809bde4900b",
+    "out_rom": "artifacts\\generated\\t8040ms03_06.z64",
+    "out_md5": "20b7c89122e1025fd1dba4825b839ff7",
+    "header_crc": "85CD4E1A 453B61F2",
+    "patch_count": 4,
+    "changed_patch_count": 4,
+    "patches": [
+      {
+        "index": 3,
+        "offset": "0x41B24",
+        "old": "0x3C018005",
+        "new": "0x3C0143F4",
+        "changed": true,
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe"
+      },
+      {
+        "index": 4,
+        "offset": "0x41B2C",
+        "old": "0xC4241A2C",
+        "new": "0x44812000",
+        "changed": true,
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe"
+      },
+      {
+        "index": 5,
+        "offset": "0x41B30",
+        "old": "0x3C018005",
+        "new": "0x3C0143CF",
+        "changed": true,
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe"
+      },
+      {
+        "index": 6,
+        "offset": "0x41B34",
+        "old": "0xC4321A30",
+        "new": "0x44819000",
+        "changed": true,
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe"
+      }
+    ],
+    "save_outputs": [
+      {
+        "path": "artifacts\\generated\\t8040ms03_06.sav",
+        "bytes": 512,
+        "md5": "79ed3fe6851b080ff21de69fd12f034d"
+      },
+      {
+        "path": "artifacts\\generated\\t8040ms03_06.eep",
+        "bytes": 2048,
+        "md5": "e47f5c07623838e875761a0493388e03"
+      }
+    ]
+  },
+  {
+    "name": "t8040ms07_09",
+    "purpose": "Scale-load triplet around 0x41C30-0x41C48.",
+    "base_rom": "artifacts\\generated\\t8040viewge.z64",
+    "base_md5": "763f94bd1fb364e3d9eb8809bde4900b",
+    "out_rom": "artifacts\\generated\\t8040ms07_09.z64",
+    "out_md5": "778f32c308a7221dc103f534fad8f729",
+    "header_crc": "84D5FCBC 49BBD1FA",
+    "patch_count": 3,
+    "changed_patch_count": 3,
+    "patches": [
+      {
+        "index": 7,
+        "offset": "0x41C30",
+        "old": "0x3C0142DC",
+        "new": "0x3C014320",
+        "changed": true,
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe"
+      },
+      {
+        "index": 8,
+        "offset": "0x41C40",
+        "old": "0x3C018005",
+        "new": "0x3C0143CF",
+        "changed": true,
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe"
+      },
+      {
+        "index": 9,
+        "offset": "0x41C48",
+        "old": "0xC4321A34",
+        "new": "0x44819000",
+        "changed": true,
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe"
+      }
+    ],
+    "save_outputs": [
+      {
+        "path": "artifacts\\generated\\t8040ms07_09.sav",
+        "bytes": 512,
+        "md5": "79ed3fe6851b080ff21de69fd12f034d"
+      },
+      {
+        "path": "artifacts\\generated\\t8040ms07_09.eep",
+        "bytes": 2048,
+        "md5": "e47f5c07623838e875761a0493388e03"
+      }
+    ]
+  },
+  {
+    "name": "t8040ms10_13",
+    "purpose": "Late 0x41F54-0x42338 menu constants.",
+    "base_rom": "artifacts\\generated\\t8040viewge.z64",
+    "base_md5": "763f94bd1fb364e3d9eb8809bde4900b",
+    "out_rom": "artifacts\\generated\\t8040ms10_13.z64",
+    "out_md5": "d20efd135393f8b15efd2b5b8f98318c",
+    "header_crc": "84CD3C42 C37B90E1",
+    "patch_count": 4,
+    "changed_patch_count": 4,
+    "patches": [
+      {
+        "index": 10,
+        "offset": "0x41F54",
+        "old": "0x3C018005",
+        "new": "0x3C0143BC",
+        "changed": true,
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe"
+      },
+      {
+        "index": 11,
+        "offset": "0x41F58",
+        "old": "0xC4261A40",
+        "new": "0x44813000",
+        "changed": true,
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe"
+      },
+      {
+        "index": 12,
+        "offset": "0x41FB0",
+        "old": "0x3C014373",
+        "new": "0x3C0143AC",
+        "changed": true,
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe"
+      },
+      {
+        "index": 13,
+        "offset": "0x42338",
+        "old": "0x3C0142FC",
+        "new": "0x3C014337",
+        "changed": true,
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe"
+      }
+    ],
+    "save_outputs": [
+      {
+        "path": "artifacts\\generated\\t8040ms10_13.sav",
+        "bytes": 512,
+        "md5": "79ed3fe6851b080ff21de69fd12f034d"
+      },
+      {
+        "path": "artifacts\\generated\\t8040ms10_13.eep",
+        "bytes": 2048,
+        "md5": "e47f5c07623838e875761a0493388e03"
+      }
+    ]
+  },
+  {
+    "name": "t8040ms14_18",
+    "purpose": "0x433FC-0x438A8 menu constants.",
+    "base_rom": "artifacts\\generated\\t8040viewge.z64",
+    "base_md5": "763f94bd1fb364e3d9eb8809bde4900b",
+    "out_rom": "artifacts\\generated\\t8040ms14_18.z64",
+    "out_md5": "61002bc3dd9e864ad25a9f0c3a3a708e",
+    "header_crc": "84CD3CA6 FC3C81CA",
+    "patch_count": 5,
+    "changed_patch_count": 5,
+    "patches": [
+      {
+        "index": 14,
+        "offset": "0x433FC",
+        "old": "0x3C018005",
+        "new": "0x3C0143AA",
+        "changed": true,
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe"
+      },
+      {
+        "index": 15,
+        "offset": "0x43400",
+        "old": "0xC4261A54",
+        "new": "0x44813000",
+        "changed": true,
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe"
+      },
+      {
+        "index": 16,
+        "offset": "0x43434",
+        "old": "0x3C014373",
+        "new": "0x3C01439A",
+        "changed": true,
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe"
+      },
+      {
+        "index": 17,
+        "offset": "0x43460",
+        "old": "0x3C014353",
+        "new": "0x3C01438A",
+        "changed": true,
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe"
+      },
+      {
+        "index": 18,
+        "offset": "0x438A8",
+        "old": "0x3C0142D4",
+        "new": "0x3C014303",
+        "changed": true,
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe"
+      }
+    ],
+    "save_outputs": [
+      {
+        "path": "artifacts\\generated\\t8040ms14_18.sav",
+        "bytes": 512,
+        "md5": "79ed3fe6851b080ff21de69fd12f034d"
+      },
+      {
+        "path": "artifacts\\generated\\t8040ms14_18.eep",
+        "bytes": 2048,
+        "md5": "e47f5c07623838e875761a0493388e03"
+      }
+    ]
+  },
+  {
+    "name": "t8040ms19_25",
+    "purpose": "Repeated lower menu constants from 0x43D0C-0x44A08.",
+    "base_rom": "artifacts\\generated\\t8040viewge.z64",
+    "base_md5": "763f94bd1fb364e3d9eb8809bde4900b",
+    "out_rom": "artifacts\\generated\\t8040ms19_25.z64",
+    "out_md5": "cb88337c581c1f10a0db3609db5e1620",
+    "header_crc": "84B7FCC1 195387C9",
+    "patch_count": 7,
+    "changed_patch_count": 7,
+    "patches": [
+      {
+        "index": 19,
+        "offset": "0x43D0C",
+        "old": "0x3C01438C",
+        "new": "0x3C014399",
+        "changed": true,
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe"
+      },
+      {
+        "index": 20,
+        "offset": "0x44104",
+        "old": "0x3C01425C",
+        "new": "0x3C0142A0",
+        "changed": true,
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe"
+      },
+      {
+        "index": 21,
+        "offset": "0x4410C",
+        "old": "0x3C014396",
+        "new": "0x3C0143DA",
+        "changed": true,
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe"
+      },
+      {
+        "index": 22,
+        "offset": "0x44410",
+        "old": "0x3C014396",
+        "new": "0x3C0143DA",
+        "changed": true,
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe"
+      },
+      {
+        "index": 23,
+        "offset": "0x44614",
+        "old": "0x3C014396",
+        "new": "0x3C0143DA",
+        "changed": true,
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe"
+      },
+      {
+        "index": 24,
+        "offset": "0x44818",
+        "old": "0x3C014396",
+        "new": "0x3C0143DA",
+        "changed": true,
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe"
+      },
+      {
+        "index": 25,
+        "offset": "0x44A08",
+        "old": "0x3C014396",
+        "new": "0x3C0143DA",
+        "changed": true,
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe"
+      }
+    ],
+    "save_outputs": [
+      {
+        "path": "artifacts\\generated\\t8040ms19_25.sav",
+        "bytes": 512,
+        "md5": "79ed3fe6851b080ff21de69fd12f034d"
+      },
+      {
+        "path": "artifacts\\generated\\t8040ms19_25.eep",
+        "bytes": 2048,
+        "md5": "e47f5c07623838e875761a0493388e03"
+      }
+    ]
+  }
+]

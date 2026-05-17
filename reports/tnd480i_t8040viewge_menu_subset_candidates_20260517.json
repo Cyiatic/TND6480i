@@ -3,6 +3,7 @@
     "name": "t8040vmenusansptr",
     "filter": "minus_ptr",
     "purpose": "Full GE-sized menu shell minus the two menu05_09 object/data pointer words at 0x40540/0x40544.",
+    "include_front_ingredients": true,
     "base_rom": "artifacts\\generated\\t8040viewge.z64",
     "base_md5": "763f94bd1fb364e3d9eb8809bde4900b",
     "out_rom": "artifacts\\generated\\t8040vmenusansptr.z64",
@@ -1541,6 +1542,7 @@
     "name": "t8040vmenusanshelper",
     "filter": "minus_helper",
     "purpose": "Full GE-sized menu shell minus the injected helper-code blob at 0x42F1C-0x42F84.",
+    "include_front_ingredients": true,
     "base_rom": "artifacts\\generated\\t8040viewge.z64",
     "base_md5": "763f94bd1fb364e3d9eb8809bde4900b",
     "out_rom": "artifacts\\generated\\t8040vmenusanshelper.z64",
@@ -2854,6 +2856,7 @@
     "name": "t8040vmenusafe",
     "filter": "minus_ptr_helper",
     "purpose": "GE-sized menu shell minus both the suspect pointer words and helper-code blob.",
+    "include_front_ingredients": true,
     "base_rom": "artifacts\\generated\\t8040viewge.z64",
     "base_md5": "763f94bd1fb364e3d9eb8809bde4900b",
     "out_rom": "artifacts\\generated\\t8040vmenusafe.z64",
@@ -4149,6 +4152,7 @@
     "name": "t8040vmenuscales",
     "filter": "scale_only",
     "purpose": "Only GE-style menu float/scale constants, preserving TND integer/object placements.",
+    "include_front_ingredients": true,
     "base_rom": "artifacts\\generated\\t8040viewge.z64",
     "base_md5": "763f94bd1fb364e3d9eb8809bde4900b",
     "out_rom": "artifacts\\generated\\t8040vmenuscales.z64",
@@ -4481,6 +4485,267 @@
       },
       {
         "path": "artifacts\\generated\\t8040vmenuscales.eep",
+        "bytes": 2048,
+        "md5": "e47f5c07623838e875761a0493388e03"
+      }
+    ]
+  },
+  {
+    "name": "t8040menuscalesonly",
+    "filter": "scale_only",
+    "purpose": "Only GE-style menu float/scale constants on top of t8040viewge. This intentionally excludes the old slow/front texture ingredients so save-select icon/text regressions can be separated from menu scale changes.",
+    "include_front_ingredients": false,
+    "base_rom": "artifacts\\generated\\t8040viewge.z64",
+    "base_md5": "763f94bd1fb364e3d9eb8809bde4900b",
+    "out_rom": "artifacts\\generated\\t8040menuscalesonly.z64",
+    "out_md5": "748ea4fc8d818a436b078ba8f1c95ba9",
+    "header_crc": "BAA1185A F3A6E46A",
+    "patch_count": 26,
+    "changed_patch_count": 26,
+    "patches": [
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x419F0",
+        "old": "0x3C014361",
+        "new": "0x3C0143A4",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x41A04",
+        "old": "0x3C018005",
+        "new": "0x3C0143CF",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x41A10",
+        "old": "0xC4321A28",
+        "new": "0x44819000",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x41B24",
+        "old": "0x3C018005",
+        "new": "0x3C0143F4",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x41B2C",
+        "old": "0xC4241A2C",
+        "new": "0x44812000",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x41B30",
+        "old": "0x3C018005",
+        "new": "0x3C0143CF",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x41B34",
+        "old": "0xC4321A30",
+        "new": "0x44819000",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x41C30",
+        "old": "0x3C0142DC",
+        "new": "0x3C014320",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x41C40",
+        "old": "0x3C018005",
+        "new": "0x3C0143CF",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x41C48",
+        "old": "0xC4321A34",
+        "new": "0x44819000",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x41F54",
+        "old": "0x3C018005",
+        "new": "0x3C0143BC",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x41F58",
+        "old": "0xC4261A40",
+        "new": "0x44813000",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x41FB0",
+        "old": "0x3C014373",
+        "new": "0x3C0143AC",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x42338",
+        "old": "0x3C0142FC",
+        "new": "0x3C014337",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x433FC",
+        "old": "0x3C018005",
+        "new": "0x3C0143AA",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x43400",
+        "old": "0xC4261A54",
+        "new": "0x44813000",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x43434",
+        "old": "0x3C014373",
+        "new": "0x3C01439A",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x43460",
+        "old": "0x3C014353",
+        "new": "0x3C01438A",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x438A8",
+        "old": "0x3C0142D4",
+        "new": "0x3C014303",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x43D0C",
+        "old": "0x3C01438C",
+        "new": "0x3C014399",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x44104",
+        "old": "0x3C01425C",
+        "new": "0x3C0142A0",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x4410C",
+        "old": "0x3C014396",
+        "new": "0x3C0143DA",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x44410",
+        "old": "0x3C014396",
+        "new": "0x3C0143DA",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x44614",
+        "old": "0x3C014396",
+        "new": "0x3C0143DA",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x44818",
+        "old": "0x3C014396",
+        "new": "0x3C0143DA",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x44A08",
+        "old": "0x3C014396",
+        "new": "0x3C0143DA",
+        "changed": true,
+        "note": ""
+      }
+    ],
+    "save_outputs": [
+      {
+        "path": "artifacts\\generated\\t8040menuscalesonly.sav",
+        "bytes": 512,
+        "md5": "79ed3fe6851b080ff21de69fd12f034d"
+      },
+      {
+        "path": "artifacts\\generated\\t8040menuscalesonly.eep",
         "bytes": 2048,
         "md5": "e47f5c07623838e875761a0493388e03"
       }

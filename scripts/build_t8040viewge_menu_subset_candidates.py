@@ -104,9 +104,9 @@ def copy_save(out_rom):
     return outputs
 
 
-def build_one(name, filter_name, purpose):
+def build_one(name, filter_name, purpose, include_front=True):
     rom = bytearray(BASE_ROM.read_bytes())
-    patches = front_patches() + menu_patches(filter_name)
+    patches = (front_patches() if include_front else []) + menu_patches(filter_name)
     by_offset = {}
     for patch in patches:
         by_offset[patch["offset"]] = patch
@@ -134,6 +134,7 @@ def build_one(name, filter_name, purpose):
         "name": name,
         "filter": filter_name,
         "purpose": purpose,
+        "include_front_ingredients": include_front,
         "base_rom": str(BASE_ROM),
         "base_md5": md5(BASE_ROM.read_bytes()),
         "out_rom": str(out_rom),
@@ -167,6 +168,17 @@ def main():
             "t8040vmenuscales",
             "scale_only",
             "Only GE-style menu float/scale constants, preserving TND integer/object placements.",
+            True,
+        ),
+        (
+            "t8040menuscalesonly",
+            "scale_only",
+            (
+                "Only GE-style menu float/scale constants on top of t8040viewge. "
+                "This intentionally excludes the old slow/front texture ingredients so "
+                "save-select icon/text regressions can be separated from menu scale changes."
+            ),
+            False,
         ),
     ]
     OUT_DIR.mkdir(parents=True, exist_ok=True)

@@ -1,0 +1,110 @@
+[
+  {
+    "video": "C:\\Users\\codex\\Documents\\Light Capture \u02dc^\u2030\u00e6\u0192t\u0192H\u0192\u2039\u0192_\\n64\\2. GoldenEye 480i.mpg",
+    "frames": 600,
+    "frame_diffs": 599,
+    "mean_diff": 2.1051,
+    "median_diff": 0.1935,
+    "p90_diff": 6.5461,
+    "near_duplicate_ratio": 0.6628,
+    "active_ratio": 0.2871,
+    "estimated_updates_per_second": 8.606,
+    "label": "ge480i_dam_240_260",
+    "start": 240.0,
+    "duration": 20.0,
+    "scale": [
+      180,
+      120
+    ]
+  },
+  {
+    "video": "C:\\Users\\codex\\Documents\\Light Capture \u02dc^\u2030\u00e6\u0192t\u0192H\u0192\u2039\u0192_\\n64\\2. GoldenEye 480i.mpg",
+    "frames": 600,
+    "frame_diffs": 599,
+    "mean_diff": 2.7651,
+    "median_diff": 0.1275,
+    "p90_diff": 9.4,
+    "near_duplicate_ratio": 0.6561,
+    "active_ratio": 0.3422,
+    "estimated_updates_per_second": 10.257,
+    "label": "ge480i_dam_300_320",
+    "start": 300.0,
+    "duration": 20.0,
+    "scale": [
+      180,
+      120
+    ]
+  },
+  {
+    "video": "C:\\Users\\codex\\Documents\\Light Capture \u02dc^\u2030\u00e6\u0192t\u0192H\u0192\u2039\u0192_\\n64\\4. Tomorrow Never Dies 6480i.mpg",
+    "frames": 599,
+    "frame_diffs": 598,
+    "mean_diff": 0.7158,
+    "median_diff": 0.192,
+    "p90_diff": 1.8683,
+    "near_duplicate_ratio": 0.8846,
+    "active_ratio": 0.102,
+    "estimated_updates_per_second": 3.057,
+    "label": "tnd6480i_wreck_812_832",
+    "start": 812.0,
+    "duration": 20.0,
+    "scale": [
+      180,
+      120
+    ]
+  },
+  {
+    "video": "C:\\Users\\codex\\Documents\\Light Capture \u02dc^\u2030\u00e6\u0192t\u0192H\u0192\u2039\u0192_\\n64\\4. Tomorrow Never Dies 6480i.mpg",
+    "frames": 600,
+    "frame_diffs": 599,
+    "mean_diff": 1.8976,
+    "median_diff": 1.4097,
+    "p90_diff": 4.4806,
+    "near_duplicate_ratio": 0.3973,
+    "active_ratio": 0.424,
+    "estimated_updates_per_second": 12.708,
+    "label": "tnd6480i_wreck_840_860",
+    "start": 840.0,
+    "duration": 20.0,
+    "scale": [
+      180,
+      120
+    ]
+  },
+  {
+    "video": "diagnostics\\captures\\videos\\direct_p06wrk_hardware_20260517.mp4",
+    "frames": 599,
+    "frame_diffs": 598,
+    "mean_diff": 0.4414,
+    "median_diff": 0.0,
+    "p90_diff": 0.1775,
+    "near_duplicate_ratio": 0.9515,
+    "active_ratio": 0.0418,
+    "estimated_updates_per_second": 1.253,
+    "label": "direct_p06wrk_0_20",
+    "start": 0.0,
+    "duration": 20.0,
+    "scale": [
+      180,
+      120
+    ]
+  },
+  {
+    "video": "diagnostics\\captures\\videos\\zbstk_p06wrk_direct_20260517.mp4",
+    "frames": 599,
+    "frame_diffs": 598,
+    "mean_diff": 0.2846,
+    "median_diff": 0.0019,
+    "p90_diff": 0.1231,
+    "near_duplicate_ratio": 0.9532,
+    "active_ratio": 0.0151,
+    "estimated_updates_per_second": 0.451,
+    "label": "zbstk_p06wrk_0_20",
+    "start": 0.0,
+    "duration": 20.0,
+    "scale": [
+      180,
+      120
+    ]
+  }
+]
