@@ -1,6 +1,6 @@
 # TND6480i Resume State
 
-Last updated: 2026-05-17 after loading the `t8040vmenuscales` front/menu-scale candidate.
+Last updated: 2026-05-17 after rejecting `t8040vmenuscales` and restoring `t8040viewge`.
 
 Scope reminder: keep work limited to this N64/TND6480i project and directly related tools/devices.
 
@@ -9,53 +9,56 @@ Scope reminder: keep work limited to this N64/TND6480i project and directly rela
 Promoted candidate currently loaded on the SC64 for the next manual full-romhack visual-fit test:
 
 ```text
-artifacts/generated/t8040vmenuscales.z64
-content source: artifacts/generated/t8040viewge.z64
-MD5: b6486e99e817e069700d6da0715e13a9
-N64 CRC: 8AB0127C E5CE421E
+artifacts/generated/t8040viewge.z64
+content source: artifacts/generated/tnd8040.z64
+MD5: 763f94bd1fb364e3d9eb8809bde4900b
+N64 CRC: 84B7FA99 E50042D8
 ```
 
 Paired save:
 
 ```text
-artifacts/generated/t8040vmenuscales.sav
+artifacts/generated/t8040viewge.sav
 MD5: 79ed3fe6851b080ff21de69fd12f034d
 ```
 
-Purpose: keep the proven `t8040viewge` gameplay/level-load baseline, then add the old slow/front ingredients plus only the GE-style menu float/scale constants. This follows the current menu direction: GE-sized shell behavior where possible, but keep TND mission placements/content because TND64 has fewer missions. The broader `t8040vfrontmenu`/`menu05_09` transplant was too aggressive in Gopher and is not the active candidate.
+Purpose: keep the `t8040camge` playability/camera breakthrough, then also apply GE's normal non-camera default viewport height/top. This is the current stable gameplay baseline before further front/menu experiments.
 
 Evidence:
 
 ```text
-scripts/build_t8040viewge_menu_subset_candidates.py
-reports/tnd480i_t8040viewge_menu_subset_candidates_20260517.json
-reports/smoke/smoke_t8040_menu_subsets_input_20260517.json
-reports/stage_probes/direct_stage_probes_t8040vmenuscales.json
-reports/smoke/smoke_t8040vmenuscales_problem_stages_20260517.json
-reports/tnd6480i_t8040vmenuscales_bps_manifest.json
-diagnostics/captures/videos/t8040vmenuscales_startup_hw_20260517.mp4
-diagnostics/captures/contact_sheets/t8040vmenuscales_startup_hw_20260517_sheet.jpg
+scripts/build_tnd8040_viewport_followup_candidates.py
+reports/tnd480i_tnd8040_viewport_followup_candidates_20260517.json
+reports/stage_probes/direct_stage_probes_t8040viewge_all.json
+reports/smoke/smoke_t8040viewge_visual_matrix_20260517.json
+reports/stage_probes/direct_stage_t8040viewge_hardware_20260517.json
+reports/tnd6480i_t8040viewge_bps_manifest.json
+diagnostics/captures/contact_sheets/t8040viewge_p00bzr_direct_20260517_postcycle.jpg
+diagnostics/captures/contact_sheets/t8040viewge_p01pty_direct_20260517_postcycle.jpg
+diagnostics/captures/contact_sheets/t8040viewge_p04hot_direct_20260517_postcycle.jpg
+diagnostics/captures/contact_sheets/t8040viewge_p11vol_direct_20260517_postcycle.jpg
+diagnostics/captures/contact_sheets/t8040viewge_full_startup_20260517_postcycle.jpg
 ```
 
 Verified BPS patch:
 
 ```text
-artifacts/generated/TND6480i_t8040vmenuscales_from_baseline_tnd.bps
-MD5: 618b9c57972c53e177ae925b2056daf7
+artifacts/generated/TND6480i_t8040viewge_from_baseline_tnd.bps
+MD5: 773dedd2d931426fde77652fa07d19e5
 ```
 
 Important correction: `p01pty` is Party / CMGN Launch Party. `p13end` is The End / end-credits / City of Hamburg. Do not describe `p13end` white-rectangle or black-screen behavior as Party.
 
 User full-ROM feedback on the previous `t8040camge` baseline: all levels appear to load and boot correctly. User feedback on `t8040viewge`: Bazaar and Labs look fine, pause menu looks fine, all levels boot, and bullets UI is good. This means the work has moved from load survival back to visual correctness, especially the pre-ingame/front/menu path.
 
-Latest result for `t8040vmenuscales`:
+Rejected front/menu candidate: `t8040vmenuscales`
 
-- Full ROM uploaded successfully with EEPROM 4k save. SC64 reports `ROM (direct)`.
-- Hardware startup capture reaches CMK/logos/gunbarrel/TND logo/opening cast. Known front/gunbarrel/art composition issues remain.
-- Gopher64 full-ROM input smoke reaches file/mission dossier screens. The broad `t8040vfrontmenu` transplant made the dossier too aggressive; `t8040vmenuscales` is the narrower menu-scale branch that preserves TND integer/object placement words.
-- Gopher64 direct-stage smoke for Bazaar, Party, Hotel, Tower, City, Boat, Volcano, and The End survived the smoke window with nonblack rendered frames.
+- It was uploaded after emulator/direct-stage smoke as a narrow "GE menu scales, TND placements" branch.
+- User hardware feedback: save-select icons and text were missing, and everything else looked the same.
+- Status: rejected/regressed. It was restored away from SC64. Do not build more menu-scale-only variants from this subset unless a specific draw call is identified.
+- Evidence remains useful only as a negative result: `reports/tnd480i_t8040viewge_menu_subset_candidates_20260517.json`, `reports/smoke/smoke_t8040_menu_subsets_input_20260517.json`, `reports/smoke/smoke_t8040vmenuscales_problem_stages_20260517.json`, and `reports/tnd6480i_t8040vmenuscales_bps_manifest.json`.
 
-Manual test focus for `t8040vmenuscales`: verify that the existing `t8040viewge` gameplay wins are preserved first: Bazaar/Labs, pause/watch, all level boot, bullets UI, countdown/HUD, and a few known-good controls. Then check whether file select, mission select, difficulty, and briefing sizing/text placement moved closer to GE 480i without breaking TND mission placement.
+Manual test focus for restored `t8040viewge`: continue from the stable gameplay baseline. For front/menu work, use the GE480i reference only as a visual target: GE-sized file/dossier shell, but preserve TND mission count and placements. Do not transplant broad `menu05_09` or scale-only subsets blindly.
 
 Previous visual-fit gameplay baseline:
 

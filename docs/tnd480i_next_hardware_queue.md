@@ -4,7 +4,7 @@ Date: 2026-05-08
 
 ## Current Hardware State
 
-- 2026-05-17 `t8040vmenuscales` active SC64 full-ROM candidate:
+- 2026-05-17 `t8040vmenuscales` rejected front/menu-scale candidate:
   - Full ROM:
     `artifacts/generated/t8040vmenuscales.z64`.
   - Content source: `artifacts/generated/t8040viewge.z64`.
@@ -17,10 +17,11 @@ Date: 2026-05-08
     - `reports/smoke/smoke_t8040_menu_subsets_input_20260517.json`: `t8040vmenuscales` reaches dossier/menu frames, while `t8040vmenusafe` shows top-strip corruption and is rejected.
     - `reports/smoke/smoke_t8040vmenuscales_problem_stages_20260517.json`: Bazaar, Party, Hotel, Tower, City, Boat, Volcano, and The End survive the direct-stage smoke window with nonblack rendered frames.
   - Hardware evidence: `diagnostics/captures/videos/t8040vmenuscales_startup_hw_20260517.mp4` and `diagnostics/captures/contact_sheets/t8040vmenuscales_startup_hw_20260517_sheet.jpg`; startup reaches CMK/logos/gunbarrel/TND logo/opening cast. Known front/gunbarrel/art composition issues remain.
-  - Manual test priority: first confirm `t8040viewge` gameplay did not regress: Bazaar/Labs, pause/watch, all level boot, bullets UI, countdown/HUD, and a few known-good levels. Then check file select, single/multi/cheat select, mission select, difficulty, and briefing sizing/text placement against the GE 480i reference while remembering TND has fewer mission placements.
-  - Fallback if gameplay regresses: restore `artifacts/generated/t8040viewge.z64` with `artifacts/generated/t8040viewge.sav`.
+  - User hardware feedback: save-select icons and text were missing, and everything else looked the same.
+  - Status: rejected/regressed. It was restored away from SC64. Do not use this as the active menu path.
+  - Current lesson: the GE480i reference is useful as a visual target, but broad `menu05_09` transplants and scale-only float subsets are still too blunt. Next menu work should identify the specific save/mission dossier draw call(s), preserve TND mission count/placements, and avoid touching file icon/text object setup.
 
-- 2026-05-17 `t8040viewge` gameplay baseline, previous loaded visual-fit test:
+- 2026-05-17 `t8040viewge` gameplay baseline, current restored SC64 full-ROM candidate:
   - Full ROM:
     `artifacts/generated/t8040viewge.z64`.
   - Content source: `artifacts/generated/tnd8040.z64`.
