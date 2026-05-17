@@ -1,0 +1,680 @@
+{
+  "base": "artifacts\\generated\\tnd58.z64",
+  "base_md5": "25cd6b104b4cbdf3b2cdf4e1d02354da",
+  "save": "artifacts\\generated\\tnd58.sav",
+  "purpose": "Direct-boot per-stage probes to reduce manual hardware menu testing.",
+  "outputs": [
+    {
+      "level": {
+        "index": 0,
+        "short": "bzr",
+        "name": "Bazaar",
+        "stage_id": 33,
+        "ge_slot": "Dam"
+      },
+      "rom": "artifacts\\generated\\stage_probes\\p00bzr.z64",
+      "md5": "f8043172ed2dad236d7d5dd386b06928",
+      "header_crc": "878BFA37 555871FF",
+      "saves": [
+        "artifacts\\generated\\stage_probes\\p00bzr.sav",
+        "artifacts\\generated\\stage_probes\\p00bzr.eep"
+      ],
+      "patches": [
+        {
+          "offset": "0x6C94",
+          "old": "0x3C058003",
+          "new": "0x3C018002",
+          "note": "lui at, 0x8002"
+        },
+        {
+          "offset": "0x6C98",
+          "old": "0x24A59104",
+          "new": "0x24020021",
+          "note": "addiu v0, zero, <stage>"
+        },
+        {
+          "offset": "0x6C9C",
+          "old": "0x0C0029A8",
+          "new": "0xAC2241A8",
+          "note": "sw v0, g_StageNum"
+        },
+        {
+          "offset": "0x6CA0",
+          "old": "0x24040001",
+          "new": "0x1000000E",
+          "note": "b after -level_ token parser"
+        },
+        {
+          "offset": "0x6CA4",
+          "old": "0x1040000D",
+          "new": "0x00000000",
+          "note": "nop"
+        }
+      ]
+    },
+    {
+      "level": {
+        "index": 1,
+        "short": "pty",
+        "name": "Party",
+        "stage_id": 34,
+        "ge_slot": "Facility"
+      },
+      "rom": "artifacts\\generated\\stage_probes\\p01pty.z64",
+      "md5": "721959edf0fcbc13e9f13edc81be572a",
+      "header_crc": "878BFA35 A3A61097",
+      "saves": [
+        "artifacts\\generated\\stage_probes\\p01pty.sav",
+        "artifacts\\generated\\stage_probes\\p01pty.eep"
+      ],
+      "patches": [
+        {
+          "offset": "0x6C94",
+          "old": "0x3C058003",
+          "new": "0x3C018002",
+          "note": "lui at, 0x8002"
+        },
+        {
+          "offset": "0x6C98",
+          "old": "0x24A59104",
+          "new": "0x24020022",
+          "note": "addiu v0, zero, <stage>"
+        },
+        {
+          "offset": "0x6C9C",
+          "old": "0x0C0029A8",
+          "new": "0xAC2241A8",
+          "note": "sw v0, g_StageNum"
+        },
+        {
+          "offset": "0x6CA0",
+          "old": "0x24040001",
+          "new": "0x1000000E",
+          "note": "b after -level_ token parser"
+        },
+        {
+          "offset": "0x6CA4",
+          "old": "0x1040000D",
+          "new": "0x00000000",
+          "note": "nop"
+        }
+      ]
+    },
+    {
+      "level": {
+        "index": 2,
+        "short": "lab",
+        "name": "Labs",
+        "stage_id": 35,
+        "ge_slot": "Runway"
+      },
+      "rom": "artifacts\\generated\\stage_probes\\p02lab.z64",
+      "md5": "20ed0f9eed138b75f88bafc4219650c5",
+      "header_crc": "878BFA2B 0C84B515",
+      "saves": [
+        "artifacts\\generated\\stage_probes\\p02lab.sav",
+        "artifacts\\generated\\stage_probes\\p02lab.eep"
+      ],
+      "patches": [
+        {
+          "offset": "0x6C94",
+          "old": "0x3C058003",
+          "new": "0x3C018002",
+          "note": "lui at, 0x8002"
+        },
+        {
+          "offset": "0x6C98",
+          "old": "0x24A59104",
+          "new": "0x24020023",
+          "note": "addiu v0, zero, <stage>"
+        },
+        {
+          "offset": "0x6C9C",
+          "old": "0x0C0029A8",
+          "new": "0xAC2241A8",
+          "note": "sw v0, g_StageNum"
+        },
+        {
+          "offset": "0x6CA0",
+          "old": "0x24040001",
+          "new": "0x1000000E",
+          "note": "b after -level_ token parser"
+        },
+        {
+          "offset": "0x6CA4",
+          "old": "0x1040000D",
+          "new": "0x00000000",
+          "note": "nop"
+        }
+      ]
+    },
+    {
+      "level": {
+        "index": 3,
+        "short": "prs",
+        "name": "Press",
+        "stage_id": 36,
+        "ge_slot": "Surface 1"
+      },
+      "rom": "artifacts\\generated\\stage_probes\\p03prs.z64",
+      "md5": "a1cec9d114b11d102a7e8d664e6f30aa",
+      "header_crc": "878BFA2D 1C2DFA12",
+      "saves": [
+        "artifacts\\generated\\stage_probes\\p03prs.sav",
+        "artifacts\\generated\\stage_probes\\p03prs.eep"
+      ],
+      "patches": [
+        {
+          "offset": "0x6C94",
+          "old": "0x3C058003",
+          "new": "0x3C018002",
+          "note": "lui at, 0x8002"
+        },
+        {
+          "offset": "0x6C98",
+          "old": "0x24A59104",
+          "new": "0x24020024",
+          "note": "addiu v0, zero, <stage>"
+        },
+        {
+          "offset": "0x6C9C",
+          "old": "0x0C0029A8",
+          "new": "0xAC2241A8",
+          "note": "sw v0, g_StageNum"
+        },
+        {
+          "offset": "0x6CA0",
+          "old": "0x24040001",
+          "new": "0x1000000E",
+          "note": "b after -level_ token parser"
+        },
+        {
+          "offset": "0x6CA4",
+          "old": "0x1040000D",
+          "new": "0x00000000",
+          "note": "nop"
+        }
+      ]
+    },
+    {
+      "level": {
+        "index": 4,
+        "short": "hot",
+        "name": "Hotel",
+        "stage_id": 9,
+        "ge_slot": "Bunker 1"
+      },
+      "rom": "artifacts\\generated\\stage_probes\\p04hot.z64",
+      "md5": "13c5c623473356728c0b3b3e18043148",
+      "header_crc": "878BFBE7 586DEA59",
+      "saves": [
+        "artifacts\\generated\\stage_probes\\p04hot.sav",
+        "artifacts\\generated\\stage_probes\\p04hot.eep"
+      ],
+      "patches": [
+        {
+          "offset": "0x6C94",
+          "old": "0x3C058003",
+          "new": "0x3C018002",
+          "note": "lui at, 0x8002"
+        },
+        {
+          "offset": "0x6C98",
+          "old": "0x24A59104",
+          "new": "0x24020009",
+          "note": "addiu v0, zero, <stage>"
+        },
+        {
+          "offset": "0x6C9C",
+          "old": "0x0C0029A8",
+          "new": "0xAC2241A8",
+          "note": "sw v0, g_StageNum"
+        },
+        {
+          "offset": "0x6CA0",
+          "old": "0x24040001",
+          "new": "0x1000000E",
+          "note": "b after -level_ token parser"
+        },
+        {
+          "offset": "0x6CA4",
+          "old": "0x1040000D",
+          "new": "0x00000000",
+          "note": "nop"
+        }
+      ]
+    },
+    {
+      "level": {
+        "index": 5,
+        "short": "prk",
+        "name": "Parkhaus",
+        "stage_id": 20,
+        "ge_slot": "Silo"
+      },
+      "rom": "artifacts\\generated\\stage_probes\\p05prk.z64",
+      "md5": "037d3ed1cdf659f61626a623d565da4b",
+      "header_crc": "878BFA0D E470CCA8",
+      "saves": [
+        "artifacts\\generated\\stage_probes\\p05prk.sav",
+        "artifacts\\generated\\stage_probes\\p05prk.eep"
+      ],
+      "patches": [
+        {
+          "offset": "0x6C94",
+          "old": "0x3C058003",
+          "new": "0x3C018002",
+          "note": "lui at, 0x8002"
+        },
+        {
+          "offset": "0x6C98",
+          "old": "0x24A59104",
+          "new": "0x24020014",
+          "note": "addiu v0, zero, <stage>"
+        },
+        {
+          "offset": "0x6C9C",
+          "old": "0x0C0029A8",
+          "new": "0xAC2241A8",
+          "note": "sw v0, g_StageNum"
+        },
+        {
+          "offset": "0x6CA0",
+          "old": "0x24040001",
+          "new": "0x1000000E",
+          "note": "b after -level_ token parser"
+        },
+        {
+          "offset": "0x6CA4",
+          "old": "0x1040000D",
+          "new": "0x00000000",
+          "note": "nop"
+        }
+      ]
+    },
+    {
+      "level": {
+        "index": 6,
+        "short": "wrk",
+        "name": "Wreck",
+        "stage_id": 26,
+        "ge_slot": "Frigate"
+      },
+      "rom": "artifacts\\generated\\stage_probes\\p06wrk.z64",
+      "md5": "6305031f8c9329445663d60803336f9f",
+      "header_crc": "878BFA05 E0D9B7CB",
+      "saves": [
+        "artifacts\\generated\\stage_probes\\p06wrk.sav",
+        "artifacts\\generated\\stage_probes\\p06wrk.eep"
+      ],
+      "patches": [
+        {
+          "offset": "0x6C94",
+          "old": "0x3C058003",
+          "new": "0x3C018002",
+          "note": "lui at, 0x8002"
+        },
+        {
+          "offset": "0x6C98",
+          "old": "0x24A59104",
+          "new": "0x2402001A",
+          "note": "addiu v0, zero, <stage>"
+        },
+        {
+          "offset": "0x6C9C",
+          "old": "0x0C0029A8",
+          "new": "0xAC2241A8",
+          "note": "sw v0, g_StageNum"
+        },
+        {
+          "offset": "0x6CA0",
+          "old": "0x24040001",
+          "new": "0x1000000E",
+          "note": "b after -level_ token parser"
+        },
+        {
+          "offset": "0x6CA4",
+          "old": "0x1040000D",
+          "new": "0x00000000",
+          "note": "nop"
+        }
+      ]
+    },
+    {
+      "level": {
+        "index": 7,
+        "short": "twr",
+        "name": "Tower",
+        "stage_id": 43,
+        "ge_slot": "Surface 2"
+      },
+      "rom": "artifacts\\generated\\stage_probes\\p07twr.z64",
+      "md5": "b73ed6ec780d8c57db705de97f03a8c5",
+      "header_crc": "878BFA2B AA91526D",
+      "saves": [
+        "artifacts\\generated\\stage_probes\\p07twr.sav",
+        "artifacts\\generated\\stage_probes\\p07twr.eep"
+      ],
+      "patches": [
+        {
+          "offset": "0x6C94",
+          "old": "0x3C058003",
+          "new": "0x3C018002",
+          "note": "lui at, 0x8002"
+        },
+        {
+          "offset": "0x6C98",
+          "old": "0x24A59104",
+          "new": "0x2402002B",
+          "note": "addiu v0, zero, <stage>"
+        },
+        {
+          "offset": "0x6C9C",
+          "old": "0x0C0029A8",
+          "new": "0xAC2241A8",
+          "note": "sw v0, g_StageNum"
+        },
+        {
+          "offset": "0x6CA0",
+          "old": "0x24040001",
+          "new": "0x1000000E",
+          "note": "b after -level_ token parser"
+        },
+        {
+          "offset": "0x6CA4",
+          "old": "0x1040000D",
+          "new": "0x00000000",
+          "note": "nop"
+        }
+      ]
+    },
+    {
+      "level": {
+        "index": 8,
+        "short": "cty",
+        "name": "City",
+        "stage_id": 27,
+        "ge_slot": "Bunker 2"
+      },
+      "rom": "artifacts\\generated\\stage_probes\\p08cty.z64",
+      "md5": "e0da1bddf8b11a9f0a1b3ad964aae9df",
+      "header_crc": "878BFA0B BF1A22DE",
+      "saves": [
+        "artifacts\\generated\\stage_probes\\p08cty.sav",
+        "artifacts\\generated\\stage_probes\\p08cty.eep"
+      ],
+      "patches": [
+        {
+          "offset": "0x6C94",
+          "old": "0x3C058003",
+          "new": "0x3C018002",
+          "note": "lui at, 0x8002"
+        },
+        {
+          "offset": "0x6C98",
+          "old": "0x24A59104",
+          "new": "0x2402001B",
+          "note": "addiu v0, zero, <stage>"
+        },
+        {
+          "offset": "0x6C9C",
+          "old": "0x0C0029A8",
+          "new": "0xAC2241A8",
+          "note": "sw v0, g_StageNum"
+        },
+        {
+          "offset": "0x6CA0",
+          "old": "0x24040001",
+          "new": "0x1000000E",
+          "note": "b after -level_ token parser"
+        },
+        {
+          "offset": "0x6CA4",
+          "old": "0x1040000D",
+          "new": "0x00000000",
+          "note": "nop"
+        }
+      ]
+    },
+    {
+      "level": {
+        "index": 9,
+        "short": "bot",
+        "name": "Boat",
+        "stage_id": 22,
+        "ge_slot": "Statue"
+      },
+      "rom": "artifacts\\generated\\stage_probes\\p09bot.z64",
+      "md5": "0fbed49290fcf3c05fbecf5cdb2213f9",
+      "header_crc": "878BFA0D AB164041",
+      "saves": [
+        "artifacts\\generated\\stage_probes\\p09bot.sav",
+        "artifacts\\generated\\stage_probes\\p09bot.eep"
+      ],
+      "patches": [
+        {
+          "offset": "0x6C94",
+          "old": "0x3C058003",
+          "new": "0x3C018002",
+          "note": "lui at, 0x8002"
+        },
+        {
+          "offset": "0x6C98",
+          "old": "0x24A59104",
+          "new": "0x24020016",
+          "note": "addiu v0, zero, <stage>"
+        },
+        {
+          "offset": "0x6C9C",
+          "old": "0x0C0029A8",
+          "new": "0xAC2241A8",
+          "note": "sw v0, g_StageNum"
+        },
+        {
+          "offset": "0x6CA0",
+          "old": "0x24040001",
+          "new": "0x1000000E",
+          "note": "b after -level_ token parser"
+        },
+        {
+          "offset": "0x6CA4",
+          "old": "0x1040000D",
+          "new": "0x00000000",
+          "note": "nop"
+        }
+      ]
+    },
+    {
+      "level": {
+        "index": 10,
+        "short": "brg",
+        "name": "Bridge",
+        "stage_id": 24,
+        "ge_slot": "Archives"
+      },
+      "rom": "artifacts\\generated\\stage_probes\\p10brg.z64",
+      "md5": "f50f79001745fbe70140b27e2e76cd5a",
+      "header_crc": "878BFA05 AF520780",
+      "saves": [
+        "artifacts\\generated\\stage_probes\\p10brg.sav",
+        "artifacts\\generated\\stage_probes\\p10brg.eep"
+      ],
+      "patches": [
+        {
+          "offset": "0x6C94",
+          "old": "0x3C058003",
+          "new": "0x3C018002",
+          "note": "lui at, 0x8002"
+        },
+        {
+          "offset": "0x6C98",
+          "old": "0x24A59104",
+          "new": "0x24020018",
+          "note": "addiu v0, zero, <stage>"
+        },
+        {
+          "offset": "0x6C9C",
+          "old": "0x0C0029A8",
+          "new": "0xAC2241A8",
+          "note": "sw v0, g_StageNum"
+        },
+        {
+          "offset": "0x6CA0",
+          "old": "0x24040001",
+          "new": "0x1000000E",
+          "note": "b after -level_ token parser"
+        },
+        {
+          "offset": "0x6CA4",
+          "old": "0x1040000D",
+          "new": "0x00000000",
+          "note": "nop"
+        }
+      ]
+    },
+    {
+      "level": {
+        "index": 11,
+        "short": "vol",
+        "name": "Volcano",
+        "stage_id": 29,
+        "ge_slot": "Streets"
+      },
+      "rom": "artifacts\\generated\\stage_probes\\p11vol.z64",
+      "md5": "6cc05843a293e219f5d539f4a1d0961b",
+      "header_crc": "878BFA0F 11065DB2",
+      "saves": [
+        "artifacts\\generated\\stage_probes\\p11vol.sav",
+        "artifacts\\generated\\stage_probes\\p11vol.eep"
+      ],
+      "patches": [
+        {
+          "offset": "0x6C94",
+          "old": "0x3C058003",
+          "new": "0x3C018002",
+          "note": "lui at, 0x8002"
+        },
+        {
+          "offset": "0x6C98",
+          "old": "0x24A59104",
+          "new": "0x2402001D",
+          "note": "addiu v0, zero, <stage>"
+        },
+        {
+          "offset": "0x6C9C",
+          "old": "0x0C0029A8",
+          "new": "0xAC2241A8",
+          "note": "sw v0, g_StageNum"
+        },
+        {
+          "offset": "0x6CA0",
+          "old": "0x24040001",
+          "new": "0x1000000E",
+          "note": "b after -level_ token parser"
+        },
+        {
+          "offset": "0x6CA4",
+          "old": "0x1040000D",
+          "new": "0x00000000",
+          "note": "nop"
+        }
+      ]
+    },
+    {
+      "level": {
+        "index": 12,
+        "short": "als",
+        "name": "Alaska",
+        "stage_id": 30,
+        "ge_slot": "Depot"
+      },
+      "rom": "artifacts\\generated\\stage_probes\\p12als.z64",
+      "md5": "aa6040f3adb90f40ba2ee6be414524a3",
+      "header_crc": "878BFA0D 36AC5BBF",
+      "saves": [
+        "artifacts\\generated\\stage_probes\\p12als.sav",
+        "artifacts\\generated\\stage_probes\\p12als.eep"
+      ],
+      "patches": [
+        {
+          "offset": "0x6C94",
+          "old": "0x3C058003",
+          "new": "0x3C018002",
+          "note": "lui at, 0x8002"
+        },
+        {
+          "offset": "0x6C98",
+          "old": "0x24A59104",
+          "new": "0x2402001E",
+          "note": "addiu v0, zero, <stage>"
+        },
+        {
+          "offset": "0x6C9C",
+          "old": "0x0C0029A8",
+          "new": "0xAC2241A8",
+          "note": "sw v0, g_StageNum"
+        },
+        {
+          "offset": "0x6CA0",
+          "old": "0x24040001",
+          "new": "0x1000000E",
+          "note": "b after -level_ token parser"
+        },
+        {
+          "offset": "0x6CA4",
+          "old": "0x1040000D",
+          "new": "0x00000000",
+          "note": "nop"
+        }
+      ]
+    },
+    {
+      "level": {
+        "index": 13,
+        "short": "end",
+        "name": "The End",
+        "stage_id": 25,
+        "ge_slot": "Train"
+      },
+      "rom": "artifacts\\generated\\stage_probes\\p13end.z64",
+      "md5": "b5c0deb49b7947dab50e54f04c133438",
+      "header_crc": "878BFA07 13CBEBB2",
+      "saves": [
+        "artifacts\\generated\\stage_probes\\p13end.sav",
+        "artifacts\\generated\\stage_probes\\p13end.eep"
+      ],
+      "patches": [
+        {
+          "offset": "0x6C94",
+          "old": "0x3C058003",
+          "new": "0x3C018002",
+          "note": "lui at, 0x8002"
+        },
+        {
+          "offset": "0x6C98",
+          "old": "0x24A59104",
+          "new": "0x24020019",
+          "note": "addiu v0, zero, <stage>"
+        },
+        {
+          "offset": "0x6C9C",
+          "old": "0x0C0029A8",
+          "new": "0xAC2241A8",
+          "note": "sw v0, g_StageNum"
+        },
+        {
+          "offset": "0x6CA0",
+          "old": "0x24040001",
+          "new": "0x1000000E",
+          "note": "b after -level_ token parser"
+        },
+        {
+          "offset": "0x6CA4",
+          "old": "0x1040000D",
+          "new": "0x00000000",
+          "note": "nop"
+        }
+      ]
+    }
+  ]
+}

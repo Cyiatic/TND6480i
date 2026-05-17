@@ -1,12 +1,12 @@
 # TND6480i Resume State
 
-Last updated: 2026-05-17 after restoring the `tlbpages58` 007-label candidate to SC64 with short upload filenames.
+Last updated: 2026-05-17 after adding direct-stage probe ROMs to reduce manual hardware testing.
 
 Scope reminder: keep work limited to this N64/TND6480i project and directly related tools/devices.
 
 ## Current Console State
 
-The SC64 is in direct-ROM mode with EEPROM 4k. The console currently has the `tlbpages58` 007-label candidate restored and loaded through short SC64 staging names:
+The normal fallback candidate remains the `tlbpages58` 007-label build with short SC64 staging names:
 
 ```text
 artifacts/generated/tnd58.z64
@@ -44,6 +44,46 @@ Hardware startup evidence: SC64 accepted the short-name direct ROM and EEPROM 4k
 Manual test focus for this restored ROM: confirm the generated save now loads, then use it as the fallback/control for Party/Credits/City, Hotel/Volcano, Tower/Boat, Labs, and Wreck/Bridge/Press/Alaska.
 
 Important operational note: keep SC64 upload filenames short and same-stem from now on, even when `--save` is explicit. Use `artifacts/generated/tnd58.z64` / `tnd58.sav` style staging names to avoid filename-length or save-association ambiguity.
+
+## Direct Stage Probe Workflow
+
+Manual full-romhack passes are no longer the preferred test method. `scripts/build_direct_stage_probe_roms.py` now builds one short probe ROM per level from the current fallback candidate:
+
+```text
+python scripts/build_direct_stage_probe_roms.py
+```
+
+Generated outputs:
+
+```text
+artifacts/generated/stage_probes/p00bzr.z64  Bazaar
+artifacts/generated/stage_probes/p01pty.z64  Party
+artifacts/generated/stage_probes/p02lab.z64  Labs
+artifacts/generated/stage_probes/p03prs.z64  Press
+artifacts/generated/stage_probes/p04hot.z64  Hotel
+artifacts/generated/stage_probes/p05prk.z64  Parkhaus
+artifacts/generated/stage_probes/p06wrk.z64  Wreck
+artifacts/generated/stage_probes/p07twr.z64  Tower
+artifacts/generated/stage_probes/p08cty.z64  City
+artifacts/generated/stage_probes/p09bot.z64  Boat
+artifacts/generated/stage_probes/p10brg.z64  Bridge
+artifacts/generated/stage_probes/p11vol.z64  Volcano
+artifacts/generated/stage_probes/p12als.z64  Alaska
+artifacts/generated/stage_probes/p13end.z64  The End
+```
+
+The builder patches only the early `bossMainloop` `-level_` debug-token parser (`0x6C94-0x6CA4`) to store a fixed `g_StageNum`, so this is a test harness rather than a public patch change.
+
+Evidence:
+
+```text
+reports/stage_probes/direct_stage_probes_latest.json
+reports/smoke/smoke_direct_p06wrk_20260517.json
+diagnostics/captures/videos/direct_p06wrk_hardware_20260517.mp4
+diagnostics/captures/contact_sheets/direct_p06wrk_hardware_20260517.jpg
+```
+
+Hardware result: `p06wrk` booted directly into Wreck on real N64 + SC64 after Kasa power-cycle. Gopher64 also reaches live Wreck rendering. `p01pty` reproduces the black/hard-hang path without menu input in Gopher64. This confirms the direct-stage harness is good enough to replace repeated manual dossier navigation for most troubleshooting.
 
 Rejected immediate diagnostic:
 

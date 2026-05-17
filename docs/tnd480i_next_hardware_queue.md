@@ -4,6 +4,16 @@ Date: 2026-05-08
 
 ## Current Hardware State
 
+- 2026-05-17 direct-stage probe harness, validated:
+  - Builder: `scripts/build_direct_stage_probe_roms.py`.
+  - Workflow doc: `docs/direct_stage_probe_workflow.md`.
+  - Report: `reports/stage_probes/direct_stage_probes_latest.json`.
+  - Generated short probes live under `artifacts/generated/stage_probes/` with same-stem saves. Example: `p06wrk.z64` / `p06wrk.sav`.
+  - The probe patch only replaces the early `bossMainloop` `-level_` token parser at `0x6C94-0x6CA4` with a fixed `g_StageNum`; it is a test harness, not a public gameplay patch.
+  - Emulator proof: `p06wrk` reaches live Wreck rendering in Gopher64 (`reports/smoke/smoke_direct_p06wrk_20260517.json`). `p01pty` reaches the Party black/hard-hang path without menu input.
+  - Hardware proof: `p06wrk` uploaded to SC64 and, after Kasa power-cycle, booted directly into Wreck on real N64. Evidence: `diagnostics/captures/videos/direct_p06wrk_hardware_20260517.mp4` and `diagnostics/captures/contact_sheets/direct_p06wrk_hardware_20260517.jpg`.
+  - New testing rule: use direct-stage probes for Party, City, The End, Tower, Boat, Hotel, and Volcano before asking for another manual full-romhack pass.
+
 - 2026-05-17 `tlbpages58` 007-label restore, active on hardware with short SC64 upload names:
   - SC64 reports direct-ROM mode with EEPROM 4k. The active console ROM was uploaded as:
     `artifacts/generated/tnd58.z64`.
