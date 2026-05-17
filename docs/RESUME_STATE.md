@@ -29,6 +29,22 @@ artifacts/analogue_test/TND8040.Z64   = tnd8040 control before GE camera/view co
 artifacts/analogue_test/TND58.Z64     = older tlbpages58 fallback/control
 ```
 
+User feedback: all four comparison ROMs are similarly slow. Treat that as confirmation that the shared 640-wide/480-high stage z/depth path is the likely cost center, not the later `t8040viewge` viewport/menu edits.
+
+Performance canaries built from current `t8040viewge`:
+
+```text
+artifacts/analogue_test/TNDZ360.Z64 = t8040viewge with 640-wide, 360-high tested stage z/depth heights
+artifacts/analogue_test/TNDZ640.Z64 = t8040viewge with 640-wide, stock-ish tested stage z/depth heights
+artifacts/analogue_test/TNDZSTK.Z64 = t8040viewge with stock tested stage z/depth footprint
+reports/tnd480i_t8040viewge_perf_zbuf_candidates_20260517.json
+scripts/build_t8040viewge_perf_zbuf_candidates.py
+```
+
+Test order: `TNDZ360` first because it keeps 640-wide rows while lowering the worst height cost. If speed improves but visuals regress, the next engineering target is a hybrid render path: 480i VI/output and UI/view constants without full 640x480 depth allocation everywhere.
+
+Local direct-stage Wreck smoke: `reports/smoke/smoke_t8040viewge_perf_zbuf_wreck_visual_20260517.json`. The `t8040viewge` control plus `t8040vz360`, `t8040vz640`, and `t8040vzstk` all survived about 34 seconds in Gopher64 and produced nonblack Wreck captures. This is only a boot/render sanity gate; use Analogue or real hardware for the actual speed judgment.
+
 Motion-cadence report:
 
 ```text

@@ -1,0 +1,242 @@
+[
+  {
+    "name": "t8040vz360",
+    "pack_stem": "TNDZ360",
+    "purpose": "Performance canary from current t8040viewge: keep 640-wide rows, but lower all tested stage z/depth heights to 360. This saves 153,600 bytes versus each 640x480 depth buffer while retaining wide rows for 480i geometry.",
+    "base_rom": "artifacts\\generated\\t8040viewge.z64",
+    "base_md5": "763f94bd1fb364e3d9eb8809bde4900b",
+    "out_rom": "artifacts\\generated\\t8040vz360.z64",
+    "out_md5": "75e8dc9538e2967d92c1697055e2517d",
+    "pack_rom": "artifacts\\analogue_test\\TNDZ360.Z64",
+    "header_crc": "84B7FA99 E50042D8",
+    "patches": [
+      {
+        "offset": "0x106ED4",
+        "field": "resolution_width",
+        "old": "0x240F0280",
+        "new": "0x240F0280",
+        "word_key": "width_640_t7",
+        "changed": false
+      },
+      {
+        "offset": "0x106EE4",
+        "field": "resolution_height",
+        "old": "0x241801E0",
+        "new": "0x24180168",
+        "word_key": "height_360_t8",
+        "changed": true
+      },
+      {
+        "offset": "0x106EF0",
+        "field": "lowres_width",
+        "old": "0x24190280",
+        "new": "0x24190280",
+        "word_key": "width_640_t9",
+        "changed": false
+      },
+      {
+        "offset": "0x106F10",
+        "field": "single_height",
+        "old": "0x240801E0",
+        "new": "0x24080168",
+        "word_key": "height_360_t0",
+        "changed": true
+      },
+      {
+        "offset": "0x106F24",
+        "field": "split_height",
+        "old": "0x240901E0",
+        "new": "0x24090168",
+        "word_key": "height_360_t1",
+        "changed": true
+      }
+    ],
+    "save_outputs": [
+      {
+        "path": "artifacts\\generated\\t8040vz360.sav",
+        "bytes": 512,
+        "md5": "79ed3fe6851b080ff21de69fd12f034d"
+      },
+      {
+        "path": "artifacts\\generated\\t8040vz360.eep",
+        "bytes": 2048,
+        "md5": "e47f5c07623838e875761a0493388e03"
+      },
+      {
+        "path": "artifacts\\analogue_test\\TNDZ360.SAV",
+        "bytes": 512,
+        "md5": "79ed3fe6851b080ff21de69fd12f034d"
+      },
+      {
+        "path": "artifacts\\analogue_test\\TNDZ360.EEP",
+        "bytes": 512,
+        "md5": "79ed3fe6851b080ff21de69fd12f034d"
+      }
+    ],
+    "bps_patch": "artifacts\\generated\\TND6480i_t8040vz360_from_baseline_tnd.bps",
+    "bps_patch_md5": "870b66f7d18165896e3d7381a784e0bd",
+    "bps_manifest": "reports\\tnd6480i_t8040vz360_bps_manifest.json",
+    "priority": 1,
+    "test_note": "Analogue/SC64 performance canary only. Compare Wreck/Printworks speed against TNDVIABL first, then spot-check Bazaar/Labs/Party/Hotel/Volcano for visual or boot regressions."
+  },
+  {
+    "name": "t8040vz640",
+    "pack_stem": "TNDZ640",
+    "purpose": "Performance canary from current t8040viewge: keep 640-wide rows, but restore stock-ish heights: resolution 330, single-player 240, split 120. This is cheaper than z360 and tests whether the current visual path actually needs full-height depth.",
+    "base_rom": "artifacts\\generated\\t8040viewge.z64",
+    "base_md5": "763f94bd1fb364e3d9eb8809bde4900b",
+    "out_rom": "artifacts\\generated\\t8040vz640.z64",
+    "out_md5": "62c4093545b811012e4fb0a3324080f3",
+    "pack_rom": "artifacts\\analogue_test\\TNDZ640.Z64",
+    "header_crc": "84B7FA99 E50042D8",
+    "patches": [
+      {
+        "offset": "0x106ED4",
+        "field": "resolution_width",
+        "old": "0x240F0280",
+        "new": "0x240F0280",
+        "word_key": "width_640_t7",
+        "changed": false
+      },
+      {
+        "offset": "0x106EE4",
+        "field": "resolution_height",
+        "old": "0x241801E0",
+        "new": "0x2418014A",
+        "word_key": "height_330_t8",
+        "changed": true
+      },
+      {
+        "offset": "0x106EF0",
+        "field": "lowres_width",
+        "old": "0x24190280",
+        "new": "0x24190280",
+        "word_key": "width_640_t9",
+        "changed": false
+      },
+      {
+        "offset": "0x106F10",
+        "field": "single_height",
+        "old": "0x240801E0",
+        "new": "0x240800F0",
+        "word_key": "height_240_t0",
+        "changed": true
+      },
+      {
+        "offset": "0x106F24",
+        "field": "split_height",
+        "old": "0x240901E0",
+        "new": "0x24090078",
+        "word_key": "height_120_t1",
+        "changed": true
+      }
+    ],
+    "save_outputs": [
+      {
+        "path": "artifacts\\generated\\t8040vz640.sav",
+        "bytes": 512,
+        "md5": "79ed3fe6851b080ff21de69fd12f034d"
+      },
+      {
+        "path": "artifacts\\generated\\t8040vz640.eep",
+        "bytes": 2048,
+        "md5": "e47f5c07623838e875761a0493388e03"
+      },
+      {
+        "path": "artifacts\\analogue_test\\TNDZ640.SAV",
+        "bytes": 512,
+        "md5": "79ed3fe6851b080ff21de69fd12f034d"
+      },
+      {
+        "path": "artifacts\\analogue_test\\TNDZ640.EEP",
+        "bytes": 512,
+        "md5": "79ed3fe6851b080ff21de69fd12f034d"
+      }
+    ],
+    "bps_patch": "artifacts\\generated\\TND6480i_t8040vz640_from_baseline_tnd.bps",
+    "bps_patch_md5": "3f9323986f9f5310112af4a66d40c755",
+    "bps_manifest": "reports\\tnd6480i_t8040vz640_bps_manifest.json",
+    "priority": 2,
+    "test_note": "Analogue/SC64 performance canary only. Compare Wreck/Printworks speed against TNDVIABL first, then spot-check Bazaar/Labs/Party/Hotel/Volcano for visual or boot regressions."
+  },
+  {
+    "name": "t8040vzstk",
+    "pack_stem": "TNDZSTK",
+    "purpose": "Performance canary from current t8040viewge: restore the stock z/depth allocation footprint, 440x330 for the resolution path and 320x240/120 for low-res paths. This is not expected to be visually final, but it should reveal whether the 640-wide depth rows are the remaining performance cost.",
+    "base_rom": "artifacts\\generated\\t8040viewge.z64",
+    "base_md5": "763f94bd1fb364e3d9eb8809bde4900b",
+    "out_rom": "artifacts\\generated\\t8040vzstk.z64",
+    "out_md5": "0d15716093a15ede3c202144df5c4fa1",
+    "pack_rom": "artifacts\\analogue_test\\TNDZSTK.Z64",
+    "header_crc": "84B7FA99 E50042D8",
+    "patches": [
+      {
+        "offset": "0x106ED4",
+        "field": "resolution_width",
+        "old": "0x240F0280",
+        "new": "0x240F01B8",
+        "word_key": "width_440_t7",
+        "changed": true
+      },
+      {
+        "offset": "0x106EE4",
+        "field": "resolution_height",
+        "old": "0x241801E0",
+        "new": "0x2418014A",
+        "word_key": "height_330_t8",
+        "changed": true
+      },
+      {
+        "offset": "0x106EF0",
+        "field": "lowres_width",
+        "old": "0x24190280",
+        "new": "0x24190140",
+        "word_key": "width_320_t9",
+        "changed": true
+      },
+      {
+        "offset": "0x106F10",
+        "field": "single_height",
+        "old": "0x240801E0",
+        "new": "0x240800F0",
+        "word_key": "height_240_t0",
+        "changed": true
+      },
+      {
+        "offset": "0x106F24",
+        "field": "split_height",
+        "old": "0x240901E0",
+        "new": "0x24090078",
+        "word_key": "height_120_t1",
+        "changed": true
+      }
+    ],
+    "save_outputs": [
+      {
+        "path": "artifacts\\generated\\t8040vzstk.sav",
+        "bytes": 512,
+        "md5": "79ed3fe6851b080ff21de69fd12f034d"
+      },
+      {
+        "path": "artifacts\\generated\\t8040vzstk.eep",
+        "bytes": 2048,
+        "md5": "e47f5c07623838e875761a0493388e03"
+      },
+      {
+        "path": "artifacts\\analogue_test\\TNDZSTK.SAV",
+        "bytes": 512,
+        "md5": "79ed3fe6851b080ff21de69fd12f034d"
+      },
+      {
+        "path": "artifacts\\analogue_test\\TNDZSTK.EEP",
+        "bytes": 512,
+        "md5": "79ed3fe6851b080ff21de69fd12f034d"
+      }
+    ],
+    "bps_patch": "artifacts\\generated\\TND6480i_t8040vzstk_from_baseline_tnd.bps",
+    "bps_patch_md5": "00bccb7960bd44681f3b71e83d2b1a64",
+    "bps_manifest": "reports\\tnd6480i_t8040vzstk_bps_manifest.json",
+    "priority": 3,
+    "test_note": "Analogue/SC64 performance canary only. Compare Wreck/Printworks speed against TNDVIABL first, then spot-check Bazaar/Labs/Party/Hotel/Volcano for visual or boot regressions."
+  }
+]

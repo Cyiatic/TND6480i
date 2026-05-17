@@ -1,0 +1,130 @@
+[
+  {
+    "rom": "artifacts\\generated\\stage_probes\\t8040viewge_all\\p06wrk.z64",
+    "elapsed": 36.09,
+    "main_window_seen": true,
+    "main_window": {
+      "hwnd": 1246336,
+      "title": "gopher64"
+    },
+    "key_taps": 0,
+    "scripted_key_events": 0,
+    "input_events_total": 0,
+    "input_events_consumed": 0,
+    "exited_before_timeout": false,
+    "exit_code_before_timeout": null,
+    "stdout_path": "reports\\smoke\\p06wrk.stdout.txt",
+    "stderr_path": "reports\\smoke\\p06wrk.stderr.txt",
+    "stdout_bytes": 0,
+    "stderr_bytes": 2666,
+    "marker_counts": {},
+    "stderr_tail": [
+      "[WARN]: Stalled compile (compute, c36377373cb79785): thread 0 - 23663.000 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (compute, 1cbd9189b0a23679): thread 0 - 29017.800 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (compute, 7e74068a497f23c2): thread 0 - 1098525.900 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (compute, 5949a1b688b6ff72): thread 0 - 71658.500 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (compute, 35f88fc5fb45ef46): thread 0 - 57589.200 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (compute, bd9293d0d50b3e8b): thread 0 - 73884.100 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, e3b76ed8c30a5cc1): thread 0 - 19024.500 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, b178544ed4416cd2): thread 0 - 10833.400 us (mode: sync, success: yes)."
+    ],
+    "captures": [],
+    "capture": null
+  },
+  {
+    "rom": "artifacts\\generated\\stage_probes\\t8040vz360\\p06wrk.z64",
+    "elapsed": 36.01,
+    "main_window_seen": true,
+    "main_window": {
+      "hwnd": 1311872,
+      "title": "gopher64"
+    },
+    "key_taps": 0,
+    "scripted_key_events": 0,
+    "input_events_total": 0,
+    "input_events_consumed": 0,
+    "exited_before_timeout": false,
+    "exit_code_before_timeout": null,
+    "stdout_path": "reports\\smoke\\p06wrk.stdout.txt",
+    "stderr_path": "reports\\smoke\\p06wrk.stderr.txt",
+    "stdout_bytes": 0,
+    "stderr_bytes": 2667,
+    "marker_counts": {},
+    "stderr_tail": [
+      "[WARN]: Stalled compile (compute, c36377373cb79785): thread 0 - 32782.300 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (compute, 1cbd9189b0a23679): thread 0 - 44782.900 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (compute, 7e74068a497f23c2): thread 0 - 1377756.800 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (compute, 5949a1b688b6ff72): thread 0 - 98481.400 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (compute, 35f88fc5fb45ef46): thread 0 - 77791.000 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (compute, bd9293d0d50b3e8b): thread 0 - 120782.300 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, e3b76ed8c30a5cc1): thread 0 - 27224.600 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, b178544ed4416cd2): thread 0 - 20565.200 us (mode: sync, success: yes)."
+    ],
+    "captures": [],
+    "capture": null
+  },
+  {
+    "rom": "artifacts\\generated\\stage_probes\\t8040vz640\\p06wrk.z64",
+    "elapsed": 36.0,
+    "main_window_seen": true,
+    "main_window": {
+      "hwnd": 1377408,
+      "title": "gopher64"
+    },
+    "key_taps": 0,
+    "scripted_key_events": 0,
+    "input_events_total": 0,
+    "input_events_consumed": 0,
+    "exited_before_timeout": false,
+    "exit_code_before_timeout": null,
+    "stdout_path": "reports\\smoke\\p06wrk.stdout.txt",
+    "stderr_path": "reports\\smoke\\p06wrk.stderr.txt",
+    "stdout_bytes": 0,
+    "stderr_bytes": 2772,
+    "marker_counts": {},
+    "stderr_tail": [
+      "[WARN]: Stalled compile (compute, 1cbd9189b0a23679): thread 0 - 38316.600 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (compute, 7e74068a497f23c2): thread 0 - 1313292.200 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (compute, 5949a1b688b6ff72): thread 0 - 96089.300 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (compute, 35f88fc5fb45ef46): thread 0 - 72437.200 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (compute, bd9293d0d50b3e8b): thread 0 - 114475.000 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, e3b76ed8c30a5cc1): thread 0 - 33195.500 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, 9d0b2ccf3e83a80b): thread 0 - 5007.300 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, b178544ed4416cd2): thread 0 - 16579.100 us (mode: sync, success: yes)."
+    ],
+    "captures": [],
+    "capture": null
+  },
+  {
+    "rom": "artifacts\\generated\\stage_probes\\t8040vzstk\\p06wrk.z64",
+    "elapsed": 36.02,
+    "main_window_seen": true,
+    "main_window": {
+      "hwnd": 1442944,
+      "title": "gopher64"
+    },
+    "key_taps": 0,
+    "scripted_key_events": 0,
+    "input_events_total": 0,
+    "input_events_consumed": 0,
+    "exited_before_timeout": false,
+    "exit_code_before_timeout": null,
+    "stdout_path": "reports\\smoke\\p06wrk.stdout.txt",
+    "stderr_path": "reports\\smoke\\p06wrk.stderr.txt",
+    "stdout_bytes": 0,
+    "stderr_bytes": 2772,
+    "marker_counts": {},
+    "stderr_tail": [
+      "[WARN]: Stalled compile (compute, 1cbd9189b0a23679): thread 0 - 41582.400 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (compute, 7e74068a497f23c2): thread 0 - 1299174.900 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (compute, 5949a1b688b6ff72): thread 0 - 97235.600 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (compute, 35f88fc5fb45ef46): thread 0 - 73549.300 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (compute, bd9293d0d50b3e8b): thread 0 - 108281.600 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, e3b76ed8c30a5cc1): thread 0 - 27245.300 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, 9d0b2ccf3e83a80b): thread 0 - 6017.900 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, b178544ed4416cd2): thread 0 - 21672.800 us (mode: sync, success: yes)."
+    ],
+    "captures": [],
+    "capture": null
+  }
+]

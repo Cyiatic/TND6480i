@@ -4,6 +4,21 @@ Date: 2026-05-08
 
 ## Current Hardware State
 
+- 2026-05-17 performance canaries after Analogue feedback:
+  - User tested `TNDVIABL`, `TNDCAMGE`, `TND8040`, and `TND58` and reported they are all similarly slow. That points at the shared 640-wide/480-high stage z/depth allocation path rather than `t8040viewge`-specific viewport edits.
+  - New short-name Analogue/SC64 pack entries:
+    - `artifacts/analogue_test/TNDZ360.Z64`: current `t8040viewge` with 640-wide depth rows but 360-high tested stage z/depth heights. Test first.
+    - `artifacts/analogue_test/TNDZ640.Z64`: current `t8040viewge` with 640-wide depth rows and stock-ish tested heights.
+    - `artifacts/analogue_test/TNDZSTK.Z64`: current `t8040viewge` with stock tested z/depth footprint.
+  - Matching `.SAV` and `.EEP` files were staged with the same short stems.
+  - Builder/report:
+    `scripts/build_t8040viewge_perf_zbuf_candidates.py`,
+    `reports/tnd480i_t8040viewge_perf_zbuf_candidates_20260517.json`.
+  - Local Gopher64 direct-stage Wreck smoke:
+    `reports/smoke/smoke_t8040viewge_perf_zbuf_wreck_visual_20260517.json`.
+    The `t8040viewge` control plus `t8040vz360`, `t8040vz640`, and `t8040vzstk` all survived about 34 seconds and produced nonblack captures. This is a sanity gate only; use Analogue/real hardware to judge speed.
+  - Purpose: these are performance probes, not final visual candidates. Compare Wreck/Printworks speed to `TNDVIABL`, then spot-check Bazaar, Labs, Party, Hotel, and Volcano for regressions. A faster but visually regressed result still proves the current bottleneck.
+
 - 2026-05-17 `t8040vmenuscales` rejected front/menu-scale candidate:
   - Full ROM:
     `artifacts/generated/t8040vmenuscales.z64`.

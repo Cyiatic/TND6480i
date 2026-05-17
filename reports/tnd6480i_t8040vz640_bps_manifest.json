@@ -1,0 +1,124 @@
+{
+  "source": "artifacts\\roms\\BASELINE_TND64_Expanded_direct_from_stock.z64",
+  "target": "artifacts\\generated\\t8040vz640.z64",
+  "source_md5": "1ee22dd1d70443f5e4766d4238756949",
+  "target_md5": "62c4093545b811012e4fb0a3324080f3",
+  "source_sha256": "ba5e040de292d7d192d0f88f12dcf4cbde7eb4d643926830d7d77557bf6df502",
+  "target_sha256": "330e60b96c1552b47999b9d188cd37714cf849f076ac455a05674b5aac761370",
+  "note": "Performance canary from current t8040viewge: keep 640-wide rows, but restore stock-ish heights: resolution 330, single-player 240, split 120. This is cheaper than z360 and tests whether the current visual path actually needs full-height depth.",
+  "patch": "artifacts\\generated\\TND6480i_t8040vz640_from_baseline_tnd.bps",
+  "patch_bytes": 179301,
+  "patch_md5": "3f9323986f9f5310112af4a66d40c755",
+  "patch_sha256": "c359deee538197d9a661771720f4b7a95a6fd7d8358012a0dd7025cca38d0285",
+  "source_bytes": 16777216,
+  "target_bytes": 16885376,
+  "source_crc32": "321C1845",
+  "target_crc32": "1E2A0B1A",
+  "patch_crc32": "60E27971",
+  "verified": true,
+  "action_count": 404,
+  "source_read_bytes": 16707323,
+  "target_read_bytes": 178053,
+  "actions_preview": [
+    {
+      "type": "SourceRead",
+      "offset": 0,
+      "length": 16
+    },
+    {
+      "type": "TargetRead",
+      "offset": 16,
+      "length": 8
+    },
+    {
+      "type": "SourceRead",
+      "offset": 24,
+      "length": 9731
+    },
+    {
+      "type": "TargetRead",
+      "offset": 9755,
+      "length": 1
+    },
+    {
+      "type": "SourceRead",
+      "offset": 9756,
+      "length": 5744
+    },
+    {
+      "type": "TargetRead",
+      "offset": 15500,
+      "length": 12
+    },
+    {
+      "type": "SourceRead",
+      "offset": 15512,
+      "length": 153
+    },
+    {
+      "type": "TargetRead",
+      "offset": 15665,
+      "length": 59
+    },
+    {
+      "type": "SourceRead",
+      "offset": 15724,
+      "length": 1715
+    },
+    {
+      "type": "TargetRead",
+      "offset": 17439,
+      "length": 1
+    },
+    {
+      "type": "SourceRead",
+      "offset": 17440,
+      "length": 661
+    },
+    {
+      "type": "TargetRead",
+      "offset": 18101,
+      "length": 59
+    },
+    {
+      "type": "SourceRead",
+      "offset": 18160,
+      "length": 7831
+    },
+    {
+      "type": "TargetRead",
+      "offset": 25991,
+      "length": 49
+    },
+    {
+      "type": "SourceRead",
+      "offset": 26040,
+      "length": 40742
+    },
+    {
+      "type": "TargetRead",
+      "offset": 66782,
+      "length": 1
+    },
+    {
+      "type": "SourceRead",
+      "offset": 66783,
+      "length": 38041
+    },
+    {
+      "type": "TargetRead",
+      "offset": 104824,
+      "length": 16
+    },
+    {
+      "type": "SourceRead",
+      "offset": 104840,
+      "length": 44
+    },
+    {
+      "type": "TargetRead",
+      "offset": 104884,
+      "length": 3
+    }
+  ]
+}

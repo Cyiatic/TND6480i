@@ -8,3 +8,11 @@ Use these as short-name ROM/save pairs for Analogue or flashcart comparison.
 - `TND58.Z64` / `TND58.SAV`: older `tlbpages58` fallback/control. Useful for performance comparison, but expected to have older level-load/rendering issues.
 
 If all four are similarly slow in Wreck/Printworks, the shared 640-wide/480-high render/z-buffer path is the likely performance bottleneck. If only `TNDVIABL` is much slower, focus on the later viewport constants.
+
+The `TNDZ*` ROMs are performance canaries built from current `t8040viewge`, not final visual candidates:
+
+- `TNDZ360.Z64` / `TNDZ360.SAV`: keeps 640-wide depth rows but lowers tested stage depth heights to 360. Test this first.
+- `TNDZ640.Z64` / `TNDZ640.SAV`: keeps 640-wide rows but restores stock-ish heights: resolution 330, single-player 240, split 120.
+- `TNDZSTK.Z64` / `TNDZSTK.SAV`: restores the stock z/depth allocation footprint: 440x330 and 320x240/120.
+
+Recommended quick pass: compare Wreck or Printworks speed against `TNDVIABL`, then spot-check Bazaar, Labs, Party, Hotel, and Volcano for obvious visual or boot regressions. A faster but visually regressed canary is still useful because it proves the bottleneck.
