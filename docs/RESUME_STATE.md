@@ -6,6 +6,61 @@ Scope reminder: keep work limited to this N64/TND6480i project and directly rela
 
 ## Current Console State
 
+Promoted candidate for the next manual full-romhack test:
+
+```text
+artifacts/generated/tnd8040.z64
+content source: artifacts/generated/t58fb8040.z64
+MD5: 4f8798f2ec6dbf94e01688a1d4352133
+N64 CRC: 84B7F80D 84B524C7
+```
+
+Paired save:
+
+```text
+artifacts/generated/tnd8040.sav
+MD5: 79ed3fe6851b080ff21de69fd12f034d
+```
+
+Purpose: keep the `tlbpages58` 007-label branch, but move the low framebuffer base/clear from `0x80300000` to `0x80400000`. This is the first candidate that changed the bad level class in the right direction: direct-stage hardware probes show Party, City, The End/end-credits, Hotel, Volcano, Tower, and Boat reaching rendered scenes instead of the earlier black/prism/freeze classes.
+
+Evidence:
+
+```text
+scripts/build_framebuffer_base_probe_candidates.py
+reports/tnd480i_framebuffer_base_probe_candidates_20260517.json
+reports/stage_probes/direct_stage_probes_t58fb8040.json
+reports/stage_probes/direct_stage_followup_hardware_20260517.json
+reports/stage_probes/direct_stage_t8040_camera_followup_20260517.json
+reports/tnd6480i_tnd8040_fb8040_bps_manifest.json
+diagnostics/captures/contact_sheets/t58fb8040_p01pty_direct_20260517_postcycle.jpg
+diagnostics/captures/contact_sheets/t58fb8040_p13end_direct_20260517_postcycle.jpg
+diagnostics/captures/contact_sheets/t58fb8040_p08cty_direct_20260517_postcycle.jpg
+diagnostics/captures/contact_sheets/t58fb8040_p04hot_direct_20260517_postcycle.jpg
+diagnostics/captures/contact_sheets/t58fb8040_p11vol_direct_20260517_postcycle.jpg
+diagnostics/captures/contact_sheets/tnd8040_full_startup_20260517_postcycle.jpg
+```
+
+Verified BPS patch:
+
+```text
+artifacts/generated/TND6480i_tnd8040_fb8040_from_baseline_tnd.bps
+MD5: 1d5e553072255d63866644df9dffbaf9
+```
+
+Important correction: `p01pty` is Party / CMGN Launch Party. `p13end` is The End / end-credits / City of Hamburg. Do not describe `p13end` white-rectangle or black-screen behavior as Party.
+
+Latest narrow misses on top of `tnd8040`:
+
+- `t8040nr` NOPs `0xBBB8C` (`jal viSetFrameBuf2(resolution)`) but Party and The End still keep the same short top intro/title rectangle while booting into live scenes.
+- `t8040camstk` restores only cameraBufferToggle viewport width/heights to stock TND, but Party still keeps the same short top intro/title rectangle.
+
+Current interpretation: keep `tnd8040` as the playability candidate. The remaining short intro/title rectangle is likely in the title/intro overlay, front/cutscene blitter, or display-copy path rather than the simple cameraBufferToggle width/height constants or `viSetFrameBuf2(resolution)` redirect alone.
+
+Next manual test focus for `tnd8040`: verify save-file flow and mission select, then test Party, City, The End/end-credits, Hotel, Volcano, Tower, Boat, Labs encoder pickup/door, and known-good controls. Expect front/gunbarrel/menu polish and short intro rectangles to remain.
+
+## Fallback Console State
+
 The normal fallback candidate remains the `tlbpages58` 007-label build with short SC64 staging names:
 
 ```text

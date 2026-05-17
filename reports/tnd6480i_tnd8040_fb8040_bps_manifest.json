@@ -1,0 +1,124 @@
+{
+  "source": "artifacts\\roms\\BASELINE_TND64_Expanded_direct_from_stock.z64",
+  "target": "artifacts\\generated\\tnd8040.z64",
+  "source_md5": "1ee22dd1d70443f5e4766d4238756949",
+  "target_md5": "4f8798f2ec6dbf94e01688a1d4352133",
+  "source_sha256": "ba5e040de292d7d192d0f88f12dcf4cbde7eb4d643926830d7d77557bf6df502",
+  "target_sha256": "3c5418166c11427967e5958de9d47959e5ff1477aead93193d334f20632fdb1c",
+  "note": "tnd8040 fb0=0x80400000 candidate; based on tnd58/tlbpages58 007-label branch; direct-stage hardware fixes Party, End Credits, City, Hotel/Volcano prism class in sampled captures.",
+  "patch": "artifacts\\generated\\TND6480i_tnd8040_fb8040_from_baseline_tnd.bps",
+  "patch_bytes": 179225,
+  "patch_md5": "1d5e553072255d63866644df9dffbaf9",
+  "patch_sha256": "637748a1a6fcd604c341d7db44674137a37535bd67a15182dca58d05bd86087f",
+  "source_bytes": 16777216,
+  "target_bytes": 16885376,
+  "source_crc32": "321C1845",
+  "target_crc32": "58DE9C72",
+  "patch_crc32": "9DB446CC",
+  "verified": true,
+  "action_count": 400,
+  "source_read_bytes": 16707325,
+  "target_read_bytes": 178051,
+  "actions_preview": [
+    {
+      "type": "SourceRead",
+      "offset": 0,
+      "length": 16
+    },
+    {
+      "type": "TargetRead",
+      "offset": 16,
+      "length": 8
+    },
+    {
+      "type": "SourceRead",
+      "offset": 24,
+      "length": 9731
+    },
+    {
+      "type": "TargetRead",
+      "offset": 9755,
+      "length": 1
+    },
+    {
+      "type": "SourceRead",
+      "offset": 9756,
+      "length": 5744
+    },
+    {
+      "type": "TargetRead",
+      "offset": 15500,
+      "length": 12
+    },
+    {
+      "type": "SourceRead",
+      "offset": 15512,
+      "length": 153
+    },
+    {
+      "type": "TargetRead",
+      "offset": 15665,
+      "length": 59
+    },
+    {
+      "type": "SourceRead",
+      "offset": 15724,
+      "length": 1715
+    },
+    {
+      "type": "TargetRead",
+      "offset": 17439,
+      "length": 1
+    },
+    {
+      "type": "SourceRead",
+      "offset": 17440,
+      "length": 661
+    },
+    {
+      "type": "TargetRead",
+      "offset": 18101,
+      "length": 59
+    },
+    {
+      "type": "SourceRead",
+      "offset": 18160,
+      "length": 7831
+    },
+    {
+      "type": "TargetRead",
+      "offset": 25991,
+      "length": 49
+    },
+    {
+      "type": "SourceRead",
+      "offset": 26040,
+      "length": 40742
+    },
+    {
+      "type": "TargetRead",
+      "offset": 66782,
+      "length": 1
+    },
+    {
+      "type": "SourceRead",
+      "offset": 66783,
+      "length": 38041
+    },
+    {
+      "type": "TargetRead",
+      "offset": 104824,
+      "length": 16
+    },
+    {
+      "type": "SourceRead",
+      "offset": 104840,
+      "length": 44
+    },
+    {
+      "type": "TargetRead",
+      "offset": 104884,
+      "length": 3
+    }
+  ]
+}

@@ -1,0 +1,622 @@
+[
+  {
+    "name": "t58rdef",
+    "purpose": "Restore only normal non-camera single-player viewport dimensions to stock TND.",
+    "base_rom": "artifacts\\generated\\tnd58.z64",
+    "base_md5": "25cd6b104b4cbdf3b2cdf4e1d02354da",
+    "stock_source_rom": "artifacts\\roms\\BASELINE_TND64_Expanded_direct_from_stock.z64",
+    "out_rom": "artifacts\\generated\\t58rdef.z64",
+    "out_md5": "344f30aefaf658833c40d91b5e022213",
+    "header_crc": "84B7F10D 470981F2",
+    "patches": [
+      {
+        "group": "default_view",
+        "offset": "0xBB7C0",
+        "old": "0x24020280",
+        "new": "0x24020140",
+        "note": "non-camera widescreen viewport width",
+        "changed": true
+      },
+      {
+        "group": "default_view",
+        "offset": "0xBB7D4",
+        "old": "0x24020280",
+        "new": "0x24020140",
+        "note": "non-camera default viewport width branch delay",
+        "changed": true
+      },
+      {
+        "group": "default_view",
+        "offset": "0xBB7DC",
+        "old": "0x24020280",
+        "new": "0x24020140",
+        "note": "non-camera cinema viewport width",
+        "changed": true
+      },
+      {
+        "group": "default_view",
+        "offset": "0xBB7E0",
+        "old": "0x24020280",
+        "new": "0x24020140",
+        "note": "non-camera fallback viewport width",
+        "changed": true
+      },
+      {
+        "group": "default_view",
+        "offset": "0xBB91C",
+        "old": "0x240201CC",
+        "new": "0x240200DC",
+        "note": "non-camera default viewport height",
+        "changed": true
+      },
+      {
+        "group": "default_view",
+        "offset": "0xBB954",
+        "old": "0x240201CC",
+        "new": "0x240200DC",
+        "note": "non-camera fallback viewport height",
+        "changed": true
+      },
+      {
+        "group": "default_view",
+        "offset": "0xBBA80",
+        "old": "0x2402000A",
+        "new": "0x2402000A",
+        "note": "non-camera default viewport top",
+        "changed": false
+      }
+    ],
+    "save_outputs": [
+      {
+        "path": "artifacts\\generated\\t58rdef.sav",
+        "bytes": 512,
+        "md5": "79ed3fe6851b080ff21de69fd12f034d"
+      },
+      {
+        "path": "artifacts\\generated\\t58rdef.eep",
+        "bytes": 2048,
+        "md5": "e47f5c07623838e875761a0493388e03"
+      }
+    ],
+    "direct_probe_focus": [
+      "Party",
+      "City",
+      "The End",
+      "Hotel",
+      "Volcano"
+    ]
+  },
+  {
+    "name": "t58rdefcam",
+    "purpose": "Restore normal plus camera viewport dimensions, while keeping global 640x480 helpers.",
+    "base_rom": "artifacts\\generated\\tnd58.z64",
+    "base_md5": "25cd6b104b4cbdf3b2cdf4e1d02354da",
+    "stock_source_rom": "artifacts\\roms\\BASELINE_TND64_Expanded_direct_from_stock.z64",
+    "out_rom": "artifacts\\generated\\t58rdefcam.z64",
+    "out_md5": "6e7f86d42a5ad9585c3874128acc35f5",
+    "header_crc": "84B7EE21 BF6CC967",
+    "patches": [
+      {
+        "group": "default_view",
+        "offset": "0xBB7C0",
+        "old": "0x24020280",
+        "new": "0x24020140",
+        "note": "non-camera widescreen viewport width",
+        "changed": true
+      },
+      {
+        "group": "default_view",
+        "offset": "0xBB7D4",
+        "old": "0x24020280",
+        "new": "0x24020140",
+        "note": "non-camera default viewport width branch delay",
+        "changed": true
+      },
+      {
+        "group": "default_view",
+        "offset": "0xBB7DC",
+        "old": "0x24020280",
+        "new": "0x24020140",
+        "note": "non-camera cinema viewport width",
+        "changed": true
+      },
+      {
+        "group": "default_view",
+        "offset": "0xBB7E0",
+        "old": "0x24020280",
+        "new": "0x24020140",
+        "note": "non-camera fallback viewport width",
+        "changed": true
+      },
+      {
+        "group": "default_view",
+        "offset": "0xBB91C",
+        "old": "0x240201CC",
+        "new": "0x240200DC",
+        "note": "non-camera default viewport height",
+        "changed": true
+      },
+      {
+        "group": "default_view",
+        "offset": "0xBB954",
+        "old": "0x240201CC",
+        "new": "0x240200DC",
+        "note": "non-camera fallback viewport height",
+        "changed": true
+      },
+      {
+        "group": "default_view",
+        "offset": "0xBBA80",
+        "old": "0x2402000A",
+        "new": "0x2402000A",
+        "note": "non-camera default viewport top",
+        "changed": false
+      },
+      {
+        "group": "camera_view",
+        "offset": "0xBB7A4",
+        "old": "0x24020280",
+        "new": "0x240201B8",
+        "note": "cameraBufferToggle viewport width",
+        "changed": true
+      },
+      {
+        "group": "camera_view",
+        "offset": "0xBB89C",
+        "old": "0x240201E0",
+        "new": "0x240200F8",
+        "note": "camera widescreen viewport height",
+        "changed": true
+      },
+      {
+        "group": "camera_view",
+        "offset": "0xBB8B8",
+        "old": "0x240201E0",
+        "new": "0x240200BE",
+        "note": "camera cinema viewport height",
+        "changed": true
+      },
+      {
+        "group": "camera_view",
+        "offset": "0xBB8C0",
+        "old": "0x240201E0",
+        "new": "0x24020130",
+        "note": "camera fullscreen viewport height",
+        "changed": true
+      }
+    ],
+    "save_outputs": [
+      {
+        "path": "artifacts\\generated\\t58rdefcam.sav",
+        "bytes": 512,
+        "md5": "79ed3fe6851b080ff21de69fd12f034d"
+      },
+      {
+        "path": "artifacts\\generated\\t58rdefcam.eep",
+        "bytes": 2048,
+        "md5": "e47f5c07623838e875761a0493388e03"
+      }
+    ],
+    "direct_probe_focus": [
+      "Party",
+      "City",
+      "The End",
+      "Hotel",
+      "Volcano"
+    ]
+  },
+  {
+    "name": "t58rvw",
+    "purpose": "Restore all viewport return dimensions except global width/height helpers.",
+    "base_rom": "artifacts\\generated\\tnd58.z64",
+    "base_md5": "25cd6b104b4cbdf3b2cdf4e1d02354da",
+    "stock_source_rom": "artifacts\\roms\\BASELINE_TND64_Expanded_direct_from_stock.z64",
+    "out_rom": "artifacts\\generated\\t58rvw.z64",
+    "out_md5": "6e7f86d42a5ad9585c3874128acc35f5",
+    "header_crc": "84B7EE21 BF6CC967",
+    "patches": [
+      {
+        "group": "default_view",
+        "offset": "0xBB7C0",
+        "old": "0x24020280",
+        "new": "0x24020140",
+        "note": "non-camera widescreen viewport width",
+        "changed": true
+      },
+      {
+        "group": "default_view",
+        "offset": "0xBB7D4",
+        "old": "0x24020280",
+        "new": "0x24020140",
+        "note": "non-camera default viewport width branch delay",
+        "changed": true
+      },
+      {
+        "group": "default_view",
+        "offset": "0xBB7DC",
+        "old": "0x24020280",
+        "new": "0x24020140",
+        "note": "non-camera cinema viewport width",
+        "changed": true
+      },
+      {
+        "group": "default_view",
+        "offset": "0xBB7E0",
+        "old": "0x24020280",
+        "new": "0x24020140",
+        "note": "non-camera fallback viewport width",
+        "changed": true
+      },
+      {
+        "group": "default_view",
+        "offset": "0xBB91C",
+        "old": "0x240201CC",
+        "new": "0x240200DC",
+        "note": "non-camera default viewport height",
+        "changed": true
+      },
+      {
+        "group": "default_view",
+        "offset": "0xBB954",
+        "old": "0x240201CC",
+        "new": "0x240200DC",
+        "note": "non-camera fallback viewport height",
+        "changed": true
+      },
+      {
+        "group": "default_view",
+        "offset": "0xBBA80",
+        "old": "0x2402000A",
+        "new": "0x2402000A",
+        "note": "non-camera default viewport top",
+        "changed": false
+      },
+      {
+        "group": "camera_view",
+        "offset": "0xBB7A4",
+        "old": "0x24020280",
+        "new": "0x240201B8",
+        "note": "cameraBufferToggle viewport width",
+        "changed": true
+      },
+      {
+        "group": "camera_view",
+        "offset": "0xBB89C",
+        "old": "0x240201E0",
+        "new": "0x240200F8",
+        "note": "camera widescreen viewport height",
+        "changed": true
+      },
+      {
+        "group": "camera_view",
+        "offset": "0xBB8B8",
+        "old": "0x240201E0",
+        "new": "0x240200BE",
+        "note": "camera cinema viewport height",
+        "changed": true
+      },
+      {
+        "group": "camera_view",
+        "offset": "0xBB8C0",
+        "old": "0x240201E0",
+        "new": "0x24020130",
+        "note": "camera fullscreen viewport height",
+        "changed": true
+      },
+      {
+        "group": "other_view",
+        "offset": "0xBB790",
+        "old": "0x2402009F",
+        "new": "0x2402009F",
+        "note": "4-player viewport width",
+        "changed": false
+      },
+      {
+        "group": "other_view",
+        "offset": "0xBB83C",
+        "old": "0x240200A1",
+        "new": "0x240200A1",
+        "note": "4-player viewport ULX",
+        "changed": false
+      },
+      {
+        "group": "other_view",
+        "offset": "0xBB874",
+        "old": "0x2402006D",
+        "new": "0x2402006D",
+        "note": "4-player viewport height",
+        "changed": false
+      },
+      {
+        "group": "other_view",
+        "offset": "0xBB8FC",
+        "old": "0x244200B4",
+        "new": "0x244200B4",
+        "note": "widescreen animated viewport height offset",
+        "changed": false
+      },
+      {
+        "group": "other_view",
+        "offset": "0xBB944",
+        "old": "0x24420088",
+        "new": "0x24420088",
+        "note": "cinema animated viewport height offset",
+        "changed": false
+      },
+      {
+        "group": "other_view",
+        "offset": "0xBB9A0",
+        "old": "0x24020079",
+        "new": "0x24020079",
+        "note": "2-player viewport ULY",
+        "changed": false
+      },
+      {
+        "group": "other_view",
+        "offset": "0xBB9D8",
+        "old": "0x24020079",
+        "new": "0x24020079",
+        "note": "4-player viewport ULY",
+        "changed": false
+      },
+      {
+        "group": "other_view",
+        "offset": "0xBBA60",
+        "old": "0x2442001E",
+        "new": "0x2442001E",
+        "note": "widescreen animated viewport ULY offset",
+        "changed": false
+      },
+      {
+        "group": "other_view",
+        "offset": "0xBBAA8",
+        "old": "0x24420034",
+        "new": "0x24420034",
+        "note": "cinema animated viewport ULY offset",
+        "changed": false
+      }
+    ],
+    "save_outputs": [
+      {
+        "path": "artifacts\\generated\\t58rvw.sav",
+        "bytes": 512,
+        "md5": "79ed3fe6851b080ff21de69fd12f034d"
+      },
+      {
+        "path": "artifacts\\generated\\t58rvw.eep",
+        "bytes": 2048,
+        "md5": "e47f5c07623838e875761a0493388e03"
+      }
+    ],
+    "direct_probe_focus": [
+      "Party",
+      "City",
+      "The End",
+      "Hotel",
+      "Volcano"
+    ]
+  },
+  {
+    "name": "t58rvwxy",
+    "purpose": "Restore the whole gameplay viewport/helper family to stock TND as a playability control.",
+    "base_rom": "artifacts\\generated\\tnd58.z64",
+    "base_md5": "25cd6b104b4cbdf3b2cdf4e1d02354da",
+    "stock_source_rom": "artifacts\\roms\\BASELINE_TND64_Expanded_direct_from_stock.z64",
+    "out_rom": "artifacts\\generated\\t58rvwxy.z64",
+    "out_md5": "d131c4e4405b512c95bcc0c5cd1c0c7c",
+    "header_crc": "84B7ECF1 E68546DF",
+    "patches": [
+      {
+        "group": "default_view",
+        "offset": "0xBB7C0",
+        "old": "0x24020280",
+        "new": "0x24020140",
+        "note": "non-camera widescreen viewport width",
+        "changed": true
+      },
+      {
+        "group": "default_view",
+        "offset": "0xBB7D4",
+        "old": "0x24020280",
+        "new": "0x24020140",
+        "note": "non-camera default viewport width branch delay",
+        "changed": true
+      },
+      {
+        "group": "default_view",
+        "offset": "0xBB7DC",
+        "old": "0x24020280",
+        "new": "0x24020140",
+        "note": "non-camera cinema viewport width",
+        "changed": true
+      },
+      {
+        "group": "default_view",
+        "offset": "0xBB7E0",
+        "old": "0x24020280",
+        "new": "0x24020140",
+        "note": "non-camera fallback viewport width",
+        "changed": true
+      },
+      {
+        "group": "default_view",
+        "offset": "0xBB91C",
+        "old": "0x240201CC",
+        "new": "0x240200DC",
+        "note": "non-camera default viewport height",
+        "changed": true
+      },
+      {
+        "group": "default_view",
+        "offset": "0xBB954",
+        "old": "0x240201CC",
+        "new": "0x240200DC",
+        "note": "non-camera fallback viewport height",
+        "changed": true
+      },
+      {
+        "group": "default_view",
+        "offset": "0xBBA80",
+        "old": "0x2402000A",
+        "new": "0x2402000A",
+        "note": "non-camera default viewport top",
+        "changed": false
+      },
+      {
+        "group": "camera_view",
+        "offset": "0xBB7A4",
+        "old": "0x24020280",
+        "new": "0x240201B8",
+        "note": "cameraBufferToggle viewport width",
+        "changed": true
+      },
+      {
+        "group": "camera_view",
+        "offset": "0xBB89C",
+        "old": "0x240201E0",
+        "new": "0x240200F8",
+        "note": "camera widescreen viewport height",
+        "changed": true
+      },
+      {
+        "group": "camera_view",
+        "offset": "0xBB8B8",
+        "old": "0x240201E0",
+        "new": "0x240200BE",
+        "note": "camera cinema viewport height",
+        "changed": true
+      },
+      {
+        "group": "camera_view",
+        "offset": "0xBB8C0",
+        "old": "0x240201E0",
+        "new": "0x24020130",
+        "note": "camera fullscreen viewport height",
+        "changed": true
+      },
+      {
+        "group": "other_view",
+        "offset": "0xBB790",
+        "old": "0x2402009F",
+        "new": "0x2402009F",
+        "note": "4-player viewport width",
+        "changed": false
+      },
+      {
+        "group": "other_view",
+        "offset": "0xBB83C",
+        "old": "0x240200A1",
+        "new": "0x240200A1",
+        "note": "4-player viewport ULX",
+        "changed": false
+      },
+      {
+        "group": "other_view",
+        "offset": "0xBB874",
+        "old": "0x2402006D",
+        "new": "0x2402006D",
+        "note": "4-player viewport height",
+        "changed": false
+      },
+      {
+        "group": "other_view",
+        "offset": "0xBB8FC",
+        "old": "0x244200B4",
+        "new": "0x244200B4",
+        "note": "widescreen animated viewport height offset",
+        "changed": false
+      },
+      {
+        "group": "other_view",
+        "offset": "0xBB944",
+        "old": "0x24420088",
+        "new": "0x24420088",
+        "note": "cinema animated viewport height offset",
+        "changed": false
+      },
+      {
+        "group": "other_view",
+        "offset": "0xBB9A0",
+        "old": "0x24020079",
+        "new": "0x24020079",
+        "note": "2-player viewport ULY",
+        "changed": false
+      },
+      {
+        "group": "other_view",
+        "offset": "0xBB9D8",
+        "old": "0x24020079",
+        "new": "0x24020079",
+        "note": "4-player viewport ULY",
+        "changed": false
+      },
+      {
+        "group": "other_view",
+        "offset": "0xBBA60",
+        "old": "0x2442001E",
+        "new": "0x2442001E",
+        "note": "widescreen animated viewport ULY offset",
+        "changed": false
+      },
+      {
+        "group": "other_view",
+        "offset": "0xBBAA8",
+        "old": "0x24420034",
+        "new": "0x24420034",
+        "note": "cinema animated viewport ULY offset",
+        "changed": false
+      },
+      {
+        "group": "global_xy",
+        "offset": "0xBB730",
+        "old": "0x24020280",
+        "new": "0x24020140",
+        "note": "getWidth320or440 low-res return",
+        "changed": true
+      },
+      {
+        "group": "global_xy",
+        "offset": "0xBB740",
+        "old": "0x24020280",
+        "new": "0x240201B8",
+        "note": "getWidth320or440 hi-res return",
+        "changed": true
+      },
+      {
+        "group": "global_xy",
+        "offset": "0xBB754",
+        "old": "0x240201E0",
+        "new": "0x240200F0",
+        "note": "getHeight330or240 low-res return",
+        "changed": true
+      },
+      {
+        "group": "global_xy",
+        "offset": "0xBB764",
+        "old": "0x240201E0",
+        "new": "0x2402014A",
+        "note": "getHeight330or240 hi-res return",
+        "changed": true
+      }
+    ],
+    "save_outputs": [
+      {
+        "path": "artifacts\\generated\\t58rvwxy.sav",
+        "bytes": 512,
+        "md5": "79ed3fe6851b080ff21de69fd12f034d"
+      },
+      {
+        "path": "artifacts\\generated\\t58rvwxy.eep",
+        "bytes": 2048,
+        "md5": "e47f5c07623838e875761a0493388e03"
+      }
+    ],
+    "direct_probe_focus": [
+      "Party",
+      "City",
+      "The End",
+      "Hotel",
+      "Volcano"
+    ]
+  }
+]

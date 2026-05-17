@@ -1,0 +1,164 @@
+[
+  {
+    "name": "t8040nr",
+    "purpose": "Keep the promoted tnd8040 framebuffer placement, but NOP the cameraBufferToggle viSetFrameBuf2(resolution) redirect. This retests the old noresfb idea after the low framebuffer move fixed Party/End/City/Hotel/Volcano load and render stability.",
+    "base_rom": "artifacts\\generated\\tnd8040.z64",
+    "base_md5": "4f8798f2ec6dbf94e01688a1d4352133",
+    "stock_source_rom": "artifacts\\roms\\BASELINE_TND64_Expanded_direct_from_stock.z64",
+    "out_rom": "artifacts\\generated\\t8040nr.z64",
+    "out_md5": "abbddd438f53459f6f7532fbd1f391fd",
+    "header_crc": "84B7E613 2A4082EA",
+    "patches": [
+      {
+        "offset": "0xBBB8C",
+        "old": "0x0C000F0F",
+        "new": "0x00000000",
+        "note": "NOP jal viSetFrameBuf2(resolution)",
+        "changed": true
+      }
+    ],
+    "save_outputs": [
+      {
+        "path": "artifacts\\generated\\t8040nr.sav",
+        "bytes": 512,
+        "md5": "79ed3fe6851b080ff21de69fd12f034d"
+      },
+      {
+        "path": "artifacts\\generated\\t8040nr.eep",
+        "bytes": 2048,
+        "md5": "e47f5c07623838e875761a0493388e03"
+      }
+    ],
+    "direct_probe_focus": [
+      "Party",
+      "The End",
+      "Tower",
+      "Boat",
+      "Hotel",
+      "Volcano"
+    ]
+  },
+  {
+    "name": "t8040camstk",
+    "purpose": "Keep tnd8040, but restore only cameraBufferToggle viewport width and height constants to stock TND. This is a playability/shape diagnostic, not a final 480i camera solution.",
+    "base_rom": "artifacts\\generated\\tnd8040.z64",
+    "base_md5": "4f8798f2ec6dbf94e01688a1d4352133",
+    "stock_source_rom": "artifacts\\roms\\BASELINE_TND64_Expanded_direct_from_stock.z64",
+    "out_rom": "artifacts\\generated\\t8040camstk.z64",
+    "out_md5": "e59162f00237382e465a9e861139e327",
+    "header_crc": "84B7F721 1EC4CA1C",
+    "patches": [
+      {
+        "offset": "0xBB7A4",
+        "old": "0x24020280",
+        "new": "0x240201B8",
+        "note": "camera viewport width",
+        "changed": true
+      },
+      {
+        "offset": "0xBB89C",
+        "old": "0x240201E0",
+        "new": "0x240200F8",
+        "note": "camera widescreen viewport height",
+        "changed": true
+      },
+      {
+        "offset": "0xBB8B8",
+        "old": "0x240201E0",
+        "new": "0x240200BE",
+        "note": "camera cinema viewport height",
+        "changed": true
+      },
+      {
+        "offset": "0xBB8C0",
+        "old": "0x240201E0",
+        "new": "0x24020130",
+        "note": "camera fullscreen viewport height",
+        "changed": true
+      }
+    ],
+    "save_outputs": [
+      {
+        "path": "artifacts\\generated\\t8040camstk.sav",
+        "bytes": 512,
+        "md5": "79ed3fe6851b080ff21de69fd12f034d"
+      },
+      {
+        "path": "artifacts\\generated\\t8040camstk.eep",
+        "bytes": 2048,
+        "md5": "e47f5c07623838e875761a0493388e03"
+      }
+    ],
+    "direct_probe_focus": [
+      "Party",
+      "The End",
+      "Tower",
+      "Boat"
+    ]
+  },
+  {
+    "name": "t8040camnr",
+    "purpose": "Combine stock cameraBufferToggle viewport dimensions with the noresfb redirect NOP on top of tnd8040. This is a fallback diagnostic if noresfb alone changes cutscene shape but not enough.",
+    "base_rom": "artifacts\\generated\\tnd8040.z64",
+    "base_md5": "4f8798f2ec6dbf94e01688a1d4352133",
+    "stock_source_rom": "artifacts\\roms\\BASELINE_TND64_Expanded_direct_from_stock.z64",
+    "out_rom": "artifacts\\generated\\t8040camnr.z64",
+    "out_md5": "26c4fa5bc0d7b3bddeddead7b180e943",
+    "header_crc": "84B7E93F 7E0E78F6",
+    "patches": [
+      {
+        "offset": "0xBB7A4",
+        "old": "0x24020280",
+        "new": "0x240201B8",
+        "note": "camera viewport width",
+        "changed": true
+      },
+      {
+        "offset": "0xBB89C",
+        "old": "0x240201E0",
+        "new": "0x240200F8",
+        "note": "camera widescreen viewport height",
+        "changed": true
+      },
+      {
+        "offset": "0xBB8B8",
+        "old": "0x240201E0",
+        "new": "0x240200BE",
+        "note": "camera cinema viewport height",
+        "changed": true
+      },
+      {
+        "offset": "0xBB8C0",
+        "old": "0x240201E0",
+        "new": "0x24020130",
+        "note": "camera fullscreen viewport height",
+        "changed": true
+      },
+      {
+        "offset": "0xBBB8C",
+        "old": "0x0C000F0F",
+        "new": "0x00000000",
+        "note": "NOP jal viSetFrameBuf2(resolution)",
+        "changed": true
+      }
+    ],
+    "save_outputs": [
+      {
+        "path": "artifacts\\generated\\t8040camnr.sav",
+        "bytes": 512,
+        "md5": "79ed3fe6851b080ff21de69fd12f034d"
+      },
+      {
+        "path": "artifacts\\generated\\t8040camnr.eep",
+        "bytes": 2048,
+        "md5": "e47f5c07623838e875761a0493388e03"
+      }
+    ],
+    "direct_probe_focus": [
+      "Party",
+      "The End",
+      "Tower",
+      "Boat"
+    ]
+  }
+]

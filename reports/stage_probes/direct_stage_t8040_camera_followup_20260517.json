@@ -1,0 +1,60 @@
+{
+  "date": "2026-05-17",
+  "purpose": "Check whether the remaining short level-intro rectangle on the promoted tnd8040 candidate is caused by the cameraBufferToggle resolution-framebuffer redirect or camera viewport width/height constants.",
+  "base_candidate": {
+    "name": "tnd8040",
+    "rom": "artifacts/generated/tnd8040.z64",
+    "md5": "4f8798f2ec6dbf94e01688a1d4352133",
+    "summary": "Promoted tnd58 derivative with low framebuffer base/clear moved from 0x80300000 to 0x80400000."
+  },
+  "stage_label_correction": {
+    "p01pty": "Party / CMGN Launch Party",
+    "p13end": "The End / end credits stage / City of Hamburg",
+    "note": "Do not describe the p13end white-rectangle or black-screen behavior as Party. It is the end-credits level signal."
+  },
+  "candidates": [
+    {
+      "name": "t8040nr",
+      "rom": "artifacts/generated/t8040nr.z64",
+      "md5": "abbddd438f53459f6f7532fbd1f391fd",
+      "patch": "0xBBB8C: jal viSetFrameBuf2(resolution) -> nop",
+      "direct_probe_report": "reports/stage_probes/direct_stage_probes_t8040nr.json",
+      "hardware_results": [
+        {
+          "probe": "p01pty",
+          "level": "Party",
+          "contact_sheet": "diagnostics/captures/contact_sheets/t8040nr_p01pty_direct_20260517_postcycle.jpg",
+          "result": "Still boots through the Party title/intro into live rendered scenes. The short top intro/title rectangle remains essentially unchanged from tnd8040."
+        },
+        {
+          "probe": "p13end",
+          "level": "The End / end credits",
+          "contact_sheet": "diagnostics/captures/contact_sheets/t8040nr_p13end_direct_20260517_postcycle.jpg",
+          "result": "Still boots into City of Hamburg/end-credits rendering. The short top intro/title rectangle remains essentially unchanged from tnd8040."
+        }
+      ],
+      "interpretation": "Noresfb is an informative miss on the tnd8040 base. The remaining intro-rectangle issue is probably not caused by the viSetFrameBuf2(resolution) redirect alone."
+    },
+    {
+      "name": "t8040camstk",
+      "rom": "artifacts/generated/t8040camstk.z64",
+      "md5": "e59162f00237382e465a9e861139e327",
+      "patch": "Restore only cameraBufferToggle viewport width/heights at 0xBB7A4, 0xBB89C, 0xBB8B8, and 0xBB8C0 to stock TND words.",
+      "direct_probe_report": "reports/stage_probes/direct_stage_probes_t8040camstk.json",
+      "hardware_results": [
+        {
+          "probe": "p01pty",
+          "level": "Party",
+          "contact_sheet": "diagnostics/captures/contact_sheets/t8040camstk_p01pty_direct_20260517_postcycle.jpg",
+          "result": "Still boots into live Party rendering. The Party title/intro card remains in the same short top strip class, so the stock camera constants do not explain the rectangle by themselves."
+        }
+      ],
+      "interpretation": "The short level-intro/title strip is not solved by restoring camera viewport width/heights. Deprioritize cameraBufferToggle constants as the next main branch."
+    }
+  ],
+  "current_conclusion": [
+    "Keep tnd8040 as the promoted playability candidate unless manual testing finds a regression.",
+    "Treat noresfb and stock-camera follow-ups as misses for the remaining short intro rectangle.",
+    "Next technical branch should inspect the title/intro overlay, front/cutscene blitter, or display-copy path rather than rerunning broad camera-viewport reverts."
+  ]
+}

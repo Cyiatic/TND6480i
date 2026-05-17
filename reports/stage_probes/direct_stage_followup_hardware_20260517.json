@@ -1,0 +1,125 @@
+{
+  "date": "2026-05-17",
+  "purpose": "Follow-up direct-stage hardware probes after tnd58 showed Party/City/The End black-screen and Hotel/Volcano prism corruption.",
+  "method": {
+    "builder": "scripts/build_direct_stage_probe_roms.py",
+    "capture_device": "GV-USB2 over S-Video",
+    "flashcart": "SummerCart64 direct ROM mode, EEPROM 4k",
+    "cycle": "Kasa power-cycle per probe",
+    "contact_sheet_rule": "Use *_postcycle contact sheets; first/pre-cycle tiles can show the previously loaded ROM and must not be used for level identity."
+  },
+  "misses": [
+    {
+      "family": "render-state reverts",
+      "scripts": ["scripts/build_render_state_revert_candidates.py"],
+      "candidates": ["t58rd0", "t58rxy", "t58rd0xy", "t58rd0cam"],
+      "result": "Restoring direct table0, global width/height helpers, camera viewport constants, or combinations did not fix Party/City/The End black screens or Hotel/Volcano prism corruption."
+    },
+    {
+      "family": "zbufstock plus Party/End memory budgets",
+      "scripts": ["scripts/build_zbufstock_mem_budget_candidates.py"],
+      "candidates": ["zbstkmt", "zbstkgx", "zbstklo"],
+      "result": "Party and The End remained black. Stock z-buffer footprint remains useful evidence because it changed City into visible rendering, but it is not a standalone fix."
+    }
+  ],
+  "viewport_revert_signal": {
+    "script": "scripts/build_viewport_revert_candidates.py",
+    "key_results": [
+      {
+        "candidate": "t58rvwxy",
+        "probe": "p08cty",
+        "contact_sheet": "diagnostics/captures/contact_sheets/t58rvwxy_p08cty_direct_20260517_postcycle.jpg",
+        "result": "City reaches the Saigon Streets render instead of black when the whole gameplay viewport/helper family is stock."
+      },
+      {
+        "candidate": "t58rdef",
+        "probe": "p08cty",
+        "contact_sheet": "diagnostics/captures/contact_sheets/t58rdef_p08cty_direct_20260517_postcycle.jpg",
+        "result": "City also reaches gameplay when only normal non-camera viewport dimensions are restored."
+      },
+      {
+        "candidate": "t58rvwxy",
+        "probe": "p01pty/p13end",
+        "contact_sheets": [
+          "diagnostics/captures/contact_sheets/t58rvwxy_p01pty_direct_20260517_postcycle.jpg",
+          "diagnostics/captures/contact_sheets/t58rvwxy_p13end_direct_20260517_postcycle.jpg"
+        ],
+        "result": "Party and The End still black-screen, proving their failure is not the same viewport-helper issue as City."
+      }
+    ]
+  },
+  "promoted_candidate": {
+    "name": "tnd8040",
+    "build_script": "scripts/build_framebuffer_base_probe_candidates.py",
+    "rom": "artifacts/generated/tnd8040.z64",
+    "source_rom": "artifacts/generated/t58fb8040.z64",
+    "md5": "4f8798f2ec6dbf94e01688a1d4352133",
+    "n64_crc": "84B7F80D 84B524C7",
+    "save": "artifacts/generated/tnd8040.sav",
+    "save_md5": "79ed3fe6851b080ff21de69fd12f034d",
+    "patch": "artifacts/generated/TND6480i_tnd8040_fb8040_from_baseline_tnd.bps",
+    "patch_md5": "1d5e553072255d63866644df9dffbaf9",
+    "change": "Move only the low framebuffer base/clear from 0x80300000 to 0x80400000 on top of the tnd58/tlbpages58 007-label branch.",
+    "hardware_results": [
+      {
+        "probe": "p01pty",
+        "level": "Party",
+        "contact_sheet": "diagnostics/captures/contact_sheets/t58fb8040_p01pty_direct_20260517_postcycle.jpg",
+        "result": "Boots through title/intro into rendered Party scenes instead of black/hard-lock."
+      },
+      {
+        "probe": "p13end",
+        "level": "The End",
+        "contact_sheet": "diagnostics/captures/contact_sheets/t58fb8040_p13end_direct_20260517_postcycle.jpg",
+        "result": "Boots into City of Hamburg/End Credits scene instead of black."
+      },
+      {
+        "probe": "p08cty",
+        "level": "City",
+        "contact_sheet": "diagnostics/captures/contact_sheets/t58fb8040_p08cty_direct_20260517_postcycle.jpg",
+        "result": "Boots through Saigon Streets into live rendering."
+      },
+      {
+        "probe": "p04hot",
+        "level": "Hotel",
+        "contact_sheet": "diagnostics/captures/contact_sheets/t58fb8040_p04hot_direct_20260517_postcycle.jpg",
+        "result": "Boots into stable-looking Hotel rendering; sampled prism/blown-out corruption is gone."
+      },
+      {
+        "probe": "p11vol",
+        "level": "Volcano",
+        "contact_sheet": "diagnostics/captures/contact_sheets/t58fb8040_p11vol_direct_20260517_postcycle.jpg",
+        "result": "Boots through Volcano intro into live rendering; one early static/noise frame remains in the sheet, but the prior persistent prism class is not present in sampled live frames."
+      },
+      {
+        "probe": "p02lab",
+        "level": "Labs",
+        "contact_sheet": "diagnostics/captures/contact_sheets/t58fb8040_p02lab_direct_20260517_postcycle.jpg",
+        "result": "Boots into live Labs rendering. Encoder pickup still requires manual gameplay testing."
+      },
+      {
+        "probe": "p07twr",
+        "level": "Tower",
+        "contact_sheet": "diagnostics/captures/contact_sheets/t58fb8040_p07twr_direct_20260517_postcycle.jpg",
+        "result": "Boots through Tower intro into rendered scenes."
+      },
+      {
+        "probe": "p09bot",
+        "level": "Boat",
+        "contact_sheet": "diagnostics/captures/contact_sheets/t58fb8040_p09bot_direct_20260517_postcycle.jpg",
+        "result": "Boots through Boat intro into very dark live rendering."
+      }
+    ],
+    "uploaded_full_rom": {
+      "video": "diagnostics/captures/videos/tnd8040_full_startup_20260517.mp4",
+      "contact_sheet": "diagnostics/captures/contact_sheets/tnd8040_full_startup_20260517_postcycle.jpg",
+      "result": "SC64 accepted tnd8040.z64/tnd8040.sav in direct ROM mode and startup reaches CMK/logos/gunbarrel/title."
+    }
+  },
+  "next_manual_test": [
+    "Use the already-loaded tnd8040 full ROM and the all-missions save.",
+    "Verify normal save-file flow and mission select still work.",
+    "Manually test Party, City, The End, Hotel, Volcano, Tower, Boat, Labs encoder pickup/door, and the previously good controls.",
+    "Expect front/gunbarrel/menu polish issues to remain; this candidate was promoted for playability/stage rendering."
+  ]
+}

@@ -62,6 +62,8 @@ This is a probe-only change. It does not alter the actual 480i patch sites and s
 | `p12als` | Alaska | 30 | Depot |
 | `p13end` | The End | 25 | Train |
 
+Note: `p13end` is the end-credits stage, not Party. If a `p13end` probe shows a white rectangle, black-screen, or City of Hamburg scene, log that under The End/end credits.
+
 ## Hardware Proof
 
 `p06wrk` was validated on 2026-05-17:
@@ -84,3 +86,5 @@ The GV-USB2 contact sheet shows direct boot into the Wreck intro/gameplay path w
 6. Compare the capture against the previous probe for the same stage.
 
 This is now the preferred path for Party/City/The End/Tower/Boat/Hotel/Volcano troubleshooting. Full manual playthroughs should be reserved for promising candidates only.
+
+For Kasa-cycle captures, compare only `*_postcycle` contact sheets when available. First/pre-cycle tiles can show the previously loaded direct ROM and can mislead level identity.

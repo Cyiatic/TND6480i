@@ -4,6 +4,34 @@ Date: 2026-05-08
 
 ## Current Hardware State
 
+- 2026-05-17 `tnd8040` promoted playability candidate:
+  - Full ROM for the next manual pass:
+    `artifacts/generated/tnd8040.z64`.
+  - Content source: `artifacts/generated/t58fb8040.z64`.
+  - MD5: `4f8798f2ec6dbf94e01688a1d4352133`; N64 CRC: `84B7F80D 84B524C7`.
+  - Paired save: `artifacts/generated/tnd8040.sav` (`MD5 79ed3fe6851b080ff21de69fd12f034d`).
+  - Patch: `artifacts/generated/TND6480i_tnd8040_fb8040_from_baseline_tnd.bps` (`MD5 1d5e553072255d63866644df9dffbaf9`).
+  - Change: move only the low framebuffer base/clear from `0x80300000` to `0x80400000` on top of the `tnd58` / `tlbpages58` 007-label branch.
+  - Hardware direct-stage evidence: Party, City, The End/end-credits, Hotel, Volcano, Tower, and Boat all reach rendered scenes on real N64 + SC64. This replaces the previous black/prism/freeze failure class as the current best playability branch.
+  - Key reports:
+    `reports/tnd480i_framebuffer_base_probe_candidates_20260517.json`,
+    `reports/stage_probes/direct_stage_followup_hardware_20260517.json`,
+    `reports/stage_probes/direct_stage_t8040_camera_followup_20260517.json`,
+    and `reports/tnd6480i_tnd8040_fb8040_bps_manifest.json`.
+  - Key contact sheets:
+    `diagnostics/captures/contact_sheets/t58fb8040_p01pty_direct_20260517_postcycle.jpg`,
+    `diagnostics/captures/contact_sheets/t58fb8040_p13end_direct_20260517_postcycle.jpg`,
+    `diagnostics/captures/contact_sheets/t58fb8040_p08cty_direct_20260517_postcycle.jpg`,
+    `diagnostics/captures/contact_sheets/t58fb8040_p04hot_direct_20260517_postcycle.jpg`,
+    `diagnostics/captures/contact_sheets/t58fb8040_p11vol_direct_20260517_postcycle.jpg`,
+    and `diagnostics/captures/contact_sheets/tnd8040_full_startup_20260517_postcycle.jpg`.
+  - Latest follow-up misses:
+    - `t8040nr` NOPs `jal viSetFrameBuf2(resolution)` at `0xBBB8C`; Party and The End/end-credits still keep the short top intro/title rectangle.
+    - `t8040camstk` restores cameraBufferToggle viewport width/heights to stock; Party still keeps the same short top intro/title rectangle.
+  - Current next branch: do not spend the next test pass on broad cameraBufferToggle width/height reverts. Inspect the title/intro overlay, front/cutscene blitter, or display-copy path for the short level-intro/title rectangle.
+  - Manual test priority for `tnd8040`: verify save-file flow and mission select; then Party, City, The End/end-credits, Hotel, Volcano, Tower, Boat, Labs encoder pickup/door, and Press/Parkhaus/Wreck/Bridge/Alaska controls. Front/gunbarrel/menu polish remains expected to be incomplete.
+  - Stage-name correction: `p01pty` is Party / CMGN Launch Party. `p13end` is The End / end credits / City of Hamburg. Do not describe the `p13end` white-rectangle or black-screen signature as Party.
+
 - 2026-05-17 direct-stage probe harness, validated:
   - Builder: `scripts/build_direct_stage_probe_roms.py`.
   - Workflow doc: `docs/direct_stage_probe_workflow.md`.

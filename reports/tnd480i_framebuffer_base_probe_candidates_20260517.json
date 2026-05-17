@@ -1,0 +1,88 @@
+[
+  {
+    "name": "t58fb8040",
+    "purpose": "Move only the low framebuffer base from 0x80300000 to 0x80400000 on the current tlbpages58 base. This retests the earlier split8040 idea after the high-framebuffer/TLB overlap was removed.",
+    "base_rom": "artifacts\\generated\\tnd58.z64",
+    "base_md5": "25cd6b104b4cbdf3b2cdf4e1d02354da",
+    "out_rom": "artifacts\\generated\\t58fb8040.z64",
+    "out_md5": "4f8798f2ec6dbf94e01688a1d4352133",
+    "header_crc": "84B7F80D 84B524C7",
+    "patches": [
+      {
+        "offset": "0x3D30",
+        "old": "0x3C048030",
+        "new": "0x3C048040",
+        "note": "clear fb0 base upper 0x80400000",
+        "changed": true
+      },
+      {
+        "offset": "0x6584",
+        "old": "0x3C048030",
+        "new": "0x3C048040",
+        "note": "fb0 global base upper 0x80400000",
+        "changed": true
+      }
+    ],
+    "save_outputs": [
+      {
+        "path": "artifacts\\generated\\t58fb8040.sav",
+        "bytes": 512,
+        "md5": "79ed3fe6851b080ff21de69fd12f034d"
+      },
+      {
+        "path": "artifacts\\generated\\t58fb8040.eep",
+        "bytes": 2048,
+        "md5": "e47f5c07623838e875761a0493388e03"
+      }
+    ],
+    "direct_probe_focus": [
+      "Party",
+      "The End",
+      "City",
+      "Hotel"
+    ]
+  },
+  {
+    "name": "t58fb8020",
+    "purpose": "Move only the low framebuffer base from 0x80300000 down to 0x80200000. This is a collision probe for Party/End, not a likely final layout.",
+    "base_rom": "artifacts\\generated\\tnd58.z64",
+    "base_md5": "25cd6b104b4cbdf3b2cdf4e1d02354da",
+    "out_rom": "artifacts\\generated\\t58fb8020.z64",
+    "out_md5": "64c713803948a591f06d733c97eb5312",
+    "header_crc": "84B7FBCD 9BECAC25",
+    "patches": [
+      {
+        "offset": "0x3D30",
+        "old": "0x3C048030",
+        "new": "0x3C048020",
+        "note": "clear fb0 base upper 0x80200000",
+        "changed": true
+      },
+      {
+        "offset": "0x6584",
+        "old": "0x3C048030",
+        "new": "0x3C048020",
+        "note": "fb0 global base upper 0x80200000",
+        "changed": true
+      }
+    ],
+    "save_outputs": [
+      {
+        "path": "artifacts\\generated\\t58fb8020.sav",
+        "bytes": 512,
+        "md5": "79ed3fe6851b080ff21de69fd12f034d"
+      },
+      {
+        "path": "artifacts\\generated\\t58fb8020.eep",
+        "bytes": 2048,
+        "md5": "e47f5c07623838e875761a0493388e03"
+      }
+    ],
+    "direct_probe_focus": [
+      "Party",
+      "The End",
+      "City",
+      "Hotel"
+    ]
+  }
+]

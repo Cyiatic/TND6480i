@@ -1,0 +1,143 @@
+[
+  {
+    "name": "zbstkmt",
+    "purpose": "Keep the stock z-buffer footprint and reduce only Party/The End texture cache budgets. This tests whether their black-screen failures need the z-buffer RAM back plus a smaller per-stage texture reservation.",
+    "base_rom": "artifacts\\generated\\game_h460_top10_stock_dossier_tlbpages58_zbufstock_007label_current.z64",
+    "base_md5": "6d2ad092a8e36d8e77516f8b1eb0de34",
+    "out_rom": "artifacts\\generated\\zbstkmt.z64",
+    "out_md5": "0efb639262e908453a4191b1f6913b90",
+    "header_crc": "0736C977 A74FE266",
+    "slot_len": "0x10035",
+    "allowed_packed_len": "0x103CC",
+    "zero_pad_growth": "0x397",
+    "packed_len": "0x100F0",
+    "verify_consumed": "0x100E9",
+    "main_raw_md5": "723315ae41923289c9ae49f7b53861d7",
+    "verify_main_raw_md5": "723315ae41923289c9ae49f7b53861d7",
+    "patches": [
+      {
+        "stage": "Party",
+        "raw_offset": "0x7D0C",
+        "old": "-ml0 -me0 -mgfx70  -mvtx50 -mt900 -ma200",
+        "new": "-ml0 -me0 -mgfx70  -mvtx50 -mt800 -ma200"
+      },
+      {
+        "stage": "The End",
+        "raw_offset": "0x7F1C",
+        "old": "-ml0 -me0 -mgfx100 -mvtx50 -mt700 -ma150",
+        "new": "-ml0 -me0 -mgfx100 -mvtx50 -mt600 -ma150"
+      }
+    ],
+    "save_outputs": [
+      {
+        "path": "artifacts\\generated\\zbstkmt.sav",
+        "bytes": 512,
+        "md5": "79ed3fe6851b080ff21de69fd12f034d"
+      },
+      {
+        "path": "artifacts\\generated\\zbstkmt.eep",
+        "bytes": 2048,
+        "md5": "e47f5c07623838e875761a0493388e03"
+      }
+    ],
+    "direct_probe_focus": [
+      "Party",
+      "The End",
+      "City"
+    ]
+  },
+  {
+    "name": "zbstkgx",
+    "purpose": "Keep the stock z-buffer footprint, raise Party/The End display-list and vertex pools, and pay for it with smaller texture budgets.",
+    "base_rom": "artifacts\\generated\\game_h460_top10_stock_dossier_tlbpages58_zbufstock_007label_current.z64",
+    "base_md5": "6d2ad092a8e36d8e77516f8b1eb0de34",
+    "out_rom": "artifacts\\generated\\zbstkgx.z64",
+    "out_md5": "add94948f69a7a21dfe704f8a27034a9",
+    "header_crc": "A1F9F5F4 0480C42B",
+    "slot_len": "0x10035",
+    "allowed_packed_len": "0x103CC",
+    "zero_pad_growth": "0x397",
+    "packed_len": "0x100E0",
+    "verify_consumed": "0x100E0",
+    "main_raw_md5": "4fc57881cf625a02396ec3a0c11700c1",
+    "verify_main_raw_md5": "4fc57881cf625a02396ec3a0c11700c1",
+    "patches": [
+      {
+        "stage": "Party",
+        "raw_offset": "0x7D0C",
+        "old": "-ml0 -me0 -mgfx70  -mvtx50 -mt900 -ma200",
+        "new": "-ml0 -me0 -mgfx100 -mvtx70 -mt800 -ma200"
+      },
+      {
+        "stage": "The End",
+        "raw_offset": "0x7F1C",
+        "old": "-ml0 -me0 -mgfx100 -mvtx50 -mt700 -ma150",
+        "new": "-ml0 -me0 -mgfx130 -mvtx70 -mt600 -ma150"
+      }
+    ],
+    "save_outputs": [
+      {
+        "path": "artifacts\\generated\\zbstkgx.sav",
+        "bytes": 512,
+        "md5": "79ed3fe6851b080ff21de69fd12f034d"
+      },
+      {
+        "path": "artifacts\\generated\\zbstkgx.eep",
+        "bytes": 2048,
+        "md5": "e47f5c07623838e875761a0493388e03"
+      }
+    ],
+    "direct_probe_focus": [
+      "Party",
+      "The End",
+      "City"
+    ]
+  },
+  {
+    "name": "zbstklo",
+    "purpose": "Keep the stock z-buffer footprint and apply a more aggressive texture budget reduction to Party/The End while leaving gfx/vtx unchanged.",
+    "base_rom": "artifacts\\generated\\game_h460_top10_stock_dossier_tlbpages58_zbufstock_007label_current.z64",
+    "base_md5": "6d2ad092a8e36d8e77516f8b1eb0de34",
+    "out_rom": "artifacts\\generated\\zbstklo.z64",
+    "out_md5": "768135e165818c7ac1e2b244e259f2ea",
+    "header_crc": "58103957 219143BE",
+    "slot_len": "0x10035",
+    "allowed_packed_len": "0x103CC",
+    "zero_pad_growth": "0x397",
+    "packed_len": "0x10108",
+    "verify_consumed": "0x10105",
+    "main_raw_md5": "9e18e6afa168e5fc6796a9dde8876239",
+    "verify_main_raw_md5": "9e18e6afa168e5fc6796a9dde8876239",
+    "patches": [
+      {
+        "stage": "Party",
+        "raw_offset": "0x7D0C",
+        "old": "-ml0 -me0 -mgfx70  -mvtx50 -mt900 -ma200",
+        "new": "-ml0 -me0 -mgfx70  -mvtx50 -mt700 -ma200"
+      },
+      {
+        "stage": "The End",
+        "raw_offset": "0x7F1C",
+        "old": "-ml0 -me0 -mgfx100 -mvtx50 -mt700 -ma150",
+        "new": "-ml0 -me0 -mgfx100 -mvtx50 -mt500 -ma150"
+      }
+    ],
+    "save_outputs": [
+      {
+        "path": "artifacts\\generated\\zbstklo.sav",
+        "bytes": 512,
+        "md5": "79ed3fe6851b080ff21de69fd12f034d"
+      },
+      {
+        "path": "artifacts\\generated\\zbstklo.eep",
+        "bytes": 2048,
+        "md5": "e47f5c07623838e875761a0493388e03"
+      }
+    ],
+    "direct_probe_focus": [
+      "Party",
+      "The End",
+      "City"
+    ]
+  }
+]
