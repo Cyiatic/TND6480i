@@ -883,4 +883,6 @@ It changes only:
 | `0x106F10` | `480 -> 240` |
 | `0x106F24` | `480 -> 120` |
 
-Hardware startup passed through CMK/logos/gunbarrel/title/cast (`diagnostics/captures/contact_sheets/zbuf640hstock_007label_powercycle_startup_20260517.jpg`). This is now the live SC64 direct-ROM candidate. Manual test priority is Party/Credits/City, Hotel/Volcano, Tower/Boat, Labs, then Wreck/Bridge/Press/Alaska controls.
+Hardware startup passed through CMK/logos/gunbarrel/title/cast (`diagnostics/captures/contact_sheets/zbuf640hstock_007label_powercycle_startup_20260517.jpg`), but manual testing rejected it: the save did not load and Bazaar had the blue issue again. Treat the stock-height z-buffer idea as a regression. Do not proceed to `zbuf640h360` or `zbufstock` unless a later analysis gives a stronger reason.
+
+Recovery: the previous `tlbpages58` branch was restored to SC64 using short staging filenames (`tnd58.z64` / `tnd58.sav`) and the generated all-missions save (`MD5 79ed3fe6851b080ff21de69fd12f034d`). Startup evidence is `diagnostics/captures/contact_sheets/tnd58_shortname_restore_powercycle_startup_20260517.jpg`.

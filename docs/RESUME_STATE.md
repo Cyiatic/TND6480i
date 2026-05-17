@@ -1,70 +1,58 @@
 # TND6480i Resume State
 
-Last updated: 2026-05-17 after uploading the `zbuf640hstock` 007-label stage z-buffer memory diagnostic to SC64.
+Last updated: 2026-05-17 after restoring the `tlbpages58` 007-label candidate to SC64 with short upload filenames.
 
 Scope reminder: keep work limited to this N64/TND6480i project and directly related tools/devices.
 
 ## Current Console State
 
-The SC64 is in direct-ROM mode with EEPROM 4k. The console currently has the `zbuf640hstock` 007-label candidate loaded:
+The SC64 is in direct-ROM mode with EEPROM 4k. The console currently has the `tlbpages58` 007-label candidate restored and loaded through short SC64 staging names:
 
 ```text
-artifacts/generated/game_h460_top10_stock_dossier_tlbpages58_zbuf640hstock_007label_current.z64
-MD5: dfd0af4e1ca054ad940d18e3ba89f713
+artifacts/generated/tnd58.z64
+content source: artifacts/generated/game_h460_top10_stock_dossier_tlbpages58_007label_current.z64
+MD5: 25cd6b104b4cbdf3b2cdf4e1d02354da
 N64 CRC: 84B7FBED 3ED1CF90
 ```
 
-Purpose: preserve the `tlbpages58` in-game-480i/camera-480i/007-label branch and test whether the full 640x480 stage z-buffer is starving/colliding with stage memory. This candidate keeps the z-buffer width at 640, but restores stock z-buffer heights:
+Paired save:
 
 ```text
-0x106EE4: resolution z-buffer height 480 -> 330
-0x106F10: single-player low-res z-buffer height 480 -> 240
-0x106F24: split/multiplayer z-buffer height 480 -> 120
-
-Kept:
-0x106ED4: resolution z-buffer width 640
-0x106EF0: low-res z-buffer width 640
+artifacts/generated/tnd58.sav
+content source: artifacts/generated/game_h460_top10_stock_dossier_tlbpages58_007label_current.sav
+MD5: 79ed3fe6851b080ff21de69fd12f034d
 ```
 
-Expected allocation change: current full path was up to `640x480 -> 614,400 bytes + 64`; this candidate uses `640x330 -> 422,400 bytes + 64` in the resolution path and `640x240 -> 307,200 bytes + 64` in the single-player low-res path. It intentionally avoids returning to stock 320/440-wide depth rows on the first pass, because that would reintroduce possible horizontal RDP/z-buffer wrap while giving back memory.
+Purpose: restore the previous `tlbpages58` branch after `zbuf640hstock` regressed Bazaar. This branch preserves the current in-game-480i/camera-480i/007-label path, keeps the stock-start/no-fb1-overlap TLB page-count fix, and uses the generated all-missions EEPROM that previously matched this candidate.
 
 Reports/evidence:
 
 ```text
-reports/tnd480i_game_h460_top10_stock_dossier_tlbpages58_zbuf640hstock_007label_current_report.json
-reports/tnd480i_stage_zbuf_candidates_20260517.json
-reports/save_pairing_stage_zbuf_20260517.json
-reports/smoke/smoke_zbuf640hstock_input30_20260517.json
-reports/smoke/smoke_zbuf640hstock_partyroute_20260517.json
-diagnostics/captures/videos/zbuf640hstock_007label_powercycle_startup_20260517.mp4
-diagnostics/captures/contact_sheets/zbuf640hstock_007label_powercycle_startup_20260517.jpg
-diagnostics/captures/videos/zbuf640hstock_007label_idle_followup_20260517.mp4
-diagnostics/captures/contact_sheets/zbuf640hstock_007label_idle_followup_20260517.jpg
-artifacts/generated/TND6480i_game_h460_top10_stock_dossier_tlbpages58_zbuf640hstock_007label_current_from_baseline_tnd.bps
-reports/tnd6480i_game_h460_top10_stock_dossier_tlbpages58_zbuf640hstock_007label_current_bps_manifest.json
+reports/tnd480i_game_h460_top10_stock_dossier_tlbpages58_007label_current_report.json
+reports/tnd480i_tlb_pagecount_candidates_20260517.json
+reports/save_pairing_tlb_pagecount_all_missions_20260517.json
+diagnostics/captures/videos/tnd58_shortname_restore_powercycle_startup_20260517.mp4
+diagnostics/captures/contact_sheets/tnd58_shortname_restore_powercycle_startup_20260517.jpg
+artifacts/generated/TND6480i_game_h460_top10_stock_dossier_tlbpages58_007label_from_baseline_tnd.bps
+reports/tnd6480i_game_h460_top10_stock_dossier_tlbpages58_007label_bps_manifest.json
 ```
 
-Verified BPS patch MD5: `b943e4ea0e79fe93ac5ac3751a404409`. Paired save is the user-provided complete EEPROM from Documents (`MD5 f02bb8224a4dc25079721d7a3f0d38e0`).
+Verified BPS patch MD5: `7e576a51f9467c7a29374dfb7d65221a`.
 
-Hardware startup evidence: SC64 accepted the direct ROM and EEPROM 4k save upload, then a Kasa power-cycle plus GV-USB2 capture showed live CMK/logos/gunbarrel/title/opening-cast output. A 150-second no-cycle idle follow-up continued looping front/title/cast output; it did not provide a useful gameplay/demo validation.
+Hardware startup evidence: SC64 accepted the short-name direct ROM and EEPROM 4k save upload, then a Kasa power-cycle plus GV-USB2 capture showed live CMK/logos/gunbarrel/title/opening-cast output.
 
-Manual test focus for this loaded ROM: Party/Credits/City load first, then Hotel/Volcano prism, Tower/Boat intro freezes, Labs encoder/door freeze, and Wreck/Bridge/Press/Alaska controls. Watch specifically for whether Wreck remains clean/slow and whether Bazaar/Labs top-bottom flicker changes.
+Manual test focus for this restored ROM: confirm the generated save now loads, then use it as the fallback/control for Party/Credits/City, Hotel/Volcano, Tower/Boat, Labs, and Wreck/Bridge/Press/Alaska.
 
-Latest diagnostic interpretation: the user tested `tlbpages58_camviewstock_007label` and reported that everything else was the same. Demote the stock-camera-viewport theory. The relevant clue is now that `tlbpages58` made Wreck clean/slow but did not fix Party/City/Credits or the prism/crash levels; the z-buffer-height pass tests whether the remaining failures are from stage memory pressure caused by the full 640x480 z-buffer.
+Important operational note: keep SC64 upload filenames short and same-stem from now on, even when `--save` is explicit. Use `artifacts/generated/tnd58.z64` / `tnd58.sav` style staging names to avoid filename-length or save-association ambiguity.
 
-Next candidates are already built but should not be uploaded until `zbuf640hstock` is manually tested:
+Rejected immediate diagnostic:
 
 ```text
-artifacts/generated/game_h460_top10_stock_dossier_tlbpages58_zbuf640h360_007label_current.z64
-MD5: 38339a0ff68eaf4198e3d620bd52ef7f
-BPS MD5: 358eb533bd0473dee43e508ef9142118
-
-artifacts/generated/game_h460_top10_stock_dossier_tlbpages58_zbufstock_007label_current.z64
-MD5: 6d2ad092a8e36d8e77516f8b1eb0de34
-BPS MD5: e35a1590408bff0e30b7ce9ced07f99f
+artifacts/generated/game_h460_top10_stock_dossier_tlbpages58_zbuf640hstock_007label_current.z64
+MD5: dfd0af4e1ca054ad940d18e3ba89f713
 ```
 
-Use `zbuf640h360` if `zbuf640hstock` changes failures in a useful direction but causes too much vertical/depth cutoff. Use `zbufstock` only if the 640-wide candidates do not restore playability, because stock 320/440-wide depth rows are more likely to regress 480i composition.
+User feedback: the save did not load and Bazaar had the blue issue again. Treat `zbuf640hstock` as rejected/regressed. Do not upload `zbuf640h360` or `zbufstock` next without a fresh reason; reducing z-buffer height is now suspect.
 
 Previous loaded diagnostic:
 

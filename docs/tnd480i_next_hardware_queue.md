@@ -4,7 +4,18 @@ Date: 2026-05-08
 
 ## Current Hardware State
 
-- 2026-05-17 `zbuf640hstock` 007-label stage z-buffer memory diagnostic, active on hardware:
+- 2026-05-17 `tlbpages58` 007-label restore, active on hardware with short SC64 upload names:
+  - SC64 reports direct-ROM mode with EEPROM 4k. The active console ROM was uploaded as:
+    `artifacts/generated/tnd58.z64`.
+  - Content source: `artifacts/generated/game_h460_top10_stock_dossier_tlbpages58_007label_current.z64`.
+  - MD5: `25cd6b104b4cbdf3b2cdf4e1d02354da`; N64 CRC: `84B7FBED 3ED1CF90`.
+  - Paired save was uploaded as `artifacts/generated/tnd58.sav`, copied from `game_h460_top10_stock_dossier_tlbpages58_007label_current.sav` (`MD5 79ed3fe6851b080ff21de69fd12f034d`).
+  - Reason for restore: `zbuf640hstock` regressed Bazaar with blue issues and the save did not load. The restore returns to the prior generated all-missions save and removes long SC64 upload filenames as a possible hidden variable.
+  - Hardware startup evidence: `diagnostics/captures/videos/tnd58_shortname_restore_powercycle_startup_20260517.mp4` and `diagnostics/captures/contact_sheets/tnd58_shortname_restore_powercycle_startup_20260517.jpg`; GV-USB2 showed live CMK/logos/gunbarrel/title/opening cast after Kasa power-cycle.
+  - Manual test focus: first confirm the save loads. Then use this restored branch as the fallback/control for Party/Credits/City, Hotel/Volcano, Tower/Boat, Labs, and Wreck/Bridge/Press/Alaska.
+  - Operational rule: keep future SC64 staging filenames short and same-stem (`tnd58.z64` / `tnd58.sav`, `tnd_next.z64` / `tnd_next.sav`) even when `--save` is explicit.
+
+- 2026-05-17 `zbuf640hstock` 007-label stage z-buffer memory diagnostic, rejected:
   - SC64 reports direct-ROM mode with EEPROM 4k. The active console ROM is:
     `artifacts/generated/game_h460_top10_stock_dossier_tlbpages58_zbuf640hstock_007label_current.z64`.
   - MD5: `dfd0af4e1ca054ad940d18e3ba89f713`; N64 CRC: `84B7FBED 3ED1CF90`.
@@ -18,9 +29,9 @@ Date: 2026-05-08
   - Idle follow-up evidence: `diagnostics/captures/videos/zbuf640hstock_007label_idle_followup_20260517.mp4` and `diagnostics/captures/contact_sheets/zbuf640hstock_007label_idle_followup_20260517.jpg`; useful as a no-crash front-loop sanity only.
   - Verified BPS: `artifacts/generated/TND6480i_game_h460_top10_stock_dossier_tlbpages58_zbuf640hstock_007label_current_from_baseline_tnd.bps` (`MD5 b943e4ea0e79fe93ac5ac3751a404409`).
   - Manual test focus: Party/Credits/City load first; then Hotel/Volcano prism; Tower/Boat intro freezes; Labs encoder/door freeze; Wreck/Bridge/Press/Alaska controls; Bazaar/Labs top-bottom flicker.
-  - If this changes failures in a useful direction but causes too much vertical/depth cutoff, test `artifacts/generated/game_h460_top10_stock_dossier_tlbpages58_zbuf640h360_007label_current.z64` next (`MD5 38339a0ff68eaf4198e3d620bd52ef7f`).
-  - If this does not improve playability, use `artifacts/generated/game_h460_top10_stock_dossier_tlbpages58_zbufstock_007label_current.z64` only as the more aggressive memory-reclaim diagnostic (`MD5 6d2ad092a8e36d8e77516f8b1eb0de34`).
-  - If normal gameplay regresses badly, restore `artifacts/generated/game_h460_top10_stock_dossier_tlbpages58_007label_current.z64` or `artifacts/generated/game_h460_top10_stock_dossier_tables_007label_current.z64`.
+  - User hardware feedback: the save did not load and Bazaar had the blue issue again.
+  - Status: rejected/regressed. Do not upload `zbuf640h360` or `zbufstock` next without a fresh reason; reducing z-buffer height is now suspect.
+  - Recovery performed: restored `tlbpages58` with short filename staging as documented above.
 
 - 2026-05-17 `tlbpages58` 007-label stage-memory/TLB-cache diagnostic, previous hardware diagnostic:
   - SC64 reports direct-ROM mode with EEPROM 4k. The active console ROM is:
@@ -35,7 +46,7 @@ Date: 2026-05-08
   - User hardware feedback: Wreck is clean and runs slow, so the in-game 480i path is still active. Hotel's rainbow/prism effect changed, Volcano now has a new lower-screen navy-blue flash, and Boat intro appears to freeze slightly sooner. Everything else is effectively the same, so Party/Credits/City and the broader level matrix are not fixed.
   - Interpretation: `tlbpages58` is an informative partial miss. The changed corruption shape implies TLB/stage-memory placement contributes, but it is not the root fix.
   - Follow-up result: `tlbpages58_camviewstock_007label` was tested after this and the user reported everything else was the same. Treat stock-camera viewport reverts as deprioritized unless new evidence appears.
-  - Current follow-up is the active `zbuf640hstock` candidate above.
+  - Current follow-up is the short-name restore documented above.
 
 - 2026-05-17 `tlb806b6_camviewstock` 007-label stock-camera fallback, previous loaded diagnostic:
   - Previous direct-ROM mode with EEPROM 4k. The ROM was:
