@@ -1,0 +1,1170 @@
+[
+  {
+    "rom": "artifacts\\generated\\stage_probes\\t8040vmenuscales\\p00bzr.z64",
+    "elapsed": 38.86,
+    "main_window_seen": true,
+    "main_window": {
+      "hwnd": 16580842,
+      "title": "gopher64"
+    },
+    "key_taps": 0,
+    "scripted_key_events": 0,
+    "input_events_total": 0,
+    "input_events_consumed": 0,
+    "exited_before_timeout": false,
+    "exit_code_before_timeout": null,
+    "stdout_path": "reports\\smoke\\p00bzr.stdout.txt",
+    "stderr_path": "reports\\smoke\\p00bzr.stderr.txt",
+    "stdout_bytes": 0,
+    "stderr_bytes": 2666,
+    "marker_counts": {},
+    "stderr_tail": [
+      "[WARN]: Stalled compile (compute, c36377373cb79785): thread 0 - 36397.600 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (compute, 1cbd9189b0a23679): thread 0 - 63863.900 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (compute, 7e74068a497f23c2): thread 0 - 1667413.000 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (compute, 5949a1b688b6ff72): thread 0 - 96004.700 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (compute, 35f88fc5fb45ef46): thread 0 - 71774.200 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (compute, bd9293d0d50b3e8b): thread 0 - 96890.000 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, e3b76ed8c30a5cc1): thread 0 - 23584.100 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, b178544ed4416cd2): thread 0 - 13607.400 us (mode: sync, success: yes)."
+    ],
+    "captures": [
+      {
+        "path": "diagnostics\\captures\\gopher\\t8040vmenuscales_problem_stages_20260517\\p00bzr_t008p0s.png",
+        "returncode": 0,
+        "capture_method": "ffmpeg_gdigrab_desktop",
+        "stderr_tail": [],
+        "previous_error": {
+          "path": "diagnostics\\captures\\gopher\\t8040vmenuscales_problem_stages_20260517\\p00bzr_t008p0s.png",
+          "returncode": 0,
+          "capture_method": "ffmpeg_gdigrab_title",
+          "stderr_tail": []
+        },
+        "window_rect": {
+          "left": 96,
+          "top": 96,
+          "right": 752,
+          "bottom": 615,
+          "width": 656,
+          "height": 519
+        },
+        "window_stats": {
+          "crop_box": [
+            96,
+            96,
+            752,
+            615
+          ],
+          "mean_luma": 4.04,
+          "stddev_luma": 13.83,
+          "nonblack_ratio": 0.0978,
+          "bright_ratio": 0.0109
+        },
+        "elapsed": 8.09
+      },
+      {
+        "path": "diagnostics\\captures\\gopher\\t8040vmenuscales_problem_stages_20260517\\p00bzr_t020p0s.png",
+        "returncode": 0,
+        "capture_method": "ffmpeg_gdigrab_title",
+        "stderr_tail": [],
+        "window_rect": {
+          "left": 0,
+          "top": 0,
+          "right": 640,
+          "bottom": 480,
+          "width": 640,
+          "height": 480
+        },
+        "window_stats": {
+          "crop_box": [
+            0,
+            0,
+            640,
+            480
+          ],
+          "mean_luma": 94.88,
+          "stddev_luma": 85.3,
+          "nonblack_ratio": 0.6155,
+          "bright_ratio": 0.5766
+        },
+        "elapsed": 20.05
+      },
+      {
+        "path": "diagnostics\\captures\\gopher\\t8040vmenuscales_problem_stages_20260517\\p00bzr_t032p0s.png",
+        "returncode": 0,
+        "capture_method": "ffmpeg_gdigrab_title",
+        "stderr_tail": [],
+        "window_rect": {
+          "left": 0,
+          "top": 0,
+          "right": 640,
+          "bottom": 480,
+          "width": 640,
+          "height": 480
+        },
+        "window_stats": {
+          "crop_box": [
+            0,
+            0,
+            640,
+            480
+          ],
+          "mean_luma": 174.63,
+          "stddev_luma": 63.58,
+          "nonblack_ratio": 0.8952,
+          "bright_ratio": 0.8952
+        },
+        "elapsed": 32.08
+      }
+    ],
+    "capture": {
+      "path": "diagnostics\\captures\\gopher\\t8040vmenuscales_problem_stages_20260517\\p00bzr_final.png",
+      "returncode": 0,
+      "capture_method": "ffmpeg_gdigrab_title",
+      "stderr_tail": [],
+      "window_rect": {
+        "left": 0,
+        "top": 0,
+        "right": 640,
+        "bottom": 480,
+        "width": 640,
+        "height": 480
+      },
+      "window_stats": {
+        "crop_box": [
+          0,
+          0,
+          640,
+          480
+        ],
+        "mean_luma": 170.66,
+        "stddev_luma": 68.03,
+        "nonblack_ratio": 0.8855,
+        "bright_ratio": 0.8726
+      },
+      "elapsed": 38.86
+    }
+  },
+  {
+    "rom": "artifacts\\generated\\stage_probes\\t8040vmenuscales\\p01pty.z64",
+    "elapsed": 38.85,
+    "main_window_seen": true,
+    "main_window": {
+      "hwnd": 16646378,
+      "title": "gopher64"
+    },
+    "key_taps": 0,
+    "scripted_key_events": 0,
+    "input_events_total": 0,
+    "input_events_consumed": 0,
+    "exited_before_timeout": false,
+    "exit_code_before_timeout": null,
+    "stdout_path": "reports\\smoke\\p01pty.stdout.txt",
+    "stderr_path": "reports\\smoke\\p01pty.stderr.txt",
+    "stdout_bytes": 0,
+    "stderr_bytes": 2877,
+    "marker_counts": {},
+    "stderr_tail": [
+      "[WARN]: Stalled compile (compute, 7e74068a497f23c2): thread 0 - 1495131.700 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (compute, 5949a1b688b6ff72): thread 0 - 112687.200 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (compute, 35f88fc5fb45ef46): thread 0 - 90951.200 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (compute, bd9293d0d50b3e8b): thread 0 - 132258.300 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (compute, bf3dfa0bf27d196e): thread 0 - 5245.900 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, e3b76ed8c30a5cc1): thread 0 - 53336.400 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, 9d0b2ccf3e83a80b): thread 0 - 5975.800 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, b178544ed4416cd2): thread 0 - 20278.300 us (mode: sync, success: yes)."
+    ],
+    "captures": [
+      {
+        "path": "diagnostics\\captures\\gopher\\t8040vmenuscales_problem_stages_20260517\\p01pty_t008p0s.png",
+        "returncode": 0,
+        "capture_method": "ffmpeg_gdigrab_desktop",
+        "stderr_tail": [],
+        "previous_error": {
+          "path": "diagnostics\\captures\\gopher\\t8040vmenuscales_problem_stages_20260517\\p01pty_t008p0s.png",
+          "returncode": 0,
+          "capture_method": "ffmpeg_gdigrab_title",
+          "stderr_tail": []
+        },
+        "window_rect": {
+          "left": 96,
+          "top": 96,
+          "right": 752,
+          "bottom": 615,
+          "width": 656,
+          "height": 519
+        },
+        "window_stats": {
+          "crop_box": [
+            96,
+            96,
+            752,
+            615
+          ],
+          "mean_luma": 21.8,
+          "stddev_luma": 18.66,
+          "nonblack_ratio": 0.7315,
+          "bright_ratio": 0.0386
+        },
+        "elapsed": 8.08
+      },
+      {
+        "path": "diagnostics\\captures\\gopher\\t8040vmenuscales_problem_stages_20260517\\p01pty_t020p0s.png",
+        "returncode": 0,
+        "capture_method": "ffmpeg_gdigrab_title",
+        "stderr_tail": [],
+        "window_rect": {
+          "left": 0,
+          "top": 0,
+          "right": 640,
+          "bottom": 480,
+          "width": 640,
+          "height": 480
+        },
+        "window_stats": {
+          "crop_box": [
+            0,
+            0,
+            640,
+            480
+          ],
+          "mean_luma": 24.28,
+          "stddev_luma": 19.89,
+          "nonblack_ratio": 0.6996,
+          "bright_ratio": 0.1383
+        },
+        "elapsed": 20.05
+      },
+      {
+        "path": "diagnostics\\captures\\gopher\\t8040vmenuscales_problem_stages_20260517\\p01pty_t032p0s.png",
+        "returncode": 0,
+        "capture_method": "ffmpeg_gdigrab_title",
+        "stderr_tail": [],
+        "window_rect": {
+          "left": 0,
+          "top": 0,
+          "right": 640,
+          "bottom": 480,
+          "width": 640,
+          "height": 480
+        },
+        "window_stats": {
+          "crop_box": [
+            0,
+            0,
+            640,
+            480
+          ],
+          "mean_luma": 47.97,
+          "stddev_luma": 34.38,
+          "nonblack_ratio": 0.8854,
+          "bright_ratio": 0.4055
+        },
+        "elapsed": 32.09
+      }
+    ],
+    "capture": {
+      "path": "diagnostics\\captures\\gopher\\t8040vmenuscales_problem_stages_20260517\\p01pty_final.png",
+      "returncode": 0,
+      "capture_method": "ffmpeg_gdigrab_title",
+      "stderr_tail": [],
+      "window_rect": {
+        "left": 0,
+        "top": 0,
+        "right": 640,
+        "bottom": 480,
+        "width": 640,
+        "height": 480
+      },
+      "window_stats": {
+        "crop_box": [
+          0,
+          0,
+          640,
+          480
+        ],
+        "mean_luma": 48.0,
+        "stddev_luma": 34.4,
+        "nonblack_ratio": 0.8858,
+        "bright_ratio": 0.4056
+      },
+      "elapsed": 38.85
+    }
+  },
+  {
+    "rom": "artifacts\\generated\\stage_probes\\t8040vmenuscales\\p04hot.z64",
+    "elapsed": 38.81,
+    "main_window_seen": true,
+    "main_window": {
+      "hwnd": 16711914,
+      "title": "gopher64"
+    },
+    "key_taps": 0,
+    "scripted_key_events": 0,
+    "input_events_total": 0,
+    "input_events_consumed": 0,
+    "exited_before_timeout": false,
+    "exit_code_before_timeout": null,
+    "stdout_path": "reports\\smoke\\p04hot.stdout.txt",
+    "stderr_path": "reports\\smoke\\p04hot.stderr.txt",
+    "stdout_bytes": 0,
+    "stderr_bytes": 2877,
+    "marker_counts": {},
+    "stderr_tail": [
+      "[WARN]: Stalled compile (compute, 7e74068a497f23c2): thread 0 - 1487367.600 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (compute, 5949a1b688b6ff72): thread 0 - 135395.200 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (compute, 35f88fc5fb45ef46): thread 0 - 91043.100 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (compute, bd9293d0d50b3e8b): thread 0 - 127399.200 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (compute, bf3dfa0bf27d196e): thread 0 - 8562.400 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, e3b76ed8c30a5cc1): thread 0 - 35163.200 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, 9d0b2ccf3e83a80b): thread 0 - 6768.300 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, b178544ed4416cd2): thread 0 - 22961.500 us (mode: sync, success: yes)."
+    ],
+    "captures": [
+      {
+        "path": "diagnostics\\captures\\gopher\\t8040vmenuscales_problem_stages_20260517\\p04hot_t008p0s.png",
+        "returncode": 0,
+        "capture_method": "ffmpeg_gdigrab_desktop",
+        "stderr_tail": [],
+        "previous_error": {
+          "path": "diagnostics\\captures\\gopher\\t8040vmenuscales_problem_stages_20260517\\p04hot_t008p0s.png",
+          "returncode": 0,
+          "capture_method": "ffmpeg_gdigrab_title",
+          "stderr_tail": []
+        },
+        "window_rect": {
+          "left": 96,
+          "top": 96,
+          "right": 752,
+          "bottom": 615,
+          "width": 656,
+          "height": 519
+        },
+        "window_stats": {
+          "crop_box": [
+            96,
+            96,
+            752,
+            615
+          ],
+          "mean_luma": 4.05,
+          "stddev_luma": 13.83,
+          "nonblack_ratio": 0.0978,
+          "bright_ratio": 0.0109
+        },
+        "elapsed": 8.08
+      },
+      {
+        "path": "diagnostics\\captures\\gopher\\t8040vmenuscales_problem_stages_20260517\\p04hot_t020p0s.png",
+        "returncode": 0,
+        "capture_method": "ffmpeg_gdigrab_title",
+        "stderr_tail": [],
+        "window_rect": {
+          "left": 0,
+          "top": 0,
+          "right": 640,
+          "bottom": 480,
+          "width": 640,
+          "height": 480
+        },
+        "window_stats": {
+          "crop_box": [
+            0,
+            0,
+            640,
+            480
+          ],
+          "mean_luma": 50.91,
+          "stddev_luma": 45.61,
+          "nonblack_ratio": 0.7235,
+          "bright_ratio": 0.4263
+        },
+        "elapsed": 20.01
+      },
+      {
+        "path": "diagnostics\\captures\\gopher\\t8040vmenuscales_problem_stages_20260517\\p04hot_t032p0s.png",
+        "returncode": 0,
+        "capture_method": "ffmpeg_gdigrab_title",
+        "stderr_tail": [],
+        "window_rect": {
+          "left": 0,
+          "top": 0,
+          "right": 640,
+          "bottom": 480,
+          "width": 640,
+          "height": 480
+        },
+        "window_stats": {
+          "crop_box": [
+            0,
+            0,
+            640,
+            480
+          ],
+          "mean_luma": 59.58,
+          "stddev_luma": 30.61,
+          "nonblack_ratio": 0.8944,
+          "bright_ratio": 0.7118
+        },
+        "elapsed": 32.06
+      }
+    ],
+    "capture": {
+      "path": "diagnostics\\captures\\gopher\\t8040vmenuscales_problem_stages_20260517\\p04hot_final.png",
+      "returncode": 0,
+      "capture_method": "ffmpeg_gdigrab_title",
+      "stderr_tail": [],
+      "window_rect": {
+        "left": 0,
+        "top": 0,
+        "right": 640,
+        "bottom": 480,
+        "width": 640,
+        "height": 480
+      },
+      "window_stats": {
+        "crop_box": [
+          0,
+          0,
+          640,
+          480
+        ],
+        "mean_luma": 61.01,
+        "stddev_luma": 30.16,
+        "nonblack_ratio": 0.895,
+        "bright_ratio": 0.7377
+      },
+      "elapsed": 38.81
+    }
+  },
+  {
+    "rom": "artifacts\\generated\\stage_probes\\t8040vmenuscales\\p07twr.z64",
+    "elapsed": 38.86,
+    "main_window_seen": true,
+    "main_window": {
+      "hwnd": 9371886,
+      "title": "gopher64"
+    },
+    "key_taps": 0,
+    "scripted_key_events": 0,
+    "input_events_total": 0,
+    "input_events_consumed": 0,
+    "exited_before_timeout": false,
+    "exit_code_before_timeout": null,
+    "stdout_path": "reports\\smoke\\p07twr.stdout.txt",
+    "stderr_path": "reports\\smoke\\p07twr.stderr.txt",
+    "stdout_bytes": 0,
+    "stderr_bytes": 2877,
+    "marker_counts": {},
+    "stderr_tail": [
+      "[WARN]: Stalled compile (compute, 7e74068a497f23c2): thread 0 - 1492460.400 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (compute, 5949a1b688b6ff72): thread 0 - 108703.700 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (compute, 35f88fc5fb45ef46): thread 0 - 87229.900 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (compute, bd9293d0d50b3e8b): thread 0 - 122655.200 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (compute, bf3dfa0bf27d196e): thread 0 - 8940.700 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, e3b76ed8c30a5cc1): thread 0 - 39516.000 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, 9d0b2ccf3e83a80b): thread 0 - 5814.700 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, b178544ed4416cd2): thread 0 - 19270.000 us (mode: sync, success: yes)."
+    ],
+    "captures": [
+      {
+        "path": "diagnostics\\captures\\gopher\\t8040vmenuscales_problem_stages_20260517\\p07twr_t008p0s.png",
+        "returncode": 0,
+        "capture_method": "ffmpeg_gdigrab_desktop",
+        "stderr_tail": [],
+        "previous_error": {
+          "path": "diagnostics\\captures\\gopher\\t8040vmenuscales_problem_stages_20260517\\p07twr_t008p0s.png",
+          "returncode": 0,
+          "capture_method": "ffmpeg_gdigrab_title",
+          "stderr_tail": []
+        },
+        "window_rect": {
+          "left": 96,
+          "top": 96,
+          "right": 752,
+          "bottom": 615,
+          "width": 656,
+          "height": 519
+        },
+        "window_stats": {
+          "crop_box": [
+            96,
+            96,
+            752,
+            615
+          ],
+          "mean_luma": 29.63,
+          "stddev_luma": 58.33,
+          "nonblack_ratio": 0.4099,
+          "bright_ratio": 0.1271
+        },
+        "elapsed": 8.02
+      },
+      {
+        "path": "diagnostics\\captures\\gopher\\t8040vmenuscales_problem_stages_20260517\\p07twr_t020p0s.png",
+        "returncode": 0,
+        "capture_method": "ffmpeg_gdigrab_title",
+        "stderr_tail": [],
+        "window_rect": {
+          "left": 0,
+          "top": 0,
+          "right": 640,
+          "bottom": 480,
+          "width": 640,
+          "height": 480
+        },
+        "window_stats": {
+          "crop_box": [
+            0,
+            0,
+            640,
+            480
+          ],
+          "mean_luma": 30.42,
+          "stddev_luma": 63.04,
+          "nonblack_ratio": 0.3529,
+          "bright_ratio": 0.1352
+        },
+        "elapsed": 20.06
+      },
+      {
+        "path": "diagnostics\\captures\\gopher\\t8040vmenuscales_problem_stages_20260517\\p07twr_t032p0s.png",
+        "returncode": 0,
+        "capture_method": "ffmpeg_gdigrab_title",
+        "stderr_tail": [],
+        "window_rect": {
+          "left": 0,
+          "top": 0,
+          "right": 640,
+          "bottom": 480,
+          "width": 640,
+          "height": 480
+        },
+        "window_stats": {
+          "crop_box": [
+            0,
+            0,
+            640,
+            480
+          ],
+          "mean_luma": 17.93,
+          "stddev_luma": 39.11,
+          "nonblack_ratio": 0.5344,
+          "bright_ratio": 0.0442
+        },
+        "elapsed": 32.08
+      }
+    ],
+    "capture": {
+      "path": "diagnostics\\captures\\gopher\\t8040vmenuscales_problem_stages_20260517\\p07twr_final.png",
+      "returncode": 0,
+      "capture_method": "ffmpeg_gdigrab_title",
+      "stderr_tail": [],
+      "window_rect": {
+        "left": 0,
+        "top": 0,
+        "right": 640,
+        "bottom": 480,
+        "width": 640,
+        "height": 480
+      },
+      "window_stats": {
+        "crop_box": [
+          0,
+          0,
+          640,
+          480
+        ],
+        "mean_luma": 15.38,
+        "stddev_luma": 38.04,
+        "nonblack_ratio": 0.3247,
+        "bright_ratio": 0.0423
+      },
+      "elapsed": 38.86
+    }
+  },
+  {
+    "rom": "artifacts\\generated\\stage_probes\\t8040vmenuscales\\p08cty.z64",
+    "elapsed": 38.87,
+    "main_window_seen": true,
+    "main_window": {
+      "hwnd": 9437422,
+      "title": "gopher64"
+    },
+    "key_taps": 0,
+    "scripted_key_events": 0,
+    "input_events_total": 0,
+    "input_events_consumed": 0,
+    "exited_before_timeout": false,
+    "exit_code_before_timeout": null,
+    "stdout_path": "reports\\smoke\\p08cty.stdout.txt",
+    "stderr_path": "reports\\smoke\\p08cty.stderr.txt",
+    "stdout_bytes": 0,
+    "stderr_bytes": 2877,
+    "marker_counts": {},
+    "stderr_tail": [
+      "[WARN]: Stalled compile (compute, 7e74068a497f23c2): thread 0 - 1573451.000 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (compute, 5949a1b688b6ff72): thread 0 - 123404.000 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (compute, 35f88fc5fb45ef46): thread 0 - 91093.700 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (compute, bd9293d0d50b3e8b): thread 0 - 141186.100 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (compute, bf3dfa0bf27d196e): thread 0 - 5563.600 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, e3b76ed8c30a5cc1): thread 0 - 32020.600 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, 9d0b2ccf3e83a80b): thread 0 - 6868.500 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, b178544ed4416cd2): thread 0 - 20229.100 us (mode: sync, success: yes)."
+    ],
+    "captures": [
+      {
+        "path": "diagnostics\\captures\\gopher\\t8040vmenuscales_problem_stages_20260517\\p08cty_t008p0s.png",
+        "returncode": 0,
+        "capture_method": "ffmpeg_gdigrab_desktop",
+        "stderr_tail": [],
+        "previous_error": {
+          "path": "diagnostics\\captures\\gopher\\t8040vmenuscales_problem_stages_20260517\\p08cty_t008p0s.png",
+          "returncode": 0,
+          "capture_method": "ffmpeg_gdigrab_title",
+          "stderr_tail": []
+        },
+        "window_rect": {
+          "left": 96,
+          "top": 96,
+          "right": 752,
+          "bottom": 615,
+          "width": 656,
+          "height": 519
+        },
+        "window_stats": {
+          "crop_box": [
+            96,
+            96,
+            752,
+            615
+          ],
+          "mean_luma": 41.24,
+          "stddev_luma": 50.72,
+          "nonblack_ratio": 0.5342,
+          "bright_ratio": 0.3297
+        },
+        "elapsed": 8.1
+      },
+      {
+        "path": "diagnostics\\captures\\gopher\\t8040vmenuscales_problem_stages_20260517\\p08cty_t020p0s.png",
+        "returncode": 0,
+        "capture_method": "ffmpeg_gdigrab_title",
+        "stderr_tail": [],
+        "window_rect": {
+          "left": 0,
+          "top": 0,
+          "right": 640,
+          "bottom": 480,
+          "width": 640,
+          "height": 480
+        },
+        "window_stats": {
+          "crop_box": [
+            0,
+            0,
+            640,
+            480
+          ],
+          "mean_luma": 41.68,
+          "stddev_luma": 52.57,
+          "nonblack_ratio": 0.4839,
+          "bright_ratio": 0.3534
+        },
+        "elapsed": 20.06
+      },
+      {
+        "path": "diagnostics\\captures\\gopher\\t8040vmenuscales_problem_stages_20260517\\p08cty_t032p0s.png",
+        "returncode": 0,
+        "capture_method": "ffmpeg_gdigrab_title",
+        "stderr_tail": [],
+        "window_rect": {
+          "left": 0,
+          "top": 0,
+          "right": 640,
+          "bottom": 480,
+          "width": 640,
+          "height": 480
+        },
+        "window_stats": {
+          "crop_box": [
+            0,
+            0,
+            640,
+            480
+          ],
+          "mean_luma": 42.82,
+          "stddev_luma": 51.52,
+          "nonblack_ratio": 0.5286,
+          "bright_ratio": 0.3495
+        },
+        "elapsed": 32.08
+      }
+    ],
+    "capture": {
+      "path": "diagnostics\\captures\\gopher\\t8040vmenuscales_problem_stages_20260517\\p08cty_final.png",
+      "returncode": 0,
+      "capture_method": "ffmpeg_gdigrab_title",
+      "stderr_tail": [],
+      "window_rect": {
+        "left": 0,
+        "top": 0,
+        "right": 640,
+        "bottom": 480,
+        "width": 640,
+        "height": 480
+      },
+      "window_stats": {
+        "crop_box": [
+          0,
+          0,
+          640,
+          480
+        ],
+        "mean_luma": 44.62,
+        "stddev_luma": 52.37,
+        "nonblack_ratio": 0.5518,
+        "bright_ratio": 0.3598
+      },
+      "elapsed": 38.87
+    }
+  },
+  {
+    "rom": "artifacts\\generated\\stage_probes\\t8040vmenuscales\\p09bot.z64",
+    "elapsed": 38.86,
+    "main_window_seen": true,
+    "main_window": {
+      "hwnd": 9502958,
+      "title": "gopher64"
+    },
+    "key_taps": 0,
+    "scripted_key_events": 0,
+    "input_events_total": 0,
+    "input_events_consumed": 0,
+    "exited_before_timeout": false,
+    "exit_code_before_timeout": null,
+    "stdout_path": "reports\\smoke\\p09bot.stdout.txt",
+    "stderr_path": "reports\\smoke\\p09bot.stderr.txt",
+    "stdout_bytes": 0,
+    "stderr_bytes": 2983,
+    "marker_counts": {},
+    "stderr_tail": [
+      "[WARN]: Stalled compile (compute, 5949a1b688b6ff72): thread 0 - 92470.400 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (compute, 35f88fc5fb45ef46): thread 0 - 69830.500 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (compute, bd9293d0d50b3e8b): thread 0 - 97748.000 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, d177283513a5a0f7): thread 0 - 36414.700 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, 5b01cde7ced266c2): thread 0 - 7468.900 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, b178554ed4416e85): thread 0 - 16243.100 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, e3b76ed8c30a5cc1): thread 0 - 24893.700 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, b178544ed4416cd2): thread 0 - 17266.100 us (mode: sync, success: yes)."
+    ],
+    "captures": [
+      {
+        "path": "diagnostics\\captures\\gopher\\t8040vmenuscales_problem_stages_20260517\\p09bot_t008p0s.png",
+        "returncode": 0,
+        "capture_method": "ffmpeg_gdigrab_desktop",
+        "stderr_tail": [],
+        "previous_error": {
+          "path": "diagnostics\\captures\\gopher\\t8040vmenuscales_problem_stages_20260517\\p09bot_t008p0s.png",
+          "returncode": 0,
+          "capture_method": "ffmpeg_gdigrab_title",
+          "stderr_tail": []
+        },
+        "window_rect": {
+          "left": 96,
+          "top": 96,
+          "right": 752,
+          "bottom": 615,
+          "width": 656,
+          "height": 519
+        },
+        "window_stats": {
+          "crop_box": [
+            96,
+            96,
+            752,
+            615
+          ],
+          "mean_luma": 15.23,
+          "stddev_luma": 19.75,
+          "nonblack_ratio": 0.4687,
+          "bright_ratio": 0.0524
+        },
+        "elapsed": 8.01
+      },
+      {
+        "path": "diagnostics\\captures\\gopher\\t8040vmenuscales_problem_stages_20260517\\p09bot_t020p0s.png",
+        "returncode": 0,
+        "capture_method": "ffmpeg_gdigrab_title",
+        "stderr_tail": [],
+        "window_rect": {
+          "left": 0,
+          "top": 0,
+          "right": 640,
+          "bottom": 480,
+          "width": 640,
+          "height": 480
+        },
+        "window_stats": {
+          "crop_box": [
+            0,
+            0,
+            640,
+            480
+          ],
+          "mean_luma": 12.57,
+          "stddev_luma": 16.82,
+          "nonblack_ratio": 0.4164,
+          "bright_ratio": 0.0389
+        },
+        "elapsed": 20.04
+      },
+      {
+        "path": "diagnostics\\captures\\gopher\\t8040vmenuscales_problem_stages_20260517\\p09bot_t032p0s.png",
+        "returncode": 0,
+        "capture_method": "ffmpeg_gdigrab_title",
+        "stderr_tail": [],
+        "window_rect": {
+          "left": 0,
+          "top": 0,
+          "right": 640,
+          "bottom": 480,
+          "width": 640,
+          "height": 480
+        },
+        "window_stats": {
+          "crop_box": [
+            0,
+            0,
+            640,
+            480
+          ],
+          "mean_luma": 13.2,
+          "stddev_luma": 13.8,
+          "nonblack_ratio": 0.5397,
+          "bright_ratio": 0.0389
+        },
+        "elapsed": 32.07
+      }
+    ],
+    "capture": {
+      "path": "diagnostics\\captures\\gopher\\t8040vmenuscales_problem_stages_20260517\\p09bot_final.png",
+      "returncode": 0,
+      "capture_method": "ffmpeg_gdigrab_title",
+      "stderr_tail": [],
+      "window_rect": {
+        "left": 0,
+        "top": 0,
+        "right": 640,
+        "bottom": 480,
+        "width": 640,
+        "height": 480
+      },
+      "window_stats": {
+        "crop_box": [
+          0,
+          0,
+          640,
+          480
+        ],
+        "mean_luma": 12.0,
+        "stddev_luma": 13.52,
+        "nonblack_ratio": 0.4978,
+        "bright_ratio": 0.0211
+      },
+      "elapsed": 38.86
+    }
+  },
+  {
+    "rom": "artifacts\\generated\\stage_probes\\t8040vmenuscales\\p11vol.z64",
+    "elapsed": 38.79,
+    "main_window_seen": true,
+    "main_window": {
+      "hwnd": 9568494,
+      "title": "gopher64"
+    },
+    "key_taps": 0,
+    "scripted_key_events": 0,
+    "input_events_total": 0,
+    "input_events_consumed": 0,
+    "exited_before_timeout": false,
+    "exit_code_before_timeout": null,
+    "stdout_path": "reports\\smoke\\p11vol.stdout.txt",
+    "stderr_path": "reports\\smoke\\p11vol.stderr.txt",
+    "stdout_bytes": 0,
+    "stderr_bytes": 2877,
+    "marker_counts": {},
+    "stderr_tail": [
+      "[WARN]: Stalled compile (compute, 7e74068a497f23c2): thread 0 - 1434992.900 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (compute, 5949a1b688b6ff72): thread 0 - 100819.200 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (compute, 35f88fc5fb45ef46): thread 0 - 76120.900 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (compute, bd9293d0d50b3e8b): thread 0 - 123932.500 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (compute, bf3dfa0bf27d196e): thread 0 - 5950.700 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, e3b76ed8c30a5cc1): thread 0 - 36073.700 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, 9d0b2ccf3e83a80b): thread 0 - 9272.600 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, b178544ed4416cd2): thread 0 - 29181.100 us (mode: sync, success: yes)."
+    ],
+    "captures": [
+      {
+        "path": "diagnostics\\captures\\gopher\\t8040vmenuscales_problem_stages_20260517\\p11vol_t008p0s.png",
+        "returncode": 0,
+        "capture_method": "ffmpeg_gdigrab_desktop",
+        "stderr_tail": [],
+        "previous_error": {
+          "path": "diagnostics\\captures\\gopher\\t8040vmenuscales_problem_stages_20260517\\p11vol_t008p0s.png",
+          "returncode": 0,
+          "capture_method": "ffmpeg_gdigrab_title",
+          "stderr_tail": []
+        },
+        "window_rect": {
+          "left": 96,
+          "top": 96,
+          "right": 752,
+          "bottom": 615,
+          "width": 656,
+          "height": 519
+        },
+        "window_stats": {
+          "crop_box": [
+            96,
+            96,
+            752,
+            615
+          ],
+          "mean_luma": 4.05,
+          "stddev_luma": 13.83,
+          "nonblack_ratio": 0.0978,
+          "bright_ratio": 0.0109
+        },
+        "elapsed": 8.01
+      },
+      {
+        "path": "diagnostics\\captures\\gopher\\t8040vmenuscales_problem_stages_20260517\\p11vol_t020p0s.png",
+        "returncode": 0,
+        "capture_method": "ffmpeg_gdigrab_title",
+        "stderr_tail": [],
+        "window_rect": {
+          "left": 0,
+          "top": 0,
+          "right": 640,
+          "bottom": 480,
+          "width": 640,
+          "height": 480
+        },
+        "window_stats": {
+          "crop_box": [
+            0,
+            0,
+            640,
+            480
+          ],
+          "mean_luma": 37.78,
+          "stddev_luma": 40.58,
+          "nonblack_ratio": 0.7114,
+          "bright_ratio": 0.2749
+        },
+        "elapsed": 20.09
+      },
+      {
+        "path": "diagnostics\\captures\\gopher\\t8040vmenuscales_problem_stages_20260517\\p11vol_t032p0s.png",
+        "returncode": 0,
+        "capture_method": "ffmpeg_gdigrab_title",
+        "stderr_tail": [],
+        "window_rect": {
+          "left": 0,
+          "top": 0,
+          "right": 640,
+          "bottom": 480,
+          "width": 640,
+          "height": 480
+        },
+        "window_stats": {
+          "crop_box": [
+            0,
+            0,
+            640,
+            480
+          ],
+          "mean_luma": 36.35,
+          "stddev_luma": 27.91,
+          "nonblack_ratio": 0.8943,
+          "bright_ratio": 0.2648
+        },
+        "elapsed": 32.02
+      }
+    ],
+    "capture": {
+      "path": "diagnostics\\captures\\gopher\\t8040vmenuscales_problem_stages_20260517\\p11vol_final.png",
+      "returncode": 0,
+      "capture_method": "ffmpeg_gdigrab_title",
+      "stderr_tail": [],
+      "window_rect": {
+        "left": 0,
+        "top": 0,
+        "right": 640,
+        "bottom": 480,
+        "width": 640,
+        "height": 480
+      },
+      "window_stats": {
+        "crop_box": [
+          0,
+          0,
+          640,
+          480
+        ],
+        "mean_luma": 46.18,
+        "stddev_luma": 30.85,
+        "nonblack_ratio": 0.8526,
+        "bright_ratio": 0.4843
+      },
+      "elapsed": 38.79
+    }
+  },
+  {
+    "rom": "artifacts\\generated\\stage_probes\\t8040vmenuscales\\p13end.z64",
+    "elapsed": 38.86,
+    "main_window_seen": true,
+    "main_window": {
+      "hwnd": 9634030,
+      "title": "gopher64"
+    },
+    "key_taps": 0,
+    "scripted_key_events": 0,
+    "input_events_total": 0,
+    "input_events_consumed": 0,
+    "exited_before_timeout": false,
+    "exit_code_before_timeout": null,
+    "stdout_path": "reports\\smoke\\p13end.stdout.txt",
+    "stderr_path": "reports\\smoke\\p13end.stderr.txt",
+    "stdout_bytes": 0,
+    "stderr_bytes": 2876,
+    "marker_counts": {},
+    "stderr_tail": [
+      "[WARN]: Stalled compile (compute, 7e74068a497f23c2): thread 0 - 1307385.900 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (compute, 5949a1b688b6ff72): thread 0 - 100257.100 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (compute, 35f88fc5fb45ef46): thread 0 - 72306.300 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (compute, bd9293d0d50b3e8b): thread 0 - 99950.800 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (compute, bf3dfa0bf27d196e): thread 0 - 5007.600 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, e3b76ed8c30a5cc1): thread 0 - 28483.200 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, 9d0b2ccf3e83a80b): thread 0 - 6449.900 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, b178544ed4416cd2): thread 0 - 16190.700 us (mode: sync, success: yes)."
+    ],
+    "captures": [
+      {
+        "path": "diagnostics\\captures\\gopher\\t8040vmenuscales_problem_stages_20260517\\p13end_t008p0s.png",
+        "returncode": 0,
+        "capture_method": "ffmpeg_gdigrab_desktop",
+        "stderr_tail": [],
+        "previous_error": {
+          "path": "diagnostics\\captures\\gopher\\t8040vmenuscales_problem_stages_20260517\\p13end_t008p0s.png",
+          "returncode": 0,
+          "capture_method": "ffmpeg_gdigrab_title",
+          "stderr_tail": []
+        },
+        "window_rect": {
+          "left": 96,
+          "top": 96,
+          "right": 752,
+          "bottom": 615,
+          "width": 656,
+          "height": 519
+        },
+        "window_stats": {
+          "crop_box": [
+            96,
+            96,
+            752,
+            615
+          ],
+          "mean_luma": 90.9,
+          "stddev_luma": 62.91,
+          "nonblack_ratio": 0.7583,
+          "bright_ratio": 0.67
+        },
+        "elapsed": 8.08
+      },
+      {
+        "path": "diagnostics\\captures\\gopher\\t8040vmenuscales_problem_stages_20260517\\p13end_t020p0s.png",
+        "returncode": 0,
+        "capture_method": "ffmpeg_gdigrab_title",
+        "stderr_tail": [],
+        "window_rect": {
+          "left": 0,
+          "top": 0,
+          "right": 640,
+          "bottom": 480,
+          "width": 640,
+          "height": 480
+        },
+        "window_stats": {
+          "crop_box": [
+            0,
+            0,
+            640,
+            480
+          ],
+          "mean_luma": 92.04,
+          "stddev_luma": 64.75,
+          "nonblack_ratio": 0.732,
+          "bright_ratio": 0.7003
+        },
+        "elapsed": 20.04
+      },
+      {
+        "path": "diagnostics\\captures\\gopher\\t8040vmenuscales_problem_stages_20260517\\p13end_t032p0s.png",
+        "returncode": 0,
+        "capture_method": "ffmpeg_gdigrab_title",
+        "stderr_tail": [],
+        "window_rect": {
+          "left": 0,
+          "top": 0,
+          "right": 640,
+          "bottom": 480,
+          "width": 640,
+          "height": 480
+        },
+        "window_stats": {
+          "crop_box": [
+            0,
+            0,
+            640,
+            480
+          ],
+          "mean_luma": 118.92,
+          "stddev_luma": 53.22,
+          "nonblack_ratio": 0.8947,
+          "bright_ratio": 0.8737
+        },
+        "elapsed": 32.08
+      }
+    ],
+    "capture": {
+      "path": "diagnostics\\captures\\gopher\\t8040vmenuscales_problem_stages_20260517\\p13end_final.png",
+      "returncode": 0,
+      "capture_method": "ffmpeg_gdigrab_title",
+      "stderr_tail": [],
+      "window_rect": {
+        "left": 0,
+        "top": 0,
+        "right": 640,
+        "bottom": 480,
+        "width": 640,
+        "height": 480
+      },
+      "window_stats": {
+        "crop_box": [
+          0,
+          0,
+          640,
+          480
+        ],
+        "mean_luma": 115.36,
+        "stddev_luma": 47.66,
+        "nonblack_ratio": 0.8951,
+        "bright_ratio": 0.8902
+      },
+      "elapsed": 38.86
+    }
+  }
+]

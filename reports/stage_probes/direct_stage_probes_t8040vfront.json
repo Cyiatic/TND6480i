@@ -1,0 +1,681 @@
+{
+  "base": "artifacts\\generated\\t8040vfront.z64",
+  "base_md5": "2499c2070bf76a012d82ff532f48ef52",
+  "save": "artifacts\\generated\\t8040vfront.sav",
+  "out_dir": "artifacts\\generated\\stage_probes\\t8040vfront",
+  "purpose": "Direct-boot per-stage probes to reduce manual hardware menu testing.",
+  "outputs": [
+    {
+      "level": {
+        "index": 0,
+        "short": "bzr",
+        "name": "Bazaar",
+        "stage_id": 33,
+        "ge_slot": "Dam"
+      },
+      "rom": "artifacts\\generated\\stage_probes\\t8040vfront\\p00bzr.z64",
+      "md5": "d14b62837447379032f51311a3ce7c38",
+      "header_crc": "87953099 711598A1",
+      "saves": [
+        "artifacts\\generated\\stage_probes\\t8040vfront\\p00bzr.sav",
+        "artifacts\\generated\\stage_probes\\t8040vfront\\p00bzr.eep"
+      ],
+      "patches": [
+        {
+          "offset": "0x6C94",
+          "old": "0x3C058003",
+          "new": "0x3C018002",
+          "note": "lui at, 0x8002"
+        },
+        {
+          "offset": "0x6C98",
+          "old": "0x24A59104",
+          "new": "0x24020021",
+          "note": "addiu v0, zero, <stage>"
+        },
+        {
+          "offset": "0x6C9C",
+          "old": "0x0C0029A8",
+          "new": "0xAC2241A8",
+          "note": "sw v0, g_StageNum"
+        },
+        {
+          "offset": "0x6CA0",
+          "old": "0x24040001",
+          "new": "0x1000000E",
+          "note": "b after -level_ token parser"
+        },
+        {
+          "offset": "0x6CA4",
+          "old": "0x1040000D",
+          "new": "0x00000000",
+          "note": "nop"
+        }
+      ]
+    },
+    {
+      "level": {
+        "index": 1,
+        "short": "pty",
+        "name": "Party",
+        "stage_id": 34,
+        "ge_slot": "Facility"
+      },
+      "rom": "artifacts\\generated\\stage_probes\\t8040vfront\\p01pty.z64",
+      "md5": "fa147626182a26cedf4f3a7d3de26765",
+      "header_crc": "87953099 78BDDCA1",
+      "saves": [
+        "artifacts\\generated\\stage_probes\\t8040vfront\\p01pty.sav",
+        "artifacts\\generated\\stage_probes\\t8040vfront\\p01pty.eep"
+      ],
+      "patches": [
+        {
+          "offset": "0x6C94",
+          "old": "0x3C058003",
+          "new": "0x3C018002",
+          "note": "lui at, 0x8002"
+        },
+        {
+          "offset": "0x6C98",
+          "old": "0x24A59104",
+          "new": "0x24020022",
+          "note": "addiu v0, zero, <stage>"
+        },
+        {
+          "offset": "0x6C9C",
+          "old": "0x0C0029A8",
+          "new": "0xAC2241A8",
+          "note": "sw v0, g_StageNum"
+        },
+        {
+          "offset": "0x6CA0",
+          "old": "0x24040001",
+          "new": "0x1000000E",
+          "note": "b after -level_ token parser"
+        },
+        {
+          "offset": "0x6CA4",
+          "old": "0x1040000D",
+          "new": "0x00000000",
+          "note": "nop"
+        }
+      ]
+    },
+    {
+      "level": {
+        "index": 2,
+        "short": "lab",
+        "name": "Labs",
+        "stage_id": 35,
+        "ge_slot": "Runway"
+      },
+      "rom": "artifacts\\generated\\stage_probes\\t8040vfront\\p02lab.z64",
+      "md5": "e734869b4b38998a68147f272613077f",
+      "header_crc": "87953099 59FDFC5C",
+      "saves": [
+        "artifacts\\generated\\stage_probes\\t8040vfront\\p02lab.sav",
+        "artifacts\\generated\\stage_probes\\t8040vfront\\p02lab.eep"
+      ],
+      "patches": [
+        {
+          "offset": "0x6C94",
+          "old": "0x3C058003",
+          "new": "0x3C018002",
+          "note": "lui at, 0x8002"
+        },
+        {
+          "offset": "0x6C98",
+          "old": "0x24A59104",
+          "new": "0x24020023",
+          "note": "addiu v0, zero, <stage>"
+        },
+        {
+          "offset": "0x6C9C",
+          "old": "0x0C0029A8",
+          "new": "0xAC2241A8",
+          "note": "sw v0, g_StageNum"
+        },
+        {
+          "offset": "0x6CA0",
+          "old": "0x24040001",
+          "new": "0x1000000E",
+          "note": "b after -level_ token parser"
+        },
+        {
+          "offset": "0x6CA4",
+          "old": "0x1040000D",
+          "new": "0x00000000",
+          "note": "nop"
+        }
+      ]
+    },
+    {
+      "level": {
+        "index": 3,
+        "short": "prs",
+        "name": "Press",
+        "stage_id": 36,
+        "ge_slot": "Surface 1"
+      },
+      "rom": "artifacts\\generated\\stage_probes\\t8040vfront\\p03prs.z64",
+      "md5": "f5e269c9a3932325a83b1c32bd9a36d8",
+      "header_crc": "87953161 FC7DDA01",
+      "saves": [
+        "artifacts\\generated\\stage_probes\\t8040vfront\\p03prs.sav",
+        "artifacts\\generated\\stage_probes\\t8040vfront\\p03prs.eep"
+      ],
+      "patches": [
+        {
+          "offset": "0x6C94",
+          "old": "0x3C058003",
+          "new": "0x3C018002",
+          "note": "lui at, 0x8002"
+        },
+        {
+          "offset": "0x6C98",
+          "old": "0x24A59104",
+          "new": "0x24020024",
+          "note": "addiu v0, zero, <stage>"
+        },
+        {
+          "offset": "0x6C9C",
+          "old": "0x0C0029A8",
+          "new": "0xAC2241A8",
+          "note": "sw v0, g_StageNum"
+        },
+        {
+          "offset": "0x6CA0",
+          "old": "0x24040001",
+          "new": "0x1000000E",
+          "note": "b after -level_ token parser"
+        },
+        {
+          "offset": "0x6CA4",
+          "old": "0x1040000D",
+          "new": "0x00000000",
+          "note": "nop"
+        }
+      ]
+    },
+    {
+      "level": {
+        "index": 4,
+        "short": "hot",
+        "name": "Hotel",
+        "stage_id": 9,
+        "ge_slot": "Bunker 1"
+      },
+      "rom": "artifacts\\generated\\stage_probes\\t8040vfront\\p04hot.z64",
+      "md5": "75a863026e9fe3a93896506389e761f5",
+      "header_crc": "879530A9 C652F1F1",
+      "saves": [
+        "artifacts\\generated\\stage_probes\\t8040vfront\\p04hot.sav",
+        "artifacts\\generated\\stage_probes\\t8040vfront\\p04hot.eep"
+      ],
+      "patches": [
+        {
+          "offset": "0x6C94",
+          "old": "0x3C058003",
+          "new": "0x3C018002",
+          "note": "lui at, 0x8002"
+        },
+        {
+          "offset": "0x6C98",
+          "old": "0x24A59104",
+          "new": "0x24020009",
+          "note": "addiu v0, zero, <stage>"
+        },
+        {
+          "offset": "0x6C9C",
+          "old": "0x0C0029A8",
+          "new": "0xAC2241A8",
+          "note": "sw v0, g_StageNum"
+        },
+        {
+          "offset": "0x6CA0",
+          "old": "0x24040001",
+          "new": "0x1000000E",
+          "note": "b after -level_ token parser"
+        },
+        {
+          "offset": "0x6CA4",
+          "old": "0x1040000D",
+          "new": "0x00000000",
+          "note": "nop"
+        }
+      ]
+    },
+    {
+      "level": {
+        "index": 5,
+        "short": "prk",
+        "name": "Parkhaus",
+        "stage_id": 20,
+        "ge_slot": "Silo"
+      },
+      "rom": "artifacts\\generated\\stage_probes\\t8040vfront\\p05prk.z64",
+      "md5": "9c397b3627aa5d77c4da6b5013b03013",
+      "header_crc": "879530A1 FDD2D8D0",
+      "saves": [
+        "artifacts\\generated\\stage_probes\\t8040vfront\\p05prk.sav",
+        "artifacts\\generated\\stage_probes\\t8040vfront\\p05prk.eep"
+      ],
+      "patches": [
+        {
+          "offset": "0x6C94",
+          "old": "0x3C058003",
+          "new": "0x3C018002",
+          "note": "lui at, 0x8002"
+        },
+        {
+          "offset": "0x6C98",
+          "old": "0x24A59104",
+          "new": "0x24020014",
+          "note": "addiu v0, zero, <stage>"
+        },
+        {
+          "offset": "0x6C9C",
+          "old": "0x0C0029A8",
+          "new": "0xAC2241A8",
+          "note": "sw v0, g_StageNum"
+        },
+        {
+          "offset": "0x6CA0",
+          "old": "0x24040001",
+          "new": "0x1000000E",
+          "note": "b after -level_ token parser"
+        },
+        {
+          "offset": "0x6CA4",
+          "old": "0x1040000D",
+          "new": "0x00000000",
+          "note": "nop"
+        }
+      ]
+    },
+    {
+      "level": {
+        "index": 6,
+        "short": "wrk",
+        "name": "Wreck",
+        "stage_id": 26,
+        "ge_slot": "Frigate"
+      },
+      "rom": "artifacts\\generated\\stage_probes\\t8040vfront\\p06wrk.z64",
+      "md5": "929d69887f7fb17f7e5a173cd89d4266",
+      "header_crc": "879530A9 1D14FF65",
+      "saves": [
+        "artifacts\\generated\\stage_probes\\t8040vfront\\p06wrk.sav",
+        "artifacts\\generated\\stage_probes\\t8040vfront\\p06wrk.eep"
+      ],
+      "patches": [
+        {
+          "offset": "0x6C94",
+          "old": "0x3C058003",
+          "new": "0x3C018002",
+          "note": "lui at, 0x8002"
+        },
+        {
+          "offset": "0x6C98",
+          "old": "0x24A59104",
+          "new": "0x2402001A",
+          "note": "addiu v0, zero, <stage>"
+        },
+        {
+          "offset": "0x6C9C",
+          "old": "0x0C0029A8",
+          "new": "0xAC2241A8",
+          "note": "sw v0, g_StageNum"
+        },
+        {
+          "offset": "0x6CA0",
+          "old": "0x24040001",
+          "new": "0x1000000E",
+          "note": "b after -level_ token parser"
+        },
+        {
+          "offset": "0x6CA4",
+          "old": "0x1040000D",
+          "new": "0x00000000",
+          "note": "nop"
+        }
+      ]
+    },
+    {
+      "level": {
+        "index": 7,
+        "short": "twr",
+        "name": "Tower",
+        "stage_id": 43,
+        "ge_slot": "Surface 2"
+      },
+      "rom": "artifacts\\generated\\stage_probes\\t8040vfront\\p07twr.z64",
+      "md5": "cc98d9d414beee3d12b10b999e08187b",
+      "header_crc": "87953169 4A316738",
+      "saves": [
+        "artifacts\\generated\\stage_probes\\t8040vfront\\p07twr.sav",
+        "artifacts\\generated\\stage_probes\\t8040vfront\\p07twr.eep"
+      ],
+      "patches": [
+        {
+          "offset": "0x6C94",
+          "old": "0x3C058003",
+          "new": "0x3C018002",
+          "note": "lui at, 0x8002"
+        },
+        {
+          "offset": "0x6C98",
+          "old": "0x24A59104",
+          "new": "0x2402002B",
+          "note": "addiu v0, zero, <stage>"
+        },
+        {
+          "offset": "0x6C9C",
+          "old": "0x0C0029A8",
+          "new": "0xAC2241A8",
+          "note": "sw v0, g_StageNum"
+        },
+        {
+          "offset": "0x6CA0",
+          "old": "0x24040001",
+          "new": "0x1000000E",
+          "note": "b after -level_ token parser"
+        },
+        {
+          "offset": "0x6CA4",
+          "old": "0x1040000D",
+          "new": "0x00000000",
+          "note": "nop"
+        }
+      ]
+    },
+    {
+      "level": {
+        "index": 8,
+        "short": "cty",
+        "name": "City",
+        "stage_id": 27,
+        "ge_slot": "Bunker 2"
+      },
+      "rom": "artifacts\\generated\\stage_probes\\t8040vfront\\p08cty.z64",
+      "md5": "ddf9f70267db0a48aac400de3626f4e1",
+      "header_crc": "879530A9 625D7045",
+      "saves": [
+        "artifacts\\generated\\stage_probes\\t8040vfront\\p08cty.sav",
+        "artifacts\\generated\\stage_probes\\t8040vfront\\p08cty.eep"
+      ],
+      "patches": [
+        {
+          "offset": "0x6C94",
+          "old": "0x3C058003",
+          "new": "0x3C018002",
+          "note": "lui at, 0x8002"
+        },
+        {
+          "offset": "0x6C98",
+          "old": "0x24A59104",
+          "new": "0x2402001B",
+          "note": "addiu v0, zero, <stage>"
+        },
+        {
+          "offset": "0x6C9C",
+          "old": "0x0C0029A8",
+          "new": "0xAC2241A8",
+          "note": "sw v0, g_StageNum"
+        },
+        {
+          "offset": "0x6CA0",
+          "old": "0x24040001",
+          "new": "0x1000000E",
+          "note": "b after -level_ token parser"
+        },
+        {
+          "offset": "0x6CA4",
+          "old": "0x1040000D",
+          "new": "0x00000000",
+          "note": "nop"
+        }
+      ]
+    },
+    {
+      "level": {
+        "index": 9,
+        "short": "bot",
+        "name": "Boat",
+        "stage_id": 22,
+        "ge_slot": "Statue"
+      },
+      "rom": "artifacts\\generated\\stage_probes\\t8040vfront\\p09bot.z64",
+      "md5": "4060fbde24d89b9d70c42f3c351f797d",
+      "header_crc": "879530A1 FFC37C51",
+      "saves": [
+        "artifacts\\generated\\stage_probes\\t8040vfront\\p09bot.sav",
+        "artifacts\\generated\\stage_probes\\t8040vfront\\p09bot.eep"
+      ],
+      "patches": [
+        {
+          "offset": "0x6C94",
+          "old": "0x3C058003",
+          "new": "0x3C018002",
+          "note": "lui at, 0x8002"
+        },
+        {
+          "offset": "0x6C98",
+          "old": "0x24A59104",
+          "new": "0x24020016",
+          "note": "addiu v0, zero, <stage>"
+        },
+        {
+          "offset": "0x6C9C",
+          "old": "0x0C0029A8",
+          "new": "0xAC2241A8",
+          "note": "sw v0, g_StageNum"
+        },
+        {
+          "offset": "0x6CA0",
+          "old": "0x24040001",
+          "new": "0x1000000E",
+          "note": "b after -level_ token parser"
+        },
+        {
+          "offset": "0x6CA4",
+          "old": "0x1040000D",
+          "new": "0x00000000",
+          "note": "nop"
+        }
+      ]
+    },
+    {
+      "level": {
+        "index": 10,
+        "short": "brg",
+        "name": "Bridge",
+        "stage_id": 24,
+        "ge_slot": "Archives"
+      },
+      "rom": "artifacts\\generated\\stage_probes\\t8040vfront\\p10brg.z64",
+      "md5": "119cf3e7688b0081867fd19633aa8574",
+      "header_crc": "879530A9 890BA185",
+      "saves": [
+        "artifacts\\generated\\stage_probes\\t8040vfront\\p10brg.sav",
+        "artifacts\\generated\\stage_probes\\t8040vfront\\p10brg.eep"
+      ],
+      "patches": [
+        {
+          "offset": "0x6C94",
+          "old": "0x3C058003",
+          "new": "0x3C018002",
+          "note": "lui at, 0x8002"
+        },
+        {
+          "offset": "0x6C98",
+          "old": "0x24A59104",
+          "new": "0x24020018",
+          "note": "addiu v0, zero, <stage>"
+        },
+        {
+          "offset": "0x6C9C",
+          "old": "0x0C0029A8",
+          "new": "0xAC2241A8",
+          "note": "sw v0, g_StageNum"
+        },
+        {
+          "offset": "0x6CA0",
+          "old": "0x24040001",
+          "new": "0x1000000E",
+          "note": "b after -level_ token parser"
+        },
+        {
+          "offset": "0x6CA4",
+          "old": "0x1040000D",
+          "new": "0x00000000",
+          "note": "nop"
+        }
+      ]
+    },
+    {
+      "level": {
+        "index": 11,
+        "short": "vol",
+        "name": "Volcano",
+        "stage_id": 29,
+        "ge_slot": "Streets"
+      },
+      "rom": "artifacts\\generated\\stage_probes\\t8040vfront\\p11vol.z64",
+      "md5": "596ee32897865d64290f4585ebcb9a19",
+      "header_crc": "879530A1 54300ECB",
+      "saves": [
+        "artifacts\\generated\\stage_probes\\t8040vfront\\p11vol.sav",
+        "artifacts\\generated\\stage_probes\\t8040vfront\\p11vol.eep"
+      ],
+      "patches": [
+        {
+          "offset": "0x6C94",
+          "old": "0x3C058003",
+          "new": "0x3C018002",
+          "note": "lui at, 0x8002"
+        },
+        {
+          "offset": "0x6C98",
+          "old": "0x24A59104",
+          "new": "0x2402001D",
+          "note": "addiu v0, zero, <stage>"
+        },
+        {
+          "offset": "0x6C9C",
+          "old": "0x0C0029A8",
+          "new": "0xAC2241A8",
+          "note": "sw v0, g_StageNum"
+        },
+        {
+          "offset": "0x6CA0",
+          "old": "0x24040001",
+          "new": "0x1000000E",
+          "note": "b after -level_ token parser"
+        },
+        {
+          "offset": "0x6CA4",
+          "old": "0x1040000D",
+          "new": "0x00000000",
+          "note": "nop"
+        }
+      ]
+    },
+    {
+      "level": {
+        "index": 12,
+        "short": "als",
+        "name": "Alaska",
+        "stage_id": 30,
+        "ge_slot": "Depot"
+      },
+      "rom": "artifacts\\generated\\stage_probes\\t8040vfront\\p12als.z64",
+      "md5": "bd778070fd5106d679efb6f9931b5f81",
+      "header_crc": "879530A1 D6FFD2A2",
+      "saves": [
+        "artifacts\\generated\\stage_probes\\t8040vfront\\p12als.sav",
+        "artifacts\\generated\\stage_probes\\t8040vfront\\p12als.eep"
+      ],
+      "patches": [
+        {
+          "offset": "0x6C94",
+          "old": "0x3C058003",
+          "new": "0x3C018002",
+          "note": "lui at, 0x8002"
+        },
+        {
+          "offset": "0x6C98",
+          "old": "0x24A59104",
+          "new": "0x2402001E",
+          "note": "addiu v0, zero, <stage>"
+        },
+        {
+          "offset": "0x6C9C",
+          "old": "0x0C0029A8",
+          "new": "0xAC2241A8",
+          "note": "sw v0, g_StageNum"
+        },
+        {
+          "offset": "0x6CA0",
+          "old": "0x24040001",
+          "new": "0x1000000E",
+          "note": "b after -level_ token parser"
+        },
+        {
+          "offset": "0x6CA4",
+          "old": "0x1040000D",
+          "new": "0x00000000",
+          "note": "nop"
+        }
+      ]
+    },
+    {
+      "level": {
+        "index": 13,
+        "short": "end",
+        "name": "The End",
+        "stage_id": 25,
+        "ge_slot": "Train"
+      },
+      "rom": "artifacts\\generated\\stage_probes\\t8040vfront\\p13end.z64",
+      "md5": "da16e1da3931bd237ba7f36f4ec3c19e",
+      "header_crc": "879530A9 75A0B8E3",
+      "saves": [
+        "artifacts\\generated\\stage_probes\\t8040vfront\\p13end.sav",
+        "artifacts\\generated\\stage_probes\\t8040vfront\\p13end.eep"
+      ],
+      "patches": [
+        {
+          "offset": "0x6C94",
+          "old": "0x3C058003",
+          "new": "0x3C018002",
+          "note": "lui at, 0x8002"
+        },
+        {
+          "offset": "0x6C98",
+          "old": "0x24A59104",
+          "new": "0x24020019",
+          "note": "addiu v0, zero, <stage>"
+        },
+        {
+          "offset": "0x6C9C",
+          "old": "0x0C0029A8",
+          "new": "0xAC2241A8",
+          "note": "sw v0, g_StageNum"
+        },
+        {
+          "offset": "0x6CA0",
+          "old": "0x24040001",
+          "new": "0x1000000E",
+          "note": "b after -level_ token parser"
+        },
+        {
+          "offset": "0x6CA4",
+          "old": "0x1040000D",
+          "new": "0x00000000",
+          "note": "nop"
+        }
+      ]
+    }
+  ]
+}

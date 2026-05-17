@@ -4,6 +4,64 @@ Date: 2026-05-08
 
 ## Current Hardware State
 
+- 2026-05-17 `t8040vmenuscales` active SC64 full-ROM candidate:
+  - Full ROM:
+    `artifacts/generated/t8040vmenuscales.z64`.
+  - Content source: `artifacts/generated/t8040viewge.z64`.
+  - MD5: `b6486e99e817e069700d6da0715e13a9`; N64 CRC: `8AB0127C E5CE421E`.
+  - Paired save: `artifacts/generated/t8040vmenuscales.sav` (`MD5 79ed3fe6851b080ff21de69fd12f034d`).
+  - Patch: `artifacts/generated/TND6480i_t8040vmenuscales_from_baseline_tnd.bps` (`MD5 618b9c57972c53e177ae925b2056daf7`).
+  - Change: preserve the `t8040viewge` gameplay/level-load baseline, then add the old slow/front ingredients and only GE-style menu float/scale constants. This is the current "GE-sized shell, TND mission placements/content" attempt.
+  - Rejected/shelved sibling: `t8040vfrontmenu` applied the full `menu05_09` GE-sized front/menu shell and was too broad in Gopher, with duplicated/oversized dossier pieces. Do not promote it over `t8040vmenuscales` without new evidence.
+  - Emulator evidence:
+    - `reports/smoke/smoke_t8040_menu_subsets_input_20260517.json`: `t8040vmenuscales` reaches dossier/menu frames, while `t8040vmenusafe` shows top-strip corruption and is rejected.
+    - `reports/smoke/smoke_t8040vmenuscales_problem_stages_20260517.json`: Bazaar, Party, Hotel, Tower, City, Boat, Volcano, and The End survive the direct-stage smoke window with nonblack rendered frames.
+  - Hardware evidence: `diagnostics/captures/videos/t8040vmenuscales_startup_hw_20260517.mp4` and `diagnostics/captures/contact_sheets/t8040vmenuscales_startup_hw_20260517_sheet.jpg`; startup reaches CMK/logos/gunbarrel/TND logo/opening cast. Known front/gunbarrel/art composition issues remain.
+  - Manual test priority: first confirm `t8040viewge` gameplay did not regress: Bazaar/Labs, pause/watch, all level boot, bullets UI, countdown/HUD, and a few known-good levels. Then check file select, single/multi/cheat select, mission select, difficulty, and briefing sizing/text placement against the GE 480i reference while remembering TND has fewer mission placements.
+  - Fallback if gameplay regresses: restore `artifacts/generated/t8040viewge.z64` with `artifacts/generated/t8040viewge.sav`.
+
+- 2026-05-17 `t8040viewge` gameplay baseline, previous loaded visual-fit test:
+  - Full ROM:
+    `artifacts/generated/t8040viewge.z64`.
+  - Content source: `artifacts/generated/tnd8040.z64`.
+  - MD5: `763f94bd1fb364e3d9eb8809bde4900b`; N64 CRC: `84B7FA99 E50042D8`.
+  - Paired save: `artifacts/generated/t8040viewge.sav` (`MD5 79ed3fe6851b080ff21de69fd12f034d`).
+  - Patch: `artifacts/generated/TND6480i_t8040viewge_from_baseline_tnd.bps` (`MD5 773dedd2d931426fde77652fa07d19e5`).
+  - User feedback on previous `t8040camge`: all levels appear to load and boot correctly in full-ROM manual testing. This promotes visual correctness back to the main priority.
+  - Change: preserve `t8040camge` camera/cinema GE constants, then also apply GE's normal non-camera default viewport height/top. This is a conservative visual-fit test for top/bottom edge pressure and flicker.
+  - Hardware direct-stage evidence:
+    - `p00bzr` / Bazaar reaches gameplay with Bond's hand visible and a more conservative vertical gameplay viewport than `t8040camge`.
+    - `p01pty` / Party reaches live rendered Party scenes.
+    - `p04hot` / Hotel and `p11vol` / Volcano render live without the sampled rainbow-prism failure.
+  - Emulator evidence: `reports/smoke/smoke_t8040viewge_visual_matrix_20260517.json` shows Bazaar, Party, Hotel, City, Volcano, and The End surviving the smoke window with nonblack captures.
+  - Active-area evidence: `reports/video_active_area_t8040viewge_vs_camge_20260517.json` shows the intended conservative viewport change. At 240x160 analysis scale, median active height drops from about 153-154 px to about 147 px on Bazaar/Party/Hotel while preserving live rendering.
+  - Full-ROM startup evidence: `diagnostics/captures/contact_sheets/t8040viewge_full_startup_20260517_postcycle.jpg`; startup reaches CMK/logos/gunbarrel/TND logo/opening cast. Known front/gunbarrel/logo polish issues remain.
+  - Manual test priority: compare gameplay fit/flicker against `t8040camge`, especially Bazaar/Labs top-bottom flashing, HUD position, countdown position, pause/watch menu stability, and full-ROM level routing. If the more conservative normal gameplay viewport is worse or causes route regressions, restore `artifacts/generated/t8040camge.z64` with `artifacts/generated/t8040camge.sav`.
+
+- 2026-05-17 `t8040camge` previous full-ROM playability candidate:
+  - Full ROM:
+    `artifacts/generated/t8040camge.z64`.
+  - Content source: `artifacts/generated/tnd8040.z64`.
+  - MD5: `2d4033c68b875c90dc89dd70e1484fbb`; N64 CRC: `84B7FAE5 32E2DC5F`.
+  - Paired save: `artifacts/generated/t8040camge.sav` (`MD5 79ed3fe6851b080ff21de69fd12f034d`).
+  - Patch: `artifacts/generated/TND6480i_t8040camge_from_baseline_tnd.bps` (`MD5 789d845c37b2a2227aa9dc993bad890a`).
+  - Change: preserve the `tnd8040` framebuffer/playability breakthrough, then replace only the camera/cinema viewport height and animated-offset constants with GE 480i reference values. This avoids the broader front/menu reverts that black-screened Party in Gopher.
+  - Hardware direct-stage evidence:
+    - `p01pty` / Party reaches live rendered Party scenes.
+    - `p13end` / The End-end credits reaches live City of Hamburg scenes. Important: this is not Party.
+    - `p00bzr` / Bazaar reaches gameplay with Bond's hand visible.
+    - `p04hot` / Hotel and `p11vol` / Volcano render live without the sampled rainbow-prism failure.
+    - `p08cty` / City, `p07twr` / Tower, and `p09bot` / Boat reach rendered intro/live frames.
+  - Emulator evidence: `reports/smoke/smoke_t8040camge_failure_matrix_20260517.json` shows Labs, Hotel, Tower, City, Boat, and Volcano direct probes surviving the smoke window and producing nonblack captures.
+  - Full-ROM startup evidence: `diagnostics/captures/contact_sheets/t8040camge_full_startup_20260517_postcycle.jpg`; startup reaches CMK/logos/gunbarrel/TND logo/opening cast. Known front/gunbarrel/logo polish issues remain.
+  - Key reports:
+    `reports/tnd480i_tnd8040_viewport_followup_candidates_20260517.json`,
+    `reports/stage_probes/direct_stage_probes_t8040camge_all.json`,
+    `reports/stage_probes/direct_stage_t8040camge_hardware_20260517.json`,
+    and `reports/tnd6480i_t8040camge_bps_manifest.json`.
+  - Manual test priority: save-file flow and mission select first, then Party, City, The End/end credits, Hotel, Volcano, Tower, Boat, Labs encoder pickup/door, and the known-good controls. Watch for full-ROM route differences that direct-stage probes cannot catch.
+  - Fallback if full-ROM routing regresses: restore `artifacts/generated/tnd8040.z64` with `artifacts/generated/tnd8040.sav`.
+
 - 2026-05-17 `tnd8040` promoted playability candidate:
   - Full ROM for the next manual pass:
     `artifacts/generated/tnd8040.z64`.
@@ -28,6 +86,9 @@ Date: 2026-05-08
   - Latest follow-up misses:
     - `t8040nr` NOPs `jal viSetFrameBuf2(resolution)` at `0xBBB8C`; Party and The End/end-credits still keep the short top intro/title rectangle.
     - `t8040camstk` restores cameraBufferToggle viewport width/heights to stock; Party still keeps the same short top intro/title rectangle.
+    - `t8040p56` lowers the TLB page wrap count from 58 to 56, leaving a 16 KB guard gap before `fb1`, but hardware direct `p01pty` appears to stall in the early Party intro view while `tnd8040` progresses farther in the same capture window. Treat as a regression; do not promote or test `p54`/`p52` by default.
+    - `t8040frstk` / `t8040frblstk` restore front/menu VI words, with and without the shared title/sniper blitter rollback. Gopher64 direct `p01pty` goes essentially black, so these do not earn hardware upload.
+    - `p01pty_aux_hwvi` tried SC64 AUX VI-register telemetry from direct Party. SC64 debug produced only `Started`/`Stopped`, no AUX packets (`diagnostics/aux/p01pty_aux_hwvi_debug_20260517.txt`), so telemetry is still not decision-grade.
   - Current next branch: do not spend the next test pass on broad cameraBufferToggle width/height reverts. Inspect the title/intro overlay, front/cutscene blitter, or display-copy path for the short level-intro/title rectangle.
   - Manual test priority for `tnd8040`: verify save-file flow and mission select; then Party, City, The End/end-credits, Hotel, Volcano, Tower, Boat, Labs encoder pickup/door, and Press/Parkhaus/Wreck/Bridge/Alaska controls. Front/gunbarrel/menu polish remains expected to be incomplete.
   - Stage-name correction: `p01pty` is Party / CMGN Launch Party. `p13end` is The End / end credits / City of Hamburg. Do not describe the `p13end` white-rectangle or black-screen signature as Party.

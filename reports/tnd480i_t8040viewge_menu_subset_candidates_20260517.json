@@ -1,0 +1,4489 @@
+[
+  {
+    "name": "t8040vmenusansptr",
+    "filter": "minus_ptr",
+    "purpose": "Full GE-sized menu shell minus the two menu05_09 object/data pointer words at 0x40540/0x40544.",
+    "base_rom": "artifacts\\generated\\t8040viewge.z64",
+    "base_md5": "763f94bd1fb364e3d9eb8809bde4900b",
+    "out_rom": "artifacts\\generated\\t8040vmenusansptr.z64",
+    "out_md5": "1ade3bfc08f45d9f97b95ef25e8ae91f",
+    "header_crc": "FABA3B8A 5683B7F2",
+    "patch_count": 168,
+    "changed_patch_count": 168,
+    "patches": [
+      {
+        "source": "tnd480i_gbslow_menu05_09_moving_post_20260511_report.json",
+        "group": "Q_moving_skip_post_matrix_barrel_dl",
+        "offset": "0x3C68C",
+        "old": "0x3C0F0600",
+        "new": "0x240F0000",
+        "changed": true,
+        "note": "diagnostic disable second moving gunbarrel display-list command"
+      },
+      {
+        "source": "tnd480i_gamefulltop0_gbslow_shared_blitter_stock_texture_setup_20260511_report.json",
+        "group": "S_gunbarrel_case1_slow_3_625",
+        "offset": "0x3DF04",
+        "old": "0x3C018005",
+        "new": "0x3C014068",
+        "changed": true,
+        "note": "diagnostic gunbarrel case1 x decrement 3.625 upper"
+      },
+      {
+        "source": "tnd480i_gamefulltop0_gbslow_shared_blitter_stock_texture_setup_20260511_report.json",
+        "group": "S_gunbarrel_case1_slow_3_625",
+        "offset": "0x3DF08",
+        "old": "0xC428F304",
+        "new": "0x44814000",
+        "changed": true,
+        "note": "diagnostic gunbarrel case1 x decrement move to f8"
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x41644",
+        "old": "0x26100015",
+        "new": "0x2610001F",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x417DC",
+        "old": "0x2610002D",
+        "new": "0x26100037",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x41894",
+        "old": "0x241E011D",
+        "new": "0x241E019E",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x41898",
+        "old": "0x241200F7",
+        "new": "0x2412015E",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x41964",
+        "old": "0x24120165",
+        "new": "0x241201FE",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x419F0",
+        "old": "0x3C014361",
+        "new": "0x3C0143A4",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x41A04",
+        "old": "0x3C018005",
+        "new": "0x3C0143CF",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x41A10",
+        "old": "0xC4321A28",
+        "new": "0x44819000",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x41B24",
+        "old": "0x3C018005",
+        "new": "0x3C0143F4",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x41B2C",
+        "old": "0xC4241A2C",
+        "new": "0x44812000",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x41B30",
+        "old": "0x3C018005",
+        "new": "0x3C0143CF",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x41B34",
+        "old": "0xC4321A30",
+        "new": "0x44819000",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x41C30",
+        "old": "0x3C0142DC",
+        "new": "0x3C014320",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x41C40",
+        "old": "0x3C018005",
+        "new": "0x3C0143CF",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x41C48",
+        "old": "0xC4321A34",
+        "new": "0x44819000",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x41F54",
+        "old": "0x3C018005",
+        "new": "0x3C0143BC",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x41F58",
+        "old": "0xC4261A40",
+        "new": "0x44813000",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x41FB0",
+        "old": "0x3C014373",
+        "new": "0x3C0143AC",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x42330",
+        "old": "0x25CF00E2",
+        "new": "0x25CF0146",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x42338",
+        "old": "0x3C0142FC",
+        "new": "0x3C014337",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x4238C",
+        "old": "0x240E0096",
+        "new": "0x240E00DA",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x42390",
+        "old": "0x240F00DC",
+        "new": "0x240F0140",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x42454",
+        "old": "0x240C00AA",
+        "new": "0x240C00EE",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x42458",
+        "old": "0x240D00DC",
+        "new": "0x240D0140",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x4246C",
+        "old": "0x240F00EA",
+        "new": "0x240F014E",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x42480",
+        "old": "0x24050094",
+        "new": "0x240500D8",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x42484",
+        "old": "0x240600DA",
+        "new": "0x2406013E",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x4248C",
+        "old": "0x24E700AF",
+        "new": "0x24E700F3",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x424EC",
+        "old": "0x240B0096",
+        "new": "0x240B00DA",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x424F0",
+        "old": "0x240C00FC",
+        "new": "0x240C0160",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x425D8",
+        "old": "0x240B00AA",
+        "new": "0x240B00EE",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x425DC",
+        "old": "0x240C00FC",
+        "new": "0x240C0160",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x425F4",
+        "old": "0x240E010A",
+        "new": "0x240E016E",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x42608",
+        "old": "0x24050094",
+        "new": "0x240500D8",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x4260C",
+        "old": "0x240600FA",
+        "new": "0x2406015E",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x42614",
+        "old": "0x24E700AF",
+        "new": "0x24E700F3",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x42680",
+        "old": "0x240B0096",
+        "new": "0x240B00DA",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x42688",
+        "old": "0x240C011C",
+        "new": "0x240C0180",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x4272C",
+        "old": "0x240800AA",
+        "new": "0x240800EE",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x42730",
+        "old": "0x2409011C",
+        "new": "0x24090180",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x42748",
+        "old": "0x240B012A",
+        "new": "0x240B018E",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x4275C",
+        "old": "0x24050094",
+        "new": "0x240500D8",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x42760",
+        "old": "0x2406011A",
+        "new": "0x2406017E",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x42768",
+        "old": "0x24E700AF",
+        "new": "0x24E700F3",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x42F1C",
+        "old": "0x000E7880",
+        "new": "0x3C0142CA",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x42F20",
+        "old": "0x3C188003",
+        "new": "0x0000C812",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x42F24",
+        "old": "0x030FC021",
+        "new": "0x44814000",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x42F28",
+        "old": "0x8F18AFD0",
+        "new": "0x448E3000",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x42F2C",
+        "old": "0x0000C812",
+        "new": "0x46803120",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x42F30",
+        "old": "0x00194080",
+        "new": "0x3C0142B4",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x42F34",
+        "old": "0x3C098003",
+        "new": "0x46082182",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x42F38",
+        "old": "0x01284821",
+        "new": "0x44995000",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x42F3C",
+        "old": "0x8D29AFE4",
+        "new": "0x46805120",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x42F40",
+        "old": "0x44982000",
+        "new": "0x3C028003",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x42F44",
+        "old": "0x14400002",
+        "new": "0x46082282",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x42F48",
+        "old": "0x00000000",
+        "new": "0x44814000",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x42F4C",
+        "old": "0x0007000D",
+        "new": "0x3C0142D4",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x42F50",
+        "old": "0x2401FFFF",
+        "new": "0x46083180",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x42F54",
+        "old": "0x14410004",
+        "new": "0x44812000",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x42F58",
+        "old": "0x3C018000",
+        "new": "0x46045280",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x42F5C",
+        "old": "0x14810002",
+        "new": "0xE446A908",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x42F60",
+        "old": "0x00000000",
+        "new": "0x03E00008",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x42F64",
+        "old": "0x0006000D",
+        "new": "0xE44AA90C",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x42F68",
+        "old": "0x468021A0",
+        "new": "0x00000000",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x42F6C",
+        "old": "0x44894000",
+        "new": "0x00000000",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x42F70",
+        "old": "0x3C018003",
+        "new": "0x00000000",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x42F74",
+        "old": "0x468042A0",
+        "new": "0x00000000",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x42F78",
+        "old": "0xE426A908",
+        "new": "0x00000000",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x42F7C",
+        "old": "0x3C018003",
+        "new": "0x00000000",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x42F80",
+        "old": "0x03E00008",
+        "new": "0x00000000",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x42F84",
+        "old": "0xE42AA90C",
+        "new": "0x00000000",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x43148",
+        "old": "0x24C6001D",
+        "new": "0x24C6002A",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x43150",
+        "old": "0x24A5FFE1",
+        "new": "0x24A5FFD3",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x431E0",
+        "old": "0x24C6001D",
+        "new": "0x24C6002A",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x431E4",
+        "old": "0x24A5FFE1",
+        "new": "0x24A5FFD3",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x433FC",
+        "old": "0x3C018005",
+        "new": "0x3C0143AA",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x43400",
+        "old": "0xC4261A54",
+        "new": "0x44813000",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x43434",
+        "old": "0x3C014373",
+        "new": "0x3C01439A",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x43460",
+        "old": "0x3C014353",
+        "new": "0x3C01438A",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x43634",
+        "old": "0x240E0037",
+        "new": "0x240E0050",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x43638",
+        "old": "0x240F0057",
+        "new": "0x240F007F",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x43728",
+        "old": "0x240E0037",
+        "new": "0x240E0050",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x4372C",
+        "old": "0x240F0067",
+        "new": "0x240F008F",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x4381C",
+        "old": "0x240E0037",
+        "new": "0x240E0050",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x43820",
+        "old": "0x240F0077",
+        "new": "0x240F009F",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x438A0",
+        "old": "0x25CF00BA",
+        "new": "0x25CF00FB",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x438A8",
+        "old": "0x3C0142D4",
+        "new": "0x3C014303",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x439AC",
+        "old": "0x240C0037",
+        "new": "0x240C0050",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x439B0",
+        "old": "0x240D008F",
+        "new": "0x240D00D0",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x43A48",
+        "old": "0x2419007E",
+        "new": "0x24190097",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x43A5C",
+        "old": "0x247800C3",
+        "new": "0x24780104",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x43A6C",
+        "old": "0x246600B2",
+        "new": "0x246600F3",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x43A78",
+        "old": "0x240700F0",
+        "new": "0x24070109",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x43ABC",
+        "old": "0x267300B4",
+        "new": "0x267300F5",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x43B68",
+        "old": "0x240B0082",
+        "new": "0x240B009B",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x43C04",
+        "old": "0x240F0096",
+        "new": "0x240F00AF",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x43C44",
+        "old": "0x240F0096",
+        "new": "0x240F00AF",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x43D04",
+        "old": "0x258D00BA",
+        "new": "0x258D00FB",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x43D0C",
+        "old": "0x3C01438C",
+        "new": "0x3C014399",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x43F94",
+        "old": "0x28410107",
+        "new": "0x28410153",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x43FA8",
+        "old": "0x284100E6",
+        "new": "0x28410132",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x43FC0",
+        "old": "0x284100C5",
+        "new": "0x28410111",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x43FD8",
+        "old": "0x284100A4",
+        "new": "0x284100F0",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x44104",
+        "old": "0x3C01425C",
+        "new": "0x3C0142A0",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x4410C",
+        "old": "0x3C014396",
+        "new": "0x3C0143DA",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x44348",
+        "old": "0x24090037",
+        "new": "0x24090050",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x4434C",
+        "old": "0x2403008F",
+        "new": "0x240300DB",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x443BC",
+        "old": "0x24190039",
+        "new": "0x24190052",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x443C0",
+        "old": "0x240300A4",
+        "new": "0x240300F0",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x443C4",
+        "old": "0x241800C0",
+        "new": "0x2418010C",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x443E4",
+        "old": "0x24050037",
+        "new": "0x24050050",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x443E8",
+        "old": "0x240600B5",
+        "new": "0x24060101",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x443F0",
+        "old": "0x24070163",
+        "new": "0x24070204",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x44410",
+        "old": "0x3C014396",
+        "new": "0x3C0143DA",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x44434",
+        "old": "0x24050037",
+        "new": "0x24050050",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x44448",
+        "old": "0x24E70037",
+        "new": "0x24E70050",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x44478",
+        "old": "0x24050037",
+        "new": "0x24050050",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x4447C",
+        "old": "0x240700C7",
+        "new": "0x240700E5",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x4454C",
+        "old": "0x240A011D",
+        "new": "0x240A019F",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x44550",
+        "old": "0x240300A4",
+        "new": "0x240300F0",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x445C0",
+        "old": "0x24080039",
+        "new": "0x24080052",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x445C4",
+        "old": "0x240300C5",
+        "new": "0x24030111",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x445C8",
+        "old": "0x240F00E1",
+        "new": "0x240F012D",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x445E8",
+        "old": "0x24050037",
+        "new": "0x24050050",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x445EC",
+        "old": "0x240600D6",
+        "new": "0x24060122",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x445F4",
+        "old": "0x24070163",
+        "new": "0x24070204",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x44614",
+        "old": "0x3C014396",
+        "new": "0x3C0143DA",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x44638",
+        "old": "0x24050037",
+        "new": "0x24050050",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x4464C",
+        "old": "0x24E70037",
+        "new": "0x24E70050",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x4467C",
+        "old": "0x24050037",
+        "new": "0x24050050",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x44680",
+        "old": "0x240700C7",
+        "new": "0x240700E5",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x44750",
+        "old": "0x240C011D",
+        "new": "0x240C019F",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x44754",
+        "old": "0x240300C5",
+        "new": "0x24030111",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x447C4",
+        "old": "0x240E0039",
+        "new": "0x240E0052",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x447C8",
+        "old": "0x240300E6",
+        "new": "0x24030132",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x447CC",
+        "old": "0x240A0102",
+        "new": "0x240A014E",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x447EC",
+        "old": "0x24050037",
+        "new": "0x24050050",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x447F0",
+        "old": "0x240600F7",
+        "new": "0x24060143",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x447F8",
+        "old": "0x24070163",
+        "new": "0x24070204",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x44818",
+        "old": "0x3C014396",
+        "new": "0x3C0143DA",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x4483C",
+        "old": "0x24050037",
+        "new": "0x24050050",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x44850",
+        "old": "0x24E70037",
+        "new": "0x24E70050",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x44880",
+        "old": "0x24050037",
+        "new": "0x24050050",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x44884",
+        "old": "0x240700C7",
+        "new": "0x240700E5",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x44954",
+        "old": "0x2419011D",
+        "new": "0x2419019F",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x44958",
+        "old": "0x240300E6",
+        "new": "0x24030132",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x449C8",
+        "old": "0x24090039",
+        "new": "0x24090052",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x449CC",
+        "old": "0x24030107",
+        "new": "0x24030153",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x449D0",
+        "old": "0x240C0123",
+        "new": "0x240C016F",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x449F0",
+        "old": "0x24050037",
+        "new": "0x24050050",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x449F4",
+        "old": "0x24060118",
+        "new": "0x24060164",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x449FC",
+        "old": "0x24070163",
+        "new": "0x24070204",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x44A08",
+        "old": "0x3C014396",
+        "new": "0x3C0143DA",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x44A38",
+        "old": "0x24050037",
+        "new": "0x24050050",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x44A4C",
+        "old": "0x24E70037",
+        "new": "0x24E70050",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x44A7C",
+        "old": "0x24050037",
+        "new": "0x24050050",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x44A80",
+        "old": "0x240700C7",
+        "new": "0x240700E5",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x44B50",
+        "old": "0x2408011D",
+        "new": "0x2408019F",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x44B54",
+        "old": "0x24030107",
+        "new": "0x24030153",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gamefulltop0_gbslow_shared_blitter_stock_texture_setup_20260511_report.json",
+        "group": "U_shared_blitter_stock_texture_setup",
+        "offset": "0x4FDEC",
+        "old": "0x3C170713",
+        "new": "0x3C17070D",
+        "changed": true,
+        "note": "diagnostic restore stock title/sniper texture setup upper"
+      },
+      {
+        "source": "tnd480i_gamefulltop0_gbslow_shared_blitter_stock_texture_setup_20260511_report.json",
+        "group": "U_shared_blitter_stock_texture_setup",
+        "offset": "0x4FDFC",
+        "old": "0x3C0AE49F",
+        "new": "0x3C0AE46D",
+        "changed": true,
+        "note": "diagnostic restore stock title/sniper texture rectangle target width"
+      },
+      {
+        "source": "tnd480i_gamefulltop0_gbslow_shared_blitter_stock_texture_setup_20260511_report.json",
+        "group": "U_shared_blitter_stock_texture_setup",
+        "offset": "0x4FE34",
+        "old": "0x3C0143D7",
+        "new": "0x3C018005",
+        "changed": true,
+        "note": "diagnostic restore stock title/sniper height load upper"
+      },
+      {
+        "source": "tnd480i_gamefulltop0_gbslow_shared_blitter_stock_texture_setup_20260511_report.json",
+        "group": "U_shared_blitter_stock_texture_setup",
+        "offset": "0x4FE3C",
+        "old": "0x36F7F006",
+        "new": "0x36F7B026",
+        "changed": true,
+        "note": "diagnostic restore stock title/sniper texture setup lower"
+      },
+      {
+        "source": "tnd480i_gamefulltop0_gbslow_shared_blitter_stock_texture_setup_20260511_report.json",
+        "group": "U_shared_blitter_stock_texture_setup",
+        "offset": "0x4FE44",
+        "old": "0x44818000",
+        "new": "0xC4301CF0",
+        "changed": true,
+        "note": "diagnostic restore stock title/sniper height load"
+      },
+      {
+        "source": "tnd480i_gamefulltop0_gbslow_shared_blitter_stock_texture_setup_20260511_report.json",
+        "group": "U_shared_blitter_stock_texture_setup",
+        "offset": "0x4FF00",
+        "old": "0x3C0E009F",
+        "new": "0x3C0E006D",
+        "changed": true,
+        "note": "diagnostic restore stock title/sniper texture rectangle lower width"
+      }
+    ],
+    "save_outputs": [
+      {
+        "path": "artifacts\\generated\\t8040vmenusansptr.sav",
+        "bytes": 512,
+        "md5": "79ed3fe6851b080ff21de69fd12f034d"
+      },
+      {
+        "path": "artifacts\\generated\\t8040vmenusansptr.eep",
+        "bytes": 2048,
+        "md5": "e47f5c07623838e875761a0493388e03"
+      }
+    ]
+  },
+  {
+    "name": "t8040vmenusanshelper",
+    "filter": "minus_helper",
+    "purpose": "Full GE-sized menu shell minus the injected helper-code blob at 0x42F1C-0x42F84.",
+    "base_rom": "artifacts\\generated\\t8040viewge.z64",
+    "base_md5": "763f94bd1fb364e3d9eb8809bde4900b",
+    "out_rom": "artifacts\\generated\\t8040vmenusanshelper.z64",
+    "out_md5": "34a82afab900a49cb0253bfd9037c9fe",
+    "header_crc": "8AB03C36 A332DAAB",
+    "patch_count": 143,
+    "changed_patch_count": 143,
+    "patches": [
+      {
+        "source": "tnd480i_gbslow_menu05_09_moving_post_20260511_report.json",
+        "group": "Q_moving_skip_post_matrix_barrel_dl",
+        "offset": "0x3C68C",
+        "old": "0x3C0F0600",
+        "new": "0x240F0000",
+        "changed": true,
+        "note": "diagnostic disable second moving gunbarrel display-list command"
+      },
+      {
+        "source": "tnd480i_gamefulltop0_gbslow_shared_blitter_stock_texture_setup_20260511_report.json",
+        "group": "S_gunbarrel_case1_slow_3_625",
+        "offset": "0x3DF04",
+        "old": "0x3C018005",
+        "new": "0x3C014068",
+        "changed": true,
+        "note": "diagnostic gunbarrel case1 x decrement 3.625 upper"
+      },
+      {
+        "source": "tnd480i_gamefulltop0_gbslow_shared_blitter_stock_texture_setup_20260511_report.json",
+        "group": "S_gunbarrel_case1_slow_3_625",
+        "offset": "0x3DF08",
+        "old": "0xC428F304",
+        "new": "0x44814000",
+        "changed": true,
+        "note": "diagnostic gunbarrel case1 x decrement move to f8"
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x40540",
+        "old": "0x3C0E0006",
+        "new": "0x3C0E000B",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x40544",
+        "old": "0x35CEE000",
+        "new": "0x35CE4200",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x41644",
+        "old": "0x26100015",
+        "new": "0x2610001F",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x417DC",
+        "old": "0x2610002D",
+        "new": "0x26100037",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x41894",
+        "old": "0x241E011D",
+        "new": "0x241E019E",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x41898",
+        "old": "0x241200F7",
+        "new": "0x2412015E",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x41964",
+        "old": "0x24120165",
+        "new": "0x241201FE",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x419F0",
+        "old": "0x3C014361",
+        "new": "0x3C0143A4",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x41A04",
+        "old": "0x3C018005",
+        "new": "0x3C0143CF",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x41A10",
+        "old": "0xC4321A28",
+        "new": "0x44819000",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x41B24",
+        "old": "0x3C018005",
+        "new": "0x3C0143F4",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x41B2C",
+        "old": "0xC4241A2C",
+        "new": "0x44812000",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x41B30",
+        "old": "0x3C018005",
+        "new": "0x3C0143CF",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x41B34",
+        "old": "0xC4321A30",
+        "new": "0x44819000",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x41C30",
+        "old": "0x3C0142DC",
+        "new": "0x3C014320",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x41C40",
+        "old": "0x3C018005",
+        "new": "0x3C0143CF",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x41C48",
+        "old": "0xC4321A34",
+        "new": "0x44819000",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x41F54",
+        "old": "0x3C018005",
+        "new": "0x3C0143BC",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x41F58",
+        "old": "0xC4261A40",
+        "new": "0x44813000",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x41FB0",
+        "old": "0x3C014373",
+        "new": "0x3C0143AC",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x42330",
+        "old": "0x25CF00E2",
+        "new": "0x25CF0146",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x42338",
+        "old": "0x3C0142FC",
+        "new": "0x3C014337",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x4238C",
+        "old": "0x240E0096",
+        "new": "0x240E00DA",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x42390",
+        "old": "0x240F00DC",
+        "new": "0x240F0140",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x42454",
+        "old": "0x240C00AA",
+        "new": "0x240C00EE",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x42458",
+        "old": "0x240D00DC",
+        "new": "0x240D0140",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x4246C",
+        "old": "0x240F00EA",
+        "new": "0x240F014E",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x42480",
+        "old": "0x24050094",
+        "new": "0x240500D8",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x42484",
+        "old": "0x240600DA",
+        "new": "0x2406013E",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x4248C",
+        "old": "0x24E700AF",
+        "new": "0x24E700F3",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x424EC",
+        "old": "0x240B0096",
+        "new": "0x240B00DA",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x424F0",
+        "old": "0x240C00FC",
+        "new": "0x240C0160",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x425D8",
+        "old": "0x240B00AA",
+        "new": "0x240B00EE",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x425DC",
+        "old": "0x240C00FC",
+        "new": "0x240C0160",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x425F4",
+        "old": "0x240E010A",
+        "new": "0x240E016E",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x42608",
+        "old": "0x24050094",
+        "new": "0x240500D8",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x4260C",
+        "old": "0x240600FA",
+        "new": "0x2406015E",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x42614",
+        "old": "0x24E700AF",
+        "new": "0x24E700F3",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x42680",
+        "old": "0x240B0096",
+        "new": "0x240B00DA",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x42688",
+        "old": "0x240C011C",
+        "new": "0x240C0180",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x4272C",
+        "old": "0x240800AA",
+        "new": "0x240800EE",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x42730",
+        "old": "0x2409011C",
+        "new": "0x24090180",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x42748",
+        "old": "0x240B012A",
+        "new": "0x240B018E",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x4275C",
+        "old": "0x24050094",
+        "new": "0x240500D8",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x42760",
+        "old": "0x2406011A",
+        "new": "0x2406017E",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x42768",
+        "old": "0x24E700AF",
+        "new": "0x24E700F3",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x43148",
+        "old": "0x24C6001D",
+        "new": "0x24C6002A",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x43150",
+        "old": "0x24A5FFE1",
+        "new": "0x24A5FFD3",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x431E0",
+        "old": "0x24C6001D",
+        "new": "0x24C6002A",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x431E4",
+        "old": "0x24A5FFE1",
+        "new": "0x24A5FFD3",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x433FC",
+        "old": "0x3C018005",
+        "new": "0x3C0143AA",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x43400",
+        "old": "0xC4261A54",
+        "new": "0x44813000",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x43434",
+        "old": "0x3C014373",
+        "new": "0x3C01439A",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x43460",
+        "old": "0x3C014353",
+        "new": "0x3C01438A",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x43634",
+        "old": "0x240E0037",
+        "new": "0x240E0050",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x43638",
+        "old": "0x240F0057",
+        "new": "0x240F007F",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x43728",
+        "old": "0x240E0037",
+        "new": "0x240E0050",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x4372C",
+        "old": "0x240F0067",
+        "new": "0x240F008F",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x4381C",
+        "old": "0x240E0037",
+        "new": "0x240E0050",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x43820",
+        "old": "0x240F0077",
+        "new": "0x240F009F",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x438A0",
+        "old": "0x25CF00BA",
+        "new": "0x25CF00FB",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x438A8",
+        "old": "0x3C0142D4",
+        "new": "0x3C014303",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x439AC",
+        "old": "0x240C0037",
+        "new": "0x240C0050",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x439B0",
+        "old": "0x240D008F",
+        "new": "0x240D00D0",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x43A48",
+        "old": "0x2419007E",
+        "new": "0x24190097",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x43A5C",
+        "old": "0x247800C3",
+        "new": "0x24780104",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x43A6C",
+        "old": "0x246600B2",
+        "new": "0x246600F3",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x43A78",
+        "old": "0x240700F0",
+        "new": "0x24070109",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x43ABC",
+        "old": "0x267300B4",
+        "new": "0x267300F5",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x43B68",
+        "old": "0x240B0082",
+        "new": "0x240B009B",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x43C04",
+        "old": "0x240F0096",
+        "new": "0x240F00AF",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x43C44",
+        "old": "0x240F0096",
+        "new": "0x240F00AF",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x43D04",
+        "old": "0x258D00BA",
+        "new": "0x258D00FB",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x43D0C",
+        "old": "0x3C01438C",
+        "new": "0x3C014399",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x43F94",
+        "old": "0x28410107",
+        "new": "0x28410153",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x43FA8",
+        "old": "0x284100E6",
+        "new": "0x28410132",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x43FC0",
+        "old": "0x284100C5",
+        "new": "0x28410111",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x43FD8",
+        "old": "0x284100A4",
+        "new": "0x284100F0",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x44104",
+        "old": "0x3C01425C",
+        "new": "0x3C0142A0",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x4410C",
+        "old": "0x3C014396",
+        "new": "0x3C0143DA",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x44348",
+        "old": "0x24090037",
+        "new": "0x24090050",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x4434C",
+        "old": "0x2403008F",
+        "new": "0x240300DB",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x443BC",
+        "old": "0x24190039",
+        "new": "0x24190052",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x443C0",
+        "old": "0x240300A4",
+        "new": "0x240300F0",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x443C4",
+        "old": "0x241800C0",
+        "new": "0x2418010C",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x443E4",
+        "old": "0x24050037",
+        "new": "0x24050050",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x443E8",
+        "old": "0x240600B5",
+        "new": "0x24060101",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x443F0",
+        "old": "0x24070163",
+        "new": "0x24070204",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x44410",
+        "old": "0x3C014396",
+        "new": "0x3C0143DA",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x44434",
+        "old": "0x24050037",
+        "new": "0x24050050",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x44448",
+        "old": "0x24E70037",
+        "new": "0x24E70050",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x44478",
+        "old": "0x24050037",
+        "new": "0x24050050",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x4447C",
+        "old": "0x240700C7",
+        "new": "0x240700E5",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x4454C",
+        "old": "0x240A011D",
+        "new": "0x240A019F",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x44550",
+        "old": "0x240300A4",
+        "new": "0x240300F0",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x445C0",
+        "old": "0x24080039",
+        "new": "0x24080052",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x445C4",
+        "old": "0x240300C5",
+        "new": "0x24030111",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x445C8",
+        "old": "0x240F00E1",
+        "new": "0x240F012D",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x445E8",
+        "old": "0x24050037",
+        "new": "0x24050050",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x445EC",
+        "old": "0x240600D6",
+        "new": "0x24060122",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x445F4",
+        "old": "0x24070163",
+        "new": "0x24070204",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x44614",
+        "old": "0x3C014396",
+        "new": "0x3C0143DA",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x44638",
+        "old": "0x24050037",
+        "new": "0x24050050",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x4464C",
+        "old": "0x24E70037",
+        "new": "0x24E70050",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x4467C",
+        "old": "0x24050037",
+        "new": "0x24050050",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x44680",
+        "old": "0x240700C7",
+        "new": "0x240700E5",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x44750",
+        "old": "0x240C011D",
+        "new": "0x240C019F",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x44754",
+        "old": "0x240300C5",
+        "new": "0x24030111",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x447C4",
+        "old": "0x240E0039",
+        "new": "0x240E0052",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x447C8",
+        "old": "0x240300E6",
+        "new": "0x24030132",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x447CC",
+        "old": "0x240A0102",
+        "new": "0x240A014E",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x447EC",
+        "old": "0x24050037",
+        "new": "0x24050050",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x447F0",
+        "old": "0x240600F7",
+        "new": "0x24060143",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x447F8",
+        "old": "0x24070163",
+        "new": "0x24070204",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x44818",
+        "old": "0x3C014396",
+        "new": "0x3C0143DA",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x4483C",
+        "old": "0x24050037",
+        "new": "0x24050050",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x44850",
+        "old": "0x24E70037",
+        "new": "0x24E70050",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x44880",
+        "old": "0x24050037",
+        "new": "0x24050050",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x44884",
+        "old": "0x240700C7",
+        "new": "0x240700E5",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x44954",
+        "old": "0x2419011D",
+        "new": "0x2419019F",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x44958",
+        "old": "0x240300E6",
+        "new": "0x24030132",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x449C8",
+        "old": "0x24090039",
+        "new": "0x24090052",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x449CC",
+        "old": "0x24030107",
+        "new": "0x24030153",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x449D0",
+        "old": "0x240C0123",
+        "new": "0x240C016F",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x449F0",
+        "old": "0x24050037",
+        "new": "0x24050050",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x449F4",
+        "old": "0x24060118",
+        "new": "0x24060164",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x449FC",
+        "old": "0x24070163",
+        "new": "0x24070204",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x44A08",
+        "old": "0x3C014396",
+        "new": "0x3C0143DA",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x44A38",
+        "old": "0x24050037",
+        "new": "0x24050050",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x44A4C",
+        "old": "0x24E70037",
+        "new": "0x24E70050",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x44A7C",
+        "old": "0x24050037",
+        "new": "0x24050050",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x44A80",
+        "old": "0x240700C7",
+        "new": "0x240700E5",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x44B50",
+        "old": "0x2408011D",
+        "new": "0x2408019F",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x44B54",
+        "old": "0x24030107",
+        "new": "0x24030153",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gamefulltop0_gbslow_shared_blitter_stock_texture_setup_20260511_report.json",
+        "group": "U_shared_blitter_stock_texture_setup",
+        "offset": "0x4FDEC",
+        "old": "0x3C170713",
+        "new": "0x3C17070D",
+        "changed": true,
+        "note": "diagnostic restore stock title/sniper texture setup upper"
+      },
+      {
+        "source": "tnd480i_gamefulltop0_gbslow_shared_blitter_stock_texture_setup_20260511_report.json",
+        "group": "U_shared_blitter_stock_texture_setup",
+        "offset": "0x4FDFC",
+        "old": "0x3C0AE49F",
+        "new": "0x3C0AE46D",
+        "changed": true,
+        "note": "diagnostic restore stock title/sniper texture rectangle target width"
+      },
+      {
+        "source": "tnd480i_gamefulltop0_gbslow_shared_blitter_stock_texture_setup_20260511_report.json",
+        "group": "U_shared_blitter_stock_texture_setup",
+        "offset": "0x4FE34",
+        "old": "0x3C0143D7",
+        "new": "0x3C018005",
+        "changed": true,
+        "note": "diagnostic restore stock title/sniper height load upper"
+      },
+      {
+        "source": "tnd480i_gamefulltop0_gbslow_shared_blitter_stock_texture_setup_20260511_report.json",
+        "group": "U_shared_blitter_stock_texture_setup",
+        "offset": "0x4FE3C",
+        "old": "0x36F7F006",
+        "new": "0x36F7B026",
+        "changed": true,
+        "note": "diagnostic restore stock title/sniper texture setup lower"
+      },
+      {
+        "source": "tnd480i_gamefulltop0_gbslow_shared_blitter_stock_texture_setup_20260511_report.json",
+        "group": "U_shared_blitter_stock_texture_setup",
+        "offset": "0x4FE44",
+        "old": "0x44818000",
+        "new": "0xC4301CF0",
+        "changed": true,
+        "note": "diagnostic restore stock title/sniper height load"
+      },
+      {
+        "source": "tnd480i_gamefulltop0_gbslow_shared_blitter_stock_texture_setup_20260511_report.json",
+        "group": "U_shared_blitter_stock_texture_setup",
+        "offset": "0x4FF00",
+        "old": "0x3C0E009F",
+        "new": "0x3C0E006D",
+        "changed": true,
+        "note": "diagnostic restore stock title/sniper texture rectangle lower width"
+      }
+    ],
+    "save_outputs": [
+      {
+        "path": "artifacts\\generated\\t8040vmenusanshelper.sav",
+        "bytes": 512,
+        "md5": "79ed3fe6851b080ff21de69fd12f034d"
+      },
+      {
+        "path": "artifacts\\generated\\t8040vmenusanshelper.eep",
+        "bytes": 2048,
+        "md5": "e47f5c07623838e875761a0493388e03"
+      }
+    ]
+  },
+  {
+    "name": "t8040vmenusafe",
+    "filter": "minus_ptr_helper",
+    "purpose": "GE-sized menu shell minus both the suspect pointer words and helper-code blob.",
+    "base_rom": "artifacts\\generated\\t8040viewge.z64",
+    "base_md5": "763f94bd1fb364e3d9eb8809bde4900b",
+    "out_rom": "artifacts\\generated\\t8040vmenusafe.z64",
+    "out_md5": "d1400745c7b29f585ec011355265bd68",
+    "header_crc": "8AB03826 795A77D4",
+    "patch_count": 141,
+    "changed_patch_count": 141,
+    "patches": [
+      {
+        "source": "tnd480i_gbslow_menu05_09_moving_post_20260511_report.json",
+        "group": "Q_moving_skip_post_matrix_barrel_dl",
+        "offset": "0x3C68C",
+        "old": "0x3C0F0600",
+        "new": "0x240F0000",
+        "changed": true,
+        "note": "diagnostic disable second moving gunbarrel display-list command"
+      },
+      {
+        "source": "tnd480i_gamefulltop0_gbslow_shared_blitter_stock_texture_setup_20260511_report.json",
+        "group": "S_gunbarrel_case1_slow_3_625",
+        "offset": "0x3DF04",
+        "old": "0x3C018005",
+        "new": "0x3C014068",
+        "changed": true,
+        "note": "diagnostic gunbarrel case1 x decrement 3.625 upper"
+      },
+      {
+        "source": "tnd480i_gamefulltop0_gbslow_shared_blitter_stock_texture_setup_20260511_report.json",
+        "group": "S_gunbarrel_case1_slow_3_625",
+        "offset": "0x3DF08",
+        "old": "0xC428F304",
+        "new": "0x44814000",
+        "changed": true,
+        "note": "diagnostic gunbarrel case1 x decrement move to f8"
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x41644",
+        "old": "0x26100015",
+        "new": "0x2610001F",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x417DC",
+        "old": "0x2610002D",
+        "new": "0x26100037",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x41894",
+        "old": "0x241E011D",
+        "new": "0x241E019E",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x41898",
+        "old": "0x241200F7",
+        "new": "0x2412015E",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x41964",
+        "old": "0x24120165",
+        "new": "0x241201FE",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x419F0",
+        "old": "0x3C014361",
+        "new": "0x3C0143A4",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x41A04",
+        "old": "0x3C018005",
+        "new": "0x3C0143CF",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x41A10",
+        "old": "0xC4321A28",
+        "new": "0x44819000",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x41B24",
+        "old": "0x3C018005",
+        "new": "0x3C0143F4",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x41B2C",
+        "old": "0xC4241A2C",
+        "new": "0x44812000",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x41B30",
+        "old": "0x3C018005",
+        "new": "0x3C0143CF",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x41B34",
+        "old": "0xC4321A30",
+        "new": "0x44819000",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x41C30",
+        "old": "0x3C0142DC",
+        "new": "0x3C014320",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x41C40",
+        "old": "0x3C018005",
+        "new": "0x3C0143CF",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x41C48",
+        "old": "0xC4321A34",
+        "new": "0x44819000",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x41F54",
+        "old": "0x3C018005",
+        "new": "0x3C0143BC",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x41F58",
+        "old": "0xC4261A40",
+        "new": "0x44813000",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x41FB0",
+        "old": "0x3C014373",
+        "new": "0x3C0143AC",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x42330",
+        "old": "0x25CF00E2",
+        "new": "0x25CF0146",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x42338",
+        "old": "0x3C0142FC",
+        "new": "0x3C014337",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x4238C",
+        "old": "0x240E0096",
+        "new": "0x240E00DA",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x42390",
+        "old": "0x240F00DC",
+        "new": "0x240F0140",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x42454",
+        "old": "0x240C00AA",
+        "new": "0x240C00EE",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x42458",
+        "old": "0x240D00DC",
+        "new": "0x240D0140",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x4246C",
+        "old": "0x240F00EA",
+        "new": "0x240F014E",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x42480",
+        "old": "0x24050094",
+        "new": "0x240500D8",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x42484",
+        "old": "0x240600DA",
+        "new": "0x2406013E",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x4248C",
+        "old": "0x24E700AF",
+        "new": "0x24E700F3",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x424EC",
+        "old": "0x240B0096",
+        "new": "0x240B00DA",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x424F0",
+        "old": "0x240C00FC",
+        "new": "0x240C0160",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x425D8",
+        "old": "0x240B00AA",
+        "new": "0x240B00EE",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x425DC",
+        "old": "0x240C00FC",
+        "new": "0x240C0160",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x425F4",
+        "old": "0x240E010A",
+        "new": "0x240E016E",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x42608",
+        "old": "0x24050094",
+        "new": "0x240500D8",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x4260C",
+        "old": "0x240600FA",
+        "new": "0x2406015E",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x42614",
+        "old": "0x24E700AF",
+        "new": "0x24E700F3",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x42680",
+        "old": "0x240B0096",
+        "new": "0x240B00DA",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x42688",
+        "old": "0x240C011C",
+        "new": "0x240C0180",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x4272C",
+        "old": "0x240800AA",
+        "new": "0x240800EE",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x42730",
+        "old": "0x2409011C",
+        "new": "0x24090180",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x42748",
+        "old": "0x240B012A",
+        "new": "0x240B018E",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x4275C",
+        "old": "0x24050094",
+        "new": "0x240500D8",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x42760",
+        "old": "0x2406011A",
+        "new": "0x2406017E",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x42768",
+        "old": "0x24E700AF",
+        "new": "0x24E700F3",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x43148",
+        "old": "0x24C6001D",
+        "new": "0x24C6002A",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x43150",
+        "old": "0x24A5FFE1",
+        "new": "0x24A5FFD3",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x431E0",
+        "old": "0x24C6001D",
+        "new": "0x24C6002A",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x431E4",
+        "old": "0x24A5FFE1",
+        "new": "0x24A5FFD3",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x433FC",
+        "old": "0x3C018005",
+        "new": "0x3C0143AA",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x43400",
+        "old": "0xC4261A54",
+        "new": "0x44813000",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x43434",
+        "old": "0x3C014373",
+        "new": "0x3C01439A",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x43460",
+        "old": "0x3C014353",
+        "new": "0x3C01438A",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x43634",
+        "old": "0x240E0037",
+        "new": "0x240E0050",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x43638",
+        "old": "0x240F0057",
+        "new": "0x240F007F",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x43728",
+        "old": "0x240E0037",
+        "new": "0x240E0050",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x4372C",
+        "old": "0x240F0067",
+        "new": "0x240F008F",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x4381C",
+        "old": "0x240E0037",
+        "new": "0x240E0050",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x43820",
+        "old": "0x240F0077",
+        "new": "0x240F009F",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x438A0",
+        "old": "0x25CF00BA",
+        "new": "0x25CF00FB",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x438A8",
+        "old": "0x3C0142D4",
+        "new": "0x3C014303",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x439AC",
+        "old": "0x240C0037",
+        "new": "0x240C0050",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x439B0",
+        "old": "0x240D008F",
+        "new": "0x240D00D0",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x43A48",
+        "old": "0x2419007E",
+        "new": "0x24190097",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x43A5C",
+        "old": "0x247800C3",
+        "new": "0x24780104",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x43A6C",
+        "old": "0x246600B2",
+        "new": "0x246600F3",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x43A78",
+        "old": "0x240700F0",
+        "new": "0x24070109",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x43ABC",
+        "old": "0x267300B4",
+        "new": "0x267300F5",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x43B68",
+        "old": "0x240B0082",
+        "new": "0x240B009B",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x43C04",
+        "old": "0x240F0096",
+        "new": "0x240F00AF",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x43C44",
+        "old": "0x240F0096",
+        "new": "0x240F00AF",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x43D04",
+        "old": "0x258D00BA",
+        "new": "0x258D00FB",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x43D0C",
+        "old": "0x3C01438C",
+        "new": "0x3C014399",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x43F94",
+        "old": "0x28410107",
+        "new": "0x28410153",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x43FA8",
+        "old": "0x284100E6",
+        "new": "0x28410132",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x43FC0",
+        "old": "0x284100C5",
+        "new": "0x28410111",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x43FD8",
+        "old": "0x284100A4",
+        "new": "0x284100F0",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x44104",
+        "old": "0x3C01425C",
+        "new": "0x3C0142A0",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x4410C",
+        "old": "0x3C014396",
+        "new": "0x3C0143DA",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x44348",
+        "old": "0x24090037",
+        "new": "0x24090050",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x4434C",
+        "old": "0x2403008F",
+        "new": "0x240300DB",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x443BC",
+        "old": "0x24190039",
+        "new": "0x24190052",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x443C0",
+        "old": "0x240300A4",
+        "new": "0x240300F0",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x443C4",
+        "old": "0x241800C0",
+        "new": "0x2418010C",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x443E4",
+        "old": "0x24050037",
+        "new": "0x24050050",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x443E8",
+        "old": "0x240600B5",
+        "new": "0x24060101",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x443F0",
+        "old": "0x24070163",
+        "new": "0x24070204",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x44410",
+        "old": "0x3C014396",
+        "new": "0x3C0143DA",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x44434",
+        "old": "0x24050037",
+        "new": "0x24050050",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x44448",
+        "old": "0x24E70037",
+        "new": "0x24E70050",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x44478",
+        "old": "0x24050037",
+        "new": "0x24050050",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x4447C",
+        "old": "0x240700C7",
+        "new": "0x240700E5",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x4454C",
+        "old": "0x240A011D",
+        "new": "0x240A019F",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x44550",
+        "old": "0x240300A4",
+        "new": "0x240300F0",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x445C0",
+        "old": "0x24080039",
+        "new": "0x24080052",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x445C4",
+        "old": "0x240300C5",
+        "new": "0x24030111",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x445C8",
+        "old": "0x240F00E1",
+        "new": "0x240F012D",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x445E8",
+        "old": "0x24050037",
+        "new": "0x24050050",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x445EC",
+        "old": "0x240600D6",
+        "new": "0x24060122",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x445F4",
+        "old": "0x24070163",
+        "new": "0x24070204",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x44614",
+        "old": "0x3C014396",
+        "new": "0x3C0143DA",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x44638",
+        "old": "0x24050037",
+        "new": "0x24050050",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x4464C",
+        "old": "0x24E70037",
+        "new": "0x24E70050",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x4467C",
+        "old": "0x24050037",
+        "new": "0x24050050",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x44680",
+        "old": "0x240700C7",
+        "new": "0x240700E5",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x44750",
+        "old": "0x240C011D",
+        "new": "0x240C019F",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x44754",
+        "old": "0x240300C5",
+        "new": "0x24030111",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x447C4",
+        "old": "0x240E0039",
+        "new": "0x240E0052",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x447C8",
+        "old": "0x240300E6",
+        "new": "0x24030132",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x447CC",
+        "old": "0x240A0102",
+        "new": "0x240A014E",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x447EC",
+        "old": "0x24050037",
+        "new": "0x24050050",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x447F0",
+        "old": "0x240600F7",
+        "new": "0x24060143",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x447F8",
+        "old": "0x24070163",
+        "new": "0x24070204",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x44818",
+        "old": "0x3C014396",
+        "new": "0x3C0143DA",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x4483C",
+        "old": "0x24050037",
+        "new": "0x24050050",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x44850",
+        "old": "0x24E70037",
+        "new": "0x24E70050",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x44880",
+        "old": "0x24050037",
+        "new": "0x24050050",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x44884",
+        "old": "0x240700C7",
+        "new": "0x240700E5",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x44954",
+        "old": "0x2419011D",
+        "new": "0x2419019F",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x44958",
+        "old": "0x240300E6",
+        "new": "0x24030132",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x449C8",
+        "old": "0x24090039",
+        "new": "0x24090052",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x449CC",
+        "old": "0x24030107",
+        "new": "0x24030153",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x449D0",
+        "old": "0x240C0123",
+        "new": "0x240C016F",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x449F0",
+        "old": "0x24050037",
+        "new": "0x24050050",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x449F4",
+        "old": "0x24060118",
+        "new": "0x24060164",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x449FC",
+        "old": "0x24070163",
+        "new": "0x24070204",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x44A08",
+        "old": "0x3C014396",
+        "new": "0x3C0143DA",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x44A38",
+        "old": "0x24050037",
+        "new": "0x24050050",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x44A4C",
+        "old": "0x24E70037",
+        "new": "0x24E70050",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x44A7C",
+        "old": "0x24050037",
+        "new": "0x24050050",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x44A80",
+        "old": "0x240700C7",
+        "new": "0x240700E5",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x44B50",
+        "old": "0x2408011D",
+        "new": "0x2408019F",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x44B54",
+        "old": "0x24030107",
+        "new": "0x24030153",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gamefulltop0_gbslow_shared_blitter_stock_texture_setup_20260511_report.json",
+        "group": "U_shared_blitter_stock_texture_setup",
+        "offset": "0x4FDEC",
+        "old": "0x3C170713",
+        "new": "0x3C17070D",
+        "changed": true,
+        "note": "diagnostic restore stock title/sniper texture setup upper"
+      },
+      {
+        "source": "tnd480i_gamefulltop0_gbslow_shared_blitter_stock_texture_setup_20260511_report.json",
+        "group": "U_shared_blitter_stock_texture_setup",
+        "offset": "0x4FDFC",
+        "old": "0x3C0AE49F",
+        "new": "0x3C0AE46D",
+        "changed": true,
+        "note": "diagnostic restore stock title/sniper texture rectangle target width"
+      },
+      {
+        "source": "tnd480i_gamefulltop0_gbslow_shared_blitter_stock_texture_setup_20260511_report.json",
+        "group": "U_shared_blitter_stock_texture_setup",
+        "offset": "0x4FE34",
+        "old": "0x3C0143D7",
+        "new": "0x3C018005",
+        "changed": true,
+        "note": "diagnostic restore stock title/sniper height load upper"
+      },
+      {
+        "source": "tnd480i_gamefulltop0_gbslow_shared_blitter_stock_texture_setup_20260511_report.json",
+        "group": "U_shared_blitter_stock_texture_setup",
+        "offset": "0x4FE3C",
+        "old": "0x36F7F006",
+        "new": "0x36F7B026",
+        "changed": true,
+        "note": "diagnostic restore stock title/sniper texture setup lower"
+      },
+      {
+        "source": "tnd480i_gamefulltop0_gbslow_shared_blitter_stock_texture_setup_20260511_report.json",
+        "group": "U_shared_blitter_stock_texture_setup",
+        "offset": "0x4FE44",
+        "old": "0x44818000",
+        "new": "0xC4301CF0",
+        "changed": true,
+        "note": "diagnostic restore stock title/sniper height load"
+      },
+      {
+        "source": "tnd480i_gamefulltop0_gbslow_shared_blitter_stock_texture_setup_20260511_report.json",
+        "group": "U_shared_blitter_stock_texture_setup",
+        "offset": "0x4FF00",
+        "old": "0x3C0E009F",
+        "new": "0x3C0E006D",
+        "changed": true,
+        "note": "diagnostic restore stock title/sniper texture rectangle lower width"
+      }
+    ],
+    "save_outputs": [
+      {
+        "path": "artifacts\\generated\\t8040vmenusafe.sav",
+        "bytes": 512,
+        "md5": "79ed3fe6851b080ff21de69fd12f034d"
+      },
+      {
+        "path": "artifacts\\generated\\t8040vmenusafe.eep",
+        "bytes": 2048,
+        "md5": "e47f5c07623838e875761a0493388e03"
+      }
+    ]
+  },
+  {
+    "name": "t8040vmenuscales",
+    "filter": "scale_only",
+    "purpose": "Only GE-style menu float/scale constants, preserving TND integer/object placements.",
+    "base_rom": "artifacts\\generated\\t8040viewge.z64",
+    "base_md5": "763f94bd1fb364e3d9eb8809bde4900b",
+    "out_rom": "artifacts\\generated\\t8040vmenuscales.z64",
+    "out_md5": "b6486e99e817e069700d6da0715e13a9",
+    "header_crc": "8AB0127C E5CE421E",
+    "patch_count": 35,
+    "changed_patch_count": 35,
+    "patches": [
+      {
+        "source": "tnd480i_gbslow_menu05_09_moving_post_20260511_report.json",
+        "group": "Q_moving_skip_post_matrix_barrel_dl",
+        "offset": "0x3C68C",
+        "old": "0x3C0F0600",
+        "new": "0x240F0000",
+        "changed": true,
+        "note": "diagnostic disable second moving gunbarrel display-list command"
+      },
+      {
+        "source": "tnd480i_gamefulltop0_gbslow_shared_blitter_stock_texture_setup_20260511_report.json",
+        "group": "S_gunbarrel_case1_slow_3_625",
+        "offset": "0x3DF04",
+        "old": "0x3C018005",
+        "new": "0x3C014068",
+        "changed": true,
+        "note": "diagnostic gunbarrel case1 x decrement 3.625 upper"
+      },
+      {
+        "source": "tnd480i_gamefulltop0_gbslow_shared_blitter_stock_texture_setup_20260511_report.json",
+        "group": "S_gunbarrel_case1_slow_3_625",
+        "offset": "0x3DF08",
+        "old": "0xC428F304",
+        "new": "0x44814000",
+        "changed": true,
+        "note": "diagnostic gunbarrel case1 x decrement move to f8"
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x419F0",
+        "old": "0x3C014361",
+        "new": "0x3C0143A4",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x41A04",
+        "old": "0x3C018005",
+        "new": "0x3C0143CF",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x41A10",
+        "old": "0xC4321A28",
+        "new": "0x44819000",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x41B24",
+        "old": "0x3C018005",
+        "new": "0x3C0143F4",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x41B2C",
+        "old": "0xC4241A2C",
+        "new": "0x44812000",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x41B30",
+        "old": "0x3C018005",
+        "new": "0x3C0143CF",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x41B34",
+        "old": "0xC4321A30",
+        "new": "0x44819000",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x41C30",
+        "old": "0x3C0142DC",
+        "new": "0x3C014320",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x41C40",
+        "old": "0x3C018005",
+        "new": "0x3C0143CF",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x41C48",
+        "old": "0xC4321A34",
+        "new": "0x44819000",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x41F54",
+        "old": "0x3C018005",
+        "new": "0x3C0143BC",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x41F58",
+        "old": "0xC4261A40",
+        "new": "0x44813000",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x41FB0",
+        "old": "0x3C014373",
+        "new": "0x3C0143AC",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x42338",
+        "old": "0x3C0142FC",
+        "new": "0x3C014337",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x433FC",
+        "old": "0x3C018005",
+        "new": "0x3C0143AA",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x43400",
+        "old": "0xC4261A54",
+        "new": "0x44813000",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x43434",
+        "old": "0x3C014373",
+        "new": "0x3C01439A",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x43460",
+        "old": "0x3C014353",
+        "new": "0x3C01438A",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x438A8",
+        "old": "0x3C0142D4",
+        "new": "0x3C014303",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x43D0C",
+        "old": "0x3C01438C",
+        "new": "0x3C014399",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x44104",
+        "old": "0x3C01425C",
+        "new": "0x3C0142A0",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x4410C",
+        "old": "0x3C014396",
+        "new": "0x3C0143DA",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x44410",
+        "old": "0x3C014396",
+        "new": "0x3C0143DA",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x44614",
+        "old": "0x3C014396",
+        "new": "0x3C0143DA",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x44818",
+        "old": "0x3C014396",
+        "new": "0x3C0143DA",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+        "group": "menu05_09_safe",
+        "offset": "0x44A08",
+        "old": "0x3C014396",
+        "new": "0x3C0143DA",
+        "changed": true,
+        "note": ""
+      },
+      {
+        "source": "tnd480i_gamefulltop0_gbslow_shared_blitter_stock_texture_setup_20260511_report.json",
+        "group": "U_shared_blitter_stock_texture_setup",
+        "offset": "0x4FDEC",
+        "old": "0x3C170713",
+        "new": "0x3C17070D",
+        "changed": true,
+        "note": "diagnostic restore stock title/sniper texture setup upper"
+      },
+      {
+        "source": "tnd480i_gamefulltop0_gbslow_shared_blitter_stock_texture_setup_20260511_report.json",
+        "group": "U_shared_blitter_stock_texture_setup",
+        "offset": "0x4FDFC",
+        "old": "0x3C0AE49F",
+        "new": "0x3C0AE46D",
+        "changed": true,
+        "note": "diagnostic restore stock title/sniper texture rectangle target width"
+      },
+      {
+        "source": "tnd480i_gamefulltop0_gbslow_shared_blitter_stock_texture_setup_20260511_report.json",
+        "group": "U_shared_blitter_stock_texture_setup",
+        "offset": "0x4FE34",
+        "old": "0x3C0143D7",
+        "new": "0x3C018005",
+        "changed": true,
+        "note": "diagnostic restore stock title/sniper height load upper"
+      },
+      {
+        "source": "tnd480i_gamefulltop0_gbslow_shared_blitter_stock_texture_setup_20260511_report.json",
+        "group": "U_shared_blitter_stock_texture_setup",
+        "offset": "0x4FE3C",
+        "old": "0x36F7F006",
+        "new": "0x36F7B026",
+        "changed": true,
+        "note": "diagnostic restore stock title/sniper texture setup lower"
+      },
+      {
+        "source": "tnd480i_gamefulltop0_gbslow_shared_blitter_stock_texture_setup_20260511_report.json",
+        "group": "U_shared_blitter_stock_texture_setup",
+        "offset": "0x4FE44",
+        "old": "0x44818000",
+        "new": "0xC4301CF0",
+        "changed": true,
+        "note": "diagnostic restore stock title/sniper height load"
+      },
+      {
+        "source": "tnd480i_gamefulltop0_gbslow_shared_blitter_stock_texture_setup_20260511_report.json",
+        "group": "U_shared_blitter_stock_texture_setup",
+        "offset": "0x4FF00",
+        "old": "0x3C0E009F",
+        "new": "0x3C0E006D",
+        "changed": true,
+        "note": "diagnostic restore stock title/sniper texture rectangle lower width"
+      }
+    ],
+    "save_outputs": [
+      {
+        "path": "artifacts\\generated\\t8040vmenuscales.sav",
+        "bytes": 512,
+        "md5": "79ed3fe6851b080ff21de69fd12f034d"
+      },
+      {
+        "path": "artifacts\\generated\\t8040vmenuscales.eep",
+        "bytes": 2048,
+        "md5": "e47f5c07623838e875761a0493388e03"
+      }
+    ]
+  }
+]
