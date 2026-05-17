@@ -119,6 +119,17 @@ Hardware result: none of the memory-token variants fixed the failure groups. `gf
 
 Current restored console state after that pass: `artifacts/generated/tnd58.z64` with `artifacts/generated/tnd58.sav`, direct ROM mode, EEPROM 4k. SC64 upload and `sc64deployer info` succeeded after restore.
 
+Stock TND64 direct-stage control pass:
+
+```text
+reports/stage_probes/direct_stage_probes_stock_tnd.json
+reports/stage_probes/direct_stage_stock_tnd_hardware_control_20260517.json
+```
+
+Control result: stock TND64 direct probes boot Party, Hotel, City, Volcano, and The End normally on real hardware. Party reaches the CMGN Launch Party title card and live stage view; City reaches Saigon Streets; The End reaches City of Hamburg; Hotel and Volcano render without the 480i prism/blown-out corruption. This confirms the direct-stage probe harness is valid for the same levels that fail on `tnd58`, and the failures are introduced by the 480i patch stack rather than direct-stage booting, save data, or the underlying stock TND level data.
+
+Current restored console state after the stock-control pass: `artifacts/generated/tnd58.z64` with `artifacts/generated/tnd58.sav`, direct ROM mode, EEPROM 4k. SC64 upload and `sc64deployer info` succeeded after restore.
+
 Rejected immediate diagnostic:
 
 ```text

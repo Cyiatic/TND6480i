@@ -26,6 +26,9 @@ Date: 2026-05-08
     - `tnd58mem_gfxvtx_keep` raised gfx/vtx only and made Party worse while not fixing Hotel/Volcano.
     - `tnd58mem_gfxvtx_bal` raised gfx/vtx while lowering texture cache and still left Party, City, The End, Hotel, and Volcano in their previous failure classes.
     - Current conclusion: do not spend the next pass on simple per-stage `-mgfx`/`-mvtx`/`-mt`/`-ma` tuning. Move back to shared camera/render/VI/framebuffer state or transition ownership.
+  - Stock TND64 direct-stage control: `reports/stage_probes/direct_stage_stock_tnd_hardware_control_20260517.json`.
+    - Stock Party, Hotel, City, Volcano, and The End all boot through the same direct-stage harness on real hardware.
+    - This proves the direct-stage harness is valid for the failing levels and the black/prism failures are introduced by the 480i patch stack, not by stock TND level data or by direct booting.
 
 - 2026-05-17 `tlbpages58` 007-label restore, active on hardware with short SC64 upload names:
   - SC64 reports direct-ROM mode with EEPROM 4k. The active console ROM was uploaded as:

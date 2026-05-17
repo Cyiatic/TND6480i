@@ -1,0 +1,65 @@
+{
+  "date": "2026-05-17",
+  "base": {
+    "rom": "artifacts/roms/BASELINE_TND64_Expanded_direct_from_stock.z64",
+    "md5": "1ee22dd1d70443f5e4766d4238756949",
+    "save": "artifacts/generated/tnd58.sav"
+  },
+  "purpose": "Control pass to confirm the direct-stage probe harness itself can boot the levels that fail in the current 480i candidate.",
+  "method": {
+    "builder": "scripts/build_direct_stage_probe_roms.py",
+    "probe_report": "reports/stage_probes/direct_stage_probes_stock_tnd.json",
+    "capture_device": "GV-USB2 over S-Video",
+    "flashcart": "SummerCart64 direct ROM mode, EEPROM 4k",
+    "cycle": "Kasa power-cycle per probe",
+    "clip_seconds": 30,
+    "note": "The first contact-sheet tile can show the previously loaded probe because capture starts before Kasa power-cycle."
+  },
+  "results": [
+    {
+      "probe": "p01pty",
+      "level": "Party",
+      "video": "diagnostics/captures/videos/stock_tnd_direct_p01pty_hardware_20260517.mp4",
+      "contact_sheet": "diagnostics/captures/contact_sheets/stock_tnd_direct_p01pty_hardware_20260517.jpg",
+      "result": "Stock TND direct Party boots through the blue rectangle into the CMGN Launch Party title card, intro scene, and live/rendered stage view."
+    },
+    {
+      "probe": "p04hot",
+      "level": "Hotel",
+      "video": "diagnostics/captures/videos/stock_tnd_direct_p04hot_hardware_20260517.mp4",
+      "contact_sheet": "diagnostics/captures/contact_sheets/stock_tnd_direct_p04hot_hardware_20260517.jpg",
+      "result": "Stock TND direct Hotel boots and renders normally, without the 480i prism/blown-out corruption."
+    },
+    {
+      "probe": "p08cty",
+      "level": "City",
+      "video": "diagnostics/captures/videos/stock_tnd_direct_p08cty_hardware_20260517.mp4",
+      "contact_sheet": "diagnostics/captures/contact_sheets/stock_tnd_direct_p08cty_hardware_20260517.jpg",
+      "result": "Stock TND direct City boots through the Saigon Streets title card into intro/live rendering. The direct-stage harness is not the reason City is black on tnd58."
+    },
+    {
+      "probe": "p11vol",
+      "level": "Volcano",
+      "video": "diagnostics/captures/videos/stock_tnd_direct_p11vol_hardware_20260517.mp4",
+      "contact_sheet": "diagnostics/captures/contact_sheets/stock_tnd_direct_p11vol_hardware_20260517.jpg",
+      "result": "Stock TND direct Volcano boots and renders normally, including effects/explosion frames, without the 480i prism corruption."
+    },
+    {
+      "probe": "p13end",
+      "level": "The End",
+      "video": "diagnostics/captures/videos/stock_tnd_direct_p13end_hardware_20260517.mp4",
+      "contact_sheet": "diagnostics/captures/contact_sheets/stock_tnd_direct_p13end_hardware_20260517.jpg",
+      "result": "Stock TND direct The End boots through the City of Hamburg title card into intro/live rendering. The direct-stage harness is not the reason The End is black on tnd58."
+    }
+  ],
+  "conclusion": [
+    "The direct-stage probe harness is valid for Party, Hotel, City, Volcano, and The End on stock TND64.",
+    "The tnd58 failures are introduced by the 480i patch stack rather than by direct-stage booting.",
+    "Because stock direct probes show title cards/intro/live render where tnd58 direct probes show black or prism corruption, the next investigation should compare stock vs tnd58 camera/transition/render-state code paths, not level data or save state."
+  ],
+  "restore": {
+    "rom": "artifacts/generated/tnd58.z64",
+    "save": "artifacts/generated/tnd58.sav",
+    "sc64_state_after_restore": "Direct ROM mode, EEPROM 4k; upload succeeded after the stock-control pass."
+  }
+}
