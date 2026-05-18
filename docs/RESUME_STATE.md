@@ -1,6 +1,6 @@
 # TND6480i Resume State
 
-Last updated: 2026-05-17 after stock-vs-480i Wreck hardware controls and the shared-blitter performance canary.
+Last updated: 2026-05-17 after `TND90GE` Analogue 3D gameplay validation.
 
 Scope reminder: keep work limited to this N64/TND6480i project and directly related tools/devices.
 
@@ -46,6 +46,8 @@ diagnostics/captures/contact_sheets/t90viewge_full_startup_20260517/t90viewge_fu
 ```
 
 Direct-stage hardware result for `t90viewge`: Wreck cadence matches the old good baseline; Party, City, The End, Hotel, Volcano, Tower, and Boat all reached rendered scenes instead of the earlier lock/prism/black failure classes. Full-ROM startup reaches SC64 menu pre-roll, TiJayFly, Rare, gunbarrel, TND logo, and opening cast. Known front-end issues remain, especially gunbarrel/logos/menus; use `t90viewge` now for manual full-route playability and Analogue speed testing.
+
+Analogue 3D user result for `TND90GE`: all levels boot and run fine. New visual note: the Labs encoder numbers were previously legible but are now hard to make out. Treat this as a visual-detail regression, not a stability regression. The cheapest isolation test is `TND90GE` versus `T90FB` in Labs because `T90FB` keeps the same 90-page relocated TLB and `fb0=0x80400000` stability/performance fix but removes the later GE camera/viewport constants. If `T90FB` restores encoder legibility, the regression is likely in the GE-style viewport layer; if it does not, compare against the older slow-but-clear candidate to find the render-detail tradeoff.
 
 ## Current Performance Finding
 

@@ -16,12 +16,15 @@ artifacts/analogue_test/TND90GE.SAV
 
 Why: direct Wreck hardware cadence matches the old good TND6480i recording after restoring the TLB cache wrap to 90 pages while relocating the cache below `fb1`. The previous 58-page workaround is now the performance regression suspect. `t90viewge` keeps the `fb0=0x80400000` level-boot fix and GE 480i viewport constants, and direct probes for Party, City, The End, Hotel, Volcano, Tower, and Boat all reached rendered scenes on real N64.
 
+Analogue 3D result: user tested `TND90GE` and reported that all levels boot and run fine. Remaining gameplay-side visual note: the Labs encoder numbers were clear in an earlier build but are now difficult to read. Treat this as the next focused A/B against `T90FB`, not as a reason to abandon the `TND90GE` stability baseline.
+
 Current manual test order:
 
-1. Wreck/Printworks speed on N64 and Analogue 3D.
-2. Full-route level boot/playability, especially Party, City, The End, Tower, Boat, Hotel, and Volcano.
-3. Bazaar/Labs/pause/watch regression check.
-4. Front-end/gunbarrel/menu issues after gameplay stability is confirmed.
+1. Compare Labs encoder legibility on `TND90GE` versus `T90FB`.
+2. Reconfirm Wreck/Printworks speed on N64 and Analogue 3D after any visual tweak.
+3. Full-route level boot/playability, especially Party, City, The End, Tower, Boat, Hotel, and Volcano.
+4. Bazaar/Labs/pause/watch regression check.
+5. Front-end/gunbarrel/menu issues after gameplay stability is confirmed.
 
 Minimal fallback if `t90viewge` has a viewport-specific regression:
 
