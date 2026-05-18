@@ -49,6 +49,8 @@ Direct-stage hardware result for `t90viewge`: Wreck cadence matches the old good
 
 Analogue 3D user result for `TND90GE`: all levels boot and run fine. New visual note: the Labs encoder numbers were previously legible but are now hard to make out. Treat this as a visual-detail regression, not a stability regression. The cheapest isolation test is `TND90GE` versus `T90FB` in Labs because `T90FB` keeps the same 90-page relocated TLB and `fb0=0x80400000` stability/performance fix but removes the later GE camera/viewport constants. If `T90FB` restores encoder legibility, the regression is likely in the GE-style viewport layer; if it does not, compare against the older slow-but-clear candidate to find the render-detail tradeoff.
 
+GE hi-res patch reference note from user: the original GoldenEye hi-res patch credits Zoinkity's 7 MB RAM extension, moves two 640x480 framebuffers to upper RAM, and adjusts related GoldenEye assembly plus VI settings. Treat that as confirmation that the target is a coordinated RAM-layout/framebuffer/VI/assembly patch, not a loose set of resolution constants. This aligns with the TND90 breakthrough: preserving a large TLB/page-cache range while relocating it away from the expanded framebuffers mattered as much as the visible 480i constants.
+
 ## Current Performance Finding
 
 User Analogue 3D feedback on `t8040viewge`: gameplay is viable but performance is poor, with Printworks and Wreck reportedly running slower than expected even with Analogue overclock. Treat this as a first-class issue, not just visual polish.
