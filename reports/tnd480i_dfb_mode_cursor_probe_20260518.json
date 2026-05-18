@@ -1,0 +1,171 @@
+{
+  "base_rom": "artifacts\\generated\\dfbmy32.z64",
+  "base_md5": "cd60b6ce03598cbbbc99fb01c7e9567c",
+  "purpose": "Focused mode-select cursor probes on top of dfbmy32; no text/background changes.",
+  "candidates": [
+    {
+      "name": "dfbcurx",
+      "purpose": "Restore only TND stock mode-select cursor X constant.",
+      "base_rom": "artifacts\\generated\\dfbmy32.z64",
+      "out_rom": "artifacts\\generated\\dfbcurx.z64",
+      "out_md5": "5c8640f8c0cfa850900b1f6e5a6e912f",
+      "header_crc": "71B1B509 4822E258",
+      "patches": [
+        {
+          "offset": "0x42338",
+          "old": "0x3C014337",
+          "new": "0x3C0142FC"
+        }
+      ],
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\dfbmy32.sav",
+          "target": "artifacts\\generated\\dfbcurx.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\dfbmy32.eep",
+          "target": "artifacts\\generated\\dfbcurx.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ],
+      "route_output": {
+        "out_rom": "artifacts\\generated\\dfbcurxauto06.z64",
+        "out_md5": "484fba0cefee7a4416ebb4d4edfd0bc0",
+        "header_crc": "71B1B505 EB925F89",
+        "patch": {
+          "offset": "0x3FF34",
+          "old": "0x24040018",
+          "new": "0x24040006"
+        },
+        "save_outputs": [
+          {
+            "source": "artifacts\\generated\\dfbmy32.sav",
+            "target": "artifacts\\generated\\dfbcurxauto06.sav",
+            "bytes": 512,
+            "md5": "79ed3fe6851b080ff21de69fd12f034d"
+          },
+          {
+            "source": "artifacts\\generated\\dfbmy32.eep",
+            "target": "artifacts\\generated\\dfbcurxauto06.eep",
+            "bytes": 2048,
+            "md5": "e47f5c07623838e875761a0493388e03"
+          }
+        ]
+      }
+    },
+    {
+      "name": "dfbcury",
+      "purpose": "Restore only TND stock mode-select cursor Y base constant.",
+      "base_rom": "artifacts\\generated\\dfbmy32.z64",
+      "out_rom": "artifacts\\generated\\dfbcury.z64",
+      "out_md5": "ab384792920e2cf835e2fcd68e3f560c",
+      "header_crc": "71B1B51F CE62DCD6",
+      "patches": [
+        {
+          "offset": "0x42330",
+          "old": "0x25CF0126",
+          "new": "0x25CF00E2"
+        }
+      ],
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\dfbmy32.sav",
+          "target": "artifacts\\generated\\dfbcury.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\dfbmy32.eep",
+          "target": "artifacts\\generated\\dfbcury.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ],
+      "route_output": {
+        "out_rom": "artifacts\\generated\\dfbcuryauto06.z64",
+        "out_md5": "139659f6a8ce25d37199d5e910eb80bd",
+        "header_crc": "71B1B573 F04E5067",
+        "patch": {
+          "offset": "0x3FF34",
+          "old": "0x24040018",
+          "new": "0x24040006"
+        },
+        "save_outputs": [
+          {
+            "source": "artifacts\\generated\\dfbmy32.sav",
+            "target": "artifacts\\generated\\dfbcuryauto06.sav",
+            "bytes": 512,
+            "md5": "79ed3fe6851b080ff21de69fd12f034d"
+          },
+          {
+            "source": "artifacts\\generated\\dfbmy32.eep",
+            "target": "artifacts\\generated\\dfbcuryauto06.eep",
+            "bytes": 2048,
+            "md5": "e47f5c07623838e875761a0493388e03"
+          }
+        ]
+      }
+    },
+    {
+      "name": "dfbcur",
+      "purpose": "Restore TND stock mode-select cursor X and Y constants.",
+      "base_rom": "artifacts\\generated\\dfbmy32.z64",
+      "out_rom": "artifacts\\generated\\dfbcur.z64",
+      "out_md5": "06d8ed5a6356f73bb784b5165fdbf086",
+      "header_crc": "71B1B489 5C96D445",
+      "patches": [
+        {
+          "offset": "0x42330",
+          "old": "0x25CF0126",
+          "new": "0x25CF00E2"
+        },
+        {
+          "offset": "0x42338",
+          "old": "0x3C014337",
+          "new": "0x3C0142FC"
+        }
+      ],
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\dfbmy32.sav",
+          "target": "artifacts\\generated\\dfbcur.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\dfbmy32.eep",
+          "target": "artifacts\\generated\\dfbcur.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ],
+      "route_output": {
+        "out_rom": "artifacts\\generated\\dfbcurauto06.z64",
+        "out_md5": "8a4f20f0da2d14b69dc8a44180f3dfdd",
+        "header_crc": "71B1B485 29C236E0",
+        "patch": {
+          "offset": "0x3FF34",
+          "old": "0x24040018",
+          "new": "0x24040006"
+        },
+        "save_outputs": [
+          {
+            "source": "artifacts\\generated\\dfbmy32.sav",
+            "target": "artifacts\\generated\\dfbcurauto06.sav",
+            "bytes": 512,
+            "md5": "79ed3fe6851b080ff21de69fd12f034d"
+          },
+          {
+            "source": "artifacts\\generated\\dfbmy32.eep",
+            "target": "artifacts\\generated\\dfbcurauto06.eep",
+            "bytes": 2048,
+            "md5": "e47f5c07623838e875761a0493388e03"
+          }
+        ]
+      }
+    }
+  ]
+}

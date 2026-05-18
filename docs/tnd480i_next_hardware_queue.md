@@ -108,6 +108,26 @@ reports/capture_cadence/gunbarrel_ge480i_stock_tnd_t90texstk_clean_20260518.json
 
 The console is now restored to `t90texstk`, direct boot, EEPROM 4k, and a final Kasa launch-confirm capture reached CMK/logos/gunbarrel. This branch removes both the `gb_slow` timing pair and the second moving-barrel display-list suppression, keeping only stock shared title/sniper texture setup on top of the protected `t90viewge` gameplay baseline. Clean GV-USB2 capture shows the two-circle pre-gunbarrel phase restored and cadence matching stock TND64 on the aligned segment (`stock_tnd_gunbarrel` about `6.669`, `t90texstk_clean_gunbarrel` about `6.679` active updates/sec). Route probes from this exact branch show file select, mode select, and mission select matching stock TND64's intended red dossier layout; difficulty/briefing still require upstream state from real input or a timed route patch.
 
+Latest dossier probe after the table1/swap follow-up:
+
+```text
+artifacts/generated/t90doss1.z64
+artifacts/generated/t90doss1.sav
+artifacts/generated/TND6480i_t90doss1_from_baseline_tnd.bps
+artifacts/generated/t90doss1my16.z64
+artifacts/generated/t90doss1my16.sav
+artifacts/generated/TND6480i_t90doss1my16_from_baseline_tnd.bps
+artifacts/analogue_test/T90DOSS1.Z64
+artifacts/analogue_test/T90DOSS1.SAV
+artifacts/analogue_test/T90DMY16.Z64
+artifacts/analogue_test/T90DMY16.SAV
+diagnostics/captures/contact_sheets/dossier_d1s_file_matrix_20260518/sheet.jpg
+diagnostics/captures/contact_sheets/dossier_d1smp_mode_matrix_20260518/sheet.jpg
+diagnostics/captures/contact_sheets/dossier_t90doss1_mode_y16_matrix_20260518/sheet.jpg
+```
+
+`t90doss1` is `t90texstk` plus the newly useful `table1=640x480 + skip menu-framebuffer swap` pair, then file-select and mode-select GE enhanced coordinate overlays. `t90doss1my16` moves only the mode-select vertical constants up 16 units and is the current best dossier probe. Hardware route captures show file and mode moving closer to the GE enhanced scale/spacing. Mission-select GE helper/full overlays were rejected; mission remains on the TND layout. Current SC64 upload after this probe is `t90doss1my16` direct boot with EEPROM 4k. Restore `t90texstk` if the next task is only gameplay stability.
+
 Next useful test: manual or emulator-driven gameplay/all-level sanity for `t90texstk` to ensure the front-end cleanup did not regress the known-good `t90viewge` gameplay/all-level baseline. If it regresses, restore `artifacts/generated/t90viewge.z64`.
 
 GE hi-res patch page clue: GoldenEye's working 640x480i patch depends on Zoinkity's 7 MB RAM extension, two relocated 640x480 framebuffers in upper RAM, and matching assembly/VI changes. For TND64, keep testing memory layout, framebuffer placement, and the TLB/cache range as one system. Avoid broad menu/front-end transplants until the core RAM/framebuffer model is understood.
@@ -1069,3 +1089,23 @@ If `split8040_8076_memonly` black-screens on real hardware, do not test side-pat
 ## If Step 1 Boots
 
 If `split8040_8076_memonly` boots, use Step 2 next. If Step 2 boots but still does not look like 480i, continue through the H subchunk variants.
+
+## 2026-05-18 Dossier Queue
+
+Current front/dossier candidate on SC64:
+
+```text
+artifacts/generated/dfbcurx.z64
+Paired save: artifacts/generated/dfbcurx.sav
+Patch: artifacts/generated/TND6480i_dfbcurx_from_baseline_tnd.bps
+```
+
+Do not continue with global shared-blitter texture setup probes for file select. Hardware showed `0x4FDFC = 0x3C0AE49F` fixes the file-select backdrop only when applied to the shared blitter, but that path is also used by title/gunbarrel. The correct shape is the callsite-specific clone in `dmyfbrw1`/`dfbcurx`.
+
+Useful evidence to review before the next patch:
+
+- `diagnostics/captures/contact_sheets/dossier_dmyfbrw1_file_matrix_20260518/sheet.jpg`
+- `diagnostics/captures/contact_sheets/dossier_dfbmy32_mode_matrix_20260518/sheet.jpg`
+- `diagnostics/captures/contact_sheets/dfbcurx_restore_confirm_20260518.jpg`
+
+Next human-driven test should start from normal file select, not the direct mode route. The direct `MENU_MODE_SELECT` route bypasses cursor initialization, so it is misleading for the red selector reticle. Check file-select backdrop coverage, then choose a file and enter single-player to see whether `dfbcurx` puts the reticle beside `1. SELECT MISSION`.

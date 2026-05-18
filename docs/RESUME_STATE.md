@@ -1,6 +1,6 @@
 # TND6480i Resume State
 
-Last updated: 2026-05-18 after `t90texstk` front-end hardware comparison.
+Last updated: 2026-05-18 after `t90doss1my16` dossier hardware probe.
 
 Scope reminder: keep work limited to this N64/TND6480i project and directly related tools/devices.
 
@@ -203,6 +203,36 @@ diagnostics/captures/contact_sheets/stock_tnd_vs_t90tex_dossier_20260518/sheet.j
 The file-select, mode-select, and mission-select pages line up with stock TND64's red dossier/folder layout while remaining in the GE480i/high-res presentation family. Difficulty and briefing still need either real controller input or a slower state-machine route; immediate direct jumps to those pages black-screen because upstream selection state is missing.
 
 Current SC64 upload after this follow-up: `artifacts/generated/t90texstk.z64`, direct boot, EEPROM 4k save. A final Kasa launch-confirm capture reached CMK/logos/gunbarrel, so the console is running the current candidate rather than merely staging it. This is the next front-end/gunbarrel test candidate; if gameplay/all-level boot regresses, restore the protected gameplay baseline `t90viewge`.
+
+2026-05-18 dossier table1/swap follow-up:
+
+```text
+artifacts/generated/t90doss1.z64
+artifacts/generated/t90doss1.sav
+artifacts/generated/TND6480i_t90doss1_from_baseline_tnd.bps
+artifacts/generated/t90doss1my16.z64
+artifacts/generated/t90doss1my16.sav
+artifacts/generated/TND6480i_t90doss1my16_from_baseline_tnd.bps
+artifacts/analogue_test/T90DOSS1.Z64
+artifacts/analogue_test/T90DOSS1.SAV
+artifacts/analogue_test/T90DMY16.Z64
+artifacts/analogue_test/T90DMY16.SAV
+diagnostics/captures/contact_sheets/dossier_txdim1skip_vs_force0_matrix_20260518/sheet.jpg
+diagnostics/captures/contact_sheets/dossier_d1s_file_matrix_20260518/sheet.jpg
+diagnostics/captures/contact_sheets/dossier_d1smp_mode_matrix_20260518/sheet.jpg
+diagnostics/captures/contact_sheets/dossier_t90doss1_mode_y16_matrix_20260518/sheet.jpg
+diagnostics/captures/videos/t90doss1_direct_startup_long_hardware_20260518.mp4
+reports/tnd6480i_t90doss1_bps_manifest.json
+reports/tnd6480i_t90doss1my16_bps_manifest.json
+```
+
+`txdim1` alone black-screened earlier because the 440x330 menu-table path still tried to switch to the menu framebuffer before applying the widened dimensions. The missing narrow combo was `0x4F35C = 0x028001E0` plus the existing `J_front_skip_menu_framebuf_swap` branch patch at `0x4F1C4`. Hardware route capture confirms `txdim1skip` reaches file, mode, and mission pages without the previous black-screen failure.
+
+`t90doss1` starts from `t90texstk`, applies the `txdim1skip` table/swap pair, then adds file-select GE enhanced coordinates and mode-select GE enhanced coordinates. Mission select is intentionally left on the `txdim1skip` TND layout because `d1stxmissionfull` pushed the filmstrip further toward the top/edge and was not an improvement. The extra `J_front_layout_4aaa_480i` draw-width/X/Y cluster on top of the improved file page did not visibly fix the remaining background coverage issue and is rejected for now.
+
+Hardware result so far: file select and mode select move closer to the GE enhanced dossier scale/spacing than `t90texstk`; mode text is visible again with `modepos2`, and file labels move back to the bottom. A follow-up `t90doss1my16` moves only mode-select vertical constants up 16 units, producing a visibly closer mode-select alignment than `t90doss1`. Remaining defects are background/coverage and final alignment. Direct startup is alive and reaches gunbarrel/TND logo/opening credits; the route probes are the authoritative dossier-page evidence.
+
+Current SC64 upload after this probe: `artifacts/generated/t90doss1my16.z64`, direct boot, EEPROM 4k save. If the user wants the last gameplay-stable front baseline instead, restore `artifacts/generated/t90texstk.z64`.
 
 2026-05-18 dossier hardware follow-up after workflow correction:
 
@@ -1618,3 +1648,40 @@ Paired save: artifacts/generated/game_h460_top10_stock_dossier_tlb805c_current.s
 ```
 
 SC64 accepted the upload and save, but the N64 was still black/locked from the previous Party freeze. `sc64deployer reset` only changed SC64 back to menu boot mode internally; GV-USB2 remained black. The candidate was re-uploaded after that reset, and `sc64deployer info` again shows `ROM (direct)` plus `EEPROM 4k`. The next physical action needed is a real N64 reset or power cycle; after that, test whether file select shows completed folders and launch Party from the completed save.
+
+## 2026-05-18 Current Dossier Candidate
+
+Current SC64-loaded full candidate:
+
+```text
+artifacts/generated/dfbcurx.z64
+MD5: 5c8640f8c0cfa850900b1f6e5a6e912f
+BPS: artifacts/generated/TND6480i_dfbcurx_from_baseline_tnd.bps
+Analogue copy: artifacts/analogue_test/DFBCURX.Z64 with matching .SAV/.EEP
+```
+
+What changed after `t90doss1my16`:
+
+- `dmyfbrw1` cloned the shared title/file blitter into the `0x4F498` cave and routed only the file-select callsite through the clone.
+- The cloned file-select blitter applies the minimal backdrop-width word found by the `dmyrw1` hardware probe, fixing the clipped gray file-select background without applying the word globally to title/gunbarrel.
+- `dfbmy32` moved the mode-select option text another 16 units up; hardware matrix shows it closer to the GE enhanced reference than `t90doss1my16`.
+- `dfbcurx` restores only the TND stock mode-select cursor X constant while keeping the enhanced text/Y alignment.
+
+Evidence:
+
+```text
+diagnostics/captures/contact_sheets/dossier_dmyfbrw1_file_matrix_20260518/sheet.jpg
+diagnostics/captures/contact_sheets/dossier_dfbmy32_mode_matrix_20260518/sheet.jpg
+diagnostics/captures/contact_sheets/dfbcurx_restore_confirm_20260518.jpg
+reports/tnd480i_dmyfbrw1_callsite_blitter_20260518.json
+reports/tnd6480i_dfbcurx_bps_manifest.json
+```
+
+Important caveat: the direct no-input `MENU_MODE_SELECT` route does not initialize the live cursor state, so route captures still show the reticle in a misleading stale/default position. Verify `dfbcurx` manually by navigating from file select into single-player/mode select and checking whether the reticle lands beside `1. SELECT MISSION`.
+
+Next manual checks for `dfbcurx`:
+
+1. File select: confirm the gray backdrop no longer clips on the right/lower-right.
+2. Mode select: confirm the option text spacing feels closer to GE enhanced and the reticle is beside option 1.
+3. Mission select: confirm the existing mission grid alignment did not regress.
+4. Gameplay smoke: Bazaar or Wreck should match the already-good in-game behavior because this candidate only changes front/dossier callsites/constants.

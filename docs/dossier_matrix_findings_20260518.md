@@ -128,3 +128,67 @@ Result:
 - `force0+rawAB` nudges mission select but does not solve the page family. It should not be promoted without a page-aware mechanism, because the same global low-res path breaks file/mode presentation.
 
 Interpretation: forcing the menu path globally is the wrong final shape. The useful signal is that the mission page can be pushed toward the GE480i scale class, but file and mode need their own composition/background handling. The next probe should not be another global `screen_size = 0`; it should target either the per-page setup before `menu_init` or the background/folder draw dimensions after `frontSetupMenuBackground`.
+
+## Table1 + Skip-Menu-FB Follow-up
+
+New useful probe family:
+
+- `txdim1skip`: stable `t90texstk` plus `0x4F35C = 0x028001E0` and `0x4F1C4 = 0x10000003`.
+- `t90doss1`: `txdim1skip` plus file-select GE enhanced coordinates and mode-select GE enhanced coordinates.
+- `t90doss1my16`: `t90doss1` plus mode-select vertical constants moved up 16 units.
+
+Important correction: `txdim1` and `txdim1buf` black-screened, and `txskipfb` alone did not visibly change scale. The combined `table1=640x480 + skip menu framebuffer swap` path had not been tested in the previous matrix. Hardware capture shows that this combination boots to routed file/mode/mission pages, so the black-screen was caused by widening table1 while still taking the old menu-framebuffer swap path.
+
+New artifacts:
+
+- `diagnostics/captures/contact_sheets/dossier_txdim1skip_vs_force0_matrix_20260518/sheet.jpg`
+- `diagnostics/captures/contact_sheets/dossier_d1s_file_matrix_20260518/sheet.jpg`
+- `diagnostics/captures/contact_sheets/dossier_d1smp_mode_matrix_20260518/sheet.jpg`
+- `diagnostics/captures/contact_sheets/dossier_t90doss1_mode_y16_matrix_20260518/sheet.jpg`
+- `diagnostics/captures/contact_sheets/d1smfauto07_mission_hardware_20260518.jpg`
+- `artifacts/generated/t90doss1.z64`
+- `artifacts/generated/t90doss1my16.z64`
+- `artifacts/generated/TND6480i_t90doss1_from_baseline_tnd.bps`
+- `artifacts/generated/TND6480i_t90doss1my16_from_baseline_tnd.bps`
+
+Results:
+
+- `txdim1skip` is a better diagnostic than `txforce0`: it enters the 640x480 table1 path without the earlier black-screen, and without relying on a global forced `screen_size = 0`.
+- `d1stxfilefull` is useful on top of `txdim1skip`: file labels move back near the bottom like GE enhanced, while retaining TND red folder styling.
+- `d1stxmodepos2` is useful on top of `txdim1skip`: mode option text becomes visible again and lands closer to GE enhanced spacing.
+- `t90doss1my16` improves mode-select alignment over `t90doss1` by moving only the mode vertical constants up 16 units.
+- `d1stxmissionfull` is rejected for now: it nudges the filmstrip toward the edge/top and is not an improvement over leaving TND mission select on the `txdim1skip` layout.
+- `J_front_layout_4aaa_480i` on top of the improved file page did not visibly fix the remaining background coverage/alignment issue.
+- `J_front_buffer_sizes_480i` on top of `t90doss1my16` did not visibly fix the remaining file-select background coverage issue in the hardware file route.
+
+Current best dossier probe is `t90doss1my16`, not a promoted final patch. It is appropriate for manual front-end testing; if gameplay stability is the only priority, use the prior `t90texstk` baseline.
+
+## File-Select Blitter Split and Mode Follow-Up
+
+The next hardware pass isolated the file-select backdrop clipping to a single shared-blitter texture-width word:
+
+- Global `dmyrw1`: `0x4FDFC = 0x3C0AE49F` fixes file-select backdrop coverage, but it is too broad because the same shared blitter is also used by title/gunbarrel paths.
+- `dmywrect` also fixes coverage, but introduces right-side vertical striping and worse intro artifacts.
+- `dmywtile` does not fix the file-select backdrop by itself.
+
+Promotable shape is callsite-specific, not global. `dmyfbrw1` clones the wrapper/blitter into the known cave at `0x4F498`, applies only the `rw1` word to the cloned blitter, and routes only the file-select callsite at `0x41030` to the clone. Hardware evidence:
+
+- `diagnostics/captures/contact_sheets/dmyfbrw1auto05_file_hardware_20260518.jpg`
+- `diagnostics/captures/contact_sheets/dossier_dmyfbrw1_file_matrix_20260518/sheet.jpg`
+- `reports/tnd480i_dmyfbrw1_callsite_blitter_20260518.json`
+
+Result: the file-select gray backdrop now covers the full page while retaining TND red folders and bottom labels/icons.
+
+Mode select was then moved another 16 units up from `t90doss1my16`, producing `dfbmy32`. This better matches the GE enhanced mode-option text block:
+
+- `diagnostics/captures/contact_sheets/dossier_dfbmy32_mode_matrix_20260518/sheet.jpg`
+- `reports/tnd480i_dfbmy32_mode_y_candidate_20260518.json`
+
+The direct mode-route capture does not initialize the live menu cursor, so it cannot prove cursor placement. Source comparison shows the GE480i mode cursor X constant (`183.0`) is wrong for TND's red dossier layout after the text move. `dfbcurx` restores only TND's stock cursor X constant (`0x42338 = 0x3C0142FC`) while keeping the enhanced Y/text alignment. Manual file-select-to-mode navigation should verify the reticle lands beside option 1.
+
+Current best dossier candidate:
+
+- `artifacts/generated/dfbcurx.z64`
+- BPS: `artifacts/generated/TND6480i_dfbcurx_from_baseline_tnd.bps`
+- Analogue copy: `artifacts/analogue_test/DFBCURX.Z64` with matching `.SAV`/`.EEP`
+- Restore confirmation: `diagnostics/captures/contact_sheets/dfbcurx_restore_confirm_20260518.jpg`

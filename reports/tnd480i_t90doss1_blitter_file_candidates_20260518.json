@@ -1,0 +1,728 @@
+{
+  "base_rom": "artifacts\\generated\\t90doss1my16.z64",
+  "base_md5": "c7f17ceceb06a76f9d2d2b8fedcca60e",
+  "purpose": "Probe whether the remaining t90doss1my16 file-select backdrop clipping is the shared title/menu blitter texture setup.",
+  "candidates": [
+    {
+      "name": "dmyrw1",
+      "purpose": "t90doss1my16 plus only the first GE480i texture-rectangle width word.",
+      "base_rom": "artifacts\\generated\\t90doss1my16.z64",
+      "out_rom": "artifacts\\generated\\dmyrw1.z64",
+      "out_md5": "5b2f031dd54edecead9c2c832587b762",
+      "header_crc": "86DB3A97 12985636",
+      "patch_count": 1,
+      "changed_patch_count": 1,
+      "patches": [
+        {
+          "offset": "0x4FDFC",
+          "old": "0x3C0AE46D",
+          "new": "0x3C0AE49F",
+          "changed": true,
+          "note": "GE480i texture rectangle target width"
+        }
+      ],
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\t90doss1my16.sav",
+          "target": "artifacts\\generated\\dmyrw1.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\t90doss1my16.eep",
+          "target": "artifacts\\generated\\dmyrw1.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ],
+      "route_outputs": [
+        {
+          "route": "05",
+          "purpose": "file select / save folders",
+          "out_rom": "artifacts\\generated\\t90doss1_blitter_routes\\dmyrw1auto05.z64",
+          "out_md5": "d2136fa80520c9915833272a18989b43",
+          "header_crc": "86DB3AFF C3138812",
+          "route_patch": {
+            "offset": "0x3FF34",
+            "old": "0x24040018",
+            "new": "0x24040005"
+          },
+          "save_outputs": [
+            {
+              "source": "artifacts\\generated\\t90doss1my16.sav",
+              "target": "artifacts\\generated\\t90doss1_blitter_routes\\dmyrw1auto05.sav",
+              "bytes": 512,
+              "md5": "79ed3fe6851b080ff21de69fd12f034d"
+            },
+            {
+              "source": "artifacts\\generated\\t90doss1my16.eep",
+              "target": "artifacts\\generated\\t90doss1_blitter_routes\\dmyrw1auto05.eep",
+              "bytes": 2048,
+              "md5": "e47f5c07623838e875761a0493388e03"
+            }
+          ]
+        },
+        {
+          "route": "06",
+          "purpose": "mode select",
+          "out_rom": "artifacts\\generated\\t90doss1_blitter_routes\\dmyrw1auto06.z64",
+          "out_md5": "ce53f6df35c3f04f46a04d0fc9bf114f",
+          "header_crc": "86DB3AFB 6E13D420",
+          "route_patch": {
+            "offset": "0x3FF34",
+            "old": "0x24040018",
+            "new": "0x24040006"
+          },
+          "save_outputs": [
+            {
+              "source": "artifacts\\generated\\t90doss1my16.sav",
+              "target": "artifacts\\generated\\t90doss1_blitter_routes\\dmyrw1auto06.sav",
+              "bytes": 512,
+              "md5": "79ed3fe6851b080ff21de69fd12f034d"
+            },
+            {
+              "source": "artifacts\\generated\\t90doss1my16.eep",
+              "target": "artifacts\\generated\\t90doss1_blitter_routes\\dmyrw1auto06.eep",
+              "bytes": 2048,
+              "md5": "e47f5c07623838e875761a0493388e03"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "dmyrw2",
+      "purpose": "t90doss1my16 plus only the second GE480i texture-rectangle width word.",
+      "base_rom": "artifacts\\generated\\t90doss1my16.z64",
+      "out_rom": "artifacts\\generated\\dmyrw2.z64",
+      "out_md5": "90332d8d68be9ca643c20424b169ce2f",
+      "header_crc": "86DB3A97 C6EEE118",
+      "patch_count": 1,
+      "changed_patch_count": 1,
+      "patches": [
+        {
+          "offset": "0x4FF00",
+          "old": "0x3C0E006D",
+          "new": "0x3C0E009F",
+          "changed": true,
+          "note": "GE480i texture rectangle lower width"
+        }
+      ],
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\t90doss1my16.sav",
+          "target": "artifacts\\generated\\dmyrw2.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\t90doss1my16.eep",
+          "target": "artifacts\\generated\\dmyrw2.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ],
+      "route_outputs": [
+        {
+          "route": "05",
+          "purpose": "file select / save folders",
+          "out_rom": "artifacts\\generated\\t90doss1_blitter_routes\\dmyrw2auto05.z64",
+          "out_md5": "ee33e411726343f89656b07418b095f6",
+          "header_crc": "86DB3AFF F7D56302",
+          "route_patch": {
+            "offset": "0x3FF34",
+            "old": "0x24040018",
+            "new": "0x24040005"
+          },
+          "save_outputs": [
+            {
+              "source": "artifacts\\generated\\t90doss1my16.sav",
+              "target": "artifacts\\generated\\t90doss1_blitter_routes\\dmyrw2auto05.sav",
+              "bytes": 512,
+              "md5": "79ed3fe6851b080ff21de69fd12f034d"
+            },
+            {
+              "source": "artifacts\\generated\\t90doss1my16.eep",
+              "target": "artifacts\\generated\\t90doss1_blitter_routes\\dmyrw2auto05.eep",
+              "bytes": 2048,
+              "md5": "e47f5c07623838e875761a0493388e03"
+            }
+          ]
+        },
+        {
+          "route": "06",
+          "purpose": "mode select",
+          "out_rom": "artifacts\\generated\\t90doss1_blitter_routes\\dmyrw2auto06.z64",
+          "out_md5": "4dd096ef61ba855e28f773e21f17ae79",
+          "header_crc": "86DB3AFB 42368318",
+          "route_patch": {
+            "offset": "0x3FF34",
+            "old": "0x24040018",
+            "new": "0x24040006"
+          },
+          "save_outputs": [
+            {
+              "source": "artifacts\\generated\\t90doss1my16.sav",
+              "target": "artifacts\\generated\\t90doss1_blitter_routes\\dmyrw2auto06.sav",
+              "bytes": 512,
+              "md5": "79ed3fe6851b080ff21de69fd12f034d"
+            },
+            {
+              "source": "artifacts\\generated\\t90doss1my16.eep",
+              "target": "artifacts\\generated\\t90doss1_blitter_routes\\dmyrw2auto06.eep",
+              "bytes": 2048,
+              "md5": "e47f5c07623838e875761a0493388e03"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "dmywrect",
+      "purpose": "t90doss1my16 plus only the GE480i texture-rectangle width words.",
+      "base_rom": "artifacts\\generated\\t90doss1my16.z64",
+      "out_rom": "artifacts\\generated\\dmywrect.z64",
+      "out_md5": "a3fb47c00d9273124ed45816cbd828e5",
+      "header_crc": "86DB3A5B 1C239D60",
+      "patch_count": 2,
+      "changed_patch_count": 2,
+      "patches": [
+        {
+          "offset": "0x4FDFC",
+          "old": "0x3C0AE46D",
+          "new": "0x3C0AE49F",
+          "changed": true,
+          "note": "GE480i texture rectangle target width"
+        },
+        {
+          "offset": "0x4FF00",
+          "old": "0x3C0E006D",
+          "new": "0x3C0E009F",
+          "changed": true,
+          "note": "GE480i texture rectangle lower width"
+        }
+      ],
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\t90doss1my16.sav",
+          "target": "artifacts\\generated\\dmywrect.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\t90doss1my16.eep",
+          "target": "artifacts\\generated\\dmywrect.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ],
+      "route_outputs": [
+        {
+          "route": "05",
+          "purpose": "file select / save folders",
+          "out_rom": "artifacts\\generated\\t90doss1_blitter_routes\\dmywrectauto05.z64",
+          "out_md5": "380b928a073b96944113e8a3e654b02c",
+          "header_crc": "86DB3A5B BBC61E81",
+          "route_patch": {
+            "offset": "0x3FF34",
+            "old": "0x24040018",
+            "new": "0x24040005"
+          },
+          "save_outputs": [
+            {
+              "source": "artifacts\\generated\\t90doss1my16.sav",
+              "target": "artifacts\\generated\\t90doss1_blitter_routes\\dmywrectauto05.sav",
+              "bytes": 512,
+              "md5": "79ed3fe6851b080ff21de69fd12f034d"
+            },
+            {
+              "source": "artifacts\\generated\\t90doss1my16.eep",
+              "target": "artifacts\\generated\\t90doss1_blitter_routes\\dmywrectauto05.eep",
+              "bytes": 2048,
+              "md5": "e47f5c07623838e875761a0493388e03"
+            }
+          ]
+        },
+        {
+          "route": "06",
+          "purpose": "mode select",
+          "out_rom": "artifacts\\generated\\t90doss1_blitter_routes\\dmywrectauto06.z64",
+          "out_md5": "65150ff28c6aaed96c510e8b0c29d8c2",
+          "header_crc": "86DB3A5B D809D798",
+          "route_patch": {
+            "offset": "0x3FF34",
+            "old": "0x24040018",
+            "new": "0x24040006"
+          },
+          "save_outputs": [
+            {
+              "source": "artifacts\\generated\\t90doss1my16.sav",
+              "target": "artifacts\\generated\\t90doss1_blitter_routes\\dmywrectauto06.sav",
+              "bytes": 512,
+              "md5": "79ed3fe6851b080ff21de69fd12f034d"
+            },
+            {
+              "source": "artifacts\\generated\\t90doss1my16.eep",
+              "target": "artifacts\\generated\\t90doss1_blitter_routes\\dmywrectauto06.eep",
+              "bytes": 2048,
+              "md5": "e47f5c07623838e875761a0493388e03"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "dmywtile",
+      "purpose": "t90doss1my16 plus only the GE480i tile setup width words.",
+      "base_rom": "artifacts\\generated\\t90doss1my16.z64",
+      "out_rom": "artifacts\\generated\\dmywtile.z64",
+      "out_md5": "a8800104bfd86a931ff6a52b24b2069f",
+      "header_crc": "86DABAE7 892A7663",
+      "patch_count": 2,
+      "changed_patch_count": 2,
+      "patches": [
+        {
+          "offset": "0x4FDEC",
+          "old": "0x3C17070D",
+          "new": "0x3C170713",
+          "changed": true,
+          "note": "GE480i title/menu texture setup upper"
+        },
+        {
+          "offset": "0x4FE3C",
+          "old": "0x36F7B026",
+          "new": "0x36F7F006",
+          "changed": true,
+          "note": "GE480i title/menu texture setup lower"
+        }
+      ],
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\t90doss1my16.sav",
+          "target": "artifacts\\generated\\dmywtile.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\t90doss1my16.eep",
+          "target": "artifacts\\generated\\dmywtile.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ],
+      "route_outputs": [
+        {
+          "route": "05",
+          "purpose": "file select / save folders",
+          "out_rom": "artifacts\\generated\\t90doss1_blitter_routes\\dmywtileauto05.z64",
+          "out_md5": "4e3f1535892ee54c2de5e450b9ce464c",
+          "header_crc": "86DABAE7 A76E3FF7",
+          "route_patch": {
+            "offset": "0x3FF34",
+            "old": "0x24040018",
+            "new": "0x24040005"
+          },
+          "save_outputs": [
+            {
+              "source": "artifacts\\generated\\t90doss1my16.sav",
+              "target": "artifacts\\generated\\t90doss1_blitter_routes\\dmywtileauto05.sav",
+              "bytes": 512,
+              "md5": "79ed3fe6851b080ff21de69fd12f034d"
+            },
+            {
+              "source": "artifacts\\generated\\t90doss1my16.eep",
+              "target": "artifacts\\generated\\t90doss1_blitter_routes\\dmywtileauto05.eep",
+              "bytes": 2048,
+              "md5": "e47f5c07623838e875761a0493388e03"
+            }
+          ]
+        },
+        {
+          "route": "06",
+          "purpose": "mode select",
+          "out_rom": "artifacts\\generated\\t90doss1_blitter_routes\\dmywtileauto06.z64",
+          "out_md5": "23129c2c9800ef0beeb9f8b90c12060e",
+          "header_crc": "86DABAEB ED51D201",
+          "route_patch": {
+            "offset": "0x3FF34",
+            "old": "0x24040018",
+            "new": "0x24040006"
+          },
+          "save_outputs": [
+            {
+              "source": "artifacts\\generated\\t90doss1my16.sav",
+              "target": "artifacts\\generated\\t90doss1_blitter_routes\\dmywtileauto06.sav",
+              "bytes": 512,
+              "md5": "79ed3fe6851b080ff21de69fd12f034d"
+            },
+            {
+              "source": "artifacts\\generated\\t90doss1my16.eep",
+              "target": "artifacts\\generated\\t90doss1_blitter_routes\\dmywtileauto06.eep",
+              "bytes": 2048,
+              "md5": "e47f5c07623838e875761a0493388e03"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "dmytexw",
+      "purpose": "t90doss1my16 plus GE480i horizontal texture setup for the shared title/menu backdrop blitter.",
+      "base_rom": "artifacts\\generated\\t90doss1my16.z64",
+      "out_rom": "artifacts\\generated\\dmytexw.z64",
+      "out_md5": "2a5ea60106be27691485d54ca9d2b013",
+      "header_crc": "86DABA43 C3D54243",
+      "patch_count": 4,
+      "changed_patch_count": 4,
+      "patches": [
+        {
+          "offset": "0x4FDEC",
+          "old": "0x3C17070D",
+          "new": "0x3C170713",
+          "changed": true,
+          "note": "GE480i title/menu texture setup upper"
+        },
+        {
+          "offset": "0x4FDFC",
+          "old": "0x3C0AE46D",
+          "new": "0x3C0AE49F",
+          "changed": true,
+          "note": "GE480i texture rectangle target width"
+        },
+        {
+          "offset": "0x4FE3C",
+          "old": "0x36F7B026",
+          "new": "0x36F7F006",
+          "changed": true,
+          "note": "GE480i title/menu texture setup lower"
+        },
+        {
+          "offset": "0x4FF00",
+          "old": "0x3C0E006D",
+          "new": "0x3C0E009F",
+          "changed": true,
+          "note": "GE480i texture rectangle lower width"
+        }
+      ],
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\t90doss1my16.sav",
+          "target": "artifacts\\generated\\dmytexw.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\t90doss1my16.eep",
+          "target": "artifacts\\generated\\dmytexw.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ],
+      "route_outputs": [
+        {
+          "route": "05",
+          "purpose": "file select / save folders",
+          "out_rom": "artifacts\\generated\\t90doss1_blitter_routes\\dmytexwauto05.z64",
+          "out_md5": "46be6f1e538dff4acff18785fcc01a72",
+          "header_crc": "86DABA4B 6071ADB4",
+          "route_patch": {
+            "offset": "0x3FF34",
+            "old": "0x24040018",
+            "new": "0x24040005"
+          },
+          "save_outputs": [
+            {
+              "source": "artifacts\\generated\\t90doss1my16.sav",
+              "target": "artifacts\\generated\\t90doss1_blitter_routes\\dmytexwauto05.sav",
+              "bytes": 512,
+              "md5": "79ed3fe6851b080ff21de69fd12f034d"
+            },
+            {
+              "source": "artifacts\\generated\\t90doss1my16.eep",
+              "target": "artifacts\\generated\\t90doss1_blitter_routes\\dmytexwauto05.eep",
+              "bytes": 2048,
+              "md5": "e47f5c07623838e875761a0493388e03"
+            }
+          ]
+        },
+        {
+          "route": "06",
+          "purpose": "mode select",
+          "out_rom": "artifacts\\generated\\t90doss1_blitter_routes\\dmytexwauto06.z64",
+          "out_md5": "29b15c3064719ea51b4ad3f436f97f0f",
+          "header_crc": "86DABA4F 61F80482",
+          "route_patch": {
+            "offset": "0x3FF34",
+            "old": "0x24040018",
+            "new": "0x24040006"
+          },
+          "save_outputs": [
+            {
+              "source": "artifacts\\generated\\t90doss1my16.sav",
+              "target": "artifacts\\generated\\t90doss1_blitter_routes\\dmytexwauto06.sav",
+              "bytes": 512,
+              "md5": "79ed3fe6851b080ff21de69fd12f034d"
+            },
+            {
+              "source": "artifacts\\generated\\t90doss1my16.eep",
+              "target": "artifacts\\generated\\t90doss1_blitter_routes\\dmytexwauto06.eep",
+              "bytes": 2048,
+              "md5": "e47f5c07623838e875761a0493388e03"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "dmytex430",
+      "purpose": "t90doss1my16 plus full GE480i 430-line texture setup; keeps current strip steps/row loop/stride.",
+      "base_rom": "artifacts\\generated\\t90doss1my16.z64",
+      "out_rom": "artifacts\\generated\\dmytex430.z64",
+      "out_md5": "21f96b0fee5a70467c7b9e51a813b07f",
+      "header_crc": "81BCCC7F 80C883AA",
+      "patch_count": 6,
+      "changed_patch_count": 6,
+      "patches": [
+        {
+          "offset": "0x4FDEC",
+          "old": "0x3C17070D",
+          "new": "0x3C170713",
+          "changed": true,
+          "note": "GE480i title/menu texture setup upper"
+        },
+        {
+          "offset": "0x4FDFC",
+          "old": "0x3C0AE46D",
+          "new": "0x3C0AE49F",
+          "changed": true,
+          "note": "GE480i texture rectangle target width"
+        },
+        {
+          "offset": "0x4FE34",
+          "old": "0x3C018005",
+          "new": "0x3C0143D7",
+          "changed": true,
+          "note": "GE480i title/menu draw height float upper 430.0"
+        },
+        {
+          "offset": "0x4FE3C",
+          "old": "0x36F7B026",
+          "new": "0x36F7F006",
+          "changed": true,
+          "note": "GE480i title/menu texture setup lower"
+        },
+        {
+          "offset": "0x4FE44",
+          "old": "0xC4301CF0",
+          "new": "0x44818000",
+          "changed": true,
+          "note": "GE480i title/menu draw uses immediate height float"
+        },
+        {
+          "offset": "0x4FF00",
+          "old": "0x3C0E006D",
+          "new": "0x3C0E009F",
+          "changed": true,
+          "note": "GE480i texture rectangle lower width"
+        }
+      ],
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\t90doss1my16.sav",
+          "target": "artifacts\\generated\\dmytex430.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\t90doss1my16.eep",
+          "target": "artifacts\\generated\\dmytex430.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ],
+      "route_outputs": [
+        {
+          "route": "05",
+          "purpose": "file select / save folders",
+          "out_rom": "artifacts\\generated\\t90doss1_blitter_routes\\dmytex430auto05.z64",
+          "out_md5": "5a5ccbc669b1d75a6d2ff7f27de890b2",
+          "header_crc": "81BCCC0F 8B69281E",
+          "route_patch": {
+            "offset": "0x3FF34",
+            "old": "0x24040018",
+            "new": "0x24040005"
+          },
+          "save_outputs": [
+            {
+              "source": "artifacts\\generated\\t90doss1my16.sav",
+              "target": "artifacts\\generated\\t90doss1_blitter_routes\\dmytex430auto05.sav",
+              "bytes": 512,
+              "md5": "79ed3fe6851b080ff21de69fd12f034d"
+            },
+            {
+              "source": "artifacts\\generated\\t90doss1my16.eep",
+              "target": "artifacts\\generated\\t90doss1_blitter_routes\\dmytex430auto05.eep",
+              "bytes": 2048,
+              "md5": "e47f5c07623838e875761a0493388e03"
+            }
+          ]
+        },
+        {
+          "route": "06",
+          "purpose": "mode select",
+          "out_rom": "artifacts\\generated\\t90doss1_blitter_routes\\dmytex430auto06.z64",
+          "out_md5": "5ae5d4aa1799687bff7b2aee96390dce",
+          "header_crc": "81BCCC0F 5D8C45B2",
+          "route_patch": {
+            "offset": "0x3FF34",
+            "old": "0x24040018",
+            "new": "0x24040006"
+          },
+          "save_outputs": [
+            {
+              "source": "artifacts\\generated\\t90doss1my16.sav",
+              "target": "artifacts\\generated\\t90doss1_blitter_routes\\dmytex430auto06.sav",
+              "bytes": 512,
+              "md5": "79ed3fe6851b080ff21de69fd12f034d"
+            },
+            {
+              "source": "artifacts\\generated\\t90doss1my16.eep",
+              "target": "artifacts\\generated\\t90doss1_blitter_routes\\dmytex430auto06.eep",
+              "bytes": 2048,
+              "md5": "e47f5c07623838e875761a0493388e03"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "dmytex480",
+      "purpose": "t90doss1my16 plus 480-line TND variant of the GE480i texture setup; diagnostic only.",
+      "base_rom": "artifacts\\generated\\t90doss1my16.z64",
+      "out_rom": "artifacts\\generated\\dmytex480.z64",
+      "out_md5": "e423e01a712b4b58c0661c65028cd622",
+      "header_crc": "81BCCDDD 4D0E4E9E",
+      "patch_count": 7,
+      "changed_patch_count": 7,
+      "patches": [
+        {
+          "offset": "0x4FDEC",
+          "old": "0x3C17070D",
+          "new": "0x3C170713",
+          "changed": true,
+          "note": "GE480i title/menu texture setup upper"
+        },
+        {
+          "offset": "0x4FDFC",
+          "old": "0x3C0AE46D",
+          "new": "0x3C0AE49F",
+          "changed": true,
+          "note": "GE480i texture rectangle target width"
+        },
+        {
+          "offset": "0x4FE34",
+          "old": "0x3C018005",
+          "new": "0x3C0143F0",
+          "changed": true,
+          "note": "TND diagnostic title/menu draw height float upper 480.0"
+        },
+        {
+          "offset": "0x4FE3C",
+          "old": "0x36F7B026",
+          "new": "0x36F7F006",
+          "changed": true,
+          "note": "GE480i title/menu texture setup lower"
+        },
+        {
+          "offset": "0x4FE44",
+          "old": "0xC4301CF0",
+          "new": "0x44818000",
+          "changed": true,
+          "note": "GE480i title/menu draw uses immediate height float"
+        },
+        {
+          "offset": "0x4FF00",
+          "old": "0x3C0E006D",
+          "new": "0x3C0E009F",
+          "changed": true,
+          "note": "GE480i texture rectangle lower width"
+        },
+        {
+          "offset": "0x501AC",
+          "old": "0x292101AE",
+          "new": "0x292101E0",
+          "changed": true,
+          "note": "TND diagnostic source row loop limit 480"
+        }
+      ],
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\t90doss1my16.sav",
+          "target": "artifacts\\generated\\dmytex480.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\t90doss1my16.eep",
+          "target": "artifacts\\generated\\dmytex480.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ],
+      "route_outputs": [
+        {
+          "route": "05",
+          "purpose": "file select / save folders",
+          "out_rom": "artifacts\\generated\\t90doss1_blitter_routes\\dmytex480auto05.z64",
+          "out_md5": "29e9bd579d7715eb6a7a0459570ee3b7",
+          "header_crc": "81BCCC33 8A693425",
+          "route_patch": {
+            "offset": "0x3FF34",
+            "old": "0x24040018",
+            "new": "0x24040005"
+          },
+          "save_outputs": [
+            {
+              "source": "artifacts\\generated\\t90doss1my16.sav",
+              "target": "artifacts\\generated\\t90doss1_blitter_routes\\dmytex480auto05.sav",
+              "bytes": 512,
+              "md5": "79ed3fe6851b080ff21de69fd12f034d"
+            },
+            {
+              "source": "artifacts\\generated\\t90doss1my16.eep",
+              "target": "artifacts\\generated\\t90doss1_blitter_routes\\dmytex480auto05.eep",
+              "bytes": 2048,
+              "md5": "e47f5c07623838e875761a0493388e03"
+            }
+          ]
+        },
+        {
+          "route": "06",
+          "purpose": "mode select",
+          "out_rom": "artifacts\\generated\\t90doss1_blitter_routes\\dmytex480auto06.z64",
+          "out_md5": "899425f790673107b013593cdc520097",
+          "header_crc": "81BCCC31 12EEC2D8",
+          "route_patch": {
+            "offset": "0x3FF34",
+            "old": "0x24040018",
+            "new": "0x24040006"
+          },
+          "save_outputs": [
+            {
+              "source": "artifacts\\generated\\t90doss1my16.sav",
+              "target": "artifacts\\generated\\t90doss1_blitter_routes\\dmytex480auto06.sav",
+              "bytes": 512,
+              "md5": "79ed3fe6851b080ff21de69fd12f034d"
+            },
+            {
+              "source": "artifacts\\generated\\t90doss1my16.eep",
+              "target": "artifacts\\generated\\t90doss1_blitter_routes\\dmytex480auto06.eep",
+              "bytes": 2048,
+              "md5": "e47f5c07623838e875761a0493388e03"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

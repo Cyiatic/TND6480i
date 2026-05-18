@@ -1,0 +1,57 @@
+{
+  "sheet": "diagnostics\\captures\\contact_sheets\\dossier_dfbmy32_mode_matrix_20260518\\sheet.jpg",
+  "baseline_frames": "diagnostics\\captures\\contact_sheets\\dossier_t90doss1_mode_y16_matrix_20260518\\frames",
+  "rows": [
+    "Mode Select"
+  ],
+  "columns": [
+    "GE480i reference",
+    "Current t90tex",
+    "dmyfbrw1 my16",
+    "dfbmy32"
+  ],
+  "entries": [
+    {
+      "page": "Mode Select",
+      "source": "GE480i reference",
+      "path": "diagnostics\\captures\\contact_sheets\\dossier_dfbmy32_mode_matrix_20260518\\frames\\Mode_Select__GE480i_reference.png",
+      "capture": {
+        "ok": true,
+        "copied": true
+      }
+    },
+    {
+      "page": "Mode Select",
+      "source": "Current t90tex",
+      "path": "diagnostics\\captures\\contact_sheets\\dossier_dfbmy32_mode_matrix_20260518\\frames\\Mode_Select__Current_t90tex.png",
+      "capture": {
+        "ok": true,
+        "copied": true
+      }
+    },
+    {
+      "page": "Mode Select",
+      "source": "dmyfbrw1 my16",
+      "video": "diagnostics\\captures\\videos\\dmyfbrw1auto06_mode_hardware_20260518.mp4",
+      "seconds": 65.0,
+      "path": "diagnostics\\captures\\contact_sheets\\dossier_dfbmy32_mode_matrix_20260518\\frames\\Mode_Select__dmyfbrw1_my16.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      }
+    },
+    {
+      "page": "Mode Select",
+      "source": "dfbmy32",
+      "video": "diagnostics\\captures\\videos\\dfbmy32auto06_mode_hardware_20260518.mp4",
+      "seconds": 65.0,
+      "path": "diagnostics\\captures\\contact_sheets\\dossier_dfbmy32_mode_matrix_20260518\\frames\\Mode_Select__dfbmy32.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      }
+    }
+  ]
+}

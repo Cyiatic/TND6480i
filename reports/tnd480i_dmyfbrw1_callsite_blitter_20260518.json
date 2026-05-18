@@ -1,0 +1,38 @@
+{
+  "base_rom": ".\\artifacts\\generated\\t90doss1my16.z64",
+  "out_rom": ".\\artifacts\\generated\\dmyfbrw1.z64",
+  "out_md5": "56d3071c86c94a0e6e5a82c464824562",
+  "header_crc": "71B1B387AB3DA888",
+  "texture_setup": "rw1",
+  "geometry_setup": "inherit",
+  "routes": [
+    "file-select"
+  ],
+  "clone_cave": {
+    "rom_offset": "0x4F498",
+    "runtime_wrapper": "0x7F01A968",
+    "runtime_blitter": "0x7F01AA2C",
+    "bytes_used": "0x564",
+    "bytes_available": "0x594"
+  },
+  "patches": [
+    {
+      "offset": "0x4F544",
+      "old": "0x0FC06C90",
+      "new": "0x0FC06A8B",
+      "note": "clone wrapper inner call routed to cloned blitter"
+    },
+    {
+      "offset": "0x4F5E8",
+      "old": "0x3C0AE46D",
+      "new": "0x3C0AE49F",
+      "note": "cloned blitter rw1 texture setup from source 0x4FDFC"
+    },
+    {
+      "offset": "0x41030",
+      "old": "0x0FC01F32",
+      "new": "0x0FC06A5A",
+      "note": "route file-select wrapper call to cloned wrapper at 0x4F498"
+    }
+  ]
+}

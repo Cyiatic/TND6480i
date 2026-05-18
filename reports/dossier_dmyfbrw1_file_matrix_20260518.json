@@ -1,0 +1,57 @@
+{
+  "sheet": "diagnostics\\captures\\contact_sheets\\dossier_dmyfbrw1_file_matrix_20260518\\sheet.jpg",
+  "baseline_frames": "diagnostics\\captures\\contact_sheets\\dossier_d1s_file_matrix_20260518\\frames",
+  "rows": [
+    "File Select"
+  ],
+  "columns": [
+    "GE480i reference",
+    "Current t90tex",
+    "dmyrw1 global",
+    "dmyfbrw1 clone"
+  ],
+  "entries": [
+    {
+      "page": "File Select",
+      "source": "GE480i reference",
+      "path": "diagnostics\\captures\\contact_sheets\\dossier_dmyfbrw1_file_matrix_20260518\\frames\\File_Select__GE480i_reference.png",
+      "capture": {
+        "ok": true,
+        "copied": true
+      }
+    },
+    {
+      "page": "File Select",
+      "source": "Current t90tex",
+      "path": "diagnostics\\captures\\contact_sheets\\dossier_dmyfbrw1_file_matrix_20260518\\frames\\File_Select__Current_t90tex.png",
+      "capture": {
+        "ok": true,
+        "copied": true
+      }
+    },
+    {
+      "page": "File Select",
+      "source": "dmyrw1 global",
+      "video": "diagnostics\\captures\\videos\\dmyrw1auto05_file_hardware_20260518.mp4",
+      "seconds": 65.0,
+      "path": "diagnostics\\captures\\contact_sheets\\dossier_dmyfbrw1_file_matrix_20260518\\frames\\File_Select__dmyrw1_global.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      }
+    },
+    {
+      "page": "File Select",
+      "source": "dmyfbrw1 clone",
+      "video": "diagnostics\\captures\\videos\\dmyfbrw1auto05_file_hardware_20260518.mp4",
+      "seconds": 65.0,
+      "path": "diagnostics\\captures\\contact_sheets\\dossier_dmyfbrw1_file_matrix_20260518\\frames\\File_Select__dmyfbrw1_clone.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      }
+    }
+  ]
+}

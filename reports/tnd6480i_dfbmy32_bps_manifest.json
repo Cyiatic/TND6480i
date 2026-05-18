@@ -1,0 +1,124 @@
+{
+  "source": "artifacts\\roms\\BASELINE_TND64_Expanded_direct_from_stock.z64",
+  "target": "artifacts\\generated\\dfbmy32.z64",
+  "source_md5": "1ee22dd1d70443f5e4766d4238756949",
+  "target_md5": "cd60b6ce03598cbbbc99fb01c7e9567c",
+  "source_sha256": "ba5e040de292d7d192d0f88f12dcf4cbde7eb4d643926830d7d77557bf6df502",
+  "target_sha256": "7a3078aeb317b56353ae5585c01ad15bb224686d25dd4a54454f695bd42e6a20",
+  "note": "TND6480i dossier probe dfbmy32: t90doss1my16 plus file-select-only cloned blitter width fix and mode-select vertical constants moved another 16 units upward.",
+  "patch": "artifacts\\generated\\TND6480i_dfbmy32_from_baseline_tnd.bps",
+  "patch_bytes": 180786,
+  "patch_md5": "e7a04586d6d896c44888f553b107c325",
+  "patch_sha256": "3d202d9d13f8b8622ea9c246ee3e418f335d39edd10711f491313c311936e022",
+  "source_bytes": 16777216,
+  "target_bytes": 16885376,
+  "source_crc32": "321C1845",
+  "target_crc32": "11528EFE",
+  "patch_crc32": "914299EB",
+  "verified": true,
+  "action_count": 454,
+  "source_read_bytes": 16705815,
+  "target_read_bytes": 179561,
+  "actions_preview": [
+    {
+      "type": "SourceRead",
+      "offset": 0,
+      "length": 16
+    },
+    {
+      "type": "TargetRead",
+      "offset": 16,
+      "length": 8
+    },
+    {
+      "type": "SourceRead",
+      "offset": 24,
+      "length": 9223
+    },
+    {
+      "type": "TargetRead",
+      "offset": 9247,
+      "length": 1
+    },
+    {
+      "type": "SourceRead",
+      "offset": 9248,
+      "length": 6252
+    },
+    {
+      "type": "TargetRead",
+      "offset": 15500,
+      "length": 12
+    },
+    {
+      "type": "SourceRead",
+      "offset": 15512,
+      "length": 153
+    },
+    {
+      "type": "TargetRead",
+      "offset": 15665,
+      "length": 59
+    },
+    {
+      "type": "SourceRead",
+      "offset": 15724,
+      "length": 1715
+    },
+    {
+      "type": "TargetRead",
+      "offset": 17439,
+      "length": 1
+    },
+    {
+      "type": "SourceRead",
+      "offset": 17440,
+      "length": 661
+    },
+    {
+      "type": "TargetRead",
+      "offset": 18101,
+      "length": 59
+    },
+    {
+      "type": "SourceRead",
+      "offset": 18160,
+      "length": 7831
+    },
+    {
+      "type": "TargetRead",
+      "offset": 25991,
+      "length": 49
+    },
+    {
+      "type": "SourceRead",
+      "offset": 26040,
+      "length": 40742
+    },
+    {
+      "type": "TargetRead",
+      "offset": 66782,
+      "length": 1
+    },
+    {
+      "type": "SourceRead",
+      "offset": 66783,
+      "length": 38041
+    },
+    {
+      "type": "TargetRead",
+      "offset": 104824,
+      "length": 16
+    },
+    {
+      "type": "SourceRead",
+      "offset": 104840,
+      "length": 44
+    },
+    {
+      "type": "TargetRead",
+      "offset": 104884,
+      "length": 3
+    }
+  ]
+}

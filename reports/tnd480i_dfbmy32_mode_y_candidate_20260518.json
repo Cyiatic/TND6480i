@@ -1,0 +1,125 @@
+{
+  "base_rom": "artifacts\\generated\\dmyfbrw1.z64",
+  "out_rom": "artifacts\\generated\\dfbmy32.z64",
+  "out_md5": "cd60b6ce03598cbbbc99fb01c7e9567c",
+  "header_crc": "71B1B407 90E64633",
+  "purpose": "Move only the mode-select vertical constants up after t90doss1 reached the 640x480 table1 path.",
+  "patches": [
+    {
+      "offset": "0x42330",
+      "old": "0x25CF0136",
+      "new": "0x25CF0126",
+      "delta": -16
+    },
+    {
+      "offset": "0x42390",
+      "old": "0x240F0130",
+      "new": "0x240F0120",
+      "delta": -16
+    },
+    {
+      "offset": "0x42458",
+      "old": "0x240D0130",
+      "new": "0x240D0120",
+      "delta": -16
+    },
+    {
+      "offset": "0x4246C",
+      "old": "0x240F013E",
+      "new": "0x240F012E",
+      "delta": -16
+    },
+    {
+      "offset": "0x42484",
+      "old": "0x2406012E",
+      "new": "0x2406011E",
+      "delta": -16
+    },
+    {
+      "offset": "0x424F0",
+      "old": "0x240C0150",
+      "new": "0x240C0140",
+      "delta": -16
+    },
+    {
+      "offset": "0x425DC",
+      "old": "0x240C0150",
+      "new": "0x240C0140",
+      "delta": -16
+    },
+    {
+      "offset": "0x425F4",
+      "old": "0x240E015E",
+      "new": "0x240E014E",
+      "delta": -16
+    },
+    {
+      "offset": "0x4260C",
+      "old": "0x2406014E",
+      "new": "0x2406013E",
+      "delta": -16
+    },
+    {
+      "offset": "0x42688",
+      "old": "0x240C0170",
+      "new": "0x240C0160",
+      "delta": -16
+    },
+    {
+      "offset": "0x42730",
+      "old": "0x24090170",
+      "new": "0x24090160",
+      "delta": -16
+    },
+    {
+      "offset": "0x42748",
+      "old": "0x240B017E",
+      "new": "0x240B016E",
+      "delta": -16
+    },
+    {
+      "offset": "0x42760",
+      "old": "0x2406016E",
+      "new": "0x2406015E",
+      "delta": -16
+    }
+  ],
+  "save_outputs": [
+    {
+      "source": "artifacts\\generated\\dmyfbrw1.sav",
+      "target": "artifacts\\generated\\dfbmy32.sav",
+      "bytes": 512,
+      "md5": "79ed3fe6851b080ff21de69fd12f034d"
+    },
+    {
+      "source": "artifacts\\generated\\dmyfbrw1.eep",
+      "target": "artifacts\\generated\\dfbmy32.eep",
+      "bytes": 2048,
+      "md5": "e47f5c07623838e875761a0493388e03"
+    }
+  ],
+  "route_output": {
+    "out_rom": "artifacts\\generated\\dfbmy32auto06.z64",
+    "out_md5": "febba88ca5748d1f2eb0cd61f9d094c7",
+    "header_crc": "71B1B40B 2BBBADBB",
+    "route_patch": {
+      "offset": "0x3FF34",
+      "old": "0x24040018",
+      "new": "0x24040006"
+    },
+    "save_outputs": [
+      {
+        "source": "artifacts\\generated\\dmyfbrw1.sav",
+        "target": "artifacts\\generated\\dfbmy32auto06.sav",
+        "bytes": 512,
+        "md5": "79ed3fe6851b080ff21de69fd12f034d"
+      },
+      {
+        "source": "artifacts\\generated\\dmyfbrw1.eep",
+        "target": "artifacts\\generated\\dfbmy32auto06.eep",
+        "bytes": 2048,
+        "md5": "e47f5c07623838e875761a0493388e03"
+      }
+    ]
+  }
+}
