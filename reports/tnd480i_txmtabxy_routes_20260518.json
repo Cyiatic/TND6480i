@@ -1,0 +1,162 @@
+{
+  "base_rom": "artifacts\\generated\\txmtabxy.z64",
+  "base_md5": "4b0d14d6ed681f1d5d8c85fed6f32ab3",
+  "purpose": "No-input hardware route probes for front/dossier pages; do not promote over gameplay baseline.",
+  "routes": [
+    {
+      "name": "xyauto05",
+      "menu_id": 5,
+      "symbol": "MENU_FILE_SELECT",
+      "purpose": "File select / save folders",
+      "base_rom": "artifacts\\generated\\txmtabxy.z64",
+      "out_rom": "artifacts\\generated\\xyauto05.z64",
+      "out_md5": "058fc8e96913b6f5cecc5e6c8ea7e986",
+      "header_crc": "807852E1 D5FC8E77",
+      "patch": {
+        "offset": "0x3FF34",
+        "old": "0x24040018",
+        "new": "0x24040005",
+        "note": "After the TND title/logo timeout, route directly to MENU_FILE_SELECT."
+      },
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\txmtabxy.sav",
+          "target": "artifacts\\generated\\xyauto05.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\txmtabxy.eep",
+          "target": "artifacts\\generated\\xyauto05.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ],
+      "do_not_promote": true
+    },
+    {
+      "name": "xyauto06",
+      "menu_id": 6,
+      "symbol": "MENU_MODE_SELECT",
+      "purpose": "Single-player / multiplayer / cheat select",
+      "base_rom": "artifacts\\generated\\txmtabxy.z64",
+      "out_rom": "artifacts\\generated\\xyauto06.z64",
+      "out_md5": "b76fd66909a98cb113edfb1714407d3e",
+      "header_crc": "807852E1 2EF79B50",
+      "patch": {
+        "offset": "0x3FF34",
+        "old": "0x24040018",
+        "new": "0x24040006",
+        "note": "After the TND title/logo timeout, route directly to MENU_MODE_SELECT."
+      },
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\txmtabxy.sav",
+          "target": "artifacts\\generated\\xyauto06.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\txmtabxy.eep",
+          "target": "artifacts\\generated\\xyauto06.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ],
+      "do_not_promote": true
+    },
+    {
+      "name": "xyauto07",
+      "menu_id": 7,
+      "symbol": "MENU_MISSION_SELECT",
+      "purpose": "Mission select dossier",
+      "base_rom": "artifacts\\generated\\txmtabxy.z64",
+      "out_rom": "artifacts\\generated\\xyauto07.z64",
+      "out_md5": "86185a5939ba4d50617ba336cc5391ff",
+      "header_crc": "807852E1 48506893",
+      "patch": {
+        "offset": "0x3FF34",
+        "old": "0x24040018",
+        "new": "0x24040007",
+        "note": "After the TND title/logo timeout, route directly to MENU_MISSION_SELECT."
+      },
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\txmtabxy.sav",
+          "target": "artifacts\\generated\\xyauto07.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\txmtabxy.eep",
+          "target": "artifacts\\generated\\xyauto07.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ],
+      "do_not_promote": true
+    },
+    {
+      "name": "xyauto08",
+      "menu_id": 8,
+      "symbol": "MENU_DIFFICULTY",
+      "purpose": "Difficulty select dossier",
+      "base_rom": "artifacts\\generated\\txmtabxy.z64",
+      "out_rom": "artifacts\\generated\\xyauto08.z64",
+      "out_md5": "b0d1f44676fee110b7ac3c052faf426c",
+      "header_crc": "807852E9 456CBFFE",
+      "patch": {
+        "offset": "0x3FF34",
+        "old": "0x24040018",
+        "new": "0x24040008",
+        "note": "After the TND title/logo timeout, route directly to MENU_DIFFICULTY."
+      },
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\txmtabxy.sav",
+          "target": "artifacts\\generated\\xyauto08.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\txmtabxy.eep",
+          "target": "artifacts\\generated\\xyauto08.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ],
+      "do_not_promote": true
+    },
+    {
+      "name": "xyauto0a",
+      "menu_id": 10,
+      "symbol": "MENU_BRIEFING",
+      "purpose": "Mission briefing dossier",
+      "base_rom": "artifacts\\generated\\txmtabxy.z64",
+      "out_rom": "artifacts\\generated\\xyauto0a.z64",
+      "out_md5": "48e9e14160c08a5cbd631bf65df876ae",
+      "header_crc": "807852E9 E82A0CD5",
+      "patch": {
+        "offset": "0x3FF34",
+        "old": "0x24040018",
+        "new": "0x2404000A",
+        "note": "After the TND title/logo timeout, route directly to MENU_BRIEFING."
+      },
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\txmtabxy.sav",
+          "target": "artifacts\\generated\\xyauto0a.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\txmtabxy.eep",
+          "target": "artifacts\\generated\\xyauto0a.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ],
+      "do_not_promote": true
+    }
+  ]
+}

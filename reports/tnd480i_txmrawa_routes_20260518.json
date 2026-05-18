@@ -1,0 +1,162 @@
+{
+  "base_rom": "artifacts\\generated\\txmrawa.z64",
+  "base_md5": "d4d12d21b4789e9e65aa8c65eb6e0921",
+  "purpose": "No-input hardware route probes for front/dossier pages; do not promote over gameplay baseline.",
+  "routes": [
+    {
+      "name": "raauto05",
+      "menu_id": 5,
+      "symbol": "MENU_FILE_SELECT",
+      "purpose": "File select / save folders",
+      "base_rom": "artifacts\\generated\\txmrawa.z64",
+      "out_rom": "artifacts\\generated\\raauto05.z64",
+      "out_md5": "aab9afc7b8aeb99ea0726d025b81eb8c",
+      "header_crc": "D32AF905 14269566",
+      "patch": {
+        "offset": "0x3FF34",
+        "old": "0x24040018",
+        "new": "0x24040005",
+        "note": "After the TND title/logo timeout, route directly to MENU_FILE_SELECT."
+      },
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\txmrawa.sav",
+          "target": "artifacts\\generated\\raauto05.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\txmrawa.eep",
+          "target": "artifacts\\generated\\raauto05.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ],
+      "do_not_promote": true
+    },
+    {
+      "name": "raauto06",
+      "menu_id": 6,
+      "symbol": "MENU_MODE_SELECT",
+      "purpose": "Single-player / multiplayer / cheat select",
+      "base_rom": "artifacts\\generated\\txmrawa.z64",
+      "out_rom": "artifacts\\generated\\raauto06.z64",
+      "out_md5": "a6e97f430293b1973e82a056ef83c953",
+      "header_crc": "D32AF907 013C54BD",
+      "patch": {
+        "offset": "0x3FF34",
+        "old": "0x24040018",
+        "new": "0x24040006",
+        "note": "After the TND title/logo timeout, route directly to MENU_MODE_SELECT."
+      },
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\txmrawa.sav",
+          "target": "artifacts\\generated\\raauto06.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\txmrawa.eep",
+          "target": "artifacts\\generated\\raauto06.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ],
+      "do_not_promote": true
+    },
+    {
+      "name": "raauto07",
+      "menu_id": 7,
+      "symbol": "MENU_MISSION_SELECT",
+      "purpose": "Mission select dossier",
+      "base_rom": "artifacts\\generated\\txmrawa.z64",
+      "out_rom": "artifacts\\generated\\raauto07.z64",
+      "out_md5": "836bffa9040ea8ab97b386144957a223",
+      "header_crc": "D32AF909 04C50151",
+      "patch": {
+        "offset": "0x3FF34",
+        "old": "0x24040018",
+        "new": "0x24040007",
+        "note": "After the TND title/logo timeout, route directly to MENU_MISSION_SELECT."
+      },
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\txmrawa.sav",
+          "target": "artifacts\\generated\\raauto07.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\txmrawa.eep",
+          "target": "artifacts\\generated\\raauto07.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ],
+      "do_not_promote": true
+    },
+    {
+      "name": "raauto08",
+      "menu_id": 8,
+      "symbol": "MENU_DIFFICULTY",
+      "purpose": "Difficulty select dossier",
+      "base_rom": "artifacts\\generated\\txmrawa.z64",
+      "out_rom": "artifacts\\generated\\raauto08.z64",
+      "out_md5": "ae8aaf40c3a107ef4621f4918e5e6be8",
+      "header_crc": "D32AF907 B41A554B",
+      "patch": {
+        "offset": "0x3FF34",
+        "old": "0x24040018",
+        "new": "0x24040008",
+        "note": "After the TND title/logo timeout, route directly to MENU_DIFFICULTY."
+      },
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\txmrawa.sav",
+          "target": "artifacts\\generated\\raauto08.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\txmrawa.eep",
+          "target": "artifacts\\generated\\raauto08.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ],
+      "do_not_promote": true
+    },
+    {
+      "name": "raauto0a",
+      "menu_id": 10,
+      "symbol": "MENU_BRIEFING",
+      "purpose": "Mission briefing dossier",
+      "base_rom": "artifacts\\generated\\txmrawa.z64",
+      "out_rom": "artifacts\\generated\\raauto0a.z64",
+      "out_md5": "95abeabff183c2fc1ae8484b8695cc59",
+      "header_crc": "D32AF907 BA058FCF",
+      "patch": {
+        "offset": "0x3FF34",
+        "old": "0x24040018",
+        "new": "0x2404000A",
+        "note": "After the TND title/logo timeout, route directly to MENU_BRIEFING."
+      },
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\txmrawa.sav",
+          "target": "artifacts\\generated\\raauto0a.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\txmrawa.eep",
+          "target": "artifacts\\generated\\raauto0a.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ],
+      "do_not_promote": true
+    }
+  ]
+}

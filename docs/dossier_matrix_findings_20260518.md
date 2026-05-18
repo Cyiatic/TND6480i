@@ -62,3 +62,22 @@ The remaining mismatch is therefore not solved by blindly adding high coordinate
 4. Use the GoldenEye `front.c` mapping to split file-select X and Y constants separately; the high-Y values are the likely cause of vanished labels/icons.
 5. For mode/mission, classify `frontSetupMenuBackground`, cursor tables, and per-page text rectangles separately before another hardware upload.
 6. Difficulty/briefing need a better direct-route state setup; raw direct menu IDs still do not provide reliable standalone pages.
+
+## Raw Menu Table Follow-up
+
+Follow-up raw 1172 table probes were built on top of stable `t90texstk`:
+
+- `txmtabx`: GE480i mission table X values only, raw `0xA240-0xA254`.
+- `txmtaby`: GE480i mission table Y values only, raw `0xA254-0xA264`.
+- `txmtabxy`: GE480i mission table X/Y values, raw `0xA240-0xA264`.
+- `txmrawa`: GE480i menu/display table A, raw `0x9C3C-0x9D24`.
+- `txmrawab`: GE480i table A plus mission table B.
+
+Hardware route captures show these are not promotion-ready. `txmrawa` leaves file-select and mode-select visually stock-like, while mission-select is pushed into a worse lower-page alignment. `txmtabxy` changes mission cursor/table positioning but does not solve dossier scale/detail. `txmrawab` is rejected as a broad table transplant until it can be decomposed further.
+
+Comparison artifact:
+
+- `diagnostics/captures/contact_sheets/dossier_raw_menu_table_rejects_20260518/sheet.jpg`
+- `reports/dossier_raw_menu_table_rejects_20260518.json`
+
+Interpretation: the GE480i raw menu tables are not the missing "make dossier hi-res" switch by themselves. The next useful investigation is the draw path for the dossier texture/font/background composition itself: `frontSetupMenuBackground`, folder/paper sprite draw parameters, and the page-specific text rectangle setup, with small probes that alter one visual layer at a time.

@@ -1,0 +1,70 @@
+{
+  "sheet": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\diagnostics\\captures\\contact_sheets\\dossier_raw_menu_table_rejects_20260518\\sheet.jpg",
+  "purpose": "Compare GE480i dossier reference and current t90tex against raw 1172 menu-table candidates. txmrawa is table A; txmtabxy is mission table B only.",
+  "rows": [
+    "File Select",
+    "Mode Select",
+    "Mission Select"
+  ],
+  "columns": [
+    "GE480i reference",
+    "Current t90tex",
+    "txmrawa table A",
+    "txmtabxy table B"
+  ],
+  "entries": [
+    {
+      "page": "File Select",
+      "column": "txmrawa table A",
+      "video": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\diagnostics\\captures\\videos\\raauto05_file_select_probe_cycled_20260518.mp4",
+      "seconds": 55,
+      "path": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\diagnostics\\captures\\contact_sheets\\dossier_raw_menu_table_rejects_20260518\\frames\\File_Select__txmrawa_table_A.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      }
+    },
+    {
+      "page": "Mode Select",
+      "column": "txmrawa table A",
+      "video": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\diagnostics\\captures\\videos\\raauto06_mode_select_probe_cycled_20260518.mp4",
+      "seconds": 55,
+      "path": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\diagnostics\\captures\\contact_sheets\\dossier_raw_menu_table_rejects_20260518\\frames\\Mode_Select__txmrawa_table_A.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      }
+    },
+    {
+      "page": "Mission Select",
+      "column": "txmrawa table A",
+      "video": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\diagnostics\\captures\\videos\\raauto07_mission_select_probe_cycled_20260518.mp4",
+      "seconds": 55,
+      "path": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\diagnostics\\captures\\contact_sheets\\dossier_raw_menu_table_rejects_20260518\\frames\\Mission_Select__txmrawa_table_A.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      }
+    },
+    {
+      "page": "Mission Select",
+      "column": "txmtabxy table B",
+      "video": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\diagnostics\\captures\\videos\\xyauto07_mission_select_probe_cycled_20260518.mp4",
+      "seconds": 55,
+      "path": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\diagnostics\\captures\\contact_sheets\\dossier_raw_menu_table_rejects_20260518\\frames\\Mission_Select__txmtabxy_table_B.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      }
+    }
+  ],
+  "interpretation": [
+    "txmrawa leaves file/mode effectively stock-like and makes mission positioning worse rather than GE480i-like.",
+    "txmtabxy affects mission cursor/table positioning only and is not a dossier scale solution.",
+    "Do not promote txmrawa, txmrawab, or txmtabxy over t90texstk."
+  ]
+}
