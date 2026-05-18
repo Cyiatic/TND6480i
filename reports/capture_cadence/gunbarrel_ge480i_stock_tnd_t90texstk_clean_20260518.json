@@ -1,0 +1,56 @@
+[
+  {
+    "video": "C:\\Users\\codex\\Documents\\Light Capture \u02dc^\u2030\u00e6\u0192t\u0192H\u0192\u2039\u0192_\\n64\\2. GoldenEye 480i.mpg",
+    "frames": 720,
+    "frame_diffs": 719,
+    "mean_diff": 1.3094,
+    "median_diff": 0.8274,
+    "p90_diff": 3.6227,
+    "near_duplicate_ratio": 0.491,
+    "active_ratio": 0.2406,
+    "estimated_updates_per_second": 7.211,
+    "label": "ge480i_gunbarrel",
+    "start": 20.0,
+    "duration": 24.0,
+    "scale": [
+      180,
+      120
+    ]
+  },
+  {
+    "video": "C:\\Users\\codex\\Documents\\Light Capture \u02dc^\u2030\u00e6\u0192t\u0192H\u0192\u2039\u0192_\\n64\\3. Tomorrow Never DIes 64.mpg",
+    "frames": 720,
+    "frame_diffs": 719,
+    "mean_diff": 1.2392,
+    "median_diff": 0.6375,
+    "p90_diff": 3.8076,
+    "near_duplicate_ratio": 0.5522,
+    "active_ratio": 0.2225,
+    "estimated_updates_per_second": 6.669,
+    "label": "stock_tnd_gunbarrel",
+    "start": 18.0,
+    "duration": 24.0,
+    "scale": [
+      180,
+      120
+    ]
+  },
+  {
+    "video": "diagnostics\\captures\\videos\\t90texstk_clean_powercycle_20260518.mp4",
+    "frames": 719,
+    "frame_diffs": 718,
+    "mean_diff": 1.2318,
+    "median_diff": 0.651,
+    "p90_diff": 3.7696,
+    "near_duplicate_ratio": 0.5334,
+    "active_ratio": 0.2228,
+    "estimated_updates_per_second": 6.679,
+    "label": "t90texstk_clean_gunbarrel",
+    "start": 28.0,
+    "duration": 24.0,
+    "scale": [
+      180,
+      120
+    ]
+  }
+]

@@ -1,0 +1,146 @@
+{
+  "sheet": "diagnostics\\captures\\contact_sheets\\ge480i_vs_t90tex_dossier_20260518\\sheet.jpg",
+  "sources": [
+    {
+      "label": "GE480i file select",
+      "video": "C:\\Users\\codex\\Documents\\Light Capture \u02dc^\u2030\u00e6\u0192t\u0192H\u0192\u2039\u0192_\\n64\\2. GoldenEye 480i.mpg",
+      "start": 170.0
+    },
+    {
+      "label": "TND90tex file select",
+      "video": "diagnostics\\captures\\videos\\t90texauto05_fileselect_probe_20260518.mp4",
+      "start": 58.0
+    },
+    {
+      "label": "GE480i mode select",
+      "video": "C:\\Users\\codex\\Documents\\Light Capture \u02dc^\u2030\u00e6\u0192t\u0192H\u0192\u2039\u0192_\\n64\\2. GoldenEye 480i.mpg",
+      "start": 180.0
+    },
+    {
+      "label": "TND90tex mode select",
+      "video": "diagnostics\\captures\\videos\\t90texauto06_modesel_probe_20260518.mp4",
+      "start": 58.0
+    },
+    {
+      "label": "GE480i mission select",
+      "video": "C:\\Users\\codex\\Documents\\Light Capture \u02dc^\u2030\u00e6\u0192t\u0192H\u0192\u2039\u0192_\\n64\\2. GoldenEye 480i.mpg",
+      "start": 190.0
+    },
+    {
+      "label": "TND90tex mission select",
+      "video": "diagnostics\\captures\\videos\\t90texauto07_missionsel_probe_20260518.mp4",
+      "start": 58.0
+    },
+    {
+      "label": "GE480i difficulty",
+      "video": "C:\\Users\\codex\\Documents\\Light Capture \u02dc^\u2030\u00e6\u0192t\u0192H\u0192\u2039\u0192_\\n64\\2. GoldenEye 480i.mpg",
+      "start": 200.0
+    },
+    {
+      "label": "GE480i briefing",
+      "video": "C:\\Users\\codex\\Documents\\Light Capture \u02dc^\u2030\u00e6\u0192t\u0192H\u0192\u2039\u0192_\\n64\\2. GoldenEye 480i.mpg",
+      "start": 220.0
+    }
+  ],
+  "relative": [
+    0.0
+  ],
+  "frames": [
+    {
+      "source": "GE480i file select",
+      "relative": 0.0,
+      "seconds": 170.0,
+      "path": "diagnostics\\captures\\contact_sheets\\ge480i_vs_t90tex_dossier_20260518\\frames\\GE480i_file_select_00000000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "GE480i file select +0s"
+    },
+    {
+      "source": "TND90tex file select",
+      "relative": 0.0,
+      "seconds": 58.0,
+      "path": "diagnostics\\captures\\contact_sheets\\ge480i_vs_t90tex_dossier_20260518\\frames\\TND90tex_file_select_00000000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "TND90tex file select +0s"
+    },
+    {
+      "source": "GE480i mode select",
+      "relative": 0.0,
+      "seconds": 180.0,
+      "path": "diagnostics\\captures\\contact_sheets\\ge480i_vs_t90tex_dossier_20260518\\frames\\GE480i_mode_select_00000000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "GE480i mode select +0s"
+    },
+    {
+      "source": "TND90tex mode select",
+      "relative": 0.0,
+      "seconds": 58.0,
+      "path": "diagnostics\\captures\\contact_sheets\\ge480i_vs_t90tex_dossier_20260518\\frames\\TND90tex_mode_select_00000000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "TND90tex mode select +0s"
+    },
+    {
+      "source": "GE480i mission select",
+      "relative": 0.0,
+      "seconds": 190.0,
+      "path": "diagnostics\\captures\\contact_sheets\\ge480i_vs_t90tex_dossier_20260518\\frames\\GE480i_mission_select_00000000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "GE480i mission select +0s"
+    },
+    {
+      "source": "TND90tex mission select",
+      "relative": 0.0,
+      "seconds": 58.0,
+      "path": "diagnostics\\captures\\contact_sheets\\ge480i_vs_t90tex_dossier_20260518\\frames\\TND90tex_mission_select_00000000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "TND90tex mission select +0s"
+    },
+    {
+      "source": "GE480i difficulty",
+      "relative": 0.0,
+      "seconds": 200.0,
+      "path": "diagnostics\\captures\\contact_sheets\\ge480i_vs_t90tex_dossier_20260518\\frames\\GE480i_difficulty_00000000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "GE480i difficulty +0s"
+    },
+    {
+      "source": "GE480i briefing",
+      "relative": 0.0,
+      "seconds": 220.0,
+      "path": "diagnostics\\captures\\contact_sheets\\ge480i_vs_t90tex_dossier_20260518\\frames\\GE480i_briefing_00000000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "GE480i briefing +0s"
+    }
+  ]
+}

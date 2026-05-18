@@ -1,0 +1,146 @@
+{
+  "sheet": "diagnostics\\captures\\contact_sheets\\stock_tnd_vs_t90tex_dossier_20260518\\sheet.jpg",
+  "sources": [
+    {
+      "label": "Stock TND file select",
+      "video": "C:\\Users\\codex\\Documents\\Light Capture \u02dc^\u2030\u00e6\u0192t\u0192H\u0192\u2039\u0192_\\n64\\3. Tomorrow Never DIes 64.mpg",
+      "start": 150.0
+    },
+    {
+      "label": "TND90tex file select",
+      "video": "diagnostics\\captures\\videos\\t90texauto05_fileselect_probe_20260518.mp4",
+      "start": 58.0
+    },
+    {
+      "label": "Stock TND mode select",
+      "video": "C:\\Users\\codex\\Documents\\Light Capture \u02dc^\u2030\u00e6\u0192t\u0192H\u0192\u2039\u0192_\\n64\\3. Tomorrow Never DIes 64.mpg",
+      "start": 170.0
+    },
+    {
+      "label": "TND90tex mode select",
+      "video": "diagnostics\\captures\\videos\\t90texauto06_modesel_probe_20260518.mp4",
+      "start": 58.0
+    },
+    {
+      "label": "Stock TND mission select",
+      "video": "C:\\Users\\codex\\Documents\\Light Capture \u02dc^\u2030\u00e6\u0192t\u0192H\u0192\u2039\u0192_\\n64\\3. Tomorrow Never DIes 64.mpg",
+      "start": 190.0
+    },
+    {
+      "label": "TND90tex mission select",
+      "video": "diagnostics\\captures\\videos\\t90texauto07_missionsel_probe_20260518.mp4",
+      "start": 58.0
+    },
+    {
+      "label": "Stock TND difficulty",
+      "video": "C:\\Users\\codex\\Documents\\Light Capture \u02dc^\u2030\u00e6\u0192t\u0192H\u0192\u2039\u0192_\\n64\\3. Tomorrow Never DIes 64.mpg",
+      "start": 180.0
+    },
+    {
+      "label": "Stock TND briefing",
+      "video": "C:\\Users\\codex\\Documents\\Light Capture \u02dc^\u2030\u00e6\u0192t\u0192H\u0192\u2039\u0192_\\n64\\3. Tomorrow Never DIes 64.mpg",
+      "start": 200.0
+    }
+  ],
+  "relative": [
+    0.0
+  ],
+  "frames": [
+    {
+      "source": "Stock TND file select",
+      "relative": 0.0,
+      "seconds": 150.0,
+      "path": "diagnostics\\captures\\contact_sheets\\stock_tnd_vs_t90tex_dossier_20260518\\frames\\Stock_TND_file_select_00000000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "Stock TND file select +0s"
+    },
+    {
+      "source": "TND90tex file select",
+      "relative": 0.0,
+      "seconds": 58.0,
+      "path": "diagnostics\\captures\\contact_sheets\\stock_tnd_vs_t90tex_dossier_20260518\\frames\\TND90tex_file_select_00000000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "TND90tex file select +0s"
+    },
+    {
+      "source": "Stock TND mode select",
+      "relative": 0.0,
+      "seconds": 170.0,
+      "path": "diagnostics\\captures\\contact_sheets\\stock_tnd_vs_t90tex_dossier_20260518\\frames\\Stock_TND_mode_select_00000000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "Stock TND mode select +0s"
+    },
+    {
+      "source": "TND90tex mode select",
+      "relative": 0.0,
+      "seconds": 58.0,
+      "path": "diagnostics\\captures\\contact_sheets\\stock_tnd_vs_t90tex_dossier_20260518\\frames\\TND90tex_mode_select_00000000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "TND90tex mode select +0s"
+    },
+    {
+      "source": "Stock TND mission select",
+      "relative": 0.0,
+      "seconds": 190.0,
+      "path": "diagnostics\\captures\\contact_sheets\\stock_tnd_vs_t90tex_dossier_20260518\\frames\\Stock_TND_mission_select_00000000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "Stock TND mission select +0s"
+    },
+    {
+      "source": "TND90tex mission select",
+      "relative": 0.0,
+      "seconds": 58.0,
+      "path": "diagnostics\\captures\\contact_sheets\\stock_tnd_vs_t90tex_dossier_20260518\\frames\\TND90tex_mission_select_00000000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "TND90tex mission select +0s"
+    },
+    {
+      "source": "Stock TND difficulty",
+      "relative": 0.0,
+      "seconds": 180.0,
+      "path": "diagnostics\\captures\\contact_sheets\\stock_tnd_vs_t90tex_dossier_20260518\\frames\\Stock_TND_difficulty_00000000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "Stock TND difficulty +0s"
+    },
+    {
+      "source": "Stock TND briefing",
+      "relative": 0.0,
+      "seconds": 200.0,
+      "path": "diagnostics\\captures\\contact_sheets\\stock_tnd_vs_t90tex_dossier_20260518\\frames\\Stock_TND_briefing_00000000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "Stock TND briefing +0s"
+    }
+  ]
+}

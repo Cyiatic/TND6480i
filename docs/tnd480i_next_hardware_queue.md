@@ -53,6 +53,63 @@ diagnostics/captures/contact_sheets/t90_front_resolution_route_20260518/front_re
 
 Reject these for hardware upload unless a future source-level change explains why they should be revisited: `t90menu06`, `t90menu07`, `t90menu08`, `t90menu0608`, `t90menu0609`, `t90frontres`, and `t90frontxybuf_mstxt`. Splitting the GE menu constants by menu function showed that file-select can be preserved, but mission/difficulty pages still land in unfinished positions. `t90viewge` already has front/menu `viSetXY` and `viSetBuf` at 640x480, and changing only the front zbuffer pair did not improve the front-end text/layout. Next menu work should derive TND-specific coordinates/assets from the decomp and GE480i visual target rather than applying raw GE constants.
 
+Source-audit note: `reports/t90_menu_offset_audit_20260518.json` maps the rejected GE menu patches against local `007-decomp` `front.c`. The raw clusters mix cursor/control thresholds with visual draw coordinates. Next dossier pass should classify one screen's draw coordinates first instead of applying whole GE `menu07`/`menu08` groups.
+
+2026-05-18 intro/front-end staging:
+
+```text
+artifacts/generated/t90gbtexpost.z64
+artifacts/generated/t90gbtexpost.sav
+artifacts/generated/TND6480i_t90gbtexpost_from_baseline_tnd.bps
+artifacts/analogue_test/TNDGBTP.Z64
+artifacts/analogue_test/TNDGBTP.SAV
+```
+
+Use `TNDGBTP` only as a diagnostic intro/menu comparison candidate. It starts from the protected `TND90GE` gameplay baseline, then adds the narrow promising front trio: gunbarrel slowdown, second moving-barrel display-list suppression, and stock shared title/sniper texture setup. Emulator menu-route captures show it preserving the `t90viewge` dossier route while improving the duplicate early gunbarrel circle. It is not promoted until hardware rechecks gameplay/save/all-level boot behavior. Reject `t90blstk` and any full shared-blitter rollback: that path produced obvious front/gunbarrel corruption.
+
+2026-05-18 unattended route probes from `t90gbtexpost`:
+
+```text
+artifacts/generated/t90gbmenuauto.z64 = title/logo timeout to file select
+artifacts/generated/t90auto06.z64     = title/logo timeout to mode select
+artifacts/generated/t90auto07.z64     = title/logo timeout to mission select
+diagnostics/captures/contact_sheets/t90_dossier_route_vs_ge480i_20260518/sheet.jpg
+```
+
+These are capture diagnostics, not candidates. Hardware confirmed that file select, mode select, and mission select can be reached without controller input by changing the post-title timeout menu id. File select now shows the folder icons plus `Select File`, `Copy`, and `Erase`; the previous missing-icon/text failure belonged to rejected menu canaries, not this front branch. Direct timeout routes to difficulty or briefing black-screen, and the first immediate forced-accept mission-select path also black-screened. For difficulty/briefing capture, use real controller input or a timed state-machine patch rather than immediate branch forcing.
+
+Current SC64 state after the unattended probes: restored to `artifacts/generated/t90gbtexpost.z64`, direct boot, EEPROM 4k save. A Kasa power cycle was run after restore.
+
+2026-05-18 gunbarrel cadence follow-up:
+
+```text
+artifacts/generated/t90gbposttex.z64
+artifacts/generated/t90gbposttex.sav
+artifacts/generated/TND6480i_t90gbposttex_from_baseline_tnd.bps
+diagnostics/captures/contact_sheets/t90gbposttex_startup_probe_20260518/sheet_1fps.jpg
+```
+
+`t90gbposttex` was an improvement over `t90gbtexpost` for cadence, but not for the early gunbarrel shape: the retained post-barrel display-list suppression collapsed the paired white-circle phase into one circle. Do not use it as the next visual candidate unless this exact suppression needs to be bisected again.
+
+Current front/gunbarrel candidate:
+
+```text
+artifacts/generated/t90texstk.z64
+artifacts/generated/t90texstk.sav
+artifacts/generated/TND6480i_t90texstk_from_baseline_tnd.bps
+artifacts/analogue_test/T90TEX.Z64
+artifacts/analogue_test/T90TEX.SAV
+diagnostics/captures/videos/t90texstk_clean_powercycle_20260518.mp4
+diagnostics/captures/videos/t90texstk_restore_launch_confirm_20260518.mp4
+diagnostics/captures/contact_sheets/ge480i_stock_tnd_t90texstk_clean_gunbarrel_aligned_20260518/sheet.jpg
+diagnostics/captures/contact_sheets/stock_tnd_vs_t90tex_dossier_20260518/sheet.jpg
+reports/capture_cadence/gunbarrel_ge480i_stock_tnd_t90texstk_clean_20260518.json
+```
+
+The console is now restored to `t90texstk`, direct boot, EEPROM 4k, and a final Kasa launch-confirm capture reached CMK/logos/gunbarrel. This branch removes both the `gb_slow` timing pair and the second moving-barrel display-list suppression, keeping only stock shared title/sniper texture setup on top of the protected `t90viewge` gameplay baseline. Clean GV-USB2 capture shows the two-circle pre-gunbarrel phase restored and cadence matching stock TND64 on the aligned segment (`stock_tnd_gunbarrel` about `6.669`, `t90texstk_clean_gunbarrel` about `6.679` active updates/sec). Route probes from this exact branch show file select, mode select, and mission select matching stock TND64's intended red dossier layout; difficulty/briefing still require upstream state from real input or a timed route patch.
+
+Next useful test: manual or emulator-driven gameplay/all-level sanity for `t90texstk` to ensure the front-end cleanup did not regress the known-good `t90viewge` gameplay/all-level baseline. If it regresses, restore `artifacts/generated/t90viewge.z64`.
+
 GE hi-res patch page clue: GoldenEye's working 640x480i patch depends on Zoinkity's 7 MB RAM extension, two relocated 640x480 framebuffers in upper RAM, and matching assembly/VI changes. For TND64, keep testing memory layout, framebuffer placement, and the TLB/cache range as one system. Avoid broad menu/front-end transplants until the core RAM/framebuffer model is understood.
 
 Current manual test order:

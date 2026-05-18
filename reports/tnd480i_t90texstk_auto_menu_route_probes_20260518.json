@@ -1,0 +1,162 @@
+{
+  "base_rom": "artifacts\\generated\\t90texstk.z64",
+  "base_md5": "9a3a600850585864be1fff8640548165",
+  "purpose": "No-input hardware route probes for front/dossier pages; do not promote over gameplay baseline.",
+  "routes": [
+    {
+      "name": "t90texauto05",
+      "menu_id": 5,
+      "symbol": "MENU_FILE_SELECT",
+      "purpose": "File select / save folders",
+      "base_rom": "artifacts\\generated\\t90texstk.z64",
+      "out_rom": "artifacts\\generated\\t90texauto05.z64",
+      "out_md5": "2d41788d3ac174ac8000afbed61c8211",
+      "header_crc": "84770AD9 4BF151E5",
+      "patch": {
+        "offset": "0x3FF34",
+        "old": "0x24040018",
+        "new": "0x24040005",
+        "note": "After the TND title/logo timeout, route directly to MENU_FILE_SELECT."
+      },
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\t90texstk.sav",
+          "target": "artifacts\\generated\\t90texauto05.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\t90texstk.eep",
+          "target": "artifacts\\generated\\t90texauto05.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ],
+      "do_not_promote": true
+    },
+    {
+      "name": "t90texauto06",
+      "menu_id": 6,
+      "symbol": "MENU_MODE_SELECT",
+      "purpose": "Single-player / multiplayer / cheat select",
+      "base_rom": "artifacts\\generated\\t90texstk.z64",
+      "out_rom": "artifacts\\generated\\t90texauto06.z64",
+      "out_md5": "3b1b79f856545aa6bf54d3997c986f3b",
+      "header_crc": "84770ADD D121FE0C",
+      "patch": {
+        "offset": "0x3FF34",
+        "old": "0x24040018",
+        "new": "0x24040006",
+        "note": "After the TND title/logo timeout, route directly to MENU_MODE_SELECT."
+      },
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\t90texstk.sav",
+          "target": "artifacts\\generated\\t90texauto06.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\t90texstk.eep",
+          "target": "artifacts\\generated\\t90texauto06.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ],
+      "do_not_promote": true
+    },
+    {
+      "name": "t90texauto07",
+      "menu_id": 7,
+      "symbol": "MENU_MISSION_SELECT",
+      "purpose": "Mission select dossier",
+      "base_rom": "artifacts\\generated\\t90texstk.z64",
+      "out_rom": "artifacts\\generated\\t90texauto07.z64",
+      "out_md5": "63dd75791fd6787f8ec1ddbce60cf98e",
+      "header_crc": "84770ADD 6F46E273",
+      "patch": {
+        "offset": "0x3FF34",
+        "old": "0x24040018",
+        "new": "0x24040007",
+        "note": "After the TND title/logo timeout, route directly to MENU_MISSION_SELECT."
+      },
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\t90texstk.sav",
+          "target": "artifacts\\generated\\t90texauto07.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\t90texstk.eep",
+          "target": "artifacts\\generated\\t90texauto07.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ],
+      "do_not_promote": true
+    },
+    {
+      "name": "t90texauto08",
+      "menu_id": 8,
+      "symbol": "MENU_DIFFICULTY",
+      "purpose": "Difficulty select dossier",
+      "base_rom": "artifacts\\generated\\t90texstk.z64",
+      "out_rom": "artifacts\\generated\\t90texauto08.z64",
+      "out_md5": "ec0b7249895e9075b6e4e4ddaf7d712d",
+      "header_crc": "84770AD1 DE490453",
+      "patch": {
+        "offset": "0x3FF34",
+        "old": "0x24040018",
+        "new": "0x24040008",
+        "note": "After the TND title/logo timeout, route directly to MENU_DIFFICULTY."
+      },
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\t90texstk.sav",
+          "target": "artifacts\\generated\\t90texauto08.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\t90texstk.eep",
+          "target": "artifacts\\generated\\t90texauto08.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ],
+      "do_not_promote": true
+    },
+    {
+      "name": "t90texauto0a",
+      "menu_id": 10,
+      "symbol": "MENU_BRIEFING",
+      "purpose": "Mission briefing dossier",
+      "base_rom": "artifacts\\generated\\t90texstk.z64",
+      "out_rom": "artifacts\\generated\\t90texauto0a.z64",
+      "out_md5": "21628fe00588d6d657bbdfd43da28598",
+      "header_crc": "84770ACD BA1DB5DF",
+      "patch": {
+        "offset": "0x3FF34",
+        "old": "0x24040018",
+        "new": "0x2404000A",
+        "note": "After the TND title/logo timeout, route directly to MENU_BRIEFING."
+      },
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\t90texstk.sav",
+          "target": "artifacts\\generated\\t90texauto0a.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\t90texstk.eep",
+          "target": "artifacts\\generated\\t90texauto0a.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ],
+      "do_not_promote": true
+    }
+  ]
+}

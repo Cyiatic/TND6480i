@@ -1,0 +1,616 @@
+{
+  "sheet": "diagnostics\\captures\\contact_sheets\\ge480i_stock_tnd_t90texstk_clean_gunbarrel_aligned_20260518\\sheet.jpg",
+  "sources": [
+    {
+      "label": "GE480i",
+      "video": "C:\\Users\\codex\\Documents\\Light Capture \u02dc^\u2030\u00e6\u0192t\u0192H\u0192\u2039\u0192_\\n64\\2. GoldenEye 480i.mpg",
+      "start": 20.0
+    },
+    {
+      "label": "Stock TND64",
+      "video": "C:\\Users\\codex\\Documents\\Light Capture \u02dc^\u2030\u00e6\u0192t\u0192H\u0192\u2039\u0192_\\n64\\3. Tomorrow Never DIes 64.mpg",
+      "start": 18.0
+    },
+    {
+      "label": "TND90 texstk clean",
+      "video": "diagnostics\\captures\\videos\\t90texstk_clean_powercycle_20260518.mp4",
+      "start": 28.0
+    }
+  ],
+  "relative": [
+    0.0,
+    1.0,
+    2.0,
+    3.0,
+    4.0,
+    5.0,
+    6.0,
+    8.0,
+    10.0,
+    12.0,
+    14.0,
+    16.0,
+    18.0,
+    20.0,
+    22.0,
+    24.0
+  ],
+  "frames": [
+    {
+      "source": "GE480i",
+      "relative": 0.0,
+      "seconds": 20.0,
+      "path": "diagnostics\\captures\\contact_sheets\\ge480i_stock_tnd_t90texstk_clean_gunbarrel_aligned_20260518\\frames\\GE480i_00000000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "GE480i +0s"
+    },
+    {
+      "source": "GE480i",
+      "relative": 1.0,
+      "seconds": 21.0,
+      "path": "diagnostics\\captures\\contact_sheets\\ge480i_stock_tnd_t90texstk_clean_gunbarrel_aligned_20260518\\frames\\GE480i_00001000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "GE480i +1s"
+    },
+    {
+      "source": "GE480i",
+      "relative": 2.0,
+      "seconds": 22.0,
+      "path": "diagnostics\\captures\\contact_sheets\\ge480i_stock_tnd_t90texstk_clean_gunbarrel_aligned_20260518\\frames\\GE480i_00002000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "GE480i +2s"
+    },
+    {
+      "source": "GE480i",
+      "relative": 3.0,
+      "seconds": 23.0,
+      "path": "diagnostics\\captures\\contact_sheets\\ge480i_stock_tnd_t90texstk_clean_gunbarrel_aligned_20260518\\frames\\GE480i_00003000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "GE480i +3s"
+    },
+    {
+      "source": "GE480i",
+      "relative": 4.0,
+      "seconds": 24.0,
+      "path": "diagnostics\\captures\\contact_sheets\\ge480i_stock_tnd_t90texstk_clean_gunbarrel_aligned_20260518\\frames\\GE480i_00004000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "GE480i +4s"
+    },
+    {
+      "source": "GE480i",
+      "relative": 5.0,
+      "seconds": 25.0,
+      "path": "diagnostics\\captures\\contact_sheets\\ge480i_stock_tnd_t90texstk_clean_gunbarrel_aligned_20260518\\frames\\GE480i_00005000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "GE480i +5s"
+    },
+    {
+      "source": "GE480i",
+      "relative": 6.0,
+      "seconds": 26.0,
+      "path": "diagnostics\\captures\\contact_sheets\\ge480i_stock_tnd_t90texstk_clean_gunbarrel_aligned_20260518\\frames\\GE480i_00006000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "GE480i +6s"
+    },
+    {
+      "source": "GE480i",
+      "relative": 8.0,
+      "seconds": 28.0,
+      "path": "diagnostics\\captures\\contact_sheets\\ge480i_stock_tnd_t90texstk_clean_gunbarrel_aligned_20260518\\frames\\GE480i_00008000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "GE480i +8s"
+    },
+    {
+      "source": "GE480i",
+      "relative": 10.0,
+      "seconds": 30.0,
+      "path": "diagnostics\\captures\\contact_sheets\\ge480i_stock_tnd_t90texstk_clean_gunbarrel_aligned_20260518\\frames\\GE480i_00010000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "GE480i +10s"
+    },
+    {
+      "source": "GE480i",
+      "relative": 12.0,
+      "seconds": 32.0,
+      "path": "diagnostics\\captures\\contact_sheets\\ge480i_stock_tnd_t90texstk_clean_gunbarrel_aligned_20260518\\frames\\GE480i_00012000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "GE480i +12s"
+    },
+    {
+      "source": "GE480i",
+      "relative": 14.0,
+      "seconds": 34.0,
+      "path": "diagnostics\\captures\\contact_sheets\\ge480i_stock_tnd_t90texstk_clean_gunbarrel_aligned_20260518\\frames\\GE480i_00014000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "GE480i +14s"
+    },
+    {
+      "source": "GE480i",
+      "relative": 16.0,
+      "seconds": 36.0,
+      "path": "diagnostics\\captures\\contact_sheets\\ge480i_stock_tnd_t90texstk_clean_gunbarrel_aligned_20260518\\frames\\GE480i_00016000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "GE480i +16s"
+    },
+    {
+      "source": "GE480i",
+      "relative": 18.0,
+      "seconds": 38.0,
+      "path": "diagnostics\\captures\\contact_sheets\\ge480i_stock_tnd_t90texstk_clean_gunbarrel_aligned_20260518\\frames\\GE480i_00018000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "GE480i +18s"
+    },
+    {
+      "source": "GE480i",
+      "relative": 20.0,
+      "seconds": 40.0,
+      "path": "diagnostics\\captures\\contact_sheets\\ge480i_stock_tnd_t90texstk_clean_gunbarrel_aligned_20260518\\frames\\GE480i_00020000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "GE480i +20s"
+    },
+    {
+      "source": "GE480i",
+      "relative": 22.0,
+      "seconds": 42.0,
+      "path": "diagnostics\\captures\\contact_sheets\\ge480i_stock_tnd_t90texstk_clean_gunbarrel_aligned_20260518\\frames\\GE480i_00022000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "GE480i +22s"
+    },
+    {
+      "source": "GE480i",
+      "relative": 24.0,
+      "seconds": 44.0,
+      "path": "diagnostics\\captures\\contact_sheets\\ge480i_stock_tnd_t90texstk_clean_gunbarrel_aligned_20260518\\frames\\GE480i_00024000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "GE480i +24s"
+    },
+    {
+      "source": "Stock TND64",
+      "relative": 0.0,
+      "seconds": 18.0,
+      "path": "diagnostics\\captures\\contact_sheets\\ge480i_stock_tnd_t90texstk_clean_gunbarrel_aligned_20260518\\frames\\Stock_TND64_00000000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "Stock TND64 +0s"
+    },
+    {
+      "source": "Stock TND64",
+      "relative": 1.0,
+      "seconds": 19.0,
+      "path": "diagnostics\\captures\\contact_sheets\\ge480i_stock_tnd_t90texstk_clean_gunbarrel_aligned_20260518\\frames\\Stock_TND64_00001000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "Stock TND64 +1s"
+    },
+    {
+      "source": "Stock TND64",
+      "relative": 2.0,
+      "seconds": 20.0,
+      "path": "diagnostics\\captures\\contact_sheets\\ge480i_stock_tnd_t90texstk_clean_gunbarrel_aligned_20260518\\frames\\Stock_TND64_00002000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "Stock TND64 +2s"
+    },
+    {
+      "source": "Stock TND64",
+      "relative": 3.0,
+      "seconds": 21.0,
+      "path": "diagnostics\\captures\\contact_sheets\\ge480i_stock_tnd_t90texstk_clean_gunbarrel_aligned_20260518\\frames\\Stock_TND64_00003000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "Stock TND64 +3s"
+    },
+    {
+      "source": "Stock TND64",
+      "relative": 4.0,
+      "seconds": 22.0,
+      "path": "diagnostics\\captures\\contact_sheets\\ge480i_stock_tnd_t90texstk_clean_gunbarrel_aligned_20260518\\frames\\Stock_TND64_00004000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "Stock TND64 +4s"
+    },
+    {
+      "source": "Stock TND64",
+      "relative": 5.0,
+      "seconds": 23.0,
+      "path": "diagnostics\\captures\\contact_sheets\\ge480i_stock_tnd_t90texstk_clean_gunbarrel_aligned_20260518\\frames\\Stock_TND64_00005000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "Stock TND64 +5s"
+    },
+    {
+      "source": "Stock TND64",
+      "relative": 6.0,
+      "seconds": 24.0,
+      "path": "diagnostics\\captures\\contact_sheets\\ge480i_stock_tnd_t90texstk_clean_gunbarrel_aligned_20260518\\frames\\Stock_TND64_00006000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "Stock TND64 +6s"
+    },
+    {
+      "source": "Stock TND64",
+      "relative": 8.0,
+      "seconds": 26.0,
+      "path": "diagnostics\\captures\\contact_sheets\\ge480i_stock_tnd_t90texstk_clean_gunbarrel_aligned_20260518\\frames\\Stock_TND64_00008000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "Stock TND64 +8s"
+    },
+    {
+      "source": "Stock TND64",
+      "relative": 10.0,
+      "seconds": 28.0,
+      "path": "diagnostics\\captures\\contact_sheets\\ge480i_stock_tnd_t90texstk_clean_gunbarrel_aligned_20260518\\frames\\Stock_TND64_00010000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "Stock TND64 +10s"
+    },
+    {
+      "source": "Stock TND64",
+      "relative": 12.0,
+      "seconds": 30.0,
+      "path": "diagnostics\\captures\\contact_sheets\\ge480i_stock_tnd_t90texstk_clean_gunbarrel_aligned_20260518\\frames\\Stock_TND64_00012000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "Stock TND64 +12s"
+    },
+    {
+      "source": "Stock TND64",
+      "relative": 14.0,
+      "seconds": 32.0,
+      "path": "diagnostics\\captures\\contact_sheets\\ge480i_stock_tnd_t90texstk_clean_gunbarrel_aligned_20260518\\frames\\Stock_TND64_00014000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "Stock TND64 +14s"
+    },
+    {
+      "source": "Stock TND64",
+      "relative": 16.0,
+      "seconds": 34.0,
+      "path": "diagnostics\\captures\\contact_sheets\\ge480i_stock_tnd_t90texstk_clean_gunbarrel_aligned_20260518\\frames\\Stock_TND64_00016000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "Stock TND64 +16s"
+    },
+    {
+      "source": "Stock TND64",
+      "relative": 18.0,
+      "seconds": 36.0,
+      "path": "diagnostics\\captures\\contact_sheets\\ge480i_stock_tnd_t90texstk_clean_gunbarrel_aligned_20260518\\frames\\Stock_TND64_00018000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "Stock TND64 +18s"
+    },
+    {
+      "source": "Stock TND64",
+      "relative": 20.0,
+      "seconds": 38.0,
+      "path": "diagnostics\\captures\\contact_sheets\\ge480i_stock_tnd_t90texstk_clean_gunbarrel_aligned_20260518\\frames\\Stock_TND64_00020000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "Stock TND64 +20s"
+    },
+    {
+      "source": "Stock TND64",
+      "relative": 22.0,
+      "seconds": 40.0,
+      "path": "diagnostics\\captures\\contact_sheets\\ge480i_stock_tnd_t90texstk_clean_gunbarrel_aligned_20260518\\frames\\Stock_TND64_00022000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "Stock TND64 +22s"
+    },
+    {
+      "source": "Stock TND64",
+      "relative": 24.0,
+      "seconds": 42.0,
+      "path": "diagnostics\\captures\\contact_sheets\\ge480i_stock_tnd_t90texstk_clean_gunbarrel_aligned_20260518\\frames\\Stock_TND64_00024000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "Stock TND64 +24s"
+    },
+    {
+      "source": "TND90 texstk clean",
+      "relative": 0.0,
+      "seconds": 28.0,
+      "path": "diagnostics\\captures\\contact_sheets\\ge480i_stock_tnd_t90texstk_clean_gunbarrel_aligned_20260518\\frames\\TND90_texstk_clean_00000000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "TND90 texstk clean +0s"
+    },
+    {
+      "source": "TND90 texstk clean",
+      "relative": 1.0,
+      "seconds": 29.0,
+      "path": "diagnostics\\captures\\contact_sheets\\ge480i_stock_tnd_t90texstk_clean_gunbarrel_aligned_20260518\\frames\\TND90_texstk_clean_00001000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "TND90 texstk clean +1s"
+    },
+    {
+      "source": "TND90 texstk clean",
+      "relative": 2.0,
+      "seconds": 30.0,
+      "path": "diagnostics\\captures\\contact_sheets\\ge480i_stock_tnd_t90texstk_clean_gunbarrel_aligned_20260518\\frames\\TND90_texstk_clean_00002000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "TND90 texstk clean +2s"
+    },
+    {
+      "source": "TND90 texstk clean",
+      "relative": 3.0,
+      "seconds": 31.0,
+      "path": "diagnostics\\captures\\contact_sheets\\ge480i_stock_tnd_t90texstk_clean_gunbarrel_aligned_20260518\\frames\\TND90_texstk_clean_00003000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "TND90 texstk clean +3s"
+    },
+    {
+      "source": "TND90 texstk clean",
+      "relative": 4.0,
+      "seconds": 32.0,
+      "path": "diagnostics\\captures\\contact_sheets\\ge480i_stock_tnd_t90texstk_clean_gunbarrel_aligned_20260518\\frames\\TND90_texstk_clean_00004000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "TND90 texstk clean +4s"
+    },
+    {
+      "source": "TND90 texstk clean",
+      "relative": 5.0,
+      "seconds": 33.0,
+      "path": "diagnostics\\captures\\contact_sheets\\ge480i_stock_tnd_t90texstk_clean_gunbarrel_aligned_20260518\\frames\\TND90_texstk_clean_00005000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "TND90 texstk clean +5s"
+    },
+    {
+      "source": "TND90 texstk clean",
+      "relative": 6.0,
+      "seconds": 34.0,
+      "path": "diagnostics\\captures\\contact_sheets\\ge480i_stock_tnd_t90texstk_clean_gunbarrel_aligned_20260518\\frames\\TND90_texstk_clean_00006000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "TND90 texstk clean +6s"
+    },
+    {
+      "source": "TND90 texstk clean",
+      "relative": 8.0,
+      "seconds": 36.0,
+      "path": "diagnostics\\captures\\contact_sheets\\ge480i_stock_tnd_t90texstk_clean_gunbarrel_aligned_20260518\\frames\\TND90_texstk_clean_00008000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "TND90 texstk clean +8s"
+    },
+    {
+      "source": "TND90 texstk clean",
+      "relative": 10.0,
+      "seconds": 38.0,
+      "path": "diagnostics\\captures\\contact_sheets\\ge480i_stock_tnd_t90texstk_clean_gunbarrel_aligned_20260518\\frames\\TND90_texstk_clean_00010000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "TND90 texstk clean +10s"
+    },
+    {
+      "source": "TND90 texstk clean",
+      "relative": 12.0,
+      "seconds": 40.0,
+      "path": "diagnostics\\captures\\contact_sheets\\ge480i_stock_tnd_t90texstk_clean_gunbarrel_aligned_20260518\\frames\\TND90_texstk_clean_00012000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "TND90 texstk clean +12s"
+    },
+    {
+      "source": "TND90 texstk clean",
+      "relative": 14.0,
+      "seconds": 42.0,
+      "path": "diagnostics\\captures\\contact_sheets\\ge480i_stock_tnd_t90texstk_clean_gunbarrel_aligned_20260518\\frames\\TND90_texstk_clean_00014000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "TND90 texstk clean +14s"
+    },
+    {
+      "source": "TND90 texstk clean",
+      "relative": 16.0,
+      "seconds": 44.0,
+      "path": "diagnostics\\captures\\contact_sheets\\ge480i_stock_tnd_t90texstk_clean_gunbarrel_aligned_20260518\\frames\\TND90_texstk_clean_00016000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "TND90 texstk clean +16s"
+    },
+    {
+      "source": "TND90 texstk clean",
+      "relative": 18.0,
+      "seconds": 46.0,
+      "path": "diagnostics\\captures\\contact_sheets\\ge480i_stock_tnd_t90texstk_clean_gunbarrel_aligned_20260518\\frames\\TND90_texstk_clean_00018000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "TND90 texstk clean +18s"
+    },
+    {
+      "source": "TND90 texstk clean",
+      "relative": 20.0,
+      "seconds": 48.0,
+      "path": "diagnostics\\captures\\contact_sheets\\ge480i_stock_tnd_t90texstk_clean_gunbarrel_aligned_20260518\\frames\\TND90_texstk_clean_00020000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "TND90 texstk clean +20s"
+    },
+    {
+      "source": "TND90 texstk clean",
+      "relative": 22.0,
+      "seconds": 50.0,
+      "path": "diagnostics\\captures\\contact_sheets\\ge480i_stock_tnd_t90texstk_clean_gunbarrel_aligned_20260518\\frames\\TND90_texstk_clean_00022000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "TND90 texstk clean +22s"
+    },
+    {
+      "source": "TND90 texstk clean",
+      "relative": 24.0,
+      "seconds": 52.0,
+      "path": "diagnostics\\captures\\contact_sheets\\ge480i_stock_tnd_t90texstk_clean_gunbarrel_aligned_20260518\\frames\\TND90_texstk_clean_00024000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "TND90 texstk clean +24s"
+    }
+  ]
+}

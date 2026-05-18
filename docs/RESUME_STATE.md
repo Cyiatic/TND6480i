@@ -1,6 +1,6 @@
 # TND6480i Resume State
 
-Last updated: 2026-05-18 after `TND90GE` function-split menu/front-resolution checks.
+Last updated: 2026-05-18 after `t90texstk` front-end hardware comparison.
 
 Scope reminder: keep work limited to this N64/TND6480i project and directly related tools/devices.
 
@@ -93,6 +93,116 @@ diagnostics/captures/contact_sheets/t90_front_resolution_route_20260518/front_re
 ```
 
 Do not upload the `t90menu06`, `t90menu07`, `t90menu08`, `t90menu0608`, `t90menu0609`, `t90frontres`, or `t90frontxybuf_mstxt` canaries. Function-splitting confirmed that preserving file-select while applying later GE menu constants is possible, but `menu07`/`menu08` shift mission/difficulty pages into unfinished positions rather than matching GE480i. The front-resolution check found that `t90viewge` already has the front/menu `viSetXY` and `viSetBuf` width/height at 640x480; only the front zbuffer pair differed, and changing it did not visibly improve menu text or layout in Gopher64. The remaining menu/front work is therefore TND-specific layout/asset behavior, not a missing one-word front VI switch.
+
+Menu source audit:
+
+```text
+scripts/audit_t90_menu_offsets.py
+reports/t90_menu_offset_audit_20260518.json
+C:\Users\codex\Documents\n64\007-decomp\src\game\front.c
+```
+
+The audit maps the rejected GE menu-function constants back to local GoldenEye `front.c` routines. The key lesson is that those constants are a mixed bag: cursor tween thresholds, highlight hitboxes, document rectangles, label coordinates, and image/checkmark placement are interleaved. Future dossier work should classify and patch only the TND-specific draw coordinates needed for one screen at a time; avoid applying whole `menu07`/`menu08` GE constant clusters.
+
+2026-05-18 intro/front-end follow-up:
+
+```text
+scripts/build_t90_intro_candidates.py
+reports/tnd480i_t90_intro_candidates_20260518.json
+reports/smoke/smoke_t90_intro_candidates_20260518.json
+reports/smoke/smoke_t90_intro_combo_candidates_20260518.json
+reports/smoke/smoke_t90_intro_combo_menu_route_20260518.json
+diagnostics/captures/contact_sheets/t90_intro_combo_candidates_20260518/intro_combo_compare.jpg
+diagnostics/captures/contact_sheets/t90_intro_combo_menu_route_20260518/intro_combo_menu_route_compare.jpg
+```
+
+`t90gbtexpost` is the only front-end candidate worth carrying forward from this set. It starts with the protected `t90viewge` gameplay baseline, then applies three narrow front/gunbarrel ingredients: case-1 gunbarrel slowdown at `0x3DF04/0x3DF08`, suppression of the second moving-barrel display-list command at `0x3C68C`, and stock shared title/sniper texture setup words at `0x4FDEC-0x4FF00`. Gopher menu-route evidence shows it preserving the same file-select/dossier route as `t90viewge`, while improving the early gunbarrel duplicate-circle problem. Do not promote it over `t90viewge` until hardware confirms that gameplay, save loading, and all-level boot behavior remain intact.
+
+Reject `t90blstk`: restoring the full shared title/sniper blitter geometry cluster produced obvious bad gunbarrel/static behavior. Also do not rely on the direct-stage Gopher smoke reports for `t90gbtexpost`; the current Gopher/Vulkan capture path can return black window captures even when known-good ROMs are running. `scripts/smoke_gopher64.py` now has `--keep-dark-title-captures`, `--include-parent-in-capture-name`, and an all-black fallback check, but hardware/GV-USB2 remains authoritative for this front-end branch.
+
+Test artifacts:
+
+```text
+artifacts/generated/t90gbtexpost.z64
+MD5: cd05f8e11b12af18673ad642b7e4a747
+N64 CRC: 84A670DB 32000065
+Patch: artifacts/generated/TND6480i_t90gbtexpost_from_baseline_tnd.bps
+Patch MD5: a25a798fd53a8fa140dafa0d3a2a7489
+Analogue/SD: artifacts/analogue_test/TNDGBTP.Z64 and .SAV/.EEP
+```
+
+2026-05-18 unattended hardware/menu-route probes:
+
+```text
+scripts/build_t90_auto_menu_probe.py
+scripts/build_t90_auto_menu_route_probes.py
+scripts/build_t90_auto_path_probes.py
+reports/tnd480i_t90_auto_menu_probe_20260518.json
+reports/tnd480i_t90_auto_menu_route_probes_20260518.json
+reports/tnd480i_t90_auto_path_probes_20260518.json
+diagnostics/captures/videos/t90gbmenuauto_startup_menu_probe_20260518.mp4
+diagnostics/captures/videos/t90auto06_modesel_probe_20260518.mp4
+diagnostics/captures/videos/t90auto07_missionsel_probe_20260518.mp4
+diagnostics/captures/contact_sheets/t90_dossier_route_vs_ge480i_20260518/sheet.jpg
+```
+
+`t90gbmenuauto` / `t90auto05` is a one-word diagnostic on top of `t90gbtexpost`: raw offset `0x3FF34` changes the post-title timeout from `MENU_DISPLAY_CAST` (`0x18`) to `MENU_FILE_SELECT` (`0x05`). Hardware capture confirms that it reaches the file-select dossier unattended at about `00:56`, with folders plus `Select File`, `Copy`, and `Erase` visible. This is useful for capture automation only; do not promote it as a gameplay build.
+
+Direct no-input routes to `MENU_MODE_SELECT` and `MENU_MISSION_SELECT` also survive on hardware. `t90auto06` captures the Single/Multi/Cheats dossier page; `t90auto07` captures the TND mission grid. Direct jumps to `MENU_DIFFICULTY` (`t90auto08`) and `MENU_BRIEFING` (`t90auto0a`) black-screen after the title/logo because those pages need state initialized by the upstream selection path. The first forced-accept path probe (`t90path08`, mission select -> difficulty) also black-screened, so avoid immediate branch-forcing as an automation strategy; a timed state-machine patch or real controller input is needed for difficulty/briefing capture.
+
+After the route probes, SC64 was restored to the non-diagnostic `artifacts/generated/t90gbtexpost.z64` with its paired EEPROM 4k save and power-cycled. A live GV-USB2 frame after restore showed the boot gunbarrel/circle, not the black diagnostic state.
+
+2026-05-18 gunbarrel cadence follow-up:
+
+```text
+artifacts/generated/t90gbposttex.z64
+MD5: 45c092493492f827778ff1153f4413ca
+N64 CRC: 847716D1 8AE6A9CA
+Patch: artifacts/generated/TND6480i_t90gbposttex_from_baseline_tnd.bps
+Patch MD5: d67d578e6ae56a4aad14f50a7d22805c
+diagnostics/captures/videos/t90gbposttex_startup_probe_20260518.mp4
+diagnostics/captures/contact_sheets/t90gbposttex_startup_probe_20260518/sheet_1fps.jpg
+reports/capture_cadence/gunbarrel_stock_tnd_vs_t90gbtexpost_20260518.json
+reports/capture_cadence/gunbarrel_stock_tnd_vs_t90gbposttex_20260518.json
+```
+
+User reported that `t90gbtexpost` gunbarrel cadence felt off against stock TND64. The likely cause is the deliberate `gb_slow` pair at `0x3DF04/0x3DF08`. `t90gbposttex` keeps the two non-timing front fixes from `t90gbtexpost` (second moving-barrel display-list suppression plus stock shared title/sniper texture setup), but removes the `gb_slow` timing change. GV-USB2 cadence estimates moved toward stock TND64: stock TND64 sampled gunbarrel `~6.16` active updates/sec, `t90gbtexpost` `~8.10`, and `t90gbposttex` `~6.89`. The analyzer is rough, but directionally supports the user's visual note.
+
+Follow-up visual comparison showed that `t90gbposttex` was not the right final front branch: removing the `gb_slow` timing pair improved cadence, but keeping the post-barrel display-list suppression caused the early gunbarrel to collapse into a single white circle where GE480i and stock TND64 show the paired circles.
+
+Current front/gunbarrel branch:
+
+```text
+artifacts/generated/t90texstk.z64
+MD5: 9a3a600850585864be1fff8640548165
+Patch: artifacts/generated/TND6480i_t90texstk_from_baseline_tnd.bps
+Patch MD5: a6e9d0483e0bc25a6263e9298f13890d
+Analogue/SD: artifacts/analogue_test/T90TEX.Z64 and .SAV/.EEP
+diagnostics/captures/videos/t90texstk_clean_powercycle_20260518.mp4
+diagnostics/captures/videos/t90texstk_restore_launch_confirm_20260518.mp4
+diagnostics/captures/contact_sheets/t90texstk_clean_powercycle_20260518/sheet_1fps.jpg
+diagnostics/captures/contact_sheets/t90texstk_restore_launch_confirm_20260518/sheet_1fps.jpg
+diagnostics/captures/contact_sheets/ge480i_stock_tnd_t90texstk_clean_gunbarrel_aligned_20260518/sheet.jpg
+reports/capture_cadence/gunbarrel_ge480i_stock_tnd_t90texstk_clean_20260518.json
+```
+
+`t90texstk` keeps only the stock shared title/sniper texture setup from the `t90gbtexpost` family. It removes both the explicit gunbarrel slowdown and the second moving-barrel display-list suppression. Hardware/GV-USB2 comparison against GE480i and stock TND64 shows the paired white-circle phase restored, no obvious later duplicate/swiss-cheese barrel in the sampled frames, and cadence essentially matching stock TND64 on the aligned segment (`stock_tnd_gunbarrel` about `6.669` active updates/sec, `t90texstk_clean_gunbarrel` about `6.679`). GE480i remains the resolution/detail target, while stock TND64 remains the TND-specific sequence/artwork target.
+
+Exact-branch menu-route probes were also rebuilt and captured from `t90texstk`:
+
+```text
+scripts/build_aligned_video_sheet.py
+reports/tnd480i_t90texstk_auto_menu_route_probes_20260518.json
+diagnostics/captures/videos/t90texauto05_fileselect_probe_20260518.mp4
+diagnostics/captures/videos/t90texauto06_modesel_probe_20260518.mp4
+diagnostics/captures/videos/t90texauto07_missionsel_probe_20260518.mp4
+diagnostics/captures/contact_sheets/ge480i_vs_t90tex_dossier_20260518/sheet.jpg
+diagnostics/captures/contact_sheets/stock_tnd_vs_t90tex_dossier_20260518/sheet.jpg
+```
+
+The file-select, mode-select, and mission-select pages line up with stock TND64's red dossier/folder layout while remaining in the GE480i/high-res presentation family. Difficulty and briefing still need either real controller input or a slower state-machine route; immediate direct jumps to those pages black-screen because upstream selection state is missing.
+
+Current SC64 upload after this follow-up: `artifacts/generated/t90texstk.z64`, direct boot, EEPROM 4k save. A final Kasa launch-confirm capture reached CMK/logos/gunbarrel, so the console is running the current candidate rather than merely staging it. This is the next front-end/gunbarrel test candidate; if gameplay/all-level boot regresses, restore the protected gameplay baseline `t90viewge`.
 
 GE hi-res patch reference note from user: the original GoldenEye hi-res patch credits Zoinkity's 7 MB RAM extension, moves two 640x480 framebuffers to upper RAM, and adjusts related GoldenEye assembly plus VI settings. Treat that as confirmation that the target is a coordinated RAM-layout/framebuffer/VI/assembly patch, not a loose set of resolution constants. This aligns with the TND90 breakthrough: preserving a large TLB/page-cache range while relocating it away from the expanded framebuffers mattered as much as the visible 480i constants.
 
