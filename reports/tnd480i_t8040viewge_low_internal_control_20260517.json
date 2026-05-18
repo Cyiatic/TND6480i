@@ -1,0 +1,240 @@
+{
+  "name": "t8040vlowint",
+  "pack_stem": "TNDLOWI",
+  "purpose": "Diagnostic only: keep the current t8040viewge all-level-boot base and its 480i VI/framebuffer plumbing, but restore the gameplay internal render, viewport, and z/depth dimensions as a coherent stock-sized set. If this is faster, the slowdown is the true high internal render path. If it is still slow, look below gameplay dimensions at VI/framebuffer/RDP state. This is not expected to be a final 480i visual candidate.",
+  "base_rom": "artifacts\\generated\\t8040viewge.z64",
+  "base_md5": "763f94bd1fb364e3d9eb8809bde4900b",
+  "stock_source_rom": "artifacts\\roms\\BASELINE_TND64_Expanded_direct_from_stock.z64",
+  "out_rom": "artifacts\\generated\\t8040vlowint.z64",
+  "out_md5": "1f131194a74ec8cad755faae880eaf40",
+  "pack_rom": "artifacts\\analogue_test\\TNDLOWI.Z64",
+  "header_crc": "8437EAD1 87B1990B",
+  "patches": [
+    {
+      "group": "direct_render",
+      "offset": "0x4F354",
+      "old": "0x028001E0",
+      "new": "0x014000F0",
+      "note": "direct render dimensions table 0",
+      "changed": true
+    },
+    {
+      "group": "global_xy_helpers",
+      "offset": "0xBB730",
+      "old": "0x24020280",
+      "new": "0x24020140",
+      "note": "getWidth320or440 low-res return",
+      "changed": true
+    },
+    {
+      "group": "global_xy_helpers",
+      "offset": "0xBB740",
+      "old": "0x24020280",
+      "new": "0x240201B8",
+      "note": "getWidth320or440 hi-res return",
+      "changed": true
+    },
+    {
+      "group": "global_xy_helpers",
+      "offset": "0xBB754",
+      "old": "0x240201E0",
+      "new": "0x240200F0",
+      "note": "getHeight330or240 low-res return",
+      "changed": true
+    },
+    {
+      "group": "global_xy_helpers",
+      "offset": "0xBB764",
+      "old": "0x240201E0",
+      "new": "0x2402014A",
+      "note": "getHeight330or240 hi-res return",
+      "changed": true
+    },
+    {
+      "group": "camera_viewports",
+      "offset": "0xBB7A4",
+      "old": "0x24020280",
+      "new": "0x240201B8",
+      "note": "cameraBufferToggle viewport width",
+      "changed": true
+    },
+    {
+      "group": "camera_viewports",
+      "offset": "0xBB89C",
+      "old": "0x240201F0",
+      "new": "0x240200F8",
+      "note": "camera widescreen viewport height",
+      "changed": true
+    },
+    {
+      "group": "camera_viewports",
+      "offset": "0xBB8B8",
+      "old": "0x2402017C",
+      "new": "0x240200BE",
+      "note": "camera cinema viewport height",
+      "changed": true
+    },
+    {
+      "group": "camera_viewports",
+      "offset": "0xBB8C0",
+      "old": "0x24020260",
+      "new": "0x24020130",
+      "note": "camera fullscreen viewport height",
+      "changed": true
+    },
+    {
+      "group": "camera_viewports",
+      "offset": "0xBB8FC",
+      "old": "0x24420168",
+      "new": "0x244200B4",
+      "note": "widescreen animated viewport height offset",
+      "changed": true
+    },
+    {
+      "group": "camera_viewports",
+      "offset": "0xBB944",
+      "old": "0x24420110",
+      "new": "0x24420088",
+      "note": "cinema animated viewport height offset",
+      "changed": true
+    },
+    {
+      "group": "camera_viewports",
+      "offset": "0xBBA60",
+      "old": "0x2442003C",
+      "new": "0x2442001E",
+      "note": "widescreen animated viewport top offset",
+      "changed": true
+    },
+    {
+      "group": "camera_viewports",
+      "offset": "0xBBAA8",
+      "old": "0x24420068",
+      "new": "0x24420034",
+      "note": "cinema animated viewport top offset",
+      "changed": true
+    },
+    {
+      "group": "normal_viewports",
+      "offset": "0xBB7C0",
+      "old": "0x24020280",
+      "new": "0x24020140",
+      "note": "non-camera widescreen viewport width",
+      "changed": true
+    },
+    {
+      "group": "normal_viewports",
+      "offset": "0xBB7D4",
+      "old": "0x24020280",
+      "new": "0x24020140",
+      "note": "non-camera default viewport width branch delay",
+      "changed": true
+    },
+    {
+      "group": "normal_viewports",
+      "offset": "0xBB7DC",
+      "old": "0x24020280",
+      "new": "0x24020140",
+      "note": "non-camera cinema viewport width",
+      "changed": true
+    },
+    {
+      "group": "normal_viewports",
+      "offset": "0xBB7E0",
+      "old": "0x24020280",
+      "new": "0x24020140",
+      "note": "non-camera fallback viewport width",
+      "changed": true
+    },
+    {
+      "group": "normal_viewports",
+      "offset": "0xBB91C",
+      "old": "0x240201B8",
+      "new": "0x240200DC",
+      "note": "non-camera default viewport height",
+      "changed": true
+    },
+    {
+      "group": "normal_viewports",
+      "offset": "0xBB954",
+      "old": "0x240201B8",
+      "new": "0x240200DC",
+      "note": "non-camera fallback viewport height",
+      "changed": true
+    },
+    {
+      "group": "normal_viewports",
+      "offset": "0xBBA80",
+      "old": "0x24020014",
+      "new": "0x2402000A",
+      "note": "non-camera default viewport top",
+      "changed": true
+    },
+    {
+      "group": "stage_z_depth",
+      "offset": "0x106ED4",
+      "old": "0x240F0280",
+      "new": "0x240F01B8",
+      "note": "stage z/depth resolution width",
+      "changed": true
+    },
+    {
+      "group": "stage_z_depth",
+      "offset": "0x106EE4",
+      "old": "0x241801E0",
+      "new": "0x2418014A",
+      "note": "stage z/depth resolution height",
+      "changed": true
+    },
+    {
+      "group": "stage_z_depth",
+      "offset": "0x106EF0",
+      "old": "0x24190280",
+      "new": "0x24190140",
+      "note": "stage z/depth low-res width",
+      "changed": true
+    },
+    {
+      "group": "stage_z_depth",
+      "offset": "0x106F10",
+      "old": "0x240801E0",
+      "new": "0x240800F0",
+      "note": "stage z/depth single-player height",
+      "changed": true
+    },
+    {
+      "group": "stage_z_depth",
+      "offset": "0x106F24",
+      "old": "0x240901E0",
+      "new": "0x24090078",
+      "note": "stage z/depth split/multiplayer height",
+      "changed": true
+    }
+  ],
+  "save_outputs": [
+    {
+      "path": "artifacts\\generated\\t8040vlowint.sav",
+      "bytes": 512,
+      "md5": "79ed3fe6851b080ff21de69fd12f034d"
+    },
+    {
+      "path": "artifacts\\generated\\t8040vlowint.eep",
+      "bytes": 2048,
+      "md5": "e47f5c07623838e875761a0493388e03"
+    },
+    {
+      "path": "artifacts\\analogue_test\\TNDLOWI.SAV",
+      "bytes": 512,
+      "md5": "79ed3fe6851b080ff21de69fd12f034d"
+    },
+    {
+      "path": "artifacts\\analogue_test\\TNDLOWI.EEP",
+      "bytes": 512,
+      "md5": "79ed3fe6851b080ff21de69fd12f034d"
+    }
+  ],
+  "bps_patch": "artifacts\\generated\\TND6480i_t8040vlowint_from_baseline_tnd.bps",
+  "bps_patch_md5": "dafea6e0689e6fa5093cc4672c7e7930",
+  "bps_manifest": "reports\\tnd6480i_t8040vlowint_bps_manifest.json",
+  "test_note": "Performance diagnostic only. Compare Wreck/Printworks speed to TNDVIABL. Expected visual result is stock-ish or not-true-480i; the useful signal is whether speed recovers without blue rendering."
+}

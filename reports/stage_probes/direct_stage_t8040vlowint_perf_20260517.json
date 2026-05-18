@@ -1,0 +1,201 @@
+{
+  "base": "artifacts\\generated\\t8040vlowint.z64",
+  "base_md5": "1f131194a74ec8cad755faae880eaf40",
+  "save": "artifacts\\generated\\t8040vlowint.sav",
+  "out_dir": "artifacts\\generated\\stage_probes_lowint",
+  "purpose": "Direct-boot per-stage probes to reduce manual hardware menu testing.",
+  "outputs": [
+    {
+      "level": {
+        "index": 0,
+        "short": "bzr",
+        "name": "Bazaar",
+        "stage_id": 33,
+        "ge_slot": "Dam"
+      },
+      "rom": "artifacts\\generated\\stage_probes_lowint\\p00bzr.z64",
+      "md5": "66f376bbe8f69c817df760a43e90e1ca",
+      "header_crc": "858B8A8B A4124C31",
+      "saves": [
+        "artifacts\\generated\\stage_probes_lowint\\p00bzr.sav",
+        "artifacts\\generated\\stage_probes_lowint\\p00bzr.eep"
+      ],
+      "patches": [
+        {
+          "offset": "0x6C94",
+          "old": "0x3C058003",
+          "new": "0x3C018002",
+          "note": "lui at, 0x8002"
+        },
+        {
+          "offset": "0x6C98",
+          "old": "0x24A59104",
+          "new": "0x24020021",
+          "note": "addiu v0, zero, <stage>"
+        },
+        {
+          "offset": "0x6C9C",
+          "old": "0x0C0029A8",
+          "new": "0xAC2241A8",
+          "note": "sw v0, g_StageNum"
+        },
+        {
+          "offset": "0x6CA0",
+          "old": "0x24040001",
+          "new": "0x1000000E",
+          "note": "b after -level_ token parser"
+        },
+        {
+          "offset": "0x6CA4",
+          "old": "0x1040000D",
+          "new": "0x00000000",
+          "note": "nop"
+        }
+      ]
+    },
+    {
+      "level": {
+        "index": 2,
+        "short": "lab",
+        "name": "Labs",
+        "stage_id": 35,
+        "ge_slot": "Runway"
+      },
+      "rom": "artifacts\\generated\\stage_probes_lowint\\p02lab.z64",
+      "md5": "3bf63c9d6c4cdbd3d8b972602de653a8",
+      "header_crc": "858B8A97 0D5DCD4E",
+      "saves": [
+        "artifacts\\generated\\stage_probes_lowint\\p02lab.sav",
+        "artifacts\\generated\\stage_probes_lowint\\p02lab.eep"
+      ],
+      "patches": [
+        {
+          "offset": "0x6C94",
+          "old": "0x3C058003",
+          "new": "0x3C018002",
+          "note": "lui at, 0x8002"
+        },
+        {
+          "offset": "0x6C98",
+          "old": "0x24A59104",
+          "new": "0x24020023",
+          "note": "addiu v0, zero, <stage>"
+        },
+        {
+          "offset": "0x6C9C",
+          "old": "0x0C0029A8",
+          "new": "0xAC2241A8",
+          "note": "sw v0, g_StageNum"
+        },
+        {
+          "offset": "0x6CA0",
+          "old": "0x24040001",
+          "new": "0x1000000E",
+          "note": "b after -level_ token parser"
+        },
+        {
+          "offset": "0x6CA4",
+          "old": "0x1040000D",
+          "new": "0x00000000",
+          "note": "nop"
+        }
+      ]
+    },
+    {
+      "level": {
+        "index": 3,
+        "short": "prs",
+        "name": "Press",
+        "stage_id": 36,
+        "ge_slot": "Surface 1"
+      },
+      "rom": "artifacts\\generated\\stage_probes_lowint\\p03prs.z64",
+      "md5": "0a01b8d0d1d600bcb87a3e3ded9098d1",
+      "header_crc": "858B8A91 3F7C5F47",
+      "saves": [
+        "artifacts\\generated\\stage_probes_lowint\\p03prs.sav",
+        "artifacts\\generated\\stage_probes_lowint\\p03prs.eep"
+      ],
+      "patches": [
+        {
+          "offset": "0x6C94",
+          "old": "0x3C058003",
+          "new": "0x3C018002",
+          "note": "lui at, 0x8002"
+        },
+        {
+          "offset": "0x6C98",
+          "old": "0x24A59104",
+          "new": "0x24020024",
+          "note": "addiu v0, zero, <stage>"
+        },
+        {
+          "offset": "0x6C9C",
+          "old": "0x0C0029A8",
+          "new": "0xAC2241A8",
+          "note": "sw v0, g_StageNum"
+        },
+        {
+          "offset": "0x6CA0",
+          "old": "0x24040001",
+          "new": "0x1000000E",
+          "note": "b after -level_ token parser"
+        },
+        {
+          "offset": "0x6CA4",
+          "old": "0x1040000D",
+          "new": "0x00000000",
+          "note": "nop"
+        }
+      ]
+    },
+    {
+      "level": {
+        "index": 6,
+        "short": "wrk",
+        "name": "Wreck",
+        "stage_id": 26,
+        "ge_slot": "Frigate"
+      },
+      "rom": "artifacts\\generated\\stage_probes_lowint\\p06wrk.z64",
+      "md5": "3c96ebcdfa7a864ba99f085b6981da71",
+      "header_crc": "858B8AB9 EB909FD6",
+      "saves": [
+        "artifacts\\generated\\stage_probes_lowint\\p06wrk.sav",
+        "artifacts\\generated\\stage_probes_lowint\\p06wrk.eep"
+      ],
+      "patches": [
+        {
+          "offset": "0x6C94",
+          "old": "0x3C058003",
+          "new": "0x3C018002",
+          "note": "lui at, 0x8002"
+        },
+        {
+          "offset": "0x6C98",
+          "old": "0x24A59104",
+          "new": "0x2402001A",
+          "note": "addiu v0, zero, <stage>"
+        },
+        {
+          "offset": "0x6C9C",
+          "old": "0x0C0029A8",
+          "new": "0xAC2241A8",
+          "note": "sw v0, g_StageNum"
+        },
+        {
+          "offset": "0x6CA0",
+          "old": "0x24040001",
+          "new": "0x1000000E",
+          "note": "b after -level_ token parser"
+        },
+        {
+          "offset": "0x6CA4",
+          "old": "0x1040000D",
+          "new": "0x00000000",
+          "note": "nop"
+        }
+      ]
+    }
+  ]
+}

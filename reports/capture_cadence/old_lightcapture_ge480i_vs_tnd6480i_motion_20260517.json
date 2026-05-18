@@ -1,0 +1,110 @@
+[
+  {
+    "video": "C:\\Users\\codex\\Documents\\Light Capture \u02dc^\u2030\u00e6\u0192t\u0192H\u0192\u2039\u0192_\\n64\\2. GoldenEye 480i.mpg",
+    "frames": 600,
+    "frame_diffs": 599,
+    "mean_diff": 2.1051,
+    "median_diff": 0.1935,
+    "p90_diff": 6.5461,
+    "near_duplicate_ratio": 0.6628,
+    "active_ratio": 0.2871,
+    "estimated_updates_per_second": 8.606,
+    "label": "ge480i_dam_240_260",
+    "start": 240.0,
+    "duration": 20.0,
+    "scale": [
+      180,
+      120
+    ]
+  },
+  {
+    "video": "C:\\Users\\codex\\Documents\\Light Capture \u02dc^\u2030\u00e6\u0192t\u0192H\u0192\u2039\u0192_\\n64\\2. GoldenEye 480i.mpg",
+    "frames": 600,
+    "frame_diffs": 599,
+    "mean_diff": 2.7651,
+    "median_diff": 0.1275,
+    "p90_diff": 9.4,
+    "near_duplicate_ratio": 0.6561,
+    "active_ratio": 0.3422,
+    "estimated_updates_per_second": 10.257,
+    "label": "ge480i_dam_300_320",
+    "start": 300.0,
+    "duration": 20.0,
+    "scale": [
+      180,
+      120
+    ]
+  },
+  {
+    "video": "C:\\Users\\codex\\Documents\\Light Capture \u02dc^\u2030\u00e6\u0192t\u0192H\u0192\u2039\u0192_\\n64\\4. Tomorrow Never Dies 6480i.mpg",
+    "frames": 600,
+    "frame_diffs": 599,
+    "mean_diff": 3.106,
+    "median_diff": 1.6173,
+    "p90_diff": 7.9838,
+    "near_duplicate_ratio": 0.3957,
+    "active_ratio": 0.4775,
+    "estimated_updates_per_second": 14.31,
+    "label": "tnd6480i_printworks_430_450",
+    "start": 430.0,
+    "duration": 20.0,
+    "scale": [
+      180,
+      120
+    ]
+  },
+  {
+    "video": "C:\\Users\\codex\\Documents\\Light Capture \u02dc^\u2030\u00e6\u0192t\u0192H\u0192\u2039\u0192_\\n64\\4. Tomorrow Never Dies 6480i.mpg",
+    "frames": 600,
+    "frame_diffs": 599,
+    "mean_diff": 3.3394,
+    "median_diff": 0.9097,
+    "p90_diff": 8.3261,
+    "near_duplicate_ratio": 0.4775,
+    "active_ratio": 0.3623,
+    "estimated_updates_per_second": 10.857,
+    "label": "tnd6480i_printworks_500_520",
+    "start": 500.0,
+    "duration": 20.0,
+    "scale": [
+      180,
+      120
+    ]
+  },
+  {
+    "video": "C:\\Users\\codex\\Documents\\Light Capture \u02dc^\u2030\u00e6\u0192t\u0192H\u0192\u2039\u0192_\\n64\\4. Tomorrow Never Dies 6480i.mpg",
+    "frames": 600,
+    "frame_diffs": 599,
+    "mean_diff": 1.6241,
+    "median_diff": 1.0659,
+    "p90_diff": 3.8937,
+    "near_duplicate_ratio": 0.4457,
+    "active_ratio": 0.3172,
+    "estimated_updates_per_second": 9.506,
+    "label": "tnd6480i_wreck_832_852",
+    "start": 832.0,
+    "duration": 20.0,
+    "scale": [
+      180,
+      120
+    ]
+  },
+  {
+    "video": "C:\\Users\\codex\\Documents\\Light Capture \u02dc^\u2030\u00e6\u0192t\u0192H\u0192\u2039\u0192_\\n64\\4. Tomorrow Never Dies 6480i.mpg",
+    "frames": 600,
+    "frame_diffs": 599,
+    "mean_diff": 1.2837,
+    "median_diff": 0.083,
+    "p90_diff": 4.1964,
+    "near_duplicate_ratio": 0.788,
+    "active_ratio": 0.1619,
+    "estimated_updates_per_second": 4.853,
+    "label": "tnd6480i_wreck_900_920",
+    "start": 900.0,
+    "duration": 20.0,
+    "scale": [
+      180,
+      120
+    ]
+  }
+]

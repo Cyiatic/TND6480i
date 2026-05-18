@@ -1,6 +1,6 @@
 # TND6480i Resume State
 
-Last updated: 2026-05-17 after rejecting `t8040vmenuscales` and restoring `t8040viewge`.
+Last updated: 2026-05-17 after rejecting the z/depth-only performance canaries and building `t8040vlowint`.
 
 Scope reminder: keep work limited to this N64/TND6480i project and directly related tools/devices.
 
@@ -41,7 +41,19 @@ reports/tnd480i_t8040viewge_perf_zbuf_candidates_20260517.json
 scripts/build_t8040viewge_perf_zbuf_candidates.py
 ```
 
-Test order: `TNDZ360` first because it keeps 640-wide rows while lowering the worst height cost. If speed improves but visuals regress, the next engineering target is a hybrid render path: 480i VI/output and UI/view constants without full 640x480 depth allocation everywhere.
+User hardware feedback rejected the `TNDZ*` set: each one got worse and reintroduced the Bazaar-style blue rendering issue. Do not use these as the next base. The negative result matters because z/depth footprint cannot be lowered in isolation under the current high-res render path.
+
+Current performance diagnostic:
+
+```text
+artifacts/generated/t8040vlowint.z64
+artifacts/analogue_test/TNDLOWI.Z64
+reports/tnd480i_t8040viewge_low_internal_control_20260517.json
+reports/stage_probes/direct_stage_t8040vlowint_perf_20260517.json
+reports/smoke/smoke_t8040vlowint_perf_controls_20260517.json
+```
+
+Purpose: keep the current all-level-boot `t8040viewge` VI/framebuffer plumbing, but restore gameplay internal render, viewport, and z/depth dimensions together to stock-sized values. This is a diagnostic control, not a final 480i visual candidate. If Wreck/Printworks speed recovers on hardware without the blue render failure, the slowdown is the full high-internal-render workload. If it is still slow, look below gameplay dimensions at VI/framebuffer/RDP state.
 
 Local direct-stage Wreck smoke: `reports/smoke/smoke_t8040viewge_perf_zbuf_wreck_visual_20260517.json`. The `t8040viewge` control plus `t8040vz360`, `t8040vz640`, and `t8040vzstk` all survived about 34 seconds in Gopher64 and produced nonblack Wreck captures. This is only a boot/render sanity gate; use Analogue or real hardware for the actual speed judgment.
 
@@ -49,7 +61,20 @@ Motion-cadence report:
 
 ```text
 reports/capture_cadence/performance_ge480i_vs_tnd6480i_wreck_20260517.json
+reports/capture_cadence/old_lightcapture_ge480i_vs_tnd6480i_motion_20260517.json
 ```
+
+Old capture directory checked on 2026-05-17:
+
+```text
+C:\Users\codex\Documents\Light Capture ˜^‰æƒtƒHƒ‹ƒ_\n64
+1. GoldenEye 007.mpg
+2. GoldenEye 480i.mpg
+3. Tomorrow Never DIes 64.mpg
+4. Tomorrow Never Dies 6480i.mpg
+```
+
+The old full-route TND6480i Wreck windows are inconsistent but support the user's observation: one Wreck interval is GE480i-like while another is far slower. Treat the video metrics as symptom evidence only because camera/player motion strongly affects frame-difference estimates.
 
 ## Current Console State
 

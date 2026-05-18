@@ -4,6 +4,23 @@ Date: 2026-05-08
 
 ## Current Hardware State
 
+- 2026-05-17 latest performance diagnostic after old-capture review:
+  - Old capture folder checked:
+    `C:\Users\codex\Documents\Light Capture ˜^‰æƒtƒHƒ‹ƒ_\n64`.
+    It contains the four expected May 12 MPEG2 720x480 interlaced captures: stock GE, GE480i, stock TND64, and the long TND6480i route.
+  - Motion reports:
+    `reports/capture_cadence/performance_ge480i_vs_tnd6480i_wreck_20260517.json`,
+    `reports/capture_cadence/old_lightcapture_ge480i_vs_tnd6480i_motion_20260517.json`.
+    The old full-route TND6480i Wreck windows are inconsistent but support the user observation that Wreck can look correct while running very slowly.
+  - New diagnostic control:
+    `artifacts/generated/t8040vlowint.z64`;
+    short pack `artifacts/analogue_test/TNDLOWI.Z64` with matching `.SAV` and `.EEP`.
+  - Purpose: `TNDLOWI` keeps current `t8040viewge` all-level-boot VI/framebuffer plumbing, but restores gameplay internal render, viewport, and z/depth dimensions together to stock-sized values. It is not a final 480i visual candidate.
+  - Local Gopher64 smoke:
+    `reports/smoke/smoke_t8040vlowint_perf_controls_20260517.json`;
+    direct-stage Wreck, Press/Printworks, and Bazaar reached nonblack live gameplay frames.
+  - Next manual hardware test: compare `TNDLOWI` Wreck/Printworks speed against `TNDVIABL`, then spot-check Bazaar for the blue render failure. A speed recovery points to full high-internal-render workload as the bottleneck; no recovery points below gameplay dimensions at VI/framebuffer/RDP state.
+
 - 2026-05-17 performance canaries after Analogue feedback:
   - User tested `TNDVIABL`, `TNDCAMGE`, `TND8040`, and `TND58` and reported they are all similarly slow. That points at the shared 640-wide/480-high stage z/depth allocation path rather than `t8040viewge`-specific viewport edits.
   - New short-name Analogue/SC64 pack entries:
@@ -17,7 +34,7 @@ Date: 2026-05-08
   - Local Gopher64 direct-stage Wreck smoke:
     `reports/smoke/smoke_t8040viewge_perf_zbuf_wreck_visual_20260517.json`.
     The `t8040viewge` control plus `t8040vz360`, `t8040vz640`, and `t8040vzstk` all survived about 34 seconds and produced nonblack captures. This is a sanity gate only; use Analogue/real hardware to judge speed.
-  - Purpose: these are performance probes, not final visual candidates. Compare Wreck/Printworks speed to `TNDVIABL`, then spot-check Bazaar, Labs, Party, Hotel, and Volcano for regressions. A faster but visually regressed result still proves the current bottleneck.
+  - User hardware feedback: each `TNDZ*` ROM got progressively worse and reintroduced the Bazaar-style blue rendering issue. Status: rejected; do not use as the next base.
 
 - 2026-05-17 `t8040vmenuscales` rejected front/menu-scale candidate:
   - Full ROM:
