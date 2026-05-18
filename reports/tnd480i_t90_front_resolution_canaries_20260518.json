@@ -1,0 +1,319 @@
+[
+  {
+    "name": "t90frontxy",
+    "purpose": "T90GE plus only front/menu viSetXY width/height 640x480.",
+    "groups": [
+      "J_front_visetxy_480i"
+    ],
+    "base_rom": "artifacts\\generated\\t90viewge.z64",
+    "base_md5": "e5f3eaf8fff458b2e624d125cf6f2b84",
+    "out_rom": "artifacts\\generated\\t90frontxy.z64",
+    "out_md5": "e5f3eaf8fff458b2e624d125cf6f2b84",
+    "header_crc": "84B7FA99 A580079A",
+    "patch_count": 2,
+    "changed_patch_count": 0,
+    "patches": [
+      {
+        "offset": "0x4DAE0",
+        "old": "0x24040280",
+        "new": "0x24040280",
+        "changed": false,
+        "group": "J_front_visetxy_480i",
+        "note": "front viSetXY/menu width 640"
+      },
+      {
+        "offset": "0x4DAE8",
+        "old": "0x240501E0",
+        "new": "0x240501E0",
+        "changed": false,
+        "group": "J_front_visetxy_480i",
+        "note": "front viSetXY/menu height 480"
+      }
+    ],
+    "save_outputs": [
+      {
+        "path": "artifacts\\generated\\t90frontxy.sav",
+        "bytes": 512,
+        "md5": "79ed3fe6851b080ff21de69fd12f034d"
+      },
+      {
+        "path": "artifacts\\generated\\t90frontxy.eep",
+        "bytes": 2048,
+        "md5": "e47f5c07623838e875761a0493388e03"
+      }
+    ]
+  },
+  {
+    "name": "t90frontbuf",
+    "purpose": "T90GE plus only front/menu viSetBuf width/height 640x480.",
+    "groups": [
+      "J_front_visetbuf_480i"
+    ],
+    "base_rom": "artifacts\\generated\\t90viewge.z64",
+    "base_md5": "e5f3eaf8fff458b2e624d125cf6f2b84",
+    "out_rom": "artifacts\\generated\\t90frontbuf.z64",
+    "out_md5": "e5f3eaf8fff458b2e624d125cf6f2b84",
+    "header_crc": "84B7FA99 A580079A",
+    "patch_count": 2,
+    "changed_patch_count": 0,
+    "patches": [
+      {
+        "offset": "0x4DAEC",
+        "old": "0x24040280",
+        "new": "0x24040280",
+        "changed": false,
+        "group": "J_front_visetbuf_480i",
+        "note": "front viSetBuf/menu width 640"
+      },
+      {
+        "offset": "0x4DAF4",
+        "old": "0x240501E0",
+        "new": "0x240501E0",
+        "changed": false,
+        "group": "J_front_visetbuf_480i",
+        "note": "front viSetBuf/menu height 480"
+      }
+    ],
+    "save_outputs": [
+      {
+        "path": "artifacts\\generated\\t90frontbuf.sav",
+        "bytes": 512,
+        "md5": "79ed3fe6851b080ff21de69fd12f034d"
+      },
+      {
+        "path": "artifacts\\generated\\t90frontbuf.eep",
+        "bytes": 2048,
+        "md5": "e47f5c07623838e875761a0493388e03"
+      }
+    ]
+  },
+  {
+    "name": "t90frontxybuf",
+    "purpose": "T90GE plus front/menu viSetXY and viSetBuf width/height 640x480.",
+    "groups": [
+      "J_front_visetxybuf_480i"
+    ],
+    "base_rom": "artifacts\\generated\\t90viewge.z64",
+    "base_md5": "e5f3eaf8fff458b2e624d125cf6f2b84",
+    "out_rom": "artifacts\\generated\\t90frontxybuf.z64",
+    "out_md5": "e5f3eaf8fff458b2e624d125cf6f2b84",
+    "header_crc": "84B7FA99 A580079A",
+    "patch_count": 4,
+    "changed_patch_count": 0,
+    "patches": [
+      {
+        "offset": "0x4DAE0",
+        "old": "0x24040280",
+        "new": "0x24040280",
+        "changed": false,
+        "group": "J_front_visetxybuf_480i",
+        "note": "front viSetXY/menu width 640"
+      },
+      {
+        "offset": "0x4DAE8",
+        "old": "0x240501E0",
+        "new": "0x240501E0",
+        "changed": false,
+        "group": "J_front_visetxybuf_480i",
+        "note": "front viSetXY/menu height 480"
+      },
+      {
+        "offset": "0x4DAEC",
+        "old": "0x24040280",
+        "new": "0x24040280",
+        "changed": false,
+        "group": "J_front_visetxybuf_480i",
+        "note": "front viSetBuf/menu width 640"
+      },
+      {
+        "offset": "0x4DAF4",
+        "old": "0x240501E0",
+        "new": "0x240501E0",
+        "changed": false,
+        "group": "J_front_visetxybuf_480i",
+        "note": "front viSetBuf/menu height 480"
+      }
+    ],
+    "save_outputs": [
+      {
+        "path": "artifacts\\generated\\t90frontxybuf.sav",
+        "bytes": 512,
+        "md5": "79ed3fe6851b080ff21de69fd12f034d"
+      },
+      {
+        "path": "artifacts\\generated\\t90frontxybuf.eep",
+        "bytes": 2048,
+        "md5": "e47f5c07623838e875761a0493388e03"
+      }
+    ]
+  },
+  {
+    "name": "t90frontres",
+    "purpose": "T90GE plus front/menu zbuffer, viSetXY, and viSetBuf width/height 640x480.",
+    "groups": [
+      "J_front_resolution_480i"
+    ],
+    "base_rom": "artifacts\\generated\\t90viewge.z64",
+    "base_md5": "e5f3eaf8fff458b2e624d125cf6f2b84",
+    "out_rom": "artifacts\\generated\\t90frontres.z64",
+    "out_md5": "849fbec836acda6151bfae34cb023ce8",
+    "header_crc": "84B7FFE9 3152ABE9",
+    "patch_count": 6,
+    "changed_patch_count": 2,
+    "patches": [
+      {
+        "offset": "0x4D42C",
+        "old": "0x240501B8",
+        "new": "0x24050280",
+        "changed": true,
+        "group": "J_front_resolution_480i",
+        "note": "front zbuffer width 640"
+      },
+      {
+        "offset": "0x4D434",
+        "old": "0x2406014A",
+        "new": "0x240601E0",
+        "changed": true,
+        "group": "J_front_resolution_480i",
+        "note": "front zbuffer height 480"
+      },
+      {
+        "offset": "0x4DAE0",
+        "old": "0x24040280",
+        "new": "0x24040280",
+        "changed": false,
+        "group": "J_front_resolution_480i",
+        "note": "front viSetXY/menu width 640"
+      },
+      {
+        "offset": "0x4DAE8",
+        "old": "0x240501E0",
+        "new": "0x240501E0",
+        "changed": false,
+        "group": "J_front_resolution_480i",
+        "note": "front viSetXY/menu height 480"
+      },
+      {
+        "offset": "0x4DAEC",
+        "old": "0x24040280",
+        "new": "0x24040280",
+        "changed": false,
+        "group": "J_front_resolution_480i",
+        "note": "front viSetBuf/menu width 640"
+      },
+      {
+        "offset": "0x4DAF4",
+        "old": "0x240501E0",
+        "new": "0x240501E0",
+        "changed": false,
+        "group": "J_front_resolution_480i",
+        "note": "front viSetBuf/menu height 480"
+      }
+    ],
+    "save_outputs": [
+      {
+        "path": "artifacts\\generated\\t90frontres.sav",
+        "bytes": 512,
+        "md5": "79ed3fe6851b080ff21de69fd12f034d"
+      },
+      {
+        "path": "artifacts\\generated\\t90frontres.eep",
+        "bytes": 2048,
+        "md5": "e47f5c07623838e875761a0493388e03"
+      }
+    ]
+  },
+  {
+    "name": "t90frontxybuf_mstxt",
+    "purpose": "T90GE front/menu viSetXY+viSetBuf 640x480 plus the narrow mission-select text offsets.",
+    "groups": [
+      "J_front_visetxybuf_480i",
+      "J_mission_select_text_480i"
+    ],
+    "base_rom": "artifacts\\generated\\t90viewge.z64",
+    "base_md5": "e5f3eaf8fff458b2e624d125cf6f2b84",
+    "out_rom": "artifacts\\generated\\t90frontxybuf_mstxt.z64",
+    "out_md5": "c59a9cd06b3fafd1f1a2ffe4a00df8a2",
+    "header_crc": "84B7FA9B 3B9CFF54",
+    "patch_count": 8,
+    "changed_patch_count": 4,
+    "patches": [
+      {
+        "offset": "0x43148",
+        "old": "0x24C6001D",
+        "new": "0x24C6002A",
+        "changed": true,
+        "group": "J_mission_select_text_480i",
+        "note": "mission select text/grid y offset"
+      },
+      {
+        "offset": "0x43150",
+        "old": "0x24A5FFE1",
+        "new": "0x24A5FFD3",
+        "changed": true,
+        "group": "J_mission_select_text_480i",
+        "note": "mission select text/grid x offset"
+      },
+      {
+        "offset": "0x431E0",
+        "old": "0x24C6001D",
+        "new": "0x24C6002A",
+        "changed": true,
+        "group": "J_mission_select_text_480i",
+        "note": "mission select text/grid y offset repeat"
+      },
+      {
+        "offset": "0x431E4",
+        "old": "0x24A5FFE1",
+        "new": "0x24A5FFD3",
+        "changed": true,
+        "group": "J_mission_select_text_480i",
+        "note": "mission select text/grid x offset repeat"
+      },
+      {
+        "offset": "0x4DAE0",
+        "old": "0x24040280",
+        "new": "0x24040280",
+        "changed": false,
+        "group": "J_front_visetxybuf_480i",
+        "note": "front viSetXY/menu width 640"
+      },
+      {
+        "offset": "0x4DAE8",
+        "old": "0x240501E0",
+        "new": "0x240501E0",
+        "changed": false,
+        "group": "J_front_visetxybuf_480i",
+        "note": "front viSetXY/menu height 480"
+      },
+      {
+        "offset": "0x4DAEC",
+        "old": "0x24040280",
+        "new": "0x24040280",
+        "changed": false,
+        "group": "J_front_visetxybuf_480i",
+        "note": "front viSetBuf/menu width 640"
+      },
+      {
+        "offset": "0x4DAF4",
+        "old": "0x240501E0",
+        "new": "0x240501E0",
+        "changed": false,
+        "group": "J_front_visetxybuf_480i",
+        "note": "front viSetBuf/menu height 480"
+      }
+    ],
+    "save_outputs": [
+      {
+        "path": "artifacts\\generated\\t90frontxybuf_mstxt.sav",
+        "bytes": 512,
+        "md5": "79ed3fe6851b080ff21de69fd12f034d"
+      },
+      {
+        "path": "artifacts\\generated\\t90frontxybuf_mstxt.eep",
+        "bytes": 2048,
+        "md5": "e47f5c07623838e875761a0493388e03"
+      }
+    ]
+  }
+]

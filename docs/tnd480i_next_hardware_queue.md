@@ -40,6 +40,19 @@ diagnostics/captures/contact_sheets/t90_menu_canaries_20260518/file_select_compa
 
 Current `t90viewge` and the old recording-base branch have matching Wreck watch-text behavior in Gopher64. The stock/base file-select screen is not a unique `t90viewge` regression: stock TND64 and `t90viewge` look materially the same under the same skip-to-file-select emulator path. Reject the new t90 menu canaries for hardware upload: `t90menuscales` removes file-select labels/icons, and `t90menuplace` pushes the Copy/Erase labels offscreen. Do not test `t90menusafe` unless a future analysis specifically explains why combining those two rejected subsets would help.
 
+2026-05-18 function-split menu/front-resolution result:
+
+```text
+scripts/build_t90_menu_function_canaries.py
+scripts/build_t90_front_resolution_canaries.py
+reports/tnd480i_t90_menu_function_canaries_20260518.json
+reports/tnd480i_t90_front_resolution_canaries_20260518.json
+diagnostics/captures/contact_sheets/t90_menu_function_route_20260518/ge480i_vs_t90_menu_functions.jpg
+diagnostics/captures/contact_sheets/t90_front_resolution_route_20260518/front_resolution_compare.jpg
+```
+
+Reject these for hardware upload unless a future source-level change explains why they should be revisited: `t90menu06`, `t90menu07`, `t90menu08`, `t90menu0608`, `t90menu0609`, `t90frontres`, and `t90frontxybuf_mstxt`. Splitting the GE menu constants by menu function showed that file-select can be preserved, but mission/difficulty pages still land in unfinished positions. `t90viewge` already has front/menu `viSetXY` and `viSetBuf` at 640x480, and changing only the front zbuffer pair did not improve the front-end text/layout. Next menu work should derive TND-specific coordinates/assets from the decomp and GE480i visual target rather than applying raw GE constants.
+
 GE hi-res patch page clue: GoldenEye's working 640x480i patch depends on Zoinkity's 7 MB RAM extension, two relocated 640x480 framebuffers in upper RAM, and matching assembly/VI changes. For TND64, keep testing memory layout, framebuffer placement, and the TLB/cache range as one system. Avoid broad menu/front-end transplants until the core RAM/framebuffer model is understood.
 
 Current manual test order:
@@ -48,7 +61,7 @@ Current manual test order:
 2. Full-route level boot/playability, especially Party, City, The End, Tower, Boat, Hotel, and Volcano.
 3. Bazaar/Labs/encoder/pause/watch regression check.
 4. Front-end/gunbarrel/menu issues after gameplay stability is confirmed.
-5. Build future front/menu fixes from a better stock-vs-GE target model, not from the rejected `menu05_09` scale/placement subsets.
+5. Build future front/menu fixes from a better stock-vs-GE target model, not from the rejected `menu05_09` scale/placement/function-split subsets.
 
 Minimal fallback if `t90viewge` has a viewport-specific regression:
 

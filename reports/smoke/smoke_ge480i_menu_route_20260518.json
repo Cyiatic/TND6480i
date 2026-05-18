@@ -1,0 +1,256 @@
+[
+  {
+    "rom": "artifacts\\roms\\BASELINE_GE_480i_direct_from_stock.z64",
+    "elapsed": 118.79,
+    "main_window_seen": true,
+    "main_window": {
+      "hwnd": 5244098,
+      "title": "gopher64"
+    },
+    "key_taps": 0,
+    "scripted_key_events": 5,
+    "input_events_total": 5,
+    "input_events_consumed": 5,
+    "exited_before_timeout": false,
+    "exit_code_before_timeout": null,
+    "stdout_path": "reports\\smoke\\BASELINE_GE_480i_direct_from_stock.stdout.txt",
+    "stderr_path": "reports\\smoke\\BASELINE_GE_480i_direct_from_stock.stderr.txt",
+    "stdout_bytes": 0,
+    "stderr_bytes": 2664,
+    "marker_counts": {},
+    "stderr_tail": [
+      "[WARN]: Stalled compile (compute, c36377373cb79785): thread 0 - 22618.600 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (compute, 1cbd9189b0a23679): thread 0 - 28475.300 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (compute, 7e74068a497f23c2): thread 0 - 902055.000 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (compute, bd9293d0d50b3e8b): thread 0 - 68565.900 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (compute, bf3dfa0bf27d196e): thread 0 - 6994.900 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, e3b76ed8c30a5cc1): thread 0 - 22394.900 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, b178544ed4416cd2): thread 0 - 10829.000 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (compute, 35f88fc5fb45ef46): thread 0 - 50844.200 us (mode: sync, success: yes)."
+    ],
+    "captures": [
+      {
+        "path": "diagnostics\\captures\\gopher64\\ge480i_menu_route_20260518\\BASELINE_GE_480i_direct_from_stock_t045p0s.png",
+        "returncode": 0,
+        "capture_method": "ffmpeg_gdigrab_desktop",
+        "stderr_tail": [],
+        "previous_error": {
+          "path": "diagnostics\\captures\\gopher64\\ge480i_menu_route_20260518\\BASELINE_GE_480i_direct_from_stock_t045p0s.png",
+          "returncode": 0,
+          "capture_method": "ffmpeg_gdigrab_title",
+          "stderr_tail": []
+        },
+        "window_rect": {
+          "left": 96,
+          "top": 96,
+          "right": 752,
+          "bottom": 615,
+          "width": 656,
+          "height": 519
+        },
+        "window_stats": {
+          "crop_box": [
+            96,
+            96,
+            752,
+            615
+          ],
+          "mean_luma": 4.11,
+          "stddev_luma": 14.17,
+          "nonblack_ratio": 0.0974,
+          "bright_ratio": 0.011
+        },
+        "elapsed": 45.09
+      },
+      {
+        "path": "diagnostics\\captures\\gopher64\\ge480i_menu_route_20260518\\BASELINE_GE_480i_direct_from_stock_t055p0s.png",
+        "returncode": 0,
+        "capture_method": "ffmpeg_gdigrab_title",
+        "stderr_tail": [],
+        "window_rect": {
+          "left": 0,
+          "top": 0,
+          "right": 640,
+          "bottom": 480,
+          "width": 640,
+          "height": 480
+        },
+        "window_stats": {
+          "crop_box": [
+            0,
+            0,
+            640,
+            480
+          ],
+          "mean_luma": 55.36,
+          "stddev_luma": 47.07,
+          "nonblack_ratio": 0.8411,
+          "bright_ratio": 0.4616
+        },
+        "elapsed": 55.1
+      },
+      {
+        "path": "diagnostics\\captures\\gopher64\\ge480i_menu_route_20260518\\BASELINE_GE_480i_direct_from_stock_t065p0s.png",
+        "returncode": 0,
+        "capture_method": "ffmpeg_gdigrab_title",
+        "stderr_tail": [],
+        "window_rect": {
+          "left": 0,
+          "top": 0,
+          "right": 640,
+          "bottom": 480,
+          "width": 640,
+          "height": 480
+        },
+        "window_stats": {
+          "crop_box": [
+            0,
+            0,
+            640,
+            480
+          ],
+          "mean_luma": 55.36,
+          "stddev_luma": 47.07,
+          "nonblack_ratio": 0.8412,
+          "bright_ratio": 0.4617
+        },
+        "elapsed": 65.01
+      },
+      {
+        "path": "diagnostics\\captures\\gopher64\\ge480i_menu_route_20260518\\BASELINE_GE_480i_direct_from_stock_t075p0s.png",
+        "returncode": 0,
+        "capture_method": "ffmpeg_gdigrab_title",
+        "stderr_tail": [],
+        "window_rect": {
+          "left": 0,
+          "top": 0,
+          "right": 640,
+          "bottom": 480,
+          "width": 640,
+          "height": 480
+        },
+        "window_stats": {
+          "crop_box": [
+            0,
+            0,
+            640,
+            480
+          ],
+          "mean_luma": 132.02,
+          "stddev_luma": 76.28,
+          "nonblack_ratio": 0.8429,
+          "bright_ratio": 0.8132
+        },
+        "elapsed": 75.09
+      },
+      {
+        "path": "diagnostics\\captures\\gopher64\\ge480i_menu_route_20260518\\BASELINE_GE_480i_direct_from_stock_t088p0s.png",
+        "returncode": 0,
+        "capture_method": "ffmpeg_gdigrab_title",
+        "stderr_tail": [],
+        "window_rect": {
+          "left": 0,
+          "top": 0,
+          "right": 640,
+          "bottom": 480,
+          "width": 640,
+          "height": 480
+        },
+        "window_stats": {
+          "crop_box": [
+            0,
+            0,
+            640,
+            480
+          ],
+          "mean_luma": 41.94,
+          "stddev_luma": 49.21,
+          "nonblack_ratio": 0.5977,
+          "bright_ratio": 0.3604
+        },
+        "elapsed": 88.0
+      },
+      {
+        "path": "diagnostics\\captures\\gopher64\\ge480i_menu_route_20260518\\BASELINE_GE_480i_direct_from_stock_t102p0s.png",
+        "returncode": 0,
+        "capture_method": "ffmpeg_gdigrab_title",
+        "stderr_tail": [],
+        "window_rect": {
+          "left": 0,
+          "top": 0,
+          "right": 640,
+          "bottom": 480,
+          "width": 640,
+          "height": 480
+        },
+        "window_stats": {
+          "crop_box": [
+            0,
+            0,
+            640,
+            480
+          ],
+          "mean_luma": 140.78,
+          "stddev_luma": 68.55,
+          "nonblack_ratio": 0.892,
+          "bright_ratio": 0.869
+        },
+        "elapsed": 102.02
+      },
+      {
+        "path": "diagnostics\\captures\\gopher64\\ge480i_menu_route_20260518\\BASELINE_GE_480i_direct_from_stock_t112p0s.png",
+        "returncode": 0,
+        "capture_method": "ffmpeg_gdigrab_title",
+        "stderr_tail": [],
+        "window_rect": {
+          "left": 0,
+          "top": 0,
+          "right": 640,
+          "bottom": 480,
+          "width": 640,
+          "height": 480
+        },
+        "window_stats": {
+          "crop_box": [
+            0,
+            0,
+            640,
+            480
+          ],
+          "mean_luma": 140.78,
+          "stddev_luma": 68.55,
+          "nonblack_ratio": 0.892,
+          "bright_ratio": 0.869
+        },
+        "elapsed": 112.02
+      }
+    ],
+    "capture": {
+      "path": "diagnostics\\captures\\gopher64\\ge480i_menu_route_20260518\\BASELINE_GE_480i_direct_from_stock_final.png",
+      "returncode": 0,
+      "capture_method": "ffmpeg_gdigrab_title",
+      "stderr_tail": [],
+      "window_rect": {
+        "left": 0,
+        "top": 0,
+        "right": 640,
+        "bottom": 480,
+        "width": 640,
+        "height": 480
+      },
+      "window_stats": {
+        "crop_box": [
+          0,
+          0,
+          640,
+          480
+        ],
+        "mean_luma": 140.78,
+        "stddev_luma": 68.55,
+        "nonblack_ratio": 0.892,
+        "bright_ratio": 0.869
+      },
+      "elapsed": 118.79
+    }
+  }
+]

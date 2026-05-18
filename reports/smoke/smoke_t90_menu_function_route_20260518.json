@@ -1,0 +1,584 @@
+[
+  {
+    "rom": "artifacts\\generated\\t90viewge.z64",
+    "elapsed": 118.74,
+    "main_window_seen": true,
+    "main_window": {
+      "hwnd": 4850882,
+      "title": "gopher64"
+    },
+    "key_taps": 0,
+    "scripted_key_events": 5,
+    "input_events_total": 5,
+    "input_events_consumed": 5,
+    "exited_before_timeout": false,
+    "exit_code_before_timeout": null,
+    "stdout_path": "reports\\smoke\\t90viewge.stdout.txt",
+    "stderr_path": "reports\\smoke\\t90viewge.stderr.txt",
+    "stdout_bytes": 0,
+    "stderr_bytes": 2772,
+    "marker_counts": {},
+    "stderr_tail": [
+      "[WARN]: Stalled compile (compute, 1cbd9189b0a23679): thread 0 - 29742.300 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (compute, 7e74068a497f23c2): thread 0 - 883089.900 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (compute, bd9293d0d50b3e8b): thread 0 - 70123.100 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, e3b76ed8c30a5cc1): thread 0 - 17895.700 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, b178544ed4416cd2): thread 0 - 10434.900 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, d177283513a5a0f7): thread 0 - 24759.900 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, b178554ed4416e85): thread 0 - 11171.200 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (compute, 35f88fc5fb45ef46): thread 0 - 51005.200 us (mode: sync, success: yes)."
+    ],
+    "captures": [
+      {
+        "path": "diagnostics\\captures\\gopher64\\t90_menu_function_route_20260518\\t90viewge_t065p0s.png",
+        "returncode": 0,
+        "capture_method": "ffmpeg_gdigrab_title",
+        "stderr_tail": [],
+        "window_rect": {
+          "left": 0,
+          "top": 0,
+          "right": 640,
+          "bottom": 480,
+          "width": 640,
+          "height": 480
+        },
+        "window_stats": {
+          "crop_box": [
+            0,
+            0,
+            640,
+            480
+          ],
+          "mean_luma": 38.7,
+          "stddev_luma": 50.59,
+          "nonblack_ratio": 0.842,
+          "bright_ratio": 0.2084
+        },
+        "elapsed": 65.09
+      },
+      {
+        "path": "diagnostics\\captures\\gopher64\\t90_menu_function_route_20260518\\t90viewge_t075p0s.png",
+        "returncode": 0,
+        "capture_method": "ffmpeg_gdigrab_title",
+        "stderr_tail": [],
+        "window_rect": {
+          "left": 0,
+          "top": 0,
+          "right": 640,
+          "bottom": 480,
+          "width": 640,
+          "height": 480
+        },
+        "window_stats": {
+          "crop_box": [
+            0,
+            0,
+            640,
+            480
+          ],
+          "mean_luma": 144.45,
+          "stddev_luma": 107.55,
+          "nonblack_ratio": 0.8651,
+          "bright_ratio": 0.6317
+        },
+        "elapsed": 75.0
+      },
+      {
+        "path": "diagnostics\\captures\\gopher64\\t90_menu_function_route_20260518\\t90viewge_t088p0s.png",
+        "returncode": 0,
+        "capture_method": "ffmpeg_gdigrab_title",
+        "stderr_tail": [],
+        "window_rect": {
+          "left": 0,
+          "top": 0,
+          "right": 640,
+          "bottom": 480,
+          "width": 640,
+          "height": 480
+        },
+        "window_stats": {
+          "crop_box": [
+            0,
+            0,
+            640,
+            480
+          ],
+          "mean_luma": 73.35,
+          "stddev_luma": 85.03,
+          "nonblack_ratio": 0.7174,
+          "bright_ratio": 0.3726
+        },
+        "elapsed": 88.01
+      },
+      {
+        "path": "diagnostics\\captures\\gopher64\\t90_menu_function_route_20260518\\t90viewge_t102p0s.png",
+        "returncode": 0,
+        "capture_method": "ffmpeg_gdigrab_title",
+        "stderr_tail": [],
+        "window_rect": {
+          "left": 0,
+          "top": 0,
+          "right": 640,
+          "bottom": 480,
+          "width": 640,
+          "height": 480
+        },
+        "window_stats": {
+          "crop_box": [
+            0,
+            0,
+            640,
+            480
+          ],
+          "mean_luma": 153.24,
+          "stddev_luma": 106.72,
+          "nonblack_ratio": 0.8893,
+          "bright_ratio": 0.655
+        },
+        "elapsed": 102.03
+      },
+      {
+        "path": "diagnostics\\captures\\gopher64\\t90_menu_function_route_20260518\\t90viewge_t112p0s.png",
+        "returncode": 0,
+        "capture_method": "ffmpeg_gdigrab_title",
+        "stderr_tail": [],
+        "window_rect": {
+          "left": 0,
+          "top": 0,
+          "right": 640,
+          "bottom": 480,
+          "width": 640,
+          "height": 480
+        },
+        "window_stats": {
+          "crop_box": [
+            0,
+            0,
+            640,
+            480
+          ],
+          "mean_luma": 153.24,
+          "stddev_luma": 106.72,
+          "nonblack_ratio": 0.8893,
+          "bright_ratio": 0.6549
+        },
+        "elapsed": 112.01
+      }
+    ],
+    "capture": {
+      "path": "diagnostics\\captures\\gopher64\\t90_menu_function_route_20260518\\t90viewge_final.png",
+      "returncode": 0,
+      "capture_method": "ffmpeg_gdigrab_title",
+      "stderr_tail": [],
+      "window_rect": {
+        "left": 0,
+        "top": 0,
+        "right": 640,
+        "bottom": 480,
+        "width": 640,
+        "height": 480
+      },
+      "window_stats": {
+        "crop_box": [
+          0,
+          0,
+          640,
+          480
+        ],
+        "mean_luma": 153.24,
+        "stddev_luma": 106.72,
+        "nonblack_ratio": 0.8893,
+        "bright_ratio": 0.655
+      },
+      "elapsed": 118.74
+    }
+  },
+  {
+    "rom": "artifacts\\generated\\t90menu0608.z64",
+    "elapsed": 118.82,
+    "main_window_seen": true,
+    "main_window": {
+      "hwnd": 4916418,
+      "title": "gopher64"
+    },
+    "key_taps": 0,
+    "scripted_key_events": 5,
+    "input_events_total": 5,
+    "input_events_consumed": 5,
+    "exited_before_timeout": false,
+    "exit_code_before_timeout": null,
+    "stdout_path": "reports\\smoke\\t90menu0608.stdout.txt",
+    "stderr_path": "reports\\smoke\\t90menu0608.stderr.txt",
+    "stdout_bytes": 0,
+    "stderr_bytes": 2877,
+    "marker_counts": {},
+    "stderr_tail": [
+      "[WARN]: Stalled compile (compute, 7e74068a497f23c2): thread 0 - 935790.300 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (compute, bd9293d0d50b3e8b): thread 0 - 71209.800 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, e3b76ed8c30a5cc1): thread 0 - 18291.800 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, b178544ed4416cd2): thread 0 - 11286.200 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, d177283513a5a0f7): thread 0 - 26276.900 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, 5b01cde7ced266c2): thread 0 - 5145.200 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, b178554ed4416e85): thread 0 - 15784.600 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (compute, 35f88fc5fb45ef46): thread 0 - 54490.300 us (mode: sync, success: yes)."
+    ],
+    "captures": [
+      {
+        "path": "diagnostics\\captures\\gopher64\\t90_menu_function_route_20260518\\t90menu0608_t065p0s.png",
+        "returncode": 0,
+        "capture_method": "ffmpeg_gdigrab_title",
+        "stderr_tail": [],
+        "window_rect": {
+          "left": 0,
+          "top": 0,
+          "right": 640,
+          "bottom": 480,
+          "width": 640,
+          "height": 480
+        },
+        "window_stats": {
+          "crop_box": [
+            0,
+            0,
+            640,
+            480
+          ],
+          "mean_luma": 38.11,
+          "stddev_luma": 50.49,
+          "nonblack_ratio": 0.8421,
+          "bright_ratio": 0.1795
+        },
+        "elapsed": 65.04
+      },
+      {
+        "path": "diagnostics\\captures\\gopher64\\t90_menu_function_route_20260518\\t90menu0608_t075p0s.png",
+        "returncode": 0,
+        "capture_method": "ffmpeg_gdigrab_title",
+        "stderr_tail": [],
+        "window_rect": {
+          "left": 0,
+          "top": 0,
+          "right": 640,
+          "bottom": 480,
+          "width": 640,
+          "height": 480
+        },
+        "window_stats": {
+          "crop_box": [
+            0,
+            0,
+            640,
+            480
+          ],
+          "mean_luma": 148.34,
+          "stddev_luma": 106.98,
+          "nonblack_ratio": 0.8774,
+          "bright_ratio": 0.6447
+        },
+        "elapsed": 75.02
+      },
+      {
+        "path": "diagnostics\\captures\\gopher64\\t90_menu_function_route_20260518\\t90menu0608_t088p0s.png",
+        "returncode": 0,
+        "capture_method": "ffmpeg_gdigrab_title",
+        "stderr_tail": [],
+        "window_rect": {
+          "left": 0,
+          "top": 0,
+          "right": 640,
+          "bottom": 480,
+          "width": 640,
+          "height": 480
+        },
+        "window_stats": {
+          "crop_box": [
+            0,
+            0,
+            640,
+            480
+          ],
+          "mean_luma": 73.35,
+          "stddev_luma": 85.03,
+          "nonblack_ratio": 0.7171,
+          "bright_ratio": 0.3725
+        },
+        "elapsed": 88.05
+      },
+      {
+        "path": "diagnostics\\captures\\gopher64\\t90_menu_function_route_20260518\\t90menu0608_t102p0s.png",
+        "returncode": 0,
+        "capture_method": "ffmpeg_gdigrab_title",
+        "stderr_tail": [],
+        "window_rect": {
+          "left": 0,
+          "top": 0,
+          "right": 640,
+          "bottom": 480,
+          "width": 640,
+          "height": 480
+        },
+        "window_stats": {
+          "crop_box": [
+            0,
+            0,
+            640,
+            480
+          ],
+          "mean_luma": 151.72,
+          "stddev_luma": 106.8,
+          "nonblack_ratio": 0.8878,
+          "bright_ratio": 0.6519
+        },
+        "elapsed": 102.08
+      },
+      {
+        "path": "diagnostics\\captures\\gopher64\\t90_menu_function_route_20260518\\t90menu0608_t112p0s.png",
+        "returncode": 0,
+        "capture_method": "ffmpeg_gdigrab_title",
+        "stderr_tail": [],
+        "window_rect": {
+          "left": 0,
+          "top": 0,
+          "right": 640,
+          "bottom": 480,
+          "width": 640,
+          "height": 480
+        },
+        "window_stats": {
+          "crop_box": [
+            0,
+            0,
+            640,
+            480
+          ],
+          "mean_luma": 151.72,
+          "stddev_luma": 106.8,
+          "nonblack_ratio": 0.8878,
+          "bright_ratio": 0.6519
+        },
+        "elapsed": 112.06
+      }
+    ],
+    "capture": {
+      "path": "diagnostics\\captures\\gopher64\\t90_menu_function_route_20260518\\t90menu0608_final.png",
+      "returncode": 0,
+      "capture_method": "ffmpeg_gdigrab_title",
+      "stderr_tail": [],
+      "window_rect": {
+        "left": 0,
+        "top": 0,
+        "right": 640,
+        "bottom": 480,
+        "width": 640,
+        "height": 480
+      },
+      "window_stats": {
+        "crop_box": [
+          0,
+          0,
+          640,
+          480
+        ],
+        "mean_luma": 151.72,
+        "stddev_luma": 106.8,
+        "nonblack_ratio": 0.8878,
+        "bright_ratio": 0.6519
+      },
+      "elapsed": 118.82
+    }
+  },
+  {
+    "rom": "artifacts\\generated\\t90menu0609.z64",
+    "elapsed": 118.78,
+    "main_window_seen": true,
+    "main_window": {
+      "hwnd": 4981954,
+      "title": "gopher64"
+    },
+    "key_taps": 0,
+    "scripted_key_events": 5,
+    "input_events_total": 5,
+    "input_events_consumed": 5,
+    "exited_before_timeout": false,
+    "exit_code_before_timeout": null,
+    "stdout_path": "reports\\smoke\\t90menu0609.stdout.txt",
+    "stderr_path": "reports\\smoke\\t90menu0609.stderr.txt",
+    "stdout_bytes": 0,
+    "stderr_bytes": 2983,
+    "marker_counts": {},
+    "stderr_tail": [
+      "[WARN]: Stalled compile (compute, bd9293d0d50b3e8b): thread 0 - 94678.600 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, e3b76ed8c30a5cc1): thread 0 - 26077.400 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, 9d0b2ccf3e83a80b): thread 0 - 5102.500 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, b178544ed4416cd2): thread 0 - 15671.700 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, d177283513a5a0f7): thread 0 - 33787.100 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, 5b01cde7ced266c2): thread 0 - 6394.700 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, b178554ed4416e85): thread 0 - 15042.200 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (compute, 35f88fc5fb45ef46): thread 0 - 53079.500 us (mode: sync, success: yes)."
+    ],
+    "captures": [
+      {
+        "path": "diagnostics\\captures\\gopher64\\t90_menu_function_route_20260518\\t90menu0609_t065p0s.png",
+        "returncode": 0,
+        "capture_method": "ffmpeg_gdigrab_title",
+        "stderr_tail": [],
+        "window_rect": {
+          "left": 0,
+          "top": 0,
+          "right": 640,
+          "bottom": 480,
+          "width": 640,
+          "height": 480
+        },
+        "window_stats": {
+          "crop_box": [
+            0,
+            0,
+            640,
+            480
+          ],
+          "mean_luma": 38.71,
+          "stddev_luma": 50.59,
+          "nonblack_ratio": 0.8422,
+          "bright_ratio": 0.2085
+        },
+        "elapsed": 65.02
+      },
+      {
+        "path": "diagnostics\\captures\\gopher64\\t90_menu_function_route_20260518\\t90menu0609_t075p0s.png",
+        "returncode": 0,
+        "capture_method": "ffmpeg_gdigrab_title",
+        "stderr_tail": [],
+        "window_rect": {
+          "left": 0,
+          "top": 0,
+          "right": 640,
+          "bottom": 480,
+          "width": 640,
+          "height": 480
+        },
+        "window_stats": {
+          "crop_box": [
+            0,
+            0,
+            640,
+            480
+          ],
+          "mean_luma": 148.33,
+          "stddev_luma": 106.98,
+          "nonblack_ratio": 0.8774,
+          "bright_ratio": 0.6447
+        },
+        "elapsed": 75.01
+      },
+      {
+        "path": "diagnostics\\captures\\gopher64\\t90_menu_function_route_20260518\\t90menu0609_t088p0s.png",
+        "returncode": 0,
+        "capture_method": "ffmpeg_gdigrab_title",
+        "stderr_tail": [],
+        "window_rect": {
+          "left": 0,
+          "top": 0,
+          "right": 640,
+          "bottom": 480,
+          "width": 640,
+          "height": 480
+        },
+        "window_stats": {
+          "crop_box": [
+            0,
+            0,
+            640,
+            480
+          ],
+          "mean_luma": 73.34,
+          "stddev_luma": 85.03,
+          "nonblack_ratio": 0.717,
+          "bright_ratio": 0.3725
+        },
+        "elapsed": 88.1
+      },
+      {
+        "path": "diagnostics\\captures\\gopher64\\t90_menu_function_route_20260518\\t90menu0609_t102p0s.png",
+        "returncode": 0,
+        "capture_method": "ffmpeg_gdigrab_title",
+        "stderr_tail": [],
+        "window_rect": {
+          "left": 0,
+          "top": 0,
+          "right": 640,
+          "bottom": 480,
+          "width": 640,
+          "height": 480
+        },
+        "window_stats": {
+          "crop_box": [
+            0,
+            0,
+            640,
+            480
+          ],
+          "mean_luma": 151.71,
+          "stddev_luma": 106.81,
+          "nonblack_ratio": 0.8878,
+          "bright_ratio": 0.6519
+        },
+        "elapsed": 102.02
+      },
+      {
+        "path": "diagnostics\\captures\\gopher64\\t90_menu_function_route_20260518\\t90menu0609_t112p0s.png",
+        "returncode": 0,
+        "capture_method": "ffmpeg_gdigrab_title",
+        "stderr_tail": [],
+        "window_rect": {
+          "left": 0,
+          "top": 0,
+          "right": 640,
+          "bottom": 480,
+          "width": 640,
+          "height": 480
+        },
+        "window_stats": {
+          "crop_box": [
+            0,
+            0,
+            640,
+            480
+          ],
+          "mean_luma": 151.72,
+          "stddev_luma": 106.81,
+          "nonblack_ratio": 0.8878,
+          "bright_ratio": 0.6519
+        },
+        "elapsed": 112.02
+      }
+    ],
+    "capture": {
+      "path": "diagnostics\\captures\\gopher64\\t90_menu_function_route_20260518\\t90menu0609_final.png",
+      "returncode": 0,
+      "capture_method": "ffmpeg_gdigrab_title",
+      "stderr_tail": [],
+      "window_rect": {
+        "left": 0,
+        "top": 0,
+        "right": 640,
+        "bottom": 480,
+        "width": 640,
+        "height": 480
+      },
+      "window_stats": {
+        "crop_box": [
+          0,
+          0,
+          640,
+          480
+        ],
+        "mean_luma": 151.72,
+        "stddev_luma": 106.81,
+        "nonblack_ratio": 0.8878,
+        "bright_ratio": 0.6519
+      },
+      "elapsed": 118.78
+    }
+  }
+]

@@ -1,6 +1,6 @@
 # TND6480i Resume State
 
-Last updated: 2026-05-18 after `TND90GE` pause/menu canary checks.
+Last updated: 2026-05-18 after `TND90GE` function-split menu/front-resolution checks.
 
 Scope reminder: keep work limited to this N64/TND6480i project and directly related tools/devices.
 
@@ -76,6 +76,23 @@ diagnostics/captures/contact_sheets/t90_menu_canaries_20260518/file_select_compa
 ```
 
 Do not upload the `t90menuscales`, `t90menuplace`, or `t90menusafe` canaries. `t90menuscales` changes only 26 GE-style menu float/scale words and already reproduces the missing file-select labels/icons failure. `t90menuplace` preserves the folders and `Select File`, but pushes the `Copy` and `Erase` labels out of view. The current `t90viewge` file-select frame matches stock TND64 much more closely in Gopher64, so menu scaling needs a better target model before more hardware testing.
+
+2026-05-18 function-split menu and front-resolution follow-up:
+
+```text
+scripts/build_t90_menu_function_canaries.py
+scripts/build_t90_front_resolution_canaries.py
+reports/tnd480i_t90_menu_function_canaries_20260518.json
+reports/tnd480i_t90_front_resolution_canaries_20260518.json
+reports/smoke/smoke_ge480i_menu_route_20260518.json
+reports/smoke/smoke_t90_menu_function_route_20260518.json
+reports/smoke/smoke_t90_menu_function_individual_route_20260518.json
+reports/smoke/smoke_t90_front_resolution_route_20260518.json
+diagnostics/captures/contact_sheets/t90_menu_function_route_20260518/ge480i_vs_t90_menu_functions.jpg
+diagnostics/captures/contact_sheets/t90_front_resolution_route_20260518/front_resolution_compare.jpg
+```
+
+Do not upload the `t90menu06`, `t90menu07`, `t90menu08`, `t90menu0608`, `t90menu0609`, `t90frontres`, or `t90frontxybuf_mstxt` canaries. Function-splitting confirmed that preserving file-select while applying later GE menu constants is possible, but `menu07`/`menu08` shift mission/difficulty pages into unfinished positions rather than matching GE480i. The front-resolution check found that `t90viewge` already has the front/menu `viSetXY` and `viSetBuf` width/height at 640x480; only the front zbuffer pair differed, and changing it did not visibly improve menu text or layout in Gopher64. The remaining menu/front work is therefore TND-specific layout/asset behavior, not a missing one-word front VI switch.
 
 GE hi-res patch reference note from user: the original GoldenEye hi-res patch credits Zoinkity's 7 MB RAM extension, moves two 640x480 framebuffers to upper RAM, and adjusts related GoldenEye assembly plus VI settings. Treat that as confirmation that the target is a coordinated RAM-layout/framebuffer/VI/assembly patch, not a loose set of resolution constants. This aligns with the TND90 breakthrough: preserving a large TLB/page-cache range while relocating it away from the expanded framebuffers mattered as much as the visible 480i constants.
 

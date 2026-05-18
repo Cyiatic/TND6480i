@@ -1,0 +1,1936 @@
+{
+  "base_rom": "artifacts\\generated\\t90viewge.z64",
+  "function_ranges": {
+    "menu05_file_select": {
+      "start": "0x403DC",
+      "end": "0x41D90"
+    },
+    "menu06_mode_select": {
+      "start": "0x41D90",
+      "end": "0x42118"
+    },
+    "menu07_mission_select": {
+      "start": "0x42118",
+      "end": "0x42854"
+    },
+    "menu08_difficulty": {
+      "start": "0x432F8",
+      "end": "0x43E74"
+    },
+    "menu09_007_options": {
+      "start": "0x43EA4",
+      "end": "0x44C1C"
+    }
+  },
+  "classification_counts": {
+    "menu05_file_select": 15,
+    "menu06_mode_select": 3,
+    "menu07_mission_select": 26,
+    "menu08_difficulty": 24,
+    "menu09_007_options": 60,
+    "unclassified": 4
+  },
+  "rejected_prior": {
+    "t90menuscales": "scale-only all-menu canary removed save-select labels/icons",
+    "t90menuplace": "placement-only all-menu canary pushed Copy/Erase offscreen"
+  },
+  "candidates": [
+    {
+      "name": "t90menu06",
+      "purpose": "Apply only GE-style mode-select menu06 edits, leaving file select and later menus stock.",
+      "groups": [
+        "menu06_mode_select"
+      ],
+      "base_rom": "artifacts\\generated\\t90viewge.z64",
+      "base_md5": "e5f3eaf8fff458b2e624d125cf6f2b84",
+      "out_rom": "artifacts\\generated\\t90menu06.z64",
+      "out_md5": "b17ed90fbe909650c7931338d1e52fb0",
+      "header_crc": "84CD3D0E BCF97BED",
+      "patch_count": 3,
+      "changed_patch_count": 3,
+      "patches": [
+        {
+          "offset": "0x41F54",
+          "function": "menu06_mode_select",
+          "old": "0x3C018005",
+          "new": "0x3C0143BC",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x41F58",
+          "function": "menu06_mode_select",
+          "old": "0xC4261A40",
+          "new": "0x44813000",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x41FB0",
+          "function": "menu06_mode_select",
+          "old": "0x3C014373",
+          "new": "0x3C0143AC",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        }
+      ],
+      "save_outputs": [
+        {
+          "path": "artifacts\\generated\\t90menu06.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "path": "artifacts\\generated\\t90menu06.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ]
+    },
+    {
+      "name": "t90menu07",
+      "purpose": "Apply only GE-style mission-select menu07 edits, leaving file select stock.",
+      "groups": [
+        "menu07_mission_select"
+      ],
+      "base_rom": "artifacts\\generated\\t90viewge.z64",
+      "base_md5": "e5f3eaf8fff458b2e624d125cf6f2b84",
+      "out_rom": "artifacts\\generated\\t90menu07.z64",
+      "out_md5": "13df6a5b9001f3ac9825f2773c4d550c",
+      "header_crc": "84B7842D 4AD682EC",
+      "patch_count": 26,
+      "changed_patch_count": 26,
+      "patches": [
+        {
+          "offset": "0x42330",
+          "function": "menu07_mission_select",
+          "old": "0x25CF00E2",
+          "new": "0x25CF0146",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x42338",
+          "function": "menu07_mission_select",
+          "old": "0x3C0142FC",
+          "new": "0x3C014337",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x4238C",
+          "function": "menu07_mission_select",
+          "old": "0x240E0096",
+          "new": "0x240E00DA",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x42390",
+          "function": "menu07_mission_select",
+          "old": "0x240F00DC",
+          "new": "0x240F0140",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x42454",
+          "function": "menu07_mission_select",
+          "old": "0x240C00AA",
+          "new": "0x240C00EE",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x42458",
+          "function": "menu07_mission_select",
+          "old": "0x240D00DC",
+          "new": "0x240D0140",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x4246C",
+          "function": "menu07_mission_select",
+          "old": "0x240F00EA",
+          "new": "0x240F014E",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x42480",
+          "function": "menu07_mission_select",
+          "old": "0x24050094",
+          "new": "0x240500D8",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x42484",
+          "function": "menu07_mission_select",
+          "old": "0x240600DA",
+          "new": "0x2406013E",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x4248C",
+          "function": "menu07_mission_select",
+          "old": "0x24E700AF",
+          "new": "0x24E700F3",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x424EC",
+          "function": "menu07_mission_select",
+          "old": "0x240B0096",
+          "new": "0x240B00DA",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x424F0",
+          "function": "menu07_mission_select",
+          "old": "0x240C00FC",
+          "new": "0x240C0160",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x425D8",
+          "function": "menu07_mission_select",
+          "old": "0x240B00AA",
+          "new": "0x240B00EE",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x425DC",
+          "function": "menu07_mission_select",
+          "old": "0x240C00FC",
+          "new": "0x240C0160",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x425F4",
+          "function": "menu07_mission_select",
+          "old": "0x240E010A",
+          "new": "0x240E016E",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x42608",
+          "function": "menu07_mission_select",
+          "old": "0x24050094",
+          "new": "0x240500D8",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x4260C",
+          "function": "menu07_mission_select",
+          "old": "0x240600FA",
+          "new": "0x2406015E",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x42614",
+          "function": "menu07_mission_select",
+          "old": "0x24E700AF",
+          "new": "0x24E700F3",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x42680",
+          "function": "menu07_mission_select",
+          "old": "0x240B0096",
+          "new": "0x240B00DA",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x42688",
+          "function": "menu07_mission_select",
+          "old": "0x240C011C",
+          "new": "0x240C0180",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x4272C",
+          "function": "menu07_mission_select",
+          "old": "0x240800AA",
+          "new": "0x240800EE",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x42730",
+          "function": "menu07_mission_select",
+          "old": "0x2409011C",
+          "new": "0x24090180",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x42748",
+          "function": "menu07_mission_select",
+          "old": "0x240B012A",
+          "new": "0x240B018E",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x4275C",
+          "function": "menu07_mission_select",
+          "old": "0x24050094",
+          "new": "0x240500D8",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x42760",
+          "function": "menu07_mission_select",
+          "old": "0x2406011A",
+          "new": "0x2406017E",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x42768",
+          "function": "menu07_mission_select",
+          "old": "0x24E700AF",
+          "new": "0x24E700F3",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        }
+      ],
+      "save_outputs": [
+        {
+          "path": "artifacts\\generated\\t90menu07.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "path": "artifacts\\generated\\t90menu07.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ]
+    },
+    {
+      "name": "t90menu08",
+      "purpose": "Apply only GE-style difficulty menu08 edits, leaving file select stock.",
+      "groups": [
+        "menu08_difficulty"
+      ],
+      "base_rom": "artifacts\\generated\\t90viewge.z64",
+      "base_md5": "e5f3eaf8fff458b2e624d125cf6f2b84",
+      "out_rom": "artifacts\\generated\\t90menu08.z64",
+      "out_md5": "dd896fe86fa39408fe04f69e10b5bf9e",
+      "header_crc": "84CD3176 32B3C3CD",
+      "patch_count": 24,
+      "changed_patch_count": 24,
+      "patches": [
+        {
+          "offset": "0x433FC",
+          "function": "menu08_difficulty",
+          "old": "0x3C018005",
+          "new": "0x3C0143AA",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x43400",
+          "function": "menu08_difficulty",
+          "old": "0xC4261A54",
+          "new": "0x44813000",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x43434",
+          "function": "menu08_difficulty",
+          "old": "0x3C014373",
+          "new": "0x3C01439A",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x43460",
+          "function": "menu08_difficulty",
+          "old": "0x3C014353",
+          "new": "0x3C01438A",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x43634",
+          "function": "menu08_difficulty",
+          "old": "0x240E0037",
+          "new": "0x240E0050",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x43638",
+          "function": "menu08_difficulty",
+          "old": "0x240F0057",
+          "new": "0x240F007F",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x43728",
+          "function": "menu08_difficulty",
+          "old": "0x240E0037",
+          "new": "0x240E0050",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x4372C",
+          "function": "menu08_difficulty",
+          "old": "0x240F0067",
+          "new": "0x240F008F",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x4381C",
+          "function": "menu08_difficulty",
+          "old": "0x240E0037",
+          "new": "0x240E0050",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x43820",
+          "function": "menu08_difficulty",
+          "old": "0x240F0077",
+          "new": "0x240F009F",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x438A0",
+          "function": "menu08_difficulty",
+          "old": "0x25CF00BA",
+          "new": "0x25CF00FB",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x438A8",
+          "function": "menu08_difficulty",
+          "old": "0x3C0142D4",
+          "new": "0x3C014303",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x439AC",
+          "function": "menu08_difficulty",
+          "old": "0x240C0037",
+          "new": "0x240C0050",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x439B0",
+          "function": "menu08_difficulty",
+          "old": "0x240D008F",
+          "new": "0x240D00D0",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x43A48",
+          "function": "menu08_difficulty",
+          "old": "0x2419007E",
+          "new": "0x24190097",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x43A5C",
+          "function": "menu08_difficulty",
+          "old": "0x247800C3",
+          "new": "0x24780104",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x43A6C",
+          "function": "menu08_difficulty",
+          "old": "0x246600B2",
+          "new": "0x246600F3",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x43A78",
+          "function": "menu08_difficulty",
+          "old": "0x240700F0",
+          "new": "0x24070109",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x43ABC",
+          "function": "menu08_difficulty",
+          "old": "0x267300B4",
+          "new": "0x267300F5",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x43B68",
+          "function": "menu08_difficulty",
+          "old": "0x240B0082",
+          "new": "0x240B009B",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x43C04",
+          "function": "menu08_difficulty",
+          "old": "0x240F0096",
+          "new": "0x240F00AF",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x43C44",
+          "function": "menu08_difficulty",
+          "old": "0x240F0096",
+          "new": "0x240F00AF",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x43D04",
+          "function": "menu08_difficulty",
+          "old": "0x258D00BA",
+          "new": "0x258D00FB",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x43D0C",
+          "function": "menu08_difficulty",
+          "old": "0x3C01438C",
+          "new": "0x3C014399",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        }
+      ],
+      "save_outputs": [
+        {
+          "path": "artifacts\\generated\\t90menu08.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "path": "artifacts\\generated\\t90menu08.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ]
+    },
+    {
+      "name": "t90menu0608",
+      "purpose": "Apply GE-style mode, mission, and difficulty menu edits while preserving file select.",
+      "groups": [
+        "menu06_mode_select",
+        "menu07_mission_select",
+        "menu08_difficulty"
+      ],
+      "base_rom": "artifacts\\generated\\t90viewge.z64",
+      "base_md5": "e5f3eaf8fff458b2e624d125cf6f2b84",
+      "out_rom": "artifacts\\generated\\t90menu0608.z64",
+      "out_md5": "103eca5e6bbd2049e8a282165c74d56a",
+      "header_crc": "85C13B30 0D06745D",
+      "patch_count": 53,
+      "changed_patch_count": 53,
+      "patches": [
+        {
+          "offset": "0x41F54",
+          "function": "menu06_mode_select",
+          "old": "0x3C018005",
+          "new": "0x3C0143BC",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x41F58",
+          "function": "menu06_mode_select",
+          "old": "0xC4261A40",
+          "new": "0x44813000",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x41FB0",
+          "function": "menu06_mode_select",
+          "old": "0x3C014373",
+          "new": "0x3C0143AC",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x42330",
+          "function": "menu07_mission_select",
+          "old": "0x25CF00E2",
+          "new": "0x25CF0146",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x42338",
+          "function": "menu07_mission_select",
+          "old": "0x3C0142FC",
+          "new": "0x3C014337",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x4238C",
+          "function": "menu07_mission_select",
+          "old": "0x240E0096",
+          "new": "0x240E00DA",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x42390",
+          "function": "menu07_mission_select",
+          "old": "0x240F00DC",
+          "new": "0x240F0140",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x42454",
+          "function": "menu07_mission_select",
+          "old": "0x240C00AA",
+          "new": "0x240C00EE",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x42458",
+          "function": "menu07_mission_select",
+          "old": "0x240D00DC",
+          "new": "0x240D0140",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x4246C",
+          "function": "menu07_mission_select",
+          "old": "0x240F00EA",
+          "new": "0x240F014E",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x42480",
+          "function": "menu07_mission_select",
+          "old": "0x24050094",
+          "new": "0x240500D8",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x42484",
+          "function": "menu07_mission_select",
+          "old": "0x240600DA",
+          "new": "0x2406013E",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x4248C",
+          "function": "menu07_mission_select",
+          "old": "0x24E700AF",
+          "new": "0x24E700F3",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x424EC",
+          "function": "menu07_mission_select",
+          "old": "0x240B0096",
+          "new": "0x240B00DA",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x424F0",
+          "function": "menu07_mission_select",
+          "old": "0x240C00FC",
+          "new": "0x240C0160",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x425D8",
+          "function": "menu07_mission_select",
+          "old": "0x240B00AA",
+          "new": "0x240B00EE",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x425DC",
+          "function": "menu07_mission_select",
+          "old": "0x240C00FC",
+          "new": "0x240C0160",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x425F4",
+          "function": "menu07_mission_select",
+          "old": "0x240E010A",
+          "new": "0x240E016E",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x42608",
+          "function": "menu07_mission_select",
+          "old": "0x24050094",
+          "new": "0x240500D8",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x4260C",
+          "function": "menu07_mission_select",
+          "old": "0x240600FA",
+          "new": "0x2406015E",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x42614",
+          "function": "menu07_mission_select",
+          "old": "0x24E700AF",
+          "new": "0x24E700F3",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x42680",
+          "function": "menu07_mission_select",
+          "old": "0x240B0096",
+          "new": "0x240B00DA",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x42688",
+          "function": "menu07_mission_select",
+          "old": "0x240C011C",
+          "new": "0x240C0180",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x4272C",
+          "function": "menu07_mission_select",
+          "old": "0x240800AA",
+          "new": "0x240800EE",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x42730",
+          "function": "menu07_mission_select",
+          "old": "0x2409011C",
+          "new": "0x24090180",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x42748",
+          "function": "menu07_mission_select",
+          "old": "0x240B012A",
+          "new": "0x240B018E",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x4275C",
+          "function": "menu07_mission_select",
+          "old": "0x24050094",
+          "new": "0x240500D8",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x42760",
+          "function": "menu07_mission_select",
+          "old": "0x2406011A",
+          "new": "0x2406017E",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x42768",
+          "function": "menu07_mission_select",
+          "old": "0x24E700AF",
+          "new": "0x24E700F3",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x433FC",
+          "function": "menu08_difficulty",
+          "old": "0x3C018005",
+          "new": "0x3C0143AA",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x43400",
+          "function": "menu08_difficulty",
+          "old": "0xC4261A54",
+          "new": "0x44813000",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x43434",
+          "function": "menu08_difficulty",
+          "old": "0x3C014373",
+          "new": "0x3C01439A",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x43460",
+          "function": "menu08_difficulty",
+          "old": "0x3C014353",
+          "new": "0x3C01438A",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x43634",
+          "function": "menu08_difficulty",
+          "old": "0x240E0037",
+          "new": "0x240E0050",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x43638",
+          "function": "menu08_difficulty",
+          "old": "0x240F0057",
+          "new": "0x240F007F",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x43728",
+          "function": "menu08_difficulty",
+          "old": "0x240E0037",
+          "new": "0x240E0050",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x4372C",
+          "function": "menu08_difficulty",
+          "old": "0x240F0067",
+          "new": "0x240F008F",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x4381C",
+          "function": "menu08_difficulty",
+          "old": "0x240E0037",
+          "new": "0x240E0050",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x43820",
+          "function": "menu08_difficulty",
+          "old": "0x240F0077",
+          "new": "0x240F009F",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x438A0",
+          "function": "menu08_difficulty",
+          "old": "0x25CF00BA",
+          "new": "0x25CF00FB",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x438A8",
+          "function": "menu08_difficulty",
+          "old": "0x3C0142D4",
+          "new": "0x3C014303",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x439AC",
+          "function": "menu08_difficulty",
+          "old": "0x240C0037",
+          "new": "0x240C0050",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x439B0",
+          "function": "menu08_difficulty",
+          "old": "0x240D008F",
+          "new": "0x240D00D0",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x43A48",
+          "function": "menu08_difficulty",
+          "old": "0x2419007E",
+          "new": "0x24190097",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x43A5C",
+          "function": "menu08_difficulty",
+          "old": "0x247800C3",
+          "new": "0x24780104",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x43A6C",
+          "function": "menu08_difficulty",
+          "old": "0x246600B2",
+          "new": "0x246600F3",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x43A78",
+          "function": "menu08_difficulty",
+          "old": "0x240700F0",
+          "new": "0x24070109",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x43ABC",
+          "function": "menu08_difficulty",
+          "old": "0x267300B4",
+          "new": "0x267300F5",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x43B68",
+          "function": "menu08_difficulty",
+          "old": "0x240B0082",
+          "new": "0x240B009B",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x43C04",
+          "function": "menu08_difficulty",
+          "old": "0x240F0096",
+          "new": "0x240F00AF",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x43C44",
+          "function": "menu08_difficulty",
+          "old": "0x240F0096",
+          "new": "0x240F00AF",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x43D04",
+          "function": "menu08_difficulty",
+          "old": "0x258D00BA",
+          "new": "0x258D00FB",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x43D0C",
+          "function": "menu08_difficulty",
+          "old": "0x3C01438C",
+          "new": "0x3C014399",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        }
+      ],
+      "save_outputs": [
+        {
+          "path": "artifacts\\generated\\t90menu0608.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "path": "artifacts\\generated\\t90menu0608.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ]
+    },
+    {
+      "name": "t90menu0609",
+      "purpose": "Apply GE-style menu06-menu09 edits while preserving file select.",
+      "groups": [
+        "menu06_mode_select",
+        "menu07_mission_select",
+        "menu08_difficulty",
+        "menu09_007_options"
+      ],
+      "base_rom": "artifacts\\generated\\t90viewge.z64",
+      "base_md5": "e5f3eaf8fff458b2e624d125cf6f2b84",
+      "out_rom": "artifacts\\generated\\t90menu0609.z64",
+      "out_md5": "47721543dbeba7c64000676f74d77826",
+      "header_crc": "85C1C950 0C8DCDFF",
+      "patch_count": 113,
+      "changed_patch_count": 113,
+      "patches": [
+        {
+          "offset": "0x41F54",
+          "function": "menu06_mode_select",
+          "old": "0x3C018005",
+          "new": "0x3C0143BC",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x41F58",
+          "function": "menu06_mode_select",
+          "old": "0xC4261A40",
+          "new": "0x44813000",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x41FB0",
+          "function": "menu06_mode_select",
+          "old": "0x3C014373",
+          "new": "0x3C0143AC",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x42330",
+          "function": "menu07_mission_select",
+          "old": "0x25CF00E2",
+          "new": "0x25CF0146",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x42338",
+          "function": "menu07_mission_select",
+          "old": "0x3C0142FC",
+          "new": "0x3C014337",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x4238C",
+          "function": "menu07_mission_select",
+          "old": "0x240E0096",
+          "new": "0x240E00DA",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x42390",
+          "function": "menu07_mission_select",
+          "old": "0x240F00DC",
+          "new": "0x240F0140",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x42454",
+          "function": "menu07_mission_select",
+          "old": "0x240C00AA",
+          "new": "0x240C00EE",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x42458",
+          "function": "menu07_mission_select",
+          "old": "0x240D00DC",
+          "new": "0x240D0140",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x4246C",
+          "function": "menu07_mission_select",
+          "old": "0x240F00EA",
+          "new": "0x240F014E",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x42480",
+          "function": "menu07_mission_select",
+          "old": "0x24050094",
+          "new": "0x240500D8",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x42484",
+          "function": "menu07_mission_select",
+          "old": "0x240600DA",
+          "new": "0x2406013E",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x4248C",
+          "function": "menu07_mission_select",
+          "old": "0x24E700AF",
+          "new": "0x24E700F3",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x424EC",
+          "function": "menu07_mission_select",
+          "old": "0x240B0096",
+          "new": "0x240B00DA",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x424F0",
+          "function": "menu07_mission_select",
+          "old": "0x240C00FC",
+          "new": "0x240C0160",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x425D8",
+          "function": "menu07_mission_select",
+          "old": "0x240B00AA",
+          "new": "0x240B00EE",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x425DC",
+          "function": "menu07_mission_select",
+          "old": "0x240C00FC",
+          "new": "0x240C0160",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x425F4",
+          "function": "menu07_mission_select",
+          "old": "0x240E010A",
+          "new": "0x240E016E",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x42608",
+          "function": "menu07_mission_select",
+          "old": "0x24050094",
+          "new": "0x240500D8",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x4260C",
+          "function": "menu07_mission_select",
+          "old": "0x240600FA",
+          "new": "0x2406015E",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x42614",
+          "function": "menu07_mission_select",
+          "old": "0x24E700AF",
+          "new": "0x24E700F3",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x42680",
+          "function": "menu07_mission_select",
+          "old": "0x240B0096",
+          "new": "0x240B00DA",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x42688",
+          "function": "menu07_mission_select",
+          "old": "0x240C011C",
+          "new": "0x240C0180",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x4272C",
+          "function": "menu07_mission_select",
+          "old": "0x240800AA",
+          "new": "0x240800EE",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x42730",
+          "function": "menu07_mission_select",
+          "old": "0x2409011C",
+          "new": "0x24090180",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x42748",
+          "function": "menu07_mission_select",
+          "old": "0x240B012A",
+          "new": "0x240B018E",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x4275C",
+          "function": "menu07_mission_select",
+          "old": "0x24050094",
+          "new": "0x240500D8",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x42760",
+          "function": "menu07_mission_select",
+          "old": "0x2406011A",
+          "new": "0x2406017E",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x42768",
+          "function": "menu07_mission_select",
+          "old": "0x24E700AF",
+          "new": "0x24E700F3",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x433FC",
+          "function": "menu08_difficulty",
+          "old": "0x3C018005",
+          "new": "0x3C0143AA",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x43400",
+          "function": "menu08_difficulty",
+          "old": "0xC4261A54",
+          "new": "0x44813000",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x43434",
+          "function": "menu08_difficulty",
+          "old": "0x3C014373",
+          "new": "0x3C01439A",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x43460",
+          "function": "menu08_difficulty",
+          "old": "0x3C014353",
+          "new": "0x3C01438A",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x43634",
+          "function": "menu08_difficulty",
+          "old": "0x240E0037",
+          "new": "0x240E0050",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x43638",
+          "function": "menu08_difficulty",
+          "old": "0x240F0057",
+          "new": "0x240F007F",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x43728",
+          "function": "menu08_difficulty",
+          "old": "0x240E0037",
+          "new": "0x240E0050",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x4372C",
+          "function": "menu08_difficulty",
+          "old": "0x240F0067",
+          "new": "0x240F008F",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x4381C",
+          "function": "menu08_difficulty",
+          "old": "0x240E0037",
+          "new": "0x240E0050",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x43820",
+          "function": "menu08_difficulty",
+          "old": "0x240F0077",
+          "new": "0x240F009F",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x438A0",
+          "function": "menu08_difficulty",
+          "old": "0x25CF00BA",
+          "new": "0x25CF00FB",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x438A8",
+          "function": "menu08_difficulty",
+          "old": "0x3C0142D4",
+          "new": "0x3C014303",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x439AC",
+          "function": "menu08_difficulty",
+          "old": "0x240C0037",
+          "new": "0x240C0050",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x439B0",
+          "function": "menu08_difficulty",
+          "old": "0x240D008F",
+          "new": "0x240D00D0",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x43A48",
+          "function": "menu08_difficulty",
+          "old": "0x2419007E",
+          "new": "0x24190097",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x43A5C",
+          "function": "menu08_difficulty",
+          "old": "0x247800C3",
+          "new": "0x24780104",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x43A6C",
+          "function": "menu08_difficulty",
+          "old": "0x246600B2",
+          "new": "0x246600F3",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x43A78",
+          "function": "menu08_difficulty",
+          "old": "0x240700F0",
+          "new": "0x24070109",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x43ABC",
+          "function": "menu08_difficulty",
+          "old": "0x267300B4",
+          "new": "0x267300F5",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x43B68",
+          "function": "menu08_difficulty",
+          "old": "0x240B0082",
+          "new": "0x240B009B",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x43C04",
+          "function": "menu08_difficulty",
+          "old": "0x240F0096",
+          "new": "0x240F00AF",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x43C44",
+          "function": "menu08_difficulty",
+          "old": "0x240F0096",
+          "new": "0x240F00AF",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x43D04",
+          "function": "menu08_difficulty",
+          "old": "0x258D00BA",
+          "new": "0x258D00FB",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x43D0C",
+          "function": "menu08_difficulty",
+          "old": "0x3C01438C",
+          "new": "0x3C014399",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x43F94",
+          "function": "menu09_007_options",
+          "old": "0x28410107",
+          "new": "0x28410153",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x43FA8",
+          "function": "menu09_007_options",
+          "old": "0x284100E6",
+          "new": "0x28410132",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x43FC0",
+          "function": "menu09_007_options",
+          "old": "0x284100C5",
+          "new": "0x28410111",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x43FD8",
+          "function": "menu09_007_options",
+          "old": "0x284100A4",
+          "new": "0x284100F0",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x44104",
+          "function": "menu09_007_options",
+          "old": "0x3C01425C",
+          "new": "0x3C0142A0",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x4410C",
+          "function": "menu09_007_options",
+          "old": "0x3C014396",
+          "new": "0x3C0143DA",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x44348",
+          "function": "menu09_007_options",
+          "old": "0x24090037",
+          "new": "0x24090050",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x4434C",
+          "function": "menu09_007_options",
+          "old": "0x2403008F",
+          "new": "0x240300DB",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x443BC",
+          "function": "menu09_007_options",
+          "old": "0x24190039",
+          "new": "0x24190052",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x443C0",
+          "function": "menu09_007_options",
+          "old": "0x240300A4",
+          "new": "0x240300F0",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x443C4",
+          "function": "menu09_007_options",
+          "old": "0x241800C0",
+          "new": "0x2418010C",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x443E4",
+          "function": "menu09_007_options",
+          "old": "0x24050037",
+          "new": "0x24050050",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x443E8",
+          "function": "menu09_007_options",
+          "old": "0x240600B5",
+          "new": "0x24060101",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x443F0",
+          "function": "menu09_007_options",
+          "old": "0x24070163",
+          "new": "0x24070204",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x44410",
+          "function": "menu09_007_options",
+          "old": "0x3C014396",
+          "new": "0x3C0143DA",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x44434",
+          "function": "menu09_007_options",
+          "old": "0x24050037",
+          "new": "0x24050050",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x44448",
+          "function": "menu09_007_options",
+          "old": "0x24E70037",
+          "new": "0x24E70050",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x44478",
+          "function": "menu09_007_options",
+          "old": "0x24050037",
+          "new": "0x24050050",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x4447C",
+          "function": "menu09_007_options",
+          "old": "0x240700C7",
+          "new": "0x240700E5",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x4454C",
+          "function": "menu09_007_options",
+          "old": "0x240A011D",
+          "new": "0x240A019F",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x44550",
+          "function": "menu09_007_options",
+          "old": "0x240300A4",
+          "new": "0x240300F0",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x445C0",
+          "function": "menu09_007_options",
+          "old": "0x24080039",
+          "new": "0x24080052",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x445C4",
+          "function": "menu09_007_options",
+          "old": "0x240300C5",
+          "new": "0x24030111",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x445C8",
+          "function": "menu09_007_options",
+          "old": "0x240F00E1",
+          "new": "0x240F012D",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x445E8",
+          "function": "menu09_007_options",
+          "old": "0x24050037",
+          "new": "0x24050050",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x445EC",
+          "function": "menu09_007_options",
+          "old": "0x240600D6",
+          "new": "0x24060122",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x445F4",
+          "function": "menu09_007_options",
+          "old": "0x24070163",
+          "new": "0x24070204",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x44614",
+          "function": "menu09_007_options",
+          "old": "0x3C014396",
+          "new": "0x3C0143DA",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x44638",
+          "function": "menu09_007_options",
+          "old": "0x24050037",
+          "new": "0x24050050",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x4464C",
+          "function": "menu09_007_options",
+          "old": "0x24E70037",
+          "new": "0x24E70050",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x4467C",
+          "function": "menu09_007_options",
+          "old": "0x24050037",
+          "new": "0x24050050",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x44680",
+          "function": "menu09_007_options",
+          "old": "0x240700C7",
+          "new": "0x240700E5",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x44750",
+          "function": "menu09_007_options",
+          "old": "0x240C011D",
+          "new": "0x240C019F",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x44754",
+          "function": "menu09_007_options",
+          "old": "0x240300C5",
+          "new": "0x24030111",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x447C4",
+          "function": "menu09_007_options",
+          "old": "0x240E0039",
+          "new": "0x240E0052",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x447C8",
+          "function": "menu09_007_options",
+          "old": "0x240300E6",
+          "new": "0x24030132",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x447CC",
+          "function": "menu09_007_options",
+          "old": "0x240A0102",
+          "new": "0x240A014E",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x447EC",
+          "function": "menu09_007_options",
+          "old": "0x24050037",
+          "new": "0x24050050",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x447F0",
+          "function": "menu09_007_options",
+          "old": "0x240600F7",
+          "new": "0x24060143",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x447F8",
+          "function": "menu09_007_options",
+          "old": "0x24070163",
+          "new": "0x24070204",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x44818",
+          "function": "menu09_007_options",
+          "old": "0x3C014396",
+          "new": "0x3C0143DA",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x4483C",
+          "function": "menu09_007_options",
+          "old": "0x24050037",
+          "new": "0x24050050",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x44850",
+          "function": "menu09_007_options",
+          "old": "0x24E70037",
+          "new": "0x24E70050",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x44880",
+          "function": "menu09_007_options",
+          "old": "0x24050037",
+          "new": "0x24050050",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x44884",
+          "function": "menu09_007_options",
+          "old": "0x240700C7",
+          "new": "0x240700E5",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x44954",
+          "function": "menu09_007_options",
+          "old": "0x2419011D",
+          "new": "0x2419019F",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x44958",
+          "function": "menu09_007_options",
+          "old": "0x240300E6",
+          "new": "0x24030132",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x449C8",
+          "function": "menu09_007_options",
+          "old": "0x24090039",
+          "new": "0x24090052",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x449CC",
+          "function": "menu09_007_options",
+          "old": "0x24030107",
+          "new": "0x24030153",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x449D0",
+          "function": "menu09_007_options",
+          "old": "0x240C0123",
+          "new": "0x240C016F",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x449F0",
+          "function": "menu09_007_options",
+          "old": "0x24050037",
+          "new": "0x24050050",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x449F4",
+          "function": "menu09_007_options",
+          "old": "0x24060118",
+          "new": "0x24060164",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x449FC",
+          "function": "menu09_007_options",
+          "old": "0x24070163",
+          "new": "0x24070204",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x44A08",
+          "function": "menu09_007_options",
+          "old": "0x3C014396",
+          "new": "0x3C0143DA",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x44A38",
+          "function": "menu09_007_options",
+          "old": "0x24050037",
+          "new": "0x24050050",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x44A4C",
+          "function": "menu09_007_options",
+          "old": "0x24E70037",
+          "new": "0x24E70050",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x44A7C",
+          "function": "menu09_007_options",
+          "old": "0x24050037",
+          "new": "0x24050050",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x44A80",
+          "function": "menu09_007_options",
+          "old": "0x240700C7",
+          "new": "0x240700E5",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x44B50",
+          "function": "menu09_007_options",
+          "old": "0x2408011D",
+          "new": "0x2408019F",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        },
+        {
+          "offset": "0x44B54",
+          "function": "menu09_007_options",
+          "old": "0x24030107",
+          "new": "0x24030153",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json"
+        }
+      ],
+      "save_outputs": [
+        {
+          "path": "artifacts\\generated\\t90menu0609.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "path": "artifacts\\generated\\t90menu0609.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ]
+    }
+  ]
+}
