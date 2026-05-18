@@ -1,0 +1,162 @@
+{
+  "base_rom": "artifacts\\generated\\txgate.z64",
+  "base_md5": "ce10464e577a09a12b5be17263991d99",
+  "purpose": "No-input hardware route probes for front/dossier pages; do not promote over gameplay baseline.",
+  "routes": [
+    {
+      "name": "gtauto05",
+      "menu_id": 5,
+      "symbol": "MENU_FILE_SELECT",
+      "purpose": "File select / save folders",
+      "base_rom": "artifacts\\generated\\txgate.z64",
+      "out_rom": "artifacts\\generated\\gtauto05.z64",
+      "out_md5": "aba871d2a01d5e0cf40bd60dcee72b06",
+      "header_crc": "9F875C47 AC5FCE76",
+      "patch": {
+        "offset": "0x3FF34",
+        "old": "0x24040018",
+        "new": "0x24040005",
+        "note": "After the TND title/logo timeout, route directly to MENU_FILE_SELECT."
+      },
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\txgate.sav",
+          "target": "artifacts\\generated\\gtauto05.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\txgate.eep",
+          "target": "artifacts\\generated\\gtauto05.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ],
+      "do_not_promote": true
+    },
+    {
+      "name": "gtauto06",
+      "menu_id": 6,
+      "symbol": "MENU_MODE_SELECT",
+      "purpose": "Single-player / multiplayer / cheat select",
+      "base_rom": "artifacts\\generated\\txgate.z64",
+      "out_rom": "artifacts\\generated\\gtauto06.z64",
+      "out_md5": "416b70c465c9c3c58e8e2cb5abf8b321",
+      "header_crc": "9F875C45 9E0CFDEF",
+      "patch": {
+        "offset": "0x3FF34",
+        "old": "0x24040018",
+        "new": "0x24040006",
+        "note": "After the TND title/logo timeout, route directly to MENU_MODE_SELECT."
+      },
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\txgate.sav",
+          "target": "artifacts\\generated\\gtauto06.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\txgate.eep",
+          "target": "artifacts\\generated\\gtauto06.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ],
+      "do_not_promote": true
+    },
+    {
+      "name": "gtauto07",
+      "menu_id": 7,
+      "symbol": "MENU_MISSION_SELECT",
+      "purpose": "Mission select dossier",
+      "base_rom": "artifacts\\generated\\txgate.z64",
+      "out_rom": "artifacts\\generated\\gtauto07.z64",
+      "out_md5": "5e2eac71ca4d6375d519503597a0be01",
+      "header_crc": "9F875C47 47D3F58E",
+      "patch": {
+        "offset": "0x3FF34",
+        "old": "0x24040018",
+        "new": "0x24040007",
+        "note": "After the TND title/logo timeout, route directly to MENU_MISSION_SELECT."
+      },
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\txgate.sav",
+          "target": "artifacts\\generated\\gtauto07.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\txgate.eep",
+          "target": "artifacts\\generated\\gtauto07.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ],
+      "do_not_promote": true
+    },
+    {
+      "name": "gtauto08",
+      "menu_id": 8,
+      "symbol": "MENU_DIFFICULTY",
+      "purpose": "Difficulty select dossier",
+      "base_rom": "artifacts\\generated\\txgate.z64",
+      "out_rom": "artifacts\\generated\\gtauto08.z64",
+      "out_md5": "9f150dcba2409e713b9d07582e81e734",
+      "header_crc": "9F875C49 52F54147",
+      "patch": {
+        "offset": "0x3FF34",
+        "old": "0x24040018",
+        "new": "0x24040008",
+        "note": "After the TND title/logo timeout, route directly to MENU_DIFFICULTY."
+      },
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\txgate.sav",
+          "target": "artifacts\\generated\\gtauto08.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\txgate.eep",
+          "target": "artifacts\\generated\\gtauto08.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ],
+      "do_not_promote": true
+    },
+    {
+      "name": "gtauto0a",
+      "menu_id": 10,
+      "symbol": "MENU_BRIEFING",
+      "purpose": "Mission briefing dossier",
+      "base_rom": "artifacts\\generated\\txgate.z64",
+      "out_rom": "artifacts\\generated\\gtauto0a.z64",
+      "out_md5": "897b6fcf8bc6f6e3705b8c36f268b638",
+      "header_crc": "9F875C4D D45669E3",
+      "patch": {
+        "offset": "0x3FF34",
+        "old": "0x24040018",
+        "new": "0x2404000A",
+        "note": "After the TND title/logo timeout, route directly to MENU_BRIEFING."
+      },
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\txgate.sav",
+          "target": "artifacts\\generated\\gtauto0a.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\txgate.eep",
+          "target": "artifacts\\generated\\gtauto0a.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ],
+      "do_not_promote": true
+    }
+  ]
+}

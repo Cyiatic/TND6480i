@@ -81,3 +81,30 @@ Comparison artifact:
 - `reports/dossier_raw_menu_table_rejects_20260518.json`
 
 Interpretation: the GE480i raw menu tables are not the missing "make dossier hi-res" switch by themselves. The next useful investigation is the draw path for the dossier texture/font/background composition itself: `frontSetupMenuBackground`, folder/paper sprite draw parameters, and the page-specific text rectangle setup, with small probes that alter one visual layer at a time.
+
+## Hardware Follow-up: Drawpath and Front Gate Probes
+
+After the workflow correction, the next candidates were not accepted or rejected from emulator-only output. Each useful candidate was uploaded to SC64, cold-cycle captured from GV-USB2, and compared against the existing GE480i reference/current `t90texstk` dossier matrix.
+
+New comparison artifacts:
+
+- `diagnostics/captures/contact_sheets/dossier_drawpath_candidate_matrix_20260518/sheet.jpg`
+- `diagnostics/captures/contact_sheets/dossier_mode_drawpath_split_matrix_20260518/sheet.jpg`
+- `diagnostics/captures/contact_sheets/dossier_mission_drawpath_split_matrix_20260518/sheet.jpg`
+- `diagnostics/captures/contact_sheets/dossier_front_gate_file_matrix_20260518/sheet.jpg`
+- `diagnostics/captures/contact_sheets/dossier_force0_matrix_20260518/sheet.jpg`
+- `diagnostics/captures/contact_sheets/dossier_force0_layout_matrix_20260518/sheet.jpg`
+
+Drawpath result:
+
+- `txdossierdraw2`: rejected. Hardware capture shows missing mode-select option text and no GE480i-scale match on mission select.
+- `txmodepos2`: rejected as a standalone overlay. It reproduces the mode-select text disappearance, confirming the corrected GE mode-position constants are not safe on stock-scale `t90texstk`.
+- `txmissionfull` / `txmissionhelper`: not promotable. They nudge mission filmstrip placement, but they do not solve scale/detail.
+
+Front/menu gate result:
+
+- `txskipfb`, `txfrontz`, and `txzgate`: no useful file-select scale change versus current `t90texstk`.
+- `txforce0`: important diagnostic only. Forcing the front/menu table index at `0x4F1B8` to zero moves the dossier into a smaller scale class closer to the GE480i reference, but it leaves an uncleared gray lower region and breaks mode text placement.
+- `force0+filefull`, `force0+modepos2`, and `force0+missionfull`: captured on hardware and compared. `force0+modepos2` restores visible mode option text in the smaller scale class, but the overall page composition is still not promotable. File and mission remain mismatched and the lower clear/background issue persists.
+
+Interpretation: the next promising target is not another blind GE coordinate transplant. The useful signal is around the front/menu table selection path at `0x4F1B8` and the table-driven `viSetAspect`/`viSetXY`/`viSetBuf` sequence immediately after it. Future work should decompose that table path and the associated clear/background dimensions so the dossier can use the correct 480i-scale composition without the gray lower-region corruption.

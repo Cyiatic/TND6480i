@@ -1,0 +1,2186 @@
+{
+  "base_rom": "artifacts\\generated\\txforce0.z64",
+  "base_md5": "b748f10857e646f7f9f4d04e2268dd65",
+  "menu_report": "reports\\tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+  "brief_report": "reports\\fullrom_safe_ge480_words_missing_current_20260510.json",
+  "candidates": [
+    {
+      "name": "fotxfilefull",
+      "purpose": "t90texstk plus coordinated file-select GE480i words; checks folders/icons/text as a group.",
+      "base_rom": "artifacts\\generated\\txforce0.z64",
+      "base_md5": "b748f10857e646f7f9f4d04e2268dd65",
+      "out_rom": "artifacts\\generated\\fotxfilefull.z64",
+      "out_md5": "a034f3a5ebe78bbb57ab4fbab2804859",
+      "header_crc": "852B63BF B23C5F68",
+      "patch_count": 15,
+      "changed_patch_count": 15,
+      "patches": [
+        {
+          "offset": "0x41644",
+          "function": "menu05_file_select",
+          "old": "0x26100015",
+          "new": "0x2610001F",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x417DC",
+          "function": "menu05_file_select",
+          "old": "0x2610002D",
+          "new": "0x26100037",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x41894",
+          "function": "menu05_file_select",
+          "old": "0x241E011D",
+          "new": "0x241E019E",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x41898",
+          "function": "menu05_file_select",
+          "old": "0x241200F7",
+          "new": "0x2412015E",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x41964",
+          "function": "menu05_file_select",
+          "old": "0x24120165",
+          "new": "0x241201FE",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x419F0",
+          "function": "menu05_file_select",
+          "old": "0x3C014361",
+          "new": "0x3C0143A4",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x41A04",
+          "function": "menu05_file_select",
+          "old": "0x3C018005",
+          "new": "0x3C0143CF",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x41A10",
+          "function": "menu05_file_select",
+          "old": "0xC4321A28",
+          "new": "0x44819000",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x41B24",
+          "function": "menu05_file_select",
+          "old": "0x3C018005",
+          "new": "0x3C0143F4",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x41B2C",
+          "function": "menu05_file_select",
+          "old": "0xC4241A2C",
+          "new": "0x44812000",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x41B30",
+          "function": "menu05_file_select",
+          "old": "0x3C018005",
+          "new": "0x3C0143CF",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x41B34",
+          "function": "menu05_file_select",
+          "old": "0xC4321A30",
+          "new": "0x44819000",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x41C30",
+          "function": "menu05_file_select",
+          "old": "0x3C0142DC",
+          "new": "0x3C014320",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x41C40",
+          "function": "menu05_file_select",
+          "old": "0x3C018005",
+          "new": "0x3C0143CF",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x41C48",
+          "function": "menu05_file_select",
+          "old": "0xC4321A34",
+          "new": "0x44819000",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        }
+      ],
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\txforce0.sav",
+          "target": "artifacts\\generated\\fotxfilefull.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\txforce0.eep",
+          "target": "artifacts\\generated\\fotxfilefull.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ]
+    },
+    {
+      "name": "fotxfileplace",
+      "purpose": "t90texstk plus file-select placement/integer words only; icons/floats stay TND.",
+      "base_rom": "artifacts\\generated\\txforce0.z64",
+      "base_md5": "b748f10857e646f7f9f4d04e2268dd65",
+      "out_rom": "artifacts\\generated\\fotxfileplace.z64",
+      "out_md5": "45663139fbf2b99c9b664c94dcdaae80",
+      "header_crc": "86775B93 FF566AD3",
+      "patch_count": 5,
+      "changed_patch_count": 5,
+      "patches": [
+        {
+          "offset": "0x41644",
+          "function": "menu05_file_select",
+          "old": "0x26100015",
+          "new": "0x2610001F",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x417DC",
+          "function": "menu05_file_select",
+          "old": "0x2610002D",
+          "new": "0x26100037",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x41894",
+          "function": "menu05_file_select",
+          "old": "0x241E011D",
+          "new": "0x241E019E",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x41898",
+          "function": "menu05_file_select",
+          "old": "0x241200F7",
+          "new": "0x2412015E",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x41964",
+          "function": "menu05_file_select",
+          "old": "0x24120165",
+          "new": "0x241201FE",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        }
+      ],
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\txforce0.sav",
+          "target": "artifacts\\generated\\fotxfileplace.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\txforce0.eep",
+          "target": "artifacts\\generated\\fotxfileplace.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ]
+    },
+    {
+      "name": "fotxfileicons",
+      "purpose": "t90texstk plus file-select float/icon words only; text placement stays TND.",
+      "base_rom": "artifacts\\generated\\txforce0.z64",
+      "base_md5": "b748f10857e646f7f9f4d04e2268dd65",
+      "out_rom": "artifacts\\generated\\fotxfileicons.z64",
+      "out_md5": "b0a853645b75e26d3974bb09d685e245",
+      "header_crc": "852B64B5 F0AA385A",
+      "patch_count": 10,
+      "changed_patch_count": 10,
+      "patches": [
+        {
+          "offset": "0x419F0",
+          "function": "menu05_file_select",
+          "old": "0x3C014361",
+          "new": "0x3C0143A4",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x41A04",
+          "function": "menu05_file_select",
+          "old": "0x3C018005",
+          "new": "0x3C0143CF",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x41A10",
+          "function": "menu05_file_select",
+          "old": "0xC4321A28",
+          "new": "0x44819000",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x41B24",
+          "function": "menu05_file_select",
+          "old": "0x3C018005",
+          "new": "0x3C0143F4",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x41B2C",
+          "function": "menu05_file_select",
+          "old": "0xC4241A2C",
+          "new": "0x44812000",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x41B30",
+          "function": "menu05_file_select",
+          "old": "0x3C018005",
+          "new": "0x3C0143CF",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x41B34",
+          "function": "menu05_file_select",
+          "old": "0xC4321A30",
+          "new": "0x44819000",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x41C30",
+          "function": "menu05_file_select",
+          "old": "0x3C0142DC",
+          "new": "0x3C014320",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x41C40",
+          "function": "menu05_file_select",
+          "old": "0x3C018005",
+          "new": "0x3C0143CF",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x41C48",
+          "function": "menu05_file_select",
+          "old": "0xC4321A34",
+          "new": "0x44819000",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        }
+      ],
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\txforce0.sav",
+          "target": "artifacts\\generated\\fotxfileicons.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\txforce0.eep",
+          "target": "artifacts\\generated\\fotxfileicons.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ]
+    },
+    {
+      "name": "fotxfsg0",
+      "purpose": "t90texstk plus file-select scale group 0 only, around 0x419F0-0x41A10.",
+      "base_rom": "artifacts\\generated\\txforce0.z64",
+      "base_md5": "b748f10857e646f7f9f4d04e2268dd65",
+      "out_rom": "artifacts\\generated\\fotxfsg0.z64",
+      "out_md5": "c74c7251c6e0579bfd21a3f8db1a0ad2",
+      "header_crc": "868B5B64 655A2983",
+      "patch_count": 3,
+      "changed_patch_count": 3,
+      "patches": [
+        {
+          "offset": "0x419F0",
+          "function": "menu05_file_select",
+          "old": "0x3C014361",
+          "new": "0x3C0143A4",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x41A04",
+          "function": "menu05_file_select",
+          "old": "0x3C018005",
+          "new": "0x3C0143CF",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x41A10",
+          "function": "menu05_file_select",
+          "old": "0xC4321A28",
+          "new": "0x44819000",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        }
+      ],
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\txforce0.sav",
+          "target": "artifacts\\generated\\fotxfsg0.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\txforce0.eep",
+          "target": "artifacts\\generated\\fotxfsg0.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ]
+    },
+    {
+      "name": "fotxfsg1",
+      "purpose": "t90texstk plus file-select scale group 1 only, around 0x41B24-0x41B34.",
+      "base_rom": "artifacts\\generated\\txforce0.z64",
+      "base_md5": "b748f10857e646f7f9f4d04e2268dd65",
+      "out_rom": "artifacts\\generated\\fotxfsg1.z64",
+      "out_md5": "c2234234c4b30cc6b707804a4d43d179",
+      "header_crc": "86CDE9EC 9A08D696",
+      "patch_count": 4,
+      "changed_patch_count": 4,
+      "patches": [
+        {
+          "offset": "0x41B24",
+          "function": "menu05_file_select",
+          "old": "0x3C018005",
+          "new": "0x3C0143F4",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x41B2C",
+          "function": "menu05_file_select",
+          "old": "0xC4241A2C",
+          "new": "0x44812000",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x41B30",
+          "function": "menu05_file_select",
+          "old": "0x3C018005",
+          "new": "0x3C0143CF",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x41B34",
+          "function": "menu05_file_select",
+          "old": "0xC4321A30",
+          "new": "0x44819000",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        }
+      ],
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\txforce0.sav",
+          "target": "artifacts\\generated\\fotxfsg1.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\txforce0.eep",
+          "target": "artifacts\\generated\\fotxfsg1.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ]
+    },
+    {
+      "name": "fotxfsg2",
+      "purpose": "t90texstk plus file-select scale group 2 only, around 0x41C30-0x41C48.",
+      "base_rom": "artifacts\\generated\\txforce0.z64",
+      "base_md5": "b748f10857e646f7f9f4d04e2268dd65",
+      "out_rom": "artifacts\\generated\\fotxfsg2.z64",
+      "out_md5": "ac4d5f748bc59e66759b4670783153bd",
+      "header_crc": "868B5A74 C072C9D6",
+      "patch_count": 3,
+      "changed_patch_count": 3,
+      "patches": [
+        {
+          "offset": "0x41C30",
+          "function": "menu05_file_select",
+          "old": "0x3C0142DC",
+          "new": "0x3C014320",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x41C40",
+          "function": "menu05_file_select",
+          "old": "0x3C018005",
+          "new": "0x3C0143CF",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x41C48",
+          "function": "menu05_file_select",
+          "old": "0xC4321A34",
+          "new": "0x44819000",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        }
+      ],
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\txforce0.sav",
+          "target": "artifacts\\generated\\fotxfsg2.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\txforce0.eep",
+          "target": "artifacts\\generated\\fotxfsg2.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ]
+    },
+    {
+      "name": "fotxfsg01",
+      "purpose": "t90texstk plus file-select scale groups 0 and 1, excluding group 2 which hides Select File.",
+      "base_rom": "artifacts\\generated\\txforce0.z64",
+      "base_md5": "b748f10857e646f7f9f4d04e2268dd65",
+      "out_rom": "artifacts\\generated\\fotxfsg01.z64",
+      "out_md5": "f2d8a9af8f2c2113ccb93f1291f25d3a",
+      "header_crc": "8629E6ED BAFD003B",
+      "patch_count": 7,
+      "changed_patch_count": 7,
+      "patches": [
+        {
+          "offset": "0x419F0",
+          "function": "menu05_file_select",
+          "old": "0x3C014361",
+          "new": "0x3C0143A4",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x41A04",
+          "function": "menu05_file_select",
+          "old": "0x3C018005",
+          "new": "0x3C0143CF",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x41A10",
+          "function": "menu05_file_select",
+          "old": "0xC4321A28",
+          "new": "0x44819000",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x41B24",
+          "function": "menu05_file_select",
+          "old": "0x3C018005",
+          "new": "0x3C0143F4",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x41B2C",
+          "function": "menu05_file_select",
+          "old": "0xC4241A2C",
+          "new": "0x44812000",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x41B30",
+          "function": "menu05_file_select",
+          "old": "0x3C018005",
+          "new": "0x3C0143CF",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x41B34",
+          "function": "menu05_file_select",
+          "old": "0xC4321A30",
+          "new": "0x44819000",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        }
+      ],
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\txforce0.sav",
+          "target": "artifacts\\generated\\fotxfsg01.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\txforce0.eep",
+          "target": "artifacts\\generated\\fotxfsg01.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ]
+    },
+    {
+      "name": "fotxfp0g0",
+      "purpose": "t90texstk plus file-select placement words and scale group 0.",
+      "base_rom": "artifacts\\generated\\txforce0.z64",
+      "base_md5": "b748f10857e646f7f9f4d04e2268dd65",
+      "out_rom": "artifacts\\generated\\fotxfp0g0.z64",
+      "out_md5": "2bbfdd0c630149b2ef28257a9d28cb08",
+      "header_crc": "868B5950 18ADE5D4",
+      "patch_count": 8,
+      "changed_patch_count": 8,
+      "patches": [
+        {
+          "offset": "0x41644",
+          "function": "menu05_file_select",
+          "old": "0x26100015",
+          "new": "0x2610001F",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x417DC",
+          "function": "menu05_file_select",
+          "old": "0x2610002D",
+          "new": "0x26100037",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x41894",
+          "function": "menu05_file_select",
+          "old": "0x241E011D",
+          "new": "0x241E019E",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x41898",
+          "function": "menu05_file_select",
+          "old": "0x241200F7",
+          "new": "0x2412015E",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x41964",
+          "function": "menu05_file_select",
+          "old": "0x24120165",
+          "new": "0x241201FE",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x419F0",
+          "function": "menu05_file_select",
+          "old": "0x3C014361",
+          "new": "0x3C0143A4",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x41A04",
+          "function": "menu05_file_select",
+          "old": "0x3C018005",
+          "new": "0x3C0143CF",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x41A10",
+          "function": "menu05_file_select",
+          "old": "0xC4321A28",
+          "new": "0x44819000",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        }
+      ],
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\txforce0.sav",
+          "target": "artifacts\\generated\\fotxfp0g0.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\txforce0.eep",
+          "target": "artifacts\\generated\\fotxfp0g0.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ]
+    },
+    {
+      "name": "fotxfp0g1",
+      "purpose": "t90texstk plus file-select placement words and scale group 1.",
+      "base_rom": "artifacts\\generated\\txforce0.z64",
+      "base_md5": "b748f10857e646f7f9f4d04e2268dd65",
+      "out_rom": "artifacts\\generated\\fotxfp0g1.z64",
+      "out_md5": "2b4de2c5074e8795adb4de923a58906d",
+      "header_crc": "86CDF6D8 B188CBC6",
+      "patch_count": 9,
+      "changed_patch_count": 9,
+      "patches": [
+        {
+          "offset": "0x41644",
+          "function": "menu05_file_select",
+          "old": "0x26100015",
+          "new": "0x2610001F",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x417DC",
+          "function": "menu05_file_select",
+          "old": "0x2610002D",
+          "new": "0x26100037",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x41894",
+          "function": "menu05_file_select",
+          "old": "0x241E011D",
+          "new": "0x241E019E",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x41898",
+          "function": "menu05_file_select",
+          "old": "0x241200F7",
+          "new": "0x2412015E",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x41964",
+          "function": "menu05_file_select",
+          "old": "0x24120165",
+          "new": "0x241201FE",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x41B24",
+          "function": "menu05_file_select",
+          "old": "0x3C018005",
+          "new": "0x3C0143F4",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x41B2C",
+          "function": "menu05_file_select",
+          "old": "0xC4241A2C",
+          "new": "0x44812000",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x41B30",
+          "function": "menu05_file_select",
+          "old": "0x3C018005",
+          "new": "0x3C0143CF",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x41B34",
+          "function": "menu05_file_select",
+          "old": "0xC4321A30",
+          "new": "0x44819000",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        }
+      ],
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\txforce0.sav",
+          "target": "artifacts\\generated\\fotxfp0g1.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\txforce0.eep",
+          "target": "artifacts\\generated\\fotxfp0g1.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ]
+    },
+    {
+      "name": "fotxfp0g2",
+      "purpose": "t90texstk plus file-select placement words and scale group 2.",
+      "base_rom": "artifacts\\generated\\txforce0.z64",
+      "base_md5": "b748f10857e646f7f9f4d04e2268dd65",
+      "out_rom": "artifacts\\generated\\fotxfp0g2.z64",
+      "out_md5": "31d999c77ddc1bb31c4a7385ee257201",
+      "header_crc": "868B587A 4995E99B",
+      "patch_count": 8,
+      "changed_patch_count": 8,
+      "patches": [
+        {
+          "offset": "0x41644",
+          "function": "menu05_file_select",
+          "old": "0x26100015",
+          "new": "0x2610001F",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x417DC",
+          "function": "menu05_file_select",
+          "old": "0x2610002D",
+          "new": "0x26100037",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x41894",
+          "function": "menu05_file_select",
+          "old": "0x241E011D",
+          "new": "0x241E019E",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x41898",
+          "function": "menu05_file_select",
+          "old": "0x241200F7",
+          "new": "0x2412015E",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x41964",
+          "function": "menu05_file_select",
+          "old": "0x24120165",
+          "new": "0x241201FE",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x41C30",
+          "function": "menu05_file_select",
+          "old": "0x3C0142DC",
+          "new": "0x3C014320",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x41C40",
+          "function": "menu05_file_select",
+          "old": "0x3C018005",
+          "new": "0x3C0143CF",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x41C48",
+          "function": "menu05_file_select",
+          "old": "0xC4321A34",
+          "new": "0x44819000",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        }
+      ],
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\txforce0.sav",
+          "target": "artifacts\\generated\\fotxfp0g2.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\txforce0.eep",
+          "target": "artifacts\\generated\\fotxfp0g2.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ]
+    },
+    {
+      "name": "fotxfp0g01",
+      "purpose": "t90texstk plus file-select placement words and scale groups 0 and 1, excluding group 2.",
+      "base_rom": "artifacts\\generated\\txforce0.z64",
+      "base_md5": "b748f10857e646f7f9f4d04e2268dd65",
+      "out_rom": "artifacts\\generated\\fotxfp0g01.z64",
+      "out_md5": "72dd9b82e0c1cb91d72fde7516c817d7",
+      "header_crc": "8629E5D3 8255F806",
+      "patch_count": 12,
+      "changed_patch_count": 12,
+      "patches": [
+        {
+          "offset": "0x41644",
+          "function": "menu05_file_select",
+          "old": "0x26100015",
+          "new": "0x2610001F",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x417DC",
+          "function": "menu05_file_select",
+          "old": "0x2610002D",
+          "new": "0x26100037",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x41894",
+          "function": "menu05_file_select",
+          "old": "0x241E011D",
+          "new": "0x241E019E",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x41898",
+          "function": "menu05_file_select",
+          "old": "0x241200F7",
+          "new": "0x2412015E",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x41964",
+          "function": "menu05_file_select",
+          "old": "0x24120165",
+          "new": "0x241201FE",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x419F0",
+          "function": "menu05_file_select",
+          "old": "0x3C014361",
+          "new": "0x3C0143A4",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x41A04",
+          "function": "menu05_file_select",
+          "old": "0x3C018005",
+          "new": "0x3C0143CF",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x41A10",
+          "function": "menu05_file_select",
+          "old": "0xC4321A28",
+          "new": "0x44819000",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x41B24",
+          "function": "menu05_file_select",
+          "old": "0x3C018005",
+          "new": "0x3C0143F4",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x41B2C",
+          "function": "menu05_file_select",
+          "old": "0xC4241A2C",
+          "new": "0x44812000",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x41B30",
+          "function": "menu05_file_select",
+          "old": "0x3C018005",
+          "new": "0x3C0143CF",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x41B34",
+          "function": "menu05_file_select",
+          "old": "0xC4321A30",
+          "new": "0x44819000",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        }
+      ],
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\txforce0.sav",
+          "target": "artifacts\\generated\\fotxfp0g01.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\txforce0.eep",
+          "target": "artifacts\\generated\\fotxfp0g01.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ]
+    },
+    {
+      "name": "fotxmode06",
+      "purpose": "t90texstk plus mode-select GE480i words.",
+      "base_rom": "artifacts\\generated\\txforce0.z64",
+      "base_md5": "b748f10857e646f7f9f4d04e2268dd65",
+      "out_rom": "artifacts\\generated\\fotxmode06.z64",
+      "out_md5": "1d835513f91892744dc6f51ff32e427a",
+      "header_crc": "868B9B3E E771DAD6",
+      "patch_count": 3,
+      "changed_patch_count": 3,
+      "patches": [
+        {
+          "offset": "0x41F54",
+          "function": "menu06_mode_select",
+          "old": "0x3C018005",
+          "new": "0x3C0143BC",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x41F58",
+          "function": "menu06_mode_select",
+          "old": "0xC4261A40",
+          "new": "0x44813000",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x41FB0",
+          "function": "menu06_mode_select",
+          "old": "0x3C014373",
+          "new": "0x3C0143AC",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        }
+      ],
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\txforce0.sav",
+          "target": "artifacts\\generated\\fotxmode06.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\txforce0.eep",
+          "target": "artifacts\\generated\\fotxmode06.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ]
+    },
+    {
+      "name": "fotxm07draw",
+      "purpose": "t90texstk plus mission-select draw coordinates only; cursor/control words stay TND.",
+      "base_rom": "artifacts\\generated\\txforce0.z64",
+      "base_md5": "b748f10857e646f7f9f4d04e2268dd65",
+      "out_rom": "artifacts\\generated\\fotxm07draw.z64",
+      "out_md5": "e61bba91cbe40281b2a76f495f35ca3d",
+      "header_crc": "86774511 039C0E44",
+      "patch_count": 24,
+      "changed_patch_count": 24,
+      "patches": [
+        {
+          "offset": "0x4238C",
+          "function": "menu07_mission_select",
+          "old": "0x240E0096",
+          "new": "0x240E00DA",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x42390",
+          "function": "menu07_mission_select",
+          "old": "0x240F00DC",
+          "new": "0x240F0140",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x42454",
+          "function": "menu07_mission_select",
+          "old": "0x240C00AA",
+          "new": "0x240C00EE",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x42458",
+          "function": "menu07_mission_select",
+          "old": "0x240D00DC",
+          "new": "0x240D0140",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x4246C",
+          "function": "menu07_mission_select",
+          "old": "0x240F00EA",
+          "new": "0x240F014E",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x42480",
+          "function": "menu07_mission_select",
+          "old": "0x24050094",
+          "new": "0x240500D8",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x42484",
+          "function": "menu07_mission_select",
+          "old": "0x240600DA",
+          "new": "0x2406013E",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x4248C",
+          "function": "menu07_mission_select",
+          "old": "0x24E700AF",
+          "new": "0x24E700F3",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x424EC",
+          "function": "menu07_mission_select",
+          "old": "0x240B0096",
+          "new": "0x240B00DA",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x424F0",
+          "function": "menu07_mission_select",
+          "old": "0x240C00FC",
+          "new": "0x240C0160",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x425D8",
+          "function": "menu07_mission_select",
+          "old": "0x240B00AA",
+          "new": "0x240B00EE",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x425DC",
+          "function": "menu07_mission_select",
+          "old": "0x240C00FC",
+          "new": "0x240C0160",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x425F4",
+          "function": "menu07_mission_select",
+          "old": "0x240E010A",
+          "new": "0x240E016E",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x42608",
+          "function": "menu07_mission_select",
+          "old": "0x24050094",
+          "new": "0x240500D8",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x4260C",
+          "function": "menu07_mission_select",
+          "old": "0x240600FA",
+          "new": "0x2406015E",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x42614",
+          "function": "menu07_mission_select",
+          "old": "0x24E700AF",
+          "new": "0x24E700F3",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x42680",
+          "function": "menu07_mission_select",
+          "old": "0x240B0096",
+          "new": "0x240B00DA",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x42688",
+          "function": "menu07_mission_select",
+          "old": "0x240C011C",
+          "new": "0x240C0180",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x4272C",
+          "function": "menu07_mission_select",
+          "old": "0x240800AA",
+          "new": "0x240800EE",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x42730",
+          "function": "menu07_mission_select",
+          "old": "0x2409011C",
+          "new": "0x24090180",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x42748",
+          "function": "menu07_mission_select",
+          "old": "0x240B012A",
+          "new": "0x240B018E",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x4275C",
+          "function": "menu07_mission_select",
+          "old": "0x24050094",
+          "new": "0x240500D8",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x42760",
+          "function": "menu07_mission_select",
+          "old": "0x2406011A",
+          "new": "0x2406017E",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x42768",
+          "function": "menu07_mission_select",
+          "old": "0x24E700AF",
+          "new": "0x24E700F3",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        }
+      ],
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\txforce0.sav",
+          "target": "artifacts\\generated\\fotxm07draw.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\txforce0.eep",
+          "target": "artifacts\\generated\\fotxm07draw.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ]
+    },
+    {
+      "name": "fotxm08draw",
+      "purpose": "t90texstk plus difficulty-page draw coordinates only; cursor/control words stay TND.",
+      "base_rom": "artifacts\\generated\\txforce0.z64",
+      "base_md5": "b748f10857e646f7f9f4d04e2268dd65",
+      "out_rom": "artifacts\\generated\\fotxm08draw.z64",
+      "out_md5": "67a0e36ac89182d28920e266148d90b7",
+      "header_crc": "867759E9 58DC6290",
+      "patch_count": 18,
+      "changed_patch_count": 18,
+      "patches": [
+        {
+          "offset": "0x43634",
+          "function": "menu08_difficulty",
+          "old": "0x240E0037",
+          "new": "0x240E0050",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x43638",
+          "function": "menu08_difficulty",
+          "old": "0x240F0057",
+          "new": "0x240F007F",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x43728",
+          "function": "menu08_difficulty",
+          "old": "0x240E0037",
+          "new": "0x240E0050",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x4372C",
+          "function": "menu08_difficulty",
+          "old": "0x240F0067",
+          "new": "0x240F008F",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x4381C",
+          "function": "menu08_difficulty",
+          "old": "0x240E0037",
+          "new": "0x240E0050",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x43820",
+          "function": "menu08_difficulty",
+          "old": "0x240F0077",
+          "new": "0x240F009F",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x439AC",
+          "function": "menu08_difficulty",
+          "old": "0x240C0037",
+          "new": "0x240C0050",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x439B0",
+          "function": "menu08_difficulty",
+          "old": "0x240D008F",
+          "new": "0x240D00D0",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x43A48",
+          "function": "menu08_difficulty",
+          "old": "0x2419007E",
+          "new": "0x24190097",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x43A5C",
+          "function": "menu08_difficulty",
+          "old": "0x247800C3",
+          "new": "0x24780104",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x43A6C",
+          "function": "menu08_difficulty",
+          "old": "0x246600B2",
+          "new": "0x246600F3",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x43A78",
+          "function": "menu08_difficulty",
+          "old": "0x240700F0",
+          "new": "0x24070109",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x43ABC",
+          "function": "menu08_difficulty",
+          "old": "0x267300B4",
+          "new": "0x267300F5",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x43B68",
+          "function": "menu08_difficulty",
+          "old": "0x240B0082",
+          "new": "0x240B009B",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x43C04",
+          "function": "menu08_difficulty",
+          "old": "0x240F0096",
+          "new": "0x240F00AF",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x43C44",
+          "function": "menu08_difficulty",
+          "old": "0x240F0096",
+          "new": "0x240F00AF",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x43D04",
+          "function": "menu08_difficulty",
+          "old": "0x258D00BA",
+          "new": "0x258D00FB",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x43D0C",
+          "function": "menu08_difficulty",
+          "old": "0x3C01438C",
+          "new": "0x3C014399",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        }
+      ],
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\txforce0.sav",
+          "target": "artifacts\\generated\\fotxm08draw.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\txforce0.eep",
+          "target": "artifacts\\generated\\fotxm08draw.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ]
+    },
+    {
+      "name": "fotxmstxt",
+      "purpose": "t90texstk plus the narrow mission-select text/grid direct group only.",
+      "base_rom": "artifacts\\generated\\txforce0.z64",
+      "base_md5": "b748f10857e646f7f9f4d04e2268dd65",
+      "out_rom": "artifacts\\generated\\fotxmstxt.z64",
+      "out_md5": "ee9dfa4aca8cbf17460364be02bd522c",
+      "header_crc": "86775CAB 0E6D183A",
+      "patch_count": 4,
+      "changed_patch_count": 4,
+      "patches": [
+        {
+          "offset": "0x43148",
+          "function": "J_mission_select_text_480i",
+          "old": "0x24C6001D",
+          "new": "0x24C6002A",
+          "changed": true,
+          "source": "DIRECT_PATCH_GROUPS.J_mission_select_text_480i",
+          "note": "mission select text/grid y offset"
+        },
+        {
+          "offset": "0x43150",
+          "function": "J_mission_select_text_480i",
+          "old": "0x24A5FFE1",
+          "new": "0x24A5FFD3",
+          "changed": true,
+          "source": "DIRECT_PATCH_GROUPS.J_mission_select_text_480i",
+          "note": "mission select text/grid x offset"
+        },
+        {
+          "offset": "0x431E0",
+          "function": "J_mission_select_text_480i",
+          "old": "0x24C6001D",
+          "new": "0x24C6002A",
+          "changed": true,
+          "source": "DIRECT_PATCH_GROUPS.J_mission_select_text_480i",
+          "note": "mission select text/grid y offset repeat"
+        },
+        {
+          "offset": "0x431E4",
+          "function": "J_mission_select_text_480i",
+          "old": "0x24A5FFE1",
+          "new": "0x24A5FFD3",
+          "changed": true,
+          "source": "DIRECT_PATCH_GROUPS.J_mission_select_text_480i",
+          "note": "mission select text/grid x offset repeat"
+        }
+      ],
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\txforce0.sav",
+          "target": "artifacts\\generated\\fotxmstxt.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\txforce0.eep",
+          "target": "artifacts\\generated\\fotxmstxt.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ]
+    },
+    {
+      "name": "fotxdossdraw",
+      "purpose": "t90texstk dossier draw pass: mode, mission, difficulty draw words plus briefing wraps.",
+      "base_rom": "artifacts\\generated\\txforce0.z64",
+      "base_md5": "b748f10857e646f7f9f4d04e2268dd65",
+      "out_rom": "artifacts\\generated\\fotxdossdraw.z64",
+      "out_md5": "76965d33599384ff40b91ba89086615c",
+      "header_crc": "868B8DBE 435B6EA6",
+      "patch_count": 61,
+      "changed_patch_count": 61,
+      "patches": [
+        {
+          "offset": "0x41F54",
+          "function": "menu06_mode_select",
+          "old": "0x3C018005",
+          "new": "0x3C0143BC",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x41F58",
+          "function": "menu06_mode_select",
+          "old": "0xC4261A40",
+          "new": "0x44813000",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x41FB0",
+          "function": "menu06_mode_select",
+          "old": "0x3C014373",
+          "new": "0x3C0143AC",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x4238C",
+          "function": "menu07_mission_select",
+          "old": "0x240E0096",
+          "new": "0x240E00DA",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x42390",
+          "function": "menu07_mission_select",
+          "old": "0x240F00DC",
+          "new": "0x240F0140",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x42454",
+          "function": "menu07_mission_select",
+          "old": "0x240C00AA",
+          "new": "0x240C00EE",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x42458",
+          "function": "menu07_mission_select",
+          "old": "0x240D00DC",
+          "new": "0x240D0140",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x4246C",
+          "function": "menu07_mission_select",
+          "old": "0x240F00EA",
+          "new": "0x240F014E",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x42480",
+          "function": "menu07_mission_select",
+          "old": "0x24050094",
+          "new": "0x240500D8",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x42484",
+          "function": "menu07_mission_select",
+          "old": "0x240600DA",
+          "new": "0x2406013E",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x4248C",
+          "function": "menu07_mission_select",
+          "old": "0x24E700AF",
+          "new": "0x24E700F3",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x424EC",
+          "function": "menu07_mission_select",
+          "old": "0x240B0096",
+          "new": "0x240B00DA",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x424F0",
+          "function": "menu07_mission_select",
+          "old": "0x240C00FC",
+          "new": "0x240C0160",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x425D8",
+          "function": "menu07_mission_select",
+          "old": "0x240B00AA",
+          "new": "0x240B00EE",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x425DC",
+          "function": "menu07_mission_select",
+          "old": "0x240C00FC",
+          "new": "0x240C0160",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x425F4",
+          "function": "menu07_mission_select",
+          "old": "0x240E010A",
+          "new": "0x240E016E",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x42608",
+          "function": "menu07_mission_select",
+          "old": "0x24050094",
+          "new": "0x240500D8",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x4260C",
+          "function": "menu07_mission_select",
+          "old": "0x240600FA",
+          "new": "0x2406015E",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x42614",
+          "function": "menu07_mission_select",
+          "old": "0x24E700AF",
+          "new": "0x24E700F3",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x42680",
+          "function": "menu07_mission_select",
+          "old": "0x240B0096",
+          "new": "0x240B00DA",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x42688",
+          "function": "menu07_mission_select",
+          "old": "0x240C011C",
+          "new": "0x240C0180",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x4272C",
+          "function": "menu07_mission_select",
+          "old": "0x240800AA",
+          "new": "0x240800EE",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x42730",
+          "function": "menu07_mission_select",
+          "old": "0x2409011C",
+          "new": "0x24090180",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x42748",
+          "function": "menu07_mission_select",
+          "old": "0x240B012A",
+          "new": "0x240B018E",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x4275C",
+          "function": "menu07_mission_select",
+          "old": "0x24050094",
+          "new": "0x240500D8",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x42760",
+          "function": "menu07_mission_select",
+          "old": "0x2406011A",
+          "new": "0x2406017E",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x42768",
+          "function": "menu07_mission_select",
+          "old": "0x24E700AF",
+          "new": "0x24E700F3",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x43634",
+          "function": "menu08_difficulty",
+          "old": "0x240E0037",
+          "new": "0x240E0050",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x43638",
+          "function": "menu08_difficulty",
+          "old": "0x240F0057",
+          "new": "0x240F007F",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x43728",
+          "function": "menu08_difficulty",
+          "old": "0x240E0037",
+          "new": "0x240E0050",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x4372C",
+          "function": "menu08_difficulty",
+          "old": "0x240F0067",
+          "new": "0x240F008F",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x4381C",
+          "function": "menu08_difficulty",
+          "old": "0x240E0037",
+          "new": "0x240E0050",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x43820",
+          "function": "menu08_difficulty",
+          "old": "0x240F0077",
+          "new": "0x240F009F",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x439AC",
+          "function": "menu08_difficulty",
+          "old": "0x240C0037",
+          "new": "0x240C0050",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x439B0",
+          "function": "menu08_difficulty",
+          "old": "0x240D008F",
+          "new": "0x240D00D0",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x43A48",
+          "function": "menu08_difficulty",
+          "old": "0x2419007E",
+          "new": "0x24190097",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x43A5C",
+          "function": "menu08_difficulty",
+          "old": "0x247800C3",
+          "new": "0x24780104",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x43A6C",
+          "function": "menu08_difficulty",
+          "old": "0x246600B2",
+          "new": "0x246600F3",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x43A78",
+          "function": "menu08_difficulty",
+          "old": "0x240700F0",
+          "new": "0x24070109",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x43ABC",
+          "function": "menu08_difficulty",
+          "old": "0x267300B4",
+          "new": "0x267300F5",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x43B68",
+          "function": "menu08_difficulty",
+          "old": "0x240B0082",
+          "new": "0x240B009B",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x43C04",
+          "function": "menu08_difficulty",
+          "old": "0x240F0096",
+          "new": "0x240F00AF",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x43C44",
+          "function": "menu08_difficulty",
+          "old": "0x240F0096",
+          "new": "0x240F00AF",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x43D04",
+          "function": "menu08_difficulty",
+          "old": "0x258D00BA",
+          "new": "0x258D00FB",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x43D0C",
+          "function": "menu08_difficulty",
+          "old": "0x3C01438C",
+          "new": "0x3C014399",
+          "changed": true,
+          "source": "tnd480i_gbslow_menu05_09_safe_20260511_report.json",
+          "note": ""
+        },
+        {
+          "offset": "0x454E8",
+          "function": "brief_wrap",
+          "old": "0x28410119",
+          "new": "0x28410144",
+          "changed": true,
+          "source": "fullrom_safe_ge480_words_missing_current_20260510.json",
+          "note": "briefing/objective GE480i text wrap threshold"
+        },
+        {
+          "offset": "0x454F0",
+          "function": "brief_wrap",
+          "old": "0x28410105",
+          "new": "0x28410130",
+          "changed": true,
+          "source": "fullrom_safe_ge480_words_missing_current_20260510.json",
+          "note": "briefing/objective GE480i text wrap threshold"
+        },
+        {
+          "offset": "0x45504",
+          "function": "brief_wrap",
+          "old": "0x28410105",
+          "new": "0x28410130",
+          "changed": true,
+          "source": "fullrom_safe_ge480_words_missing_current_20260510.json",
+          "note": "briefing/objective GE480i text wrap threshold"
+        },
+        {
+          "offset": "0x45510",
+          "function": "brief_wrap",
+          "old": "0x28410105",
+          "new": "0x28410130",
+          "changed": true,
+          "source": "fullrom_safe_ge480_words_missing_current_20260510.json",
+          "note": "briefing/objective GE480i text wrap threshold"
+        },
+        {
+          "offset": "0x4552C",
+          "function": "brief_wrap",
+          "old": "0x284100F1",
+          "new": "0x2841011C",
+          "changed": true,
+          "source": "fullrom_safe_ge480_words_missing_current_20260510.json",
+          "note": "briefing/objective GE480i text wrap threshold"
+        },
+        {
+          "offset": "0x45538",
+          "function": "brief_wrap",
+          "old": "0x284100F1",
+          "new": "0x2841011C",
+          "changed": true,
+          "source": "fullrom_safe_ge480_words_missing_current_20260510.json",
+          "note": "briefing/objective GE480i text wrap threshold"
+        },
+        {
+          "offset": "0x45554",
+          "function": "brief_wrap",
+          "old": "0x284100DD",
+          "new": "0x28410108",
+          "changed": true,
+          "source": "fullrom_safe_ge480_words_missing_current_20260510.json",
+          "note": "briefing/objective GE480i text wrap threshold"
+        },
+        {
+          "offset": "0x45560",
+          "function": "brief_wrap",
+          "old": "0x284100DD",
+          "new": "0x28410108",
+          "changed": true,
+          "source": "fullrom_safe_ge480_words_missing_current_20260510.json",
+          "note": "briefing/objective GE480i text wrap threshold"
+        },
+        {
+          "offset": "0x4557C",
+          "function": "brief_wrap",
+          "old": "0x284100C9",
+          "new": "0x284100F4",
+          "changed": true,
+          "source": "fullrom_safe_ge480_words_missing_current_20260510.json",
+          "note": "briefing/objective GE480i text wrap threshold"
+        },
+        {
+          "offset": "0x45588",
+          "function": "brief_wrap",
+          "old": "0x284100C9",
+          "new": "0x284100F4",
+          "changed": true,
+          "source": "fullrom_safe_ge480_words_missing_current_20260510.json",
+          "note": "briefing/objective GE480i text wrap threshold"
+        },
+        {
+          "offset": "0x455A4",
+          "function": "brief_wrap",
+          "old": "0x284100B5",
+          "new": "0x284100E0",
+          "changed": true,
+          "source": "fullrom_safe_ge480_words_missing_current_20260510.json",
+          "note": "briefing/objective GE480i text wrap threshold"
+        },
+        {
+          "offset": "0x455B0",
+          "function": "brief_wrap",
+          "old": "0x284100B5",
+          "new": "0x284100E0",
+          "changed": true,
+          "source": "fullrom_safe_ge480_words_missing_current_20260510.json",
+          "note": "briefing/objective GE480i text wrap threshold"
+        },
+        {
+          "offset": "0x455CC",
+          "function": "brief_wrap",
+          "old": "0x284100A1",
+          "new": "0x284100CC",
+          "changed": true,
+          "source": "fullrom_safe_ge480_words_missing_current_20260510.json",
+          "note": "briefing/objective GE480i text wrap threshold"
+        },
+        {
+          "offset": "0x455D8",
+          "function": "brief_wrap",
+          "old": "0x284100A1",
+          "new": "0x284100CC",
+          "changed": true,
+          "source": "fullrom_safe_ge480_words_missing_current_20260510.json",
+          "note": "briefing/objective GE480i text wrap threshold"
+        },
+        {
+          "offset": "0x455F4",
+          "function": "brief_wrap",
+          "old": "0x2841008D",
+          "new": "0x284100B8",
+          "changed": true,
+          "source": "fullrom_safe_ge480_words_missing_current_20260510.json",
+          "note": "briefing/objective GE480i text wrap threshold"
+        },
+        {
+          "offset": "0x45600",
+          "function": "brief_wrap",
+          "old": "0x2841008D",
+          "new": "0x284100B8",
+          "changed": true,
+          "source": "fullrom_safe_ge480_words_missing_current_20260510.json",
+          "note": "briefing/objective GE480i text wrap threshold"
+        }
+      ],
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\txforce0.sav",
+          "target": "artifacts\\generated\\fotxdossdraw.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\txforce0.eep",
+          "target": "artifacts\\generated\\fotxdossdraw.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ]
+    }
+  ]
+}

@@ -204,6 +204,23 @@ The file-select, mode-select, and mission-select pages line up with stock TND64'
 
 Current SC64 upload after this follow-up: `artifacts/generated/t90texstk.z64`, direct boot, EEPROM 4k save. A final Kasa launch-confirm capture reached CMK/logos/gunbarrel, so the console is running the current candidate rather than merely staging it. This is the next front-end/gunbarrel test candidate; if gameplay/all-level boot regresses, restore the protected gameplay baseline `t90viewge`.
 
+2026-05-18 dossier hardware follow-up after workflow correction:
+
+```text
+scripts/build_dossier_hardware_matrix.py
+scripts/build_t90tex_front_gate_candidates.py
+scripts/build_t90tex_dossier_drawpath_candidates.py
+reports/dossier_drawpath_candidate_matrix_20260518.json
+reports/dossier_mode_drawpath_split_matrix_20260518.json
+reports/dossier_mission_drawpath_split_matrix_20260518.json
+reports/dossier_front_gate_file_matrix_20260518.json
+reports/dossier_force0_matrix_20260518.json
+reports/dossier_force0_layout_matrix_20260518.json
+diagnostics/captures/contact_sheets/dossier_force0_layout_matrix_20260518/sheet.jpg
+```
+
+Hardware matrix result: `txdossierdraw2`, `txmodepos2`, `txmissionhelper`, and `txmissionfull` are rejected/non-promote on `t90texstk`; they do not match GE480i scale and `txmodepos2` hides mode text. The front/menu gate probes found one useful diagnostic: `txforce0` (`0x4F1B8 -> 0x00008025`) moves file/mode/mission pages into a smaller scale class closer to GE480i, but it leaves a gray uncleared lower region and breaks or misplaces text. Combining `txforce0` with `filefull`, corrected `modepos2`, or `missionfull` improves some placements, especially mode text visibility, but still is not promotable. The next target is the table-driven front/menu `viSetAspect`/`viSetXY`/`viSetBuf` path and its clear/background dimensions, not more standalone coordinate transplants. SC64 was restored to `artifacts/generated/t90texstk.z64` after these diagnostics.
+
 GE hi-res patch reference note from user: the original GoldenEye hi-res patch credits Zoinkity's 7 MB RAM extension, moves two 640x480 framebuffers to upper RAM, and adjusts related GoldenEye assembly plus VI settings. Treat that as confirmation that the target is a coordinated RAM-layout/framebuffer/VI/assembly patch, not a loose set of resolution constants. This aligns with the TND90 breakthrough: preserving a large TLB/page-cache range while relocating it away from the expanded framebuffers mattered as much as the visible 480i constants.
 
 ## Current Performance Finding

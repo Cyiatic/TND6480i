@@ -1,0 +1,162 @@
+{
+  "base_rom": "artifacts\\generated\\txfilealloc.z64",
+  "base_md5": "40b5a19da34727ab8c948b11ac4d07b6",
+  "purpose": "No-input hardware route probes for front/dossier pages; do not promote over gameplay baseline.",
+  "routes": [
+    {
+      "name": "fiauto05",
+      "menu_id": 5,
+      "symbol": "MENU_FILE_SELECT",
+      "purpose": "File select / save folders",
+      "base_rom": "artifacts\\generated\\txfilealloc.z64",
+      "out_rom": "artifacts\\generated\\fiauto05.z64",
+      "out_md5": "7496029b92fc20f68f98dd8433dd5d8b",
+      "header_crc": "84684ACF 3FCBC838",
+      "patch": {
+        "offset": "0x3FF34",
+        "old": "0x24040018",
+        "new": "0x24040005",
+        "note": "After the TND title/logo timeout, route directly to MENU_FILE_SELECT."
+      },
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\txfilealloc.sav",
+          "target": "artifacts\\generated\\fiauto05.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\txfilealloc.eep",
+          "target": "artifacts\\generated\\fiauto05.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ],
+      "do_not_promote": true
+    },
+    {
+      "name": "fiauto06",
+      "menu_id": 6,
+      "symbol": "MENU_MODE_SELECT",
+      "purpose": "Single-player / multiplayer / cheat select",
+      "base_rom": "artifacts\\generated\\txfilealloc.z64",
+      "out_rom": "artifacts\\generated\\fiauto06.z64",
+      "out_md5": "bd83b6333bead341c47deba915c54c2d",
+      "header_crc": "84684ACD B9068E63",
+      "patch": {
+        "offset": "0x3FF34",
+        "old": "0x24040018",
+        "new": "0x24040006",
+        "note": "After the TND title/logo timeout, route directly to MENU_MODE_SELECT."
+      },
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\txfilealloc.sav",
+          "target": "artifacts\\generated\\fiauto06.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\txfilealloc.eep",
+          "target": "artifacts\\generated\\fiauto06.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ],
+      "do_not_promote": true
+    },
+    {
+      "name": "fiauto07",
+      "menu_id": 7,
+      "symbol": "MENU_MISSION_SELECT",
+      "purpose": "Mission select dossier",
+      "base_rom": "artifacts\\generated\\txfilealloc.z64",
+      "out_rom": "artifacts\\generated\\fiauto07.z64",
+      "out_md5": "690c93bc305f126e6e3388c158b9aa58",
+      "header_crc": "84684ACF FCFBFF70",
+      "patch": {
+        "offset": "0x3FF34",
+        "old": "0x24040018",
+        "new": "0x24040007",
+        "note": "After the TND title/logo timeout, route directly to MENU_MISSION_SELECT."
+      },
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\txfilealloc.sav",
+          "target": "artifacts\\generated\\fiauto07.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\txfilealloc.eep",
+          "target": "artifacts\\generated\\fiauto07.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ],
+      "do_not_promote": true
+    },
+    {
+      "name": "fiauto08",
+      "menu_id": 8,
+      "symbol": "MENU_DIFFICULTY",
+      "purpose": "Difficulty select dossier",
+      "base_rom": "artifacts\\generated\\txfilealloc.z64",
+      "out_rom": "artifacts\\generated\\fiauto08.z64",
+      "out_md5": "ed7a9c3b5993c209298c90a1a0130c44",
+      "header_crc": "84684AC1 F7E2CEE6",
+      "patch": {
+        "offset": "0x3FF34",
+        "old": "0x24040018",
+        "new": "0x24040008",
+        "note": "After the TND title/logo timeout, route directly to MENU_DIFFICULTY."
+      },
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\txfilealloc.sav",
+          "target": "artifacts\\generated\\fiauto08.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\txfilealloc.eep",
+          "target": "artifacts\\generated\\fiauto08.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ],
+      "do_not_promote": true
+    },
+    {
+      "name": "fiauto0a",
+      "menu_id": 10,
+      "symbol": "MENU_BRIEFING",
+      "purpose": "Mission briefing dossier",
+      "base_rom": "artifacts\\generated\\txfilealloc.z64",
+      "out_rom": "artifacts\\generated\\fiauto0a.z64",
+      "out_md5": "bb97db43fef7d9e531dbdceb48a235b9",
+      "header_crc": "84684AC5 E5A4C4A0",
+      "patch": {
+        "offset": "0x3FF34",
+        "old": "0x24040018",
+        "new": "0x2404000A",
+        "note": "After the TND title/logo timeout, route directly to MENU_BRIEFING."
+      },
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\txfilealloc.sav",
+          "target": "artifacts\\generated\\fiauto0a.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\txfilealloc.eep",
+          "target": "artifacts\\generated\\fiauto0a.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ],
+      "do_not_promote": true
+    }
+  ]
+}

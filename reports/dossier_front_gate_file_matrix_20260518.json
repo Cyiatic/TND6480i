@@ -1,0 +1,83 @@
+{
+  "sheet": "diagnostics\\captures\\contact_sheets\\dossier_front_gate_file_matrix_20260518\\sheet.jpg",
+  "baseline_frames": "diagnostics\\captures\\contact_sheets\\dossier_page_matrix_20260518\\frames",
+  "rows": [
+    "File Select"
+  ],
+  "columns": [
+    "GE480i reference",
+    "Current t90tex",
+    "txskipfb",
+    "txgate",
+    "txfrontz",
+    "txzgate"
+  ],
+  "entries": [
+    {
+      "page": "File Select",
+      "source": "GE480i reference",
+      "path": "diagnostics\\captures\\contact_sheets\\dossier_front_gate_file_matrix_20260518\\frames\\File_Select__GE480i_reference.png",
+      "capture": {
+        "ok": true,
+        "copied": true
+      }
+    },
+    {
+      "page": "File Select",
+      "source": "Current t90tex",
+      "path": "diagnostics\\captures\\contact_sheets\\dossier_front_gate_file_matrix_20260518\\frames\\File_Select__Current_t90tex.png",
+      "capture": {
+        "ok": true,
+        "copied": true
+      }
+    },
+    {
+      "page": "File Select",
+      "source": "txskipfb",
+      "video": "diagnostics\\captures\\videos\\skauto05_file_select_probe_cycled_20260518.mp4",
+      "seconds": 55.0,
+      "path": "diagnostics\\captures\\contact_sheets\\dossier_front_gate_file_matrix_20260518\\frames\\File_Select__txskipfb.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      }
+    },
+    {
+      "page": "File Select",
+      "source": "txgate",
+      "video": "diagnostics\\captures\\videos\\gtauto05_file_select_probe_cycled_20260518.mp4",
+      "seconds": 61.0,
+      "path": "diagnostics\\captures\\contact_sheets\\dossier_front_gate_file_matrix_20260518\\frames\\File_Select__txgate.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      }
+    },
+    {
+      "page": "File Select",
+      "source": "txfrontz",
+      "video": "diagnostics\\captures\\videos\\fzauto05_file_select_probe_cycled_20260518.mp4",
+      "seconds": 55.0,
+      "path": "diagnostics\\captures\\contact_sheets\\dossier_front_gate_file_matrix_20260518\\frames\\File_Select__txfrontz.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      }
+    },
+    {
+      "page": "File Select",
+      "source": "txzgate",
+      "video": "diagnostics\\captures\\videos\\zgauto05_file_select_probe_cycled_20260518.mp4",
+      "seconds": 55.0,
+      "path": "diagnostics\\captures\\contact_sheets\\dossier_front_gate_file_matrix_20260518\\frames\\File_Select__txzgate.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      }
+    }
+  ]
+}

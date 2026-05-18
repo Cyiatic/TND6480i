@@ -1,0 +1,231 @@
+{
+  "base_rom": "artifacts\\generated\\t90texstk.z64",
+  "base_md5": "9a3a600850585864be1fff8640548165",
+  "purpose": "Narrow front/menu framebuffer gate probes on stable t90texstk; capture on hardware against GE480i before promotion.",
+  "candidates": [
+    {
+      "name": "txskipfb",
+      "purpose": "Keep t90texstk but skip the menu-framebuffer swap gate at 0x4F1C4.",
+      "groups": [
+        "J_front_skip_menu_framebuf_swap"
+      ],
+      "base_rom": "artifacts\\generated\\t90texstk.z64",
+      "base_md5": "9a3a600850585864be1fff8640548165",
+      "out_rom": "artifacts\\generated\\txskipfb.z64",
+      "out_md5": "05e4bec1793ac2ffdd388f898e610146",
+      "header_crc": "87870AD1 F0C80461",
+      "patch_count": 1,
+      "changed_patch_count": 1,
+      "patches": [
+        {
+          "offset": "0x4F1C4",
+          "old": "0x14580003",
+          "new": "0x10000003",
+          "changed": true,
+          "group": "J_front_skip_menu_framebuf_swap",
+          "note": "skip front/menu switch to ptr_menu_videobuffer before applying current table dimensions"
+        }
+      ],
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\t90texstk.sav",
+          "target": "artifacts\\generated\\txskipfb.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\t90texstk.eep",
+          "target": "artifacts\\generated\\txskipfb.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ]
+    },
+    {
+      "name": "txforce0",
+      "purpose": "Keep t90texstk but force the front/menu VI table index to 0.",
+      "groups": [
+        "J_front_force_menu_table0_480i"
+      ],
+      "base_rom": "artifacts\\generated\\t90texstk.z64",
+      "base_md5": "9a3a600850585864be1fff8640548165",
+      "out_rom": "artifacts\\generated\\txforce0.z64",
+      "out_md5": "b748f10857e646f7f9f4d04e2268dd65",
+      "header_crc": "86775CA9 221AADF2",
+      "patch_count": 1,
+      "changed_patch_count": 1,
+      "patches": [
+        {
+          "offset": "0x4F1B8",
+          "old": "0x8D10A940",
+          "new": "0x00008025",
+          "changed": true,
+          "group": "J_front_force_menu_table0_480i",
+          "note": "force front/menu VI setup to use table entry 0 (current 640x480)"
+        }
+      ],
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\t90texstk.sav",
+          "target": "artifacts\\generated\\txforce0.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\t90texstk.eep",
+          "target": "artifacts\\generated\\txforce0.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ]
+    },
+    {
+      "name": "txgate",
+      "purpose": "Force menu table 0 and skip the menu-framebuffer swap together.",
+      "groups": [
+        "J_front_force_menu_table0_480i",
+        "J_front_skip_menu_framebuf_swap"
+      ],
+      "base_rom": "artifacts\\generated\\t90texstk.z64",
+      "base_md5": "9a3a600850585864be1fff8640548165",
+      "out_rom": "artifacts\\generated\\txgate.z64",
+      "out_md5": "ce10464e577a09a12b5be17263991d99",
+      "header_crc": "9F875CA9 2E488B3D",
+      "patch_count": 2,
+      "changed_patch_count": 2,
+      "patches": [
+        {
+          "offset": "0x4F1B8",
+          "old": "0x8D10A940",
+          "new": "0x00008025",
+          "changed": true,
+          "group": "J_front_force_menu_table0_480i",
+          "note": "force front/menu VI setup to use table entry 0 (current 640x480)"
+        },
+        {
+          "offset": "0x4F1C4",
+          "old": "0x14580003",
+          "new": "0x10000003",
+          "changed": true,
+          "group": "J_front_skip_menu_framebuf_swap",
+          "note": "skip front/menu switch to ptr_menu_videobuffer before applying current table dimensions"
+        }
+      ],
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\t90texstk.sav",
+          "target": "artifacts\\generated\\txgate.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\t90texstk.eep",
+          "target": "artifacts\\generated\\txgate.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ]
+    },
+    {
+      "name": "txfrontz",
+      "purpose": "Keep t90texstk but change only the front zbuffer dimensions to 640x480.",
+      "groups": [
+        "J_front_zbuffer_480i"
+      ],
+      "base_rom": "artifacts\\generated\\t90texstk.z64",
+      "base_md5": "9a3a600850585864be1fff8640548165",
+      "out_rom": "artifacts\\generated\\txfrontz.z64",
+      "out_md5": "8c03b59dea238334bf8ac05dfb28ceb8",
+      "header_crc": "84770821 7916AAA9",
+      "patch_count": 2,
+      "changed_patch_count": 2,
+      "patches": [
+        {
+          "offset": "0x4D42C",
+          "old": "0x240501B8",
+          "new": "0x24050280",
+          "changed": true,
+          "group": "J_front_zbuffer_480i",
+          "note": "front zbuffer width 640"
+        },
+        {
+          "offset": "0x4D434",
+          "old": "0x2406014A",
+          "new": "0x240601E0",
+          "changed": true,
+          "group": "J_front_zbuffer_480i",
+          "note": "front zbuffer height 480"
+        }
+      ],
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\t90texstk.sav",
+          "target": "artifacts\\generated\\txfrontz.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\t90texstk.eep",
+          "target": "artifacts\\generated\\txfrontz.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ]
+    },
+    {
+      "name": "txzgate",
+      "purpose": "Front zbuffer 640x480 plus skip-menu-framebuffer-swap gate.",
+      "groups": [
+        "J_front_zbuffer_480i",
+        "J_front_skip_menu_framebuf_swap"
+      ],
+      "base_rom": "artifacts\\generated\\t90texstk.z64",
+      "base_md5": "9a3a600850585864be1fff8640548165",
+      "out_rom": "artifacts\\generated\\txzgate.z64",
+      "out_md5": "d266ea354639f05bbc3ba6cce4ab31f2",
+      "header_crc": "87870821 F1238722",
+      "patch_count": 3,
+      "changed_patch_count": 3,
+      "patches": [
+        {
+          "offset": "0x4D42C",
+          "old": "0x240501B8",
+          "new": "0x24050280",
+          "changed": true,
+          "group": "J_front_zbuffer_480i",
+          "note": "front zbuffer width 640"
+        },
+        {
+          "offset": "0x4D434",
+          "old": "0x2406014A",
+          "new": "0x240601E0",
+          "changed": true,
+          "group": "J_front_zbuffer_480i",
+          "note": "front zbuffer height 480"
+        },
+        {
+          "offset": "0x4F1C4",
+          "old": "0x14580003",
+          "new": "0x10000003",
+          "changed": true,
+          "group": "J_front_skip_menu_framebuf_swap",
+          "note": "skip front/menu switch to ptr_menu_videobuffer before applying current table dimensions"
+        }
+      ],
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\t90texstk.sav",
+          "target": "artifacts\\generated\\txzgate.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\t90texstk.eep",
+          "target": "artifacts\\generated\\txzgate.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ]
+    }
+  ]
+}

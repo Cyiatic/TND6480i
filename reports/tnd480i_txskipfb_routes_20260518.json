@@ -1,0 +1,162 @@
+{
+  "base_rom": "artifacts\\generated\\txskipfb.z64",
+  "base_md5": "05e4bec1793ac2ffdd388f898e610146",
+  "purpose": "No-input hardware route probes for front/dossier pages; do not promote over gameplay baseline.",
+  "routes": [
+    {
+      "name": "skauto05",
+      "menu_id": 5,
+      "symbol": "MENU_FILE_SELECT",
+      "purpose": "File select / save folders",
+      "base_rom": "artifacts\\generated\\txskipfb.z64",
+      "out_rom": "artifacts\\generated\\skauto05.z64",
+      "out_md5": "e5a128f197f0728040f7ee9a9ab2b291",
+      "header_crc": "87870AD9 0A78F317",
+      "patch": {
+        "offset": "0x3FF34",
+        "old": "0x24040018",
+        "new": "0x24040005",
+        "note": "After the TND title/logo timeout, route directly to MENU_FILE_SELECT."
+      },
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\txskipfb.sav",
+          "target": "artifacts\\generated\\skauto05.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\txskipfb.eep",
+          "target": "artifacts\\generated\\skauto05.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ],
+      "do_not_promote": true
+    },
+    {
+      "name": "skauto06",
+      "menu_id": 6,
+      "symbol": "MENU_MODE_SELECT",
+      "purpose": "Single-player / multiplayer / cheat select",
+      "base_rom": "artifacts\\generated\\txskipfb.z64",
+      "out_rom": "artifacts\\generated\\skauto06.z64",
+      "out_md5": "35d039e31d461c5c95bcfb37233bb476",
+      "header_crc": "87870ADD 06DE321C",
+      "patch": {
+        "offset": "0x3FF34",
+        "old": "0x24040018",
+        "new": "0x24040006",
+        "note": "After the TND title/logo timeout, route directly to MENU_MODE_SELECT."
+      },
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\txskipfb.sav",
+          "target": "artifacts\\generated\\skauto06.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\txskipfb.eep",
+          "target": "artifacts\\generated\\skauto06.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ],
+      "do_not_promote": true
+    },
+    {
+      "name": "skauto07",
+      "menu_id": 7,
+      "symbol": "MENU_MISSION_SELECT",
+      "purpose": "Mission select dossier",
+      "base_rom": "artifacts\\generated\\txskipfb.z64",
+      "out_rom": "artifacts\\generated\\skauto07.z64",
+      "out_md5": "3a36f3c99eaeac17d071f07b44387266",
+      "header_crc": "87870ADD 24A843F6",
+      "patch": {
+        "offset": "0x3FF34",
+        "old": "0x24040018",
+        "new": "0x24040007",
+        "note": "After the TND title/logo timeout, route directly to MENU_MISSION_SELECT."
+      },
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\txskipfb.sav",
+          "target": "artifacts\\generated\\skauto07.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\txskipfb.eep",
+          "target": "artifacts\\generated\\skauto07.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ],
+      "do_not_promote": true
+    },
+    {
+      "name": "skauto08",
+      "menu_id": 8,
+      "symbol": "MENU_DIFFICULTY",
+      "purpose": "Difficulty select dossier",
+      "base_rom": "artifacts\\generated\\txskipfb.z64",
+      "out_rom": "artifacts\\generated\\skauto08.z64",
+      "out_md5": "de134686b1e0804f5a2b7fca44663d87",
+      "header_crc": "87870AD1 1F9789B0",
+      "patch": {
+        "offset": "0x3FF34",
+        "old": "0x24040018",
+        "new": "0x24040008",
+        "note": "After the TND title/logo timeout, route directly to MENU_DIFFICULTY."
+      },
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\txskipfb.sav",
+          "target": "artifacts\\generated\\skauto08.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\txskipfb.eep",
+          "target": "artifacts\\generated\\skauto08.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ],
+      "do_not_promote": true
+    },
+    {
+      "name": "skauto0a",
+      "menu_id": 10,
+      "symbol": "MENU_BRIEFING",
+      "purpose": "Mission briefing dossier",
+      "base_rom": "artifacts\\generated\\txskipfb.z64",
+      "out_rom": "artifacts\\generated\\skauto0a.z64",
+      "out_md5": "c8c8de4c05dd15ba61c4244784f407ff",
+      "header_crc": "87870ACD 22D8D9A5",
+      "patch": {
+        "offset": "0x3FF34",
+        "old": "0x24040018",
+        "new": "0x2404000A",
+        "note": "After the TND title/logo timeout, route directly to MENU_BRIEFING."
+      },
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\txskipfb.sav",
+          "target": "artifacts\\generated\\skauto0a.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\txskipfb.eep",
+          "target": "artifacts\\generated\\skauto0a.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ],
+      "do_not_promote": true
+    }
+  ]
+}

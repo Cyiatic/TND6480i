@@ -1,0 +1,138 @@
+{
+  "base_rom": "artifacts\\generated\\t90texstk.z64",
+  "base_md5": "9a3a600850585864be1fff8640548165",
+  "purpose": "Narrow GE480i front/menu allocation probes on stable t90texstk; candidates must be console-captured and compared to GE480i before promotion.",
+  "candidates": [
+    {
+      "name": "txfrontalloc",
+      "purpose": "Apply only the GE480i front-end heap reservation at 0x3FC90/0x3FC94.",
+      "base_rom": "artifacts\\generated\\t90texstk.z64",
+      "base_md5": "9a3a600850585864be1fff8640548165",
+      "out_rom": "artifacts\\generated\\txfrontalloc.z64",
+      "out_md5": "4348a71c6c860fb669592860c577af96",
+      "header_crc": "84778AE1 7E51A44B",
+      "patches": [
+        {
+          "offset": "0x3FC90",
+          "old": "0x3C050007",
+          "new": "0x3C05000B",
+          "changed": true,
+          "note": "front heap reservation upper, GE480i 0xBE200"
+        },
+        {
+          "offset": "0x3FC94",
+          "old": "0x34A58000",
+          "new": "0x34A5E200",
+          "changed": true,
+          "note": "front heap reservation lower, GE480i 0xBE200"
+        }
+      ],
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\t90texstk.sav",
+          "target": "artifacts\\generated\\txfrontalloc.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\t90texstk.eep",
+          "target": "artifacts\\generated\\txfrontalloc.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ]
+    },
+    {
+      "name": "txfilealloc",
+      "purpose": "Apply only the GE480i file-select/menu allocation at 0x40540/0x40544.",
+      "base_rom": "artifacts\\generated\\t90texstk.z64",
+      "base_md5": "9a3a600850585864be1fff8640548165",
+      "out_rom": "artifacts\\generated\\txfilealloc.z64",
+      "out_md5": "40b5a19da34727ab8c948b11ac4d07b6",
+      "header_crc": "84684AE1 4B92B98E",
+      "patches": [
+        {
+          "offset": "0x40540",
+          "old": "0x3C0E0006",
+          "new": "0x3C0E000B",
+          "changed": true,
+          "note": "file/menu allocation upper, GE480i 0xB4200"
+        },
+        {
+          "offset": "0x40544",
+          "old": "0x35CEE000",
+          "new": "0x35CE4200",
+          "changed": true,
+          "note": "file/menu allocation lower, GE480i 0xB4200"
+        }
+      ],
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\t90texstk.sav",
+          "target": "artifacts\\generated\\txfilealloc.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\t90texstk.eep",
+          "target": "artifacts\\generated\\txfilealloc.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ]
+    },
+    {
+      "name": "txallocboth",
+      "purpose": "Apply both GE480i front heap and file/menu allocation reservations.",
+      "base_rom": "artifacts\\generated\\t90texstk.z64",
+      "base_md5": "9a3a600850585864be1fff8640548165",
+      "out_rom": "artifacts\\generated\\txallocboth.z64",
+      "out_md5": "25a7538bfdbc5b47bc828322d8396857",
+      "header_crc": "847786E9 CCF38CDC",
+      "patches": [
+        {
+          "offset": "0x3FC90",
+          "old": "0x3C050007",
+          "new": "0x3C05000B",
+          "changed": true,
+          "note": "front heap reservation upper, GE480i 0xBE200"
+        },
+        {
+          "offset": "0x3FC94",
+          "old": "0x34A58000",
+          "new": "0x34A5E200",
+          "changed": true,
+          "note": "front heap reservation lower, GE480i 0xBE200"
+        },
+        {
+          "offset": "0x40540",
+          "old": "0x3C0E0006",
+          "new": "0x3C0E000B",
+          "changed": true,
+          "note": "file/menu allocation upper, GE480i 0xB4200"
+        },
+        {
+          "offset": "0x40544",
+          "old": "0x35CEE000",
+          "new": "0x35CE4200",
+          "changed": true,
+          "note": "file/menu allocation lower, GE480i 0xB4200"
+        }
+      ],
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\t90texstk.sav",
+          "target": "artifacts\\generated\\txallocboth.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\t90texstk.eep",
+          "target": "artifacts\\generated\\txallocboth.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ]
+    }
+  ]
+}

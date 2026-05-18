@@ -1,0 +1,1386 @@
+{
+  "base_rom": "artifacts\\generated\\t90texstk.z64",
+  "base_md5": "9a3a600850585864be1fff8640548165",
+  "ge_stock_rom": "artifacts\\roms\\GoldenEye 007 (USA).z64",
+  "ge480_rom": "artifacts\\roms\\BASELINE_GE_480i_direct_from_stock.z64",
+  "purpose": "Corrected front.c function-range dossier draw-path probes; every useful probe must be hardware-captured against GE480i.",
+  "candidates": [
+    {
+      "name": "txmodepos2",
+      "purpose": "Corrected GE480i mode-select constructor coordinate constants.",
+      "base_rom": "artifacts\\generated\\t90texstk.z64",
+      "base_md5": "9a3a600850585864be1fff8640548165",
+      "out_rom": "artifacts\\generated\\txmodepos2.z64",
+      "out_md5": "cfcc88dfd4a5d244372d9101d198e390",
+      "header_crc": "84770265 7F272153",
+      "patch_count": 26,
+      "changed_patch_count": 26,
+      "patches": [
+        {
+          "offset": "0x42330",
+          "range": "modepos",
+          "old": "0x25CF00E2",
+          "ge_stock": "0x25CF00E2",
+          "new": "0x25CF0146",
+          "changed": true,
+          "note": "corrected setCursorPOSforMode + constructor_menu06_modesel GE480i constants"
+        },
+        {
+          "offset": "0x42338",
+          "range": "modepos",
+          "old": "0x3C0142FC",
+          "ge_stock": "0x3C0142FC",
+          "new": "0x3C014337",
+          "changed": true,
+          "note": "corrected setCursorPOSforMode + constructor_menu06_modesel GE480i constants"
+        },
+        {
+          "offset": "0x4238C",
+          "range": "modepos",
+          "old": "0x240E0096",
+          "ge_stock": "0x240E0096",
+          "new": "0x240E00DA",
+          "changed": true,
+          "note": "corrected setCursorPOSforMode + constructor_menu06_modesel GE480i constants"
+        },
+        {
+          "offset": "0x42390",
+          "range": "modepos",
+          "old": "0x240F00DC",
+          "ge_stock": "0x240F00DC",
+          "new": "0x240F0140",
+          "changed": true,
+          "note": "corrected setCursorPOSforMode + constructor_menu06_modesel GE480i constants"
+        },
+        {
+          "offset": "0x42454",
+          "range": "modepos",
+          "old": "0x240C00AA",
+          "ge_stock": "0x240C00AA",
+          "new": "0x240C00EE",
+          "changed": true,
+          "note": "corrected setCursorPOSforMode + constructor_menu06_modesel GE480i constants"
+        },
+        {
+          "offset": "0x42458",
+          "range": "modepos",
+          "old": "0x240D00DC",
+          "ge_stock": "0x240D00DC",
+          "new": "0x240D0140",
+          "changed": true,
+          "note": "corrected setCursorPOSforMode + constructor_menu06_modesel GE480i constants"
+        },
+        {
+          "offset": "0x4246C",
+          "range": "modepos",
+          "old": "0x240F00EA",
+          "ge_stock": "0x240F00EA",
+          "new": "0x240F014E",
+          "changed": true,
+          "note": "corrected setCursorPOSforMode + constructor_menu06_modesel GE480i constants"
+        },
+        {
+          "offset": "0x42480",
+          "range": "modepos",
+          "old": "0x24050094",
+          "ge_stock": "0x24050094",
+          "new": "0x240500D8",
+          "changed": true,
+          "note": "corrected setCursorPOSforMode + constructor_menu06_modesel GE480i constants"
+        },
+        {
+          "offset": "0x42484",
+          "range": "modepos",
+          "old": "0x240600DA",
+          "ge_stock": "0x240600DA",
+          "new": "0x2406013E",
+          "changed": true,
+          "note": "corrected setCursorPOSforMode + constructor_menu06_modesel GE480i constants"
+        },
+        {
+          "offset": "0x4248C",
+          "range": "modepos",
+          "old": "0x24E700AF",
+          "ge_stock": "0x24E700AF",
+          "new": "0x24E700F3",
+          "changed": true,
+          "note": "corrected setCursorPOSforMode + constructor_menu06_modesel GE480i constants"
+        },
+        {
+          "offset": "0x424EC",
+          "range": "modepos",
+          "old": "0x240B0096",
+          "ge_stock": "0x240B0096",
+          "new": "0x240B00DA",
+          "changed": true,
+          "note": "corrected setCursorPOSforMode + constructor_menu06_modesel GE480i constants"
+        },
+        {
+          "offset": "0x424F0",
+          "range": "modepos",
+          "old": "0x240C00FC",
+          "ge_stock": "0x240C00FC",
+          "new": "0x240C0160",
+          "changed": true,
+          "note": "corrected setCursorPOSforMode + constructor_menu06_modesel GE480i constants"
+        },
+        {
+          "offset": "0x425D8",
+          "range": "modepos",
+          "old": "0x240B00AA",
+          "ge_stock": "0x240B00AA",
+          "new": "0x240B00EE",
+          "changed": true,
+          "note": "corrected setCursorPOSforMode + constructor_menu06_modesel GE480i constants"
+        },
+        {
+          "offset": "0x425DC",
+          "range": "modepos",
+          "old": "0x240C00FC",
+          "ge_stock": "0x240C00FC",
+          "new": "0x240C0160",
+          "changed": true,
+          "note": "corrected setCursorPOSforMode + constructor_menu06_modesel GE480i constants"
+        },
+        {
+          "offset": "0x425F4",
+          "range": "modepos",
+          "old": "0x240E010A",
+          "ge_stock": "0x240E010A",
+          "new": "0x240E016E",
+          "changed": true,
+          "note": "corrected setCursorPOSforMode + constructor_menu06_modesel GE480i constants"
+        },
+        {
+          "offset": "0x42608",
+          "range": "modepos",
+          "old": "0x24050094",
+          "ge_stock": "0x24050094",
+          "new": "0x240500D8",
+          "changed": true,
+          "note": "corrected setCursorPOSforMode + constructor_menu06_modesel GE480i constants"
+        },
+        {
+          "offset": "0x4260C",
+          "range": "modepos",
+          "old": "0x240600FA",
+          "ge_stock": "0x240600FA",
+          "new": "0x2406015E",
+          "changed": true,
+          "note": "corrected setCursorPOSforMode + constructor_menu06_modesel GE480i constants"
+        },
+        {
+          "offset": "0x42614",
+          "range": "modepos",
+          "old": "0x24E700AF",
+          "ge_stock": "0x24E700AF",
+          "new": "0x24E700F3",
+          "changed": true,
+          "note": "corrected setCursorPOSforMode + constructor_menu06_modesel GE480i constants"
+        },
+        {
+          "offset": "0x42680",
+          "range": "modepos",
+          "old": "0x240B0096",
+          "ge_stock": "0x240B0096",
+          "new": "0x240B00DA",
+          "changed": true,
+          "note": "corrected setCursorPOSforMode + constructor_menu06_modesel GE480i constants"
+        },
+        {
+          "offset": "0x42688",
+          "range": "modepos",
+          "old": "0x240C011C",
+          "ge_stock": "0x240C011C",
+          "new": "0x240C0180",
+          "changed": true,
+          "note": "corrected setCursorPOSforMode + constructor_menu06_modesel GE480i constants"
+        },
+        {
+          "offset": "0x4272C",
+          "range": "modepos",
+          "old": "0x240800AA",
+          "ge_stock": "0x240800AA",
+          "new": "0x240800EE",
+          "changed": true,
+          "note": "corrected setCursorPOSforMode + constructor_menu06_modesel GE480i constants"
+        },
+        {
+          "offset": "0x42730",
+          "range": "modepos",
+          "old": "0x2409011C",
+          "ge_stock": "0x2409011C",
+          "new": "0x24090180",
+          "changed": true,
+          "note": "corrected setCursorPOSforMode + constructor_menu06_modesel GE480i constants"
+        },
+        {
+          "offset": "0x42748",
+          "range": "modepos",
+          "old": "0x240B012A",
+          "ge_stock": "0x240B012A",
+          "new": "0x240B018E",
+          "changed": true,
+          "note": "corrected setCursorPOSforMode + constructor_menu06_modesel GE480i constants"
+        },
+        {
+          "offset": "0x4275C",
+          "range": "modepos",
+          "old": "0x24050094",
+          "ge_stock": "0x24050094",
+          "new": "0x240500D8",
+          "changed": true,
+          "note": "corrected setCursorPOSforMode + constructor_menu06_modesel GE480i constants"
+        },
+        {
+          "offset": "0x42760",
+          "range": "modepos",
+          "old": "0x2406011A",
+          "ge_stock": "0x2406011A",
+          "new": "0x2406017E",
+          "changed": true,
+          "note": "corrected setCursorPOSforMode + constructor_menu06_modesel GE480i constants"
+        },
+        {
+          "offset": "0x42768",
+          "range": "modepos",
+          "old": "0x24E700AF",
+          "ge_stock": "0x24E700AF",
+          "new": "0x24E700F3",
+          "changed": true,
+          "note": "corrected setCursorPOSforMode + constructor_menu06_modesel GE480i constants"
+        }
+      ],
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\t90texstk.sav",
+          "target": "artifacts\\generated\\txmodepos2.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\t90texstk.eep",
+          "target": "artifacts\\generated\\txmodepos2.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ]
+    },
+    {
+      "name": "txmissionhelper",
+      "purpose": "GE480i mission-select helper blob only; tests cursor/grid helper behavior.",
+      "base_rom": "artifacts\\generated\\t90texstk.z64",
+      "base_md5": "9a3a600850585864be1fff8640548165",
+      "out_rom": "artifacts\\generated\\txmissionhelper.z64",
+      "out_md5": "38142127b3e43450c1b0a608dfafa7e0",
+      "header_crc": "945DB1FD 0ABA2262",
+      "patch_count": 27,
+      "changed_patch_count": 27,
+      "patches": [
+        {
+          "offset": "0x42F1C",
+          "range": "missionhelper",
+          "old": "0x000E7880",
+          "ge_stock": "0x000E7880",
+          "new": "0x3C0142CA",
+          "changed": true,
+          "note": "GE480i helper blob before constructor_menu07_missionsel"
+        },
+        {
+          "offset": "0x42F20",
+          "range": "missionhelper",
+          "old": "0x3C188003",
+          "ge_stock": "0x3C188003",
+          "new": "0x0000C812",
+          "changed": true,
+          "note": "GE480i helper blob before constructor_menu07_missionsel"
+        },
+        {
+          "offset": "0x42F24",
+          "range": "missionhelper",
+          "old": "0x030FC021",
+          "ge_stock": "0x030FC021",
+          "new": "0x44814000",
+          "changed": true,
+          "note": "GE480i helper blob before constructor_menu07_missionsel"
+        },
+        {
+          "offset": "0x42F28",
+          "range": "missionhelper",
+          "old": "0x8F18AFD0",
+          "ge_stock": "0x8F18AFD0",
+          "new": "0x448E3000",
+          "changed": true,
+          "note": "GE480i helper blob before constructor_menu07_missionsel"
+        },
+        {
+          "offset": "0x42F2C",
+          "range": "missionhelper",
+          "old": "0x0000C812",
+          "ge_stock": "0x0000C812",
+          "new": "0x46803120",
+          "changed": true,
+          "note": "GE480i helper blob before constructor_menu07_missionsel"
+        },
+        {
+          "offset": "0x42F30",
+          "range": "missionhelper",
+          "old": "0x00194080",
+          "ge_stock": "0x00194080",
+          "new": "0x3C0142B4",
+          "changed": true,
+          "note": "GE480i helper blob before constructor_menu07_missionsel"
+        },
+        {
+          "offset": "0x42F34",
+          "range": "missionhelper",
+          "old": "0x3C098003",
+          "ge_stock": "0x3C098003",
+          "new": "0x46082182",
+          "changed": true,
+          "note": "GE480i helper blob before constructor_menu07_missionsel"
+        },
+        {
+          "offset": "0x42F38",
+          "range": "missionhelper",
+          "old": "0x01284821",
+          "ge_stock": "0x01284821",
+          "new": "0x44995000",
+          "changed": true,
+          "note": "GE480i helper blob before constructor_menu07_missionsel"
+        },
+        {
+          "offset": "0x42F3C",
+          "range": "missionhelper",
+          "old": "0x8D29AFE4",
+          "ge_stock": "0x8D29AFE4",
+          "new": "0x46805120",
+          "changed": true,
+          "note": "GE480i helper blob before constructor_menu07_missionsel"
+        },
+        {
+          "offset": "0x42F40",
+          "range": "missionhelper",
+          "old": "0x44982000",
+          "ge_stock": "0x44982000",
+          "new": "0x3C028003",
+          "changed": true,
+          "note": "GE480i helper blob before constructor_menu07_missionsel"
+        },
+        {
+          "offset": "0x42F44",
+          "range": "missionhelper",
+          "old": "0x14400002",
+          "ge_stock": "0x14400002",
+          "new": "0x46082282",
+          "changed": true,
+          "note": "GE480i helper blob before constructor_menu07_missionsel"
+        },
+        {
+          "offset": "0x42F48",
+          "range": "missionhelper",
+          "old": "0x00000000",
+          "ge_stock": "0x00000000",
+          "new": "0x44814000",
+          "changed": true,
+          "note": "GE480i helper blob before constructor_menu07_missionsel"
+        },
+        {
+          "offset": "0x42F4C",
+          "range": "missionhelper",
+          "old": "0x0007000D",
+          "ge_stock": "0x0007000D",
+          "new": "0x3C0142D4",
+          "changed": true,
+          "note": "GE480i helper blob before constructor_menu07_missionsel"
+        },
+        {
+          "offset": "0x42F50",
+          "range": "missionhelper",
+          "old": "0x2401FFFF",
+          "ge_stock": "0x2401FFFF",
+          "new": "0x46083180",
+          "changed": true,
+          "note": "GE480i helper blob before constructor_menu07_missionsel"
+        },
+        {
+          "offset": "0x42F54",
+          "range": "missionhelper",
+          "old": "0x14410004",
+          "ge_stock": "0x14410004",
+          "new": "0x44812000",
+          "changed": true,
+          "note": "GE480i helper blob before constructor_menu07_missionsel"
+        },
+        {
+          "offset": "0x42F58",
+          "range": "missionhelper",
+          "old": "0x3C018000",
+          "ge_stock": "0x3C018000",
+          "new": "0x46045280",
+          "changed": true,
+          "note": "GE480i helper blob before constructor_menu07_missionsel"
+        },
+        {
+          "offset": "0x42F5C",
+          "range": "missionhelper",
+          "old": "0x14810002",
+          "ge_stock": "0x14810002",
+          "new": "0xE446A908",
+          "changed": true,
+          "note": "GE480i helper blob before constructor_menu07_missionsel"
+        },
+        {
+          "offset": "0x42F60",
+          "range": "missionhelper",
+          "old": "0x00000000",
+          "ge_stock": "0x00000000",
+          "new": "0x03E00008",
+          "changed": true,
+          "note": "GE480i helper blob before constructor_menu07_missionsel"
+        },
+        {
+          "offset": "0x42F64",
+          "range": "missionhelper",
+          "old": "0x0006000D",
+          "ge_stock": "0x0006000D",
+          "new": "0xE44AA90C",
+          "changed": true,
+          "note": "GE480i helper blob before constructor_menu07_missionsel"
+        },
+        {
+          "offset": "0x42F68",
+          "range": "missionhelper",
+          "old": "0x468021A0",
+          "ge_stock": "0x468021A0",
+          "new": "0x00000000",
+          "changed": true,
+          "note": "GE480i helper blob before constructor_menu07_missionsel"
+        },
+        {
+          "offset": "0x42F6C",
+          "range": "missionhelper",
+          "old": "0x44894000",
+          "ge_stock": "0x44894000",
+          "new": "0x00000000",
+          "changed": true,
+          "note": "GE480i helper blob before constructor_menu07_missionsel"
+        },
+        {
+          "offset": "0x42F70",
+          "range": "missionhelper",
+          "old": "0x3C018003",
+          "ge_stock": "0x3C018003",
+          "new": "0x00000000",
+          "changed": true,
+          "note": "GE480i helper blob before constructor_menu07_missionsel"
+        },
+        {
+          "offset": "0x42F74",
+          "range": "missionhelper",
+          "old": "0x468042A0",
+          "ge_stock": "0x468042A0",
+          "new": "0x00000000",
+          "changed": true,
+          "note": "GE480i helper blob before constructor_menu07_missionsel"
+        },
+        {
+          "offset": "0x42F78",
+          "range": "missionhelper",
+          "old": "0xE426A908",
+          "ge_stock": "0xE426A908",
+          "new": "0x00000000",
+          "changed": true,
+          "note": "GE480i helper blob before constructor_menu07_missionsel"
+        },
+        {
+          "offset": "0x42F7C",
+          "range": "missionhelper",
+          "old": "0x3C018003",
+          "ge_stock": "0x3C018003",
+          "new": "0x00000000",
+          "changed": true,
+          "note": "GE480i helper blob before constructor_menu07_missionsel"
+        },
+        {
+          "offset": "0x42F80",
+          "range": "missionhelper",
+          "old": "0x03E00008",
+          "ge_stock": "0x03E00008",
+          "new": "0x00000000",
+          "changed": true,
+          "note": "GE480i helper blob before constructor_menu07_missionsel"
+        },
+        {
+          "offset": "0x42F84",
+          "range": "missionhelper",
+          "old": "0xE42AA90C",
+          "ge_stock": "0xE42AA90C",
+          "new": "0x00000000",
+          "changed": true,
+          "note": "GE480i helper blob before constructor_menu07_missionsel"
+        }
+      ],
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\t90texstk.sav",
+          "target": "artifacts\\generated\\txmissionhelper.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\t90texstk.eep",
+          "target": "artifacts\\generated\\txmissionhelper.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ]
+    },
+    {
+      "name": "txmissionfull",
+      "purpose": "GE480i mission-select helper plus mission label offsets.",
+      "base_rom": "artifacts\\generated\\t90texstk.z64",
+      "base_md5": "9a3a600850585864be1fff8640548165",
+      "out_rom": "artifacts\\generated\\txmissionfull.z64",
+      "out_md5": "1484843787051a1de47d753f185c9f15",
+      "header_crc": "945DB1FB E305F3B0",
+      "patch_count": 31,
+      "changed_patch_count": 31,
+      "patches": [
+        {
+          "offset": "0x42F1C",
+          "range": "missionhelper",
+          "old": "0x000E7880",
+          "ge_stock": "0x000E7880",
+          "new": "0x3C0142CA",
+          "changed": true,
+          "note": "GE480i helper blob before constructor_menu07_missionsel"
+        },
+        {
+          "offset": "0x42F20",
+          "range": "missionhelper",
+          "old": "0x3C188003",
+          "ge_stock": "0x3C188003",
+          "new": "0x0000C812",
+          "changed": true,
+          "note": "GE480i helper blob before constructor_menu07_missionsel"
+        },
+        {
+          "offset": "0x42F24",
+          "range": "missionhelper",
+          "old": "0x030FC021",
+          "ge_stock": "0x030FC021",
+          "new": "0x44814000",
+          "changed": true,
+          "note": "GE480i helper blob before constructor_menu07_missionsel"
+        },
+        {
+          "offset": "0x42F28",
+          "range": "missionhelper",
+          "old": "0x8F18AFD0",
+          "ge_stock": "0x8F18AFD0",
+          "new": "0x448E3000",
+          "changed": true,
+          "note": "GE480i helper blob before constructor_menu07_missionsel"
+        },
+        {
+          "offset": "0x42F2C",
+          "range": "missionhelper",
+          "old": "0x0000C812",
+          "ge_stock": "0x0000C812",
+          "new": "0x46803120",
+          "changed": true,
+          "note": "GE480i helper blob before constructor_menu07_missionsel"
+        },
+        {
+          "offset": "0x42F30",
+          "range": "missionhelper",
+          "old": "0x00194080",
+          "ge_stock": "0x00194080",
+          "new": "0x3C0142B4",
+          "changed": true,
+          "note": "GE480i helper blob before constructor_menu07_missionsel"
+        },
+        {
+          "offset": "0x42F34",
+          "range": "missionhelper",
+          "old": "0x3C098003",
+          "ge_stock": "0x3C098003",
+          "new": "0x46082182",
+          "changed": true,
+          "note": "GE480i helper blob before constructor_menu07_missionsel"
+        },
+        {
+          "offset": "0x42F38",
+          "range": "missionhelper",
+          "old": "0x01284821",
+          "ge_stock": "0x01284821",
+          "new": "0x44995000",
+          "changed": true,
+          "note": "GE480i helper blob before constructor_menu07_missionsel"
+        },
+        {
+          "offset": "0x42F3C",
+          "range": "missionhelper",
+          "old": "0x8D29AFE4",
+          "ge_stock": "0x8D29AFE4",
+          "new": "0x46805120",
+          "changed": true,
+          "note": "GE480i helper blob before constructor_menu07_missionsel"
+        },
+        {
+          "offset": "0x42F40",
+          "range": "missionhelper",
+          "old": "0x44982000",
+          "ge_stock": "0x44982000",
+          "new": "0x3C028003",
+          "changed": true,
+          "note": "GE480i helper blob before constructor_menu07_missionsel"
+        },
+        {
+          "offset": "0x42F44",
+          "range": "missionhelper",
+          "old": "0x14400002",
+          "ge_stock": "0x14400002",
+          "new": "0x46082282",
+          "changed": true,
+          "note": "GE480i helper blob before constructor_menu07_missionsel"
+        },
+        {
+          "offset": "0x42F48",
+          "range": "missionhelper",
+          "old": "0x00000000",
+          "ge_stock": "0x00000000",
+          "new": "0x44814000",
+          "changed": true,
+          "note": "GE480i helper blob before constructor_menu07_missionsel"
+        },
+        {
+          "offset": "0x42F4C",
+          "range": "missionhelper",
+          "old": "0x0007000D",
+          "ge_stock": "0x0007000D",
+          "new": "0x3C0142D4",
+          "changed": true,
+          "note": "GE480i helper blob before constructor_menu07_missionsel"
+        },
+        {
+          "offset": "0x42F50",
+          "range": "missionhelper",
+          "old": "0x2401FFFF",
+          "ge_stock": "0x2401FFFF",
+          "new": "0x46083180",
+          "changed": true,
+          "note": "GE480i helper blob before constructor_menu07_missionsel"
+        },
+        {
+          "offset": "0x42F54",
+          "range": "missionhelper",
+          "old": "0x14410004",
+          "ge_stock": "0x14410004",
+          "new": "0x44812000",
+          "changed": true,
+          "note": "GE480i helper blob before constructor_menu07_missionsel"
+        },
+        {
+          "offset": "0x42F58",
+          "range": "missionhelper",
+          "old": "0x3C018000",
+          "ge_stock": "0x3C018000",
+          "new": "0x46045280",
+          "changed": true,
+          "note": "GE480i helper blob before constructor_menu07_missionsel"
+        },
+        {
+          "offset": "0x42F5C",
+          "range": "missionhelper",
+          "old": "0x14810002",
+          "ge_stock": "0x14810002",
+          "new": "0xE446A908",
+          "changed": true,
+          "note": "GE480i helper blob before constructor_menu07_missionsel"
+        },
+        {
+          "offset": "0x42F60",
+          "range": "missionhelper",
+          "old": "0x00000000",
+          "ge_stock": "0x00000000",
+          "new": "0x03E00008",
+          "changed": true,
+          "note": "GE480i helper blob before constructor_menu07_missionsel"
+        },
+        {
+          "offset": "0x42F64",
+          "range": "missionhelper",
+          "old": "0x0006000D",
+          "ge_stock": "0x0006000D",
+          "new": "0xE44AA90C",
+          "changed": true,
+          "note": "GE480i helper blob before constructor_menu07_missionsel"
+        },
+        {
+          "offset": "0x42F68",
+          "range": "missionhelper",
+          "old": "0x468021A0",
+          "ge_stock": "0x468021A0",
+          "new": "0x00000000",
+          "changed": true,
+          "note": "GE480i helper blob before constructor_menu07_missionsel"
+        },
+        {
+          "offset": "0x42F6C",
+          "range": "missionhelper",
+          "old": "0x44894000",
+          "ge_stock": "0x44894000",
+          "new": "0x00000000",
+          "changed": true,
+          "note": "GE480i helper blob before constructor_menu07_missionsel"
+        },
+        {
+          "offset": "0x42F70",
+          "range": "missionhelper",
+          "old": "0x3C018003",
+          "ge_stock": "0x3C018003",
+          "new": "0x00000000",
+          "changed": true,
+          "note": "GE480i helper blob before constructor_menu07_missionsel"
+        },
+        {
+          "offset": "0x42F74",
+          "range": "missionhelper",
+          "old": "0x468042A0",
+          "ge_stock": "0x468042A0",
+          "new": "0x00000000",
+          "changed": true,
+          "note": "GE480i helper blob before constructor_menu07_missionsel"
+        },
+        {
+          "offset": "0x42F78",
+          "range": "missionhelper",
+          "old": "0xE426A908",
+          "ge_stock": "0xE426A908",
+          "new": "0x00000000",
+          "changed": true,
+          "note": "GE480i helper blob before constructor_menu07_missionsel"
+        },
+        {
+          "offset": "0x42F7C",
+          "range": "missionhelper",
+          "old": "0x3C018003",
+          "ge_stock": "0x3C018003",
+          "new": "0x00000000",
+          "changed": true,
+          "note": "GE480i helper blob before constructor_menu07_missionsel"
+        },
+        {
+          "offset": "0x42F80",
+          "range": "missionhelper",
+          "old": "0x03E00008",
+          "ge_stock": "0x03E00008",
+          "new": "0x00000000",
+          "changed": true,
+          "note": "GE480i helper blob before constructor_menu07_missionsel"
+        },
+        {
+          "offset": "0x42F84",
+          "range": "missionhelper",
+          "old": "0xE42AA90C",
+          "ge_stock": "0xE42AA90C",
+          "new": "0x00000000",
+          "changed": true,
+          "note": "GE480i helper blob before constructor_menu07_missionsel"
+        },
+        {
+          "offset": "0x43148",
+          "range": "missionlabel",
+          "old": "0x24C6001D",
+          "ge_stock": "0x24C6001D",
+          "new": "0x24C6002A",
+          "changed": true,
+          "note": "mission label y/x offsets"
+        },
+        {
+          "offset": "0x43150",
+          "range": "missionlabel",
+          "old": "0x24A5FFE1",
+          "ge_stock": "0x24A5FFE1",
+          "new": "0x24A5FFD3",
+          "changed": true,
+          "note": "mission label y/x offsets"
+        },
+        {
+          "offset": "0x431E0",
+          "range": "missionlabel",
+          "old": "0x24C6001D",
+          "ge_stock": "0x24C6001D",
+          "new": "0x24C6002A",
+          "changed": true,
+          "note": "mission label y/x offsets repeat"
+        },
+        {
+          "offset": "0x431E4",
+          "range": "missionlabel",
+          "old": "0x24A5FFE1",
+          "ge_stock": "0x24A5FFE1",
+          "new": "0x24A5FFD3",
+          "changed": true,
+          "note": "mission label y/x offsets repeat"
+        }
+      ],
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\t90texstk.sav",
+          "target": "artifacts\\generated\\txmissionfull.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\t90texstk.eep",
+          "target": "artifacts\\generated\\txmissionfull.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ]
+    },
+    {
+      "name": "txdossierdraw2",
+      "purpose": "Corrected mode-select and mission-select dossier draw-path constants.",
+      "base_rom": "artifacts\\generated\\t90texstk.z64",
+      "base_md5": "9a3a600850585864be1fff8640548165",
+      "out_rom": "artifacts\\generated\\txdossierdraw2.z64",
+      "out_md5": "a30d23670b105fffce02efa3409cbe2f",
+      "header_crc": "945DBB4F E8013214",
+      "patch_count": 57,
+      "changed_patch_count": 57,
+      "patches": [
+        {
+          "offset": "0x42330",
+          "range": "modepos",
+          "old": "0x25CF00E2",
+          "ge_stock": "0x25CF00E2",
+          "new": "0x25CF0146",
+          "changed": true,
+          "note": "corrected setCursorPOSforMode + constructor_menu06_modesel GE480i constants"
+        },
+        {
+          "offset": "0x42338",
+          "range": "modepos",
+          "old": "0x3C0142FC",
+          "ge_stock": "0x3C0142FC",
+          "new": "0x3C014337",
+          "changed": true,
+          "note": "corrected setCursorPOSforMode + constructor_menu06_modesel GE480i constants"
+        },
+        {
+          "offset": "0x4238C",
+          "range": "modepos",
+          "old": "0x240E0096",
+          "ge_stock": "0x240E0096",
+          "new": "0x240E00DA",
+          "changed": true,
+          "note": "corrected setCursorPOSforMode + constructor_menu06_modesel GE480i constants"
+        },
+        {
+          "offset": "0x42390",
+          "range": "modepos",
+          "old": "0x240F00DC",
+          "ge_stock": "0x240F00DC",
+          "new": "0x240F0140",
+          "changed": true,
+          "note": "corrected setCursorPOSforMode + constructor_menu06_modesel GE480i constants"
+        },
+        {
+          "offset": "0x42454",
+          "range": "modepos",
+          "old": "0x240C00AA",
+          "ge_stock": "0x240C00AA",
+          "new": "0x240C00EE",
+          "changed": true,
+          "note": "corrected setCursorPOSforMode + constructor_menu06_modesel GE480i constants"
+        },
+        {
+          "offset": "0x42458",
+          "range": "modepos",
+          "old": "0x240D00DC",
+          "ge_stock": "0x240D00DC",
+          "new": "0x240D0140",
+          "changed": true,
+          "note": "corrected setCursorPOSforMode + constructor_menu06_modesel GE480i constants"
+        },
+        {
+          "offset": "0x4246C",
+          "range": "modepos",
+          "old": "0x240F00EA",
+          "ge_stock": "0x240F00EA",
+          "new": "0x240F014E",
+          "changed": true,
+          "note": "corrected setCursorPOSforMode + constructor_menu06_modesel GE480i constants"
+        },
+        {
+          "offset": "0x42480",
+          "range": "modepos",
+          "old": "0x24050094",
+          "ge_stock": "0x24050094",
+          "new": "0x240500D8",
+          "changed": true,
+          "note": "corrected setCursorPOSforMode + constructor_menu06_modesel GE480i constants"
+        },
+        {
+          "offset": "0x42484",
+          "range": "modepos",
+          "old": "0x240600DA",
+          "ge_stock": "0x240600DA",
+          "new": "0x2406013E",
+          "changed": true,
+          "note": "corrected setCursorPOSforMode + constructor_menu06_modesel GE480i constants"
+        },
+        {
+          "offset": "0x4248C",
+          "range": "modepos",
+          "old": "0x24E700AF",
+          "ge_stock": "0x24E700AF",
+          "new": "0x24E700F3",
+          "changed": true,
+          "note": "corrected setCursorPOSforMode + constructor_menu06_modesel GE480i constants"
+        },
+        {
+          "offset": "0x424EC",
+          "range": "modepos",
+          "old": "0x240B0096",
+          "ge_stock": "0x240B0096",
+          "new": "0x240B00DA",
+          "changed": true,
+          "note": "corrected setCursorPOSforMode + constructor_menu06_modesel GE480i constants"
+        },
+        {
+          "offset": "0x424F0",
+          "range": "modepos",
+          "old": "0x240C00FC",
+          "ge_stock": "0x240C00FC",
+          "new": "0x240C0160",
+          "changed": true,
+          "note": "corrected setCursorPOSforMode + constructor_menu06_modesel GE480i constants"
+        },
+        {
+          "offset": "0x425D8",
+          "range": "modepos",
+          "old": "0x240B00AA",
+          "ge_stock": "0x240B00AA",
+          "new": "0x240B00EE",
+          "changed": true,
+          "note": "corrected setCursorPOSforMode + constructor_menu06_modesel GE480i constants"
+        },
+        {
+          "offset": "0x425DC",
+          "range": "modepos",
+          "old": "0x240C00FC",
+          "ge_stock": "0x240C00FC",
+          "new": "0x240C0160",
+          "changed": true,
+          "note": "corrected setCursorPOSforMode + constructor_menu06_modesel GE480i constants"
+        },
+        {
+          "offset": "0x425F4",
+          "range": "modepos",
+          "old": "0x240E010A",
+          "ge_stock": "0x240E010A",
+          "new": "0x240E016E",
+          "changed": true,
+          "note": "corrected setCursorPOSforMode + constructor_menu06_modesel GE480i constants"
+        },
+        {
+          "offset": "0x42608",
+          "range": "modepos",
+          "old": "0x24050094",
+          "ge_stock": "0x24050094",
+          "new": "0x240500D8",
+          "changed": true,
+          "note": "corrected setCursorPOSforMode + constructor_menu06_modesel GE480i constants"
+        },
+        {
+          "offset": "0x4260C",
+          "range": "modepos",
+          "old": "0x240600FA",
+          "ge_stock": "0x240600FA",
+          "new": "0x2406015E",
+          "changed": true,
+          "note": "corrected setCursorPOSforMode + constructor_menu06_modesel GE480i constants"
+        },
+        {
+          "offset": "0x42614",
+          "range": "modepos",
+          "old": "0x24E700AF",
+          "ge_stock": "0x24E700AF",
+          "new": "0x24E700F3",
+          "changed": true,
+          "note": "corrected setCursorPOSforMode + constructor_menu06_modesel GE480i constants"
+        },
+        {
+          "offset": "0x42680",
+          "range": "modepos",
+          "old": "0x240B0096",
+          "ge_stock": "0x240B0096",
+          "new": "0x240B00DA",
+          "changed": true,
+          "note": "corrected setCursorPOSforMode + constructor_menu06_modesel GE480i constants"
+        },
+        {
+          "offset": "0x42688",
+          "range": "modepos",
+          "old": "0x240C011C",
+          "ge_stock": "0x240C011C",
+          "new": "0x240C0180",
+          "changed": true,
+          "note": "corrected setCursorPOSforMode + constructor_menu06_modesel GE480i constants"
+        },
+        {
+          "offset": "0x4272C",
+          "range": "modepos",
+          "old": "0x240800AA",
+          "ge_stock": "0x240800AA",
+          "new": "0x240800EE",
+          "changed": true,
+          "note": "corrected setCursorPOSforMode + constructor_menu06_modesel GE480i constants"
+        },
+        {
+          "offset": "0x42730",
+          "range": "modepos",
+          "old": "0x2409011C",
+          "ge_stock": "0x2409011C",
+          "new": "0x24090180",
+          "changed": true,
+          "note": "corrected setCursorPOSforMode + constructor_menu06_modesel GE480i constants"
+        },
+        {
+          "offset": "0x42748",
+          "range": "modepos",
+          "old": "0x240B012A",
+          "ge_stock": "0x240B012A",
+          "new": "0x240B018E",
+          "changed": true,
+          "note": "corrected setCursorPOSforMode + constructor_menu06_modesel GE480i constants"
+        },
+        {
+          "offset": "0x4275C",
+          "range": "modepos",
+          "old": "0x24050094",
+          "ge_stock": "0x24050094",
+          "new": "0x240500D8",
+          "changed": true,
+          "note": "corrected setCursorPOSforMode + constructor_menu06_modesel GE480i constants"
+        },
+        {
+          "offset": "0x42760",
+          "range": "modepos",
+          "old": "0x2406011A",
+          "ge_stock": "0x2406011A",
+          "new": "0x2406017E",
+          "changed": true,
+          "note": "corrected setCursorPOSforMode + constructor_menu06_modesel GE480i constants"
+        },
+        {
+          "offset": "0x42768",
+          "range": "modepos",
+          "old": "0x24E700AF",
+          "ge_stock": "0x24E700AF",
+          "new": "0x24E700F3",
+          "changed": true,
+          "note": "corrected setCursorPOSforMode + constructor_menu06_modesel GE480i constants"
+        },
+        {
+          "offset": "0x42F1C",
+          "range": "missionhelper",
+          "old": "0x000E7880",
+          "ge_stock": "0x000E7880",
+          "new": "0x3C0142CA",
+          "changed": true,
+          "note": "GE480i helper blob before constructor_menu07_missionsel"
+        },
+        {
+          "offset": "0x42F20",
+          "range": "missionhelper",
+          "old": "0x3C188003",
+          "ge_stock": "0x3C188003",
+          "new": "0x0000C812",
+          "changed": true,
+          "note": "GE480i helper blob before constructor_menu07_missionsel"
+        },
+        {
+          "offset": "0x42F24",
+          "range": "missionhelper",
+          "old": "0x030FC021",
+          "ge_stock": "0x030FC021",
+          "new": "0x44814000",
+          "changed": true,
+          "note": "GE480i helper blob before constructor_menu07_missionsel"
+        },
+        {
+          "offset": "0x42F28",
+          "range": "missionhelper",
+          "old": "0x8F18AFD0",
+          "ge_stock": "0x8F18AFD0",
+          "new": "0x448E3000",
+          "changed": true,
+          "note": "GE480i helper blob before constructor_menu07_missionsel"
+        },
+        {
+          "offset": "0x42F2C",
+          "range": "missionhelper",
+          "old": "0x0000C812",
+          "ge_stock": "0x0000C812",
+          "new": "0x46803120",
+          "changed": true,
+          "note": "GE480i helper blob before constructor_menu07_missionsel"
+        },
+        {
+          "offset": "0x42F30",
+          "range": "missionhelper",
+          "old": "0x00194080",
+          "ge_stock": "0x00194080",
+          "new": "0x3C0142B4",
+          "changed": true,
+          "note": "GE480i helper blob before constructor_menu07_missionsel"
+        },
+        {
+          "offset": "0x42F34",
+          "range": "missionhelper",
+          "old": "0x3C098003",
+          "ge_stock": "0x3C098003",
+          "new": "0x46082182",
+          "changed": true,
+          "note": "GE480i helper blob before constructor_menu07_missionsel"
+        },
+        {
+          "offset": "0x42F38",
+          "range": "missionhelper",
+          "old": "0x01284821",
+          "ge_stock": "0x01284821",
+          "new": "0x44995000",
+          "changed": true,
+          "note": "GE480i helper blob before constructor_menu07_missionsel"
+        },
+        {
+          "offset": "0x42F3C",
+          "range": "missionhelper",
+          "old": "0x8D29AFE4",
+          "ge_stock": "0x8D29AFE4",
+          "new": "0x46805120",
+          "changed": true,
+          "note": "GE480i helper blob before constructor_menu07_missionsel"
+        },
+        {
+          "offset": "0x42F40",
+          "range": "missionhelper",
+          "old": "0x44982000",
+          "ge_stock": "0x44982000",
+          "new": "0x3C028003",
+          "changed": true,
+          "note": "GE480i helper blob before constructor_menu07_missionsel"
+        },
+        {
+          "offset": "0x42F44",
+          "range": "missionhelper",
+          "old": "0x14400002",
+          "ge_stock": "0x14400002",
+          "new": "0x46082282",
+          "changed": true,
+          "note": "GE480i helper blob before constructor_menu07_missionsel"
+        },
+        {
+          "offset": "0x42F48",
+          "range": "missionhelper",
+          "old": "0x00000000",
+          "ge_stock": "0x00000000",
+          "new": "0x44814000",
+          "changed": true,
+          "note": "GE480i helper blob before constructor_menu07_missionsel"
+        },
+        {
+          "offset": "0x42F4C",
+          "range": "missionhelper",
+          "old": "0x0007000D",
+          "ge_stock": "0x0007000D",
+          "new": "0x3C0142D4",
+          "changed": true,
+          "note": "GE480i helper blob before constructor_menu07_missionsel"
+        },
+        {
+          "offset": "0x42F50",
+          "range": "missionhelper",
+          "old": "0x2401FFFF",
+          "ge_stock": "0x2401FFFF",
+          "new": "0x46083180",
+          "changed": true,
+          "note": "GE480i helper blob before constructor_menu07_missionsel"
+        },
+        {
+          "offset": "0x42F54",
+          "range": "missionhelper",
+          "old": "0x14410004",
+          "ge_stock": "0x14410004",
+          "new": "0x44812000",
+          "changed": true,
+          "note": "GE480i helper blob before constructor_menu07_missionsel"
+        },
+        {
+          "offset": "0x42F58",
+          "range": "missionhelper",
+          "old": "0x3C018000",
+          "ge_stock": "0x3C018000",
+          "new": "0x46045280",
+          "changed": true,
+          "note": "GE480i helper blob before constructor_menu07_missionsel"
+        },
+        {
+          "offset": "0x42F5C",
+          "range": "missionhelper",
+          "old": "0x14810002",
+          "ge_stock": "0x14810002",
+          "new": "0xE446A908",
+          "changed": true,
+          "note": "GE480i helper blob before constructor_menu07_missionsel"
+        },
+        {
+          "offset": "0x42F60",
+          "range": "missionhelper",
+          "old": "0x00000000",
+          "ge_stock": "0x00000000",
+          "new": "0x03E00008",
+          "changed": true,
+          "note": "GE480i helper blob before constructor_menu07_missionsel"
+        },
+        {
+          "offset": "0x42F64",
+          "range": "missionhelper",
+          "old": "0x0006000D",
+          "ge_stock": "0x0006000D",
+          "new": "0xE44AA90C",
+          "changed": true,
+          "note": "GE480i helper blob before constructor_menu07_missionsel"
+        },
+        {
+          "offset": "0x42F68",
+          "range": "missionhelper",
+          "old": "0x468021A0",
+          "ge_stock": "0x468021A0",
+          "new": "0x00000000",
+          "changed": true,
+          "note": "GE480i helper blob before constructor_menu07_missionsel"
+        },
+        {
+          "offset": "0x42F6C",
+          "range": "missionhelper",
+          "old": "0x44894000",
+          "ge_stock": "0x44894000",
+          "new": "0x00000000",
+          "changed": true,
+          "note": "GE480i helper blob before constructor_menu07_missionsel"
+        },
+        {
+          "offset": "0x42F70",
+          "range": "missionhelper",
+          "old": "0x3C018003",
+          "ge_stock": "0x3C018003",
+          "new": "0x00000000",
+          "changed": true,
+          "note": "GE480i helper blob before constructor_menu07_missionsel"
+        },
+        {
+          "offset": "0x42F74",
+          "range": "missionhelper",
+          "old": "0x468042A0",
+          "ge_stock": "0x468042A0",
+          "new": "0x00000000",
+          "changed": true,
+          "note": "GE480i helper blob before constructor_menu07_missionsel"
+        },
+        {
+          "offset": "0x42F78",
+          "range": "missionhelper",
+          "old": "0xE426A908",
+          "ge_stock": "0xE426A908",
+          "new": "0x00000000",
+          "changed": true,
+          "note": "GE480i helper blob before constructor_menu07_missionsel"
+        },
+        {
+          "offset": "0x42F7C",
+          "range": "missionhelper",
+          "old": "0x3C018003",
+          "ge_stock": "0x3C018003",
+          "new": "0x00000000",
+          "changed": true,
+          "note": "GE480i helper blob before constructor_menu07_missionsel"
+        },
+        {
+          "offset": "0x42F80",
+          "range": "missionhelper",
+          "old": "0x03E00008",
+          "ge_stock": "0x03E00008",
+          "new": "0x00000000",
+          "changed": true,
+          "note": "GE480i helper blob before constructor_menu07_missionsel"
+        },
+        {
+          "offset": "0x42F84",
+          "range": "missionhelper",
+          "old": "0xE42AA90C",
+          "ge_stock": "0xE42AA90C",
+          "new": "0x00000000",
+          "changed": true,
+          "note": "GE480i helper blob before constructor_menu07_missionsel"
+        },
+        {
+          "offset": "0x43148",
+          "range": "missionlabel",
+          "old": "0x24C6001D",
+          "ge_stock": "0x24C6001D",
+          "new": "0x24C6002A",
+          "changed": true,
+          "note": "mission label y/x offsets"
+        },
+        {
+          "offset": "0x43150",
+          "range": "missionlabel",
+          "old": "0x24A5FFE1",
+          "ge_stock": "0x24A5FFE1",
+          "new": "0x24A5FFD3",
+          "changed": true,
+          "note": "mission label y/x offsets"
+        },
+        {
+          "offset": "0x431E0",
+          "range": "missionlabel",
+          "old": "0x24C6001D",
+          "ge_stock": "0x24C6001D",
+          "new": "0x24C6002A",
+          "changed": true,
+          "note": "mission label y/x offsets repeat"
+        },
+        {
+          "offset": "0x431E4",
+          "range": "missionlabel",
+          "old": "0x24A5FFE1",
+          "ge_stock": "0x24A5FFE1",
+          "new": "0x24A5FFD3",
+          "changed": true,
+          "note": "mission label y/x offsets repeat"
+        }
+      ],
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\t90texstk.sav",
+          "target": "artifacts\\generated\\txdossierdraw2.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\t90texstk.eep",
+          "target": "artifacts\\generated\\txdossierdraw2.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ]
+    }
+  ]
+}

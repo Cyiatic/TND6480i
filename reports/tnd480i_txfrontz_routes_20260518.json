@@ -1,0 +1,162 @@
+{
+  "base_rom": "artifacts\\generated\\txfrontz.z64",
+  "base_md5": "8c03b59dea238334bf8ac05dfb28ceb8",
+  "purpose": "No-input hardware route probes for front/dossier pages; do not promote over gameplay baseline.",
+  "routes": [
+    {
+      "name": "fzauto05",
+      "menu_id": 5,
+      "symbol": "MENU_FILE_SELECT",
+      "purpose": "File select / save folders",
+      "base_rom": "artifacts\\generated\\txfrontz.z64",
+      "out_rom": "artifacts\\generated\\fzauto05.z64",
+      "out_md5": "32c92de6cd206af3ed1284ddcaf2684b",
+      "header_crc": "84770829 6112779C",
+      "patch": {
+        "offset": "0x3FF34",
+        "old": "0x24040018",
+        "new": "0x24040005",
+        "note": "After the TND title/logo timeout, route directly to MENU_FILE_SELECT."
+      },
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\txfrontz.sav",
+          "target": "artifacts\\generated\\fzauto05.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\txfrontz.eep",
+          "target": "artifacts\\generated\\fzauto05.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ],
+      "do_not_promote": true
+    },
+    {
+      "name": "fzauto06",
+      "menu_id": 6,
+      "symbol": "MENU_MODE_SELECT",
+      "purpose": "Single-player / multiplayer / cheat select",
+      "base_rom": "artifacts\\generated\\txfrontz.z64",
+      "out_rom": "artifacts\\generated\\fzauto06.z64",
+      "out_md5": "53b1375b89cd9bcd87ce9e1511d2ab9b",
+      "header_crc": "84770829 8855076F",
+      "patch": {
+        "offset": "0x3FF34",
+        "old": "0x24040018",
+        "new": "0x24040006",
+        "note": "After the TND title/logo timeout, route directly to MENU_MODE_SELECT."
+      },
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\txfrontz.sav",
+          "target": "artifacts\\generated\\fzauto06.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\txfrontz.eep",
+          "target": "artifacts\\generated\\fzauto06.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ],
+      "do_not_promote": true
+    },
+    {
+      "name": "fzauto07",
+      "menu_id": 7,
+      "symbol": "MENU_MISSION_SELECT",
+      "purpose": "Mission select dossier",
+      "base_rom": "artifacts\\generated\\txfrontz.z64",
+      "out_rom": "artifacts\\generated\\fzauto07.z64",
+      "out_md5": "073dd9f37f1a9a3a0be7067b8c4f35c7",
+      "header_crc": "84770829 BBF99922",
+      "patch": {
+        "offset": "0x3FF34",
+        "old": "0x24040018",
+        "new": "0x24040007",
+        "note": "After the TND title/logo timeout, route directly to MENU_MISSION_SELECT."
+      },
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\txfrontz.sav",
+          "target": "artifacts\\generated\\fzauto07.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\txfrontz.eep",
+          "target": "artifacts\\generated\\fzauto07.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ],
+      "do_not_promote": true
+    },
+    {
+      "name": "fzauto08",
+      "menu_id": 8,
+      "symbol": "MENU_DIFFICULTY",
+      "purpose": "Difficulty select dossier",
+      "base_rom": "artifacts\\generated\\txfrontz.z64",
+      "out_rom": "artifacts\\generated\\fzauto08.z64",
+      "out_md5": "2339521dce785031f686a04f87cbe8ce",
+      "header_crc": "84770821 D05EC715",
+      "patch": {
+        "offset": "0x3FF34",
+        "old": "0x24040018",
+        "new": "0x24040008",
+        "note": "After the TND title/logo timeout, route directly to MENU_DIFFICULTY."
+      },
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\txfrontz.sav",
+          "target": "artifacts\\generated\\fzauto08.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\txfrontz.eep",
+          "target": "artifacts\\generated\\fzauto08.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ],
+      "do_not_promote": true
+    },
+    {
+      "name": "fzauto0a",
+      "menu_id": 10,
+      "symbol": "MENU_BRIEFING",
+      "purpose": "Mission briefing dossier",
+      "base_rom": "artifacts\\generated\\txfrontz.z64",
+      "out_rom": "artifacts\\generated\\fzauto0a.z64",
+      "out_md5": "d723297ebab4e23d22e18ac2bcea1943",
+      "header_crc": "84770821 8B893CAB",
+      "patch": {
+        "offset": "0x3FF34",
+        "old": "0x24040018",
+        "new": "0x2404000A",
+        "note": "After the TND title/logo timeout, route directly to MENU_BRIEFING."
+      },
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\txfrontz.sav",
+          "target": "artifacts\\generated\\fzauto0a.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\txfrontz.eep",
+          "target": "artifacts\\generated\\fzauto0a.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ],
+      "do_not_promote": true
+    }
+  ]
+}

@@ -1,0 +1,162 @@
+{
+  "base_rom": "artifacts\\generated\\txallocboth.z64",
+  "base_md5": "25a7538bfdbc5b47bc828322d8396857",
+  "purpose": "No-input hardware route probes for front/dossier pages; do not promote over gameplay baseline.",
+  "routes": [
+    {
+      "name": "abauto05",
+      "menu_id": 5,
+      "symbol": "MENU_FILE_SELECT",
+      "purpose": "File select / save folders",
+      "base_rom": "artifacts\\generated\\txallocboth.z64",
+      "out_rom": "artifacts\\generated\\abauto05.z64",
+      "out_md5": "bb0aeb95e2b2e66ae42962df19bc5d6c",
+      "header_crc": "847786C7 21D20C0D",
+      "patch": {
+        "offset": "0x3FF34",
+        "old": "0x24040018",
+        "new": "0x24040005",
+        "note": "After the TND title/logo timeout, route directly to MENU_FILE_SELECT."
+      },
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\txallocboth.sav",
+          "target": "artifacts\\generated\\abauto05.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\txallocboth.eep",
+          "target": "artifacts\\generated\\abauto05.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ],
+      "do_not_promote": true
+    },
+    {
+      "name": "abauto06",
+      "menu_id": 6,
+      "symbol": "MENU_MODE_SELECT",
+      "purpose": "Single-player / multiplayer / cheat select",
+      "base_rom": "artifacts\\generated\\txallocboth.z64",
+      "out_rom": "artifacts\\generated\\abauto06.z64",
+      "out_md5": "37d7a45b45b91c91fd797908fa8c88cd",
+      "header_crc": "847786C5 DD85BDF3",
+      "patch": {
+        "offset": "0x3FF34",
+        "old": "0x24040018",
+        "new": "0x24040006",
+        "note": "After the TND title/logo timeout, route directly to MENU_MODE_SELECT."
+      },
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\txallocboth.sav",
+          "target": "artifacts\\generated\\abauto06.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\txallocboth.eep",
+          "target": "artifacts\\generated\\abauto06.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ],
+      "do_not_promote": true
+    },
+    {
+      "name": "abauto07",
+      "menu_id": 7,
+      "symbol": "MENU_MISSION_SELECT",
+      "purpose": "Mission select dossier",
+      "base_rom": "artifacts\\generated\\txallocboth.z64",
+      "out_rom": "artifacts\\generated\\abauto07.z64",
+      "out_md5": "b9f81bc44b93a1ce932bea6bcdd7d44d",
+      "header_crc": "847786C7 3D597144",
+      "patch": {
+        "offset": "0x3FF34",
+        "old": "0x24040018",
+        "new": "0x24040007",
+        "note": "After the TND title/logo timeout, route directly to MENU_MISSION_SELECT."
+      },
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\txallocboth.sav",
+          "target": "artifacts\\generated\\abauto07.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\txallocboth.eep",
+          "target": "artifacts\\generated\\abauto07.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ],
+      "do_not_promote": true
+    },
+    {
+      "name": "abauto08",
+      "menu_id": 8,
+      "symbol": "MENU_DIFFICULTY",
+      "purpose": "Difficulty select dossier",
+      "base_rom": "artifacts\\generated\\txallocboth.z64",
+      "out_rom": "artifacts\\generated\\abauto08.z64",
+      "out_md5": "f8d21c15b05eae0d1aaf8d0a854bef45",
+      "header_crc": "847786C9 07DDFF31",
+      "patch": {
+        "offset": "0x3FF34",
+        "old": "0x24040018",
+        "new": "0x24040008",
+        "note": "After the TND title/logo timeout, route directly to MENU_DIFFICULTY."
+      },
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\txallocboth.sav",
+          "target": "artifacts\\generated\\abauto08.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\txallocboth.eep",
+          "target": "artifacts\\generated\\abauto08.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ],
+      "do_not_promote": true
+    },
+    {
+      "name": "abauto0a",
+      "menu_id": 10,
+      "symbol": "MENU_BRIEFING",
+      "purpose": "Mission briefing dossier",
+      "base_rom": "artifacts\\generated\\txallocboth.z64",
+      "out_rom": "artifacts\\generated\\abauto0a.z64",
+      "out_md5": "1d169f75564ecadc10922f2930c059d2",
+      "header_crc": "847786C5 B604750A",
+      "patch": {
+        "offset": "0x3FF34",
+        "old": "0x24040018",
+        "new": "0x2404000A",
+        "note": "After the TND title/logo timeout, route directly to MENU_BRIEFING."
+      },
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\txallocboth.sav",
+          "target": "artifacts\\generated\\abauto0a.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\txallocboth.eep",
+          "target": "artifacts\\generated\\abauto0a.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ],
+      "do_not_promote": true
+    }
+  ]
+}

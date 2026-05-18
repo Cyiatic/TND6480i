@@ -1,0 +1,162 @@
+{
+  "base_rom": "artifacts\\generated\\fotxmodepos2.z64",
+  "base_md5": "00e3663c4d5f55fc0979b3b85d603821",
+  "purpose": "No-input hardware route probes for front/dossier pages; do not promote over gameplay baseline.",
+  "routes": [
+    {
+      "name": "fompauto05",
+      "menu_id": 5,
+      "symbol": "MENU_FILE_SELECT",
+      "purpose": "File select / save folders",
+      "base_rom": "artifacts\\generated\\fotxmodepos2.z64",
+      "out_rom": "artifacts\\generated\\fompauto05.z64",
+      "out_md5": "5753dc4e72fa6190a9678106d33d26cd",
+      "header_crc": "867745EF C14B37BC",
+      "patch": {
+        "offset": "0x3FF34",
+        "old": "0x24040018",
+        "new": "0x24040005",
+        "note": "After the TND title/logo timeout, route directly to MENU_FILE_SELECT."
+      },
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\fotxmodepos2.sav",
+          "target": "artifacts\\generated\\fompauto05.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\fotxmodepos2.eep",
+          "target": "artifacts\\generated\\fompauto05.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ],
+      "do_not_promote": true
+    },
+    {
+      "name": "fompauto06",
+      "menu_id": 6,
+      "symbol": "MENU_MODE_SELECT",
+      "purpose": "Single-player / multiplayer / cheat select",
+      "base_rom": "artifacts\\generated\\fotxmodepos2.z64",
+      "out_rom": "artifacts\\generated\\fompauto06.z64",
+      "out_md5": "8728914acd3b2814cf03b7f30e84a4bd",
+      "header_crc": "867745F3 F561198F",
+      "patch": {
+        "offset": "0x3FF34",
+        "old": "0x24040018",
+        "new": "0x24040006",
+        "note": "After the TND title/logo timeout, route directly to MENU_MODE_SELECT."
+      },
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\fotxmodepos2.sav",
+          "target": "artifacts\\generated\\fompauto06.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\fotxmodepos2.eep",
+          "target": "artifacts\\generated\\fompauto06.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ],
+      "do_not_promote": true
+    },
+    {
+      "name": "fompauto07",
+      "menu_id": 7,
+      "symbol": "MENU_MISSION_SELECT",
+      "purpose": "Mission select dossier",
+      "base_rom": "artifacts\\generated\\fotxmodepos2.z64",
+      "out_rom": "artifacts\\generated\\fompauto07.z64",
+      "out_md5": "706a87ab00575921d51805cc6afc2faa",
+      "header_crc": "867745F3 6C7EC199",
+      "patch": {
+        "offset": "0x3FF34",
+        "old": "0x24040018",
+        "new": "0x24040007",
+        "note": "After the TND title/logo timeout, route directly to MENU_MISSION_SELECT."
+      },
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\fotxmodepos2.sav",
+          "target": "artifacts\\generated\\fompauto07.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\fotxmodepos2.eep",
+          "target": "artifacts\\generated\\fompauto07.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ],
+      "do_not_promote": true
+    },
+    {
+      "name": "fompauto08",
+      "menu_id": 8,
+      "symbol": "MENU_DIFFICULTY",
+      "purpose": "Difficulty select dossier",
+      "base_rom": "artifacts\\generated\\fotxmodepos2.z64",
+      "out_rom": "artifacts\\generated\\fompauto08.z64",
+      "out_md5": "017b6dee5a4e6a9fbef36fd75f782c27",
+      "header_crc": "867745FF 5C01D529",
+      "patch": {
+        "offset": "0x3FF34",
+        "old": "0x24040018",
+        "new": "0x24040008",
+        "note": "After the TND title/logo timeout, route directly to MENU_DIFFICULTY."
+      },
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\fotxmodepos2.sav",
+          "target": "artifacts\\generated\\fompauto08.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\fotxmodepos2.eep",
+          "target": "artifacts\\generated\\fompauto08.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ],
+      "do_not_promote": true
+    },
+    {
+      "name": "fompauto0a",
+      "menu_id": 10,
+      "symbol": "MENU_BRIEFING",
+      "purpose": "Mission briefing dossier",
+      "base_rom": "artifacts\\generated\\fotxmodepos2.z64",
+      "out_rom": "artifacts\\generated\\fompauto0a.z64",
+      "out_md5": "07398a51f2737623ca341545f220e9ae",
+      "header_crc": "867745FB 12CE0D1F",
+      "patch": {
+        "offset": "0x3FF34",
+        "old": "0x24040018",
+        "new": "0x2404000A",
+        "note": "After the TND title/logo timeout, route directly to MENU_BRIEFING."
+      },
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\fotxmodepos2.sav",
+          "target": "artifacts\\generated\\fompauto0a.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\fotxmodepos2.eep",
+          "target": "artifacts\\generated\\fompauto0a.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ],
+      "do_not_promote": true
+    }
+  ]
+}

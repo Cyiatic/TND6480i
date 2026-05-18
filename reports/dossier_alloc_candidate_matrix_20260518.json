@@ -1,0 +1,52 @@
+{
+  "sheet": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\diagnostics\\captures\\contact_sheets\\dossier_alloc_candidate_matrix_20260518\\sheet.jpg",
+  "purpose": "Hardware GE480i/current/candidate visual comparison for txallocboth front/menu allocation candidate.",
+  "rows": [
+    "File Select",
+    "Mode Select",
+    "Mission Select"
+  ],
+  "columns": [
+    "GE480i reference",
+    "Current t90tex",
+    "txallocboth"
+  ],
+  "entries": [
+    {
+      "page": "File Select",
+      "source": "txallocboth",
+      "video": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\diagnostics\\captures\\videos\\abauto05_file_select_probe_cycled_20260518.mp4",
+      "seconds": 55,
+      "path": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\diagnostics\\captures\\contact_sheets\\dossier_alloc_candidate_matrix_20260518\\frames\\File_Select__txallocboth.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      }
+    },
+    {
+      "page": "Mode Select",
+      "source": "txallocboth",
+      "video": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\diagnostics\\captures\\videos\\abauto06_mode_select_probe_cycled_20260518.mp4",
+      "seconds": 55,
+      "path": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\diagnostics\\captures\\contact_sheets\\dossier_alloc_candidate_matrix_20260518\\frames\\Mode_Select__txallocboth.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      }
+    },
+    {
+      "page": "Mission Select",
+      "source": "txallocboth",
+      "video": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\diagnostics\\captures\\videos\\abauto07_mission_select_probe_cycled_20260518.mp4",
+      "seconds": 60,
+      "path": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\diagnostics\\captures\\contact_sheets\\dossier_alloc_candidate_matrix_20260518\\frames\\Mission_Select__txallocboth.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      }
+    }
+  ]
+}

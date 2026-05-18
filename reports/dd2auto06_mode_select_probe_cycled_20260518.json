@@ -1,0 +1,165 @@
+{
+  "video": "diagnostics\\captures\\videos\\dd2auto06_mode_select_probe_cycled_20260518.mp4",
+  "sheet": "diagnostics\\captures\\contact_sheets\\dd2auto06_mode_select_probe_cycled_20260518\\sheet.jpg",
+  "start": 45.0,
+  "end": 70.0,
+  "step": 2.0,
+  "frames": [
+    {
+      "index": 0,
+      "seconds": 45.0,
+      "timestamp": "00:45",
+      "path": "diagnostics\\captures\\contact_sheets\\dd2auto06_mode_select_probe_cycled_20260518\\frames\\frame_0000_00045000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "00:45"
+    },
+    {
+      "index": 1,
+      "seconds": 47.0,
+      "timestamp": "00:47",
+      "path": "diagnostics\\captures\\contact_sheets\\dd2auto06_mode_select_probe_cycled_20260518\\frames\\frame_0001_00047000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "00:47"
+    },
+    {
+      "index": 2,
+      "seconds": 49.0,
+      "timestamp": "00:49",
+      "path": "diagnostics\\captures\\contact_sheets\\dd2auto06_mode_select_probe_cycled_20260518\\frames\\frame_0002_00049000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "00:49"
+    },
+    {
+      "index": 3,
+      "seconds": 51.0,
+      "timestamp": "00:51",
+      "path": "diagnostics\\captures\\contact_sheets\\dd2auto06_mode_select_probe_cycled_20260518\\frames\\frame_0003_00051000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "00:51"
+    },
+    {
+      "index": 4,
+      "seconds": 53.0,
+      "timestamp": "00:53",
+      "path": "diagnostics\\captures\\contact_sheets\\dd2auto06_mode_select_probe_cycled_20260518\\frames\\frame_0004_00053000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "00:53"
+    },
+    {
+      "index": 5,
+      "seconds": 55.0,
+      "timestamp": "00:55",
+      "path": "diagnostics\\captures\\contact_sheets\\dd2auto06_mode_select_probe_cycled_20260518\\frames\\frame_0005_00055000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "00:55"
+    },
+    {
+      "index": 6,
+      "seconds": 57.0,
+      "timestamp": "00:57",
+      "path": "diagnostics\\captures\\contact_sheets\\dd2auto06_mode_select_probe_cycled_20260518\\frames\\frame_0006_00057000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "00:57"
+    },
+    {
+      "index": 7,
+      "seconds": 59.0,
+      "timestamp": "00:59",
+      "path": "diagnostics\\captures\\contact_sheets\\dd2auto06_mode_select_probe_cycled_20260518\\frames\\frame_0007_00059000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "00:59"
+    },
+    {
+      "index": 8,
+      "seconds": 61.0,
+      "timestamp": "01:01",
+      "path": "diagnostics\\captures\\contact_sheets\\dd2auto06_mode_select_probe_cycled_20260518\\frames\\frame_0008_00061000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "01:01"
+    },
+    {
+      "index": 9,
+      "seconds": 63.0,
+      "timestamp": "01:03",
+      "path": "diagnostics\\captures\\contact_sheets\\dd2auto06_mode_select_probe_cycled_20260518\\frames\\frame_0009_00063000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "01:03"
+    },
+    {
+      "index": 10,
+      "seconds": 65.0,
+      "timestamp": "01:05",
+      "path": "diagnostics\\captures\\contact_sheets\\dd2auto06_mode_select_probe_cycled_20260518\\frames\\frame_0010_00065000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "01:05"
+    },
+    {
+      "index": 11,
+      "seconds": 67.0,
+      "timestamp": "01:07",
+      "path": "diagnostics\\captures\\contact_sheets\\dd2auto06_mode_select_probe_cycled_20260518\\frames\\frame_0011_00067000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "01:07"
+    },
+    {
+      "index": 12,
+      "seconds": 69.0,
+      "timestamp": "01:09",
+      "path": "diagnostics\\captures\\contact_sheets\\dd2auto06_mode_select_probe_cycled_20260518\\frames\\frame_0012_00069000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "01:09"
+    }
+  ]
+}
