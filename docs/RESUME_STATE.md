@@ -35,6 +35,8 @@ Key correction to the performance theory: the slowdown was not primarily the sha
 
 New fix: keep the 90-page TLB cache, but relocate it below `fb1` using the prior `tlb806b6` base (`0x806B6000-0x80769FFF` on 8 MB), then apply the `fb0=0x80400000` level-boot fix. `t90viewge` adds the GE 480i camera/non-camera viewport constants from `t8040viewge` on top of that fast memory layout.
 
+Target hardware note: Expansion Pak is enabled and included for the project target. Continue assuming the 8 MB memory map is available and required, and avoid spending effort on 4 MB-compatible variants unless specifically requested.
+
 Hardware evidence:
 
 ```text

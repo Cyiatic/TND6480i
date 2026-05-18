@@ -16,6 +16,8 @@ artifacts/analogue_test/TND90GE.SAV
 
 Why: direct Wreck hardware cadence matches the old good TND6480i recording after restoring the TLB cache wrap to 90 pages while relocating the cache below `fb1`. The previous 58-page workaround is now the performance regression suspect. `t90viewge` keeps the `fb0=0x80400000` level-boot fix and GE 480i viewport constants, and direct probes for Party, City, The End, Hotel, Volcano, Tower, and Boat all reached rendered scenes on real N64.
 
+Hardware assumption: Expansion Pak is enabled and included. Optimize for the 8 MB/upper-RAM framebuffer layout; do not pursue 4 MB compatibility unless the project scope changes.
+
 Analogue 3D result: user tested `TND90GE` and reported that all levels boot and run fine. Remaining gameplay-side visual note: the Labs encoder numbers were clear in an earlier build but are now difficult to read. Treat this as the next focused A/B against `T90FB`, not as a reason to abandon the `TND90GE` stability baseline.
 
 GE hi-res patch page clue: GoldenEye's working 640x480i patch depends on Zoinkity's 7 MB RAM extension, two relocated 640x480 framebuffers in upper RAM, and matching assembly/VI changes. For TND64, keep testing memory layout, framebuffer placement, and the TLB/cache range as one system. Avoid broad menu/front-end transplants until the core RAM/framebuffer model is understood.

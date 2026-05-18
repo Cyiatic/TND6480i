@@ -2,6 +2,8 @@
 
 Use these as short-name ROM/save pairs for Analogue or flashcart comparison.
 
+Target assumption: Expansion Pak is enabled/included. The current candidates intentionally target the 8 MB memory map and upper-RAM framebuffer layout.
+
 - `TNDVIABL.Z64` / `TNDVIABL.SAV`: same as `t8040viewge`; current viable gameplay baseline. All levels boot in user testing, but performance is now suspect.
 - `TNDCAMGE.Z64` / `TNDCAMGE.SAV`: previous `t8040camge` baseline. Same all-level boot breakthrough, before the added normal gameplay viewport height/top change.
 - `TND8040.Z64` / `TND8040.SAV`: lower-level `tnd8040` control before the GE camera/view follow-up constants.
