@@ -1,0 +1,276 @@
+{
+  "sheet": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\diagnostics\\captures\\contact_sheets\\dossier_page_matrix_20260518\\sheet.jpg",
+  "light_capture_dir": "C:\\Users\\codex\\Documents\\Light Capture \u02dc^\u2030\u00e6\u0192t\u0192H\u0192\u2039\u0192_\\n64",
+  "layout": {
+    "rows": [
+      "File Select",
+      "Mode Select",
+      "Mission Select",
+      "Difficulty Select",
+      "Briefing"
+    ],
+    "columns": [
+      "GE480i reference",
+      "Stock TND64",
+      "Old TND6480i recording",
+      "Current t90tex direct"
+    ]
+  },
+  "notes": [
+    "Rows are dossier pages. Columns are GE480i reference, stock TND64, old full TND6480i recording, and current t90tex direct-console captures where clean routes exist.",
+    "Current t90tex direct difficulty/briefing are intentionally blank because direct menu IDs lack the required page state and previously produced title/black captures.",
+    "Old TND6480i timestamps use the user-provided recording sequence: 01:14, 01:28, 01:38, 01:46, 01:55."
+  ],
+  "entries": [
+    {
+      "page": "File Select",
+      "source": "GE480i reference",
+      "source_label": "GE480i reference",
+      "seconds": 170.0,
+      "video": "C:\\Users\\codex\\Documents\\Light Capture \u02dc^\u2030\u00e6\u0192t\u0192H\u0192\u2039\u0192_\\n64\\2. GoldenEye 480i.mpg",
+      "path": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\diagnostics\\captures\\contact_sheets\\dossier_page_matrix_20260518\\frames\\File_Select__GE480i_reference.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      }
+    },
+    {
+      "page": "File Select",
+      "source": "Stock TND64",
+      "source_label": "Stock TND64",
+      "seconds": 150.0,
+      "video": "C:\\Users\\codex\\Documents\\Light Capture \u02dc^\u2030\u00e6\u0192t\u0192H\u0192\u2039\u0192_\\n64\\3. Tomorrow Never DIes 64.mpg",
+      "path": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\diagnostics\\captures\\contact_sheets\\dossier_page_matrix_20260518\\frames\\File_Select__Stock_TND64.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      }
+    },
+    {
+      "page": "File Select",
+      "source": "Old TND6480i recording",
+      "source_label": "Old TND6480i recording",
+      "seconds": 74.0,
+      "video": "C:\\Users\\codex\\Documents\\Light Capture \u02dc^\u2030\u00e6\u0192t\u0192H\u0192\u2039\u0192_\\n64\\4. Tomorrow Never Dies 6480i.mpg",
+      "path": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\diagnostics\\captures\\contact_sheets\\dossier_page_matrix_20260518\\frames\\File_Select__Old_TND6480i_recording.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      }
+    },
+    {
+      "page": "File Select",
+      "source": "Current t90tex direct",
+      "source_label": "Current t90tex direct",
+      "seconds": 58.0,
+      "video": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\diagnostics\\captures\\videos\\t90texauto05_fileselect_probe_20260518.mp4",
+      "path": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\diagnostics\\captures\\contact_sheets\\dossier_page_matrix_20260518\\frames\\File_Select__Current_t90tex_direct.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      }
+    },
+    {
+      "page": "Mode Select",
+      "source": "GE480i reference",
+      "source_label": "GE480i reference",
+      "seconds": 180.0,
+      "video": "C:\\Users\\codex\\Documents\\Light Capture \u02dc^\u2030\u00e6\u0192t\u0192H\u0192\u2039\u0192_\\n64\\2. GoldenEye 480i.mpg",
+      "path": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\diagnostics\\captures\\contact_sheets\\dossier_page_matrix_20260518\\frames\\Mode_Select__GE480i_reference.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      }
+    },
+    {
+      "page": "Mode Select",
+      "source": "Stock TND64",
+      "source_label": "Stock TND64",
+      "seconds": 170.0,
+      "video": "C:\\Users\\codex\\Documents\\Light Capture \u02dc^\u2030\u00e6\u0192t\u0192H\u0192\u2039\u0192_\\n64\\3. Tomorrow Never DIes 64.mpg",
+      "path": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\diagnostics\\captures\\contact_sheets\\dossier_page_matrix_20260518\\frames\\Mode_Select__Stock_TND64.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      }
+    },
+    {
+      "page": "Mode Select",
+      "source": "Old TND6480i recording",
+      "source_label": "Old TND6480i recording",
+      "seconds": 88.0,
+      "video": "C:\\Users\\codex\\Documents\\Light Capture \u02dc^\u2030\u00e6\u0192t\u0192H\u0192\u2039\u0192_\\n64\\4. Tomorrow Never Dies 6480i.mpg",
+      "path": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\diagnostics\\captures\\contact_sheets\\dossier_page_matrix_20260518\\frames\\Mode_Select__Old_TND6480i_recording.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      }
+    },
+    {
+      "page": "Mode Select",
+      "source": "Current t90tex direct",
+      "source_label": "Current t90tex direct",
+      "seconds": 58.0,
+      "video": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\diagnostics\\captures\\videos\\t90texauto06_modesel_probe_20260518.mp4",
+      "path": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\diagnostics\\captures\\contact_sheets\\dossier_page_matrix_20260518\\frames\\Mode_Select__Current_t90tex_direct.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      }
+    },
+    {
+      "page": "Mission Select",
+      "source": "GE480i reference",
+      "source_label": "GE480i reference",
+      "seconds": 190.0,
+      "video": "C:\\Users\\codex\\Documents\\Light Capture \u02dc^\u2030\u00e6\u0192t\u0192H\u0192\u2039\u0192_\\n64\\2. GoldenEye 480i.mpg",
+      "path": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\diagnostics\\captures\\contact_sheets\\dossier_page_matrix_20260518\\frames\\Mission_Select__GE480i_reference.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      }
+    },
+    {
+      "page": "Mission Select",
+      "source": "Stock TND64",
+      "source_label": "Stock TND64",
+      "seconds": 190.0,
+      "video": "C:\\Users\\codex\\Documents\\Light Capture \u02dc^\u2030\u00e6\u0192t\u0192H\u0192\u2039\u0192_\\n64\\3. Tomorrow Never DIes 64.mpg",
+      "path": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\diagnostics\\captures\\contact_sheets\\dossier_page_matrix_20260518\\frames\\Mission_Select__Stock_TND64.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      }
+    },
+    {
+      "page": "Mission Select",
+      "source": "Old TND6480i recording",
+      "source_label": "Old TND6480i recording",
+      "seconds": 98.0,
+      "video": "C:\\Users\\codex\\Documents\\Light Capture \u02dc^\u2030\u00e6\u0192t\u0192H\u0192\u2039\u0192_\\n64\\4. Tomorrow Never Dies 6480i.mpg",
+      "path": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\diagnostics\\captures\\contact_sheets\\dossier_page_matrix_20260518\\frames\\Mission_Select__Old_TND6480i_recording.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      }
+    },
+    {
+      "page": "Mission Select",
+      "source": "Current t90tex direct",
+      "source_label": "Current t90tex direct",
+      "seconds": 58.0,
+      "video": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\diagnostics\\captures\\videos\\t90texauto07_missionsel_probe_20260518.mp4",
+      "path": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\diagnostics\\captures\\contact_sheets\\dossier_page_matrix_20260518\\frames\\Mission_Select__Current_t90tex_direct.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      }
+    },
+    {
+      "page": "Difficulty Select",
+      "source": "GE480i reference",
+      "source_label": "GE480i reference",
+      "seconds": 200.0,
+      "video": "C:\\Users\\codex\\Documents\\Light Capture \u02dc^\u2030\u00e6\u0192t\u0192H\u0192\u2039\u0192_\\n64\\2. GoldenEye 480i.mpg",
+      "path": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\diagnostics\\captures\\contact_sheets\\dossier_page_matrix_20260518\\frames\\Difficulty_Select__GE480i_reference.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      }
+    },
+    {
+      "page": "Difficulty Select",
+      "source": "Stock TND64",
+      "source_label": "Stock TND64",
+      "seconds": 180.0,
+      "video": "C:\\Users\\codex\\Documents\\Light Capture \u02dc^\u2030\u00e6\u0192t\u0192H\u0192\u2039\u0192_\\n64\\3. Tomorrow Never DIes 64.mpg",
+      "path": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\diagnostics\\captures\\contact_sheets\\dossier_page_matrix_20260518\\frames\\Difficulty_Select__Stock_TND64.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      }
+    },
+    {
+      "page": "Difficulty Select",
+      "source": "Old TND6480i recording",
+      "source_label": "Old TND6480i recording",
+      "seconds": 106.0,
+      "video": "C:\\Users\\codex\\Documents\\Light Capture \u02dc^\u2030\u00e6\u0192t\u0192H\u0192\u2039\u0192_\\n64\\4. Tomorrow Never Dies 6480i.mpg",
+      "path": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\diagnostics\\captures\\contact_sheets\\dossier_page_matrix_20260518\\frames\\Difficulty_Select__Old_TND6480i_recording.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      }
+    },
+    {
+      "page": "Difficulty Select",
+      "source": "Current t90tex direct",
+      "source_label": "Current t90tex direct",
+      "seconds": null,
+      "note": "no clean direct route yet",
+      "path": null
+    },
+    {
+      "page": "Briefing",
+      "source": "GE480i reference",
+      "source_label": "GE480i reference",
+      "seconds": 220.0,
+      "video": "C:\\Users\\codex\\Documents\\Light Capture \u02dc^\u2030\u00e6\u0192t\u0192H\u0192\u2039\u0192_\\n64\\2. GoldenEye 480i.mpg",
+      "path": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\diagnostics\\captures\\contact_sheets\\dossier_page_matrix_20260518\\frames\\Briefing__GE480i_reference.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      }
+    },
+    {
+      "page": "Briefing",
+      "source": "Stock TND64",
+      "source_label": "Stock TND64",
+      "seconds": 200.0,
+      "video": "C:\\Users\\codex\\Documents\\Light Capture \u02dc^\u2030\u00e6\u0192t\u0192H\u0192\u2039\u0192_\\n64\\3. Tomorrow Never DIes 64.mpg",
+      "path": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\diagnostics\\captures\\contact_sheets\\dossier_page_matrix_20260518\\frames\\Briefing__Stock_TND64.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      }
+    },
+    {
+      "page": "Briefing",
+      "source": "Old TND6480i recording",
+      "source_label": "Old TND6480i recording",
+      "seconds": 115.0,
+      "video": "C:\\Users\\codex\\Documents\\Light Capture \u02dc^\u2030\u00e6\u0192t\u0192H\u0192\u2039\u0192_\\n64\\4. Tomorrow Never Dies 6480i.mpg",
+      "path": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\diagnostics\\captures\\contact_sheets\\dossier_page_matrix_20260518\\frames\\Briefing__Old_TND6480i_recording.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      }
+    },
+    {
+      "page": "Briefing",
+      "source": "Current t90tex direct",
+      "source_label": "Current t90tex direct",
+      "seconds": null,
+      "note": "no clean direct route yet",
+      "path": null
+    }
+  ]
+}
