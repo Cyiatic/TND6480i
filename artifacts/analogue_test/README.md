@@ -21,6 +21,8 @@ User feedback: each `TNDZ*` ROM got progressively worse and reintroduced the Baz
 
 Current performance canaries:
 
+- `TND90GE.Z64` / `TND90GE.SAV`: current best test candidate. It keeps the 90-page TLB cache relocated below `fb1`, moves `fb0` to `0x80400000`, and keeps the GE 480i camera/viewport constants from `t8040viewge`. Direct Wreck hardware cadence matches the old good TND6480i recording instead of the slow `tnd58/t8040` line, and direct probes for Party, City, The End, Hotel, Volcano, Tower, and Boat reached rendered scenes.
+- `T90FB.Z64` / `T90FB.SAV`: minimal sibling to `TND90GE`; same fast 90-page relocated TLB cache plus `fb0=0x80400000`, but without the later GE camera/viewport constants. Use only if `TND90GE` has a viewport-specific regression.
 - `TNDBLIT.Z64` / `TNDBLIT.SAV`: `t8040viewge` with the shared title/sniper blitter geometry cluster restored to stock TND. Direct-stage Wreck is the current SC64 canary and visually lines up with the stock Wreck control better than `TNDLOWI`.
 - `TNDBUF.Z64` / `TNDBUF.SAV`: `t8040viewge` with only front `viSetBuf` width/height restored to stock. Test only if `TNDBLIT` does not explain the slowdown.
 - `TNDBOTH.Z64` / `TNDBOTH.SAV`: combined `TNDBLIT` + `TNDBUF`. Do not test before the isolated canaries are classified.

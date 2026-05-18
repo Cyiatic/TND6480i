@@ -1,0 +1,301 @@
+{
+  "oldbase_vs_oldbase_007": {
+    "range_count": 12,
+    "total_changed_bytes": 2579,
+    "first_ranges": [
+      {
+        "start": "0x8CB418",
+        "end": "0x8CB422",
+        "len": 10
+      },
+      {
+        "start": "0x8CB423",
+        "end": "0x8CB59C",
+        "len": 377
+      },
+      {
+        "start": "0x8CB59D",
+        "end": "0x8CB6EA",
+        "len": 333
+      },
+      {
+        "start": "0x8CB6EB",
+        "end": "0x8CB6EC",
+        "len": 1
+      },
+      {
+        "start": "0x8CB6ED",
+        "end": "0x8CB86F",
+        "len": 386
+      },
+      {
+        "start": "0x8CB870",
+        "end": "0x8CB9E6",
+        "len": 374
+      },
+      {
+        "start": "0x8CB9E7",
+        "end": "0x8CBAF7",
+        "len": 272
+      },
+      {
+        "start": "0x8CBAF8",
+        "end": "0x8CBB7C",
+        "len": 132
+      },
+      {
+        "start": "0x8CBB7D",
+        "end": "0x8CBC5B",
+        "len": 222
+      },
+      {
+        "start": "0x8CBC5C",
+        "end": "0x8CBCB4",
+        "len": 88
+      },
+      {
+        "start": "0x8CBCB5",
+        "end": "0x8CBCED",
+        "len": 56
+      },
+      {
+        "start": "0x8CBCEE",
+        "end": "0x8CBE36",
+        "len": 328
+      }
+    ],
+    "known_words": []
+  },
+  "oldbase_vs_tnd58": {
+    "range_count": 14,
+    "total_changed_bytes": 2586,
+    "first_ranges": [
+      {
+        "start": "0x12",
+        "end": "0x18",
+        "len": 6
+      },
+      {
+        "start": "0x261B",
+        "end": "0x261C",
+        "len": 1
+      },
+      {
+        "start": "0x8CB418",
+        "end": "0x8CB422",
+        "len": 10
+      },
+      {
+        "start": "0x8CB423",
+        "end": "0x8CB59C",
+        "len": 377
+      },
+      {
+        "start": "0x8CB59D",
+        "end": "0x8CB6EA",
+        "len": 333
+      },
+      {
+        "start": "0x8CB6EB",
+        "end": "0x8CB6EC",
+        "len": 1
+      },
+      {
+        "start": "0x8CB6ED",
+        "end": "0x8CB86F",
+        "len": 386
+      },
+      {
+        "start": "0x8CB870",
+        "end": "0x8CB9E6",
+        "len": 374
+      },
+      {
+        "start": "0x8CB9E7",
+        "end": "0x8CBAF7",
+        "len": 272
+      },
+      {
+        "start": "0x8CBAF8",
+        "end": "0x8CBB7C",
+        "len": 132
+      },
+      {
+        "start": "0x8CBB7D",
+        "end": "0x8CBC5B",
+        "len": 222
+      },
+      {
+        "start": "0x8CBC5C",
+        "end": "0x8CBCB4",
+        "len": 88
+      },
+      {
+        "start": "0x8CBCB5",
+        "end": "0x8CBCED",
+        "len": 56
+      },
+      {
+        "start": "0x8CBCEE",
+        "end": "0x8CBE36",
+        "len": 328
+      }
+    ],
+    "known_words": [
+      {
+        "offset": "0x2618",
+        "oldbase": "0x2C81005A",
+        "tnd58": "0x2C81003A"
+      }
+    ]
+  },
+  "oldbase_007_vs_tnd58": {
+    "range_count": 2,
+    "total_changed_bytes": 7,
+    "first_ranges": [
+      {
+        "start": "0x12",
+        "end": "0x18",
+        "len": 6
+      },
+      {
+        "start": "0x261B",
+        "end": "0x261C",
+        "len": 1
+      }
+    ],
+    "known_words": [
+      {
+        "offset": "0x2618",
+        "oldbase_007": "0x2C81005A",
+        "tnd58": "0x2C81003A"
+      }
+    ]
+  },
+  "tnd58_vs_tnd8040": {
+    "range_count": 3,
+    "total_changed_bytes": 8,
+    "first_ranges": [
+      {
+        "start": "0x12",
+        "end": "0x18",
+        "len": 6
+      },
+      {
+        "start": "0x3D33",
+        "end": "0x3D34",
+        "len": 1
+      },
+      {
+        "start": "0x6587",
+        "end": "0x6588",
+        "len": 1
+      }
+    ],
+    "known_words": [
+      {
+        "offset": "0x3D30",
+        "tnd58": "0x3C048030",
+        "tnd8040": "0x3C048040"
+      },
+      {
+        "offset": "0x6584",
+        "tnd58": "0x3C048030",
+        "tnd8040": "0x3C048040"
+      }
+    ]
+  },
+  "tnd8040_vs_t8040viewge": {
+    "range_count": 11,
+    "total_changed_bytes": 19,
+    "first_ranges": [
+      {
+        "start": "0x12",
+        "end": "0x18",
+        "len": 6
+      },
+      {
+        "start": "0xBB89F",
+        "end": "0xBB8A0",
+        "len": 1
+      },
+      {
+        "start": "0xBB8BB",
+        "end": "0xBB8BC",
+        "len": 1
+      },
+      {
+        "start": "0xBB8C2",
+        "end": "0xBB8C4",
+        "len": 2
+      },
+      {
+        "start": "0xBB8FE",
+        "end": "0xBB900",
+        "len": 2
+      },
+      {
+        "start": "0xBB91F",
+        "end": "0xBB920",
+        "len": 1
+      },
+      {
+        "start": "0xBB946",
+        "end": "0xBB948",
+        "len": 2
+      },
+      {
+        "start": "0xBB957",
+        "end": "0xBB958",
+        "len": 1
+      },
+      {
+        "start": "0xBBA63",
+        "end": "0xBBA64",
+        "len": 1
+      },
+      {
+        "start": "0xBBA83",
+        "end": "0xBBA84",
+        "len": 1
+      },
+      {
+        "start": "0xBBAAB",
+        "end": "0xBBAAC",
+        "len": 1
+      }
+    ],
+    "known_words": [
+      {
+        "offset": "0xBB89C",
+        "tnd8040": "0x240201E0",
+        "t8040viewge": "0x240201F0"
+      },
+      {
+        "offset": "0xBB8B8",
+        "tnd8040": "0x240201E0",
+        "t8040viewge": "0x2402017C"
+      },
+      {
+        "offset": "0xBB8C0",
+        "tnd8040": "0x240201E0",
+        "t8040viewge": "0x24020260"
+      },
+      {
+        "offset": "0xBB91C",
+        "tnd8040": "0x240201CC",
+        "t8040viewge": "0x240201B8"
+      },
+      {
+        "offset": "0xBB954",
+        "tnd8040": "0x240201CC",
+        "t8040viewge": "0x240201B8"
+      },
+      {
+        "offset": "0xBBA80",
+        "tnd8040": "0x2402000A",
+        "t8040viewge": "0x24020014"
+      }
+    ]
+  }
+}

@@ -4,6 +4,49 @@ Last updated: 2026-05-17 after stock-vs-480i Wreck hardware controls and the sha
 
 Scope reminder: keep work limited to this N64/TND6480i project and directly related tools/devices.
 
+## 2026-05-17 TLB90/Fb8040 Breakthrough
+
+New current full-ROM test candidate:
+
+```text
+artifacts/generated/t90viewge.z64
+MD5: e5f3eaf8fff458b2e624d125cf6f2b84
+N64 CRC: 84B7FA99 A580079A
+Patch: artifacts/generated/TND6480i_t90viewge_from_baseline_tnd.bps
+Patch MD5: 5f8420a28ebf95e1a4187e9afde466ce
+SC64 state: loaded as full ROM direct boot with EEPROM 4k save
+```
+
+Analogue/SD short-name pair:
+
+```text
+artifacts/analogue_test/TND90GE.Z64
+artifacts/analogue_test/TND90GE.SAV
+```
+
+Fallback/minimal sibling:
+
+```text
+artifacts/generated/t90fb8040.z64
+artifacts/analogue_test/T90FB.Z64
+```
+
+Key correction to the performance theory: the slowdown was not primarily the shared blitter or viewport constants. Direct Wreck hardware cadence showed that the old good TND6480i recording and old baseline direct Wreck both update at about `4.3` active updates/sec over the Wreck intro, while the slow `tnd58/t8040` line updates at about `2.1-2.3`. The binary diff found that `oldbase_007` vs `tnd58` differs meaningfully only at `0x2618`, where the TLB round-robin wrap was reduced from `90` pages to `58`. That avoided fb1 overlap, but caused page-cache thrash.
+
+New fix: keep the 90-page TLB cache, but relocate it below `fb1` using the prior `tlb806b6` base (`0x806B6000-0x80769FFF` on 8 MB), then apply the `fb0=0x80400000` level-boot fix. `t90viewge` adds the GE 480i camera/non-camera viewport constants from `t8040viewge` on top of that fast memory layout.
+
+Hardware evidence:
+
+```text
+reports/capture_cadence/wreck_intro_t90viewge_motion_20260517.json
+diagnostics/captures/videos/t90viewge_p06wrk_direct_20260517.mp4
+diagnostics/captures/contact_sheets/t90viewge_direct_problem_levels_20260517/t90viewge_direct_problem_levels_sheet.jpg
+diagnostics/captures/videos/t90viewge_full_startup_20260517.mp4
+diagnostics/captures/contact_sheets/t90viewge_full_startup_20260517/t90viewge_full_startup_sheet.jpg
+```
+
+Direct-stage hardware result for `t90viewge`: Wreck cadence matches the old good baseline; Party, City, The End, Hotel, Volcano, Tower, and Boat all reached rendered scenes instead of the earlier lock/prism/black failure classes. Full-ROM startup reaches SC64 menu pre-roll, TiJayFly, Rare, gunbarrel, TND logo, and opening cast. Known front-end issues remain, especially gunbarrel/logos/menus; use `t90viewge` now for manual full-route playability and Analogue speed testing.
+
 ## Current Performance Finding
 
 User Analogue 3D feedback on `t8040viewge`: gameplay is viable but performance is poor, with Printworks and Wreck reportedly running slower than expected even with Analogue overclock. Treat this as a first-class issue, not just visual polish.
@@ -102,9 +145,9 @@ C:\Users\codex\Documents\Light Capture ˜^‰æƒtƒHƒ‹ƒ_\n64
 
 The old full-route TND6480i Wreck windows are inconsistent but support the user's observation: one Wreck interval is GE480i-like while another is far slower. Treat the video metrics as symptom evidence only because camera/player motion strongly affects frame-difference estimates.
 
-## Current Console State
+## Superseded 2026-05-17 Console State
 
-Promoted candidate currently loaded on the SC64 for the next manual full-romhack visual-fit test:
+The following `t8040viewge` state is superseded by `t90viewge` above. It remains documented as the previous viable gameplay baseline:
 
 ```text
 artifacts/generated/t8040viewge.z64

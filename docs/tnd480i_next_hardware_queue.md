@@ -2,6 +2,34 @@
 
 Date: 2026-05-08
 
+## Current Test Candidate: t90viewge
+
+Use this before returning to the older `tnd58/t8040/t8040viewge` line:
+
+```text
+artifacts/generated/t90viewge.z64
+artifacts/generated/t90viewge.sav
+artifacts/generated/TND6480i_t90viewge_from_baseline_tnd.bps
+artifacts/analogue_test/TND90GE.Z64
+artifacts/analogue_test/TND90GE.SAV
+```
+
+Why: direct Wreck hardware cadence matches the old good TND6480i recording after restoring the TLB cache wrap to 90 pages while relocating the cache below `fb1`. The previous 58-page workaround is now the performance regression suspect. `t90viewge` keeps the `fb0=0x80400000` level-boot fix and GE 480i viewport constants, and direct probes for Party, City, The End, Hotel, Volcano, Tower, and Boat all reached rendered scenes on real N64.
+
+Current manual test order:
+
+1. Wreck/Printworks speed on N64 and Analogue 3D.
+2. Full-route level boot/playability, especially Party, City, The End, Tower, Boat, Hotel, and Volcano.
+3. Bazaar/Labs/pause/watch regression check.
+4. Front-end/gunbarrel/menu issues after gameplay stability is confirmed.
+
+Minimal fallback if `t90viewge` has a viewport-specific regression:
+
+```text
+artifacts/generated/t90fb8040.z64
+artifacts/analogue_test/T90FB.Z64
+```
+
 ## Current Hardware State
 
 - 2026-05-17 latest Wreck performance control:

@@ -1,0 +1,92 @@
+[
+  {
+    "video": "diagnostics\\captures\\videos\\old_tnd6480i_long.mpg",
+    "frames": 420,
+    "frame_diffs": 419,
+    "mean_diff": 0.9694,
+    "median_diff": 0.2207,
+    "p90_diff": 3.6121,
+    "near_duplicate_ratio": 0.8353,
+    "active_ratio": 0.1456,
+    "estimated_updates_per_second": 4.363,
+    "label": "old_full_6480i_intro",
+    "start": 812.0,
+    "duration": 14.0,
+    "scale": [
+      240,
+      160
+    ]
+  },
+  {
+    "video": "diagnostics\\captures\\videos\\oldrecording_base_p06wrk_direct_20260517.mp4",
+    "frames": 420,
+    "frame_diffs": 419,
+    "mean_diff": 0.8503,
+    "median_diff": 0.1417,
+    "p90_diff": 3.2779,
+    "near_duplicate_ratio": 0.8377,
+    "active_ratio": 0.1432,
+    "estimated_updates_per_second": 4.292,
+    "label": "oldbase_direct_intro",
+    "start": 12.0,
+    "duration": 14.0,
+    "scale": [
+      240,
+      160
+    ]
+  },
+  {
+    "video": "diagnostics\\captures\\videos\\t90fb8040_p06wrk_direct_20260517.mp4",
+    "frames": 420,
+    "frame_diffs": 419,
+    "mean_diff": 0.8511,
+    "median_diff": 0.1501,
+    "p90_diff": 3.3139,
+    "near_duplicate_ratio": 0.8329,
+    "active_ratio": 0.1432,
+    "estimated_updates_per_second": 4.292,
+    "label": "t90fb8040_direct_intro",
+    "start": 12.0,
+    "duration": 14.0,
+    "scale": [
+      240,
+      160
+    ]
+  },
+  {
+    "video": "diagnostics\\captures\\videos\\t90viewge_p06wrk_direct_20260517.mp4",
+    "frames": 420,
+    "frame_diffs": 419,
+    "mean_diff": 0.8787,
+    "median_diff": 0.1505,
+    "p90_diff": 3.424,
+    "near_duplicate_ratio": 0.7804,
+    "active_ratio": 0.1527,
+    "estimated_updates_per_second": 4.578,
+    "label": "t90viewge_direct_intro",
+    "start": 12.0,
+    "duration": 14.0,
+    "scale": [
+      240,
+      160
+    ]
+  },
+  {
+    "video": "diagnostics\\captures\\videos\\t8040vblstk_p06wrk_direct_20260517.mp4",
+    "frames": 420,
+    "frame_diffs": 419,
+    "mean_diff": 0.6447,
+    "median_diff": 0.1066,
+    "p90_diff": 0.2626,
+    "near_duplicate_ratio": 0.9141,
+    "active_ratio": 0.0764,
+    "estimated_updates_per_second": 2.289,
+    "label": "t8040vblstk_direct_intro",
+    "start": 12.0,
+    "duration": 14.0,
+    "scale": [
+      240,
+      160
+    ]
+  }
+]

@@ -1,0 +1,166 @@
+[
+  {
+    "name": "t90fb8040",
+    "purpose": "Keep the 90-page TLB cache from the tlb806b6 branch, relocated below fb1, and add the fb0=0x80400000 level-boot fix. This is a performance canary intended to avoid the 58-page page-cache slowdown while keeping the all-level boot improvement from the tnd8040 line. This minimal canary leaves the camera/viewport constants as they were in the tlb806b6 branch.",
+    "base_rom": "artifacts\\generated\\game_h460_top10_stock_dossier_tlb806b6_007label_current.z64",
+    "base_md5": "dabab8bad8b5ebee0f58f384102af658",
+    "out_rom": "artifacts\\generated\\t90fb8040.z64",
+    "out_md5": "2a8849108874b041826a7a6b2b13fde9",
+    "header_crc": "84B7F855 D1E9ABD5",
+    "tlb_cache_layout": {
+      "page_count": 90,
+      "page_size": "0x2000",
+      "expected_expansion_range": "0x806B6000-0x80769FFF",
+      "gap_to_fb1": 0
+    },
+    "framebuffer_layout": {
+      "fb0": "0x80400000-0x80495FFF",
+      "fb1": "0x8076A000-0x807FFFFF"
+    },
+    "patches": [
+      {
+        "offset": "0x3D30",
+        "old": "0x3C048030",
+        "new": "0x3C048040",
+        "changed": true,
+        "note": "clear fb0 base upper 0x80400000"
+      },
+      {
+        "offset": "0x6584",
+        "old": "0x3C048030",
+        "new": "0x3C048040",
+        "changed": true,
+        "note": "fb0 global base upper 0x80400000"
+      }
+    ],
+    "save_outputs": [
+      {
+        "path": "artifacts\\generated\\t90fb8040.sav",
+        "bytes": 512,
+        "md5": "79ed3fe6851b080ff21de69fd12f034d"
+      },
+      {
+        "path": "artifacts\\generated\\t90fb8040.eep",
+        "bytes": 2048,
+        "md5": "e47f5c07623838e875761a0493388e03"
+      }
+    ]
+  },
+  {
+    "name": "t90viewge",
+    "purpose": "Keep the 90-page TLB cache from the tlb806b6 branch, relocated below fb1, and add the fb0=0x80400000 level-boot fix. This is a performance canary intended to avoid the 58-page page-cache slowdown while keeping the all-level boot improvement from the tnd8040 line. This full candidate also applies the later GE 480i camera and normal-viewport fit constants from t8040viewge.",
+    "base_rom": "artifacts\\generated\\game_h460_top10_stock_dossier_tlb806b6_007label_current.z64",
+    "base_md5": "dabab8bad8b5ebee0f58f384102af658",
+    "out_rom": "artifacts\\generated\\t90viewge.z64",
+    "out_md5": "e5f3eaf8fff458b2e624d125cf6f2b84",
+    "header_crc": "84B7FA99 A580079A",
+    "tlb_cache_layout": {
+      "page_count": 90,
+      "page_size": "0x2000",
+      "expected_expansion_range": "0x806B6000-0x80769FFF",
+      "gap_to_fb1": 0
+    },
+    "framebuffer_layout": {
+      "fb0": "0x80400000-0x80495FFF",
+      "fb1": "0x8076A000-0x807FFFFF"
+    },
+    "patches": [
+      {
+        "offset": "0x3D30",
+        "old": "0x3C048030",
+        "new": "0x3C048040",
+        "changed": true,
+        "note": "clear fb0 base upper 0x80400000"
+      },
+      {
+        "offset": "0x6584",
+        "old": "0x3C048030",
+        "new": "0x3C048040",
+        "changed": true,
+        "note": "fb0 global base upper 0x80400000"
+      },
+      {
+        "offset": "0xBB89C",
+        "old": "0x240201E0",
+        "new": "0x240201F0",
+        "changed": true,
+        "note": "GE 480i camera widescreen/fullscreen branch height 496"
+      },
+      {
+        "offset": "0xBB8B8",
+        "old": "0x240201E0",
+        "new": "0x2402017C",
+        "changed": true,
+        "note": "GE 480i camera cinema/widescreen branch height 380"
+      },
+      {
+        "offset": "0xBB8C0",
+        "old": "0x240201E0",
+        "new": "0x24020260",
+        "changed": true,
+        "note": "GE 480i camera fullscreen/cinema branch height 608"
+      },
+      {
+        "offset": "0xBB8FC",
+        "old": "0x244200B4",
+        "new": "0x24420168",
+        "changed": true,
+        "note": "GE 480i camera animated widescreen height offset 360"
+      },
+      {
+        "offset": "0xBB91C",
+        "old": "0x240201CC",
+        "new": "0x240201B8",
+        "changed": true,
+        "note": "GE 480i non-camera default viewport height 440"
+      },
+      {
+        "offset": "0xBB944",
+        "old": "0x24420088",
+        "new": "0x24420110",
+        "changed": true,
+        "note": "GE 480i camera animated cinema height offset 272"
+      },
+      {
+        "offset": "0xBB954",
+        "old": "0x240201CC",
+        "new": "0x240201B8",
+        "changed": true,
+        "note": "GE 480i non-camera fallback viewport height 440"
+      },
+      {
+        "offset": "0xBBA60",
+        "old": "0x2442001E",
+        "new": "0x2442003C",
+        "changed": true,
+        "note": "GE 480i camera animated widescreen top offset 60"
+      },
+      {
+        "offset": "0xBBA80",
+        "old": "0x2402000A",
+        "new": "0x24020014",
+        "changed": true,
+        "note": "GE 480i non-camera default viewport top 20"
+      },
+      {
+        "offset": "0xBBAA8",
+        "old": "0x24420034",
+        "new": "0x24420068",
+        "changed": true,
+        "note": "GE 480i camera animated cinema top offset 104"
+      }
+    ],
+    "save_outputs": [
+      {
+        "path": "artifacts\\generated\\t90viewge.sav",
+        "bytes": 512,
+        "md5": "79ed3fe6851b080ff21de69fd12f034d"
+      },
+      {
+        "path": "artifacts\\generated\\t90viewge.eep",
+        "bytes": 2048,
+        "md5": "e47f5c07623838e875761a0493388e03"
+      }
+    ]
+  }
+]
