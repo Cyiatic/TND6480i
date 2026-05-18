@@ -1,0 +1,162 @@
+{
+  "base_rom": "artifacts\\generated\\fotxmrawab.z64",
+  "base_md5": "48bf118979254bd54520cc0a51fca0bd",
+  "purpose": "No-input hardware route probes for front/dossier pages; do not promote over gameplay baseline.",
+  "routes": [
+    {
+      "name": "formabauto05",
+      "menu_id": 5,
+      "symbol": "MENU_FILE_SELECT",
+      "purpose": "File select / save folders",
+      "base_rom": "artifacts\\generated\\fotxmrawab.z64",
+      "out_rom": "artifacts\\generated\\formabauto05.z64",
+      "out_md5": "3309d5a4dd892a350534a58015b5ca4a",
+      "header_crc": "CDFD1E5C F287C2BA",
+      "patch": {
+        "offset": "0x3FF34",
+        "old": "0x24040018",
+        "new": "0x24040005",
+        "note": "After the TND title/logo timeout, route directly to MENU_FILE_SELECT."
+      },
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\fotxmrawab.sav",
+          "target": "artifacts\\generated\\formabauto05.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\fotxmrawab.eep",
+          "target": "artifacts\\generated\\formabauto05.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ],
+      "do_not_promote": true
+    },
+    {
+      "name": "formabauto06",
+      "menu_id": 6,
+      "symbol": "MENU_MODE_SELECT",
+      "purpose": "Single-player / multiplayer / cheat select",
+      "base_rom": "artifacts\\generated\\fotxmrawab.z64",
+      "out_rom": "artifacts\\generated\\formabauto06.z64",
+      "out_md5": "dc2218d513e63120baf8cd9f54cd7e47",
+      "header_crc": "CDFD1E58 F09AB7C0",
+      "patch": {
+        "offset": "0x3FF34",
+        "old": "0x24040018",
+        "new": "0x24040006",
+        "note": "After the TND title/logo timeout, route directly to MENU_MODE_SELECT."
+      },
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\fotxmrawab.sav",
+          "target": "artifacts\\generated\\formabauto06.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\fotxmrawab.eep",
+          "target": "artifacts\\generated\\formabauto06.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ],
+      "do_not_promote": true
+    },
+    {
+      "name": "formabauto07",
+      "menu_id": 7,
+      "symbol": "MENU_MISSION_SELECT",
+      "purpose": "Mission select dossier",
+      "base_rom": "artifacts\\generated\\fotxmrawab.z64",
+      "out_rom": "artifacts\\generated\\formabauto07.z64",
+      "out_md5": "e8c9abe7130893bea366573847f95386",
+      "header_crc": "CDFD1E58 1082390B",
+      "patch": {
+        "offset": "0x3FF34",
+        "old": "0x24040018",
+        "new": "0x24040007",
+        "note": "After the TND title/logo timeout, route directly to MENU_MISSION_SELECT."
+      },
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\fotxmrawab.sav",
+          "target": "artifacts\\generated\\formabauto07.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\fotxmrawab.eep",
+          "target": "artifacts\\generated\\formabauto07.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ],
+      "do_not_promote": true
+    },
+    {
+      "name": "formabauto08",
+      "menu_id": 8,
+      "symbol": "MENU_DIFFICULTY",
+      "purpose": "Difficulty select dossier",
+      "base_rom": "artifacts\\generated\\fotxmrawab.z64",
+      "out_rom": "artifacts\\generated\\formabauto08.z64",
+      "out_md5": "95a99e461d5ea3bd2da6550bf8d735c1",
+      "header_crc": "CDFD1E54 DF0841DF",
+      "patch": {
+        "offset": "0x3FF34",
+        "old": "0x24040018",
+        "new": "0x24040008",
+        "note": "After the TND title/logo timeout, route directly to MENU_DIFFICULTY."
+      },
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\fotxmrawab.sav",
+          "target": "artifacts\\generated\\formabauto08.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\fotxmrawab.eep",
+          "target": "artifacts\\generated\\formabauto08.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ],
+      "do_not_promote": true
+    },
+    {
+      "name": "formabauto0a",
+      "menu_id": 10,
+      "symbol": "MENU_BRIEFING",
+      "purpose": "Mission briefing dossier",
+      "base_rom": "artifacts\\generated\\fotxmrawab.z64",
+      "out_rom": "artifacts\\generated\\formabauto0a.z64",
+      "out_md5": "3493ac5eb8724468f30a111aead87fc7",
+      "header_crc": "CDFD1E58 6449E92F",
+      "patch": {
+        "offset": "0x3FF34",
+        "old": "0x24040018",
+        "new": "0x2404000A",
+        "note": "After the TND title/logo timeout, route directly to MENU_BRIEFING."
+      },
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\fotxmrawab.sav",
+          "target": "artifacts\\generated\\formabauto0a.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\fotxmrawab.eep",
+          "target": "artifacts\\generated\\formabauto0a.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ],
+      "do_not_promote": true
+    }
+  ]
+}

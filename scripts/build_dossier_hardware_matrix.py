@@ -10,6 +10,10 @@ from PIL import Image, ImageDraw, ImageFont
 
 BASELINE_SOURCES = ("GE480i_reference", "Current_t90tex_direct")
 
+BASELINE_ALIASES = {
+    "Current_t90tex_direct": ("Current_t90tex_direct", "Current_t90tex"),
+}
+
 
 def safe_name(value):
     return "".join(ch if ch.isalnum() else "_" for ch in value).strip("_")
@@ -99,6 +103,14 @@ def parse_candidate(value):
     }
 
 
+def find_baseline_frame(baseline_frames, page_key, source):
+    for candidate_source in BASELINE_ALIASES.get(source, (source,)):
+        path = baseline_frames / f"{page_key}__{candidate_source}.png"
+        if path.exists():
+            return path
+    return baseline_frames / f"{page_key}__{source}.png"
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--baseline-frames", type=Path, required=True)
@@ -130,7 +142,7 @@ def main():
     for page in rows:
         page_key = safe_name(page)
         for source, label in zip(BASELINE_SOURCES, columns[:2]):
-            source_path = args.baseline_frames / f"{page_key}__{source}.png"
+            source_path = find_baseline_frame(args.baseline_frames, page_key, source)
             target_path = frames_dir / f"{page_key}__{safe_name(label)}.png"
             capture = {"ok": source_path.exists(), "copied": False}
             if source_path.exists():

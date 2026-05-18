@@ -1,0 +1,119 @@
+{
+  "sheet": "diagnostics\\captures\\contact_sheets\\dossier_force0_raw_menu_pair_matrix_20260518\\sheet.jpg",
+  "baseline_frames": "diagnostics\\captures\\contact_sheets\\dossier_force0_matrix_20260518\\frames",
+  "rows": [
+    "File Select",
+    "Mode Select",
+    "Mission Select"
+  ],
+  "columns": [
+    "GE480i reference",
+    "Current t90tex",
+    "force0+rawA",
+    "force0+rawAB"
+  ],
+  "entries": [
+    {
+      "page": "File Select",
+      "source": "GE480i reference",
+      "path": "diagnostics\\captures\\contact_sheets\\dossier_force0_raw_menu_pair_matrix_20260518\\frames\\File_Select__GE480i_reference.png",
+      "capture": {
+        "ok": true,
+        "copied": true
+      }
+    },
+    {
+      "page": "File Select",
+      "source": "Current t90tex",
+      "path": "diagnostics\\captures\\contact_sheets\\dossier_force0_raw_menu_pair_matrix_20260518\\frames\\File_Select__Current_t90tex.png",
+      "capture": {
+        "ok": true,
+        "copied": true
+      }
+    },
+    {
+      "page": "Mode Select",
+      "source": "GE480i reference",
+      "path": "diagnostics\\captures\\contact_sheets\\dossier_force0_raw_menu_pair_matrix_20260518\\frames\\Mode_Select__GE480i_reference.png",
+      "capture": {
+        "ok": true,
+        "copied": true
+      }
+    },
+    {
+      "page": "Mode Select",
+      "source": "Current t90tex",
+      "path": "diagnostics\\captures\\contact_sheets\\dossier_force0_raw_menu_pair_matrix_20260518\\frames\\Mode_Select__Current_t90tex.png",
+      "capture": {
+        "ok": true,
+        "copied": true
+      }
+    },
+    {
+      "page": "Mission Select",
+      "source": "GE480i reference",
+      "path": "diagnostics\\captures\\contact_sheets\\dossier_force0_raw_menu_pair_matrix_20260518\\frames\\Mission_Select__GE480i_reference.png",
+      "capture": {
+        "ok": true,
+        "copied": true
+      }
+    },
+    {
+      "page": "Mission Select",
+      "source": "Current t90tex",
+      "path": "diagnostics\\captures\\contact_sheets\\dossier_force0_raw_menu_pair_matrix_20260518\\frames\\Mission_Select__Current_t90tex.png",
+      "capture": {
+        "ok": true,
+        "copied": true
+      }
+    },
+    {
+      "page": "File Select",
+      "source": "force0+rawA",
+      "video": "diagnostics\\captures\\videos\\formaauto05_file_select_probe_cycled_long_20260518.mp4",
+      "seconds": 65.0,
+      "path": "diagnostics\\captures\\contact_sheets\\dossier_force0_raw_menu_pair_matrix_20260518\\frames\\File_Select__force0_rawA.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      }
+    },
+    {
+      "page": "Mode Select",
+      "source": "force0+rawA",
+      "video": "diagnostics\\captures\\videos\\formaauto06_mode_select_probe_cycled_long_20260518.mp4",
+      "seconds": 65.0,
+      "path": "diagnostics\\captures\\contact_sheets\\dossier_force0_raw_menu_pair_matrix_20260518\\frames\\Mode_Select__force0_rawA.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      }
+    },
+    {
+      "page": "Mission Select",
+      "source": "force0+rawA",
+      "video": "diagnostics\\captures\\videos\\formaauto07_mission_select_probe_cycled_long_20260518.mp4",
+      "seconds": 65.0,
+      "path": "diagnostics\\captures\\contact_sheets\\dossier_force0_raw_menu_pair_matrix_20260518\\frames\\Mission_Select__force0_rawA.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      }
+    },
+    {
+      "page": "Mission Select",
+      "source": "force0+rawAB",
+      "video": "diagnostics\\captures\\videos\\formabauto07_mission_select_probe_cycled_long_20260518.mp4",
+      "seconds": 65.0,
+      "path": "diagnostics\\captures\\contact_sheets\\dossier_force0_raw_menu_pair_matrix_20260518\\frames\\Mission_Select__force0_rawAB.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      }
+    }
+  ]
+}

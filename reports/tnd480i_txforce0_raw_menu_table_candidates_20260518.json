@@ -1,0 +1,195 @@
+{
+  "base_rom": "artifacts\\generated\\txforce0.z64",
+  "base_md5": "b748f10857e646f7f9f4d04e2268dd65",
+  "ge480_rom": "artifacts\\roms\\BASELINE_GE_480i_direct_from_stock.z64",
+  "ge480_md5": "1ff9bb4987e83dc85b0d314545a6025f",
+  "1172_offset": "0x21990",
+  "1172_slot_len": 65589,
+  "1172_allowed_len": 66508,
+  "1172_zero_pad_growth": 919,
+  "purpose": "Targeted raw 1172 front-end menu-table overlays on the stable t90texstk gameplay candidate.",
+  "candidates": [
+    {
+      "name": "fotxmtabx",
+      "purpose": "Only the GE480i mission-select X cursor/table data from raw 1172.",
+      "base_rom": "artifacts\\generated\\txforce0.z64",
+      "out_rom": "artifacts\\generated\\fotxmtabx.z64",
+      "out_md5": "795a7245e0fe380dc533e7ca8936c8a3",
+      "header_crc": "06177928 795BCFBD",
+      "raw_md5": "c5838af90ce7f093ede9f96dcfc064c1",
+      "packed_1172_len": 65560,
+      "slot_1172_len": 65589,
+      "allowed_1172_len": 66508,
+      "ranges": [
+        {
+          "start": "0xA240",
+          "end": "0xA254",
+          "len": 20,
+          "note": "GE480i mission cursor/table X coordinates",
+          "changed_bytes": 6
+        }
+      ],
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\txforce0.sav",
+          "target": "artifacts\\generated\\fotxmtabx.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\txforce0.eep",
+          "target": "artifacts\\generated\\fotxmtabx.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ]
+    },
+    {
+      "name": "fotxmtaby",
+      "purpose": "Only the GE480i mission-select Y cursor/table data from raw 1172.",
+      "base_rom": "artifacts\\generated\\txforce0.z64",
+      "out_rom": "artifacts\\generated\\fotxmtaby.z64",
+      "out_md5": "8e8ea3ccf3d51fa188d4d09672a60a2f",
+      "header_crc": "B2326466 00E329E8",
+      "raw_md5": "d27f3d7670bc775fc6d664794d0c272f",
+      "packed_1172_len": 65568,
+      "slot_1172_len": 65589,
+      "allowed_1172_len": 66508,
+      "ranges": [
+        {
+          "start": "0xA254",
+          "end": "0xA264",
+          "len": 16,
+          "note": "GE480i mission cursor/table Y coordinates",
+          "changed_bytes": 5
+        }
+      ],
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\txforce0.sav",
+          "target": "artifacts\\generated\\fotxmtaby.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\txforce0.eep",
+          "target": "artifacts\\generated\\fotxmtaby.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ]
+    },
+    {
+      "name": "fotxmtabxy",
+      "purpose": "Full GE480i mission-select cursor/table data from raw 1172.",
+      "base_rom": "artifacts\\generated\\txforce0.z64",
+      "out_rom": "artifacts\\generated\\fotxmtabxy.z64",
+      "out_md5": "4ccf2821afdb70f2a4ca84f34c7e6213",
+      "header_crc": "7E7980E0 B1C4AAD8",
+      "raw_md5": "bdc6e65a63f154d98f518d0b07c96bec",
+      "packed_1172_len": 65784,
+      "slot_1172_len": 65589,
+      "allowed_1172_len": 66508,
+      "ranges": [
+        {
+          "start": "0xA240",
+          "end": "0xA264",
+          "len": 36,
+          "note": "GE480i mission cursor/table X and Y coordinates",
+          "changed_bytes": 11
+        }
+      ],
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\txforce0.sav",
+          "target": "artifacts\\generated\\fotxmtabxy.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\txforce0.eep",
+          "target": "artifacts\\generated\\fotxmtabxy.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ]
+    },
+    {
+      "name": "fotxmrawa",
+      "purpose": "The larger GE480i menu/display table A only; checks page-scale/table effect.",
+      "base_rom": "artifacts\\generated\\txforce0.z64",
+      "out_rom": "artifacts\\generated\\fotxmrawa.z64",
+      "out_md5": "acfbb12fd9b71f4af250d249bc360af6",
+      "header_crc": "AD0A8685 E773AE98",
+      "raw_md5": "de79a49f34cd1206d188f55d18a2fda2",
+      "packed_1172_len": 65624,
+      "slot_1172_len": 65589,
+      "allowed_1172_len": 66508,
+      "ranges": [
+        {
+          "start": "0x9C3C",
+          "end": "0x9D24",
+          "len": 232,
+          "note": "GE480i menu/display table A",
+          "changed_bytes": 38
+        }
+      ],
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\txforce0.sav",
+          "target": "artifacts\\generated\\fotxmrawa.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\txforce0.eep",
+          "target": "artifacts\\generated\\fotxmrawa.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ]
+    },
+    {
+      "name": "fotxmrawab",
+      "purpose": "GE480i menu/display table A plus mission cursor/table B.",
+      "base_rom": "artifacts\\generated\\txforce0.z64",
+      "out_rom": "artifacts\\generated\\fotxmrawab.z64",
+      "out_md5": "48bf118979254bd54520cc0a51fca0bd",
+      "header_crc": "CDFD1E54 61E026DE",
+      "raw_md5": "1fc4c52315a82b40633fc8bde9e2fe61",
+      "packed_1172_len": 65648,
+      "slot_1172_len": 65589,
+      "allowed_1172_len": 66508,
+      "ranges": [
+        {
+          "start": "0x9C3C",
+          "end": "0x9D24",
+          "len": 232,
+          "note": "GE480i menu/display table A",
+          "changed_bytes": 38
+        },
+        {
+          "start": "0xA240",
+          "end": "0xA264",
+          "len": 36,
+          "note": "GE480i menu/display table B",
+          "changed_bytes": 11
+        }
+      ],
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\txforce0.sav",
+          "target": "artifacts\\generated\\fotxmrawab.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\txforce0.eep",
+          "target": "artifacts\\generated\\fotxmrawab.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ]
+    }
+  ]
+}

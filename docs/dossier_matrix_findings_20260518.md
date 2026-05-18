@@ -108,3 +108,23 @@ Front/menu gate result:
 - `force0+filefull`, `force0+modepos2`, and `force0+missionfull`: captured on hardware and compared. `force0+modepos2` restores visible mode option text in the smaller scale class, but the overall page composition is still not promotable. File and mission remain mismatched and the lower clear/background issue persists.
 
 Interpretation: the next promising target is not another blind GE coordinate transplant. The useful signal is around the front/menu table selection path at `0x4F1B8` and the table-driven `viSetAspect`/`viSetXY`/`viSetBuf` sequence immediately after it. Future work should decompose that table path and the associated clear/background dimensions so the dossier can use the correct 480i-scale composition without the gray lower-region corruption.
+
+## Force0 + Raw Menu Table Follow-up
+
+Following the hardware-gated workflow, `txforce0` was combined with the raw GE480i 1172 menu table candidates and captured on the N64 before judgment:
+
+- `fotxmrawa`: `txforce0` plus raw table A (`0x9C3C-0x9D24`).
+- `fotxmrawab`: `txforce0` plus raw table A and mission table B (`0x9C3C-0x9D24`, `0xA240-0xA264`).
+
+New comparison artifacts:
+
+- `diagnostics/captures/contact_sheets/dossier_force0_raw_menu_pair_matrix_20260518/sheet.jpg`
+- `reports/dossier_force0_raw_menu_pair_matrix_20260518.json`
+- `reports/tnd480i_txforce0_raw_menu_table_candidates_20260518.json`
+
+Result:
+
+- `force0+rawA` is rejected. File select and mode select still do not match GE480i scale/composition, and the lower gray/background corruption remains.
+- `force0+rawAB` nudges mission select but does not solve the page family. It should not be promoted without a page-aware mechanism, because the same global low-res path breaks file/mode presentation.
+
+Interpretation: forcing the menu path globally is the wrong final shape. The useful signal is that the mission page can be pushed toward the GE480i scale class, but file and mode need their own composition/background handling. The next probe should not be another global `screen_size = 0`; it should target either the per-page setup before `menu_init` or the background/folder draw dimensions after `frontSetupMenuBackground`.
