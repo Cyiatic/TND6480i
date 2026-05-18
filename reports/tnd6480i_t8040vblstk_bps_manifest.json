@@ -1,0 +1,124 @@
+{
+  "source": "artifacts\\roms\\BASELINE_TND64_Expanded_direct_from_stock.z64",
+  "target": "artifacts\\generated\\t8040vblstk.z64",
+  "source_md5": "1ee22dd1d70443f5e4766d4238756949",
+  "target_md5": "f326cc1f729dc60e74c6431c6b490f84",
+  "source_sha256": "ba5e040de292d7d192d0f88f12dcf4cbde7eb4d643926830d7d77557bf6df502",
+  "target_sha256": "f177e64c0b4a51dfb9f25867ac0b265177be3fd430230636bfacea8d13d7a2cb",
+  "note": "Performance canary from t8040viewge: keep the 480i VI/framebuffer and all-level gameplay baseline, but restore the shared title/sniper texture blitter geometry cluster to stock TND. This tests whether the GE-sized shared blitter workload is what makes Wreck/Printworks abnormally slow even after internal gameplay dimensions are restored.",
+  "patch": "artifacts\\generated\\TND6480i_t8040vblstk_from_baseline_tnd.bps",
+  "patch_bytes": 179350,
+  "patch_md5": "73ae13a17a7fa33d7e194d17f0801834",
+  "patch_sha256": "6a4662c5a6464195d8cf2d8ca933e8f4f231403e9699cf85d90403e025c9eee8",
+  "source_bytes": 16777216,
+  "target_bytes": 16885376,
+  "source_crc32": "321C1845",
+  "target_crc32": "3F30F983",
+  "patch_crc32": "8E7329E6",
+  "verified": true,
+  "action_count": 392,
+  "source_read_bytes": 16707352,
+  "target_read_bytes": 178024,
+  "actions_preview": [
+    {
+      "type": "SourceRead",
+      "offset": 0,
+      "length": 16
+    },
+    {
+      "type": "TargetRead",
+      "offset": 16,
+      "length": 8
+    },
+    {
+      "type": "SourceRead",
+      "offset": 24,
+      "length": 9731
+    },
+    {
+      "type": "TargetRead",
+      "offset": 9755,
+      "length": 1
+    },
+    {
+      "type": "SourceRead",
+      "offset": 9756,
+      "length": 5744
+    },
+    {
+      "type": "TargetRead",
+      "offset": 15500,
+      "length": 12
+    },
+    {
+      "type": "SourceRead",
+      "offset": 15512,
+      "length": 153
+    },
+    {
+      "type": "TargetRead",
+      "offset": 15665,
+      "length": 59
+    },
+    {
+      "type": "SourceRead",
+      "offset": 15724,
+      "length": 1715
+    },
+    {
+      "type": "TargetRead",
+      "offset": 17439,
+      "length": 1
+    },
+    {
+      "type": "SourceRead",
+      "offset": 17440,
+      "length": 661
+    },
+    {
+      "type": "TargetRead",
+      "offset": 18101,
+      "length": 59
+    },
+    {
+      "type": "SourceRead",
+      "offset": 18160,
+      "length": 7831
+    },
+    {
+      "type": "TargetRead",
+      "offset": 25991,
+      "length": 49
+    },
+    {
+      "type": "SourceRead",
+      "offset": 26040,
+      "length": 40742
+    },
+    {
+      "type": "TargetRead",
+      "offset": 66782,
+      "length": 1
+    },
+    {
+      "type": "SourceRead",
+      "offset": 66783,
+      "length": 38041
+    },
+    {
+      "type": "TargetRead",
+      "offset": 104824,
+      "length": 16
+    },
+    {
+      "type": "SourceRead",
+      "offset": 104840,
+      "length": 44
+    },
+    {
+      "type": "TargetRead",
+      "offset": 104884,
+      "length": 3
+    }
+  ]
+}

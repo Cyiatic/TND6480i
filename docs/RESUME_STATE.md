@@ -1,6 +1,6 @@
 # TND6480i Resume State
 
-Last updated: 2026-05-17 after rejecting the z/depth-only performance canaries and building `t8040vlowint`.
+Last updated: 2026-05-17 after stock-vs-480i Wreck hardware controls and the shared-blitter performance canary.
 
 Scope reminder: keep work limited to this N64/TND6480i project and directly related tools/devices.
 
@@ -8,7 +8,7 @@ Scope reminder: keep work limited to this N64/TND6480i project and directly rela
 
 User Analogue 3D feedback on `t8040viewge`: gameplay is viable but performance is poor, with Printworks and Wreck reportedly running slower than expected even with Analogue overclock. Treat this as a first-class issue, not just visual polish.
 
-Current interpretation: the active branch is probably paying for a true high-workload render path, not merely switching VI output to interlace. `t8040viewge`, `t8040camge`, `tnd8040`, and `tnd58` all share the expensive stage z-buffer path at:
+Current interpretation: the active branch is probably paying for a true high-workload render path, not merely switching VI output to interlace. Earlier suspicion centered on the shared stage z/depth allocation path at:
 
 ```text
 0x106ED4 = width 640
@@ -18,7 +18,7 @@ Current interpretation: the active branch is probably paying for a true high-wor
 0x106F24 = split height 480
 ```
 
-That means UI placement or 480i capture output is not enough to prove the 3D scene is being rendered in the same way as GE's enhanced 480i patch. The next gameplay work should quantify performance against GE480i and test whether a lower-cost internal render/depth path can preserve the 480i visual target without the current slowdown.
+That means UI placement or 480i capture output is not enough to prove the 3D scene is being rendered in the same way as GE's enhanced 480i patch. However, hardware controls later reduced confidence that z/depth alone is the performance root.
 
 Analogue comparison pack:
 
@@ -54,6 +54,32 @@ reports/smoke/smoke_t8040vlowint_perf_controls_20260517.json
 ```
 
 Purpose: keep the current all-level-boot `t8040viewge` VI/framebuffer plumbing, but restore gameplay internal render, viewport, and z/depth dimensions together to stock-sized values. This is a diagnostic control, not a final 480i visual candidate. If Wreck/Printworks speed recovers on hardware without the blue render failure, the slowdown is the full high-internal-render workload. If it is still slow, look below gameplay dimensions at VI/framebuffer/RDP state.
+
+Hardware update: direct-stage stock TND64 Wreck (`artifacts/generated/stage_probes_stock_tnd/p06wrk.z64`) ran at normal speed on the same SC64/N64 route, while the low-internal 480i Wreck control was still reported slow. This proves the direct-stage harness and Wreck itself are not the bottleneck. The remaining slowdown is introduced by the 480i presentation/blitter stack.
+
+Current performance lead:
+
+```text
+artifacts/generated/t8040vblstk.z64
+artifacts/analogue_test/TNDBLIT.Z64
+artifacts/generated/stage_probes_perf_vblstk/p06wrk.z64
+reports/tnd480i_t8040viewge_perf_presentation_canaries_20260517.json
+reports/stage_probes/direct_stage_t8040vblstk_p06wrk_perf_20260517.json
+reports/smoke/smoke_t8040vblstk_p06wrk_perf_20260517.json
+diagnostics/captures/videos/t8040vblstk_p06wrk_direct_20260517.mp4
+diagnostics/captures/contact_sheets/p06wrk_perf_compare_vblstk_20260517/stock_lowint_vblstk_sheet.jpg
+```
+
+`t8040vblstk` keeps the current `t8040viewge` baseline but restores the shared title/sniper blitter geometry cluster at `0x4FDEC-0x501B4` to stock TND values. Its direct-stage Wreck hardware timing visually lines up with the stock Wreck control much better than `t8040vlowint`. This makes the GE-sized shared blitter cluster the best current performance suspect. SC64 is currently loaded with `artifacts/generated/stage_probes_perf_vblstk/p06wrk.z64` for user visual speed confirmation.
+
+Sibling canaries staged but not promoted:
+
+```text
+artifacts/analogue_test/TNDBUF.Z64   = t8040viewge with only front viSetBuf width/height restored to stock
+artifacts/analogue_test/TNDBOTH.Z64  = t8040viewge with front viSetBuf plus stock shared blitter cluster
+```
+
+Do not promote `TNDBOTH` until the isolated `TNDBLIT` and `TNDBUF` canaries are classified.
 
 Local direct-stage Wreck smoke: `reports/smoke/smoke_t8040viewge_perf_zbuf_wreck_visual_20260517.json`. The `t8040viewge` control plus `t8040vz360`, `t8040vz640`, and `t8040vzstk` all survived about 34 seconds in Gopher64 and produced nonblack Wreck captures. This is only a boot/render sanity gate; use Analogue or real hardware for the actual speed judgment.
 

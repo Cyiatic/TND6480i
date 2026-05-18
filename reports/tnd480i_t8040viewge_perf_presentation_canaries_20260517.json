@@ -1,0 +1,349 @@
+[
+  {
+    "name": "t8040vbufstk",
+    "pack_stem": "TNDBUF",
+    "purpose": "Performance canary from t8040viewge: keep the 480i VI/framebuffer and visual-fit baseline, but restore only the front/menu viSetBuf width/height constants to stock TND. If a stale front buffer size is feeding g_ViBackData->bufx/bufy into gameplay, this should reduce RDP color-image/fill workload without broadly reverting visuals.",
+    "base_rom": "artifacts\\generated\\t8040viewge.z64",
+    "base_md5": "763f94bd1fb364e3d9eb8809bde4900b",
+    "stock_source_rom": "artifacts\\roms\\BASELINE_TND64_Expanded_direct_from_stock.z64",
+    "out_rom": "artifacts\\generated\\t8040vbufstk.z64",
+    "out_md5": "be391636b606a7ca4660c14a2ebcbdc4",
+    "pack_rom": "artifacts\\analogue_test\\TNDBUF.Z64",
+    "header_crc": "84B7F8F5 61B341B6",
+    "patches": [
+      {
+        "group": "front_visetbuf_stock",
+        "offset": "0x4DAEC",
+        "old": "0x24040280",
+        "new": "0x240401B8",
+        "note": "front viSetBuf/menu width",
+        "changed": true
+      },
+      {
+        "group": "front_visetbuf_stock",
+        "offset": "0x4DAF4",
+        "old": "0x240501E0",
+        "new": "0x2405014A",
+        "note": "front viSetBuf/menu height",
+        "changed": true
+      }
+    ],
+    "changed_patch_count": 2,
+    "save_outputs": [
+      {
+        "path": "artifacts\\generated\\t8040vbufstk.sav",
+        "bytes": 512,
+        "md5": "79ed3fe6851b080ff21de69fd12f034d"
+      },
+      {
+        "path": "artifacts\\generated\\t8040vbufstk.eep",
+        "bytes": 2048,
+        "md5": "e47f5c07623838e875761a0493388e03"
+      },
+      {
+        "path": "artifacts\\analogue_test\\TNDBUF.SAV",
+        "bytes": 512,
+        "md5": "79ed3fe6851b080ff21de69fd12f034d"
+      },
+      {
+        "path": "artifacts\\analogue_test\\TNDBUF.EEP",
+        "bytes": 512,
+        "md5": "79ed3fe6851b080ff21de69fd12f034d"
+      }
+    ],
+    "bps_patch": "artifacts\\generated\\TND6480i_t8040vbufstk_from_baseline_tnd.bps",
+    "bps_patch_md5": "8c8cbf4c8effc28d9ff9494c97b522f9",
+    "bps_manifest": "reports\\tnd6480i_t8040vbufstk_bps_manifest.json",
+    "test_note": "Use direct-stage Wreck first as a performance canary. Do not promote a full ROM until Wreck speed and Bazaar/Labs visual stability are both checked."
+  },
+  {
+    "name": "t8040vblstk",
+    "pack_stem": "TNDBLIT",
+    "purpose": "Performance canary from t8040viewge: keep the 480i VI/framebuffer and all-level gameplay baseline, but restore the shared title/sniper texture blitter geometry cluster to stock TND. This tests whether the GE-sized shared blitter workload is what makes Wreck/Printworks abnormally slow even after internal gameplay dimensions are restored.",
+    "base_rom": "artifacts\\generated\\t8040viewge.z64",
+    "base_md5": "763f94bd1fb364e3d9eb8809bde4900b",
+    "stock_source_rom": "artifacts\\roms\\BASELINE_TND64_Expanded_direct_from_stock.z64",
+    "out_rom": "artifacts\\generated\\t8040vblstk.z64",
+    "out_md5": "f326cc1f729dc60e74c6431c6b490f84",
+    "pack_rom": "artifacts\\analogue_test\\TNDBLIT.Z64",
+    "header_crc": "84770E99 A11770B4",
+    "patches": [
+      {
+        "group": "shared_texture_setup_stock",
+        "offset": "0x4FDEC",
+        "old": "0x3C170713",
+        "new": "0x3C17070D",
+        "note": "shared title/sniper texture setup upper",
+        "changed": true
+      },
+      {
+        "group": "shared_texture_setup_stock",
+        "offset": "0x4FDFC",
+        "old": "0x3C0AE49F",
+        "new": "0x3C0AE46D",
+        "note": "shared title/sniper texture rectangle target width",
+        "changed": true
+      },
+      {
+        "group": "shared_texture_setup_stock",
+        "offset": "0x4FE34",
+        "old": "0x3C0143D7",
+        "new": "0x3C018005",
+        "note": "shared title/sniper height load upper",
+        "changed": true
+      },
+      {
+        "group": "shared_texture_setup_stock",
+        "offset": "0x4FE3C",
+        "old": "0x36F7F006",
+        "new": "0x36F7B026",
+        "note": "shared title/sniper texture setup lower",
+        "changed": true
+      },
+      {
+        "group": "shared_texture_setup_stock",
+        "offset": "0x4FE44",
+        "old": "0x44818000",
+        "new": "0xC4301CF0",
+        "note": "shared title/sniper height load/use",
+        "changed": true
+      },
+      {
+        "group": "shared_texture_setup_stock",
+        "offset": "0x4FF00",
+        "old": "0x3C0E009F",
+        "new": "0x3C0E006D",
+        "note": "shared title/sniper texture rectangle lower width",
+        "changed": true
+      },
+      {
+        "group": "shared_strip_row_stride_stock",
+        "offset": "0x500EC",
+        "old": "0x2519001D",
+        "new": "0x25190011",
+        "note": "shared title/sniper negative-x strip step",
+        "changed": true
+      },
+      {
+        "group": "shared_strip_row_stride_stock",
+        "offset": "0x500FC",
+        "old": "0x250E001C",
+        "new": "0x250E0010",
+        "note": "shared title/sniper negative-x strip step",
+        "changed": true
+      },
+      {
+        "group": "shared_strip_row_stride_stock",
+        "offset": "0x50148",
+        "old": "0x2519001D",
+        "new": "0x25190011",
+        "note": "shared title/sniper positive-x strip step",
+        "changed": true
+      },
+      {
+        "group": "shared_strip_row_stride_stock",
+        "offset": "0x50168",
+        "old": "0x2519001C",
+        "new": "0x25190010",
+        "note": "shared title/sniper positive-x strip step",
+        "changed": true
+      },
+      {
+        "group": "shared_strip_row_stride_stock",
+        "offset": "0x501AC",
+        "old": "0x292101AE",
+        "new": "0x2921012C",
+        "note": "shared title/sniper source row loop limit",
+        "changed": true
+      },
+      {
+        "group": "shared_strip_row_stride_stock",
+        "offset": "0x501B4",
+        "old": "0x26100280",
+        "new": "0x261001B8",
+        "note": "shared title/sniper source stride",
+        "changed": true
+      }
+    ],
+    "changed_patch_count": 12,
+    "save_outputs": [
+      {
+        "path": "artifacts\\generated\\t8040vblstk.sav",
+        "bytes": 512,
+        "md5": "79ed3fe6851b080ff21de69fd12f034d"
+      },
+      {
+        "path": "artifacts\\generated\\t8040vblstk.eep",
+        "bytes": 2048,
+        "md5": "e47f5c07623838e875761a0493388e03"
+      },
+      {
+        "path": "artifacts\\analogue_test\\TNDBLIT.SAV",
+        "bytes": 512,
+        "md5": "79ed3fe6851b080ff21de69fd12f034d"
+      },
+      {
+        "path": "artifacts\\analogue_test\\TNDBLIT.EEP",
+        "bytes": 512,
+        "md5": "79ed3fe6851b080ff21de69fd12f034d"
+      }
+    ],
+    "bps_patch": "artifacts\\generated\\TND6480i_t8040vblstk_from_baseline_tnd.bps",
+    "bps_patch_md5": "73ae13a17a7fa33d7e194d17f0801834",
+    "bps_manifest": "reports\\tnd6480i_t8040vblstk_bps_manifest.json",
+    "test_note": "Use direct-stage Wreck first as a performance canary. Do not promote a full ROM until Wreck speed and Bazaar/Labs visual stability are both checked."
+  },
+  {
+    "name": "t8040vbufblstk",
+    "pack_stem": "TNDBOTH",
+    "purpose": "Performance canary from t8040viewge: combine the stock front viSetBuf constants with the stock shared title/sniper blitter geometry cluster. Use only after the isolated canaries are classified.",
+    "base_rom": "artifacts\\generated\\t8040viewge.z64",
+    "base_md5": "763f94bd1fb364e3d9eb8809bde4900b",
+    "stock_source_rom": "artifacts\\roms\\BASELINE_TND64_Expanded_direct_from_stock.z64",
+    "out_rom": "artifacts\\generated\\t8040vbufblstk.z64",
+    "out_md5": "79a95bda1f8b222901a7f86649dbe072",
+    "pack_rom": "artifacts\\analogue_test\\TNDBOTH.Z64",
+    "header_crc": "84770FA9 6C3667B4",
+    "patches": [
+      {
+        "group": "front_visetbuf_stock",
+        "offset": "0x4DAEC",
+        "old": "0x24040280",
+        "new": "0x240401B8",
+        "note": "front viSetBuf/menu width",
+        "changed": true
+      },
+      {
+        "group": "front_visetbuf_stock",
+        "offset": "0x4DAF4",
+        "old": "0x240501E0",
+        "new": "0x2405014A",
+        "note": "front viSetBuf/menu height",
+        "changed": true
+      },
+      {
+        "group": "shared_texture_setup_stock",
+        "offset": "0x4FDEC",
+        "old": "0x3C170713",
+        "new": "0x3C17070D",
+        "note": "shared title/sniper texture setup upper",
+        "changed": true
+      },
+      {
+        "group": "shared_texture_setup_stock",
+        "offset": "0x4FDFC",
+        "old": "0x3C0AE49F",
+        "new": "0x3C0AE46D",
+        "note": "shared title/sniper texture rectangle target width",
+        "changed": true
+      },
+      {
+        "group": "shared_texture_setup_stock",
+        "offset": "0x4FE34",
+        "old": "0x3C0143D7",
+        "new": "0x3C018005",
+        "note": "shared title/sniper height load upper",
+        "changed": true
+      },
+      {
+        "group": "shared_texture_setup_stock",
+        "offset": "0x4FE3C",
+        "old": "0x36F7F006",
+        "new": "0x36F7B026",
+        "note": "shared title/sniper texture setup lower",
+        "changed": true
+      },
+      {
+        "group": "shared_texture_setup_stock",
+        "offset": "0x4FE44",
+        "old": "0x44818000",
+        "new": "0xC4301CF0",
+        "note": "shared title/sniper height load/use",
+        "changed": true
+      },
+      {
+        "group": "shared_texture_setup_stock",
+        "offset": "0x4FF00",
+        "old": "0x3C0E009F",
+        "new": "0x3C0E006D",
+        "note": "shared title/sniper texture rectangle lower width",
+        "changed": true
+      },
+      {
+        "group": "shared_strip_row_stride_stock",
+        "offset": "0x500EC",
+        "old": "0x2519001D",
+        "new": "0x25190011",
+        "note": "shared title/sniper negative-x strip step",
+        "changed": true
+      },
+      {
+        "group": "shared_strip_row_stride_stock",
+        "offset": "0x500FC",
+        "old": "0x250E001C",
+        "new": "0x250E0010",
+        "note": "shared title/sniper negative-x strip step",
+        "changed": true
+      },
+      {
+        "group": "shared_strip_row_stride_stock",
+        "offset": "0x50148",
+        "old": "0x2519001D",
+        "new": "0x25190011",
+        "note": "shared title/sniper positive-x strip step",
+        "changed": true
+      },
+      {
+        "group": "shared_strip_row_stride_stock",
+        "offset": "0x50168",
+        "old": "0x2519001C",
+        "new": "0x25190010",
+        "note": "shared title/sniper positive-x strip step",
+        "changed": true
+      },
+      {
+        "group": "shared_strip_row_stride_stock",
+        "offset": "0x501AC",
+        "old": "0x292101AE",
+        "new": "0x2921012C",
+        "note": "shared title/sniper source row loop limit",
+        "changed": true
+      },
+      {
+        "group": "shared_strip_row_stride_stock",
+        "offset": "0x501B4",
+        "old": "0x26100280",
+        "new": "0x261001B8",
+        "note": "shared title/sniper source stride",
+        "changed": true
+      }
+    ],
+    "changed_patch_count": 14,
+    "save_outputs": [
+      {
+        "path": "artifacts\\generated\\t8040vbufblstk.sav",
+        "bytes": 512,
+        "md5": "79ed3fe6851b080ff21de69fd12f034d"
+      },
+      {
+        "path": "artifacts\\generated\\t8040vbufblstk.eep",
+        "bytes": 2048,
+        "md5": "e47f5c07623838e875761a0493388e03"
+      },
+      {
+        "path": "artifacts\\analogue_test\\TNDBOTH.SAV",
+        "bytes": 512,
+        "md5": "79ed3fe6851b080ff21de69fd12f034d"
+      },
+      {
+        "path": "artifacts\\analogue_test\\TNDBOTH.EEP",
+        "bytes": 512,
+        "md5": "79ed3fe6851b080ff21de69fd12f034d"
+      }
+    ],
+    "bps_patch": "artifacts\\generated\\TND6480i_t8040vbufblstk_from_baseline_tnd.bps",
+    "bps_patch_md5": "954b8f710242ad29f0e5aa046626eb6a",
+    "bps_manifest": "reports\\tnd6480i_t8040vbufblstk_bps_manifest.json",
+    "test_note": "Use direct-stage Wreck first as a performance canary. Do not promote a full ROM until Wreck speed and Bazaar/Labs visual stability are both checked."
+  }
+]

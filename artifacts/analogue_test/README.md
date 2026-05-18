@@ -7,7 +7,7 @@ Use these as short-name ROM/save pairs for Analogue or flashcart comparison.
 - `TND8040.Z64` / `TND8040.SAV`: lower-level `tnd8040` control before the GE camera/view follow-up constants.
 - `TND58.Z64` / `TND58.SAV`: older `tlbpages58` fallback/control. Useful for performance comparison, but expected to have older level-load/rendering issues.
 
-If all four are similarly slow in Wreck/Printworks, the shared 640-wide/480-high render/z-buffer path is the likely performance bottleneck. If only `TNDVIABL` is much slower, focus on the later viewport constants.
+If all four are similarly slow in Wreck/Printworks, the slowdown is shared below the later viewport constants.
 
 The `TNDZ*` ROMs are rejected performance canaries built from current `t8040viewge`, not final visual candidates:
 
@@ -17,4 +17,10 @@ The `TNDZ*` ROMs are rejected performance canaries built from current `t8040view
 
 User feedback: each `TNDZ*` ROM got progressively worse and reintroduced the Bazaar-style blue rendering failure, so do not use them as the next base.
 
-- `TNDLOWI.Z64` / `TNDLOWI.SAV`: diagnostic control built from `t8040viewge`. It keeps the current all-level-boot 480i VI/framebuffer plumbing, but restores gameplay internal render, viewport, and z/depth dimensions together to stock-sized values. This is not a final 480i visual candidate. Compare Wreck/Printworks speed against `TNDVIABL`; if speed recovers without blue rendering, the slowdown is the true high internal render path. If it is still slow, look below gameplay dimensions at VI/framebuffer/RDP state.
+- `TNDLOWI.Z64` / `TNDLOWI.SAV`: diagnostic control built from `t8040viewge`. It keeps the current all-level-boot 480i VI/framebuffer plumbing, but restores gameplay internal render, viewport, and z/depth dimensions together to stock-sized values. This is not a final 480i visual candidate. User feedback on direct-stage Wreck: still slow, so the current bottleneck is below gameplay dimensions.
+
+Current performance canaries:
+
+- `TNDBLIT.Z64` / `TNDBLIT.SAV`: `t8040viewge` with the shared title/sniper blitter geometry cluster restored to stock TND. Direct-stage Wreck is the current SC64 canary and visually lines up with the stock Wreck control better than `TNDLOWI`.
+- `TNDBUF.Z64` / `TNDBUF.SAV`: `t8040viewge` with only front `viSetBuf` width/height restored to stock. Test only if `TNDBLIT` does not explain the slowdown.
+- `TNDBOTH.Z64` / `TNDBOTH.SAV`: combined `TNDBLIT` + `TNDBUF`. Do not test before the isolated canaries are classified.

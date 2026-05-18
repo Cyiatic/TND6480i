@@ -4,6 +4,30 @@ Date: 2026-05-08
 
 ## Current Hardware State
 
+- 2026-05-17 latest Wreck performance control:
+  - Stock direct-stage Wreck:
+    `artifacts/generated/stage_probes_stock_tnd/p06wrk.z64`.
+    User reported Wreck was back to normal speed.
+  - Low-internal 480i direct-stage Wreck:
+    `artifacts/generated/stage_probes_lowint/p06wrk.z64`.
+    User reported Wreck still ran badly.
+  - Interpretation: the direct-stage harness and Wreck route are not the problem. Restoring gameplay internal render, viewport, and z/depth dimensions alone does not recover speed. The remaining slowdown is in the shared 480i presentation/blitter stack.
+  - Current SC64 upload:
+    `artifacts/generated/stage_probes_perf_vblstk/p06wrk.z64`.
+    This is `t8040viewge` plus stock shared title/sniper blitter geometry, direct-booting Wreck.
+  - Hardware capture:
+    `diagnostics/captures/videos/t8040vblstk_p06wrk_direct_20260517.mp4`.
+    Comparison sheet:
+    `diagnostics/captures/contact_sheets/p06wrk_perf_compare_vblstk_20260517/stock_lowint_vblstk_sheet.jpg`.
+    Visual timing lines up with the stock Wreck control better than the low-internal 480i control, making the GE-sized shared blitter cluster the best current performance suspect.
+  - Full-ROM/Analogue canary pack:
+    `artifacts/analogue_test/TNDBLIT.Z64` with matching `.SAV`/`.EEP`.
+    Use after the direct Wreck canary is confirmed by eye. Do not treat it as final until Bazaar/Labs visual stability, pause/watch, and full-ROM level routing are rechecked.
+  - Sibling canaries staged but not promoted:
+    `artifacts/analogue_test/TNDBUF.Z64` restores only front `viSetBuf` constants;
+    `artifacts/analogue_test/TNDBOTH.Z64` combines front `viSetBuf` and stock shared blitter rollback.
+    Test isolated canaries before the combined one.
+
 - 2026-05-17 latest performance diagnostic after old-capture review:
   - Old capture folder checked:
     `C:\Users\codex\Documents\Light Capture ˜^‰æƒtƒHƒ‹ƒ_\n64`.

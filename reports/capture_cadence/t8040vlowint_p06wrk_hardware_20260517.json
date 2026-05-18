@@ -1,0 +1,56 @@
+[
+  {
+    "video": "diagnostics\\captures\\videos\\t8040vlowint_p06wrk_direct_20260517.mp4",
+    "frames": 599,
+    "frame_diffs": 598,
+    "mean_diff": 0.5177,
+    "median_diff": 0.0719,
+    "p90_diff": 1.8053,
+    "near_duplicate_ratio": 0.8278,
+    "active_ratio": 0.1003,
+    "estimated_updates_per_second": 3.007,
+    "label": "lowint_p06wrk_live_24_44",
+    "start": 24.0,
+    "duration": 20.0,
+    "scale": [
+      180,
+      120
+    ]
+  },
+  {
+    "video": "diagnostics\\captures\\videos\\t8040vlowint_p06wrk_direct_20260517.mp4",
+    "frames": 599,
+    "frame_diffs": 598,
+    "mean_diff": 0.5957,
+    "median_diff": 0.0639,
+    "p90_diff": 1.9353,
+    "near_duplicate_ratio": 0.8562,
+    "active_ratio": 0.112,
+    "estimated_updates_per_second": 3.358,
+    "label": "lowint_p06wrk_live_37_57",
+    "start": 37.0,
+    "duration": 20.0,
+    "scale": [
+      180,
+      120
+    ]
+  },
+  {
+    "video": "diagnostics\\captures\\videos\\direct_p06wrk_hardware_20260517.mp4",
+    "frames": 599,
+    "frame_diffs": 598,
+    "mean_diff": 0.4414,
+    "median_diff": 0.0,
+    "p90_diff": 0.1775,
+    "near_duplicate_ratio": 0.9515,
+    "active_ratio": 0.0418,
+    "estimated_updates_per_second": 1.253,
+    "label": "previous_direct_p06wrk_live",
+    "start": 0.0,
+    "duration": 20.0,
+    "scale": [
+      180,
+      120
+    ]
+  }
+]
