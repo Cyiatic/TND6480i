@@ -29,15 +29,26 @@ diagnostics/captures/contact_sheets/resolution_quality_compare_20260517/resoluti
 diagnostics/captures/contact_sheets/pause_text_quality_compare_20260517/pause_text_quality_crop2x.jpg
 ```
 
+2026-05-18 current-base pause/menu finding:
+
+```text
+scripts/build_t90_front_menu_canaries.py
+reports/tnd480i_t90_front_menu_canaries_20260518.json
+diagnostics/captures/contact_sheets/t90_pause_watch_20260518/watch_compare.jpg
+diagnostics/captures/contact_sheets/t90_menu_canaries_20260518/file_select_compare.jpg
+```
+
+Current `t90viewge` and the old recording-base branch have matching Wreck watch-text behavior in Gopher64. The stock/base file-select screen is not a unique `t90viewge` regression: stock TND64 and `t90viewge` look materially the same under the same skip-to-file-select emulator path. Reject the new t90 menu canaries for hardware upload: `t90menuscales` removes file-select labels/icons, and `t90menuplace` pushes the Copy/Erase labels offscreen. Do not test `t90menusafe` unless a future analysis specifically explains why combining those two rejected subsets would help.
+
 GE hi-res patch page clue: GoldenEye's working 640x480i patch depends on Zoinkity's 7 MB RAM extension, two relocated 640x480 framebuffers in upper RAM, and matching assembly/VI changes. For TND64, keep testing memory layout, framebuffer placement, and the TLB/cache range as one system. Avoid broad menu/front-end transplants until the core RAM/framebuffer model is understood.
 
 Current manual test order:
 
-1. Capture current `TND90GE` pause/watch text and compare directly against GE480i watch text quality.
-2. Reconfirm Wreck/Printworks speed on N64 and Analogue 3D after any visual tweak.
-3. Full-route level boot/playability, especially Party, City, The End, Tower, Boat, Hotel, and Volcano.
-4. Bazaar/Labs/encoder/pause/watch regression check.
-5. Front-end/gunbarrel/menu issues after gameplay stability is confirmed.
+1. Reconfirm Wreck/Printworks speed on N64 and Analogue 3D after any visual tweak.
+2. Full-route level boot/playability, especially Party, City, The End, Tower, Boat, Hotel, and Volcano.
+3. Bazaar/Labs/encoder/pause/watch regression check.
+4. Front-end/gunbarrel/menu issues after gameplay stability is confirmed.
+5. Build future front/menu fixes from a better stock-vs-GE target model, not from the rejected `menu05_09` scale/placement subsets.
 
 Minimal fallback if `t90viewge` has a viewport-specific regression:
 

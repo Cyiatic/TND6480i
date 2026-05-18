@@ -1,6 +1,6 @@
 # TND6480i Resume State
 
-Last updated: 2026-05-17 after `TND90GE` Analogue 3D gameplay validation.
+Last updated: 2026-05-18 after `TND90GE` pause/menu canary checks.
 
 Scope reminder: keep work limited to this N64/TND6480i project and directly related tools/devices.
 
@@ -51,7 +51,31 @@ Direct-stage hardware result for `t90viewge`: Wreck cadence matches the old good
 
 Analogue 3D user result for `TND90GE`: all levels boot and run fine. New visual note: the Labs encoder numbers were previously legible but are now hard to make out. User then tested `T90FB` and still could not read the encoder, so the issue is not isolated to the GE-style camera/viewport constants in `TND90GE`. Treat this as a visual-detail note, not a stability regression. The next useful resolution tell is pause/watch text quality, especially compared with the GE480i Dam/watch footage, because tiny object textures can be misleading.
 
-Video comparison note: `reports/video_resolution_quality_compare_20260517.json` and `reports/pause_text_quality_compare_20260517.json` compare the May 12 GE stock, GE480i, and TND6480i LightCapture clips plus current TND90/T90FB Wreck direct captures. Directionally, GE480i Dam/watch shows the expected high-res presentation most clearly in text and fine UI elements. TND gameplay captures have 480-ish active height/output behavior, but scene geometry and tiny object textures are not a clean proof of internal resolution. For future visual validation, capture current `TND90GE` pause/watch menu text and compare it directly against GE480i watch text.
+Video comparison note: `reports/video_resolution_quality_compare_20260517.json` and `reports/pause_text_quality_compare_20260517.json` compare the May 12 GE stock, GE480i, and TND6480i LightCapture clips plus current TND90/T90FB Wreck direct captures. Directionally, GE480i Dam/watch shows the expected high-res presentation most clearly in text and fine UI elements. TND gameplay captures have 480-ish active height/output behavior, but scene geometry and tiny object textures are not a clean proof of internal resolution.
+
+2026-05-18 pause/watch follow-up:
+
+```text
+reports/smoke/smoke_t90viewge_p06wrk_pause_burst_20260518.json
+reports/smoke/smoke_oldrecording_base_p06wrk_pause_burst_20260518.json
+diagnostics/captures/contact_sheets/t90_pause_watch_20260518/watch_compare.jpg
+```
+
+Gopher64 direct-Wreck watch captures show current `t90viewge` and the old recording-base branch rendering the TND watch text in the same broad visual class. That means the Labs encoder readability note is still best treated as a gameplay/detail validation issue, not as evidence that the latest `t90viewge` viewport constants uniquely broke pause/watch rendering.
+
+2026-05-18 front/menu canary result:
+
+```text
+scripts/build_t90_front_menu_canaries.py
+reports/tnd480i_t90_front_menu_canaries_20260518.json
+reports/smoke/smoke_t90viewge_startskip_menu_20260518.json
+reports/smoke/smoke_stock_tnd_startskip_menu_20260518.json
+reports/smoke/smoke_t90menuscales_startskip_menu_20260518.json
+reports/smoke/smoke_t90menuplace_startskip_menu_20260518.json
+diagnostics/captures/contact_sheets/t90_menu_canaries_20260518/file_select_compare.jpg
+```
+
+Do not upload the `t90menuscales`, `t90menuplace`, or `t90menusafe` canaries. `t90menuscales` changes only 26 GE-style menu float/scale words and already reproduces the missing file-select labels/icons failure. `t90menuplace` preserves the folders and `Select File`, but pushes the `Copy` and `Erase` labels out of view. The current `t90viewge` file-select frame matches stock TND64 much more closely in Gopher64, so menu scaling needs a better target model before more hardware testing.
 
 GE hi-res patch reference note from user: the original GoldenEye hi-res patch credits Zoinkity's 7 MB RAM extension, moves two 640x480 framebuffers to upper RAM, and adjusts related GoldenEye assembly plus VI settings. Treat that as confirmation that the target is a coordinated RAM-layout/framebuffer/VI/assembly patch, not a loose set of resolution constants. This aligns with the TND90 breakthrough: preserving a large TLB/page-cache range while relocating it away from the expanded framebuffers mattered as much as the visible 480i constants.
 

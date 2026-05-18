@@ -1,0 +1,223 @@
+[
+  {
+    "rom": "artifacts\\generated\\stage_probes_oldrecording_base\\p06wrk.z64",
+    "elapsed": 60.59,
+    "main_window_seen": true,
+    "main_window": {
+      "hwnd": 5767332,
+      "title": "gopher64"
+    },
+    "key_taps": 0,
+    "scripted_key_events": 8,
+    "input_events_total": 8,
+    "input_events_consumed": 8,
+    "exited_before_timeout": false,
+    "exit_code_before_timeout": null,
+    "stdout_path": "reports\\smoke\\p06wrk.stdout.txt",
+    "stderr_path": "reports\\smoke\\p06wrk.stderr.txt",
+    "stdout_bytes": 0,
+    "stderr_bytes": 2664,
+    "marker_counts": {},
+    "stderr_tail": [
+      "[WARN]: Stalled compile (compute, c36377373cb79785): thread 0 - 22762.200 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (compute, 1cbd9189b0a23679): thread 0 - 27709.700 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (compute, 7e74068a497f23c2): thread 0 - 864508.900 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (compute, 5949a1b688b6ff72): thread 0 - 68342.400 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (compute, 35f88fc5fb45ef46): thread 0 - 50637.500 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (compute, bd9293d0d50b3e8b): thread 0 - 73670.300 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, e3b76ed8c30a5cc1): thread 0 - 17375.700 us (mode: sync, success: yes).",
+      "[WARN]: Stalled compile (graphics, b178544ed4416cd2): thread 0 - 9794.900 us (mode: sync, success: yes)."
+    ],
+    "captures": [
+      {
+        "path": "diagnostics\\captures\\gopher64\\oldrecording_base_p06wrk_pause_burst_20260518\\p06wrk_t020p0s.png",
+        "returncode": 0,
+        "capture_method": "ffmpeg_gdigrab_title",
+        "stderr_tail": [],
+        "window_rect": {
+          "left": 0,
+          "top": 0,
+          "right": 640,
+          "bottom": 480,
+          "width": 640,
+          "height": 480
+        },
+        "window_stats": {
+          "crop_box": [
+            0,
+            0,
+            640,
+            480
+          ],
+          "mean_luma": 45.5,
+          "stddev_luma": 25.48,
+          "nonblack_ratio": 0.9255,
+          "bright_ratio": 0.5058
+        },
+        "elapsed": 20.1
+      },
+      {
+        "path": "diagnostics\\captures\\gopher64\\oldrecording_base_p06wrk_pause_burst_20260518\\p06wrk_t024p0s.png",
+        "returncode": 0,
+        "capture_method": "ffmpeg_gdigrab_title",
+        "stderr_tail": [],
+        "window_rect": {
+          "left": 0,
+          "top": 0,
+          "right": 640,
+          "bottom": 480,
+          "width": 640,
+          "height": 480
+        },
+        "window_stats": {
+          "crop_box": [
+            0,
+            0,
+            640,
+            480
+          ],
+          "mean_luma": 28.05,
+          "stddev_luma": 17.2,
+          "nonblack_ratio": 0.8438,
+          "bright_ratio": 0.1574
+        },
+        "elapsed": 26.96
+      },
+      {
+        "path": "diagnostics\\captures\\gopher64\\oldrecording_base_p06wrk_pause_burst_20260518\\p06wrk_t026p0s.png",
+        "returncode": 0,
+        "capture_method": "ffmpeg_gdigrab_title",
+        "stderr_tail": [],
+        "window_rect": {
+          "left": 0,
+          "top": 0,
+          "right": 640,
+          "bottom": 480,
+          "width": 640,
+          "height": 480
+        },
+        "window_stats": {
+          "crop_box": [
+            0,
+            0,
+            640,
+            480
+          ],
+          "mean_luma": 26.96,
+          "stddev_luma": 51.35,
+          "nonblack_ratio": 0.2871,
+          "bright_ratio": 0.1796
+        },
+        "elapsed": 33.67
+      },
+      {
+        "path": "diagnostics\\captures\\gopher64\\oldrecording_base_p06wrk_pause_burst_20260518\\p06wrk_t028p0s.png",
+        "returncode": 0,
+        "capture_method": "ffmpeg_gdigrab_title",
+        "stderr_tail": [],
+        "window_rect": {
+          "left": 0,
+          "top": 0,
+          "right": 640,
+          "bottom": 480,
+          "width": 640,
+          "height": 480
+        },
+        "window_stats": {
+          "crop_box": [
+            0,
+            0,
+            640,
+            480
+          ],
+          "mean_luma": 26.71,
+          "stddev_luma": 51.3,
+          "nonblack_ratio": 0.2862,
+          "bright_ratio": 0.17
+        },
+        "elapsed": 40.36
+      },
+      {
+        "path": "diagnostics\\captures\\gopher64\\oldrecording_base_p06wrk_pause_burst_20260518\\p06wrk_t030p0s.png",
+        "returncode": 0,
+        "capture_method": "ffmpeg_gdigrab_title",
+        "stderr_tail": [],
+        "window_rect": {
+          "left": 0,
+          "top": 0,
+          "right": 640,
+          "bottom": 480,
+          "width": 640,
+          "height": 480
+        },
+        "window_stats": {
+          "crop_box": [
+            0,
+            0,
+            640,
+            480
+          ],
+          "mean_luma": 26.39,
+          "stddev_luma": 51.2,
+          "nonblack_ratio": 0.2855,
+          "bright_ratio": 0.1648
+        },
+        "elapsed": 47.07
+      },
+      {
+        "path": "diagnostics\\captures\\gopher64\\oldrecording_base_p06wrk_pause_burst_20260518\\p06wrk_t032p0s.png",
+        "returncode": 0,
+        "capture_method": "ffmpeg_gdigrab_title",
+        "stderr_tail": [],
+        "window_rect": {
+          "left": 0,
+          "top": 0,
+          "right": 640,
+          "bottom": 480,
+          "width": 640,
+          "height": 480
+        },
+        "window_stats": {
+          "crop_box": [
+            0,
+            0,
+            640,
+            480
+          ],
+          "mean_luma": 26.5,
+          "stddev_luma": 51.22,
+          "nonblack_ratio": 0.2867,
+          "bright_ratio": 0.1664
+        },
+        "elapsed": 53.82
+      }
+    ],
+    "capture": {
+      "path": "diagnostics\\captures\\gopher64\\oldrecording_base_p06wrk_pause_burst_20260518\\p06wrk_final.png",
+      "returncode": 0,
+      "capture_method": "ffmpeg_gdigrab_title",
+      "stderr_tail": [],
+      "window_rect": {
+        "left": 0,
+        "top": 0,
+        "right": 640,
+        "bottom": 480,
+        "width": 640,
+        "height": 480
+      },
+      "window_stats": {
+        "crop_box": [
+          0,
+          0,
+          640,
+          480
+        ],
+        "mean_luma": 26.95,
+        "stddev_luma": 51.28,
+        "nonblack_ratio": 0.2886,
+        "bright_ratio": 0.1775
+      },
+      "elapsed": 60.59
+    }
+  }
+]
