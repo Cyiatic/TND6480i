@@ -1,0 +1,93 @@
+{
+  "note": "Pause/watch text comparison from recorded GV-USB2/LightCapture frames. Metrics are directional only; visual crop is more important than the numbers.",
+  "samples": [
+    {
+      "label": "GE stock watch options",
+      "video": "C:\\Users\\codex\\Documents\\Light Capture \u02dc^\u2030\u00e6\u0192t\u0192H\u0192\u2039\u0192_\\n64\\1. GoldenEye 007.mpg",
+      "sec": 240,
+      "path": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\diagnostics\\captures\\contact_sheets\\pause_text_quality_compare_20260517\\frames\\ge_stock_watch_options_240.png",
+      "text_pixel_ratio": 0.07971869328493648,
+      "crop_edge_x_density": 0.005618899936148864,
+      "crop_edge_y_density": 0.023881825665416627,
+      "crop_grad_x_mean": 1.2230786085128784,
+      "crop_grad_y_mean": 2.6508331298828125
+    },
+    {
+      "label": "GE stock watch",
+      "video": "C:\\Users\\codex\\Documents\\Light Capture \u02dc^\u2030\u00e6\u0192t\u0192H\u0192\u2039\u0192_\\n64\\1. GoldenEye 007.mpg",
+      "sec": 260,
+      "path": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\diagnostics\\captures\\contact_sheets\\pause_text_quality_compare_20260517\\frames\\ge_stock_watch_260.png",
+      "text_pixel_ratio": 0.012150635208711433,
+      "crop_edge_x_density": 0.004109276657849129,
+      "crop_edge_y_density": 0.0057806640446355076,
+      "crop_grad_x_mean": 0.6377822756767273,
+      "crop_grad_y_mean": 0.8459579348564148
+    },
+    {
+      "label": "GE480i watch radar",
+      "video": "C:\\Users\\codex\\Documents\\Light Capture \u02dc^\u2030\u00e6\u0192t\u0192H\u0192\u2039\u0192_\\n64\\2. GoldenEye 480i.mpg",
+      "sec": 280,
+      "path": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\diagnostics\\captures\\contact_sheets\\pause_text_quality_compare_20260517\\frames\\ge480i_watch_radar_280.png",
+      "text_pixel_ratio": 0.012921960072595282,
+      "crop_edge_x_density": 0.011566177141293441,
+      "crop_edge_y_density": 0.019413701637245036,
+      "crop_grad_x_mean": 1.3323575258255005,
+      "crop_grad_y_mean": 1.9874672889709473
+    },
+    {
+      "label": "GE480i watch options",
+      "video": "C:\\Users\\codex\\Documents\\Light Capture \u02dc^\u2030\u00e6\u0192t\u0192H\u0192\u2039\u0192_\\n64\\2. GoldenEye 480i.mpg",
+      "sec": 300,
+      "path": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\diagnostics\\captures\\contact_sheets\\pause_text_quality_compare_20260517\\frames\\ge480i_watch_options_300.png",
+      "text_pixel_ratio": 0.053166969147005444,
+      "crop_edge_x_density": 0.005030557329198212,
+      "crop_edge_y_density": 0.015251989389920425,
+      "crop_grad_x_mean": 0.7509534358978271,
+      "crop_grad_y_mean": 2.058546304702759
+    },
+    {
+      "label": "Old TND6480i watch/Labs",
+      "video": "C:\\Users\\codex\\Documents\\Light Capture \u02dc^\u2030\u00e6\u0192t\u0192H\u0192\u2039\u0192_\\n64\\4. Tomorrow Never Dies 6480i.mpg",
+      "sec": 337,
+      "path": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\diagnostics\\captures\\contact_sheets\\pause_text_quality_compare_20260517\\frames\\old_tnd6480i_watch_labs_337.png",
+      "text_pixel_ratio": 0.053166969147005444,
+      "crop_edge_x_density": 0.011201313509075984,
+      "crop_edge_y_density": 0.023323881825665416,
+      "crop_grad_x_mean": 0.9286800622940063,
+      "crop_grad_y_mean": 2.0265426635742188
+    },
+    {
+      "label": "Old TND6480i watch/Wreck",
+      "video": "C:\\Users\\codex\\Documents\\Light Capture \u02dc^\u2030\u00e6\u0192t\u0192H\u0192\u2039\u0192_\\n64\\4. Tomorrow Never Dies 6480i.mpg",
+      "sec": 860,
+      "path": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\diagnostics\\captures\\contact_sheets\\pause_text_quality_compare_20260517\\frames\\old_tnd6480i_watch_wreck_860.png",
+      "text_pixel_ratio": 0.0019782214156079856,
+      "crop_edge_x_density": 0.016291161178509532,
+      "crop_edge_y_density": 0.01348211835726699,
+      "crop_grad_x_mean": 2.2512452602386475,
+      "crop_grad_y_mean": 2.4733293056488037
+    },
+    {
+      "label": "Old TND6480i watch/Bridge",
+      "video": "C:\\Users\\codex\\Documents\\Light Capture \u02dc^\u2030\u00e6\u0192t\u0192H\u0192\u2039\u0192_\\n64\\4. Tomorrow Never Dies 6480i.mpg",
+      "sec": 1169,
+      "path": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\diagnostics\\captures\\contact_sheets\\pause_text_quality_compare_20260517\\frames\\old_tnd6480i_watch_bridge_1169.png",
+      "text_pixel_ratio": 0.0766016333938294,
+      "crop_edge_x_density": 0.019018516829335037,
+      "crop_edge_y_density": 0.019948778926186773,
+      "crop_grad_x_mean": 2.0521583557128906,
+      "crop_grad_y_mean": 2.402238130569458
+    },
+    {
+      "label": "Old TND6480i watch/Volcano",
+      "video": "C:\\Users\\codex\\Documents\\Light Capture \u02dc^\u2030\u00e6\u0192t\u0192H\u0192\u2039\u0192_\\n64\\4. Tomorrow Never Dies 6480i.mpg",
+      "sec": 1490,
+      "path": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\diagnostics\\captures\\contact_sheets\\pause_text_quality_compare_20260517\\frames\\old_tnd6480i_watch_volcano_1490.png",
+      "text_pixel_ratio": 0.20416969147005445,
+      "crop_edge_x_density": 0.00996533795493934,
+      "crop_edge_y_density": 0.3880087807555108,
+      "crop_grad_x_mean": 0.7474331855773926,
+      "crop_grad_y_mean": 87.3326644897461
+    }
+  ]
+}

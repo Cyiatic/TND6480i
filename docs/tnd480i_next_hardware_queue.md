@@ -18,16 +18,25 @@ Why: direct Wreck hardware cadence matches the old good TND6480i recording after
 
 Hardware assumption: Expansion Pak is enabled and included. Optimize for the 8 MB/upper-RAM framebuffer layout; do not pursue 4 MB compatibility unless the project scope changes.
 
-Analogue 3D result: user tested `TND90GE` and reported that all levels boot and run fine. Remaining gameplay-side visual note: the Labs encoder numbers were clear in an earlier build but are now difficult to read. Treat this as the next focused A/B against `T90FB`, not as a reason to abandon the `TND90GE` stability baseline.
+Analogue 3D result: user tested `TND90GE` and reported that all levels boot and run fine. Remaining gameplay-side visual note: the Labs encoder numbers were clear in an earlier build but are now difficult to read. User tested `T90FB` and the encoder was still unreadable, so this is not explained by the later GE-style viewport/camera constants alone.
+
+Resolution-quality validation note: compare pause/watch text before trusting tiny world-object details. GE480i's Dam/watch footage shows the high-res patch most clearly in its small watch/pause-menu text. Current reports:
+
+```text
+reports/video_resolution_quality_compare_20260517.json
+reports/pause_text_quality_compare_20260517.json
+diagnostics/captures/contact_sheets/resolution_quality_compare_20260517/resolution_quality_compare_sheet.jpg
+diagnostics/captures/contact_sheets/pause_text_quality_compare_20260517/pause_text_quality_crop2x.jpg
+```
 
 GE hi-res patch page clue: GoldenEye's working 640x480i patch depends on Zoinkity's 7 MB RAM extension, two relocated 640x480 framebuffers in upper RAM, and matching assembly/VI changes. For TND64, keep testing memory layout, framebuffer placement, and the TLB/cache range as one system. Avoid broad menu/front-end transplants until the core RAM/framebuffer model is understood.
 
 Current manual test order:
 
-1. Compare Labs encoder legibility on `TND90GE` versus `T90FB`.
+1. Capture current `TND90GE` pause/watch text and compare directly against GE480i watch text quality.
 2. Reconfirm Wreck/Printworks speed on N64 and Analogue 3D after any visual tweak.
 3. Full-route level boot/playability, especially Party, City, The End, Tower, Boat, Hotel, and Volcano.
-4. Bazaar/Labs/pause/watch regression check.
+4. Bazaar/Labs/encoder/pause/watch regression check.
 5. Front-end/gunbarrel/menu issues after gameplay stability is confirmed.
 
 Minimal fallback if `t90viewge` has a viewport-specific regression:
