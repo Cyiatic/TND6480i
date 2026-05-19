@@ -1,0 +1,123 @@
+{
+  "candidate": "g1casta1",
+  "atlas": "diagnostics\\captures\\current\\preingame_annotations_g1casta1_20260518.jpg",
+  "cards": [
+    {
+      "name": "01_classification",
+      "title": "01 CMK Board Of Classification",
+      "reference": "diagnostics/captures/contact_sheets/stock_tnd_preingame_scan_20260518/frames/frame_0028_00140000.png",
+      "current": "diagnostics/captures/contact_sheets/g1casta1_full_front_hardware_cycled_20260518/frames/frame_0002_00010000.png",
+      "out": "diagnostics\\captures\\current\\preingame_annotations_g1casta1_20260518\\01_classification.jpg",
+      "verdict": "Needs safe-area validation",
+      "note": "The current page is readable but still needs a bounded safe-area check; do not spend patch work here until dossier and gunbarrel are settled."
+    },
+    {
+      "name": "02_tijayfly_logo",
+      "title": "02 TiJayFly Logo",
+      "reference": "diagnostics/captures/contact_sheets/stock_tnd_preingame_scan_20260518/frames/frame_0001_00005000.png",
+      "current": "diagnostics/captures/contact_sheets/g1casta1_full_front_hardware_cycled_20260518/frames/frame_0003_00015000.png",
+      "out": "diagnostics\\captures\\current\\preingame_annotations_g1casta1_20260518\\02_tijayfly_logo.jpg",
+      "verdict": "Low priority, visually usable",
+      "note": "Logo framing is not a current blocker; keep as a timing signal only unless later patches disturb it."
+    },
+    {
+      "name": "03_gunbarrel_entry",
+      "title": "03 Gunbarrel Entry Sweep",
+      "reference": "diagnostics/captures/contact_sheets/ge480i_gunbarrel_detail_20260518/frames/frame_0003_00022000.png",
+      "current": "diagnostics/captures/contact_sheets/g1casta1_full_front_hardware_cycled_20260518/frames/frame_0006_00030000.png",
+      "out": "diagnostics\\captures\\current\\preingame_annotations_g1casta1_20260518\\03_gunbarrel_entry.jpg",
+      "verdict": "Improved: paired circles now match the GE480i family",
+      "note": "The scaled 640x430 RLE asset fixes the early sweep family; cadence still needs a final human timing check."
+    },
+    {
+      "name": "04_gunbarrel_bond",
+      "title": "04 Gunbarrel With Bond",
+      "reference": "diagnostics/captures/contact_sheets/ge480i_gunbarrel_detail_20260518/frames/frame_0008_00032000.png",
+      "current": "diagnostics/captures/contact_sheets/g1casta1_full_front_hardware_cycled_20260518/frames/frame_0008_00040000.png",
+      "out": "diagnostics\\captures\\current\\preingame_annotations_g1casta1_20260518\\04_gunbarrel_bond.jpg",
+      "verdict": "Improved: offset aperture removed",
+      "note": "The large extra oval is gone in g1casta1; this should be checked on CRT for cadence, but visually it is now in the GE480i family."
+    },
+    {
+      "name": "05_title_logo",
+      "title": "05 Tomorrow Never Dies Title Logo",
+      "reference": "diagnostics/captures/contact_sheets/stock_tnd_preingame_scan_20260518/frames/frame_0008_00040000.png",
+      "current": "diagnostics/captures/contact_sheets/g1casta1_title_transition_20260518/frames/frame_0007_00057000.png",
+      "out": "diagnostics\\captures\\current\\preingame_annotations_g1casta1_20260518\\05_title_logo.jpg",
+      "verdict": "Visible and centered after gunbarrel asset transplant",
+      "note": "The title logo remains present after the scaled asset transplant and no longer looks like a skipped transition."
+    },
+    {
+      "name": "06_opening_credits",
+      "title": "06 Opening Credits / Cast Models",
+      "reference": "diagnostics/captures/contact_sheets/stock_tnd_preingame_scan_20260518/frames/frame_0010_00050000.png",
+      "current": "diagnostics/captures/contact_sheets/g1casta1_full_front_hardware_cycled_20260518/frames/frame_0012_00060000.png",
+      "out": "diagnostics\\captures\\current\\preingame_annotations_g1casta1_20260518\\06_opening_credits.jpg",
+      "verdict": "Improved by g1castz1, still verify text safe area",
+      "note": "The z-buffer dimension fix restored full bodies compared with the earlier cropped candidate; keep monitoring right-edge credit text."
+    },
+    {
+      "name": "07_file_select",
+      "title": "07 File Select Dossier",
+      "reference": "C:/Users/codex/Pictures/vlcsnap-2026-05-18-18h14m25s727.png",
+      "current": "diagnostics/captures/current/g1mtabge4_file_hw_norm_20260518.png",
+      "out": "diagnostics\\captures\\current\\preingame_annotations_g1casta1_20260518\\07_file_select.jpg",
+      "verdict": "Mostly acceptable; background origin still a watch item",
+      "note": "This page no longer has missing labels/icons; only revisit if the wallpaper shift becomes obvious in live navigation."
+    },
+    {
+      "name": "08_mode_select",
+      "title": "08 Single/Multiplayer/Cheats Dossier",
+      "reference": "C:/Users/codex/Pictures/vlcsnap-2026-05-18-18h14m38s302.png",
+      "current": "diagnostics/captures/current/g1mtabge4_mode_hw_norm_20260518.png",
+      "out": "diagnostics\\captures\\current\\preingame_annotations_g1casta1_20260518\\08_mode_select.jpg",
+      "verdict": "Visually close; cursor route still needs live-input proof",
+      "note": "The earlier PREVIOUS-tab problem is fixed in this capture; normal-controller cursor/hitbox still needs one live confirmation."
+    },
+    {
+      "name": "09_mission_select",
+      "title": "09 Mission Select Dossier",
+      "reference": "C:/Users/codex/Pictures/vlcsnap-2026-05-18-18h14m57s301.png",
+      "current": "diagnostics/captures/current/g1mtabge4_mission_hw_norm_20260518.png",
+      "out": "diagnostics\\captures\\current\\preingame_annotations_g1casta1_20260518\\09_mission_select.jpg",
+      "verdict": "Needs another label-alignment pass",
+      "note": "Keep the TND mission count/layout, but align each label to the same film-caption band behavior as GE480i."
+    },
+    {
+      "name": "10_difficulty",
+      "title": "10 Difficulty Dossier",
+      "reference": "C:/Users/codex/Pictures/vlcsnap-2026-05-18-18h15m03s394.png",
+      "current": "diagnostics/captures/current/g1mtabge4_difficulty_hw_norm_20260518.png",
+      "out": "diagnostics\\captures\\current\\preingame_annotations_g1casta1_20260518\\10_difficulty.jpg",
+      "verdict": "Visually close; keep unless live input says otherwise",
+      "note": "The page is usable and high-res-looking; avoid broad changes here while mission labels and gunbarrel remain unresolved."
+    },
+    {
+      "name": "11_briefing",
+      "title": "11 Briefing / Objectives Dossier",
+      "reference": "C:/Users/codex/Pictures/vlcsnap-2026-05-18-18h15m11s715.png",
+      "current": null,
+      "out": "diagnostics\\captures\\current\\preingame_annotations_g1casta1_20260518\\11_briefing.jpg",
+      "verdict": "Blocked: safe capture route needed",
+      "note": "The forced briefing route produced the rejected strobe behavior, so briefing should be captured through a safer live/manual route before patching."
+    },
+    {
+      "name": "12_moneypenny",
+      "title": "12 Moneypenny Dossier Page",
+      "reference": "C:/Users/codex/Pictures/vlcsnap-2026-05-18-18h15m20s302.png",
+      "current": null,
+      "out": "diagnostics\\captures\\current\\preingame_annotations_g1casta1_20260518\\12_moneypenny.jpg",
+      "verdict": "Capture required before patching",
+      "note": "This is part of the pre-ingame acceptance set. Do not assume it passes until captured through a non-strobing route."
+    },
+    {
+      "name": "13_objectives",
+      "title": "13 Primary Objectives Dossier Page",
+      "reference": "C:/Users/codex/Pictures/vlcsnap-2026-05-18-18h15m43s930.png",
+      "current": null,
+      "out": "diagnostics\\captures\\current\\preingame_annotations_g1casta1_20260518\\13_objectives.jpg",
+      "verdict": "Capture required before patching",
+      "note": "This page must be checked after a safe briefing/objectives route exists, because the rejected forced route caused strobing."
+    }
+  ]
+}
