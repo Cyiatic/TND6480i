@@ -1,0 +1,81 @@
+{
+  "video": "diagnostics\\captures\\videos\\g1tabhit1btn0cpg1_hardware_cycled_20260519.mp4",
+  "sheet": "diagnostics\\captures\\contact_sheets\\g1tabhit1btn0cpg1_hardware_cycled_20260519.jpg",
+  "start": 55.0,
+  "end": 80.0,
+  "step": 5.0,
+  "frames": [
+    {
+      "index": 0,
+      "seconds": 55.0,
+      "timestamp": "00:55",
+      "path": "diagnostics\\captures\\contact_sheets\\g1tabhit1btn0cpg1_hardware_cycled_20260519\\frames\\frame_0000_00055000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "00:55"
+    },
+    {
+      "index": 1,
+      "seconds": 60.0,
+      "timestamp": "01:00",
+      "path": "diagnostics\\captures\\contact_sheets\\g1tabhit1btn0cpg1_hardware_cycled_20260519\\frames\\frame_0001_00060000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "01:00"
+    },
+    {
+      "index": 2,
+      "seconds": 65.0,
+      "timestamp": "01:05",
+      "path": "diagnostics\\captures\\contact_sheets\\g1tabhit1btn0cpg1_hardware_cycled_20260519\\frames\\frame_0002_00065000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "01:05"
+    },
+    {
+      "index": 3,
+      "seconds": 70.0,
+      "timestamp": "01:10",
+      "path": "diagnostics\\captures\\contact_sheets\\g1tabhit1btn0cpg1_hardware_cycled_20260519\\frames\\frame_0003_00070000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "01:10"
+    },
+    {
+      "index": 4,
+      "seconds": 75.0,
+      "timestamp": "01:15",
+      "path": "diagnostics\\captures\\contact_sheets\\g1tabhit1btn0cpg1_hardware_cycled_20260519\\frames\\frame_0004_00075000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "01:15"
+    },
+    {
+      "index": 5,
+      "seconds": 80.0,
+      "timestamp": "01:20",
+      "path": "diagnostics\\captures\\contact_sheets\\g1tabhit1btn0cpg1_hardware_cycled_20260519\\frames\\frame_0005_00080000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "01:20"
+    }
+  ]
+}

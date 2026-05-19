@@ -1,0 +1,303 @@
+{
+  "base_rom": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1fsorig1.z64",
+  "base_md5": "72ef6c07eb031809d4cdc6309725b105",
+  "out_rom": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1tabhit1.z64",
+  "out_md5": "36fe8168bb3d93c9dc8fad0e99417dff",
+  "header_crc": "FDFF034D 9980FD33",
+  "purpose": "Move NEXT tab hit detection/highlight to the GE480i tab band so hovering START no longer highlights NEXT.",
+  "patch_range": {
+    "start": "0x3F0A8",
+    "end": "0x3F114"
+  },
+  "patches": [
+    {
+      "offset": "0x3F0A8",
+      "old": "0x3C0143C3",
+      "ge_stock": "0x3C0143C3",
+      "new": "0x3C01440E",
+      "changed": true,
+      "stock_differs_from_ge480i": true
+    },
+    {
+      "offset": "0x3F0AC",
+      "old": "0x44812000",
+      "ge_stock": "0x44812000",
+      "new": "0x44812000",
+      "changed": false,
+      "stock_differs_from_ge480i": false
+    },
+    {
+      "offset": "0x3F0B0",
+      "old": "0x3C018003",
+      "ge_stock": "0x3C018003",
+      "new": "0x3C018003",
+      "changed": false,
+      "stock_differs_from_ge480i": false
+    },
+    {
+      "offset": "0x3F0B4",
+      "old": "0xC426A908",
+      "ge_stock": "0xC426A908",
+      "new": "0xC426A908",
+      "changed": false,
+      "stock_differs_from_ge480i": false
+    },
+    {
+      "offset": "0x3F0B8",
+      "old": "0x3C018003",
+      "ge_stock": "0x3C018003",
+      "new": "0x4606203C",
+      "changed": true,
+      "stock_differs_from_ge480i": true
+    },
+    {
+      "offset": "0x3F0BC",
+      "old": "0x00001025",
+      "ge_stock": "0x00001025",
+      "new": "0x00001025",
+      "changed": false,
+      "stock_differs_from_ge480i": false
+    },
+    {
+      "offset": "0x3F0C0",
+      "old": "0x4606203C",
+      "ge_stock": "0x4606203C",
+      "new": "0x4500000C",
+      "changed": true,
+      "stock_differs_from_ge480i": true
+    },
+    {
+      "offset": "0x3F0C4",
+      "old": "0x00000000",
+      "ge_stock": "0x00000000",
+      "new": "0x3C03433E",
+      "changed": true,
+      "stock_differs_from_ge480i": true
+    },
+    {
+      "offset": "0x3F0C8",
+      "old": "0x45000011",
+      "ge_stock": "0x45000011",
+      "new": "0x44834000",
+      "changed": true,
+      "stock_differs_from_ge480i": true
+    },
+    {
+      "offset": "0x3F0CC",
+      "old": "0x00000000",
+      "ge_stock": "0x00000000",
+      "new": "0xC420A90C",
+      "changed": true,
+      "stock_differs_from_ge480i": true
+    },
+    {
+      "offset": "0x3F0D0",
+      "old": "0xC420A90C",
+      "ge_stock": "0xC420A90C",
+      "new": "0x4600403C",
+      "changed": true,
+      "stock_differs_from_ge480i": true
+    },
+    {
+      "offset": "0x3F0D4",
+      "old": "0x3C018005",
+      "ge_stock": "0x3C018005",
+      "new": "0x3C0143A2",
+      "changed": true,
+      "stock_differs_from_ge480i": true
+    },
+    {
+      "offset": "0x3F0D8",
+      "old": "0xC42819E0",
+      "ge_stock": "0xC42819E0",
+      "new": "0x45000006",
+      "changed": true,
+      "stock_differs_from_ge480i": true
+    },
+    {
+      "offset": "0x3F0DC",
+      "old": "0x3C01435F",
+      "ge_stock": "0x3C01435F",
+      "new": "0x44815000",
+      "changed": true,
+      "stock_differs_from_ge480i": true
+    },
+    {
+      "offset": "0x3F0E0",
+      "old": "0x4600403C",
+      "ge_stock": "0x4600403C",
+      "new": "0x00000000",
+      "changed": true,
+      "stock_differs_from_ge480i": true
+    },
+    {
+      "offset": "0x3F0E4",
+      "old": "0x00000000",
+      "ge_stock": "0x00000000",
+      "new": "0x460A003E",
+      "changed": true,
+      "stock_differs_from_ge480i": true
+    },
+    {
+      "offset": "0x3F0E8",
+      "old": "0x45000009",
+      "ge_stock": "0x45000009",
+      "new": "0x00000000",
+      "changed": true,
+      "stock_differs_from_ge480i": true
+    },
+    {
+      "offset": "0x3F0EC",
+      "old": "0x00000000",
+      "ge_stock": "0x00000000",
+      "new": "0x45030001",
+      "changed": true,
+      "stock_differs_from_ge480i": true
+    },
+    {
+      "offset": "0x3F0F0",
+      "old": "0x44815000",
+      "ge_stock": "0x44815000",
+      "new": "0x24020001",
+      "changed": true,
+      "stock_differs_from_ge480i": true
+    },
+    {
+      "offset": "0x3F0F4",
+      "old": "0x00000000",
+      "ge_stock": "0x00000000",
+      "new": "0x03E00008",
+      "changed": true,
+      "stock_differs_from_ge480i": true
+    },
+    {
+      "offset": "0x3F0F8",
+      "old": "0x460A003E",
+      "ge_stock": "0x460A003E",
+      "new": "0x00000000",
+      "changed": true,
+      "stock_differs_from_ge480i": true
+    },
+    {
+      "offset": "0x3F0FC",
+      "old": "0x00000000",
+      "ge_stock": "0x00000000",
+      "new": "0x00000000",
+      "changed": false,
+      "stock_differs_from_ge480i": false
+    },
+    {
+      "offset": "0x3F100",
+      "old": "0x45000003",
+      "ge_stock": "0x45000003",
+      "new": "0x00000000",
+      "changed": true,
+      "stock_differs_from_ge480i": true
+    },
+    {
+      "offset": "0x3F104",
+      "old": "0x00000000",
+      "ge_stock": "0x00000000",
+      "new": "0x00000000",
+      "changed": false,
+      "stock_differs_from_ge480i": false
+    },
+    {
+      "offset": "0x3F108",
+      "old": "0x03E00008",
+      "ge_stock": "0x03E00008",
+      "new": "0x00000000",
+      "changed": true,
+      "stock_differs_from_ge480i": true
+    },
+    {
+      "offset": "0x3F10C",
+      "old": "0x24020001",
+      "ge_stock": "0x24020001",
+      "new": "0x00000000",
+      "changed": true,
+      "stock_differs_from_ge480i": true
+    },
+    {
+      "offset": "0x3F110",
+      "old": "0x03E00008",
+      "ge_stock": "0x03E00008",
+      "new": "0x00000000",
+      "changed": true,
+      "stock_differs_from_ge480i": true
+    }
+  ],
+  "changed_patch_count": 21,
+  "save_outputs": [
+    {
+      "source": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1fsorig1.sav",
+      "target": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1tabhit1.sav",
+      "bytes": 512,
+      "md5": "79ed3fe6851b080ff21de69fd12f034d"
+    },
+    {
+      "source": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1fsorig1.eep",
+      "target": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1tabhit1.eep",
+      "bytes": 2048,
+      "md5": "e47f5c07623838e875761a0493388e03"
+    }
+  ],
+  "routes": {
+    "background_page": {
+      "out_rom": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1tabhit1btn0cpg1.z64",
+      "out_md5": "3bad48bae4a6500e394896d5b6091eaf",
+      "header_crc": "DB66C2D9 7FB76803",
+      "route_patches": [
+        {
+          "key": "timeout_to_mission_select",
+          "offset": "0x3FF34",
+          "old": "0x24040018",
+          "new": "0x24040007"
+        },
+        {
+          "key": "mission_select_force_button_accept",
+          "offset": "0x42D98",
+          "old": "0x1040002A",
+          "new": "0x00000000"
+        },
+        {
+          "key": "difficulty_accept",
+          "offset": "0x43554",
+          "old": "0x11600012",
+          "new": "0x00000000"
+        },
+        {
+          "key": "difficulty_route_agent_to_briefing",
+          "offset": "0x43560",
+          "old": "0x24010003",
+          "new": "0x24010004"
+        },
+        {
+          "key": "force_background_page",
+          "offset": "0x4A14C",
+          "old": "0x00002025",
+          "new": "0x24040001"
+        }
+      ],
+      "save_outputs": [
+        {
+          "source": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1fsorig1.sav",
+          "target": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1tabhit1btn0cpg1.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1fsorig1.eep",
+          "target": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1tabhit1btn0cpg1.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ]
+    }
+  },
+  "bps": {
+    "patch": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\TND6480i_g1tabhit1_from_baseline_tnd.bps",
+    "manifest": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\reports\\tnd6480i_g1tabhit1_bps_manifest.json",
+    "patch_md5": "3223c660cf6598ac4957b5959a955799"
+  }
+}
