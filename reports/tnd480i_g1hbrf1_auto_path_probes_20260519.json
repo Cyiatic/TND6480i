@@ -1,0 +1,283 @@
+{
+  "base_rom": "artifacts\\generated\\g1hbrf1.z64",
+  "base_md5": "074ccc643853e308aafd0cbccb8302b9",
+  "purpose": "No-controller route probes that preserve upstream menu initialization before later dossier pages.",
+  "probes": [
+    {
+      "name": "brfpath08",
+      "purpose": "No-input probe: title/logo -> mission select -> forced accept -> difficulty.",
+      "base_rom": "artifacts\\generated\\g1hbrf1.z64",
+      "out_rom": "artifacts\\generated\\brfpath08.z64",
+      "out_md5": "020c6cf403d652229e662ee3ec32f456",
+      "header_crc": "FC2B8982 E90B2817",
+      "patches": [
+        {
+          "key": "timeout_to_mission_select",
+          "offset": "0x3FF34",
+          "old": "0x24040018",
+          "new": "0x24040007",
+          "note": "After the TND title/logo timeout, route to MENU_MISSION_SELECT."
+        },
+        {
+          "key": "mission_select_accept",
+          "offset": "0x42E88",
+          "old": "0x13200010",
+          "new": "0x00000000",
+          "note": "Force mission-select accept path by removing the branch that skips MENU_DIFFICULTY."
+        }
+      ],
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\g1hbrf1.sav",
+          "target": "artifacts\\generated\\brfpath08.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\g1hbrf1.eep",
+          "target": "artifacts\\generated\\brfpath08.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ],
+      "do_not_promote": true
+    },
+    {
+      "name": "brfpath0a",
+      "purpose": "No-input probe: title/logo -> mission select -> forced accept -> difficulty -> forced accept -> briefing.",
+      "base_rom": "artifacts\\generated\\g1hbrf1.z64",
+      "out_rom": "artifacts\\generated\\brfpath0a.z64",
+      "out_md5": "2ba791772150c960e7dc205c237bf9a2",
+      "header_crc": "FBEB89BE A49F0A8B",
+      "patches": [
+        {
+          "key": "timeout_to_mission_select",
+          "offset": "0x3FF34",
+          "old": "0x24040018",
+          "new": "0x24040007",
+          "note": "After the TND title/logo timeout, route to MENU_MISSION_SELECT."
+        },
+        {
+          "key": "mission_select_accept",
+          "offset": "0x42E88",
+          "old": "0x13200010",
+          "new": "0x00000000",
+          "note": "Force mission-select accept path by removing the branch that skips MENU_DIFFICULTY."
+        },
+        {
+          "key": "difficulty_accept",
+          "offset": "0x43554",
+          "old": "0x11600012",
+          "new": "0x00000000",
+          "note": "Force difficulty accept path by removing the branch that skips MENU_BRIEFING."
+        }
+      ],
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\g1hbrf1.sav",
+          "target": "artifacts\\generated\\brfpath0a.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\g1hbrf1.eep",
+          "target": "artifacts\\generated\\brfpath0a.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ],
+      "do_not_promote": true
+    },
+    {
+      "name": "brfbtn08",
+      "purpose": "No-input probe: title/logo -> mission select -> forced mission accept block -> difficulty.",
+      "base_rom": "artifacts\\generated\\g1hbrf1.z64",
+      "out_rom": "artifacts\\generated\\brfbtn08.z64",
+      "out_md5": "131242898c59f3257b1c976b76ba01de",
+      "header_crc": "FDAB899E 5F6B1316",
+      "patches": [
+        {
+          "key": "timeout_to_mission_select",
+          "offset": "0x3FF34",
+          "old": "0x24040018",
+          "new": "0x24040007",
+          "note": "After the TND title/logo timeout, route to MENU_MISSION_SELECT."
+        },
+        {
+          "key": "mission_select_force_button_accept",
+          "offset": "0x42D98",
+          "old": "0x1040002A",
+          "new": "0x00000000",
+          "note": "Force the mission-select A/Start/Z accept block so briefingpage and selected_stage are initialized."
+        }
+      ],
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\g1hbrf1.sav",
+          "target": "artifacts\\generated\\brfbtn08.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\g1hbrf1.eep",
+          "target": "artifacts\\generated\\brfbtn08.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ],
+      "do_not_promote": true
+    },
+    {
+      "name": "brfbtn0a",
+      "purpose": "No-input probe: title/logo -> mission select -> forced mission accept block -> difficulty -> forced difficulty accept block -> briefing.",
+      "base_rom": "artifacts\\generated\\g1hbrf1.z64",
+      "out_rom": "artifacts\\generated\\brfbtn0a.z64",
+      "out_md5": "38c76ff75e49c83bc8b62dee4c9a6f3e",
+      "header_crc": "FDAB898E A03CF7D9",
+      "patches": [
+        {
+          "key": "timeout_to_mission_select",
+          "offset": "0x3FF34",
+          "old": "0x24040018",
+          "new": "0x24040007",
+          "note": "After the TND title/logo timeout, route to MENU_MISSION_SELECT."
+        },
+        {
+          "key": "mission_select_force_button_accept",
+          "offset": "0x42D98",
+          "old": "0x1040002A",
+          "new": "0x00000000",
+          "note": "Force the mission-select A/Start/Z accept block so briefingpage and selected_stage are initialized."
+        },
+        {
+          "key": "difficulty_force_button_accept",
+          "offset": "0x43518",
+          "old": "0x10400008",
+          "new": "0x00000000",
+          "note": "Force the difficulty A/Start/Z accept block before the page-transition branch."
+        }
+      ],
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\g1hbrf1.sav",
+          "target": "artifacts\\generated\\brfbtn0a.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\g1hbrf1.eep",
+          "target": "artifacts\\generated\\brfbtn0a.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ],
+      "do_not_promote": true
+    },
+    {
+      "name": "brfbtn0b",
+      "purpose": "No-input diagnostic: force mission and difficulty accept, then route the all-missions-save default 007 row to briefing instead of 007 options.",
+      "base_rom": "artifacts\\generated\\g1hbrf1.z64",
+      "out_rom": "artifacts\\generated\\brfbtn0b.z64",
+      "out_md5": "459022bddfa9236e3d06006495383e7a",
+      "header_crc": "FDAB8996 27EB2102",
+      "patches": [
+        {
+          "key": "timeout_to_mission_select",
+          "offset": "0x3FF34",
+          "old": "0x24040018",
+          "new": "0x24040007",
+          "note": "After the TND title/logo timeout, route to MENU_MISSION_SELECT."
+        },
+        {
+          "key": "mission_select_force_button_accept",
+          "offset": "0x42D98",
+          "old": "0x1040002A",
+          "new": "0x00000000",
+          "note": "Force the mission-select A/Start/Z accept block so briefingpage and selected_stage are initialized."
+        },
+        {
+          "key": "difficulty_force_button_accept",
+          "offset": "0x43518",
+          "old": "0x10400008",
+          "new": "0x00000000",
+          "note": "Force the difficulty A/Start/Z accept block before the page-transition branch."
+        },
+        {
+          "key": "difficulty_route_007_to_briefing",
+          "offset": "0x43560",
+          "old": "0x24010003",
+          "new": "0x24010004",
+          "note": "Diagnostic-only route patch: with an all-missions save, do not treat the default 007 row as MENU_007_OPTIONS; let it fall through to MENU_BRIEFING."
+        }
+      ],
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\g1hbrf1.sav",
+          "target": "artifacts\\generated\\brfbtn0b.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\g1hbrf1.eep",
+          "target": "artifacts\\generated\\brfbtn0b.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ],
+      "do_not_promote": true
+    },
+    {
+      "name": "brfbtn0c",
+      "purpose": "No-input diagnostic: force mission-state setup, then force the difficulty page-transition branch to briefing without depending on difficulty cursor hit testing.",
+      "base_rom": "artifacts\\generated\\g1hbrf1.z64",
+      "out_rom": "artifacts\\generated\\brfbtn0c.z64",
+      "out_md5": "fac12a299c498d3bb3cf6b23bd79575f",
+      "header_crc": "FDAB899A 1299D59D",
+      "patches": [
+        {
+          "key": "timeout_to_mission_select",
+          "offset": "0x3FF34",
+          "old": "0x24040018",
+          "new": "0x24040007",
+          "note": "After the TND title/logo timeout, route to MENU_MISSION_SELECT."
+        },
+        {
+          "key": "mission_select_force_button_accept",
+          "offset": "0x42D98",
+          "old": "0x1040002A",
+          "new": "0x00000000",
+          "note": "Force the mission-select A/Start/Z accept block so briefingpage and selected_stage are initialized."
+        },
+        {
+          "key": "difficulty_accept",
+          "offset": "0x43554",
+          "old": "0x11600012",
+          "new": "0x00000000",
+          "note": "Force difficulty accept path by removing the branch that skips MENU_BRIEFING."
+        },
+        {
+          "key": "difficulty_route_007_to_briefing",
+          "offset": "0x43560",
+          "old": "0x24010003",
+          "new": "0x24010004",
+          "note": "Diagnostic-only route patch: with an all-missions save, do not treat the default 007 row as MENU_007_OPTIONS; let it fall through to MENU_BRIEFING."
+        }
+      ],
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\g1hbrf1.sav",
+          "target": "artifacts\\generated\\brfbtn0c.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\g1hbrf1.eep",
+          "target": "artifacts\\generated\\brfbtn0c.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ],
+      "do_not_promote": true
+    }
+  ]
+}

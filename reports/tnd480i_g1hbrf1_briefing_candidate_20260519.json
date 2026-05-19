@@ -1,0 +1,728 @@
+{
+  "base_rom": "artifacts\\generated\\g1hct2.z64",
+  "base_md5": "561f68067ddcf191afc580e1cce5df4d",
+  "out_rom": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1hbrf1.z64",
+  "out_md5": "074ccc643853e308aafd0cbccb8302b9",
+  "header_crc": "022B89EE 91AF42F5",
+  "purpose": "Apply only GE480i briefing/objective menu0A coordinate and wrap-threshold deltas on top of g1hct2.",
+  "ranges": [
+    {
+      "name": "brief_wrap_thresholds",
+      "start": "0x454E8",
+      "end": "0x45604"
+    },
+    {
+      "name": "briefing_menu0A",
+      "start": "0x4A000",
+      "end": "0x4C500"
+    }
+  ],
+  "patches": [
+    {
+      "offset": "0x454E8",
+      "source": "brief_wrap_thresholds",
+      "old": "0x28410119",
+      "ge_stock": "0x28410119",
+      "new": "0x28410144",
+      "changed": true,
+      "note": "GE480i briefing/objective coordinate delta"
+    },
+    {
+      "offset": "0x454F0",
+      "source": "brief_wrap_thresholds",
+      "old": "0x28410105",
+      "ge_stock": "0x28410105",
+      "new": "0x28410130",
+      "changed": true,
+      "note": "GE480i briefing/objective coordinate delta"
+    },
+    {
+      "offset": "0x45504",
+      "source": "brief_wrap_thresholds",
+      "old": "0x28410105",
+      "ge_stock": "0x28410105",
+      "new": "0x28410130",
+      "changed": true,
+      "note": "GE480i briefing/objective coordinate delta"
+    },
+    {
+      "offset": "0x45510",
+      "source": "brief_wrap_thresholds",
+      "old": "0x28410105",
+      "ge_stock": "0x28410105",
+      "new": "0x28410130",
+      "changed": true,
+      "note": "GE480i briefing/objective coordinate delta"
+    },
+    {
+      "offset": "0x4552C",
+      "source": "brief_wrap_thresholds",
+      "old": "0x284100F1",
+      "ge_stock": "0x284100F1",
+      "new": "0x2841011C",
+      "changed": true,
+      "note": "GE480i briefing/objective coordinate delta"
+    },
+    {
+      "offset": "0x45538",
+      "source": "brief_wrap_thresholds",
+      "old": "0x284100F1",
+      "ge_stock": "0x284100F1",
+      "new": "0x2841011C",
+      "changed": true,
+      "note": "GE480i briefing/objective coordinate delta"
+    },
+    {
+      "offset": "0x45554",
+      "source": "brief_wrap_thresholds",
+      "old": "0x284100DD",
+      "ge_stock": "0x284100DD",
+      "new": "0x28410108",
+      "changed": true,
+      "note": "GE480i briefing/objective coordinate delta"
+    },
+    {
+      "offset": "0x45560",
+      "source": "brief_wrap_thresholds",
+      "old": "0x284100DD",
+      "ge_stock": "0x284100DD",
+      "new": "0x28410108",
+      "changed": true,
+      "note": "GE480i briefing/objective coordinate delta"
+    },
+    {
+      "offset": "0x4557C",
+      "source": "brief_wrap_thresholds",
+      "old": "0x284100C9",
+      "ge_stock": "0x284100C9",
+      "new": "0x284100F4",
+      "changed": true,
+      "note": "GE480i briefing/objective coordinate delta"
+    },
+    {
+      "offset": "0x45588",
+      "source": "brief_wrap_thresholds",
+      "old": "0x284100C9",
+      "ge_stock": "0x284100C9",
+      "new": "0x284100F4",
+      "changed": true,
+      "note": "GE480i briefing/objective coordinate delta"
+    },
+    {
+      "offset": "0x455A4",
+      "source": "brief_wrap_thresholds",
+      "old": "0x284100B5",
+      "ge_stock": "0x284100B5",
+      "new": "0x284100E0",
+      "changed": true,
+      "note": "GE480i briefing/objective coordinate delta"
+    },
+    {
+      "offset": "0x455B0",
+      "source": "brief_wrap_thresholds",
+      "old": "0x284100B5",
+      "ge_stock": "0x284100B5",
+      "new": "0x284100E0",
+      "changed": true,
+      "note": "GE480i briefing/objective coordinate delta"
+    },
+    {
+      "offset": "0x455CC",
+      "source": "brief_wrap_thresholds",
+      "old": "0x284100A1",
+      "ge_stock": "0x284100A1",
+      "new": "0x284100CC",
+      "changed": true,
+      "note": "GE480i briefing/objective coordinate delta"
+    },
+    {
+      "offset": "0x455D8",
+      "source": "brief_wrap_thresholds",
+      "old": "0x284100A1",
+      "ge_stock": "0x284100A1",
+      "new": "0x284100CC",
+      "changed": true,
+      "note": "GE480i briefing/objective coordinate delta"
+    },
+    {
+      "offset": "0x455F4",
+      "source": "brief_wrap_thresholds",
+      "old": "0x2841008D",
+      "ge_stock": "0x2841008D",
+      "new": "0x284100B8",
+      "changed": true,
+      "note": "GE480i briefing/objective coordinate delta"
+    },
+    {
+      "offset": "0x45600",
+      "source": "brief_wrap_thresholds",
+      "old": "0x2841008D",
+      "ge_stock": "0x2841008D",
+      "new": "0x284100B8",
+      "changed": true,
+      "note": "GE480i briefing/objective coordinate delta"
+    },
+    {
+      "offset": "0x4A62C",
+      "source": "briefing_menu0A",
+      "old": "0x240D0037",
+      "ge_stock": "0x240D0037",
+      "new": "0x240D0050",
+      "changed": true,
+      "note": "GE480i briefing/objective coordinate delta"
+    },
+    {
+      "offset": "0x4A6A8",
+      "source": "briefing_menu0A",
+      "old": "0x240F004B",
+      "ge_stock": "0x240F004B",
+      "new": "0x240F0064",
+      "changed": true,
+      "note": "GE480i briefing/objective coordinate delta"
+    },
+    {
+      "offset": "0x4A7D4",
+      "source": "briefing_menu0A",
+      "old": "0x240D0136",
+      "ge_stock": "0x240D0136",
+      "new": "0x240D014F",
+      "changed": true,
+      "note": "GE480i briefing/objective coordinate delta"
+    },
+    {
+      "offset": "0x4A990",
+      "source": "briefing_menu0A",
+      "old": "0x240A0037",
+      "ge_stock": "0x240A0037",
+      "new": "0x240A0050",
+      "changed": true,
+      "note": "GE480i briefing/objective coordinate delta"
+    },
+    {
+      "offset": "0x4A994",
+      "source": "briefing_menu0A",
+      "old": "0x240B008F",
+      "ge_stock": "0x240B008F",
+      "new": "0x240B00DB",
+      "changed": true,
+      "note": "GE480i briefing/objective coordinate delta"
+    },
+    {
+      "offset": "0x4AA0C",
+      "source": "briefing_menu0A",
+      "old": "0x240500A7",
+      "ge_stock": "0x240500A7",
+      "new": "0x240500F3",
+      "changed": true,
+      "note": "GE480i briefing/objective coordinate delta"
+    },
+    {
+      "offset": "0x4AAAC",
+      "source": "briefing_menu0A",
+      "old": "0x240A0037",
+      "ge_stock": "0x240A0037",
+      "new": "0x240A0050",
+      "changed": true,
+      "note": "GE480i briefing/objective coordinate delta"
+    },
+    {
+      "offset": "0x4AAB0",
+      "source": "briefing_menu0A",
+      "old": "0x240B00A7",
+      "ge_stock": "0x240B00A7",
+      "new": "0x240B00F3",
+      "changed": true,
+      "note": "GE480i briefing/objective coordinate delta"
+    },
+    {
+      "offset": "0x4AAC4",
+      "source": "briefing_menu0A",
+      "old": "0x24040140",
+      "ge_stock": "0x24040140",
+      "new": "0x240401D1",
+      "changed": true,
+      "note": "GE480i briefing/objective coordinate delta"
+    },
+    {
+      "offset": "0x4AF68",
+      "source": "briefing_menu0A",
+      "old": "0x240E0037",
+      "ge_stock": "0x240E0037",
+      "new": "0x240E0050",
+      "changed": true,
+      "note": "GE480i briefing/objective coordinate delta"
+    },
+    {
+      "offset": "0x4AF6C",
+      "source": "briefing_menu0A",
+      "old": "0x240F008F",
+      "ge_stock": "0x240F008F",
+      "new": "0x240F00DB",
+      "changed": true,
+      "note": "GE480i briefing/objective coordinate delta"
+    },
+    {
+      "offset": "0x4B010",
+      "source": "briefing_menu0A",
+      "old": "0x240B0037",
+      "ge_stock": "0x240B0037",
+      "new": "0x240B0050",
+      "changed": true,
+      "note": "GE480i briefing/objective coordinate delta"
+    },
+    {
+      "offset": "0x4B014",
+      "source": "briefing_menu0A",
+      "old": "0x240C00A7",
+      "ge_stock": "0x240C00A7",
+      "new": "0x240C00F3",
+      "changed": true,
+      "note": "GE480i briefing/objective coordinate delta"
+    },
+    {
+      "offset": "0x4B104",
+      "source": "briefing_menu0A",
+      "old": "0x240B00A7",
+      "ge_stock": "0x240B00A7",
+      "new": "0x240B00F3",
+      "changed": true,
+      "note": "GE480i briefing/objective coordinate delta"
+    },
+    {
+      "offset": "0x4B10C",
+      "source": "briefing_menu0A",
+      "old": "0x252A0037",
+      "ge_stock": "0x252A0037",
+      "new": "0x252A0050",
+      "changed": true,
+      "note": "GE480i briefing/objective coordinate delta"
+    },
+    {
+      "offset": "0x4B170",
+      "source": "briefing_menu0A",
+      "old": "0x240500BF",
+      "ge_stock": "0x240500BF",
+      "new": "0x2405010B",
+      "changed": true,
+      "note": "GE480i briefing/objective coordinate delta"
+    },
+    {
+      "offset": "0x4B624",
+      "source": "briefing_menu0A",
+      "old": "0x240F0037",
+      "ge_stock": "0x240F0037",
+      "new": "0x240F0050",
+      "changed": true,
+      "note": "GE480i briefing/objective coordinate delta"
+    },
+    {
+      "offset": "0x4B628",
+      "source": "briefing_menu0A",
+      "old": "0x2418008F",
+      "ge_stock": "0x2418008F",
+      "new": "0x241800DB",
+      "changed": true,
+      "note": "GE480i briefing/objective coordinate delta"
+    },
+    {
+      "offset": "0x4B6CC",
+      "source": "briefing_menu0A",
+      "old": "0x240E0037",
+      "ge_stock": "0x240E0037",
+      "new": "0x240E0050",
+      "changed": true,
+      "note": "GE480i briefing/objective coordinate delta"
+    },
+    {
+      "offset": "0x4B6D0",
+      "source": "briefing_menu0A",
+      "old": "0x240F00A7",
+      "ge_stock": "0x240F00A7",
+      "new": "0x240F00F3",
+      "changed": true,
+      "note": "GE480i briefing/objective coordinate delta"
+    },
+    {
+      "offset": "0x4B870",
+      "source": "briefing_menu0A",
+      "old": "0x24180082",
+      "ge_stock": "0x24180082",
+      "new": "0x2418009B",
+      "changed": true,
+      "note": "GE480i briefing/objective coordinate delta"
+    },
+    {
+      "offset": "0x4B874",
+      "source": "briefing_menu0A",
+      "old": "0x241900A7",
+      "ge_stock": "0x241900A7",
+      "new": "0x241900F3",
+      "changed": true,
+      "note": "GE480i briefing/objective coordinate delta"
+    },
+    {
+      "offset": "0x4B998",
+      "source": "briefing_menu0A",
+      "old": "0x240D0037",
+      "ge_stock": "0x240D0037",
+      "new": "0x240D0050",
+      "changed": true,
+      "note": "GE480i briefing/objective coordinate delta"
+    },
+    {
+      "offset": "0x4B9A0",
+      "source": "briefing_menu0A",
+      "old": "0x25CF00A9",
+      "ge_stock": "0x25CF00A9",
+      "new": "0x25CF00F5",
+      "changed": true,
+      "note": "GE480i briefing/objective coordinate delta"
+    },
+    {
+      "offset": "0x4BA5C",
+      "source": "briefing_menu0A",
+      "old": "0x240D0082",
+      "ge_stock": "0x240D0082",
+      "new": "0x240D009B",
+      "changed": true,
+      "note": "GE480i briefing/objective coordinate delta"
+    },
+    {
+      "offset": "0x4BA64",
+      "source": "briefing_menu0A",
+      "old": "0x25CF00A9",
+      "ge_stock": "0x25CF00A9",
+      "new": "0x25CF00F5",
+      "changed": true,
+      "note": "GE480i briefing/objective coordinate delta"
+    },
+    {
+      "offset": "0x4BBDC",
+      "source": "briefing_menu0A",
+      "old": "0x24190037",
+      "ge_stock": "0x24190037",
+      "new": "0x24190050",
+      "changed": true,
+      "note": "GE480i briefing/objective coordinate delta"
+    },
+    {
+      "offset": "0x4BBE4",
+      "source": "briefing_menu0A",
+      "old": "0x254B00A9",
+      "ge_stock": "0x254B00A9",
+      "new": "0x254B00F5",
+      "changed": true,
+      "note": "GE480i briefing/objective coordinate delta"
+    },
+    {
+      "offset": "0x4BC78",
+      "source": "briefing_menu0A",
+      "old": "0x24190082",
+      "ge_stock": "0x24190082",
+      "new": "0x2419009B",
+      "changed": true,
+      "note": "GE480i briefing/objective coordinate delta"
+    },
+    {
+      "offset": "0x4BC80",
+      "source": "briefing_menu0A",
+      "old": "0x254B00A9",
+      "ge_stock": "0x254B00A9",
+      "new": "0x254B00F5",
+      "changed": true,
+      "note": "GE480i briefing/objective coordinate delta"
+    },
+    {
+      "offset": "0x4BCEC",
+      "source": "briefing_menu0A",
+      "old": "0x24180037",
+      "ge_stock": "0x24180037",
+      "new": "0x24180050",
+      "changed": true,
+      "note": "GE480i briefing/objective coordinate delta"
+    },
+    {
+      "offset": "0x4BCF0",
+      "source": "briefing_menu0A",
+      "old": "0x241900CC",
+      "ge_stock": "0x241900CC",
+      "new": "0x24190118",
+      "changed": true,
+      "note": "GE480i briefing/objective coordinate delta"
+    },
+    {
+      "offset": "0x4BDB4",
+      "source": "briefing_menu0A",
+      "old": "0x240F0082",
+      "ge_stock": "0x240F0082",
+      "new": "0x240F009B",
+      "changed": true,
+      "note": "GE480i briefing/objective coordinate delta"
+    },
+    {
+      "offset": "0x4BDB8",
+      "source": "briefing_menu0A",
+      "old": "0x241800CC",
+      "ge_stock": "0x241800CC",
+      "new": "0x24180118",
+      "changed": true,
+      "note": "GE480i briefing/objective coordinate delta"
+    },
+    {
+      "offset": "0x4BE28",
+      "source": "briefing_menu0A",
+      "old": "0x240D0037",
+      "ge_stock": "0x240D0037",
+      "new": "0x240D0050",
+      "changed": true,
+      "note": "GE480i briefing/objective coordinate delta"
+    },
+    {
+      "offset": "0x4BE2C",
+      "source": "briefing_menu0A",
+      "old": "0x240E00DC",
+      "ge_stock": "0x240E00DC",
+      "new": "0x240E0128",
+      "changed": true,
+      "note": "GE480i briefing/objective coordinate delta"
+    },
+    {
+      "offset": "0x4BEC0",
+      "source": "briefing_menu0A",
+      "old": "0x240E00BE",
+      "ge_stock": "0x240E00BE",
+      "new": "0x240E00D7",
+      "changed": true,
+      "note": "GE480i briefing/objective coordinate delta"
+    },
+    {
+      "offset": "0x4BECC",
+      "source": "briefing_menu0A",
+      "old": "0x240E00BE",
+      "ge_stock": "0x240E00BE",
+      "new": "0x240E00D7",
+      "changed": true,
+      "note": "GE480i briefing/objective coordinate delta"
+    },
+    {
+      "offset": "0x4BEF0",
+      "source": "briefing_menu0A",
+      "old": "0x240E00BE",
+      "ge_stock": "0x240E00BE",
+      "new": "0x240E00D7",
+      "changed": true,
+      "note": "GE480i briefing/objective coordinate delta"
+    },
+    {
+      "offset": "0x4BEF4",
+      "source": "briefing_menu0A",
+      "old": "0x240F00DC",
+      "ge_stock": "0x240F00DC",
+      "new": "0x240F0128",
+      "changed": true,
+      "note": "GE480i briefing/objective coordinate delta"
+    },
+    {
+      "offset": "0x4BF64",
+      "source": "briefing_menu0A",
+      "old": "0x240C0037",
+      "ge_stock": "0x240C0037",
+      "new": "0x240C0050",
+      "changed": true,
+      "note": "GE480i briefing/objective coordinate delta"
+    },
+    {
+      "offset": "0x4BF68",
+      "source": "briefing_menu0A",
+      "old": "0x240D00F4",
+      "ge_stock": "0x240D00F4",
+      "new": "0x240D0140",
+      "changed": true,
+      "note": "GE480i briefing/objective coordinate delta"
+    },
+    {
+      "offset": "0x4BFE8",
+      "source": "briefing_menu0A",
+      "old": "0x240A0082",
+      "ge_stock": "0x240A0082",
+      "new": "0x240A009B",
+      "changed": true,
+      "note": "GE480i briefing/objective coordinate delta"
+    },
+    {
+      "offset": "0x4BFEC",
+      "source": "briefing_menu0A",
+      "old": "0x240B00F4",
+      "ge_stock": "0x240B00F4",
+      "new": "0x240B0140",
+      "changed": true,
+      "note": "GE480i briefing/objective coordinate delta"
+    },
+    {
+      "offset": "0x4C05C",
+      "source": "briefing_menu0A",
+      "old": "0x241800B4",
+      "ge_stock": "0x241800B4",
+      "new": "0x241800CD",
+      "changed": true,
+      "note": "GE480i briefing/objective coordinate delta"
+    },
+    {
+      "offset": "0x4C060",
+      "source": "briefing_menu0A",
+      "old": "0x241900F4",
+      "ge_stock": "0x241900F4",
+      "new": "0x24190140",
+      "changed": true,
+      "note": "GE480i briefing/objective coordinate delta"
+    },
+    {
+      "offset": "0x4C124",
+      "source": "briefing_menu0A",
+      "old": "0x2419012C",
+      "ge_stock": "0x2419012C",
+      "new": "0x24190145",
+      "changed": true,
+      "note": "GE480i briefing/objective coordinate delta"
+    },
+    {
+      "offset": "0x4C128",
+      "source": "briefing_menu0A",
+      "old": "0x240A00F4",
+      "ge_stock": "0x240A00F4",
+      "new": "0x240A0140",
+      "changed": true,
+      "note": "GE480i briefing/objective coordinate delta"
+    },
+    {
+      "offset": "0x4C19C",
+      "source": "briefing_menu0A",
+      "old": "0x240F00B4",
+      "ge_stock": "0x240F00B4",
+      "new": "0x240F00CD",
+      "changed": true,
+      "note": "GE480i briefing/objective coordinate delta"
+    },
+    {
+      "offset": "0x4C1A4",
+      "source": "briefing_menu0A",
+      "old": "0x271900F4",
+      "ge_stock": "0x271900F4",
+      "new": "0x27190140",
+      "changed": true,
+      "note": "GE480i briefing/objective coordinate delta"
+    },
+    {
+      "offset": "0x4C25C",
+      "source": "briefing_menu0A",
+      "old": "0x2418012C",
+      "ge_stock": "0x2418012C",
+      "new": "0x24180145",
+      "changed": true,
+      "note": "GE480i briefing/objective coordinate delta"
+    },
+    {
+      "offset": "0x4C264",
+      "source": "briefing_menu0A",
+      "old": "0x272A00F4",
+      "ge_stock": "0x272A00F4",
+      "new": "0x272A0140",
+      "changed": true,
+      "note": "GE480i briefing/objective coordinate delta"
+    },
+    {
+      "offset": "0x4C2D4",
+      "source": "briefing_menu0A",
+      "old": "0x240F00B4",
+      "ge_stock": "0x240F00B4",
+      "new": "0x240F00CD",
+      "changed": true,
+      "note": "GE480i briefing/objective coordinate delta"
+    },
+    {
+      "offset": "0x4C2E0",
+      "source": "briefing_menu0A",
+      "old": "0x272A00F4",
+      "ge_stock": "0x272A00F4",
+      "new": "0x272A0140",
+      "changed": true,
+      "note": "GE480i briefing/objective coordinate delta"
+    },
+    {
+      "offset": "0x4C398",
+      "source": "briefing_menu0A",
+      "old": "0x2419012C",
+      "ge_stock": "0x2419012C",
+      "new": "0x24190145",
+      "changed": true,
+      "note": "GE480i briefing/objective coordinate delta"
+    },
+    {
+      "offset": "0x4C3A4",
+      "source": "briefing_menu0A",
+      "old": "0x256C00F4",
+      "ge_stock": "0x256C00F4",
+      "new": "0x256C0140",
+      "changed": true,
+      "note": "GE480i briefing/objective coordinate delta"
+    },
+    {
+      "offset": "0x4C414",
+      "source": "briefing_menu0A",
+      "old": "0x241900B4",
+      "ge_stock": "0x241900B4",
+      "new": "0x241900CD",
+      "changed": true,
+      "note": "GE480i briefing/objective coordinate delta"
+    },
+    {
+      "offset": "0x4C424",
+      "source": "briefing_menu0A",
+      "old": "0x256C00F4",
+      "ge_stock": "0x256C00F4",
+      "new": "0x256C0140",
+      "changed": true,
+      "note": "GE480i briefing/objective coordinate delta"
+    },
+    {
+      "offset": "0x4C4E4",
+      "source": "briefing_menu0A",
+      "old": "0x240C012C",
+      "ge_stock": "0x240C012C",
+      "new": "0x240C0145",
+      "changed": true,
+      "note": "GE480i briefing/objective coordinate delta"
+    },
+    {
+      "offset": "0x4C4F4",
+      "source": "briefing_menu0A",
+      "old": "0x25CF00F4",
+      "ge_stock": "0x25CF00F4",
+      "new": "0x25CF0140",
+      "changed": true,
+      "note": "GE480i briefing/objective coordinate delta"
+    }
+  ],
+  "skipped": [],
+  "changed_patch_count": 76,
+  "skipped_count": 0,
+  "save_outputs": [
+    {
+      "source": "artifacts\\generated\\g1hct2.sav",
+      "target": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1hbrf1.sav",
+      "bytes": 512,
+      "md5": "79ed3fe6851b080ff21de69fd12f034d"
+    },
+    {
+      "source": "artifacts\\generated\\g1hct2.eep",
+      "target": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1hbrf1.eep",
+      "bytes": 2048,
+      "md5": "e47f5c07623838e875761a0493388e03"
+    }
+  ],
+  "bps": {
+    "patch": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\TND6480i_g1hbrf1_from_baseline_tnd.bps",
+    "manifest": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\reports\\tnd6480i_g1hbrf1_bps_manifest.json"
+  },
+  "do_not_promote_until_hardware_compared": true
+}

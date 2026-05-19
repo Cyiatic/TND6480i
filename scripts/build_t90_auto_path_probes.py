@@ -25,11 +25,29 @@ PATCH_LIBRARY = {
         0x00000000,
         "Force mission-select accept path by removing the branch that skips MENU_DIFFICULTY.",
     ),
+    "mission_select_force_button_accept": (
+        0x42D98,
+        0x1040002A,
+        0x00000000,
+        "Force the mission-select A/Start/Z accept block so briefingpage and selected_stage are initialized.",
+    ),
     "difficulty_accept": (
         0x43554,
         0x11600012,
         0x00000000,
         "Force difficulty accept path by removing the branch that skips MENU_BRIEFING.",
+    ),
+    "difficulty_force_button_accept": (
+        0x43518,
+        0x10400008,
+        0x00000000,
+        "Force the difficulty A/Start/Z accept block before the page-transition branch.",
+    ),
+    "difficulty_route_007_to_briefing": (
+        0x43560,
+        0x24010003,
+        0x24010004,
+        "Diagnostic-only route patch: with an all-missions save, do not treat the default 007 row as MENU_007_OPTIONS; let it fall through to MENU_BRIEFING.",
     ),
 }
 
@@ -43,6 +61,36 @@ PROBES = [
         "name": "t90path0a",
         "purpose": "No-input probe: title/logo -> mission select -> forced accept -> difficulty -> forced accept -> briefing.",
         "patches": ["timeout_to_mission_select", "mission_select_accept", "difficulty_accept"],
+    },
+    {
+        "name": "t90btn08",
+        "purpose": "No-input probe: title/logo -> mission select -> forced mission accept block -> difficulty.",
+        "patches": ["timeout_to_mission_select", "mission_select_force_button_accept"],
+    },
+    {
+        "name": "t90btn0a",
+        "purpose": "No-input probe: title/logo -> mission select -> forced mission accept block -> difficulty -> forced difficulty accept block -> briefing.",
+        "patches": ["timeout_to_mission_select", "mission_select_force_button_accept", "difficulty_force_button_accept"],
+    },
+    {
+        "name": "t90btn0b",
+        "purpose": "No-input diagnostic: force mission and difficulty accept, then route the all-missions-save default 007 row to briefing instead of 007 options.",
+        "patches": [
+            "timeout_to_mission_select",
+            "mission_select_force_button_accept",
+            "difficulty_force_button_accept",
+            "difficulty_route_007_to_briefing",
+        ],
+    },
+    {
+        "name": "t90btn0c",
+        "purpose": "No-input diagnostic: force mission-state setup, then force the difficulty page-transition branch to briefing without depending on difficulty cursor hit testing.",
+        "patches": [
+            "timeout_to_mission_select",
+            "mission_select_force_button_accept",
+            "difficulty_accept",
+            "difficulty_route_007_to_briefing",
+        ],
     },
 ]
 

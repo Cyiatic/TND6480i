@@ -1,0 +1,345 @@
+{
+  "video": "diagnostics\\captures\\videos\\g1hbrf1_final_loaded_hardware_cycled_20260519.mp4",
+  "sheet": "diagnostics\\captures\\contact_sheets\\g1hbrf1_final_loaded_hardware_cycled_20260519.jpg",
+  "start": 0.0,
+  "end": 108.0,
+  "step": 4.0,
+  "frames": [
+    {
+      "index": 0,
+      "seconds": 0.0,
+      "timestamp": "00:00",
+      "path": "diagnostics\\captures\\contact_sheets\\g1hbrf1_final_loaded_hardware_cycled_20260519\\frames\\frame_0000_00000000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "00:00"
+    },
+    {
+      "index": 1,
+      "seconds": 4.0,
+      "timestamp": "00:04",
+      "path": "diagnostics\\captures\\contact_sheets\\g1hbrf1_final_loaded_hardware_cycled_20260519\\frames\\frame_0001_00004000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "00:04"
+    },
+    {
+      "index": 2,
+      "seconds": 8.0,
+      "timestamp": "00:08",
+      "path": "diagnostics\\captures\\contact_sheets\\g1hbrf1_final_loaded_hardware_cycled_20260519\\frames\\frame_0002_00008000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "00:08"
+    },
+    {
+      "index": 3,
+      "seconds": 12.0,
+      "timestamp": "00:12",
+      "path": "diagnostics\\captures\\contact_sheets\\g1hbrf1_final_loaded_hardware_cycled_20260519\\frames\\frame_0003_00012000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "00:12"
+    },
+    {
+      "index": 4,
+      "seconds": 16.0,
+      "timestamp": "00:16",
+      "path": "diagnostics\\captures\\contact_sheets\\g1hbrf1_final_loaded_hardware_cycled_20260519\\frames\\frame_0004_00016000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "00:16"
+    },
+    {
+      "index": 5,
+      "seconds": 20.0,
+      "timestamp": "00:20",
+      "path": "diagnostics\\captures\\contact_sheets\\g1hbrf1_final_loaded_hardware_cycled_20260519\\frames\\frame_0005_00020000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "00:20"
+    },
+    {
+      "index": 6,
+      "seconds": 24.0,
+      "timestamp": "00:24",
+      "path": "diagnostics\\captures\\contact_sheets\\g1hbrf1_final_loaded_hardware_cycled_20260519\\frames\\frame_0006_00024000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "00:24"
+    },
+    {
+      "index": 7,
+      "seconds": 28.0,
+      "timestamp": "00:28",
+      "path": "diagnostics\\captures\\contact_sheets\\g1hbrf1_final_loaded_hardware_cycled_20260519\\frames\\frame_0007_00028000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "00:28"
+    },
+    {
+      "index": 8,
+      "seconds": 32.0,
+      "timestamp": "00:32",
+      "path": "diagnostics\\captures\\contact_sheets\\g1hbrf1_final_loaded_hardware_cycled_20260519\\frames\\frame_0008_00032000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "00:32"
+    },
+    {
+      "index": 9,
+      "seconds": 36.0,
+      "timestamp": "00:36",
+      "path": "diagnostics\\captures\\contact_sheets\\g1hbrf1_final_loaded_hardware_cycled_20260519\\frames\\frame_0009_00036000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "00:36"
+    },
+    {
+      "index": 10,
+      "seconds": 40.0,
+      "timestamp": "00:40",
+      "path": "diagnostics\\captures\\contact_sheets\\g1hbrf1_final_loaded_hardware_cycled_20260519\\frames\\frame_0010_00040000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "00:40"
+    },
+    {
+      "index": 11,
+      "seconds": 44.0,
+      "timestamp": "00:44",
+      "path": "diagnostics\\captures\\contact_sheets\\g1hbrf1_final_loaded_hardware_cycled_20260519\\frames\\frame_0011_00044000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "00:44"
+    },
+    {
+      "index": 12,
+      "seconds": 48.0,
+      "timestamp": "00:48",
+      "path": "diagnostics\\captures\\contact_sheets\\g1hbrf1_final_loaded_hardware_cycled_20260519\\frames\\frame_0012_00048000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "00:48"
+    },
+    {
+      "index": 13,
+      "seconds": 52.0,
+      "timestamp": "00:52",
+      "path": "diagnostics\\captures\\contact_sheets\\g1hbrf1_final_loaded_hardware_cycled_20260519\\frames\\frame_0013_00052000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "00:52"
+    },
+    {
+      "index": 14,
+      "seconds": 56.0,
+      "timestamp": "00:56",
+      "path": "diagnostics\\captures\\contact_sheets\\g1hbrf1_final_loaded_hardware_cycled_20260519\\frames\\frame_0014_00056000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "00:56"
+    },
+    {
+      "index": 15,
+      "seconds": 60.0,
+      "timestamp": "01:00",
+      "path": "diagnostics\\captures\\contact_sheets\\g1hbrf1_final_loaded_hardware_cycled_20260519\\frames\\frame_0015_00060000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "01:00"
+    },
+    {
+      "index": 16,
+      "seconds": 64.0,
+      "timestamp": "01:04",
+      "path": "diagnostics\\captures\\contact_sheets\\g1hbrf1_final_loaded_hardware_cycled_20260519\\frames\\frame_0016_00064000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "01:04"
+    },
+    {
+      "index": 17,
+      "seconds": 68.0,
+      "timestamp": "01:08",
+      "path": "diagnostics\\captures\\contact_sheets\\g1hbrf1_final_loaded_hardware_cycled_20260519\\frames\\frame_0017_00068000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "01:08"
+    },
+    {
+      "index": 18,
+      "seconds": 72.0,
+      "timestamp": "01:12",
+      "path": "diagnostics\\captures\\contact_sheets\\g1hbrf1_final_loaded_hardware_cycled_20260519\\frames\\frame_0018_00072000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "01:12"
+    },
+    {
+      "index": 19,
+      "seconds": 76.0,
+      "timestamp": "01:16",
+      "path": "diagnostics\\captures\\contact_sheets\\g1hbrf1_final_loaded_hardware_cycled_20260519\\frames\\frame_0019_00076000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "01:16"
+    },
+    {
+      "index": 20,
+      "seconds": 80.0,
+      "timestamp": "01:20",
+      "path": "diagnostics\\captures\\contact_sheets\\g1hbrf1_final_loaded_hardware_cycled_20260519\\frames\\frame_0020_00080000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "01:20"
+    },
+    {
+      "index": 21,
+      "seconds": 84.0,
+      "timestamp": "01:24",
+      "path": "diagnostics\\captures\\contact_sheets\\g1hbrf1_final_loaded_hardware_cycled_20260519\\frames\\frame_0021_00084000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "01:24"
+    },
+    {
+      "index": 22,
+      "seconds": 88.0,
+      "timestamp": "01:28",
+      "path": "diagnostics\\captures\\contact_sheets\\g1hbrf1_final_loaded_hardware_cycled_20260519\\frames\\frame_0022_00088000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "01:28"
+    },
+    {
+      "index": 23,
+      "seconds": 92.0,
+      "timestamp": "01:32",
+      "path": "diagnostics\\captures\\contact_sheets\\g1hbrf1_final_loaded_hardware_cycled_20260519\\frames\\frame_0023_00092000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "01:32"
+    },
+    {
+      "index": 24,
+      "seconds": 96.0,
+      "timestamp": "01:36",
+      "path": "diagnostics\\captures\\contact_sheets\\g1hbrf1_final_loaded_hardware_cycled_20260519\\frames\\frame_0024_00096000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "01:36"
+    },
+    {
+      "index": 25,
+      "seconds": 100.0,
+      "timestamp": "01:40",
+      "path": "diagnostics\\captures\\contact_sheets\\g1hbrf1_final_loaded_hardware_cycled_20260519\\frames\\frame_0025_00100000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "01:40"
+    },
+    {
+      "index": 26,
+      "seconds": 104.0,
+      "timestamp": "01:44",
+      "path": "diagnostics\\captures\\contact_sheets\\g1hbrf1_final_loaded_hardware_cycled_20260519\\frames\\frame_0026_00104000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "01:44"
+    },
+    {
+      "index": 27,
+      "seconds": 108.0,
+      "timestamp": "01:48",
+      "path": "diagnostics\\captures\\contact_sheets\\g1hbrf1_final_loaded_hardware_cycled_20260519\\frames\\frame_0027_00108000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "01:48"
+    }
+  ]
+}

@@ -1,0 +1,119 @@
+{
+  "base_rom": "artifacts\\generated\\brfbtn0c.z64",
+  "base_md5": "fac12a299c498d3bb3cf6b23bd79575f",
+  "purpose": "Diagnostic-only briefing page route probes built on brfbtn0c by changing init_menu0A set_briefing_page argument.",
+  "routes": [
+    {
+      "name": "brfbtn0cpg1",
+      "page": 1,
+      "label": "background",
+      "out_rom": "artifacts\\generated\\brfbtn0cpg1.z64",
+      "out_md5": "c0843085d2c50eb38cbb8fe7923f87c0",
+      "header_crc": "25AB895A 4931F53F",
+      "patch": {
+        "offset": "0x4A14C",
+        "old": "0x00002025",
+        "new": "0x24040001",
+        "note": "diagnostic briefing page argument for init_menu0A_briefing"
+      },
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\brfbtn0c.sav",
+          "target": "artifacts\\generated\\brfbtn0cpg1.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\brfbtn0c.eep",
+          "target": "artifacts\\generated\\brfbtn0cpg1.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ]
+    },
+    {
+      "name": "brfbtn0cpg2",
+      "page": 2,
+      "label": "m",
+      "out_rom": "artifacts\\generated\\brfbtn0cpg2.z64",
+      "out_md5": "e49a2a2ea8681492bd2683875f2733d8",
+      "header_crc": "25AB8958 105544A6",
+      "patch": {
+        "offset": "0x4A14C",
+        "old": "0x00002025",
+        "new": "0x24040002",
+        "note": "diagnostic briefing page argument for init_menu0A_briefing"
+      },
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\brfbtn0c.sav",
+          "target": "artifacts\\generated\\brfbtn0cpg2.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\brfbtn0c.eep",
+          "target": "artifacts\\generated\\brfbtn0cpg2.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ]
+    },
+    {
+      "name": "brfbtn0cpg3",
+      "page": 3,
+      "label": "q",
+      "out_rom": "artifacts\\generated\\brfbtn0cpg3.z64",
+      "out_md5": "3485ec445207f118e388c5d8bd8b3aa6",
+      "header_crc": "25AB895E 06A67AA8",
+      "patch": {
+        "offset": "0x4A14C",
+        "old": "0x00002025",
+        "new": "0x24040003",
+        "note": "diagnostic briefing page argument for init_menu0A_briefing"
+      },
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\brfbtn0c.sav",
+          "target": "artifacts\\generated\\brfbtn0cpg3.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\brfbtn0c.eep",
+          "target": "artifacts\\generated\\brfbtn0cpg3.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ]
+    },
+    {
+      "name": "brfbtn0cpg4",
+      "page": 4,
+      "label": "moneypenny",
+      "out_rom": "artifacts\\generated\\brfbtn0cpg4.z64",
+      "out_md5": "15e099f85c6c43b614c75fe6e242f60b",
+      "header_crc": "25AB8958 DE5DD3D0",
+      "patch": {
+        "offset": "0x4A14C",
+        "old": "0x00002025",
+        "new": "0x24040004",
+        "note": "diagnostic briefing page argument for init_menu0A_briefing"
+      },
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\brfbtn0c.sav",
+          "target": "artifacts\\generated\\brfbtn0cpg4.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\brfbtn0c.eep",
+          "target": "artifacts\\generated\\brfbtn0cpg4.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ]
+    }
+  ]
+}

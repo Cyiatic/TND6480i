@@ -1,0 +1,81 @@
+{
+  "video": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\diagnostics\\captures\\videos\\brfauto06_hardware_cycled_20260519.mp4",
+  "sheet": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\diagnostics\\captures\\contact_sheets\\brfauto06_hardware_cycled_20260519.jpg",
+  "start": 55.0,
+  "end": 70.0,
+  "step": 3.0,
+  "frames": [
+    {
+      "index": 0,
+      "seconds": 55.0,
+      "timestamp": "00:55",
+      "path": "diagnostics\\captures\\contact_sheets\\brfauto06_hardware_cycled_20260519\\frames\\frame_0000_00055000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "00:55"
+    },
+    {
+      "index": 1,
+      "seconds": 58.0,
+      "timestamp": "00:58",
+      "path": "diagnostics\\captures\\contact_sheets\\brfauto06_hardware_cycled_20260519\\frames\\frame_0001_00058000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "00:58"
+    },
+    {
+      "index": 2,
+      "seconds": 61.0,
+      "timestamp": "01:01",
+      "path": "diagnostics\\captures\\contact_sheets\\brfauto06_hardware_cycled_20260519\\frames\\frame_0002_00061000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "01:01"
+    },
+    {
+      "index": 3,
+      "seconds": 64.0,
+      "timestamp": "01:04",
+      "path": "diagnostics\\captures\\contact_sheets\\brfauto06_hardware_cycled_20260519\\frames\\frame_0003_00064000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "01:04"
+    },
+    {
+      "index": 4,
+      "seconds": 67.0,
+      "timestamp": "01:07",
+      "path": "diagnostics\\captures\\contact_sheets\\brfauto06_hardware_cycled_20260519\\frames\\frame_0004_00067000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "01:07"
+    },
+    {
+      "index": 5,
+      "seconds": 70.0,
+      "timestamp": "01:10",
+      "path": "diagnostics\\captures\\contact_sheets\\brfauto06_hardware_cycled_20260519\\frames\\frame_0005_00070000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "01:10"
+    }
+  ]
+}

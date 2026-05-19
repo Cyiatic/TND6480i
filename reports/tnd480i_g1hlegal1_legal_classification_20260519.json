@@ -1,0 +1,384 @@
+{
+  "base_rom": "artifacts\\generated\\g1hbrf1.z64",
+  "ge480i_rom": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\roms\\BASELINE_GE_480i_direct_from_stock.z64",
+  "out_rom": "artifacts\\generated\\g1hlegal1.z64",
+  "out_md5": "981674c6ee635b828d7efd49547c523f",
+  "out_sha256": "f6fad336bf624525ae0843987ed5bf4cb39890fa5f490cbfb4fc7ff7af295723",
+  "header_crc": "EA6B96D1 30F36C4A",
+  "purpose": "Patch only the legal/classification page table at raw 0x9C3C to GE480i geometry/alignment while preserving TND text IDs.",
+  "raw_offset": "0x9C3C",
+  "records": 12,
+  "slot_len": "0x100B4",
+  "allowed_packed_len": "0x103CC",
+  "zero_pad_growth": "0x318",
+  "packed_len": "0x10080",
+  "verify_consumed": "0x1007A",
+  "base_raw_md5": "1fc4c52315a82b40633fc8bde9e2fe61",
+  "patched_raw_md5": "1fc4c52315a82b40633fc8bde9e2fe61",
+  "rows": [
+    {
+      "idx": 0,
+      "raw_offset": "0x9C3C",
+      "old": {
+        "h_pos": 320,
+        "v_pos": 60,
+        "halign": 1,
+        "valign": 1,
+        "txtID": 39943,
+        "anonymous_5": 0
+      },
+      "ge480i": {
+        "h_pos": 320,
+        "v_pos": 60,
+        "halign": 1,
+        "valign": 1,
+        "txtID": 39943,
+        "anonymous_5": 0
+      },
+      "new": {
+        "h_pos": 320,
+        "v_pos": 60,
+        "halign": 1,
+        "valign": 1,
+        "txtID": 39943,
+        "anonymous_5": 0
+      },
+      "text_id_preserved": true
+    },
+    {
+      "idx": 1,
+      "raw_offset": "0x9C50",
+      "old": {
+        "h_pos": 50,
+        "v_pos": 126,
+        "halign": 0,
+        "valign": 1,
+        "txtID": 39944,
+        "anonymous_5": 0
+      },
+      "ge480i": {
+        "h_pos": 50,
+        "v_pos": 126,
+        "halign": 0,
+        "valign": 1,
+        "txtID": 39944,
+        "anonymous_5": 0
+      },
+      "new": {
+        "h_pos": 50,
+        "v_pos": 126,
+        "halign": 0,
+        "valign": 1,
+        "txtID": 39944,
+        "anonymous_5": 0
+      },
+      "text_id_preserved": true
+    },
+    {
+      "idx": 2,
+      "raw_offset": "0x9C64",
+      "old": {
+        "h_pos": 393,
+        "v_pos": 126,
+        "halign": 0,
+        "valign": 1,
+        "txtID": 39945,
+        "anonymous_5": 0
+      },
+      "ge480i": {
+        "h_pos": 393,
+        "v_pos": 126,
+        "halign": 0,
+        "valign": 1,
+        "txtID": 39945,
+        "anonymous_5": 0
+      },
+      "new": {
+        "h_pos": 393,
+        "v_pos": 126,
+        "halign": 0,
+        "valign": 1,
+        "txtID": 39945,
+        "anonymous_5": 0
+      },
+      "text_id_preserved": true
+    },
+    {
+      "idx": 3,
+      "raw_offset": "0x9C78",
+      "old": {
+        "h_pos": 393,
+        "v_pos": 141,
+        "halign": 0,
+        "valign": 1,
+        "txtID": 39946,
+        "anonymous_5": 0
+      },
+      "ge480i": {
+        "h_pos": 393,
+        "v_pos": 141,
+        "halign": 0,
+        "valign": 1,
+        "txtID": 39946,
+        "anonymous_5": 0
+      },
+      "new": {
+        "h_pos": 393,
+        "v_pos": 141,
+        "halign": 0,
+        "valign": 1,
+        "txtID": 39946,
+        "anonymous_5": 0
+      },
+      "text_id_preserved": true
+    },
+    {
+      "idx": 4,
+      "raw_offset": "0x9C8C",
+      "old": {
+        "h_pos": 393,
+        "v_pos": 156,
+        "halign": 0,
+        "valign": 1,
+        "txtID": 39947,
+        "anonymous_5": 0
+      },
+      "ge480i": {
+        "h_pos": 393,
+        "v_pos": 156,
+        "halign": 0,
+        "valign": 1,
+        "txtID": 39947,
+        "anonymous_5": 0
+      },
+      "new": {
+        "h_pos": 393,
+        "v_pos": 156,
+        "halign": 0,
+        "valign": 1,
+        "txtID": 39947,
+        "anonymous_5": 0
+      },
+      "text_id_preserved": true
+    },
+    {
+      "idx": 5,
+      "raw_offset": "0x9CA0",
+      "old": {
+        "h_pos": 393,
+        "v_pos": 171,
+        "halign": 0,
+        "valign": 1,
+        "txtID": 39948,
+        "anonymous_5": 0
+      },
+      "ge480i": {
+        "h_pos": 393,
+        "v_pos": 171,
+        "halign": 0,
+        "valign": 1,
+        "txtID": 39948,
+        "anonymous_5": 0
+      },
+      "new": {
+        "h_pos": 393,
+        "v_pos": 171,
+        "halign": 0,
+        "valign": 1,
+        "txtID": 39948,
+        "anonymous_5": 0
+      },
+      "text_id_preserved": true
+    },
+    {
+      "idx": 6,
+      "raw_offset": "0x9CB4",
+      "old": {
+        "h_pos": 394,
+        "v_pos": 186,
+        "halign": 0,
+        "valign": 1,
+        "txtID": 39949,
+        "anonymous_5": 0
+      },
+      "ge480i": {
+        "h_pos": 394,
+        "v_pos": 186,
+        "halign": 0,
+        "valign": 1,
+        "txtID": 39949,
+        "anonymous_5": 0
+      },
+      "new": {
+        "h_pos": 394,
+        "v_pos": 186,
+        "halign": 0,
+        "valign": 1,
+        "txtID": 39949,
+        "anonymous_5": 0
+      },
+      "text_id_preserved": true
+    },
+    {
+      "idx": 7,
+      "raw_offset": "0x9CC8",
+      "old": {
+        "h_pos": 448,
+        "v_pos": 307,
+        "halign": 1,
+        "valign": 1,
+        "txtID": 39950,
+        "anonymous_5": 0
+      },
+      "ge480i": {
+        "h_pos": 448,
+        "v_pos": 307,
+        "halign": 1,
+        "valign": 1,
+        "txtID": 39950,
+        "anonymous_5": 0
+      },
+      "new": {
+        "h_pos": 448,
+        "v_pos": 307,
+        "halign": 1,
+        "valign": 1,
+        "txtID": 39950,
+        "anonymous_5": 0
+      },
+      "text_id_preserved": true
+    },
+    {
+      "idx": 8,
+      "raw_offset": "0x9CDC",
+      "old": {
+        "h_pos": 87,
+        "v_pos": 246,
+        "halign": 0,
+        "valign": 1,
+        "txtID": 39951,
+        "anonymous_5": 0
+      },
+      "ge480i": {
+        "h_pos": 87,
+        "v_pos": 246,
+        "halign": 0,
+        "valign": 1,
+        "txtID": 39951,
+        "anonymous_5": 0
+      },
+      "new": {
+        "h_pos": 87,
+        "v_pos": 246,
+        "halign": 0,
+        "valign": 1,
+        "txtID": 39951,
+        "anonymous_5": 0
+      },
+      "text_id_preserved": true
+    },
+    {
+      "idx": 9,
+      "raw_offset": "0x9CF0",
+      "old": {
+        "h_pos": 87,
+        "v_pos": 292,
+        "halign": 0,
+        "valign": 1,
+        "txtID": 39952,
+        "anonymous_5": 0
+      },
+      "ge480i": {
+        "h_pos": 87,
+        "v_pos": 292,
+        "halign": 0,
+        "valign": 1,
+        "txtID": 39952,
+        "anonymous_5": 0
+      },
+      "new": {
+        "h_pos": 87,
+        "v_pos": 292,
+        "halign": 0,
+        "valign": 1,
+        "txtID": 39952,
+        "anonymous_5": 0
+      },
+      "text_id_preserved": true
+    },
+    {
+      "idx": 10,
+      "raw_offset": "0x9D04",
+      "old": {
+        "h_pos": 320,
+        "v_pos": 371,
+        "halign": 1,
+        "valign": 1,
+        "txtID": 39953,
+        "anonymous_5": 0
+      },
+      "ge480i": {
+        "h_pos": 320,
+        "v_pos": 371,
+        "halign": 1,
+        "valign": 1,
+        "txtID": 39953,
+        "anonymous_5": 0
+      },
+      "new": {
+        "h_pos": 320,
+        "v_pos": 371,
+        "halign": 1,
+        "valign": 1,
+        "txtID": 39953,
+        "anonymous_5": 0
+      },
+      "text_id_preserved": true
+    },
+    {
+      "idx": 11,
+      "raw_offset": "0x9D18",
+      "old": {
+        "h_pos": 320,
+        "v_pos": 386,
+        "halign": 1,
+        "valign": 1,
+        "txtID": 39954,
+        "anonymous_5": 0
+      },
+      "ge480i": {
+        "h_pos": 320,
+        "v_pos": 386,
+        "halign": 1,
+        "valign": 1,
+        "txtID": 39954,
+        "anonymous_5": 0
+      },
+      "new": {
+        "h_pos": 320,
+        "v_pos": 386,
+        "halign": 1,
+        "valign": 1,
+        "txtID": 39954,
+        "anonymous_5": 0
+      },
+      "text_id_preserved": true
+    }
+  ],
+  "save_outputs": [
+    {
+      "source": "artifacts\\generated\\g1hbrf1.sav",
+      "target": "artifacts\\generated\\g1hlegal1.sav",
+      "bytes": 512,
+      "md5": "79ed3fe6851b080ff21de69fd12f034d"
+    },
+    {
+      "source": "artifacts\\generated\\g1hbrf1.eep",
+      "target": "artifacts\\generated\\g1hlegal1.eep",
+      "bytes": 2048,
+      "md5": "e47f5c07623838e875761a0493388e03"
+    }
+  ],
+  "bps_patch": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\TND6480i_g1hlegal1_from_baseline_tnd.bps",
+  "bps_manifest": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\reports\\tnd6480i_g1hlegal1_bps_manifest.json"
+}
