@@ -1,0 +1,225 @@
+{
+  "video": "diagnostics\\captures\\videos\\g1diff2btn08_difficulty_hardware_cycled_20260518.mp4",
+  "sheet": "diagnostics\\captures\\contact_sheets\\g1diff2btn08_difficulty_hardware_cycled_20260518.jpg",
+  "start": 0.0,
+  "end": 88.0,
+  "step": 5.0,
+  "frames": [
+    {
+      "index": 0,
+      "seconds": 0.0,
+      "timestamp": "00:00",
+      "path": "diagnostics\\captures\\contact_sheets\\g1diff2btn08_difficulty_hardware_cycled_20260518\\frames\\frame_0000_00000000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "00:00"
+    },
+    {
+      "index": 1,
+      "seconds": 5.0,
+      "timestamp": "00:05",
+      "path": "diagnostics\\captures\\contact_sheets\\g1diff2btn08_difficulty_hardware_cycled_20260518\\frames\\frame_0001_00005000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "00:05"
+    },
+    {
+      "index": 2,
+      "seconds": 10.0,
+      "timestamp": "00:10",
+      "path": "diagnostics\\captures\\contact_sheets\\g1diff2btn08_difficulty_hardware_cycled_20260518\\frames\\frame_0002_00010000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "00:10"
+    },
+    {
+      "index": 3,
+      "seconds": 15.0,
+      "timestamp": "00:15",
+      "path": "diagnostics\\captures\\contact_sheets\\g1diff2btn08_difficulty_hardware_cycled_20260518\\frames\\frame_0003_00015000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "00:15"
+    },
+    {
+      "index": 4,
+      "seconds": 20.0,
+      "timestamp": "00:20",
+      "path": "diagnostics\\captures\\contact_sheets\\g1diff2btn08_difficulty_hardware_cycled_20260518\\frames\\frame_0004_00020000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "00:20"
+    },
+    {
+      "index": 5,
+      "seconds": 25.0,
+      "timestamp": "00:25",
+      "path": "diagnostics\\captures\\contact_sheets\\g1diff2btn08_difficulty_hardware_cycled_20260518\\frames\\frame_0005_00025000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "00:25"
+    },
+    {
+      "index": 6,
+      "seconds": 30.0,
+      "timestamp": "00:30",
+      "path": "diagnostics\\captures\\contact_sheets\\g1diff2btn08_difficulty_hardware_cycled_20260518\\frames\\frame_0006_00030000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "00:30"
+    },
+    {
+      "index": 7,
+      "seconds": 35.0,
+      "timestamp": "00:35",
+      "path": "diagnostics\\captures\\contact_sheets\\g1diff2btn08_difficulty_hardware_cycled_20260518\\frames\\frame_0007_00035000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "00:35"
+    },
+    {
+      "index": 8,
+      "seconds": 40.0,
+      "timestamp": "00:40",
+      "path": "diagnostics\\captures\\contact_sheets\\g1diff2btn08_difficulty_hardware_cycled_20260518\\frames\\frame_0008_00040000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "00:40"
+    },
+    {
+      "index": 9,
+      "seconds": 45.0,
+      "timestamp": "00:45",
+      "path": "diagnostics\\captures\\contact_sheets\\g1diff2btn08_difficulty_hardware_cycled_20260518\\frames\\frame_0009_00045000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "00:45"
+    },
+    {
+      "index": 10,
+      "seconds": 50.0,
+      "timestamp": "00:50",
+      "path": "diagnostics\\captures\\contact_sheets\\g1diff2btn08_difficulty_hardware_cycled_20260518\\frames\\frame_0010_00050000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "00:50"
+    },
+    {
+      "index": 11,
+      "seconds": 55.0,
+      "timestamp": "00:55",
+      "path": "diagnostics\\captures\\contact_sheets\\g1diff2btn08_difficulty_hardware_cycled_20260518\\frames\\frame_0011_00055000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "00:55"
+    },
+    {
+      "index": 12,
+      "seconds": 60.0,
+      "timestamp": "01:00",
+      "path": "diagnostics\\captures\\contact_sheets\\g1diff2btn08_difficulty_hardware_cycled_20260518\\frames\\frame_0012_00060000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "01:00"
+    },
+    {
+      "index": 13,
+      "seconds": 65.0,
+      "timestamp": "01:05",
+      "path": "diagnostics\\captures\\contact_sheets\\g1diff2btn08_difficulty_hardware_cycled_20260518\\frames\\frame_0013_00065000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "01:05"
+    },
+    {
+      "index": 14,
+      "seconds": 70.0,
+      "timestamp": "01:10",
+      "path": "diagnostics\\captures\\contact_sheets\\g1diff2btn08_difficulty_hardware_cycled_20260518\\frames\\frame_0014_00070000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "01:10"
+    },
+    {
+      "index": 15,
+      "seconds": 75.0,
+      "timestamp": "01:15",
+      "path": "diagnostics\\captures\\contact_sheets\\g1diff2btn08_difficulty_hardware_cycled_20260518\\frames\\frame_0015_00075000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "01:15"
+    },
+    {
+      "index": 16,
+      "seconds": 80.0,
+      "timestamp": "01:20",
+      "path": "diagnostics\\captures\\contact_sheets\\g1diff2btn08_difficulty_hardware_cycled_20260518\\frames\\frame_0016_00080000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "01:20"
+    },
+    {
+      "index": 17,
+      "seconds": 85.0,
+      "timestamp": "01:25",
+      "path": "diagnostics\\captures\\contact_sheets\\g1diff2btn08_difficulty_hardware_cycled_20260518\\frames\\frame_0017_00085000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "01:25"
+    }
+  ]
+}

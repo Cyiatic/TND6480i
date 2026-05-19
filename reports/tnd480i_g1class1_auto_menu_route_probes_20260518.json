@@ -1,0 +1,162 @@
+{
+  "base_rom": "artifacts\\generated\\g1class1.z64",
+  "base_md5": "77ecf1aa6fdd0c5bee31198991162a26",
+  "purpose": "No-input hardware route probes for front/dossier pages; do not promote over gameplay baseline.",
+  "routes": [
+    {
+      "name": "g1classauto05",
+      "menu_id": 5,
+      "symbol": "MENU_FILE_SELECT",
+      "purpose": "File select / save folders",
+      "base_rom": "artifacts\\generated\\g1class1.z64",
+      "out_rom": "artifacts\\generated\\g1classauto05.z64",
+      "out_md5": "2169bf4c70646f44821d0ee6ea7c029d",
+      "header_crc": "92C87AAD 1C9DDBC3",
+      "patch": {
+        "offset": "0x3FF34",
+        "old": "0x24040018",
+        "new": "0x24040005",
+        "note": "After the TND title/logo timeout, route directly to MENU_FILE_SELECT."
+      },
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\g1class1.sav",
+          "target": "artifacts\\generated\\g1classauto05.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\g1class1.eep",
+          "target": "artifacts\\generated\\g1classauto05.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ],
+      "do_not_promote": true
+    },
+    {
+      "name": "g1classauto06",
+      "menu_id": 6,
+      "symbol": "MENU_MODE_SELECT",
+      "purpose": "Single-player / multiplayer / cheat select",
+      "base_rom": "artifacts\\generated\\g1class1.z64",
+      "out_rom": "artifacts\\generated\\g1classauto06.z64",
+      "out_md5": "2f85e109491efe469004383f51b3b3d5",
+      "header_crc": "92C87AA9 6BE5EBF6",
+      "patch": {
+        "offset": "0x3FF34",
+        "old": "0x24040018",
+        "new": "0x24040006",
+        "note": "After the TND title/logo timeout, route directly to MENU_MODE_SELECT."
+      },
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\g1class1.sav",
+          "target": "artifacts\\generated\\g1classauto06.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\g1class1.eep",
+          "target": "artifacts\\generated\\g1classauto06.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ],
+      "do_not_promote": true
+    },
+    {
+      "name": "g1classauto07",
+      "menu_id": 7,
+      "symbol": "MENU_MISSION_SELECT",
+      "purpose": "Mission select dossier",
+      "base_rom": "artifacts\\generated\\g1class1.z64",
+      "out_rom": "artifacts\\generated\\g1classauto07.z64",
+      "out_md5": "873d730af4c5724c48eaa006c6462022",
+      "header_crc": "92C87AA9 87B77C51",
+      "patch": {
+        "offset": "0x3FF34",
+        "old": "0x24040018",
+        "new": "0x24040007",
+        "note": "After the TND title/logo timeout, route directly to MENU_MISSION_SELECT."
+      },
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\g1class1.sav",
+          "target": "artifacts\\generated\\g1classauto07.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\g1class1.eep",
+          "target": "artifacts\\generated\\g1classauto07.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ],
+      "do_not_promote": true
+    },
+    {
+      "name": "g1classauto08",
+      "menu_id": 8,
+      "symbol": "MENU_DIFFICULTY",
+      "purpose": "Difficulty select dossier",
+      "base_rom": "artifacts\\generated\\g1class1.z64",
+      "out_rom": "artifacts\\generated\\g1classauto08.z64",
+      "out_md5": "11b08348ea817a7e82716163e434c973",
+      "header_crc": "92C87AA5 0FAFA856",
+      "patch": {
+        "offset": "0x3FF34",
+        "old": "0x24040018",
+        "new": "0x24040008",
+        "note": "After the TND title/logo timeout, route directly to MENU_DIFFICULTY."
+      },
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\g1class1.sav",
+          "target": "artifacts\\generated\\g1classauto08.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\g1class1.eep",
+          "target": "artifacts\\generated\\g1classauto08.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ],
+      "do_not_promote": true
+    },
+    {
+      "name": "g1classauto0a",
+      "menu_id": 10,
+      "symbol": "MENU_BRIEFING",
+      "purpose": "Mission briefing dossier",
+      "base_rom": "artifacts\\generated\\g1class1.z64",
+      "out_rom": "artifacts\\generated\\g1classauto0a.z64",
+      "out_md5": "a98a23b77d07481e584b81b9123d47d5",
+      "header_crc": "92C87AD9 5C080948",
+      "patch": {
+        "offset": "0x3FF34",
+        "old": "0x24040018",
+        "new": "0x2404000A",
+        "note": "After the TND title/logo timeout, route directly to MENU_BRIEFING."
+      },
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\g1class1.sav",
+          "target": "artifacts\\generated\\g1classauto0a.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\g1class1.eep",
+          "target": "artifacts\\generated\\g1classauto0a.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ],
+      "do_not_promote": true
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "card": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\diagnostics\\captures\\current\\g1gridbg1_mission_fix_card_20260518.jpg",
+  "candidate": "g1gridbg1",
+  "base": "g1class1",
+  "mission_frame_current": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\diagnostics\\captures\\contact_sheets\\g1classauto07_mission_hardware_cycled_20260518\\frames\\frame_0012_00060000.png",
+  "mission_frame_candidate": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\diagnostics\\captures\\contact_sheets\\g1gridbg1auto07_mission_hardware_cycled_20260518\\frames\\frame_0012_00060000.png",
+  "verdict": "candidate improves mission label/cursor placement versus current g1class1 hardware capture; verify full ROM through normal menu flow before final promotion"
+}

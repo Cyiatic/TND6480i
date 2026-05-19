@@ -1,0 +1,7 @@
+{
+  "card": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\diagnostics\\captures\\current\\g1diff2_difficulty_fix_card_20260518.jpg",
+  "candidate": "g1diff2",
+  "base": "g1gridbg1",
+  "rejected_previous": "g1diff1",
+  "verdict": "candidate fixes difficulty row/name overlap and moves the block toward GE480i placement"
+}

@@ -1,0 +1,109 @@
+{
+  "base_rom": "artifacts\\generated\\g1class1.z64",
+  "base_md5": "77ecf1aa6fdd0c5bee31198991162a26",
+  "ge480_rom": "artifacts\\roms\\BASELINE_GE_480i_direct_from_stock.z64",
+  "out_rom": "artifacts\\generated\\g1gridbg1.z64",
+  "out_md5": "58f7c35c2fa0aaf027248e3df6216179",
+  "header_crc": "1D6A9A1B 3145ECC3",
+  "label_table_mode": "ge",
+  "slot_len": "0x1004C",
+  "allowed_packed_len": "0x103CC",
+  "packed_len": "0x100B8",
+  "patches": [
+    {
+      "space": "1172 raw",
+      "offset": "0xA240",
+      "old": [
+        73,
+        142,
+        212,
+        282,
+        352,
+        62,
+        131,
+        201,
+        270
+      ],
+      "new": [
+        106,
+        207,
+        308,
+        409,
+        510,
+        90,
+        191,
+        292,
+        393
+      ],
+      "note": "mission-select cursor/grid table B copied from GE480i"
+    },
+    {
+      "space": "ROM",
+      "offset": "0x4F9FC",
+      "old": [
+        90,
+        191,
+        292,
+        393,
+        494,
+        92,
+        193,
+        294,
+        395
+      ],
+      "new": [
+        106,
+        207,
+        308,
+        409,
+        510,
+        90,
+        191,
+        292,
+        393
+      ],
+      "note": "custom mission-label table also copied from GE480i table B"
+    }
+  ],
+  "save_outputs": [
+    {
+      "source": "artifacts\\generated\\g1class1.sav",
+      "target": "artifacts\\generated\\g1gridbg1.sav",
+      "bytes": 512,
+      "md5": "79ed3fe6851b080ff21de69fd12f034d"
+    },
+    {
+      "source": "artifacts\\generated\\g1class1.eep",
+      "target": "artifacts\\generated\\g1gridbg1.eep",
+      "bytes": 2048,
+      "md5": "e47f5c07623838e875761a0493388e03"
+    }
+  ],
+  "routes": {
+    "mission_select": {
+      "out_rom": "artifacts\\generated\\g1gridbg1auto07.z64",
+      "out_md5": "0a29cb3fa3b56b3c9ac50c5975f343dd",
+      "header_crc": "1D6A9A2B 1AFA12BB",
+      "route_patch": {
+        "offset": "0x3FF34",
+        "old": "0x24040018",
+        "new": "0x24040007"
+      },
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\g1class1.sav",
+          "target": "artifacts\\generated\\g1gridbg1auto07.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\g1class1.eep",
+          "target": "artifacts\\generated\\g1gridbg1auto07.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ]
+    }
+  },
+  "do_not_promote_until_hardware_compared": true
+}

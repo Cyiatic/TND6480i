@@ -1,0 +1,221 @@
+{
+  "base_rom": "artifacts\\generated\\g1gridbg1.z64",
+  "base_md5": "58f7c35c2fa0aaf027248e3df6216179",
+  "out_rom": "artifacts\\generated\\g1diff2.z64",
+  "out_md5": "7dcf2cf0ea0ab9005cc20f5b864bb84f",
+  "header_crc": "022BAE42 C71B3975",
+  "purpose": "Apply only the GE480i difficulty select constructor/interface word deltas on top of g1gridbg1.",
+  "range": [
+    "0x43300",
+    "0x43D00"
+  ],
+  "patches": [
+    {
+      "offset": "0x433FC",
+      "old": "0x3C018005",
+      "ge_stock": "0x3C018005",
+      "new": "0x3C0143AA",
+      "changed": true
+    },
+    {
+      "offset": "0x43400",
+      "old": "0xC4261A54",
+      "ge_stock": "0xC4261A54",
+      "new": "0x44813000",
+      "changed": true
+    },
+    {
+      "offset": "0x43434",
+      "old": "0x3C014373",
+      "ge_stock": "0x3C014373",
+      "new": "0x3C01439A",
+      "changed": true
+    },
+    {
+      "offset": "0x43460",
+      "old": "0x3C014353",
+      "ge_stock": "0x3C014353",
+      "new": "0x3C01438A",
+      "changed": true
+    },
+    {
+      "offset": "0x43634",
+      "old": "0x240E0037",
+      "ge_stock": "0x240E0037",
+      "new": "0x240E0050",
+      "changed": true
+    },
+    {
+      "offset": "0x43638",
+      "old": "0x240F0057",
+      "ge_stock": "0x240F0057",
+      "new": "0x240F007F",
+      "changed": true
+    },
+    {
+      "offset": "0x43728",
+      "old": "0x240E0037",
+      "ge_stock": "0x240E0037",
+      "new": "0x240E0050",
+      "changed": true
+    },
+    {
+      "offset": "0x4372C",
+      "old": "0x240F0067",
+      "ge_stock": "0x240F0067",
+      "new": "0x240F008F",
+      "changed": true
+    },
+    {
+      "offset": "0x4381C",
+      "old": "0x240E0037",
+      "ge_stock": "0x240E0037",
+      "new": "0x240E0050",
+      "changed": true
+    },
+    {
+      "offset": "0x43820",
+      "old": "0x240F0077",
+      "ge_stock": "0x240F0077",
+      "new": "0x240F009F",
+      "changed": true
+    },
+    {
+      "offset": "0x438A0",
+      "old": "0x25CF00BA",
+      "ge_stock": "0x25CF00BA",
+      "new": "0x25CF00FB",
+      "changed": true
+    },
+    {
+      "offset": "0x438A8",
+      "old": "0x3C0142D4",
+      "ge_stock": "0x3C0142D4",
+      "new": "0x3C014303",
+      "changed": true
+    },
+    {
+      "offset": "0x439AC",
+      "old": "0x240C0037",
+      "ge_stock": "0x240C0037",
+      "new": "0x240C0050",
+      "changed": true
+    },
+    {
+      "offset": "0x439B0",
+      "old": "0x240D008F",
+      "ge_stock": "0x240D008F",
+      "new": "0x240D00D0",
+      "changed": true
+    },
+    {
+      "offset": "0x43A48",
+      "old": "0x2419007E",
+      "ge_stock": "0x2419007E",
+      "new": "0x24190097",
+      "changed": true
+    },
+    {
+      "offset": "0x43A5C",
+      "old": "0x247800C3",
+      "ge_stock": "0x247800C3",
+      "new": "0x24780104",
+      "changed": true
+    },
+    {
+      "offset": "0x43A6C",
+      "old": "0x246600B2",
+      "ge_stock": "0x246600B2",
+      "new": "0x246600F3",
+      "changed": true
+    },
+    {
+      "offset": "0x43A78",
+      "old": "0x240700F0",
+      "ge_stock": "0x240700F0",
+      "new": "0x24070109",
+      "changed": true
+    },
+    {
+      "offset": "0x43ABC",
+      "old": "0x267300B4",
+      "ge_stock": "0x267300B4",
+      "new": "0x267300F5",
+      "changed": true
+    },
+    {
+      "offset": "0x43B68",
+      "old": "0x240B0082",
+      "ge_stock": "0x240B0082",
+      "new": "0x240B009B",
+      "changed": true
+    },
+    {
+      "offset": "0x43C04",
+      "old": "0x240F0096",
+      "ge_stock": "0x240F0096",
+      "new": "0x240F00AF",
+      "changed": true
+    },
+    {
+      "offset": "0x43C44",
+      "old": "0x240F0096",
+      "ge_stock": "0x240F0096",
+      "new": "0x240F00AF",
+      "changed": true
+    }
+  ],
+  "changed_patch_count": 22,
+  "save_outputs": [
+    {
+      "source": "artifacts\\generated\\g1gridbg1.sav",
+      "target": "artifacts\\generated\\g1diff2.sav",
+      "bytes": 512,
+      "md5": "79ed3fe6851b080ff21de69fd12f034d"
+    },
+    {
+      "source": "artifacts\\generated\\g1gridbg1.eep",
+      "target": "artifacts\\generated\\g1diff2.eep",
+      "bytes": 2048,
+      "md5": "e47f5c07623838e875761a0493388e03"
+    }
+  ],
+  "routes": {
+    "difficulty_select": {
+      "out_rom": "artifacts\\generated\\g1diff2btn08.z64",
+      "out_md5": "1240ef6df7cac64cafb54f0c881b09e0",
+      "header_crc": "FDABAE0A 173F4C49",
+      "patches": [
+        {
+          "key": "timeout_to_mission_select",
+          "offset": "0x3FF34",
+          "old": "0x24040018",
+          "new": "0x24040007",
+          "note": "After the TND title/logo timeout, route to MENU_MISSION_SELECT."
+        },
+        {
+          "key": "mission_select_force_button_accept",
+          "offset": "0x42D98",
+          "old": "0x1040002A",
+          "new": "0x00000000",
+          "note": "Force the mission-select A/Start/Z accept block so briefingpage and selected_stage are initialized."
+        }
+      ],
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\g1gridbg1.sav",
+          "target": "artifacts\\generated\\g1diff2btn08.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\g1gridbg1.eep",
+          "target": "artifacts\\generated\\g1diff2btn08.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ]
+    }
+  },
+  "do_not_promote_until_hardware_compared": true
+}
