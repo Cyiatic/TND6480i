@@ -192,3 +192,18 @@ Current best dossier candidate:
 - BPS: `artifacts/generated/TND6480i_dfbcurx_from_baseline_tnd.bps`
 - Analogue copy: `artifacts/analogue_test/DFBCURX.Z64` with matching `.SAV`/`.EEP`
 - Restore confirmation: `diagnostics/captures/contact_sheets/dfbcurx_restore_confirm_20260518.jpg`
+
+## GE-Exact Tab and Mission Label Follow-Up
+
+`gexact1` supersedes the manual `dfbcurx` nudges for front tab and mode-page constants. Hardware comparison against the aspect-normalized GE480i VLC snapshots showed the `PREVIOUS` tab and mode text now line up much closer to GE480i. Direct mode routes still do not prove live cursor placement because they bypass normal upstream cursor initialization.
+
+`g1txmissionfull` applied GE480i mission helper/label constants on top of `gexact1`, but the mission labels still sat in the wrong filmstrip bands. Trampoline-based label rescaling (`g1mlfix*`) was rejected: no-op hooks black-screened at mission select, proving that executing a helper from the tested caves is not safe for this page.
+
+`g1mtabge3` is the current best front-end candidate. It redirects only the mission-label X/Y table used by `constructor_menu07_missionsel` to a small GE480i-style table stored in the unused tail of the cloned file-select blitter cave. Hardware route capture shows the mission labels now follow the filmstrip spacing instead of the old compact stock grid:
+
+- ROM: `artifacts/generated/g1mtabge3.z64`
+- BPS: `artifacts/generated/TND6480i_g1mtabge3_from_baseline_tnd.bps`
+- Mission comparison: `diagnostics/captures/current/g1mtabge3_mission_vs_ge480i_20260518.jpg`
+- Full boot sanity capture: `diagnostics/captures/contact_sheets/g1mtabge3_full_boot_hardware_20260518.jpg`
+
+This is still a candidate, not final proof. It should be manually tested through the normal file-select -> mission-select flow and then through gameplay, but it is the first mission-select pass from this round that improves the page without a route black-screen.
