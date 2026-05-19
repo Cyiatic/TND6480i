@@ -1,0 +1,16 @@
+{
+  "source": "artifacts\\generated\\g1mcfix2.z64",
+  "output": "artifacts\\generated\\g1mcfix3.z64",
+  "current_alias": "artifacts\\generated\\TND6480i_current_g1mcfix3.z64",
+  "source_md5": "85c65742c71f5c0a42f58a3f3a12d0e5",
+  "output_md5": "f4ad83c7af4b2ce63bc26bb2bc54d0fc",
+  "header_crc": "4C56573C C27C4564",
+  "patches": [
+    {
+      "offset": "0x4CE8C",
+      "old": "240201BC",
+      "new": "240201D8",
+      "note": "Move right-column cheat value x from GE480i baseline +0x1C so TND-specific Countdown Critical no longer touches OFF"
+    }
+  ]
+}

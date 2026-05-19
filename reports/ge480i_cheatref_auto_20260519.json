@@ -1,0 +1,16 @@
+{
+  "base_rom": "artifacts\\generated\\ge480iauto06.z64",
+  "base_md5": "104324f708e1664c3519e3fd5db30623",
+  "out_rom": "artifacts\\generated\\ge480i_cheatref_auto.z64",
+  "out_md5": "4bbae44eb816543139e0268289b84b44",
+  "header_crc": "A0AED39D E54E3EFD",
+  "patches": [
+    {
+      "offset": "0x42088",
+      "old": "0x8C42A8F0",
+      "new": "0x24020002",
+      "note": "Force mode-select post-update branch to GAMEMODE_CHEATS for reference capture only."
+    }
+  ],
+  "purpose": "GE480i all-cheats reference capture: route to mode-select, initialize cheat availability, then automatically enter MENU_CHEAT."
+}

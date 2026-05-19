@@ -1,0 +1,36 @@
+{
+  "source_save": "artifacts\\generated\\g1mcfix1_allmissions_allcheats.sav",
+  "source_save_bytes": 512,
+  "source_save_md5": "10a68a5afa9dd07665cb06cca75b8a24",
+  "gopher_save_dir": "C:\\Users\\codex\\AppData\\Roaming\\gopher64\\saves",
+  "parallel_save_dir": "C:\\Users\\codex\\AppData\\Local\\parallel-launcher\\data\\retro-data\\saves",
+  "parallel_srm_template": null,
+  "roms": [
+    {
+      "rom": "artifacts\\generated\\g1mcfix2_cheatref_auto.z64",
+      "rom_md5": "f0c3bceddabaecdad890839dbb677205",
+      "rom_sha256": "9CE773A032D0C2FB0B8B36EEBD5B0F587D8ED173A08588A099B9C36F5869D9BA",
+      "internal_title": "GOLDENEYE",
+      "writes": [
+        {
+          "path": "artifacts\\generated\\g1mcfix2_cheatref_auto.sav",
+          "bytes": 512,
+          "backup": null,
+          "changed": true
+        },
+        {
+          "path": "artifacts\\generated\\g1mcfix2_cheatref_auto.eep",
+          "bytes": 2048,
+          "backup": null,
+          "changed": true
+        },
+        {
+          "path": "C:\\Users\\codex\\AppData\\Roaming\\gopher64\\saves\\GOLDENEYE-9CE773A032D0C2FB0B8B36EEBD5B0F587D8ED173A08588A099B9C36F5869D9BA.eep",
+          "bytes": 2048,
+          "backup": null,
+          "changed": true
+        }
+      ]
+    }
+  ]
+}

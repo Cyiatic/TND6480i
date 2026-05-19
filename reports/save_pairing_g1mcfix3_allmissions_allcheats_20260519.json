@@ -1,0 +1,62 @@
+{
+  "source_save": "artifacts\\generated\\g1mcfix1_allmissions_allcheats.sav",
+  "source_save_bytes": 512,
+  "source_save_md5": "10a68a5afa9dd07665cb06cca75b8a24",
+  "gopher_save_dir": "C:\\Users\\codex\\AppData\\Roaming\\gopher64\\saves",
+  "parallel_save_dir": "C:\\Users\\codex\\AppData\\Local\\parallel-launcher\\data\\retro-data\\saves",
+  "parallel_srm_template": null,
+  "roms": [
+    {
+      "rom": "artifacts\\generated\\g1mcfix3.z64",
+      "rom_md5": "f4ad83c7af4b2ce63bc26bb2bc54d0fc",
+      "rom_sha256": "D75DEA2747FFB8AC627F7D27DB9348B947DD3A13EBB0AB70EA99AC2C58B76AE7",
+      "internal_title": "GOLDENEYE",
+      "writes": [
+        {
+          "path": "artifacts\\generated\\g1mcfix3.sav",
+          "bytes": 512,
+          "backup": null,
+          "changed": true
+        },
+        {
+          "path": "artifacts\\generated\\g1mcfix3.eep",
+          "bytes": 2048,
+          "backup": null,
+          "changed": true
+        },
+        {
+          "path": "C:\\Users\\codex\\AppData\\Roaming\\gopher64\\saves\\GOLDENEYE-D75DEA2747FFB8AC627F7D27DB9348B947DD3A13EBB0AB70EA99AC2C58B76AE7.eep",
+          "bytes": 2048,
+          "backup": null,
+          "changed": true
+        }
+      ]
+    },
+    {
+      "rom": "artifacts\\generated\\TND6480i_current_g1mcfix3.z64",
+      "rom_md5": "f4ad83c7af4b2ce63bc26bb2bc54d0fc",
+      "rom_sha256": "D75DEA2747FFB8AC627F7D27DB9348B947DD3A13EBB0AB70EA99AC2C58B76AE7",
+      "internal_title": "GOLDENEYE",
+      "writes": [
+        {
+          "path": "artifacts\\generated\\TND6480i_current_g1mcfix3.sav",
+          "bytes": 512,
+          "backup": null,
+          "changed": true
+        },
+        {
+          "path": "artifacts\\generated\\TND6480i_current_g1mcfix3.eep",
+          "bytes": 2048,
+          "backup": null,
+          "changed": true
+        },
+        {
+          "path": "C:\\Users\\codex\\AppData\\Roaming\\gopher64\\saves\\GOLDENEYE-D75DEA2747FFB8AC627F7D27DB9348B947DD3A13EBB0AB70EA99AC2C58B76AE7.eep",
+          "bytes": 2048,
+          "backup": null,
+          "changed": false
+        }
+      ]
+    }
+  ]
+}

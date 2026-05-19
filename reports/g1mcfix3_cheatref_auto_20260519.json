@@ -1,0 +1,21 @@
+{
+  "source": "artifacts\\generated\\g1mcfix3.z64",
+  "output": "artifacts\\generated\\g1mcfix3_cheatref_auto.z64",
+  "source_md5": "f4ad83c7af4b2ce63bc26bb2bc54d0fc",
+  "output_md5": "4aeb0704a68a80a1393dc57b1fbf20de",
+  "header_crc": "7DD516DF 5FBE41A3",
+  "patches": [
+    {
+      "offset": "0x3FF34",
+      "old": "24040018",
+      "new": "24040006",
+      "note": "startup route to MENU_MODE_SELECT"
+    },
+    {
+      "offset": "0x42088",
+      "old": "8C42A8F0",
+      "new": "24020002",
+      "note": "force GAMEMODE_CHEATS after cheat availability init"
+    }
+  ]
+}

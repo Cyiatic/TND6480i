@@ -1,0 +1,77 @@
+{
+  "base_rom": "artifacts\\generated\\g1mcfix1.z64",
+  "base_md5": "32b0802210e71fecdf4a0a524b705aef",
+  "out_rom": "artifacts\\generated\\g1mcfix2.z64",
+  "out_md5": "85c65742c71f5c0a42f58a3f3a12d0e5",
+  "current_alias": "artifacts\\generated\\TND6480i_current_g1mcfix2.z64",
+  "header_crc": "4C56577C 50A74A03",
+  "reference": "artifacts/roms/BASELINE_GE_480i_direct_from_stock.z64 plus hardware GV-USB2 capture ge480i_cheatref_hardware_t090_20260519.png",
+  "patches": [
+    {
+      "offset": "0x04C874",
+      "old": "0x2B0100DC",
+      "new": "0x2B010140",
+      "note": "cheat cursor right-column hit threshold: 0xDC -> GE480i 0x140"
+    },
+    {
+      "offset": "0x04C89C",
+      "old": "0x24420035",
+      "new": "0x2442004D",
+      "note": "cheat cursor right-column row base: 0x35 -> GE480i 0x4D"
+    },
+    {
+      "offset": "0x04C908",
+      "old": "0x24420035",
+      "new": "0x2442004D",
+      "note": "cheat cursor left-column row base: 0x35 -> GE480i 0x4D"
+    },
+    {
+      "offset": "0x04CB30",
+      "old": "0x26B50035",
+      "new": "0x26B5004D",
+      "note": "cheat left-column text row base: 0x35 -> GE480i 0x4D"
+    },
+    {
+      "offset": "0x04CB6C",
+      "old": "0x24020037",
+      "new": "0x24020050",
+      "note": "cheat left-column label x: 0x37 -> GE480i 0x50"
+    },
+    {
+      "offset": "0x04CB98",
+      "old": "0x240A0032",
+      "new": "0x240A004A",
+      "note": "cheat left-column highlight parameter: 0x32 -> GE480i 0x4A"
+    },
+    {
+      "offset": "0x04CC70",
+      "old": "0x240200B3",
+      "new": "0x240200CC",
+      "note": "cheat left-column ON/OFF x: 0xB3 -> GE480i 0xCC"
+    },
+    {
+      "offset": "0x04CD4C",
+      "old": "0x24150035",
+      "new": "0x2415004D",
+      "note": "cheat right-column text row base: 0x35 -> GE480i 0x4D"
+    },
+    {
+      "offset": "0x04CD84",
+      "old": "0x240200DC",
+      "new": "0x24020140",
+      "note": "cheat right-column label x: 0xDC -> GE480i 0x140"
+    },
+    {
+      "offset": "0x04CDB4",
+      "old": "0x24090032",
+      "new": "0x2409004A",
+      "note": "cheat right-column highlight parameter: 0x32 -> GE480i 0x4A"
+    },
+    {
+      "offset": "0x04CE8C",
+      "old": "0x24020158",
+      "new": "0x240201BC",
+      "note": "cheat right-column ON/OFF x: 0x158 -> GE480i 0x1BC"
+    }
+  ]
+}
