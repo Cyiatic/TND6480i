@@ -236,10 +236,10 @@ def main():
         },
         {
             "screen": "Opening credits",
-            "finding": "Likely fail. User observed character credits running offscreen; current needs safe-area/scale pass.",
+            "finding": "Likely fail. Character view appears zoomed in versus GE480i, and text may run offscreen.",
             "ge": {"title": "GE480i credits 00:55", "image": frame("ge_credits_55s", ge480i, 55), "note": "Reference text scale and margins."},
             "stock": {"title": "Stock TND64 00:45", "image": frame("stock_credits_45s", stock_tnd, 45), "note": "Original TND credit placement."},
-            "current": {"title": "Current 01:05", "image": frame("current_credits_65s", current_start, 65), "note": "Compare margins; needs quantified text bounds."},
+            "current": {"title": "Current 01:05", "image": frame("current_credits_65s", current_start, 65), "note": "Character crop/scale is too tight; also needs text-bound measurement."},
         },
         {
             "screen": "File select dossier",
