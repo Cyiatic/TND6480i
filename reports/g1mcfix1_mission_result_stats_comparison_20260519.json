@@ -1,0 +1,25 @@
+{
+  "sheet": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\diagnostics\\captures\\current\\g1mcfix1_mission_result_stats_comparison_20260519.jpg",
+  "sources": [
+    {
+      "label": "GE480i reference",
+      "path": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\diagnostics\\captures\\current\\mission_result_compare_sources_20260519\\ge480i_stats_0706.png",
+      "note": "Dam stats page from GE480i clip"
+    },
+    {
+      "label": "Stock TND64 reference",
+      "path": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\diagnostics\\captures\\current\\mission_result_compare_sources_20260519\\stock_tnd_stats_0524.png",
+      "note": "Bazaar stats page from stock TND64 clip"
+    },
+    {
+      "label": "Current g1mcfix1 live",
+      "path": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\diagnostics\\captures\\current\\g1mcfix1_live_mission_result_probe_20260519.png",
+      "note": "Bazaar stats page over GV-USB2"
+    }
+  ],
+  "stats_window": "0x4BFE0-0x4C640",
+  "ge480i_delta_count": 22,
+  "current_matches_ge480i_delta_count": 22,
+  "mismatches": [],
+  "finding": "The old Kill total overlap is fixed. Time/Best Time appears visually consistent with the GE480i high-res value-column spacing in the available reference."
+}

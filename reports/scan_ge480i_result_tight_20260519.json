@@ -1,0 +1,153 @@
+{
+  "video": "C:\\Users\\codex\\Documents\\Light Capture \u02dc^\u2030\u00e6\u0192t\u0192H\u0192\u2039\u0192_\\n64\\2. GoldenEye 480i.mpg",
+  "sheet": "diagnostics\\captures\\contact_sheets\\scan_ge480i_result_tight_20260519.jpg",
+  "start": 410.0,
+  "end": 433.0,
+  "step": 2.0,
+  "frames": [
+    {
+      "index": 0,
+      "seconds": 410.0,
+      "timestamp": "06:50",
+      "path": "diagnostics\\captures\\contact_sheets\\scan_ge480i_result_tight_20260519\\frames\\frame_0000_00410000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "06:50"
+    },
+    {
+      "index": 1,
+      "seconds": 412.0,
+      "timestamp": "06:52",
+      "path": "diagnostics\\captures\\contact_sheets\\scan_ge480i_result_tight_20260519\\frames\\frame_0001_00412000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "06:52"
+    },
+    {
+      "index": 2,
+      "seconds": 414.0,
+      "timestamp": "06:54",
+      "path": "diagnostics\\captures\\contact_sheets\\scan_ge480i_result_tight_20260519\\frames\\frame_0002_00414000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "06:54"
+    },
+    {
+      "index": 3,
+      "seconds": 416.0,
+      "timestamp": "06:56",
+      "path": "diagnostics\\captures\\contact_sheets\\scan_ge480i_result_tight_20260519\\frames\\frame_0003_00416000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "06:56"
+    },
+    {
+      "index": 4,
+      "seconds": 418.0,
+      "timestamp": "06:58",
+      "path": "diagnostics\\captures\\contact_sheets\\scan_ge480i_result_tight_20260519\\frames\\frame_0004_00418000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "06:58"
+    },
+    {
+      "index": 5,
+      "seconds": 420.0,
+      "timestamp": "07:00",
+      "path": "diagnostics\\captures\\contact_sheets\\scan_ge480i_result_tight_20260519\\frames\\frame_0005_00420000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "07:00"
+    },
+    {
+      "index": 6,
+      "seconds": 422.0,
+      "timestamp": "07:02",
+      "path": "diagnostics\\captures\\contact_sheets\\scan_ge480i_result_tight_20260519\\frames\\frame_0006_00422000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "07:02"
+    },
+    {
+      "index": 7,
+      "seconds": 424.0,
+      "timestamp": "07:04",
+      "path": "diagnostics\\captures\\contact_sheets\\scan_ge480i_result_tight_20260519\\frames\\frame_0007_00424000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "07:04"
+    },
+    {
+      "index": 8,
+      "seconds": 426.0,
+      "timestamp": "07:06",
+      "path": "diagnostics\\captures\\contact_sheets\\scan_ge480i_result_tight_20260519\\frames\\frame_0008_00426000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "07:06"
+    },
+    {
+      "index": 9,
+      "seconds": 428.0,
+      "timestamp": "07:08",
+      "path": "diagnostics\\captures\\contact_sheets\\scan_ge480i_result_tight_20260519\\frames\\frame_0009_00428000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "07:08"
+    },
+    {
+      "index": 10,
+      "seconds": 430.0,
+      "timestamp": "07:10",
+      "path": "diagnostics\\captures\\contact_sheets\\scan_ge480i_result_tight_20260519\\frames\\frame_0010_00430000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "07:10"
+    },
+    {
+      "index": 11,
+      "seconds": 432.0,
+      "timestamp": "07:12",
+      "path": "diagnostics\\captures\\contact_sheets\\scan_ge480i_result_tight_20260519\\frames\\frame_0011_00432000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "07:12"
+    }
+  ]
+}
