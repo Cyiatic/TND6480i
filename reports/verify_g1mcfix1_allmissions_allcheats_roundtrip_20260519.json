@@ -1,0 +1,257 @@
+{
+  "input": "artifacts\\generated\\g1mcfix1.sav",
+  "input_md5": "10a68a5afa9dd07665cb06cca75b8a24",
+  "output": "artifacts\\generated\\verify_g1mcfix1_save_roundtrip.sav",
+  "output_md5": "10a68a5afa9dd07665cb06cca75b8a24",
+  "changed_slots": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "unlock_cheats": true,
+  "before": [
+    {
+      "slot": 0,
+      "offset": "0x020",
+      "flags": "0x00",
+      "folder": 0,
+      "wear_slot": 0,
+      "bond": 0,
+      "reset": false,
+      "stored_crc": [
+        "0xF8C9CC7A",
+        "0xA1F73F80"
+      ],
+      "calculated_crc": [
+        "0xF8C9CC7A",
+        "0xA1F73F80"
+      ],
+      "crc_ok": true,
+      "cheat_bytes": [
+        "0xFF",
+        "0xFF",
+        "0xFF"
+      ],
+      "nonzero_time_bytes": 78
+    },
+    {
+      "slot": 1,
+      "offset": "0x080",
+      "flags": "0x21",
+      "folder": 1,
+      "wear_slot": 0,
+      "bond": 1,
+      "reset": false,
+      "stored_crc": [
+        "0x31D2B7F6",
+        "0x10232F18"
+      ],
+      "calculated_crc": [
+        "0x31D2B7F6",
+        "0x10232F18"
+      ],
+      "crc_ok": true,
+      "cheat_bytes": [
+        "0xFF",
+        "0xFF",
+        "0xFF"
+      ],
+      "nonzero_time_bytes": 78
+    },
+    {
+      "slot": 2,
+      "offset": "0x0E0",
+      "flags": "0x42",
+      "folder": 2,
+      "wear_slot": 0,
+      "bond": 2,
+      "reset": false,
+      "stored_crc": [
+        "0x6CAA7347",
+        "0x7E593F02"
+      ],
+      "calculated_crc": [
+        "0x6CAA7347",
+        "0x7E593F02"
+      ],
+      "crc_ok": true,
+      "cheat_bytes": [
+        "0xFF",
+        "0xFF",
+        "0xFF"
+      ],
+      "nonzero_time_bytes": 78
+    },
+    {
+      "slot": 3,
+      "offset": "0x140",
+      "flags": "0x63",
+      "folder": 3,
+      "wear_slot": 0,
+      "bond": 3,
+      "reset": false,
+      "stored_crc": [
+        "0x4EFBC8CD",
+        "0x4568CE22"
+      ],
+      "calculated_crc": [
+        "0x4EFBC8CD",
+        "0x4568CE22"
+      ],
+      "crc_ok": true,
+      "cheat_bytes": [
+        "0xFF",
+        "0xFF",
+        "0xFF"
+      ],
+      "nonzero_time_bytes": 78
+    },
+    {
+      "slot": 4,
+      "offset": "0x1A0",
+      "flags": "0x80",
+      "folder": 0,
+      "wear_slot": 0,
+      "bond": 0,
+      "reset": true,
+      "stored_crc": [
+        "0x7B75B90F",
+        "0x78CD268D"
+      ],
+      "calculated_crc": [
+        "0x7B75B90F",
+        "0x78CD268D"
+      ],
+      "crc_ok": true,
+      "cheat_bytes": [
+        "0x00",
+        "0x00",
+        "0x00"
+      ],
+      "nonzero_time_bytes": 0
+    }
+  ],
+  "after": [
+    {
+      "slot": 0,
+      "offset": "0x020",
+      "flags": "0x00",
+      "folder": 0,
+      "wear_slot": 0,
+      "bond": 0,
+      "reset": false,
+      "stored_crc": [
+        "0xF8C9CC7A",
+        "0xA1F73F80"
+      ],
+      "calculated_crc": [
+        "0xF8C9CC7A",
+        "0xA1F73F80"
+      ],
+      "crc_ok": true,
+      "cheat_bytes": [
+        "0xFF",
+        "0xFF",
+        "0xFF"
+      ],
+      "nonzero_time_bytes": 78
+    },
+    {
+      "slot": 1,
+      "offset": "0x080",
+      "flags": "0x21",
+      "folder": 1,
+      "wear_slot": 0,
+      "bond": 1,
+      "reset": false,
+      "stored_crc": [
+        "0x31D2B7F6",
+        "0x10232F18"
+      ],
+      "calculated_crc": [
+        "0x31D2B7F6",
+        "0x10232F18"
+      ],
+      "crc_ok": true,
+      "cheat_bytes": [
+        "0xFF",
+        "0xFF",
+        "0xFF"
+      ],
+      "nonzero_time_bytes": 78
+    },
+    {
+      "slot": 2,
+      "offset": "0x0E0",
+      "flags": "0x42",
+      "folder": 2,
+      "wear_slot": 0,
+      "bond": 2,
+      "reset": false,
+      "stored_crc": [
+        "0x6CAA7347",
+        "0x7E593F02"
+      ],
+      "calculated_crc": [
+        "0x6CAA7347",
+        "0x7E593F02"
+      ],
+      "crc_ok": true,
+      "cheat_bytes": [
+        "0xFF",
+        "0xFF",
+        "0xFF"
+      ],
+      "nonzero_time_bytes": 78
+    },
+    {
+      "slot": 3,
+      "offset": "0x140",
+      "flags": "0x63",
+      "folder": 3,
+      "wear_slot": 0,
+      "bond": 3,
+      "reset": false,
+      "stored_crc": [
+        "0x4EFBC8CD",
+        "0x4568CE22"
+      ],
+      "calculated_crc": [
+        "0x4EFBC8CD",
+        "0x4568CE22"
+      ],
+      "crc_ok": true,
+      "cheat_bytes": [
+        "0xFF",
+        "0xFF",
+        "0xFF"
+      ],
+      "nonzero_time_bytes": 78
+    },
+    {
+      "slot": 4,
+      "offset": "0x1A0",
+      "flags": "0x80",
+      "folder": 0,
+      "wear_slot": 0,
+      "bond": 0,
+      "reset": true,
+      "stored_crc": [
+        "0x7B75B90F",
+        "0x78CD268D"
+      ],
+      "calculated_crc": [
+        "0x7B75B90F",
+        "0x78CD268D"
+      ],
+      "crc_ok": true,
+      "cheat_bytes": [
+        "0x00",
+        "0x00",
+        "0x00"
+      ],
+      "nonzero_time_bytes": 0
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "candidate": "g1mcfix1",
+  "rom": "artifacts\\generated\\g1mcfix1.z64",
+  "rom_md5": "32b0802210e71fecdf4a0a524b705aef",
+  "save_uploaded": "artifacts\\generated\\g1mcfix1.sav",
+  "save_uploaded_md5": "10a68a5afa9dd07665cb06cca75b8a24",
+  "source_allmissions_allcheats_save": "artifacts\\generated\\g1mcfix1_allmissions_allcheats.sav",
+  "source_allmissions_allcheats_save_md5": "10a68a5afa9dd07665cb06cca75b8a24",
+  "save_type": "EEPROM 4k",
+  "upload_command": "sc64deployer upload --direct --save-type eeprom4k --save artifacts/generated/g1mcfix1.sav artifacts/generated/g1mcfix1.z64",
+  "post_upload_capture": "diagnostics/captures/current/g1mcfix1_allmissions_allcheats_upload_probe_20260519.png",
+  "pre_upload_probe_capture": "diagnostics/captures/current/g1mcfix1_live_dossier_no_complete_probe_20260519.png",
+  "notes": "Replaced the prior blank Documents save pairing with generated all-missions plus all cheat unlock bits set; uploaded to SummerCart64 in ROM direct mode."
+}
