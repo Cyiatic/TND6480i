@@ -1,0 +1,291 @@
+{
+  "candidate": "g1casta1",
+  "purpose": "Strict per-screen issue atlas. Red/yellow cards are not fixed until a new hardware capture matches the annotated reference geometry.",
+  "atlas": "diagnostics\\captures\\current\\preingame_issue_cards_g1casta1_20260518.jpg",
+  "cards": [
+    {
+      "name": "01_classification",
+      "title": "01 Classification Board",
+      "status": "FAIL: vertical layout is compressed/upshifted versus GE480i",
+      "reference": "C:/Users/codex/Pictures/vlcsnap-2026-05-18-18h14m11s759.png",
+      "current": "diagnostics/captures/contact_sheets/g1casta1_full_front_hardware_cycled_20260518/frames/frame_0002_00010000.png",
+      "out": "diagnostics\\captures\\current\\preingame_issue_cards_g1casta1_20260518\\01_classification.jpg",
+      "mismatch": "The content is squeezed into the top two-thirds of the screen. The GE480i reference spreads the legal block, divider, signatures, rating, and bottom copyright line down to the lower safe area.",
+      "target": "Use GE480i classification as the high-res layout reference, while preserving TND64-specific wording/logos.",
+      "measurement": "Current bottom legal text is around y=250-292; GE480i bottom legal text is around y=405-455.",
+      "reference_active_bbox": [
+        58,
+        59,
+        657,
+        440
+      ],
+      "current_active_bbox": [
+        43,
+        25,
+        657,
+        363
+      ]
+    },
+    {
+      "name": "02_tijayfly_logo",
+      "title": "02 TiJayFly Logo",
+      "status": "UNCERTAIN: needs dynamic verification, not a still-frame promotion",
+      "reference": "diagnostics/captures/contact_sheets/stock_tnd_preingame_scan_20260518/frames/frame_0015_00075000.png",
+      "current": "diagnostics/captures/contact_sheets/g1casta1_full_front_hardware_cycled_20260518/frames/frame_0003_00015000.png",
+      "out": "diagnostics\\captures\\current\\preingame_issue_cards_g1casta1_20260518\\02_tijayfly_logo.jpg",
+      "mismatch": "Single stills do not prove whether the logo animation is scaled or timed correctly. Current logo is visible, but the capture frames vary in brightness and direction during the loop.",
+      "target": "Verify against a short stock TND64 and g1casta1 motion strip with matched timestamps before changing logo code.",
+      "measurement": "Logo still-frame bounds are broadly centered; dynamic cadence remains unknown.",
+      "reference_active_bbox": [
+        92,
+        238,
+        557,
+        310
+      ],
+      "current_active_bbox": [
+        108,
+        229,
+        496,
+        318
+      ]
+    },
+    {
+      "name": "03_rare_logo",
+      "title": "03 Rare Logo",
+      "status": "UNCERTAIN: needs stock-motion comparison",
+      "reference": "diagnostics/captures/contact_sheets/stock_tnd_preingame_scan_20260518/frames/frame_0017_00085000.png",
+      "current": "diagnostics/captures/contact_sheets/g1casta1_full_front_hardware_cycled_20260518/frames/frame_0020_00100000.png",
+      "out": "diagnostics\\captures\\current\\preingame_issue_cards_g1casta1_20260518\\03_rare_logo.jpg",
+      "mismatch": "No obvious single-frame placement failure, but this logo needs a motion/timing check like TiJayFly.",
+      "target": "Leave untouched unless the motion strip shows a scale or field cadence mismatch.",
+      "measurement": "Still-frame center and approximate size are close enough for now.",
+      "reference_active_bbox": [
+        284,
+        158,
+        441,
+        381
+      ],
+      "current_active_bbox": [
+        309,
+        155,
+        397,
+        388
+      ]
+    },
+    {
+      "name": "04_gunbarrel",
+      "title": "04 Gunbarrel",
+      "status": "LIKELY PASS: composition now matches the GE480i family",
+      "reference": "diagnostics/captures/contact_sheets/ge480i_gunbarrel_detail_20260518/frames/frame_0008_00032000.png",
+      "current": "diagnostics/captures/contact_sheets/g1casta1_full_front_hardware_cycled_20260518/frames/frame_0008_00040000.png",
+      "out": "diagnostics\\captures\\current\\preingame_issue_cards_g1casta1_20260518\\04_gunbarrel.jpg",
+      "mismatch": "No large visual mismatch remaining in this still. Cadence still needs a final CRT/hardware timing check.",
+      "target": "Do not spend the next pass here unless cadence is proven wrong.",
+      "measurement": "The previous extra aperture/second barrel is gone in g1casta1.",
+      "reference_active_bbox": [
+        147,
+        117,
+        708,
+        512
+      ],
+      "current_active_bbox": [
+        119,
+        106,
+        708,
+        512
+      ]
+    },
+    {
+      "name": "05_title_logo",
+      "title": "05 TND Title Logo",
+      "status": "NEEDS CHECK: title scale should be judged against GE480i title behavior",
+      "reference": "diagnostics/captures/contact_sheets/stock_tnd_preingame_scan_20260518/frames/frame_0008_00040000.png",
+      "current": "diagnostics/captures/contact_sheets/g1casta1_title_transition_20260518/frames/frame_0007_00057000.png",
+      "out": "diagnostics\\captures\\current\\preingame_issue_cards_g1casta1_20260518\\05_title_logo.jpg",
+      "mismatch": "The title is visible, but it has not been proven to use the same high-res presentation/cadence as GE480i's title path.",
+      "target": "Compare a GE480i title transition strip and current TND title transition strip, then adjust only if bounds/timing differ.",
+      "measurement": "Current still is centered; dynamic behavior is the missing proof.",
+      "reference_active_bbox": [
+        116,
+        225,
+        616,
+        299
+      ],
+      "current_active_bbox": [
+        115,
+        223,
+        613,
+        297
+      ]
+    },
+    {
+      "name": "06_opening_credits",
+      "title": "06 Opening Credits / Cast Transitions",
+      "status": "FAIL: text/fade layer is not scaled/cleared like the model layer",
+      "reference": "diagnostics/captures/contact_sheets/verify_opening_credits_ge480i_20260518/frames/frame_0004_00058000.png",
+      "current": "diagnostics/captures/contact_sheets/g1casta1_full_front_hardware_cycled_20260518/frames/frame_0016_00080000.png",
+      "out": "diagnostics\\captures\\current\\preingame_issue_cards_g1casta1_20260518\\06_opening_credits.jpg",
+      "mismatch": "Models are no longer badly cropped, but the text/fade layer still leaves a visible rectangular transition artifact near the lower screen.",
+      "target": "Find the cast-credit text/fade clear rectangle path and scale/clear it consistently with the 480i presentation.",
+      "measurement": "Visible lower artifact around y=327-385 in current transition frame.",
+      "reference_active_bbox": [
+        58,
+        161,
+        558,
+        490
+      ],
+      "current_active_bbox": [
+        7,
+        0,
+        507,
+        532
+      ]
+    },
+    {
+      "name": "07_file_select",
+      "title": "07 File Select Dossier",
+      "status": "FAIL: right-side gunbarrel/background bleed and folder bounds mismatch",
+      "reference": "C:/Users/codex/Pictures/vlcsnap-2026-05-18-18h14m25s727.png",
+      "current": "diagnostics/captures/current/g1mtabge4_file_hw_norm_20260518.png",
+      "out": "diagnostics\\captures\\current\\preingame_issue_cards_g1casta1_20260518\\07_file_select.jpg",
+      "mismatch": "The file labels/icons are present, but the background/folder presentation bleeds too far right compared with GE480i.",
+      "target": "Preserve visible labels/icons, but bring the dossier background/folder envelope back inside the GE480i right-edge behavior.",
+      "measurement": "Active bbox current reaches x=707; GE480i file select reaches about x=660.",
+      "reference_active_bbox": [
+        7,
+        61,
+        660,
+        512
+      ],
+      "current_active_bbox": [
+        7,
+        62,
+        707,
+        512
+      ]
+    },
+    {
+      "name": "08_mode_select",
+      "title": "08 Bond Dossier / Mode Select",
+      "status": "FAIL: row/cursor/previous tab still do not match GE480i",
+      "reference": "C:/Users/codex/Pictures/vlcsnap-2026-05-18-18h14m38s302.png",
+      "current": "diagnostics/captures/current/g1mtabge4_mode_hw_norm_20260518.png",
+      "out": "diagnostics\\captures\\current\\preingame_issue_cards_g1casta1_20260518\\08_mode_select.jpg",
+      "mismatch": "This is close visually, but the cursor, highlight/text row, and PREVIOUS label are not sharing the same geometry as GE480i.",
+      "target": "Match GE480i row/cursor/tab relationships while retaining TND red folder art and TND menu text.",
+      "measurement": "GE selected row begins near x=184; current cursor is near x=120 while row text/highlight starts near x=240.",
+      "reference_active_bbox": [
+        5,
+        0,
+        702,
+        533
+      ],
+      "current_active_bbox": [
+        20,
+        0,
+        681,
+        533
+      ]
+    },
+    {
+      "name": "09_mission_select",
+      "title": "09 Mission Select",
+      "status": "FAIL: mission captions do not sit in the GE480i film caption bands",
+      "reference": "C:/Users/codex/Pictures/vlcsnap-2026-05-18-18h14m57s301.png",
+      "current": "diagnostics/captures/current/g1mtabge4_mission_hw_norm_20260518.png",
+      "out": "diagnostics\\captures\\current\\preingame_issue_cards_g1casta1_20260518\\09_mission_select.jpg",
+      "mismatch": "The TND mission count differs, but labels still need the GE480i caption-band relationship. Several names sit too close to perforations or images.",
+      "target": "Keep TND's 5/5/4 mission layout but center labels within each film caption band like GE480i.",
+      "measurement": "Previous global table probes helped some rows and harmed others; likely needs page-specific caption geometry, not a blind X/Y shove.",
+      "reference_active_bbox": [
+        6,
+        0,
+        702,
+        533
+      ],
+      "current_active_bbox": [
+        54,
+        13,
+        664,
+        533
+      ]
+    },
+    {
+      "name": "10_difficulty",
+      "title": "10 Difficulty Select",
+      "status": "FAIL: paper and difficulty rows are shifted versus GE480i",
+      "reference": "C:/Users/codex/Pictures/vlcsnap-2026-05-18-18h15m03s394.png",
+      "current": "diagnostics/captures/current/g1mtabge4_difficulty_hw_norm_20260518.png",
+      "out": "diagnostics\\captures\\current\\preingame_issue_cards_g1casta1_20260518\\10_difficulty.jpg",
+      "mismatch": "The page is usable, but it is not GE480i-aligned: the paper starts higher/left and the difficulty block sits too high.",
+      "target": "Align paper bounds and difficulty row block to the GE480i page geometry while preserving TND labels.",
+      "measurement": "GE difficulty row block y=240-365; current y=200-322.",
+      "reference_active_bbox": [
+        5,
+        0,
+        702,
+        533
+      ],
+      "current_active_bbox": [
+        6,
+        0,
+        697,
+        533
+      ]
+    },
+    {
+      "name": "11_briefing",
+      "title": "11 Briefing / Background",
+      "status": "BLOCKED: no safe current capture after strobe-route rejection",
+      "reference": "C:/Users/codex/Pictures/vlcsnap-2026-05-18-18h15m11s715.png",
+      "current": null,
+      "out": "diagnostics\\captures\\current\\preingame_issue_cards_g1casta1_20260518\\11_briefing.jpg",
+      "mismatch": "The forced briefing route produced strobing, so there is no trustworthy current image for this page.",
+      "target": "Get this through normal navigation or a safer direct route before patching any briefing constants.",
+      "measurement": "No current measurement; strobe route is rejected.",
+      "reference_active_bbox": [
+        5,
+        0,
+        702,
+        533
+      ],
+      "current_active_bbox": null
+    },
+    {
+      "name": "12_moneypenny",
+      "title": "12 Moneypenny",
+      "status": "BLOCKED: reference exists, current capture still required",
+      "reference": "C:/Users/codex/Pictures/vlcsnap-2026-05-18-18h15m20s302.png",
+      "current": null,
+      "out": "diagnostics\\captures\\current\\preingame_issue_cards_g1casta1_20260518\\12_moneypenny.jpg",
+      "mismatch": "No safe current capture means this page cannot be honestly marked fixed.",
+      "target": "Capture through a safe route, then compare text block, tabs, and paper bounds.",
+      "measurement": "No current measurement yet.",
+      "reference_active_bbox": [
+        5,
+        0,
+        703,
+        532
+      ],
+      "current_active_bbox": null
+    },
+    {
+      "name": "13_objectives",
+      "title": "13 Primary Objectives",
+      "status": "BLOCKED: reference exists, current capture still required",
+      "reference": "C:/Users/codex/Pictures/vlcsnap-2026-05-18-18h15m43s930.png",
+      "current": null,
+      "out": "diagnostics\\captures\\current\\preingame_issue_cards_g1casta1_20260518\\13_objectives.jpg",
+      "mismatch": "No safe current capture means this page cannot be honestly marked fixed.",
+      "target": "Capture through a safe route, then compare mission photo, objective text block, tabs, and paper bounds.",
+      "measurement": "No current measurement yet.",
+      "reference_active_bbox": [
+        5,
+        0,
+        702,
+        533
+      ],
+      "current_active_bbox": null
+    }
+  ]
+}

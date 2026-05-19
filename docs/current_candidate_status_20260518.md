@@ -2,13 +2,13 @@
 
 Current best hardware candidate:
 
-- ROM: `artifacts/generated/g1casta1.z64`
-- Save: `artifacts/generated/g1casta1.sav`
-- BPS: `artifacts/generated/TND6480i_g1casta1_from_baseline_tnd.bps`
-- ROM MD5: `73cfc56eb1f20e83a533956ab811fd24`
-- Patch MD5: `1f4fa34581cc6156ab34b47168851230`
+- ROM: `artifacts/generated/g1class1.z64`
+- Save: `artifacts/generated/g1class1.sav`
+- BPS: `artifacts/generated/TND6480i_g1class1_from_baseline_tnd.bps`
+- ROM MD5: `77ecf1aa6fdd0c5bee31198991162a26`
+- Patch MD5: `5209be40077fae2f92b9b245fc71e99b`
 
-`g1casta1` is `g1castz1` plus the known scaled 640x430 gunbarrel RLE asset transplant and matching title/gunbarrel draw-target words. It intentionally does not change gameplay, level loading, pause menu, HUD, or dossier tables beyond the stable inherited work.
+`g1class1` is `g1casta1` plus the GE480i legal/classification page geometry table at raw 1172 offset `0x9C3C`. The patch copies only the first 16 bytes of each of the 12 legal table records, preserving TND64 text IDs and leaving gameplay, level loading, pause menu, HUD, dossier tables, gunbarrel assets, and title assets untouched.
 
 ## Hardware Evidence
 
@@ -17,33 +17,41 @@ Primary per-screen acceptance atlas:
 - `diagnostics/captures/current/preingame_annotations_g1casta1_20260518.jpg`
 - Machine-readable manifest: `reports/preingame_annotations_g1casta1_20260518.json`
 - Individual cards: `diagnostics/captures/current/preingame_annotations_g1casta1_20260518/`
+- Strict issue atlas: `diagnostics/captures/current/preingame_issue_cards_g1casta1_20260518.jpg`
+- Strict issue manifest: `reports/preingame_issue_cards_g1casta1_20260518.json`
 
 Gunbarrel and front-end capture evidence:
 
 - `diagnostics/captures/contact_sheets/g1casta1_full_front_hardware_cycled_20260518.jpg`
 - `diagnostics/captures/contact_sheets/g1casta1_gunbarrel_detail_20260518.jpg`
 - `diagnostics/captures/contact_sheets/g1casta1_title_transition_20260518.jpg`
+- Classification fix card: `diagnostics/captures/current/g1class1_classification_fix_card_20260518.jpg`
+- Classification startup capture: `diagnostics/captures/contact_sheets/g1class1_startup_cycle_20260518.jpg`
 
 Build reports:
 
 - `reports/tnd480i_g1casta1_gunbarrel_asset_transplant_20260518.json`
 - `reports/tnd6480i_g1casta1_bps_manifest.json`
+- `reports/tnd480i_g1class1_legal_classification_20260518.json`
+- `reports/tnd6480i_g1class1_bps_manifest.json`
 
 ## Current Read
 
-The strobe-producing forced briefing route is rejected and should not be used as a basis for more ROM work. The safe current candidate is `g1casta1`.
+The strobe-producing forced briefing route is rejected and should not be used as a basis for more ROM work. The safe current candidate is `g1class1`.
 
 Pass or likely-pass:
 
 - Gameplay path inherited from `g1castz1`; user previously reported all levels boot, Bazaar/Labs look fine, pause menu looks fine, bullets UI is good.
+- Classification board geometry now follows the GE480i legal-page spread while preserving TND wording/art.
 - Gunbarrel visual composition is much closer to GE480i after the asset transplant; the offset/second aperture is gone.
-- File select, mode select, and difficulty pages are usable and visually close enough to defer broad changes.
 
 Still needs work or proof:
 
+- File select still needs a GE480i-aligned dossier/background envelope check. The current file labels/icons are visible, but the right-side background/bleed is not accepted yet.
+- Mode select must be judged from normal navigation, not only the direct route, because direct routes can bypass live cursor initialization.
 - Mission-select labels need a targeted alignment pass against the GE480i film-caption bands while preserving TND's reduced mission count and red-folder style.
+- Difficulty select rows/paper bounds still need a page-specific alignment pass.
 - Briefing, Moneypenny, and Primary Objectives need a safe current capture route. The forced route caused strobing, so do not judge or patch these from that route.
-- Classification screen needs a final safe-area check, but it is lower priority than mission select and objective pages.
 - Gunbarrel cadence still needs a live timing check against stock TND64 and GE480i, even though composition is now much better.
 
 ## Rejected Candidates
@@ -56,8 +64,8 @@ Still needs work or proof:
 
 ## Next Work Order
 
-1. Keep `g1casta1` as the safety baseline.
+1. Keep `g1class1` as the safety baseline.
 2. Do not patch from the rejected forced briefing/strobe route.
-3. Fix mission-select label placement with a small table-only or callsite-only change, then hardware-capture that one screen before judging.
+3. Fix dossier/front-end screens one page at a time from the strict issue atlas, with a comparison card after each hardware capture.
 4. Build a safe route or request manual help for Briefing, Moneypenny, and Objectives; add those current captures to the atlas.
-5. Only after those pass, revisit classification and final gunbarrel cadence.
+5. Only after dossier pages pass, revisit opening credits/logos and final gunbarrel cadence.

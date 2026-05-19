@@ -1,0 +1,384 @@
+{
+  "base_rom": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1casta1.z64",
+  "ge480i_rom": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\roms\\BASELINE_GE_480i_direct_from_stock.z64",
+  "out_rom": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1class1.z64",
+  "out_md5": "77ecf1aa6fdd0c5bee31198991162a26",
+  "out_sha256": "b0578a59043ec671fd298eacb8d3cf3486c1f0a741c05a953c6ef02758370ca9",
+  "header_crc": "92C87AC5 163855FE",
+  "purpose": "Patch only the legal/classification page table at raw 0x9C3C to GE480i geometry/alignment while preserving TND text IDs.",
+  "raw_offset": "0x9C3C",
+  "records": 12,
+  "slot_len": "0x10035",
+  "allowed_packed_len": "0x103CC",
+  "zero_pad_growth": "0x397",
+  "packed_len": "0x10050",
+  "verify_consumed": "0x1004C",
+  "base_raw_md5": "b77ac94fd19847299613d6ab600047a2",
+  "patched_raw_md5": "de79a49f34cd1206d188f55d18a2fda2",
+  "rows": [
+    {
+      "idx": 0,
+      "raw_offset": "0x9C3C",
+      "old": {
+        "h_pos": 220,
+        "v_pos": 30,
+        "halign": 1,
+        "valign": 1,
+        "txtID": 39943,
+        "anonymous_5": 0
+      },
+      "ge480i": {
+        "h_pos": 320,
+        "v_pos": 60,
+        "halign": 1,
+        "valign": 1,
+        "txtID": 39943,
+        "anonymous_5": 0
+      },
+      "new": {
+        "h_pos": 320,
+        "v_pos": 60,
+        "halign": 1,
+        "valign": 1,
+        "txtID": 39943,
+        "anonymous_5": 0
+      },
+      "text_id_preserved": true
+    },
+    {
+      "idx": 1,
+      "raw_offset": "0x9C50",
+      "old": {
+        "h_pos": 34,
+        "v_pos": 83,
+        "halign": 0,
+        "valign": 1,
+        "txtID": 39944,
+        "anonymous_5": 0
+      },
+      "ge480i": {
+        "h_pos": 50,
+        "v_pos": 126,
+        "halign": 0,
+        "valign": 1,
+        "txtID": 39944,
+        "anonymous_5": 0
+      },
+      "new": {
+        "h_pos": 50,
+        "v_pos": 126,
+        "halign": 0,
+        "valign": 1,
+        "txtID": 39944,
+        "anonymous_5": 0
+      },
+      "text_id_preserved": true
+    },
+    {
+      "idx": 2,
+      "raw_offset": "0x9C64",
+      "old": {
+        "h_pos": 226,
+        "v_pos": 84,
+        "halign": 0,
+        "valign": 1,
+        "txtID": 39945,
+        "anonymous_5": 0
+      },
+      "ge480i": {
+        "h_pos": 393,
+        "v_pos": 126,
+        "halign": 0,
+        "valign": 1,
+        "txtID": 39945,
+        "anonymous_5": 0
+      },
+      "new": {
+        "h_pos": 393,
+        "v_pos": 126,
+        "halign": 0,
+        "valign": 1,
+        "txtID": 39945,
+        "anonymous_5": 0
+      },
+      "text_id_preserved": true
+    },
+    {
+      "idx": 3,
+      "raw_offset": "0x9C78",
+      "old": {
+        "h_pos": 226,
+        "v_pos": 97,
+        "halign": 0,
+        "valign": 1,
+        "txtID": 39946,
+        "anonymous_5": 0
+      },
+      "ge480i": {
+        "h_pos": 393,
+        "v_pos": 141,
+        "halign": 0,
+        "valign": 1,
+        "txtID": 39946,
+        "anonymous_5": 0
+      },
+      "new": {
+        "h_pos": 393,
+        "v_pos": 141,
+        "halign": 0,
+        "valign": 1,
+        "txtID": 39946,
+        "anonymous_5": 0
+      },
+      "text_id_preserved": true
+    },
+    {
+      "idx": 4,
+      "raw_offset": "0x9C8C",
+      "old": {
+        "h_pos": 226,
+        "v_pos": 110,
+        "halign": 0,
+        "valign": 1,
+        "txtID": 39947,
+        "anonymous_5": 0
+      },
+      "ge480i": {
+        "h_pos": 393,
+        "v_pos": 156,
+        "halign": 0,
+        "valign": 1,
+        "txtID": 39947,
+        "anonymous_5": 0
+      },
+      "new": {
+        "h_pos": 393,
+        "v_pos": 156,
+        "halign": 0,
+        "valign": 1,
+        "txtID": 39947,
+        "anonymous_5": 0
+      },
+      "text_id_preserved": true
+    },
+    {
+      "idx": 5,
+      "raw_offset": "0x9CA0",
+      "old": {
+        "h_pos": 226,
+        "v_pos": 122,
+        "halign": 0,
+        "valign": 1,
+        "txtID": 39948,
+        "anonymous_5": 0
+      },
+      "ge480i": {
+        "h_pos": 393,
+        "v_pos": 171,
+        "halign": 0,
+        "valign": 1,
+        "txtID": 39948,
+        "anonymous_5": 0
+      },
+      "new": {
+        "h_pos": 393,
+        "v_pos": 171,
+        "halign": 0,
+        "valign": 1,
+        "txtID": 39948,
+        "anonymous_5": 0
+      },
+      "text_id_preserved": true
+    },
+    {
+      "idx": 6,
+      "raw_offset": "0x9CB4",
+      "old": {
+        "h_pos": 227,
+        "v_pos": 134,
+        "halign": 0,
+        "valign": 1,
+        "txtID": 39949,
+        "anonymous_5": 0
+      },
+      "ge480i": {
+        "h_pos": 394,
+        "v_pos": 186,
+        "halign": 0,
+        "valign": 1,
+        "txtID": 39949,
+        "anonymous_5": 0
+      },
+      "new": {
+        "h_pos": 394,
+        "v_pos": 186,
+        "halign": 0,
+        "valign": 1,
+        "txtID": 39949,
+        "anonymous_5": 0
+      },
+      "text_id_preserved": true
+    },
+    {
+      "idx": 7,
+      "raw_offset": "0x9CC8",
+      "old": {
+        "h_pos": 219,
+        "v_pos": 211,
+        "halign": 0,
+        "valign": 1,
+        "txtID": 39950,
+        "anonymous_5": 0
+      },
+      "ge480i": {
+        "h_pos": 448,
+        "v_pos": 307,
+        "halign": 1,
+        "valign": 1,
+        "txtID": 39950,
+        "anonymous_5": 0
+      },
+      "new": {
+        "h_pos": 448,
+        "v_pos": 307,
+        "halign": 1,
+        "valign": 1,
+        "txtID": 39950,
+        "anonymous_5": 0
+      },
+      "text_id_preserved": true
+    },
+    {
+      "idx": 8,
+      "raw_offset": "0x9CDC",
+      "old": {
+        "h_pos": 60,
+        "v_pos": 169,
+        "halign": 0,
+        "valign": 1,
+        "txtID": 39951,
+        "anonymous_5": 0
+      },
+      "ge480i": {
+        "h_pos": 87,
+        "v_pos": 246,
+        "halign": 0,
+        "valign": 1,
+        "txtID": 39951,
+        "anonymous_5": 0
+      },
+      "new": {
+        "h_pos": 87,
+        "v_pos": 246,
+        "halign": 0,
+        "valign": 1,
+        "txtID": 39951,
+        "anonymous_5": 0
+      },
+      "text_id_preserved": true
+    },
+    {
+      "idx": 9,
+      "raw_offset": "0x9CF0",
+      "old": {
+        "h_pos": 60,
+        "v_pos": 201,
+        "halign": 0,
+        "valign": 1,
+        "txtID": 39952,
+        "anonymous_5": 0
+      },
+      "ge480i": {
+        "h_pos": 87,
+        "v_pos": 292,
+        "halign": 0,
+        "valign": 1,
+        "txtID": 39952,
+        "anonymous_5": 0
+      },
+      "new": {
+        "h_pos": 87,
+        "v_pos": 292,
+        "halign": 0,
+        "valign": 1,
+        "txtID": 39952,
+        "anonymous_5": 0
+      },
+      "text_id_preserved": true
+    },
+    {
+      "idx": 10,
+      "raw_offset": "0x9D04",
+      "old": {
+        "h_pos": 99,
+        "v_pos": 266,
+        "halign": 0,
+        "valign": 1,
+        "txtID": 39953,
+        "anonymous_5": 0
+      },
+      "ge480i": {
+        "h_pos": 320,
+        "v_pos": 371,
+        "halign": 1,
+        "valign": 1,
+        "txtID": 39953,
+        "anonymous_5": 0
+      },
+      "new": {
+        "h_pos": 320,
+        "v_pos": 371,
+        "halign": 1,
+        "valign": 1,
+        "txtID": 39953,
+        "anonymous_5": 0
+      },
+      "text_id_preserved": true
+    },
+    {
+      "idx": 11,
+      "raw_offset": "0x9D18",
+      "old": {
+        "h_pos": 80,
+        "v_pos": 280,
+        "halign": 0,
+        "valign": 1,
+        "txtID": 39954,
+        "anonymous_5": 0
+      },
+      "ge480i": {
+        "h_pos": 320,
+        "v_pos": 386,
+        "halign": 1,
+        "valign": 1,
+        "txtID": 39954,
+        "anonymous_5": 0
+      },
+      "new": {
+        "h_pos": 320,
+        "v_pos": 386,
+        "halign": 1,
+        "valign": 1,
+        "txtID": 39954,
+        "anonymous_5": 0
+      },
+      "text_id_preserved": true
+    }
+  ],
+  "save_outputs": [
+    {
+      "source": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1casta1.sav",
+      "target": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1class1.sav",
+      "bytes": 512,
+      "md5": "79ed3fe6851b080ff21de69fd12f034d"
+    },
+    {
+      "source": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1casta1.eep",
+      "target": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1class1.eep",
+      "bytes": 2048,
+      "md5": "e47f5c07623838e875761a0493388e03"
+    }
+  ],
+  "bps_patch": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\TND6480i_g1class1_from_baseline_tnd.bps",
+  "bps_manifest": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\reports\\tnd6480i_g1class1_bps_manifest.json"
+}

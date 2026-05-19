@@ -1,0 +1,35 @@
+{
+  "card": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\diagnostics\\captures\\current\\g1class1_classification_fix_card_20260518.jpg",
+  "entries": [
+    {
+      "label": "GE480i reference",
+      "path": "C:\\Users\\codex\\Pictures\\vlcsnap-2026-05-18-18h14m11s759.png",
+      "active_bbox": [
+        58,
+        59,
+        657,
+        440
+      ]
+    },
+    {
+      "label": "old g1casta1",
+      "path": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\diagnostics\\captures\\contact_sheets\\g1casta1_full_front_hardware_cycled_20260518\\frames\\frame_0002_00010000.png",
+      "active_bbox": [
+        43,
+        25,
+        657,
+        363
+      ]
+    },
+    {
+      "label": "new g1class1 hardware",
+      "path": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\diagnostics\\captures\\current\\g1class1_classification_hw_20260518.png",
+      "active_bbox": [
+        58,
+        59,
+        657,
+        448
+      ]
+    }
+  ]
+}
