@@ -1,0 +1,1375 @@
+{
+  "source": "artifacts\\generated\\g1mcfix3.z64",
+  "output": "artifacts\\generated\\g1mcfix4.z64",
+  "current_alias": "artifacts\\generated\\TND6480i_current_g1mcfix4.z64",
+  "source_md5": "f4ad83c7af4b2ce63bc26bb2bc54d0fc",
+  "output_md5": "fa93be061c59ef5cabad24fbf5f66b39",
+  "header_crc": "0D2B82EF 93766C37",
+  "patch_count": 227,
+  "patch_strategy": "Port GE stock->GE480i words in the multiplayer menu cluster only where g1mcfix3 still matched stock GE. This leaves TND/custom/current non-stock words untouched.",
+  "manual_evidence": "diagnostics/captures/current/g1mcfix3_live_multiplayer_probe_20260519.png showed MP options still at stock 240p-era coordinates and overlapping OHMSS.",
+  "patches": [
+    {
+      "offset": "0x4566C",
+      "old": "24030001",
+      "new": "00021B42",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x456C4",
+      "old": "AFB9003C",
+      "new": "AFA3003C",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x456E0",
+      "old": "AFA90038",
+      "new": "AFA30038",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x456FC",
+      "old": "AFAB0034",
+      "new": "AFA30034",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x45718",
+      "old": "AFAD0030",
+      "new": "AFA30030",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x45734",
+      "old": "AFAF002C",
+      "new": "AFA3002C",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x45750",
+      "old": "AFB90028",
+      "new": "AFA30028",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x4576C",
+      "old": "AFA90024",
+      "new": "AFA30024",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x45788",
+      "old": "AFAB0020",
+      "new": "AFA30020",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x459A8",
+      "old": "00000000",
+      "new": "25C4FFFD",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x459DC",
+      "old": "00000000",
+      "new": "2704FFFD",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x45A2C",
+      "old": "00000000",
+      "new": "2524FFFD",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x45A80",
+      "old": "240E0037",
+      "new": "240E0050",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x45A84",
+      "old": "240F005F",
+      "new": "240F008A",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x45B28",
+      "old": "240B0039",
+      "new": "240B0052",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x45B2C",
+      "old": "240C0079",
+      "new": "240C00A4",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x45B40",
+      "old": "240E0087",
+      "new": "258E000E",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x45B54",
+      "old": "24050037",
+      "new": "2565FFFE",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x45B58",
+      "old": "24060078",
+      "new": "2586FFFF",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x45B60",
+      "old": "24E7003C",
+      "new": "24E70057",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x45C00",
+      "old": "240B0039",
+      "new": "8FAC0054",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x45C04",
+      "old": "240C008D",
+      "new": "8FAB0058",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x45C08",
+      "old": "AFAB0058",
+      "new": "258C0005",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x45C18",
+      "old": "240E009B",
+      "new": "258E000E",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x45C2C",
+      "old": "24050037",
+      "new": "2565FFFE",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x45C30",
+      "old": "2406008C",
+      "new": "2586FFFF",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x45C38",
+      "old": "24E7003C",
+      "new": "24E70057",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x45CD8",
+      "old": "240B0039",
+      "new": "8FAC0054",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x45CDC",
+      "old": "240C00A1",
+      "new": "8FAB0058",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x45CE0",
+      "old": "AFAB0058",
+      "new": "258C0005",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x45CF0",
+      "old": "240E00AF",
+      "new": "258E000E",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x45D04",
+      "old": "24050037",
+      "new": "2565FFFE",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x45D08",
+      "old": "240600A0",
+      "new": "2586FFFF",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x45D10",
+      "old": "24E7003C",
+      "new": "24E70057",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x45DCC",
+      "old": "240B0039",
+      "new": "8FAC0054",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x45DD0",
+      "old": "240C00B5",
+      "new": "8FAB0058",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x45DD4",
+      "old": "AFAB0058",
+      "new": "258C0005",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x45DE4",
+      "old": "240E00C3",
+      "new": "258E000E",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x45DF8",
+      "old": "24050037",
+      "new": "2565FFFE",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x45DFC",
+      "old": "240600B4",
+      "new": "2586FFFF",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x45E04",
+      "old": "24E7003C",
+      "new": "24E70057",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x45EC0",
+      "old": "240B0039",
+      "new": "8FAC0054",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x45EC4",
+      "old": "240C00C9",
+      "new": "8FAB0058",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x45EC8",
+      "old": "AFAB0058",
+      "new": "258C0005",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x45ED8",
+      "old": "240E00D7",
+      "new": "258E000E",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x45EEC",
+      "old": "24050037",
+      "new": "2565FFFE",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x45EF0",
+      "old": "240600C8",
+      "new": "2586FFFF",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x45EF8",
+      "old": "24E7003C",
+      "new": "24E70057",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x45FB4",
+      "old": "240B0039",
+      "new": "8FAC0054",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x45FB8",
+      "old": "240C00DD",
+      "new": "8FAB0058",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x45FBC",
+      "old": "AFAB0058",
+      "new": "258C0005",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x45FCC",
+      "old": "240E00EB",
+      "new": "258E000E",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x45FE0",
+      "old": "24050037",
+      "new": "2565FFFE",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x45FE4",
+      "old": "240600DC",
+      "new": "2586FFFF",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x45FEC",
+      "old": "24E7003C",
+      "new": "24E70057",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x460A8",
+      "old": "240B0039",
+      "new": "8FAC0054",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x460AC",
+      "old": "240C00F1",
+      "new": "8FAB0058",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x460B0",
+      "old": "AFAB0058",
+      "new": "258C0005",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x460C0",
+      "old": "240E00FF",
+      "new": "258E000E",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x460D4",
+      "old": "24050037",
+      "new": "2565FFFE",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x460D8",
+      "old": "240600F0",
+      "new": "2586FFFF",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x460E0",
+      "old": "24E7003C",
+      "new": "24E70057",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x4619C",
+      "old": "240B0039",
+      "new": "8FAC0054",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x461A0",
+      "old": "240C0105",
+      "new": "8FAB0058",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x461A4",
+      "old": "AFAB0058",
+      "new": "258C0005",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x461B4",
+      "old": "240E0113",
+      "new": "258E000E",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x461C8",
+      "old": "24050037",
+      "new": "2565FFFE",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x461CC",
+      "old": "24060104",
+      "new": "2586FFFF",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x461D4",
+      "old": "24E7003C",
+      "new": "24E70057",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x46290",
+      "old": "240B0039",
+      "new": "8FAC0054",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x46294",
+      "old": "240C0119",
+      "new": "8FAB0058",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x46298",
+      "old": "AFAB0058",
+      "new": "258C0005",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x462A8",
+      "old": "240E0127",
+      "new": "258E000E",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x462BC",
+      "old": "24050037",
+      "new": "2565FFFE",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x462C0",
+      "old": "24060118",
+      "new": "2586FFFF",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x462C8",
+      "old": "24E7003C",
+      "new": "24E70057",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x46360",
+      "old": "240A00A0",
+      "new": "240A00B9",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x46364",
+      "old": "240B0079",
+      "new": "240B00A4",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x463E4",
+      "old": "240800A0",
+      "new": "240800B9",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x463E8",
+      "old": "2409008D",
+      "new": "240900B8",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x4647C",
+      "old": "241800A0",
+      "new": "241800B9",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x46480",
+      "old": "241900A1",
+      "new": "241900CC",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x46528",
+      "old": "240E00A0",
+      "new": "240E00B9",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x4652C",
+      "old": "240F00B5",
+      "new": "240F00E0",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x465BC",
+      "old": "240A00A0",
+      "new": "240A00B9",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x465C0",
+      "old": "240B00C9",
+      "new": "240B00F4",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x46660",
+      "old": "240800A0",
+      "new": "240800B9",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x46664",
+      "old": "24090119",
+      "new": "24090144",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x46EB8",
+      "old": "3C0143A5",
+      "new": "3C0143F0",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x46ED8",
+      "old": "3C0643DC",
+      "new": "3C064420",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x46F1C",
+      "old": "26AE0023",
+      "new": "26AE0033",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x46F20",
+      "old": "26AA002A",
+      "new": "26AA003D",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x4732C",
+      "old": "240E00AB",
+      "new": "240E00F8",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x47340",
+      "old": "24050026",
+      "new": "24050037",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x47344",
+      "old": "240600A9",
+      "new": "240600F6",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x4734C",
+      "old": "24070184",
+      "new": "24070234",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x47364",
+      "old": "240500D4",
+      "new": "24050138",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x47368",
+      "old": "24180136",
+      "new": "241801C3",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x47378",
+      "old": "2406001E",
+      "new": "2406002C",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x47380",
+      "old": "240700D6",
+      "new": "2407013A",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x473E8",
+      "old": "24120026",
+      "new": "24120037",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x473F0",
+      "old": "2414015E",
+      "new": "241401FD",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x473F8",
+      "old": "241700AA",
+      "new": "241700F7",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x47404",
+      "old": "2477001E",
+      "new": "2477002C",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x47410",
+      "old": "241400AF",
+      "new": "241400FC",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x47418",
+      "old": "2403008C",
+      "new": "240300CB",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x47424",
+      "old": "2477001E",
+      "new": "2477002C",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x4742C",
+      "old": "240300AF",
+      "new": "240300FC",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x47434",
+      "old": "24720026",
+      "new": "24720037",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x47440",
+      "old": "26F00005",
+      "new": "26F00007",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x47498",
+      "old": "26ED0087",
+      "new": "26ED00C6",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x47618",
+      "old": "26ED0078",
+      "new": "26ED00AF",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x476A0",
+      "old": "26F50046",
+      "new": "26F50066",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x47740",
+      "old": "24E7FF04",
+      "new": "24E7FE92",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x47784",
+      "old": "24E7FF58",
+      "new": "24E7FF0C",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x477C8",
+      "old": "24E7FFAC",
+      "new": "24E7FF86",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x47824",
+      "old": "24E70054",
+      "new": "24E7007A",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x47870",
+      "old": "24E700A8",
+      "new": "24E700F4",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x478C4",
+      "old": "24E700FC",
+      "new": "24E7016E",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x47D14",
+      "old": "240E00AB",
+      "new": "240E00F8",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x47D28",
+      "old": "24050026",
+      "new": "24050037",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x47D2C",
+      "old": "240600A9",
+      "new": "240600F6",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x47D34",
+      "old": "24070184",
+      "new": "24070234",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x47D4C",
+      "old": "240500D4",
+      "new": "24050138",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x47D50",
+      "old": "24180136",
+      "new": "241801C3",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x47D60",
+      "old": "2406001E",
+      "new": "2406002C",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x47D68",
+      "old": "240700D6",
+      "new": "2407013A",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x47DB4",
+      "old": "24130026",
+      "new": "24130037",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x47DC4",
+      "old": "2415015E",
+      "new": "241501FD",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x47DCC",
+      "old": "241200AA",
+      "new": "241200F7",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x47DD8",
+      "old": "2472001E",
+      "new": "2472002C",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x47DE4",
+      "old": "241500AF",
+      "new": "241500FC",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x47DEC",
+      "old": "2403008C",
+      "new": "240300CB",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x47DF8",
+      "old": "2472001E",
+      "new": "2472002C",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x47E00",
+      "old": "240300AF",
+      "new": "240300FC",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x47E08",
+      "old": "24730026",
+      "new": "24730037",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x47E68",
+      "old": "26590087",
+      "new": "265900C6",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x47F08",
+      "old": "252A0037",
+      "new": "252A0050",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x47F88",
+      "old": "26540046",
+      "new": "26540066",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x48518",
+      "old": "240E00AB",
+      "new": "240E00F8",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x4852C",
+      "old": "24050026",
+      "new": "24050037",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x48530",
+      "old": "240600A9",
+      "new": "240600F6",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x48538",
+      "old": "24070184",
+      "new": "24070234",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x48550",
+      "old": "240500D4",
+      "new": "24050138",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x48554",
+      "old": "24180136",
+      "new": "241801C3",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x48564",
+      "old": "2406001E",
+      "new": "2406002C",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x4856C",
+      "old": "240700D6",
+      "new": "2407013A",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x485B8",
+      "old": "24130026",
+      "new": "24130037",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x485C8",
+      "old": "2415015E",
+      "new": "241501FD",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x485D0",
+      "old": "241200AA",
+      "new": "241200F7",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x485DC",
+      "old": "2472001E",
+      "new": "2472002C",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x485E8",
+      "old": "241500AF",
+      "new": "241500FC",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x485F0",
+      "old": "2403008C",
+      "new": "240300CB",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x485FC",
+      "old": "2472001E",
+      "new": "2472002C",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x48604",
+      "old": "240300AF",
+      "new": "240300FC",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x4860C",
+      "old": "24730026",
+      "new": "24730037",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x4866C",
+      "old": "26590087",
+      "new": "265900C6",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x4870C",
+      "old": "252A0037",
+      "new": "252A0050",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x4878C",
+      "old": "26540046",
+      "new": "26540066",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x489A0",
+      "old": "284100F0",
+      "new": "24030005",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x489A4",
+      "old": "54200004",
+      "new": "24080186",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x489A8",
+      "old": "284100AA",
+      "new": "0048082A",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x489AC",
+      "old": "10000006",
+      "new": "10200003",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x489B0",
+      "old": "24030002",
+      "new": "2463FFFF",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x489B4",
+      "old": "284100AA",
+      "new": "1460FFFC",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x489B8",
+      "old": "14200003",
+      "new": "2508FFBA",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x489BC",
+      "old": "00001825",
+      "new": "24080006",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x489C0",
+      "old": "10000001",
+      "new": "00680019",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x489C4",
+      "old": "24030001",
+      "new": "00000000",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x489D0",
+      "old": "0003C880",
+      "new": "0000C812",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x489E0",
+      "old": "28410124",
+      "new": "240301DB",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x489E4",
+      "old": "54200004",
+      "new": "0043082A",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x489E8",
+      "old": "284100CF",
+      "new": "10200003",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x489EC",
+      "old": "1000000B",
+      "new": "2508FFFF",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x489F0",
+      "old": "24020003",
+      "new": "1500FFFC",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x489F4",
+      "old": "284100CF",
+      "new": "2463FFAC",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x489F8",
+      "old": "54200004",
+      "new": "01001025",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x489FC",
+      "old": "2841007A",
+      "new": "00000000",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x48A00",
+      "old": "10000006",
+      "new": "00000000",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x48A04",
+      "old": "24020002",
+      "new": "00000000",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x48A08",
+      "old": "2841007A",
+      "new": "00000000",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x48A0C",
+      "old": "14200003",
+      "new": "00000000",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x48A10",
+      "old": "00001025",
+      "new": "00000000",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x48A14",
+      "old": "10000001",
+      "new": "00000000",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x48A18",
+      "old": "24020001",
+      "new": "00000000",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x48BF8",
+      "old": "2411006C",
+      "new": "24110076",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x48BFC",
+      "old": "241000A0",
+      "new": "241000AA",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x48C00",
+      "old": "24130172",
+      "new": "24130208",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x48C08",
+      "old": "24050025",
+      "new": "24050037",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x48C10",
+      "old": "24070185",
+      "new": "24070235",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x48C7C",
+      "old": "3C014330",
+      "new": "3C01437F",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x48C8C",
+      "old": "3C014214",
+      "new": "3C01425C",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x48C94",
+      "old": "3C0142C8",
+      "new": "3C0142DC",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x48D9C",
+      "old": "24010003",
+      "new": "24010005",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x48DC0",
+      "old": "3C0142D8",
+      "new": "3C0142EC",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x48DD4",
+      "old": "3C0142AA",
+      "new": "3C0142A8",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x48E0C",
+      "old": "3C0142AC",
+      "new": "3C0142C8",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x49010",
+      "old": "24010004",
+      "new": "24010006",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x4902C",
+      "old": "24010003",
+      "new": "24010005",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x4904C",
+      "old": "24180097",
+      "new": "241800A1",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x49068",
+      "old": "24160056",
+      "new": "24160062",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x49200",
+      "old": "24010004",
+      "new": "24010006",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x49204",
+      "old": "26D60055",
+      "new": "26D60054",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x49218",
+      "old": "24010003",
+      "new": "24010005",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x4938C",
+      "old": "2412011D",
+      "new": "2412013E",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x495D8",
+      "old": "240E0037",
+      "new": "240E0050",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x495DC",
+      "old": "24030066",
+      "new": "2403008A",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x4965C",
+      "old": "24150083",
+      "new": "241500A4",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x496C8",
+      "old": "240C0039",
+      "new": "240C0052",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x496F8",
+      "old": "24050037",
+      "new": "24050050",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x49708",
+      "old": "24E7003C",
+      "new": "24E70055",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x49CD0",
+      "old": "240E00AB",
+      "new": "240E00F8",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x49CE4",
+      "old": "24050026",
+      "new": "24050037",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x49CE8",
+      "old": "240600A9",
+      "new": "240600F6",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x49CF0",
+      "old": "24070184",
+      "new": "24070234",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x49D08",
+      "old": "240500D4",
+      "new": "24050138",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x49D0C",
+      "old": "24190136",
+      "new": "241901C3",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x49D1C",
+      "old": "2406001E",
+      "new": "2406002C",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x49D24",
+      "old": "240700D6",
+      "new": "2407013A",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x49D60",
+      "old": "2402008C",
+      "new": "240200CB",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x49D6C",
+      "old": "2456001E",
+      "new": "2456002C",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x49D74",
+      "old": "240200AF",
+      "new": "240200FC",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x49D7C",
+      "old": "244B002C",
+      "new": "244B003D",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x49D90",
+      "old": "244B00CF",
+      "new": "244B00E5",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x49D94",
+      "old": "26D90087",
+      "new": "26D900C6",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x49DA8",
+      "old": "2451007D",
+      "new": "245100B9",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    },
+    {
+      "offset": "0x49F74",
+      "old": "252A0046",
+      "new": "252A0066",
+      "cluster": "GE480i multiplayer menu0E-0F/control-style layout delta"
+    }
+  ]
+}

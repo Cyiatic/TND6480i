@@ -1,0 +1,62 @@
+{
+  "source_save": "artifacts\\generated\\g1mcfix1_allmissions_allcheats.sav",
+  "source_save_bytes": 512,
+  "source_save_md5": "10a68a5afa9dd07665cb06cca75b8a24",
+  "gopher_save_dir": "C:\\Users\\codex\\AppData\\Roaming\\gopher64\\saves",
+  "parallel_save_dir": "C:\\Users\\codex\\AppData\\Local\\parallel-launcher\\data\\retro-data\\saves",
+  "parallel_srm_template": null,
+  "roms": [
+    {
+      "rom": "artifacts\\generated\\g1mcfix4.z64",
+      "rom_md5": "fa93be061c59ef5cabad24fbf5f66b39",
+      "rom_sha256": "FBEBBAF5112E24126FD9D11FAC2ED0A126155B6D193E86412B058251CF8649B9",
+      "internal_title": "GOLDENEYE",
+      "writes": [
+        {
+          "path": "artifacts\\generated\\g1mcfix4.sav",
+          "bytes": 512,
+          "backup": null,
+          "changed": true
+        },
+        {
+          "path": "artifacts\\generated\\g1mcfix4.eep",
+          "bytes": 2048,
+          "backup": null,
+          "changed": true
+        },
+        {
+          "path": "C:\\Users\\codex\\AppData\\Roaming\\gopher64\\saves\\GOLDENEYE-FBEBBAF5112E24126FD9D11FAC2ED0A126155B6D193E86412B058251CF8649B9.eep",
+          "bytes": 2048,
+          "backup": null,
+          "changed": true
+        }
+      ]
+    },
+    {
+      "rom": "artifacts\\generated\\TND6480i_current_g1mcfix4.z64",
+      "rom_md5": "fa93be061c59ef5cabad24fbf5f66b39",
+      "rom_sha256": "FBEBBAF5112E24126FD9D11FAC2ED0A126155B6D193E86412B058251CF8649B9",
+      "internal_title": "GOLDENEYE",
+      "writes": [
+        {
+          "path": "artifacts\\generated\\TND6480i_current_g1mcfix4.sav",
+          "bytes": 512,
+          "backup": null,
+          "changed": true
+        },
+        {
+          "path": "artifacts\\generated\\TND6480i_current_g1mcfix4.eep",
+          "bytes": 2048,
+          "backup": null,
+          "changed": true
+        },
+        {
+          "path": "C:\\Users\\codex\\AppData\\Roaming\\gopher64\\saves\\GOLDENEYE-FBEBBAF5112E24126FD9D11FAC2ED0A126155B6D193E86412B058251CF8649B9.eep",
+          "bytes": 2048,
+          "backup": null,
+          "changed": false
+        }
+      ]
+    }
+  ]
+}
