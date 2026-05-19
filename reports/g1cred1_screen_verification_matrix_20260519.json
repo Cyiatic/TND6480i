@@ -1,0 +1,121 @@
+{
+  "candidate": "g1cred1",
+  "candidate_md5": "af038b44f872973961c28f92f114e61d",
+  "method": "GV-USB2 frames normalized from 720x480 capture to 720x540 display aspect; comparison is geometric/layout, not pixel identity.",
+  "rows": [
+    {
+      "screen": "Opening cast credits",
+      "status": "PASS-ish",
+      "note": "Text is high-res/small and onscreen. Art/cast positions differ by TND content, but no clipping or stock-size text failure is visible in the sampled frames.",
+      "reference": "diagnostics/captures/contact_sheets/verify_opening_credits_ge480i_20260518/frames/frame_0004_00058000.png",
+      "current": "diagnostics/captures/contact_sheets/g1cred1_live_probe_opening_credits_now_20260519/frames/frame_0004_00020000.png",
+      "reference_active_bbox": [
+        28,
+        159,
+        563,
+        490
+      ],
+      "current_active_bbox": [
+        270,
+        97,
+        448,
+        533
+      ]
+    },
+    {
+      "screen": "File select dossier",
+      "status": "PASS visual",
+      "note": "Icons and Select File/Copy/Erase are present; four folders fit. TND red/black background differs from GE green reference by design.",
+      "reference": "C:\\Users\\codex\\Pictures\\vlcsnap-2026-05-18-18h14m25s727.png",
+      "current": "diagnostics/captures/current/g1cred1_route_frames_20260519/g1cauto05_file_select.png",
+      "reference_active_bbox": [
+        7,
+        32,
+        707,
+        512
+      ],
+      "current_active_bbox": [
+        7,
+        39,
+        707,
+        512
+      ]
+    },
+    {
+      "screen": "Bond dossier / mode select",
+      "status": "PASS layout",
+      "note": "Page, tabs, text scale, and PREVIOUS placement match the GE480i envelope. Red cursor on Bond face is a no-input route artifact, not normal cursor placement.",
+      "reference": "C:\\Users\\codex\\Pictures\\vlcsnap-2026-05-18-18h14m38s302.png",
+      "current": "diagnostics/captures/current/g1cred1_route_frames_20260519/g1cauto06_mode_select.png",
+      "reference_active_bbox": [
+        5,
+        0,
+        703,
+        533
+      ],
+      "current_active_bbox": [
+        6,
+        0,
+        701,
+        533
+      ]
+    },
+    {
+      "screen": "Mission select dossier",
+      "status": "PASS visual",
+      "note": "Mission thumbnails and labels fit within the dossier/film area. TND has fewer missions, so empty right-side page space is expected.",
+      "reference": "C:\\Users\\codex\\Pictures\\vlcsnap-2026-05-18-18h14m57s301.png",
+      "current": "diagnostics/captures/current/g1cred1_route_frames_20260519/g1cauto07_mission_select.png",
+      "reference_active_bbox": [
+        6,
+        0,
+        703,
+        533
+      ],
+      "current_active_bbox": [
+        8,
+        0,
+        699,
+        533
+      ]
+    },
+    {
+      "screen": "Difficulty select",
+      "status": "PASS visual",
+      "note": "Title, mission metadata, difficulty rows, red checks, and PREVIOUS tab fit the GE480i page envelope. Route chooses a diagnostic mission state.",
+      "reference": "C:\\Users\\codex\\Pictures\\vlcsnap-2026-05-18-18h15m03s394.png",
+      "current": "diagnostics/captures/current/g1cred1_route_frames_20260519/g1cpathbtn08_difficulty_path.png",
+      "reference_active_bbox": [
+        5,
+        0,
+        703,
+        533
+      ],
+      "current_active_bbox": [
+        6,
+        0,
+        701,
+        533
+      ]
+    },
+    {
+      "screen": "Briefing / objectives page",
+      "status": "PASS layout / route-content caveat",
+      "note": "Photo, tabs, heading, and page geometry fit. Objective text content is sparse because this is a forced diagnostic route, so final content should be checked in normal mission flow.",
+      "reference": "C:\\Users\\codex\\Pictures\\vlcsnap-2026-05-18-18h15m20s302.png",
+      "current": "diagnostics/captures/current/g1cred1_route_frames_20260519/g1cpathbtn0c_briefing_path.png",
+      "reference_active_bbox": [
+        5,
+        0,
+        703,
+        532
+      ],
+      "current_active_bbox": [
+        6,
+        0,
+        701,
+        533
+      ]
+    }
+  ]
+}

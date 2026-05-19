@@ -1,0 +1,162 @@
+{
+  "base_rom": "artifacts\\generated\\g1cred1.z64",
+  "base_md5": "af038b44f872973961c28f92f114e61d",
+  "purpose": "No-input hardware route probes for front/dossier pages; do not promote over gameplay baseline.",
+  "routes": [
+    {
+      "name": "g1cauto05",
+      "menu_id": 5,
+      "symbol": "MENU_FILE_SELECT",
+      "purpose": "File select / save folders",
+      "base_rom": "artifacts\\generated\\g1cred1.z64",
+      "out_rom": "artifacts\\generated\\g1cred1_routes\\g1cauto05.z64",
+      "out_md5": "61eb0af68214a2507c7c9c073110fc7b",
+      "header_crc": "4C56512E E9FCE027",
+      "patch": {
+        "offset": "0x3FF34",
+        "old": "0x24040018",
+        "new": "0x24040005",
+        "note": "After the TND title/logo timeout, route directly to MENU_FILE_SELECT."
+      },
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\g1cred1.sav",
+          "target": "artifacts\\generated\\g1cred1_routes\\g1cauto05.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\g1cred1.eep",
+          "target": "artifacts\\generated\\g1cred1_routes\\g1cauto05.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ],
+      "do_not_promote": true
+    },
+    {
+      "name": "g1cauto06",
+      "menu_id": 6,
+      "symbol": "MENU_MODE_SELECT",
+      "purpose": "Single-player / multiplayer / cheat select",
+      "base_rom": "artifacts\\generated\\g1cred1.z64",
+      "out_rom": "artifacts\\generated\\g1cred1_routes\\g1cauto06.z64",
+      "out_md5": "4245875af36e04f57d92c6a8846cc620",
+      "header_crc": "4C56512E 0BD99A65",
+      "patch": {
+        "offset": "0x3FF34",
+        "old": "0x24040018",
+        "new": "0x24040006",
+        "note": "After the TND title/logo timeout, route directly to MENU_MODE_SELECT."
+      },
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\g1cred1.sav",
+          "target": "artifacts\\generated\\g1cred1_routes\\g1cauto06.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\g1cred1.eep",
+          "target": "artifacts\\generated\\g1cred1_routes\\g1cauto06.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ],
+      "do_not_promote": true
+    },
+    {
+      "name": "g1cauto07",
+      "menu_id": 7,
+      "symbol": "MENU_MISSION_SELECT",
+      "purpose": "Mission select dossier",
+      "base_rom": "artifacts\\generated\\g1cred1.z64",
+      "out_rom": "artifacts\\generated\\g1cred1_routes\\g1cauto07.z64",
+      "out_md5": "eaa17c0f02fba148a4d4b57cbc9e83d7",
+      "header_crc": "4C56512E 53CEC546",
+      "patch": {
+        "offset": "0x3FF34",
+        "old": "0x24040018",
+        "new": "0x24040007",
+        "note": "After the TND title/logo timeout, route directly to MENU_MISSION_SELECT."
+      },
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\g1cred1.sav",
+          "target": "artifacts\\generated\\g1cred1_routes\\g1cauto07.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\g1cred1.eep",
+          "target": "artifacts\\generated\\g1cred1_routes\\g1cauto07.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ],
+      "do_not_promote": true
+    },
+    {
+      "name": "g1cauto08",
+      "menu_id": 8,
+      "symbol": "MENU_DIFFICULTY",
+      "purpose": "Difficulty select dossier",
+      "base_rom": "artifacts\\generated\\g1cred1.z64",
+      "out_rom": "artifacts\\generated\\g1cred1_routes\\g1cauto08.z64",
+      "out_md5": "4b3d2e6a9b33dcc271b068b4591cb1a5",
+      "header_crc": "4C565126 0AD50DFD",
+      "patch": {
+        "offset": "0x3FF34",
+        "old": "0x24040018",
+        "new": "0x24040008",
+        "note": "After the TND title/logo timeout, route directly to MENU_DIFFICULTY."
+      },
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\g1cred1.sav",
+          "target": "artifacts\\generated\\g1cred1_routes\\g1cauto08.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\g1cred1.eep",
+          "target": "artifacts\\generated\\g1cred1_routes\\g1cauto08.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ],
+      "do_not_promote": true
+    },
+    {
+      "name": "g1cauto0a",
+      "menu_id": 10,
+      "symbol": "MENU_BRIEFING",
+      "purpose": "Mission briefing dossier",
+      "base_rom": "artifacts\\generated\\g1cred1.z64",
+      "out_rom": "artifacts\\generated\\g1cred1_routes\\g1cauto0a.z64",
+      "out_md5": "6d91f11899ab40f74e4dce9bcbdb2619",
+      "header_crc": "4C565126 333FB102",
+      "patch": {
+        "offset": "0x3FF34",
+        "old": "0x24040018",
+        "new": "0x2404000A",
+        "note": "After the TND title/logo timeout, route directly to MENU_BRIEFING."
+      },
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\g1cred1.sav",
+          "target": "artifacts\\generated\\g1cred1_routes\\g1cauto0a.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\g1cred1.eep",
+          "target": "artifacts\\generated\\g1cred1_routes\\g1cauto0a.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ],
+      "do_not_promote": true
+    }
+  ]
+}

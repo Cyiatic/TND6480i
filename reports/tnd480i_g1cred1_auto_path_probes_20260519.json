@@ -1,0 +1,283 @@
+{
+  "base_rom": "artifacts\\generated\\g1cred1.z64",
+  "base_md5": "af038b44f872973961c28f92f114e61d",
+  "purpose": "No-controller route probes that preserve upstream menu initialization before later dossier pages.",
+  "probes": [
+    {
+      "name": "g1cpathpath08",
+      "purpose": "No-input probe: title/logo -> mission select -> forced accept -> difficulty.",
+      "base_rom": "artifacts\\generated\\g1cred1.z64",
+      "out_rom": "artifacts\\generated\\g1cred1_routes\\g1cpathpath08.z64",
+      "out_md5": "51a28c62334566f6964fe124964d7776",
+      "header_crc": "7396512E 8E6AAF38",
+      "patches": [
+        {
+          "key": "timeout_to_mission_select",
+          "offset": "0x3FF34",
+          "old": "0x24040018",
+          "new": "0x24040007",
+          "note": "After the TND title/logo timeout, route to MENU_MISSION_SELECT."
+        },
+        {
+          "key": "mission_select_accept",
+          "offset": "0x42E88",
+          "old": "0x13200010",
+          "new": "0x00000000",
+          "note": "Force mission-select accept path by removing the branch that skips MENU_DIFFICULTY."
+        }
+      ],
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\g1cred1.sav",
+          "target": "artifacts\\generated\\g1cred1_routes\\g1cpathpath08.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\g1cred1.eep",
+          "target": "artifacts\\generated\\g1cred1_routes\\g1cpathpath08.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ],
+      "do_not_promote": true
+    },
+    {
+      "name": "g1cpathpath0a",
+      "purpose": "No-input probe: title/logo -> mission select -> forced accept -> difficulty -> forced accept -> briefing.",
+      "base_rom": "artifacts\\generated\\g1cred1.z64",
+      "out_rom": "artifacts\\generated\\g1cred1_routes\\g1cpathpath0a.z64",
+      "out_md5": "7c59eeaa0aacdc719302e58f02dc203c",
+      "header_crc": "139650CE 977705DF",
+      "patches": [
+        {
+          "key": "timeout_to_mission_select",
+          "offset": "0x3FF34",
+          "old": "0x24040018",
+          "new": "0x24040007",
+          "note": "After the TND title/logo timeout, route to MENU_MISSION_SELECT."
+        },
+        {
+          "key": "mission_select_accept",
+          "offset": "0x42E88",
+          "old": "0x13200010",
+          "new": "0x00000000",
+          "note": "Force mission-select accept path by removing the branch that skips MENU_DIFFICULTY."
+        },
+        {
+          "key": "difficulty_accept",
+          "offset": "0x43554",
+          "old": "0x11600012",
+          "new": "0x00000000",
+          "note": "Force difficulty accept path by removing the branch that skips MENU_BRIEFING."
+        }
+      ],
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\g1cred1.sav",
+          "target": "artifacts\\generated\\g1cred1_routes\\g1cpathpath0a.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\g1cred1.eep",
+          "target": "artifacts\\generated\\g1cred1_routes\\g1cpathpath0a.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ],
+      "do_not_promote": true
+    },
+    {
+      "name": "g1cpathbtn08",
+      "purpose": "No-input probe: title/logo -> mission select -> forced mission accept block -> difficulty.",
+      "base_rom": "artifacts\\generated\\g1cred1.z64",
+      "out_rom": "artifacts\\generated\\g1cred1_routes\\g1cpathbtn08.z64",
+      "out_md5": "d9fdb0d875c20f6a2bb85fe2694c5514",
+      "header_crc": "6DD650FE 022C2993",
+      "patches": [
+        {
+          "key": "timeout_to_mission_select",
+          "offset": "0x3FF34",
+          "old": "0x24040018",
+          "new": "0x24040007",
+          "note": "After the TND title/logo timeout, route to MENU_MISSION_SELECT."
+        },
+        {
+          "key": "mission_select_force_button_accept",
+          "offset": "0x42D98",
+          "old": "0x1040002A",
+          "new": "0x00000000",
+          "note": "Force the mission-select A/Start/Z accept block so briefingpage and selected_stage are initialized."
+        }
+      ],
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\g1cred1.sav",
+          "target": "artifacts\\generated\\g1cred1_routes\\g1cpathbtn08.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\g1cred1.eep",
+          "target": "artifacts\\generated\\g1cred1_routes\\g1cpathbtn08.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ],
+      "do_not_promote": true
+    },
+    {
+      "name": "g1cpathbtn0a",
+      "purpose": "No-input probe: title/logo -> mission select -> forced mission accept block -> difficulty -> forced difficulty accept block -> briefing.",
+      "base_rom": "artifacts\\generated\\g1cred1.z64",
+      "out_rom": "artifacts\\generated\\g1cred1_routes\\g1cpathbtn0a.z64",
+      "out_md5": "e977ec489bf685a4dc5e13febfcce84f",
+      "header_crc": "6DD650FE 2DAEAB04",
+      "patches": [
+        {
+          "key": "timeout_to_mission_select",
+          "offset": "0x3FF34",
+          "old": "0x24040018",
+          "new": "0x24040007",
+          "note": "After the TND title/logo timeout, route to MENU_MISSION_SELECT."
+        },
+        {
+          "key": "mission_select_force_button_accept",
+          "offset": "0x42D98",
+          "old": "0x1040002A",
+          "new": "0x00000000",
+          "note": "Force the mission-select A/Start/Z accept block so briefingpage and selected_stage are initialized."
+        },
+        {
+          "key": "difficulty_force_button_accept",
+          "offset": "0x43518",
+          "old": "0x10400008",
+          "new": "0x00000000",
+          "note": "Force the difficulty A/Start/Z accept block before the page-transition branch."
+        }
+      ],
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\g1cred1.sav",
+          "target": "artifacts\\generated\\g1cred1_routes\\g1cpathbtn0a.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\g1cred1.eep",
+          "target": "artifacts\\generated\\g1cred1_routes\\g1cpathbtn0a.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ],
+      "do_not_promote": true
+    },
+    {
+      "name": "g1cpathbtn0b",
+      "purpose": "No-input diagnostic: force mission and difficulty accept, then route the all-missions-save default 007 row to briefing instead of 007 options.",
+      "base_rom": "artifacts\\generated\\g1cred1.z64",
+      "out_rom": "artifacts\\generated\\g1cred1_routes\\g1cpathbtn0b.z64",
+      "out_md5": "354bd02bc36eb49449ae6b9fffa54dcb",
+      "header_crc": "6DD650FA CC632491",
+      "patches": [
+        {
+          "key": "timeout_to_mission_select",
+          "offset": "0x3FF34",
+          "old": "0x24040018",
+          "new": "0x24040007",
+          "note": "After the TND title/logo timeout, route to MENU_MISSION_SELECT."
+        },
+        {
+          "key": "mission_select_force_button_accept",
+          "offset": "0x42D98",
+          "old": "0x1040002A",
+          "new": "0x00000000",
+          "note": "Force the mission-select A/Start/Z accept block so briefingpage and selected_stage are initialized."
+        },
+        {
+          "key": "difficulty_force_button_accept",
+          "offset": "0x43518",
+          "old": "0x10400008",
+          "new": "0x00000000",
+          "note": "Force the difficulty A/Start/Z accept block before the page-transition branch."
+        },
+        {
+          "key": "difficulty_route_007_to_briefing",
+          "offset": "0x43560",
+          "old": "0x24010003",
+          "new": "0x24010004",
+          "note": "Diagnostic-only route patch: with an all-missions save, do not treat the default 007 row as MENU_007_OPTIONS; let it fall through to MENU_BRIEFING."
+        }
+      ],
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\g1cred1.sav",
+          "target": "artifacts\\generated\\g1cred1_routes\\g1cpathbtn0b.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\g1cred1.eep",
+          "target": "artifacts\\generated\\g1cred1_routes\\g1cpathbtn0b.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ],
+      "do_not_promote": true
+    },
+    {
+      "name": "g1cpathbtn0c",
+      "purpose": "No-input diagnostic: force mission-state setup, then force the difficulty page-transition branch to briefing without depending on difficulty cursor hit testing.",
+      "base_rom": "artifacts\\generated\\g1cred1.z64",
+      "out_rom": "artifacts\\generated\\g1cred1_routes\\g1cpathbtn0c.z64",
+      "out_md5": "89541af487adff7a29939ec246250673",
+      "header_crc": "131650DA C02F2965",
+      "patches": [
+        {
+          "key": "timeout_to_mission_select",
+          "offset": "0x3FF34",
+          "old": "0x24040018",
+          "new": "0x24040007",
+          "note": "After the TND title/logo timeout, route to MENU_MISSION_SELECT."
+        },
+        {
+          "key": "mission_select_force_button_accept",
+          "offset": "0x42D98",
+          "old": "0x1040002A",
+          "new": "0x00000000",
+          "note": "Force the mission-select A/Start/Z accept block so briefingpage and selected_stage are initialized."
+        },
+        {
+          "key": "difficulty_accept",
+          "offset": "0x43554",
+          "old": "0x11600012",
+          "new": "0x00000000",
+          "note": "Force difficulty accept path by removing the branch that skips MENU_BRIEFING."
+        },
+        {
+          "key": "difficulty_route_007_to_briefing",
+          "offset": "0x43560",
+          "old": "0x24010003",
+          "new": "0x24010004",
+          "note": "Diagnostic-only route patch: with an all-missions save, do not treat the default 007 row as MENU_007_OPTIONS; let it fall through to MENU_BRIEFING."
+        }
+      ],
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\g1cred1.sav",
+          "target": "artifacts\\generated\\g1cred1_routes\\g1cpathbtn0c.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\g1cred1.eep",
+          "target": "artifacts\\generated\\g1cred1_routes\\g1cpathbtn0c.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ],
+      "do_not_promote": true
+    }
+  ]
+}
