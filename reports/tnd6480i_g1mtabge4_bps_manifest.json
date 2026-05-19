@@ -1,0 +1,124 @@
+{
+  "source": "artifacts\\roms\\BASELINE_TND64_Expanded_direct_from_stock.z64",
+  "target": "artifacts\\generated\\g1mtabge4.z64",
+  "source_md5": "1ee22dd1d70443f5e4766d4238756949",
+  "target_md5": "f2eb4ffe590b0c7c2a460995b1c25252",
+  "source_sha256": "ba5e040de292d7d192d0f88f12dcf4cbde7eb4d643926830d7d77557bf6df502",
+  "target_sha256": "bf41f63d983972b0758eb810e9f3b8b90e723ca5d61e868fa7aa3c6ffde1a534",
+  "note": "TND6480i current candidate: g1mtabge3 plus mission-select caption Y table adjusted between prior high/low hardware probes.",
+  "patch": "artifacts\\generated\\TND6480i_g1mtabge4_from_baseline_tnd.bps",
+  "patch_bytes": 181159,
+  "patch_md5": "7ffbc951acf5675d51bed78a8c9bf2a0",
+  "patch_sha256": "af7db542146b686b7afa10e4062dfc819078c67f5a1e9dcdb7cee0d043752cea",
+  "source_bytes": 16777216,
+  "target_bytes": 16885376,
+  "source_crc32": "321C1845",
+  "target_crc32": "21EF3DD1",
+  "patch_crc32": "F5CB2325",
+  "verified": true,
+  "action_count": 490,
+  "source_read_bytes": 16705461,
+  "target_read_bytes": 179915,
+  "actions_preview": [
+    {
+      "type": "SourceRead",
+      "offset": 0,
+      "length": 16
+    },
+    {
+      "type": "TargetRead",
+      "offset": 16,
+      "length": 8
+    },
+    {
+      "type": "SourceRead",
+      "offset": 24,
+      "length": 9223
+    },
+    {
+      "type": "TargetRead",
+      "offset": 9247,
+      "length": 1
+    },
+    {
+      "type": "SourceRead",
+      "offset": 9248,
+      "length": 6252
+    },
+    {
+      "type": "TargetRead",
+      "offset": 15500,
+      "length": 12
+    },
+    {
+      "type": "SourceRead",
+      "offset": 15512,
+      "length": 153
+    },
+    {
+      "type": "TargetRead",
+      "offset": 15665,
+      "length": 59
+    },
+    {
+      "type": "SourceRead",
+      "offset": 15724,
+      "length": 1715
+    },
+    {
+      "type": "TargetRead",
+      "offset": 17439,
+      "length": 1
+    },
+    {
+      "type": "SourceRead",
+      "offset": 17440,
+      "length": 661
+    },
+    {
+      "type": "TargetRead",
+      "offset": 18101,
+      "length": 59
+    },
+    {
+      "type": "SourceRead",
+      "offset": 18160,
+      "length": 7831
+    },
+    {
+      "type": "TargetRead",
+      "offset": 25991,
+      "length": 49
+    },
+    {
+      "type": "SourceRead",
+      "offset": 26040,
+      "length": 40742
+    },
+    {
+      "type": "TargetRead",
+      "offset": 66782,
+      "length": 1
+    },
+    {
+      "type": "SourceRead",
+      "offset": 66783,
+      "length": 38041
+    },
+    {
+      "type": "TargetRead",
+      "offset": 104824,
+      "length": 16
+    },
+    {
+      "type": "SourceRead",
+      "offset": 104840,
+      "length": 44
+    },
+    {
+      "type": "TargetRead",
+      "offset": 104884,
+      "length": 3
+    }
+  ]
+}

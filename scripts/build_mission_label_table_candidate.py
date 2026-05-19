@@ -24,6 +24,13 @@ X_TABLE = [90, 191, 292, 393, 494]
 Y_TABLE = [78, 179, 280, 381]
 
 
+def parse_int_table(text, expected_len, name):
+    values = [int(part.strip(), 0) for part in text.split(",") if part.strip()]
+    if len(values) != expected_len:
+        raise ValueError(f"{name} requires {expected_len} comma-separated values, got {len(values)}")
+    return values
+
+
 def word(data, offset):
     return struct.unpack_from(">I", data, offset)[0]
 
@@ -90,15 +97,20 @@ def main():
     parser.add_argument("--base-rom", type=Path, default=BASE_ROM)
     parser.add_argument("--out-rom", type=Path, default=OUT_ROM)
     parser.add_argument("--report", type=Path, default=REPORT)
+    parser.add_argument("--x-table", default=",".join(str(value) for value in X_TABLE))
+    parser.add_argument("--y-table", default=",".join(str(value) for value in Y_TABLE))
     args = parser.parse_args()
+
+    x_table = parse_int_table(args.x_table, len(X_TABLE), "--x-table")
+    y_table = parse_int_table(args.y_table, len(Y_TABLE), "--y-table")
 
     rom = bytearray(args.base_rom.read_bytes())
     x_addr = TABLE_ADDR
-    y_addr = TABLE_ADDR + len(X_TABLE) * 4
+    y_addr = TABLE_ADDR + len(x_table) * 4
     x_hi, x_lo = hi_lo(x_addr)
     y_hi, y_lo = hi_lo(y_addr)
 
-    table_words = X_TABLE + Y_TABLE
+    table_words = x_table + y_table
     patches = []
     old_table = [word(rom, TABLE_OFF + index * 4) for index in range(len(table_words))]
     for index, value in enumerate(table_words):
@@ -137,8 +149,8 @@ def main():
         "out_md5": md5(rom),
         "header_crc": f"{crc1:08X} {crc2:08X}",
         "purpose": "Use a GE480i-style mission-label coordinate table without executing any new trampoline code.",
-        "x_table": X_TABLE,
-        "y_table": Y_TABLE,
+        "x_table": x_table,
+        "y_table": y_table,
         "patches": patches,
         "save_outputs": copy_save_pair(args.base_rom, args.out_rom),
         "routes": {

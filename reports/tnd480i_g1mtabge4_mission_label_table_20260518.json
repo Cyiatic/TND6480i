@@ -1,0 +1,115 @@
+{
+  "base_rom": "artifacts\\generated\\g1txmissionfull.z64",
+  "base_md5": "55e60e60cedb41a70e2716e7314eeb53",
+  "out_rom": "artifacts\\generated\\g1mtabge4.z64",
+  "out_md5": "f2eb4ffe590b0c7c2a460995b1c25252",
+  "header_crc": "60EB6F68 A8FEAD12",
+  "purpose": "Use a GE480i-style mission-label coordinate table without executing any new trampoline code.",
+  "x_table": [
+    90,
+    191,
+    292,
+    393,
+    494
+  ],
+  "y_table": [
+    92,
+    193,
+    294,
+    395
+  ],
+  "patches": [
+    {
+      "offset": "0x4F9FC",
+      "runtime_address": "0x7F01AECC",
+      "old": [
+        "0x00000000",
+        "0x00000000",
+        "0x00000000",
+        "0x00000000",
+        "0x00000000",
+        "0x00000000",
+        "0x00000000",
+        "0x00000000",
+        "0x00000000"
+      ],
+      "new": [
+        90,
+        191,
+        292,
+        393,
+        494,
+        92,
+        193,
+        294,
+        395
+      ],
+      "note": "custom mission-select label X/Y tables in cloned-blitter slack space"
+    },
+    {
+      "offset": "0x4302C",
+      "old": "0x3C098003",
+      "new": "0x3C097F02",
+      "note": "lui t1, custom X table high"
+    },
+    {
+      "offset": "0x43030",
+      "old": "0x3C0B8003",
+      "new": "0x3C0B7F02",
+      "note": "lui t3, custom Y table high"
+    },
+    {
+      "offset": "0x43034",
+      "old": "0x256BAFE4",
+      "new": "0x256BAEE0",
+      "note": "addiu t3, t3, custom Y table low"
+    },
+    {
+      "offset": "0x43038",
+      "old": "0x2529AFD0",
+      "new": "0x2529AECC",
+      "note": "addiu t1, t1, custom X table low"
+    }
+  ],
+  "save_outputs": [
+    {
+      "source": "artifacts\\generated\\g1txmissionfull.sav",
+      "target": "artifacts\\generated\\g1mtabge4.sav",
+      "bytes": 512,
+      "md5": "79ed3fe6851b080ff21de69fd12f034d"
+    },
+    {
+      "source": "artifacts\\generated\\g1txmissionfull.eep",
+      "target": "artifacts\\generated\\g1mtabge4.eep",
+      "bytes": 2048,
+      "md5": "e47f5c07623838e875761a0493388e03"
+    }
+  ],
+  "routes": {
+    "mission_select": {
+      "out_rom": "artifacts\\generated\\g1mtabge4auto07.z64",
+      "out_md5": "d811a69168844b125896bba55ec7f0fb",
+      "header_crc": "60EB6F58 3165D598",
+      "route_patch": {
+        "offset": "0x3FF34",
+        "old": "0x24040018",
+        "new": "0x24040007"
+      },
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\g1txmissionfull.sav",
+          "target": "artifacts\\generated\\g1mtabge4auto07.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\g1txmissionfull.eep",
+          "target": "artifacts\\generated\\g1mtabge4auto07.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ]
+    }
+  },
+  "do_not_promote_until_hardware_compared": true
+}
