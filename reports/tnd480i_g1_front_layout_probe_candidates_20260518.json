@@ -1,0 +1,114 @@
+[
+  {
+    "name": "g1hlim1",
+    "purpose": "Only raise the title/menu height limit from stock 330 to 480.",
+    "base_rom": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1diff3.z64",
+    "base_md5": "2c0d85305dc85999b79f13b089091cea",
+    "out_rom": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1hlim1.z64",
+    "out_md5": "47dc8fbeda8c95cb603a87c4c7966ab5",
+    "header_crc": "022BAFA0 4659BAB4",
+    "patch_count": 1,
+    "changed_patch_count": 1,
+    "patches": [
+      {
+        "offset": "0x46F18",
+        "old": "0x2418014A",
+        "new": "0x241801E0",
+        "changed": true,
+        "group": "J_front_height_limit_480i",
+        "note": "title/menu height limit 480"
+      }
+    ],
+    "save_outputs": [
+      {
+        "source": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1diff3.sav",
+        "target": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1hlim1.sav",
+        "bytes": 512,
+        "md5": "79ed3fe6851b080ff21de69fd12f034d"
+      },
+      {
+        "source": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1diff3.eep",
+        "target": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1hlim1.eep",
+        "bytes": 2048,
+        "md5": "e47f5c07623838e875761a0493388e03"
+      }
+    ],
+    "bps": {
+      "patch": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\TND6480i_g1hlim1_from_baseline_tnd.bps",
+      "manifest": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\reports\\tnd6480i_g1hlim1_bps_manifest.json"
+    },
+    "do_not_promote_until_hardware_compared": true
+  },
+  {
+    "name": "g1hlimfy1",
+    "purpose": "Apply the height-limit, float, and immediate Y-offset constants together.",
+    "base_rom": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1diff3.z64",
+    "base_md5": "2c0d85305dc85999b79f13b089091cea",
+    "out_rom": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1hlimfy1.z64",
+    "out_md5": "08dc8d2684ce3d206247ef7e172e5341",
+    "header_crc": "022B97BC 7D3F638C",
+    "patch_count": 5,
+    "changed_patch_count": 5,
+    "patches": [
+      {
+        "offset": "0x46EB8",
+        "old": "0x3C0143A5",
+        "new": "0x3C0143F0",
+        "changed": true,
+        "group": "J_front_layout_float_480i",
+        "note": "title/menu float constant upper"
+      },
+      {
+        "offset": "0x46ED8",
+        "old": "0x3C0643DC",
+        "new": "0x3C064420",
+        "changed": true,
+        "group": "J_front_layout_float_480i",
+        "note": "title/menu float constant upper"
+      },
+      {
+        "offset": "0x46F18",
+        "old": "0x2418014A",
+        "new": "0x241801E0",
+        "changed": true,
+        "group": "J_front_height_limit_480i",
+        "note": "title/menu height limit 480"
+      },
+      {
+        "offset": "0x46F1C",
+        "old": "0x26AE0023",
+        "new": "0x26AE0033",
+        "changed": true,
+        "group": "J_front_layout_y_480i",
+        "note": "title/menu y offset"
+      },
+      {
+        "offset": "0x46F20",
+        "old": "0x26AA002A",
+        "new": "0x26AA003D",
+        "changed": true,
+        "group": "J_front_layout_y_480i",
+        "note": "title/menu y offset"
+      }
+    ],
+    "save_outputs": [
+      {
+        "source": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1diff3.sav",
+        "target": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1hlimfy1.sav",
+        "bytes": 512,
+        "md5": "79ed3fe6851b080ff21de69fd12f034d"
+      },
+      {
+        "source": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1diff3.eep",
+        "target": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1hlimfy1.eep",
+        "bytes": 2048,
+        "md5": "e47f5c07623838e875761a0493388e03"
+      }
+    ],
+    "bps": {
+      "patch": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\TND6480i_g1hlimfy1_from_baseline_tnd.bps",
+      "manifest": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\reports\\tnd6480i_g1hlimfy1_bps_manifest.json"
+    },
+    "do_not_promote_until_hardware_compared": true
+  }
+]

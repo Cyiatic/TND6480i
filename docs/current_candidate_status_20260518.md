@@ -2,77 +2,69 @@
 
 Current best hardware candidate:
 
-- ROM: `artifacts/generated/g1diff2.z64`
-- Save: `artifacts/generated/g1diff2.sav`
-- BPS: `artifacts/generated/TND6480i_g1diff2_from_baseline_tnd.bps`
-- ROM MD5: `7dcf2cf0ea0ab9005cc20f5b864bb84f`
-- Patch MD5: `91c3969bd82bc2246c43a3b63eff794b`
+- ROM: `artifacts/generated/g1hlim1.z64`
+- Save: `artifacts/generated/g1hlim1.sav`
+- EEPROM mirror: `artifacts/generated/g1hlim1.eep`
+- BPS: `artifacts/generated/TND6480i_g1hlim1_from_baseline_tnd.bps`
+- ROM MD5: `47dc8fbeda8c95cb603a87c4c7966ab5`
+- Patch MD5: `2e8ea8358096c87ad443486f708fe6ed`
 
-`g1diff2` is `g1class1` plus two narrow dossier fixes: GE480i mission-select table B at raw 1172 offset `0xA240` with the matching g1mtab mission-label table, and the complete GE480i difficulty-select constructor/interface word deltas in ROM range `0x43300-0x43D00`. It leaves gameplay, level loading, pause menu, HUD, file/mode dossier setup, classification, gunbarrel assets, and title assets untouched.
+`g1hlim1` is `g1diff3` plus one additional GE480i front/title word:
+
+- `0x46F18: 0x2418014A -> 0x241801E0`
+- Meaning: raise the title/menu height limit from stock 330 to 480.
+
+This keeps the already-validated gameplay, dossier, mission-select, difficulty, gunbarrel, and classification work from `g1diff3`, while reducing the obvious lower-screen stale rectangle during the opening cast credits.
 
 ## Hardware Evidence
 
-Primary per-screen acceptance atlas:
+Primary `g1hlim1` startup/front capture:
 
-- `diagnostics/captures/current/preingame_annotations_g1casta1_20260518.jpg`
-- Machine-readable manifest: `reports/preingame_annotations_g1casta1_20260518.json`
-- Individual cards: `diagnostics/captures/current/preingame_annotations_g1casta1_20260518/`
-- Strict issue atlas: `diagnostics/captures/current/preingame_issue_cards_g1casta1_20260518.jpg`
-- Strict issue manifest: `reports/preingame_issue_cards_g1casta1_20260518.json`
+- `diagnostics/captures/videos/g1hlim1_full_front_hardware_cycled_20260518.mp4`
+- `diagnostics/captures/contact_sheets/g1hlim1_full_front_hardware_cycled_20260518.jpg`
+- Opening detail: `diagnostics/captures/contact_sheets/g1hlim1_opening_credits_detail_20260518.jpg`
+- Probe comparison matrix: `diagnostics/captures/current/g1_front_opening_probe_matrix_20260518.jpg`
 
-Gunbarrel and front-end capture evidence:
+Dossier sanity checks after the height-limit change:
 
-- `diagnostics/captures/contact_sheets/g1casta1_full_front_hardware_cycled_20260518.jpg`
-- `diagnostics/captures/contact_sheets/g1casta1_gunbarrel_detail_20260518.jpg`
-- `diagnostics/captures/contact_sheets/g1casta1_title_transition_20260518.jpg`
-- Classification fix card: `diagnostics/captures/current/g1class1_classification_fix_card_20260518.jpg`
-- Classification startup capture: `diagnostics/captures/contact_sheets/g1class1_startup_cycle_20260518.jpg`
-- Mission select fix card: `diagnostics/captures/current/g1gridbg1_mission_fix_card_20260518.jpg`
-- Difficulty select fix card: `diagnostics/captures/current/g1diff2_difficulty_fix_card_20260518.jpg`
+- Difficulty/checkmark route: `diagnostics/captures/contact_sheets/hlmbtn08_difficulty_hardware_cycled_20260518.jpg`
+- Mission-select route: `diagnostics/captures/contact_sheets/hlmauto07_mission_hardware_cycled_20260518.jpg`
 
-Build reports:
+Earlier `g1diff3` evidence still applies:
 
-- `reports/tnd480i_g1casta1_gunbarrel_asset_transplant_20260518.json`
-- `reports/tnd6480i_g1casta1_bps_manifest.json`
-- `reports/tnd480i_g1class1_legal_classification_20260518.json`
-- `reports/tnd6480i_g1class1_bps_manifest.json`
-- `reports/tnd480i_g1gridbg1_mission_grid_20260518.json`
-- `reports/tnd6480i_g1gridbg1_bps_manifest.json`
-- `reports/tnd480i_g1diff2_difficulty_20260518.json`
-- `reports/tnd6480i_g1diff2_bps_manifest.json`
+- Dossier atlas: `diagnostics/captures/current/g1diff3_dossier_atlas_20260518.jpg`
+- Difficulty checkmark fix card: `diagnostics/captures/current/g1diff3_difficulty_checkmark_fix_card_20260518.jpg`
+- Classification startup: `diagnostics/captures/contact_sheets/g1diff3_full_front_hardware_cycled_20260518.jpg`
 
 ## Current Read
 
-The strobe-producing forced briefing route is rejected and should not be used as a basis for more ROM work. The safe current candidate is `g1diff2`.
-
 Pass or likely-pass:
 
-- Gameplay path inherited from `g1castz1`; user previously reported all levels boot, Bazaar/Labs look fine, pause menu looks fine, bullets UI is good.
-- Classification board geometry now follows the GE480i legal-page spread while preserving TND wording/art.
-- Mission-select labels and cursor grid now use the GE480i table-B spacing while preserving TND's reduced mission count and red-folder style.
-- Difficulty-select row block now uses the complete GE480i difficulty constructor/interface deltas; `g1diff1` was rejected because it missed the two difficulty-name X constants and caused overlap.
-- Gunbarrel visual composition is much closer to GE480i after the asset transplant; the offset/second aperture is gone.
+- Gameplay path inherited from `g1castz1`/`g1diff3`; user previously reported all levels boot, Bazaar/Labs look fine, pause menu looks fine, and bullets UI is good.
+- Classification board fits in the higher-resolution front path.
+- File select, mode select, mission select, and difficulty select now match the GE480i dossier family closely enough for hardware testing, while preserving TND red folders and the reduced mission count.
+- Difficulty red checkmarks are aligned after the `g1diff3` checkmark coordinate fix.
+- `g1hlim1` improves the opening credits by raising the stale stock-height front limit without the extra centering/rectangle side effects seen in broader cast probes.
 
-Still needs work or proof:
+Still needs work or user-driven proof:
 
-- File select still needs a GE480i-aligned dossier/background envelope check. The current file labels/icons are visible, but the right-side background/bleed is not accepted yet.
-- Mode select must be judged from normal navigation, not only the direct route, because direct routes can bypass live cursor initialization.
-- Briefing, Moneypenny, and Primary Objectives need a safe current capture route. The forced route caused strobing, so do not judge or patch these from that route.
-- Gunbarrel cadence still needs a live timing check against stock TND64 and GE480i, even though composition is now much better.
+- Briefing/objectives need manual console navigation or a safer initialized route; direct no-input and forced briefing routes can black-screen or strobe.
+- Opening cast credits are improved but not final-perfect; broader centering/rectangle probes (`g1castif1`, `g1castrect1`, `g1hlimif1`, `g1hlimifrect1`) were diagnostic and not promoted.
+- Final gameplay regression pass on real hardware is still useful after any promoted front-end change, even though `g1hlim1` only touches the front/title height limit.
 
-## Rejected Candidates
+## Rejected Or Diagnostic
 
+- `g1castrect1`: display-cast scissor/fade rectangles only; booted but did not solve the cast-transition artifacts.
+- `g1castif1`: display-cast centering only; improved placement but left hard transition leftovers.
+- `g1castifrect1`: centering plus rectangles; no clear improvement over simpler probes.
+- `g1hlimif1` / `g1hlimifrect1`: height-limit plus centering variants; still showed stray transition fragments and moved cast elements more aggressively than needed.
+- `g1hlimfy1`: height-limit plus float/Y constants; safe-looking but no clear advantage over the one-word `g1hlim1`.
 - `g1mtabge4btn0a`: rejected. Forced briefing route caused strobing.
-- `g1diff1`: rejected. It copied most GE480i difficulty row constants but stopped before the two difficulty-name X constants, producing overlapping difficulty labels.
-- `g1castm2`: rejected. Mission labels moved into the wrong filmstrip/perforation band.
-- `g1castk1`: rejected. Draw-target-only gunbarrel edit did not remove the large offset aperture.
-- `g1castgb1`: rejected. Slow/post-blood gunbarrel combo worsened the early sweep.
-- `g1castslow1`: diagnostic only. It helped isolate timing/shape but did not solve the aperture composition.
+- `g1diff1`: rejected. Difficulty labels moved before the two checkmark coordinate words were included.
 
 ## Next Work Order
 
-1. Keep `g1diff2` as the safety baseline.
-2. Do not patch from the rejected forced briefing/strobe route.
-3. Fix remaining dossier/front-end screens one page at a time from the strict issue atlas, with a comparison card after each hardware capture.
-4. Build a safe route or request manual help for Briefing, Moneypenny, and Objectives; add those current captures to the atlas.
-5. Only after dossier pages pass, revisit opening credits/logos and final gunbarrel cadence.
+1. Keep `g1hlim1` as the safety baseline.
+2. Have the user run a normal gameplay smoke pass when available, especially opening credits, dossier pages, Bazaar/Labs, and one later level.
+3. Build or request a safe capture route for Briefing/Objectives before patching those pages further.
+4. Avoid further broad cast/display rectangle transplants unless a comparison card shows a clear target.

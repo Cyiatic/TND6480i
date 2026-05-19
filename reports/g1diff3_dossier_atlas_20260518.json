@@ -1,0 +1,35 @@
+{
+  "candidate": "g1diff3",
+  "atlas": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\diagnostics\\captures\\current\\g1diff3_dossier_atlas_20260518.jpg",
+  "cards": [
+    {
+      "name": "file_select",
+      "card": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\diagnostics\\captures\\current\\g1diff3_dossier_cards_20260518\\file_select.jpg",
+      "verdict": "PASS: icons/text visible; GE480i geometry matches after display-aspect normalization",
+      "reference": "C:\\Users\\codex\\Pictures\\vlcsnap-2026-05-18-18h14m25s727.png",
+      "current": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\diagnostics\\captures\\contact_sheets\\g1d3auto05_file_hardware_cycled_20260518\\frames\\frame_0015_00075000.png"
+    },
+    {
+      "name": "mode_select",
+      "card": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\diagnostics\\captures\\current\\g1diff3_dossier_cards_20260518\\mode_select.jpg",
+      "verdict": "PASS: row block and page/tab envelope match GE480i; photo differs by TND asset only",
+      "reference": "C:\\Users\\codex\\Pictures\\vlcsnap-2026-05-18-18h14m38s302.png",
+      "current": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\diagnostics\\captures\\contact_sheets\\g1d3auto06_mode_hardware_cycled_20260518\\frames\\frame_0015_00075000.png"
+    },
+    {
+      "name": "mission_select",
+      "card": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\diagnostics\\captures\\current\\g1diff3_dossier_cards_20260518\\mission_select.jpg",
+      "verdict": "PASS: labels sit in film bands and cursor grid follows the GE480i filmstrip scale",
+      "reference": "C:\\Users\\codex\\Pictures\\vlcsnap-2026-05-18-18h14m57s301.png",
+      "current": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\diagnostics\\captures\\contact_sheets\\g1d3auto07_mission_hardware_cycled_20260518_late\\frames\\frame_0009_00079000.png"
+    },
+    {
+      "name": "difficulty_select",
+      "card": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\diagnostics\\captures\\current\\g1diff3_dossier_cards_20260518\\difficulty_select.jpg",
+      "verdict": "PASS: g1diff3 aligns difficulty rows, cursor band, and red completion checks",
+      "reference": "C:\\Users\\codex\\Pictures\\vlcsnap-2026-05-18-18h15m03s394.png",
+      "current": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\diagnostics\\captures\\contact_sheets\\g1diff3btn08_difficulty_hardware_cycled_20260518\\frames\\frame_0017_00085000.png"
+    }
+  ],
+  "verdict": "file/mode/mission/difficulty dossier geometry passes against GE480i reference after raw GV-USB2 aspect normalization"
+}

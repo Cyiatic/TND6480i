@@ -1,0 +1,13 @@
+{
+  "card": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\diagnostics\\captures\\current\\g1diff3_difficulty_checkmark_fix_card_20260518.jpg",
+  "candidate": "g1diff3",
+  "base": "g1diff2 visual plus g1gridbg1 script base",
+  "patch_offsets": [
+    "0x43D04",
+    "0x43D0C"
+  ],
+  "verdict": "red difficulty completion checkmarks now align with difficulty rows",
+  "reference": "C:\\Users\\codex\\Pictures\\vlcsnap-2026-05-18-18h15m03s394.png",
+  "before": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\diagnostics\\captures\\contact_sheets\\g1diff2btn08_difficulty_hardware_cycled_20260518\\frames\\frame_0017_00085000.png",
+  "after": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\diagnostics\\captures\\contact_sheets\\g1diff3btn08_difficulty_hardware_cycled_20260518\\frames\\frame_0017_00085000.png"
+}

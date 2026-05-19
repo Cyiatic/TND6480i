@@ -11,13 +11,16 @@ from build_tnd480i_candidate import md5, update_n64_crc_6102
 GE_STOCK = Path("artifacts/roms/GoldenEye 007 (USA).z64")
 GE_480I = Path("artifacts/roms/BASELINE_GE_480i_direct_from_stock.z64")
 BASE_ROM = Path("artifacts/generated/g1gridbg1.z64")
-OUT_ROM = Path("artifacts/generated/g1diff1.z64")
-REPORT = Path("reports/tnd480i_g1diff1_difficulty_20260518.json")
+OUT_ROM = Path("artifacts/generated/g1diff3.z64")
+REPORT = Path("reports/tnd480i_g1diff3_difficulty_20260518.json")
 
 TIMEOUT_MENU_WORD_OFFSET = 0x3FF34
 EXPECTED_TIMEOUT_WORD = 0x24040018
 
-DIFFICULTY_RANGE = (0x43300, 0x43D00)
+# Extends through the checkmark draw constants at 0x43D04/0x43D0C.
+# g1diff2 stopped at 0x43D00, which moved the text rows but left the red
+# completion checks in their stock-position column.
+DIFFICULTY_RANGE = (0x43300, 0x43D20)
 
 PATCH_LIBRARY = {
     "timeout_to_mission_select": (
@@ -127,7 +130,7 @@ def main():
         "out_rom": str(args.out_rom),
         "out_md5": md5(base),
         "header_crc": f"{crc1:08X} {crc2:08X}",
-        "purpose": "Apply only the GE480i difficulty select constructor/interface word deltas on top of g1gridbg1.",
+        "purpose": "Apply the GE480i difficulty select constructor/interface/checkmark word deltas on top of g1gridbg1.",
         "range": [f"0x{DIFFICULTY_RANGE[0]:X}", f"0x{DIFFICULTY_RANGE[1]:X}"],
         "patches": patches,
         "changed_patch_count": sum(1 for item in patches if item["changed"]),

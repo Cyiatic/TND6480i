@@ -1,0 +1,141 @@
+{
+  "video": "diagnostics\\captures\\videos\\hlmbtn08_difficulty_hardware_cycled_20260518.mp4",
+  "sheet": "diagnostics\\captures\\contact_sheets\\hlmbtn08_difficulty_hardware_cycled_20260518.jpg",
+  "start": 60.0,
+  "end": 115.0,
+  "step": 5.0,
+  "frames": [
+    {
+      "index": 0,
+      "seconds": 60.0,
+      "timestamp": "01:00",
+      "path": "diagnostics\\captures\\contact_sheets\\hlmbtn08_difficulty_hardware_cycled_20260518\\frames\\frame_0000_00060000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "01:00"
+    },
+    {
+      "index": 1,
+      "seconds": 65.0,
+      "timestamp": "01:05",
+      "path": "diagnostics\\captures\\contact_sheets\\hlmbtn08_difficulty_hardware_cycled_20260518\\frames\\frame_0001_00065000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "01:05"
+    },
+    {
+      "index": 2,
+      "seconds": 70.0,
+      "timestamp": "01:10",
+      "path": "diagnostics\\captures\\contact_sheets\\hlmbtn08_difficulty_hardware_cycled_20260518\\frames\\frame_0002_00070000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "01:10"
+    },
+    {
+      "index": 3,
+      "seconds": 75.0,
+      "timestamp": "01:15",
+      "path": "diagnostics\\captures\\contact_sheets\\hlmbtn08_difficulty_hardware_cycled_20260518\\frames\\frame_0003_00075000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "01:15"
+    },
+    {
+      "index": 4,
+      "seconds": 80.0,
+      "timestamp": "01:20",
+      "path": "diagnostics\\captures\\contact_sheets\\hlmbtn08_difficulty_hardware_cycled_20260518\\frames\\frame_0004_00080000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "01:20"
+    },
+    {
+      "index": 5,
+      "seconds": 85.0,
+      "timestamp": "01:25",
+      "path": "diagnostics\\captures\\contact_sheets\\hlmbtn08_difficulty_hardware_cycled_20260518\\frames\\frame_0005_00085000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "01:25"
+    },
+    {
+      "index": 6,
+      "seconds": 90.0,
+      "timestamp": "01:30",
+      "path": "diagnostics\\captures\\contact_sheets\\hlmbtn08_difficulty_hardware_cycled_20260518\\frames\\frame_0006_00090000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "01:30"
+    },
+    {
+      "index": 7,
+      "seconds": 95.0,
+      "timestamp": "01:35",
+      "path": "diagnostics\\captures\\contact_sheets\\hlmbtn08_difficulty_hardware_cycled_20260518\\frames\\frame_0007_00095000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "01:35"
+    },
+    {
+      "index": 8,
+      "seconds": 100.0,
+      "timestamp": "01:40",
+      "path": "diagnostics\\captures\\contact_sheets\\hlmbtn08_difficulty_hardware_cycled_20260518\\frames\\frame_0008_00100000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "01:40"
+    },
+    {
+      "index": 9,
+      "seconds": 105.0,
+      "timestamp": "01:45",
+      "path": "diagnostics\\captures\\contact_sheets\\hlmbtn08_difficulty_hardware_cycled_20260518\\frames\\frame_0009_00105000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "01:45"
+    },
+    {
+      "index": 10,
+      "seconds": 110.0,
+      "timestamp": "01:50",
+      "path": "diagnostics\\captures\\contact_sheets\\hlmbtn08_difficulty_hardware_cycled_20260518\\frames\\frame_0010_00110000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "01:50"
+    }
+  ]
+}

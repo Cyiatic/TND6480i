@@ -1,0 +1,93 @@
+{
+  "base_rom": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1diff3.z64",
+  "base_md5": "2c0d85305dc85999b79f13b089091cea",
+  "out_rom": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1castifrect1.z64",
+  "out_md5": "a6004d7809fa3067b2152fc9ab6c435c",
+  "header_crc": "022B9566 81B09DAA",
+  "purpose": "Apply display-cast interface centering plus fade/scissor rectangles on top of g1diff3.",
+  "patches": [
+    {
+      "offset": "0x4D040",
+      "old": "0x240B00DC",
+      "ge_stock": "0x240B00DC",
+      "new": "0x240B0140",
+      "changed": true,
+      "note": "display-cast center X for first overlay"
+    },
+    {
+      "offset": "0x4D044",
+      "old": "0x240F0099",
+      "ge_stock": "0x240F0099",
+      "new": "0x240F00E4",
+      "changed": true,
+      "note": "display-cast center Y for first overlay"
+    },
+    {
+      "offset": "0x4D11C",
+      "old": "0x240E00DC",
+      "ge_stock": "0x240E00DC",
+      "new": "0x240E0140",
+      "changed": true,
+      "note": "display-cast center X for second overlay"
+    },
+    {
+      "offset": "0x4D120",
+      "old": "0x240B00B1",
+      "ge_stock": "0x240B00B1",
+      "new": "0x240B00FC",
+      "changed": true,
+      "note": "display-cast center Y for second overlay"
+    },
+    {
+      "offset": "0x4E914",
+      "old": "0x3C0D006E",
+      "ge_stock": "0x3C0D006E",
+      "new": "0x3C0D00A0",
+      "changed": true,
+      "note": "display-cast scissor packed upper"
+    },
+    {
+      "offset": "0x4E918",
+      "old": "0x35AD0528",
+      "ge_stock": "0x35AD0528",
+      "new": "0x35AD0780",
+      "changed": true,
+      "note": "display-cast scissor packed lower"
+    },
+    {
+      "offset": "0x4EA44",
+      "old": "0x3C0EF66E",
+      "ge_stock": "0x3C0EF66E",
+      "new": "0x3C0EF6A0",
+      "changed": true,
+      "note": "display-cast fade-fill packed upper"
+    },
+    {
+      "offset": "0x4EA48",
+      "old": "0x35CE0528",
+      "ge_stock": "0x35CE0528",
+      "new": "0x35CE0780",
+      "changed": true,
+      "note": "display-cast fade-fill packed lower"
+    }
+  ],
+  "save_outputs": [
+    {
+      "source": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1diff3.sav",
+      "target": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1castifrect1.sav",
+      "bytes": 512,
+      "md5": "79ed3fe6851b080ff21de69fd12f034d"
+    },
+    {
+      "source": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1diff3.eep",
+      "target": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1castifrect1.eep",
+      "bytes": 2048,
+      "md5": "e47f5c07623838e875761a0493388e03"
+    }
+  ],
+  "bps": {
+    "patch": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\TND6480i_g1castifrect1_from_baseline_tnd.bps",
+    "manifest": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\reports\\tnd6480i_g1castifrect1_bps_manifest.json"
+  },
+  "do_not_promote_until_hardware_compared": true
+}

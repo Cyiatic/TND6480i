@@ -1,0 +1,61 @@
+{
+  "base_rom": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1diff3.z64",
+  "base_md5": "2c0d85305dc85999b79f13b089091cea",
+  "out_rom": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1castrect1.z64",
+  "out_md5": "3723b03884ed99fa20707e1bd26cbbc5",
+  "header_crc": "022B94F4 02C1C52A",
+  "purpose": "Patch only the display-cast scissor/fade-fill rectangle packed dimensions to the GE480i 640x480 values.",
+  "patches": [
+    {
+      "offset": "0x4E914",
+      "old": "0x3C0D006E",
+      "ge_stock": "0x3C0D006E",
+      "new": "0x3C0D00A0",
+      "changed": true,
+      "note": "displaycast scissor packed upper"
+    },
+    {
+      "offset": "0x4E918",
+      "old": "0x35AD0528",
+      "ge_stock": "0x35AD0528",
+      "new": "0x35AD0780",
+      "changed": true,
+      "note": "displaycast scissor packed lower"
+    },
+    {
+      "offset": "0x4EA44",
+      "old": "0x3C0EF66E",
+      "ge_stock": "0x3C0EF66E",
+      "new": "0x3C0EF6A0",
+      "changed": true,
+      "note": "displaycast fade-fill packed upper"
+    },
+    {
+      "offset": "0x4EA48",
+      "old": "0x35CE0528",
+      "ge_stock": "0x35CE0528",
+      "new": "0x35CE0780",
+      "changed": true,
+      "note": "displaycast fade-fill packed lower"
+    }
+  ],
+  "save_outputs": [
+    {
+      "source": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1diff3.sav",
+      "target": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1castrect1.sav",
+      "bytes": 512,
+      "md5": "79ed3fe6851b080ff21de69fd12f034d"
+    },
+    {
+      "source": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1diff3.eep",
+      "target": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1castrect1.eep",
+      "bytes": 2048,
+      "md5": "e47f5c07623838e875761a0493388e03"
+    }
+  ],
+  "bps": {
+    "patch": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\TND6480i_g1castrect1_from_baseline_tnd.bps",
+    "manifest": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\reports\\tnd6480i_g1castrect1_bps_manifest.json"
+  },
+  "do_not_promote_until_hardware_compared": true
+}
