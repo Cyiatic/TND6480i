@@ -1,0 +1,177 @@
+{
+  "base_rom": "artifacts\\generated\\g1hiftr1.z64",
+  "base_md5": "7fc7fcec15e510d573f13aa960253007",
+  "purpose": "No-controller route probes that preserve upstream menu initialization before later dossier pages.",
+  "probes": [
+    {
+      "name": "htrpath08",
+      "purpose": "No-input probe: title/logo -> mission select -> forced accept -> difficulty.",
+      "base_rom": "artifacts\\generated\\g1hiftr1.z64",
+      "out_rom": "artifacts\\generated\\htrpath08.z64",
+      "out_md5": "19e5a12bfcd32d6bfcc1d63e02d4772c",
+      "header_crc": "FC2B971A 54B4E11F",
+      "patches": [
+        {
+          "key": "timeout_to_mission_select",
+          "offset": "0x3FF34",
+          "old": "0x24040018",
+          "new": "0x24040007",
+          "note": "After the TND title/logo timeout, route to MENU_MISSION_SELECT."
+        },
+        {
+          "key": "mission_select_accept",
+          "offset": "0x42E88",
+          "old": "0x13200010",
+          "new": "0x00000000",
+          "note": "Force mission-select accept path by removing the branch that skips MENU_DIFFICULTY."
+        }
+      ],
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\g1hiftr1.sav",
+          "target": "artifacts\\generated\\htrpath08.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\g1hiftr1.eep",
+          "target": "artifacts\\generated\\htrpath08.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ],
+      "do_not_promote": true
+    },
+    {
+      "name": "htrpath0a",
+      "purpose": "No-input probe: title/logo -> mission select -> forced accept -> difficulty -> forced accept -> briefing.",
+      "base_rom": "artifacts\\generated\\g1hiftr1.z64",
+      "out_rom": "artifacts\\generated\\htrpath0a.z64",
+      "out_md5": "88a7470fea27f60b8f0e3ebe44bc2696",
+      "header_crc": "FBEB9736 495CE41D",
+      "patches": [
+        {
+          "key": "timeout_to_mission_select",
+          "offset": "0x3FF34",
+          "old": "0x24040018",
+          "new": "0x24040007",
+          "note": "After the TND title/logo timeout, route to MENU_MISSION_SELECT."
+        },
+        {
+          "key": "mission_select_accept",
+          "offset": "0x42E88",
+          "old": "0x13200010",
+          "new": "0x00000000",
+          "note": "Force mission-select accept path by removing the branch that skips MENU_DIFFICULTY."
+        },
+        {
+          "key": "difficulty_accept",
+          "offset": "0x43554",
+          "old": "0x11600012",
+          "new": "0x00000000",
+          "note": "Force difficulty accept path by removing the branch that skips MENU_BRIEFING."
+        }
+      ],
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\g1hiftr1.sav",
+          "target": "artifacts\\generated\\htrpath0a.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\g1hiftr1.eep",
+          "target": "artifacts\\generated\\htrpath0a.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ],
+      "do_not_promote": true
+    },
+    {
+      "name": "htrbtn08",
+      "purpose": "No-input probe: title/logo -> mission select -> forced mission accept block -> difficulty.",
+      "base_rom": "artifacts\\generated\\g1hiftr1.z64",
+      "out_rom": "artifacts\\generated\\htrbtn08.z64",
+      "out_md5": "824a2d1a47672d58ebb4c7e8e8828d57",
+      "header_crc": "FDAB9706 C0BBD301",
+      "patches": [
+        {
+          "key": "timeout_to_mission_select",
+          "offset": "0x3FF34",
+          "old": "0x24040018",
+          "new": "0x24040007",
+          "note": "After the TND title/logo timeout, route to MENU_MISSION_SELECT."
+        },
+        {
+          "key": "mission_select_force_button_accept",
+          "offset": "0x42D98",
+          "old": "0x1040002A",
+          "new": "0x00000000",
+          "note": "Force the mission-select A/Start/Z accept block so briefingpage and selected_stage are initialized."
+        }
+      ],
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\g1hiftr1.sav",
+          "target": "artifacts\\generated\\htrbtn08.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\g1hiftr1.eep",
+          "target": "artifacts\\generated\\htrbtn08.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ],
+      "do_not_promote": true
+    },
+    {
+      "name": "htrbtn0a",
+      "purpose": "No-input probe: title/logo -> mission select -> forced mission accept block -> difficulty -> forced difficulty accept block -> briefing.",
+      "base_rom": "artifacts\\generated\\g1hiftr1.z64",
+      "out_rom": "artifacts\\generated\\htrbtn0a.z64",
+      "out_md5": "f977c680300249a1ccee48f042393b96",
+      "header_crc": "FDAB9706 AE37C2E5",
+      "patches": [
+        {
+          "key": "timeout_to_mission_select",
+          "offset": "0x3FF34",
+          "old": "0x24040018",
+          "new": "0x24040007",
+          "note": "After the TND title/logo timeout, route to MENU_MISSION_SELECT."
+        },
+        {
+          "key": "mission_select_force_button_accept",
+          "offset": "0x42D98",
+          "old": "0x1040002A",
+          "new": "0x00000000",
+          "note": "Force the mission-select A/Start/Z accept block so briefingpage and selected_stage are initialized."
+        },
+        {
+          "key": "difficulty_force_button_accept",
+          "offset": "0x43518",
+          "old": "0x10400008",
+          "new": "0x00000000",
+          "note": "Force the difficulty A/Start/Z accept block before the page-transition branch."
+        }
+      ],
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\g1hiftr1.sav",
+          "target": "artifacts\\generated\\htrbtn0a.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\g1hiftr1.eep",
+          "target": "artifacts\\generated\\htrbtn0a.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ],
+      "do_not_promote": true
+    }
+  ]
+}

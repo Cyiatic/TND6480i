@@ -1,0 +1,94 @@
+{
+  "base_rom": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1hlim1.z64",
+  "base_md5": "47dc8fbeda8c95cb603a87c4c7966ab5",
+  "out_rom": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1hift1.z64",
+  "out_md5": "986266afb2fee3aa281952d7198889ca",
+  "header_crc": "022B920A 642228E9",
+  "purpose": "Apply GE480i display-cast model/interface centering plus credit text constants on top of g1hlim1.",
+  "patches": [
+    {
+      "offset": "0x4D040",
+      "old": "0x240B00DC",
+      "ge_stock": "0x240B00DC",
+      "new": "0x240B0140",
+      "changed": true,
+      "note": "display-cast center X for first overlay"
+    },
+    {
+      "offset": "0x4D044",
+      "old": "0x240F0099",
+      "ge_stock": "0x240F0099",
+      "new": "0x240F00E4",
+      "changed": true,
+      "note": "display-cast center Y for first overlay"
+    },
+    {
+      "offset": "0x4D11C",
+      "old": "0x240E00DC",
+      "ge_stock": "0x240E00DC",
+      "new": "0x240E0140",
+      "changed": true,
+      "note": "display-cast center X for second overlay"
+    },
+    {
+      "offset": "0x4D120",
+      "old": "0x240B00B1",
+      "ge_stock": "0x240B00B1",
+      "new": "0x240B00FC",
+      "changed": true,
+      "note": "display-cast center Y for second overlay"
+    },
+    {
+      "offset": "0x4EB20",
+      "old": "0x240D013B",
+      "ge_stock": "0x240D013B",
+      "new": "0x240D01CA",
+      "changed": true,
+      "note": "display-cast credit text center X"
+    },
+    {
+      "offset": "0x4EB38",
+      "old": "0x240C006C",
+      "ge_stock": "0x240C006C",
+      "new": "0x240C00AF",
+      "changed": true,
+      "note": "display-cast credit text first row Y"
+    },
+    {
+      "offset": "0x4EB40",
+      "old": "0x2719006D",
+      "ge_stock": "0x2719006D",
+      "new": "0x271900B0",
+      "changed": true,
+      "note": "display-cast credit text clip bottom offset"
+    },
+    {
+      "offset": "0x4EB58",
+      "old": "0x2406006C",
+      "ge_stock": "0x2406006C",
+      "new": "0x240600AF",
+      "changed": true,
+      "note": "display-cast credit text first render Y"
+    }
+  ],
+  "changed_patch_count": 8,
+  "save_outputs": [
+    {
+      "source": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1hlim1.sav",
+      "target": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1hift1.sav",
+      "bytes": 512,
+      "md5": "79ed3fe6851b080ff21de69fd12f034d"
+    },
+    {
+      "source": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1hlim1.eep",
+      "target": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1hift1.eep",
+      "bytes": 2048,
+      "md5": "e47f5c07623838e875761a0493388e03"
+    }
+  ],
+  "bps": {
+    "patch": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\TND6480i_g1hift1_from_baseline_tnd.bps",
+    "manifest": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\reports\\tnd6480i_g1hift1_bps_manifest.json"
+  },
+  "do_not_promote_until_hardware_compared": true
+}

@@ -1,0 +1,162 @@
+{
+  "base_rom": "artifacts\\generated\\g1hiftr1.z64",
+  "base_md5": "7fc7fcec15e510d573f13aa960253007",
+  "purpose": "No-input hardware route probes for front/dossier pages; do not promote over gameplay baseline.",
+  "routes": [
+    {
+      "name": "htrauto05",
+      "menu_id": 5,
+      "symbol": "MENU_FILE_SELECT",
+      "purpose": "File select / save folders",
+      "base_rom": "artifacts\\generated\\g1hiftr1.z64",
+      "out_rom": "artifacts\\generated\\htrauto05.z64",
+      "out_md5": "c74387bb3b70952961de1ea1a0dafd8b",
+      "header_crc": "022B9716 3A4B0E35",
+      "patch": {
+        "offset": "0x3FF34",
+        "old": "0x24040018",
+        "new": "0x24040005",
+        "note": "After the TND title/logo timeout, route directly to MENU_FILE_SELECT."
+      },
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\g1hiftr1.sav",
+          "target": "artifacts\\generated\\htrauto05.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\g1hiftr1.eep",
+          "target": "artifacts\\generated\\htrauto05.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ],
+      "do_not_promote": true
+    },
+    {
+      "name": "htrauto06",
+      "menu_id": 6,
+      "symbol": "MENU_MODE_SELECT",
+      "purpose": "Single-player / multiplayer / cheat select",
+      "base_rom": "artifacts\\generated\\g1hiftr1.z64",
+      "out_rom": "artifacts\\generated\\htrauto06.z64",
+      "out_md5": "549b2ba170467f544f62a0d8a9146a7f",
+      "header_crc": "022B971A 763695E1",
+      "patch": {
+        "offset": "0x3FF34",
+        "old": "0x24040018",
+        "new": "0x24040006",
+        "note": "After the TND title/logo timeout, route directly to MENU_MODE_SELECT."
+      },
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\g1hiftr1.sav",
+          "target": "artifacts\\generated\\htrauto06.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\g1hiftr1.eep",
+          "target": "artifacts\\generated\\htrauto06.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ],
+      "do_not_promote": true
+    },
+    {
+      "name": "htrauto07",
+      "menu_id": 7,
+      "symbol": "MENU_MISSION_SELECT",
+      "purpose": "Mission select dossier",
+      "base_rom": "artifacts\\generated\\g1hiftr1.z64",
+      "out_rom": "artifacts\\generated\\htrauto07.z64",
+      "out_md5": "893ebdad5b32abdc50229eb38dfa2605",
+      "header_crc": "022B971A F22C4059",
+      "patch": {
+        "offset": "0x3FF34",
+        "old": "0x24040018",
+        "new": "0x24040007",
+        "note": "After the TND title/logo timeout, route directly to MENU_MISSION_SELECT."
+      },
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\g1hiftr1.sav",
+          "target": "artifacts\\generated\\htrauto07.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\g1hiftr1.eep",
+          "target": "artifacts\\generated\\htrauto07.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ],
+      "do_not_promote": true
+    },
+    {
+      "name": "htrauto08",
+      "menu_id": 8,
+      "symbol": "MENU_DIFFICULTY",
+      "purpose": "Difficulty select dossier",
+      "base_rom": "artifacts\\generated\\g1hiftr1.z64",
+      "out_rom": "artifacts\\generated\\htrauto08.z64",
+      "out_md5": "e76d2419f28d3c5071b3f321707891ab",
+      "header_crc": "022B9716 60B56B65",
+      "patch": {
+        "offset": "0x3FF34",
+        "old": "0x24040018",
+        "new": "0x24040008",
+        "note": "After the TND title/logo timeout, route directly to MENU_DIFFICULTY."
+      },
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\g1hiftr1.sav",
+          "target": "artifacts\\generated\\htrauto08.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\g1hiftr1.eep",
+          "target": "artifacts\\generated\\htrauto08.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ],
+      "do_not_promote": true
+    },
+    {
+      "name": "htrauto0a",
+      "menu_id": 10,
+      "symbol": "MENU_BRIEFING",
+      "purpose": "Mission briefing dossier",
+      "base_rom": "artifacts\\generated\\g1hiftr1.z64",
+      "out_rom": "artifacts\\generated\\htrauto0a.z64",
+      "out_md5": "51e00ce8fba55d1f468fc3dcf3d7d596",
+      "header_crc": "022B9712 0B91B305",
+      "patch": {
+        "offset": "0x3FF34",
+        "old": "0x24040018",
+        "new": "0x2404000A",
+        "note": "After the TND title/logo timeout, route directly to MENU_BRIEFING."
+      },
+      "save_outputs": [
+        {
+          "source": "artifacts\\generated\\g1hiftr1.sav",
+          "target": "artifacts\\generated\\htrauto0a.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "artifacts\\generated\\g1hiftr1.eep",
+          "target": "artifacts\\generated\\htrauto0a.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ],
+      "do_not_promote": true
+    }
+  ]
+}

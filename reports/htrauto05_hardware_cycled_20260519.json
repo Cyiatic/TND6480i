@@ -1,0 +1,141 @@
+{
+  "video": "diagnostics\\captures\\videos\\htrauto05_hardware_cycled_20260519.mp4",
+  "sheet": "diagnostics\\captures\\contact_sheets\\htrauto05_hardware_cycled_20260519.jpg",
+  "start": 50.0,
+  "end": 72.0,
+  "step": 2.0,
+  "frames": [
+    {
+      "index": 0,
+      "seconds": 50.0,
+      "timestamp": "00:50",
+      "path": "diagnostics\\captures\\contact_sheets\\htrauto05_hardware_cycled_20260519\\frames\\frame_0000_00050000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "00:50"
+    },
+    {
+      "index": 1,
+      "seconds": 52.0,
+      "timestamp": "00:52",
+      "path": "diagnostics\\captures\\contact_sheets\\htrauto05_hardware_cycled_20260519\\frames\\frame_0001_00052000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "00:52"
+    },
+    {
+      "index": 2,
+      "seconds": 54.0,
+      "timestamp": "00:54",
+      "path": "diagnostics\\captures\\contact_sheets\\htrauto05_hardware_cycled_20260519\\frames\\frame_0002_00054000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "00:54"
+    },
+    {
+      "index": 3,
+      "seconds": 56.0,
+      "timestamp": "00:56",
+      "path": "diagnostics\\captures\\contact_sheets\\htrauto05_hardware_cycled_20260519\\frames\\frame_0003_00056000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "00:56"
+    },
+    {
+      "index": 4,
+      "seconds": 58.0,
+      "timestamp": "00:58",
+      "path": "diagnostics\\captures\\contact_sheets\\htrauto05_hardware_cycled_20260519\\frames\\frame_0004_00058000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "00:58"
+    },
+    {
+      "index": 5,
+      "seconds": 60.0,
+      "timestamp": "01:00",
+      "path": "diagnostics\\captures\\contact_sheets\\htrauto05_hardware_cycled_20260519\\frames\\frame_0005_00060000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "01:00"
+    },
+    {
+      "index": 6,
+      "seconds": 62.0,
+      "timestamp": "01:02",
+      "path": "diagnostics\\captures\\contact_sheets\\htrauto05_hardware_cycled_20260519\\frames\\frame_0006_00062000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "01:02"
+    },
+    {
+      "index": 7,
+      "seconds": 64.0,
+      "timestamp": "01:04",
+      "path": "diagnostics\\captures\\contact_sheets\\htrauto05_hardware_cycled_20260519\\frames\\frame_0007_00064000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "01:04"
+    },
+    {
+      "index": 8,
+      "seconds": 66.0,
+      "timestamp": "01:06",
+      "path": "diagnostics\\captures\\contact_sheets\\htrauto05_hardware_cycled_20260519\\frames\\frame_0008_00066000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "01:06"
+    },
+    {
+      "index": 9,
+      "seconds": 68.0,
+      "timestamp": "01:08",
+      "path": "diagnostics\\captures\\contact_sheets\\htrauto05_hardware_cycled_20260519\\frames\\frame_0009_00068000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "01:08"
+    },
+    {
+      "index": 10,
+      "seconds": 70.0,
+      "timestamp": "01:10",
+      "path": "diagnostics\\captures\\contact_sheets\\htrauto05_hardware_cycled_20260519\\frames\\frame_0010_00070000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "01:10"
+    }
+  ]
+}

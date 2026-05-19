@@ -1,0 +1,62 @@
+{
+  "base_rom": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1hlim1.z64",
+  "base_md5": "47dc8fbeda8c95cb603a87c4c7966ab5",
+  "out_rom": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1htxt1.z64",
+  "out_md5": "80f606c76dded33d537003f4823c7591",
+  "header_crc": "022B9154 85FD7D30",
+  "purpose": "Apply only the GE480i display-cast credit text center/Y constants on top of g1hlim1.",
+  "patches": [
+    {
+      "offset": "0x4EB20",
+      "old": "0x240D013B",
+      "ge_stock": "0x240D013B",
+      "new": "0x240D01CA",
+      "changed": true,
+      "note": "display-cast credit text center X"
+    },
+    {
+      "offset": "0x4EB38",
+      "old": "0x240C006C",
+      "ge_stock": "0x240C006C",
+      "new": "0x240C00AF",
+      "changed": true,
+      "note": "display-cast credit text first row Y"
+    },
+    {
+      "offset": "0x4EB40",
+      "old": "0x2719006D",
+      "ge_stock": "0x2719006D",
+      "new": "0x271900B0",
+      "changed": true,
+      "note": "display-cast credit text clip bottom offset"
+    },
+    {
+      "offset": "0x4EB58",
+      "old": "0x2406006C",
+      "ge_stock": "0x2406006C",
+      "new": "0x240600AF",
+      "changed": true,
+      "note": "display-cast credit text first render Y"
+    }
+  ],
+  "changed_patch_count": 4,
+  "save_outputs": [
+    {
+      "source": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1hlim1.sav",
+      "target": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1htxt1.sav",
+      "bytes": 512,
+      "md5": "79ed3fe6851b080ff21de69fd12f034d"
+    },
+    {
+      "source": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1hlim1.eep",
+      "target": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1htxt1.eep",
+      "bytes": 2048,
+      "md5": "e47f5c07623838e875761a0493388e03"
+    }
+  ],
+  "bps": {
+    "patch": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\TND6480i_g1htxt1_from_baseline_tnd.bps",
+    "manifest": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\reports\\tnd6480i_g1htxt1_bps_manifest.json"
+  },
+  "do_not_promote_until_hardware_compared": true
+}
