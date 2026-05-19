@@ -1,0 +1,364 @@
+{
+  "candidate": "g1mcfix1",
+  "candidate_rom": "artifacts/generated/g1mcfix1.z64",
+  "candidate_md5": "32b0802210e71fecdf4a0a524b705aef",
+  "method": "Side-by-side atlas built from existing GE480i/stock TND references plus current g1cred1/g1mcfix1 GV-USB2 captures. Spelling is visual/manual from captured text, not OCR.",
+  "atlas": "diagnostics\\captures\\current\\g1mcfix1_screen_coverage_atlas_20260519.jpg",
+  "source_dir": "diagnostics\\captures\\current\\g1mcfix1_screen_coverage_20260519",
+  "rows": [
+    {
+      "name": "01_classification",
+      "title": "01 Classification Board",
+      "status": "PASS with low-confidence fine print",
+      "status_color": "green",
+      "reference_label": "GE480i legal screen reference",
+      "current_label": "Current g1mcfix1/g1cred1 startup",
+      "reference": "diagnostics\\captures\\contact_sheets\\ge480i_scan_20260518\\frames\\frame_0028_00140000.png",
+      "current": "diagnostics\\captures\\contact_sheets\\g1cred1_full_startup_1fps_20260519\\frames\\frame_0002_00010000.png",
+      "text_checked": [
+        "CMK BOARD OF GAME CLASSIFICATION",
+        "Proudly presents",
+        "Tomorrow Never Dies 64 - Expanded",
+        "A not-for-profit fan homage to James Bond"
+      ],
+      "spelling_status": "PASS",
+      "spelling": "No visible typo in large text. Fine-print copyright lines are capture-limited, so I am treating them as low-confidence rather than fully OCR-verified.",
+      "layout_note": "Content is fully onscreen and no longer runs off to the right; it uses the TND64 legal copy rather than GE wording.",
+      "reference_source_copy": "diagnostics\\captures\\current\\g1mcfix1_screen_coverage_20260519\\01_classification_reference.png",
+      "current_source_copy": "diagnostics\\captures\\current\\g1mcfix1_screen_coverage_20260519\\01_classification_current.png"
+    },
+    {
+      "name": "02_tijayfly",
+      "title": "02 TiJayFly Logo",
+      "status": "PASS visual",
+      "status_color": "green",
+      "reference_label": "Stock TND64 logo reference",
+      "current_label": "Current g1mcfix1/g1cred1 startup",
+      "reference": "diagnostics\\captures\\contact_sheets\\stock_tnd_preingame_scan_20260518\\frames\\frame_0001_00005000.png",
+      "current": "diagnostics\\captures\\contact_sheets\\g1cred1_full_startup_1fps_20260519\\frames\\frame_0007_00015000.png",
+      "text_checked": [
+        "TIJAYFLY"
+      ],
+      "spelling_status": "PASS",
+      "spelling": "Stylized TiJayFly logo text is intact in sampled frames; no spelling issue spotted.",
+      "layout_note": "Logo remains centered in the same family as stock TND. This is a visual still check, not a frame-by-frame animation proof.",
+      "reference_source_copy": "diagnostics\\captures\\current\\g1mcfix1_screen_coverage_20260519\\02_tijayfly_reference.png",
+      "current_source_copy": "diagnostics\\captures\\current\\g1mcfix1_screen_coverage_20260519\\02_tijayfly_current.png"
+    },
+    {
+      "name": "03_rare",
+      "title": "03 Rare Logo",
+      "status": "PASS visual",
+      "status_color": "green",
+      "reference_label": "Stock TND64 Rare logo",
+      "current_label": "Current g1mcfix1/g1cred1 startup",
+      "reference": "diagnostics\\captures\\contact_sheets\\stock_tnd_preingame_scan_20260518\\frames\\frame_0017_00085000.png",
+      "current": "diagnostics\\captures\\contact_sheets\\g1cred1_full_startup_1fps_20260519\\frames\\frame_0015_00023000.png",
+      "text_checked": [
+        "RAREWARE"
+      ],
+      "spelling_status": "PASS",
+      "spelling": "Rareware logo text is a graphic mark; no visible spelling issue.",
+      "layout_note": "Logo is visible and centered. Motion cadence should only be revisited if a new patch disturbs startup timing.",
+      "reference_source_copy": "diagnostics\\captures\\current\\g1mcfix1_screen_coverage_20260519\\03_rare_reference.png",
+      "current_source_copy": "diagnostics\\captures\\current\\g1mcfix1_screen_coverage_20260519\\03_rare_current.png"
+    },
+    {
+      "name": "04_gunbarrel_sweep",
+      "title": "04 Gunbarrel Sweep",
+      "status": "PASS visual / cadence still human-check",
+      "status_color": "green",
+      "reference_label": "GE480i gunbarrel reference",
+      "current_label": "Current g1mcfix1/g1cred1 startup",
+      "reference": "diagnostics\\captures\\contact_sheets\\ge480i_gunbarrel_detail_20260518\\frames\\frame_0003_00022000.png",
+      "current": "diagnostics\\captures\\contact_sheets\\g1cred1_full_startup_1fps_20260519\\frames\\frame_0022_00030000.png",
+      "text_checked": [
+        "no text"
+      ],
+      "spelling_status": "PASS",
+      "spelling": "No text on this screen.",
+      "layout_note": "Early white aperture sweep is back in the GE480i visual family. Cadence is still best judged from motion, not this still.",
+      "reference_source_copy": "diagnostics\\captures\\current\\g1mcfix1_screen_coverage_20260519\\04_gunbarrel_sweep_reference.png",
+      "current_source_copy": "diagnostics\\captures\\current\\g1mcfix1_screen_coverage_20260519\\04_gunbarrel_sweep_current.png"
+    },
+    {
+      "name": "05_gunbarrel_bond",
+      "title": "05 Gunbarrel With Bond",
+      "status": "PASS visual / cadence still human-check",
+      "status_color": "green",
+      "reference_label": "GE480i gunbarrel reference",
+      "current_label": "Current g1mcfix1/g1cred1 startup",
+      "reference": "diagnostics\\captures\\contact_sheets\\ge480i_gunbarrel_detail_20260518\\frames\\frame_0008_00032000.png",
+      "current": "diagnostics\\captures\\contact_sheets\\g1cred1_full_startup_1fps_20260519\\frames\\frame_0034_00042000.png",
+      "text_checked": [
+        "no text"
+      ],
+      "spelling_status": "PASS",
+      "spelling": "No text on this screen.",
+      "layout_note": "The second/offset barrel failure is not present in the current startup sample.",
+      "reference_source_copy": "diagnostics\\captures\\current\\g1mcfix1_screen_coverage_20260519\\05_gunbarrel_bond_reference.png",
+      "current_source_copy": "diagnostics\\captures\\current\\g1mcfix1_screen_coverage_20260519\\05_gunbarrel_bond_current.png"
+    },
+    {
+      "name": "06_goldeneye_logo",
+      "title": "06 GoldenEye Title Logo Reference",
+      "status": "REFERENCE ONLY",
+      "status_color": "cyan",
+      "reference_label": "GE480i title logo",
+      "current_label": "TND title logo current analogue",
+      "reference": "diagnostics\\captures\\contact_sheets\\ge480i_scan_20260518\\frames\\frame_0010_00050000.png",
+      "current": "diagnostics\\captures\\contact_sheets\\g1cred1_full_startup_1fps_20260519\\frames\\frame_0049_00057000.png",
+      "text_checked": [
+        "GoldenEye",
+        "Tomorrow Never Dies"
+      ],
+      "spelling_status": "PASS",
+      "spelling": "GE reference spells GoldenEye correctly; current TND title spells Tomorrow Never Dies correctly.",
+      "layout_note": "This row compares high-res title-logo treatment, not identical artwork. TND uses its own logo asset.",
+      "reference_source_copy": "diagnostics\\captures\\current\\g1mcfix1_screen_coverage_20260519\\06_goldeneye_logo_reference.png",
+      "current_source_copy": "diagnostics\\captures\\current\\g1mcfix1_screen_coverage_20260519\\07_tnd_logo_current.png"
+    },
+    {
+      "name": "07_tnd_logo",
+      "title": "07 Tomorrow Never Dies Title Logo",
+      "status": "PASS visual",
+      "status_color": "green",
+      "reference_label": "Stock TND64 title logo",
+      "current_label": "Current g1mcfix1/g1cred1 startup",
+      "reference": "diagnostics\\captures\\contact_sheets\\stock_tnd_preingame_scan_20260518\\frames\\frame_0008_00040000.png",
+      "current": "diagnostics\\captures\\contact_sheets\\g1cred1_full_startup_1fps_20260519\\frames\\frame_0049_00057000.png",
+      "text_checked": [
+        "Tomorrow Never Dies",
+        "007"
+      ],
+      "spelling_status": "PASS",
+      "spelling": "On-screen title spells Tomorrow Never Dies correctly; the mixed-case DIes typo only appears in a local reference filename, not the game screen.",
+      "layout_note": "Centered, readable, and no longer interrupted by the earlier gunbarrel transition failures.",
+      "reference_source_copy": "diagnostics\\captures\\current\\g1mcfix1_screen_coverage_20260519\\07_tnd_logo_reference.png",
+      "current_source_copy": "diagnostics\\captures\\current\\g1mcfix1_screen_coverage_20260519\\07_tnd_logo_current.png"
+    },
+    {
+      "name": "08_opening_cast",
+      "title": "08 Opening Credits / Cast Models",
+      "status": "PASS visual with content-specific differences",
+      "status_color": "green",
+      "reference_label": "GE480i cast scale reference",
+      "current_label": "Current g1mcfix1/g1cred1 startup",
+      "reference": "diagnostics\\captures\\contact_sheets\\ge480i_scan_20260518\\frames\\frame_0012_00060000.png",
+      "current": "diagnostics\\captures\\contact_sheets\\g1cred1_full_startup_1fps_20260519\\frames\\frame_0052_00060000.png",
+      "text_checked": [
+        "Starring",
+        "007",
+        "James Bond"
+      ],
+      "spelling_status": "PASS",
+      "spelling": "Visible sampled cast text has no typo. Names are TND64 content, so they will not match the GE cast list.",
+      "layout_note": "Character scale and text scale are now in the high-res family; no bottom transition rectangle is visible in the sampled current title/cast frames.",
+      "reference_source_copy": "diagnostics\\captures\\current\\g1mcfix1_screen_coverage_20260519\\08_opening_cast_reference.png",
+      "current_source_copy": "diagnostics\\captures\\current\\g1mcfix1_screen_coverage_20260519\\08_opening_cast_current.png"
+    },
+    {
+      "name": "09_file_select",
+      "title": "09 File Select Dossier",
+      "status": "PASS visual",
+      "status_color": "green",
+      "reference_label": "GE480i file select reference",
+      "current_label": "Current g1mcfix1 route",
+      "reference": "C:\\Users\\codex\\Pictures\\vlcsnap-2026-05-18-18h14m25s727.png",
+      "current": "diagnostics\\captures\\current\\g1cred1_route_frames_20260519\\g1cauto05_file_select.png",
+      "text_checked": [
+        "Select File",
+        "Copy",
+        "Erase",
+        "007"
+      ],
+      "spelling_status": "PASS",
+      "spelling": "No visible typo. The earlier Custom label is fixed to 007.",
+      "layout_note": "Icons and labels are present; red/black wallpaper differs from GE green by design.",
+      "reference_source_copy": "diagnostics\\captures\\current\\g1mcfix1_screen_coverage_20260519\\09_file_select_reference.png",
+      "current_source_copy": "diagnostics\\captures\\current\\g1mcfix1_screen_coverage_20260519\\09_file_select_current.png"
+    },
+    {
+      "name": "10_mode_select",
+      "title": "10 Bond Dossier / Mode Select",
+      "status": "PASS visual",
+      "status_color": "green",
+      "reference_label": "GE480i mode select reference",
+      "current_label": "Current g1mcfix1 route",
+      "reference": "C:\\Users\\codex\\Pictures\\vlcsnap-2026-05-18-18h14m38s302.png",
+      "current": "diagnostics\\captures\\current\\g1cred1_route_frames_20260519\\g1cauto06_mode_select.png",
+      "text_checked": [
+        "SELECT MISSION",
+        "MULTIPLAYER",
+        "CHEAT OPTIONS",
+        "PREVIOUS"
+      ],
+      "spelling_status": "PASS",
+      "spelling": "No visible typo in the sampled menu text.",
+      "layout_note": "Text, selection rows, paper, and previous tab match the GE480i envelope; TND uses red folder styling.",
+      "reference_source_copy": "diagnostics\\captures\\current\\g1mcfix1_screen_coverage_20260519\\10_mode_select_reference.png",
+      "current_source_copy": "diagnostics\\captures\\current\\g1mcfix1_screen_coverage_20260519\\10_mode_select_current.png"
+    },
+    {
+      "name": "11_mission_select",
+      "title": "11 Mission Select Dossier",
+      "status": "PASS visual",
+      "status_color": "green",
+      "reference_label": "GE480i mission select reference",
+      "current_label": "Current g1mcfix1 route",
+      "reference": "C:\\Users\\codex\\Pictures\\vlcsnap-2026-05-18-18h14m57s301.png",
+      "current": "diagnostics\\captures\\current\\g1cred1_route_frames_20260519\\g1cauto07_mission_select.png",
+      "text_checked": [
+        "BAZAAR",
+        "PARTY",
+        "LABS",
+        "PRESS",
+        "HOTEL",
+        "PARKHAUS",
+        "WRECK",
+        "TOWER",
+        "CITY",
+        "BOAT",
+        "BRIDGE",
+        "VOLCANO",
+        "ALASKA",
+        "THE END"
+      ],
+      "spelling_status": "PASS",
+      "spelling": "No visible typo. Parkhaus is intentional; Boat is present, not Bride.",
+      "layout_note": "Mission labels and film thumbnails sit inside the dossier area. Empty space is expected because TND64 has fewer missions than GE.",
+      "reference_source_copy": "diagnostics\\captures\\current\\g1mcfix1_screen_coverage_20260519\\11_mission_select_reference.png",
+      "current_source_copy": "diagnostics\\captures\\current\\g1mcfix1_screen_coverage_20260519\\11_mission_select_current.png"
+    },
+    {
+      "name": "12_difficulty",
+      "title": "12 Difficulty Select Dossier",
+      "status": "PASS visual",
+      "status_color": "green",
+      "reference_label": "GE480i difficulty reference",
+      "current_label": "Current g1mcfix1 route",
+      "reference": "C:\\Users\\codex\\Pictures\\vlcsnap-2026-05-18-18h15m03s394.png",
+      "current": "diagnostics\\captures\\current\\g1cred1_route_frames_20260519\\g1cpathbtn08_difficulty_path.png",
+      "text_checked": [
+        "DIFFICULTY",
+        "Easy",
+        "Normal",
+        "Hard",
+        "Mission 3: South China Sea",
+        "Part i: Deep Sea Wreck"
+      ],
+      "spelling_status": "PASS",
+      "spelling": "No typo spotted. The lower-case roman numeral in Part i matches the inherited GE dossier style.",
+      "layout_note": "Red check marks, rows, heading, and tabs are aligned in the GE480i layout family.",
+      "reference_source_copy": "diagnostics\\captures\\current\\g1mcfix1_screen_coverage_20260519\\12_difficulty_reference.png",
+      "current_source_copy": "diagnostics\\captures\\current\\g1mcfix1_screen_coverage_20260519\\12_difficulty_current.png"
+    },
+    {
+      "name": "13_briefing",
+      "title": "13 Briefing / Background Page",
+      "status": "PASS visual",
+      "status_color": "green",
+      "reference_label": "GE480i briefing reference",
+      "current_label": "Current g1mcfix1 route",
+      "reference": "C:\\Users\\codex\\Pictures\\vlcsnap-2026-05-18-18h15m20s302.png",
+      "current": "diagnostics\\captures\\current\\g1cred1_route_frames_20260519\\g1cpathbtn0c_briefing_path.png",
+      "text_checked": [
+        "PRIMARY OBJECTIVES",
+        "Mission 3: South China Sea",
+        "Part i: Deep Sea Wreck",
+        "START",
+        "NEXT",
+        "PREVIOUS"
+      ],
+      "spelling_status": "PASS",
+      "spelling": "No visible typo in the sampled route page. Objective body text is sparse in this diagnostic route, so full per-mission wording remains a manual-content check.",
+      "layout_note": "The route capture uses a diagnostic state, but page geometry, heading scale, and tab placement are now correct.",
+      "reference_source_copy": "diagnostics\\captures\\current\\g1mcfix1_screen_coverage_20260519\\13_briefing_reference.png",
+      "current_source_copy": "diagnostics\\captures\\current\\g1mcfix1_screen_coverage_20260519\\13_briefing_current.png"
+    },
+    {
+      "name": "14_mission_stats",
+      "title": "14 Mission Complete Statistics",
+      "status": "PASS visual after g1mcfix1",
+      "status_color": "green",
+      "reference_label": "GE480i stats reference",
+      "current_label": "Current g1mcfix1 live GV-USB2",
+      "reference": "diagnostics\\captures\\current\\mission_result_compare_sources_20260519\\ge480i_stats_0706.png",
+      "current": "diagnostics\\captures\\current\\g1mcfix1_live_now_screen_probe_20260519.png",
+      "text_checked": [
+        "OHMSS",
+        "STATISTICS",
+        "Time",
+        "Best Time",
+        "Accuracy",
+        "Weapon of choice",
+        "Shot total",
+        "Kill total",
+        "Head hits",
+        "Body hits",
+        "Limb hits",
+        "Others"
+      ],
+      "spelling_status": "PASS",
+      "spelling": "No visible typo. OHMSS is a 007 dossier header/acronym, not a misspelling.",
+      "layout_note": "The old Kill total / Best Time overlap is gone. Time/Best Time spacing is tight but follows the GE480i high-res stats window.",
+      "reference_source_copy": "diagnostics\\captures\\current\\g1mcfix1_screen_coverage_20260519\\14_mission_stats_reference.png",
+      "current_source_copy": "diagnostics\\captures\\current\\g1mcfix1_screen_coverage_20260519\\14_mission_stats_current.png"
+    },
+    {
+      "name": "15_end_credits",
+      "title": "15 End Credits",
+      "status": "PASS visual / text sampled",
+      "status_color": "green",
+      "reference_label": "GE480i credits sample",
+      "current_label": "Current g1cred1/g1mcfix1 credits sample",
+      "reference": "diagnostics\\captures\\current\\ge480i_live_end_credits_090s_20260519.png",
+      "current": "diagnostics\\captures\\current\\live_credits_format_probe_20260519.png",
+      "text_checked": [
+        "Casey Mongillo",
+        "Chief Modeller",
+        "Johnny Thunder",
+        "'Rearmed' Content",
+        "Hypatia onthegreatsea.tumblr.com"
+      ],
+      "spelling_status": "PASS",
+      "spelling": "No obvious typo in sampled current credits. 'Modeller' can be valid British/Commonwealth spelling and is left unchanged.",
+      "layout_note": "Credits formatting is in the same general scale family as GE480i. Full crawl remains a long-duration spot check rather than a single-frame proof.",
+      "reference_source_copy": "diagnostics\\captures\\current\\g1mcfix1_screen_coverage_20260519\\15_end_credits_reference.png",
+      "current_source_copy": "diagnostics\\captures\\current\\g1mcfix1_screen_coverage_20260519\\15_end_credits_current.png"
+    },
+    {
+      "name": "16_gameplay_watch",
+      "title": "16 Gameplay HUD / Watch Menu",
+      "status": "PASS by latest user hardware test; not re-captured in this atlas",
+      "status_color": "yellow",
+      "reference_label": "Older verified gameplay capture",
+      "current_label": "Manual coverage note",
+      "reference": "diagnostics\\captures\\current\\user_driven_ingame_latest_after_note_20260510.png",
+      "current": ".",
+      "text_checked": [
+        "ammo HUD",
+        "pause/watch menu text",
+        "mission objective text boxes"
+      ],
+      "spelling_status": "PASS",
+      "spelling": "No spelling issue was reported in the latest gameplay/pass-menu test; this row is not a new OCR pass.",
+      "layout_note": "User reported gameplay, pause menu, bullets UI, Bazaar, and Labs look fine. This remains a manual-control area for future regression sweeps.",
+      "reference_source_copy": "diagnostics\\captures\\current\\g1mcfix1_screen_coverage_20260519\\16_gameplay_watch_reference.png"
+    }
+  ],
+  "spelling_findings": [
+    "No visible spelling errors found in captured current screens.",
+    "The local filename spelling 'DIes' is not present on the Tomorrow Never Dies title screen.",
+    "The mission select row says BOAT, not Bride; Bride was a note typo.",
+    "Parkhaus is intentional TND64 content.",
+    "Part i uses the inherited GoldenEye dossier roman-numeral style.",
+    "Modeller is a valid spelling in the credits context and was not changed.",
+    "Classification fine print remains low-confidence because S-Video capture limits legibility."
+  ],
+  "manual_gaps": [
+    "Full end-credits crawl should still be sampled periodically because one frame cannot prove every credit line.",
+    "Mission failed/aborted result pages were not captured in this pass.",
+    "Gameplay/watch HUD row relies on the user's latest hardware test instead of a fresh automated route."
+  ]
+}
