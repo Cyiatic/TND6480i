@@ -1,0 +1,284 @@
+{
+  "base_rom": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1hnext1.z64",
+  "base_md5": "8e2f782adec6cb773664dd28997e5f3b",
+  "purpose": "Probe only the remaining file-select gunbarrel backdrop smear while preserving g1hnext1 tab/gameplay/dossier fixes.",
+  "candidates": [
+    {
+      "name": "g1fsorig1",
+      "purpose": "Use the original GE/TND file-select backdrop wrapper instead of the cloned 480i blitter; checks whether the right-side rectangular smear is clone-specific.",
+      "out_rom": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1fsorig1.z64",
+      "out_md5": "72ef6c07eb031809d4cdc6309725b105",
+      "header_crc": "022BA85C 25DF679B",
+      "patches": [
+        {
+          "offset": "0x41030",
+          "old": "0x0FC06A5A",
+          "new": "0x0FC01F32",
+          "changed": true,
+          "note": "restore file-select backdrop callsite to original wrapper"
+        }
+      ],
+      "save_outputs": [
+        {
+          "source": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1hnext1.sav",
+          "target": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1fsorig1.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1hnext1.eep",
+          "target": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1fsorig1.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ],
+      "route": {
+        "out_rom": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1fsorig1auto05.z64",
+        "out_md5": "1537d817847ca60e90abb06e058e6f9c",
+        "header_crc": "022BA8B4 51059492",
+        "route_patch": {
+          "offset": "0x3FF34",
+          "old": "0x24040018",
+          "new": "0x24040005"
+        },
+        "save_outputs": [
+          {
+            "source": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1hnext1.sav",
+            "target": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1fsorig1auto05.sav",
+            "bytes": 512,
+            "md5": "79ed3fe6851b080ff21de69fd12f034d"
+          },
+          {
+            "source": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1hnext1.eep",
+            "target": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1fsorig1auto05.eep",
+            "bytes": 2048,
+            "md5": "e47f5c07623838e875761a0493388e03"
+          }
+        ]
+      }
+    },
+    {
+      "name": "g1fsstride508",
+      "purpose": "Keep the cloned file-select path but try a 508-byte/source-width stride, matching TND's apparent visible file-select source span more closely than 640.",
+      "out_rom": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1fsstride508.z64",
+      "out_md5": "298632dbe7aaf24dab589d197332fdbd",
+      "header_crc": "022B8BF4 11BB6D37",
+      "patches": [
+        {
+          "offset": "0x4F9A0",
+          "old": "0x26100280",
+          "new": "0x261001FC",
+          "changed": true,
+          "note": "clone backdrop row stride 508"
+        }
+      ],
+      "save_outputs": [
+        {
+          "source": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1hnext1.sav",
+          "target": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1fsstride508.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1hnext1.eep",
+          "target": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1fsstride508.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ],
+      "route": {
+        "out_rom": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1fsstride508auto05.z64",
+        "out_md5": "0d5bb39f5fcd516104fc0d0d654f3838",
+        "header_crc": "022B8BC4 A23CAC78",
+        "route_patch": {
+          "offset": "0x3FF34",
+          "old": "0x24040018",
+          "new": "0x24040005"
+        },
+        "save_outputs": [
+          {
+            "source": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1hnext1.sav",
+            "target": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1fsstride508auto05.sav",
+            "bytes": 512,
+            "md5": "79ed3fe6851b080ff21de69fd12f034d"
+          },
+          {
+            "source": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1hnext1.eep",
+            "target": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1fsstride508auto05.eep",
+            "bytes": 2048,
+            "md5": "e47f5c07623838e875761a0493388e03"
+          }
+        ]
+      }
+    },
+    {
+      "name": "g1fsstride560",
+      "purpose": "Keep the cloned file-select path but reduce the row stride from 640 to 560 as a midpoint probe for the right-side repeat smear.",
+      "out_rom": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1fsstride560.z64",
+      "out_md5": "d645d5ecdb85e53fef3ec044d9c14568",
+      "header_crc": "022B886C 9620E7AE",
+      "patches": [
+        {
+          "offset": "0x4F9A0",
+          "old": "0x26100280",
+          "new": "0x26100230",
+          "changed": true,
+          "note": "clone backdrop row stride 560"
+        }
+      ],
+      "save_outputs": [
+        {
+          "source": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1hnext1.sav",
+          "target": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1fsstride560.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1hnext1.eep",
+          "target": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1fsstride560.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ],
+      "route": {
+        "out_rom": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1fsstride560auto05.z64",
+        "out_md5": "dd16576cbcb615072dd7a0f55ecd7298",
+        "header_crc": "022B8844 CEFEDC33",
+        "route_patch": {
+          "offset": "0x3FF34",
+          "old": "0x24040018",
+          "new": "0x24040005"
+        },
+        "save_outputs": [
+          {
+            "source": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1hnext1.sav",
+            "target": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1fsstride560auto05.sav",
+            "bytes": 512,
+            "md5": "79ed3fe6851b080ff21de69fd12f034d"
+          },
+          {
+            "source": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1hnext1.eep",
+            "target": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1fsstride560auto05.eep",
+            "bytes": 2048,
+            "md5": "e47f5c07623838e875761a0493388e03"
+          }
+        ]
+      }
+    },
+    {
+      "name": "g1fsrowstride508",
+      "purpose": "Keep the cloned path with a 480-row loop and 508 stride; probes whether the clone is overrunning both height and row pitch.",
+      "out_rom": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1fsrowstride508.z64",
+      "out_md5": "ab5981743dcbfa409f88c25f815466bb",
+      "header_crc": "022B8BEC 0281057D",
+      "patches": [
+        {
+          "offset": "0x4F998",
+          "old": "0x292101AE",
+          "new": "0x292101E0",
+          "changed": true,
+          "note": "clone backdrop row loop limit 480"
+        },
+        {
+          "offset": "0x4F9A0",
+          "old": "0x26100280",
+          "new": "0x261001FC",
+          "changed": true,
+          "note": "clone backdrop row stride 508"
+        }
+      ],
+      "save_outputs": [
+        {
+          "source": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1hnext1.sav",
+          "target": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1fsrowstride508.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1hnext1.eep",
+          "target": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1fsrowstride508.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ],
+      "route": {
+        "out_rom": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1fsrowstride508auto05.z64",
+        "out_md5": "42ce913d259112dc3f72d8957ee2a537",
+        "header_crc": "022B8BC4 2C7A0398",
+        "route_patch": {
+          "offset": "0x3FF34",
+          "old": "0x24040018",
+          "new": "0x24040005"
+        },
+        "save_outputs": [
+          {
+            "source": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1hnext1.sav",
+            "target": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1fsrowstride508auto05.sav",
+            "bytes": 512,
+            "md5": "79ed3fe6851b080ff21de69fd12f034d"
+          },
+          {
+            "source": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1hnext1.eep",
+            "target": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1fsrowstride508auto05.eep",
+            "bytes": 2048,
+            "md5": "e47f5c07623838e875761a0493388e03"
+          }
+        ]
+      }
+    },
+    {
+      "name": "g1fstexstock",
+      "purpose": "Keep cloned geometry but restore the first texture-width word to stock/TND; checks whether the GE480i E49F texture width causes the file-select smear.",
+      "out_rom": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1fstexstock.z64",
+      "out_md5": "066d94cae5bdc1c70d8143cb69bdd68b",
+      "header_crc": "022B88CC 559F5A5B",
+      "patches": [
+        {
+          "offset": "0x4F5E8",
+          "old": "0x3C0AE49F",
+          "new": "0x3C0AE46D",
+          "changed": true,
+          "note": "clone backdrop first texture-width word back to stock"
+        }
+      ],
+      "save_outputs": [
+        {
+          "source": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1hnext1.sav",
+          "target": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1fstexstock.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1hnext1.eep",
+          "target": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1fstexstock.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ],
+      "route": {
+        "out_rom": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1fstexstockauto05.z64",
+        "out_md5": "47369b77b18048ba78bb221000d890f4",
+        "header_crc": "022B8824 18344CA2",
+        "route_patch": {
+          "offset": "0x3FF34",
+          "old": "0x24040018",
+          "new": "0x24040005"
+        },
+        "save_outputs": [
+          {
+            "source": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1hnext1.sav",
+            "target": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1fstexstockauto05.sav",
+            "bytes": 512,
+            "md5": "79ed3fe6851b080ff21de69fd12f034d"
+          },
+          {
+            "source": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1hnext1.eep",
+            "target": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1fstexstockauto05.eep",
+            "bytes": 2048,
+            "md5": "e47f5c07623838e875761a0493388e03"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,118 @@
+{
+  "base_rom": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1hbrf1.z64",
+  "base_md5": "074ccc643853e308aafd0cbccb8302b9",
+  "out_rom": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1hnext1.z64",
+  "out_md5": "8e2f782adec6cb773664dd28997e5f3b",
+  "header_crc": "022B880C 9CB82B4B",
+  "purpose": "Move only the common NEXT tab label geometry to GE480i values; file-select backdrop is intentionally untouched.",
+  "patches": [
+    {
+      "offset": "0x3EFAC",
+      "old": "0x2408019B",
+      "ge_stock": "0x2408019B",
+      "new": "0x2408024E",
+      "changed": true
+    },
+    {
+      "offset": "0x3EFB0",
+      "old": "0x240F0090",
+      "ge_stock": "0x240F0090",
+      "new": "0x240F00D1",
+      "changed": true
+    },
+    {
+      "offset": "0x3EFD8",
+      "old": "0x240A00D2",
+      "ge_stock": "0x240A00D2",
+      "new": "0x240A0131",
+      "changed": true
+    },
+    {
+      "offset": "0x3EFF0",
+      "old": "0x24060090",
+      "ge_stock": "0x24060090",
+      "new": "0x240600D1",
+      "changed": true
+    },
+    {
+      "offset": "0x3F00C",
+      "old": "0x240E00B1",
+      "ge_stock": "0x240E00B1",
+      "new": "0x240E0101",
+      "changed": true
+    }
+  ],
+  "save_outputs": [
+    {
+      "source": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1hbrf1.sav",
+      "target": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1hnext1.sav",
+      "bytes": 512,
+      "md5": "79ed3fe6851b080ff21de69fd12f034d"
+    },
+    {
+      "source": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1hbrf1.eep",
+      "target": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1hnext1.eep",
+      "bytes": 2048,
+      "md5": "e47f5c07623838e875761a0493388e03"
+    }
+  ],
+  "routes": {
+    "background_page": {
+      "out_rom": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1hnext1btn0cpg1.z64",
+      "out_md5": "dda453d196ce860a3cbc0958f82f87e9",
+      "header_crc": "25AB88F8 734F84F8",
+      "route_patches": [
+        {
+          "key": "timeout_to_mission_select",
+          "offset": "0x3FF34",
+          "old": "0x24040018",
+          "new": "0x24040007"
+        },
+        {
+          "key": "mission_select_force_button_accept",
+          "offset": "0x42D98",
+          "old": "0x1040002A",
+          "new": "0x00000000"
+        },
+        {
+          "key": "difficulty_accept",
+          "offset": "0x43554",
+          "old": "0x11600012",
+          "new": "0x00000000"
+        },
+        {
+          "key": "difficulty_route_007_to_briefing",
+          "offset": "0x43560",
+          "old": "0x24010003",
+          "new": "0x24010004"
+        },
+        {
+          "key": "force_background_page",
+          "offset": "0x4A14C",
+          "old": "0x00002025",
+          "new": "0x24040001"
+        }
+      ],
+      "save_outputs": [
+        {
+          "source": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1hbrf1.sav",
+          "target": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1hnext1btn0cpg1.sav",
+          "bytes": 512,
+          "md5": "79ed3fe6851b080ff21de69fd12f034d"
+        },
+        {
+          "source": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1hbrf1.eep",
+          "target": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1hnext1btn0cpg1.eep",
+          "bytes": 2048,
+          "md5": "e47f5c07623838e875761a0493388e03"
+        }
+      ]
+    }
+  },
+  "bps": {
+    "patch": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\TND6480i_g1hnext1_from_baseline_tnd.bps",
+    "manifest": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\reports\\tnd6480i_g1hnext1_bps_manifest.json",
+    "patch_md5": "7c975a8d0180c48e11c27f3568960f43"
+  },
+  "do_not_promote_until_hardware_compared": true
+}
