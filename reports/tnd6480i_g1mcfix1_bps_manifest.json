@@ -1,0 +1,124 @@
+{
+  "source": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\roms\\BASELINE_TND64_Expanded_direct_from_stock.z64",
+  "target": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1mcfix1.z64",
+  "source_md5": "1ee22dd1d70443f5e4766d4238756949",
+  "target_md5": "32b0802210e71fecdf4a0a524b705aef",
+  "source_sha256": "ba5e040de292d7d192d0f88f12dcf4cbde7eb4d643926830d7d77557bf6df502",
+  "target_sha256": "aa88e4d7a746664424431d4db3a02d8a1ec42e2096544ed147e3c32d14f8b7ed",
+  "note": "TND6480i g1mcfix1: g1cred1 plus GE480i mission-complete Kill total row coordinates.",
+  "patch": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\TND6480i_g1mcfix1_from_baseline_tnd.bps",
+  "patch_bytes": 227913,
+  "patch_md5": "407738ef49c3227ab9dafb50aac5f348",
+  "patch_sha256": "30b22a8191fc5fb7cdb300109dcd230ce65ac3ceff4f1e46515a8308a64d71f6",
+  "source_bytes": 16777216,
+  "target_bytes": 16931328,
+  "source_crc32": "321C1845",
+  "target_crc32": "21BDF3EF",
+  "patch_crc32": "29D3F269",
+  "verified": true,
+  "action_count": 692,
+  "source_read_bytes": 16704986,
+  "target_read_bytes": 226342,
+  "actions_preview": [
+    {
+      "type": "SourceRead",
+      "offset": 0,
+      "length": 16
+    },
+    {
+      "type": "TargetRead",
+      "offset": 16,
+      "length": 7
+    },
+    {
+      "type": "SourceRead",
+      "offset": 23,
+      "length": 9224
+    },
+    {
+      "type": "TargetRead",
+      "offset": 9247,
+      "length": 1
+    },
+    {
+      "type": "SourceRead",
+      "offset": 9248,
+      "length": 6252
+    },
+    {
+      "type": "TargetRead",
+      "offset": 15500,
+      "length": 12
+    },
+    {
+      "type": "SourceRead",
+      "offset": 15512,
+      "length": 153
+    },
+    {
+      "type": "TargetRead",
+      "offset": 15665,
+      "length": 59
+    },
+    {
+      "type": "SourceRead",
+      "offset": 15724,
+      "length": 1715
+    },
+    {
+      "type": "TargetRead",
+      "offset": 17439,
+      "length": 1
+    },
+    {
+      "type": "SourceRead",
+      "offset": 17440,
+      "length": 661
+    },
+    {
+      "type": "TargetRead",
+      "offset": 18101,
+      "length": 59
+    },
+    {
+      "type": "SourceRead",
+      "offset": 18160,
+      "length": 7831
+    },
+    {
+      "type": "TargetRead",
+      "offset": 25991,
+      "length": 49
+    },
+    {
+      "type": "SourceRead",
+      "offset": 26040,
+      "length": 40742
+    },
+    {
+      "type": "TargetRead",
+      "offset": 66782,
+      "length": 1
+    },
+    {
+      "type": "SourceRead",
+      "offset": 66783,
+      "length": 38041
+    },
+    {
+      "type": "TargetRead",
+      "offset": 104824,
+      "length": 16
+    },
+    {
+      "type": "SourceRead",
+      "offset": 104840,
+      "length": 44
+    },
+    {
+      "type": "TargetRead",
+      "offset": 104884,
+      "length": 3
+    }
+  ]
+}

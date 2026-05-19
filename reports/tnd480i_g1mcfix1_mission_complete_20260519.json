@@ -1,0 +1,64 @@
+{
+  "base_rom": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1cred1.z64",
+  "base_md5": "af038b44f872973961c28f92f114e61d",
+  "out_rom": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1mcfix1.z64",
+  "out_md5": "32b0802210e71fecdf4a0a524b705aef",
+  "header_crc": "4C5651B2 702C4597",
+  "purpose": "Move the mission-complete Kill total label/value to the GE480i statistics row band.",
+  "scope": "Only four menu0D mission-complete words at 0x4C564-0x4C5F4 are changed; gameplay, dossier, and credits code are untouched.",
+  "patches": [
+    {
+      "offset": "0x4C564",
+      "note": "Kill total label x: 0x37 -> 0x50",
+      "old": "0x240C0037",
+      "ge_stock": "0x240C0037",
+      "new": "0x240C0050",
+      "changed": true
+    },
+    {
+      "offset": "0x4C56C",
+      "note": "Kill total label y: y2 + 0xF4 -> y2 + 0x140",
+      "old": "0x25AE00F4",
+      "ge_stock": "0x25AE00F4",
+      "new": "0x25AE0140",
+      "changed": true
+    },
+    {
+      "offset": "0x4C5EC",
+      "note": "Kill total value x: 0x82 -> 0x9B",
+      "old": "0x240B0082",
+      "ge_stock": "0x240B0082",
+      "new": "0x240B009B",
+      "changed": true
+    },
+    {
+      "offset": "0x4C5F4",
+      "note": "Kill total value y: y2 + 0xF4 -> y2 + 0x140",
+      "old": "0x258D00F4",
+      "ge_stock": "0x258D00F4",
+      "new": "0x258D0140",
+      "changed": true
+    }
+  ],
+  "changed_patch_count": 4,
+  "save_outputs": [
+    {
+      "source": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1cred1.sav",
+      "target": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1mcfix1.sav",
+      "bytes": 512,
+      "md5": "79ed3fe6851b080ff21de69fd12f034d"
+    },
+    {
+      "source": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1cred1.eep",
+      "target": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1mcfix1.eep",
+      "bytes": 2048,
+      "md5": "e47f5c07623838e875761a0493388e03"
+    }
+  ],
+  "bps": {
+    "patch": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\TND6480i_g1mcfix1_from_baseline_tnd.bps",
+    "manifest": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\reports\\tnd6480i_g1mcfix1_bps_manifest.json",
+    "patch_md5": "407738ef49c3227ab9dafb50aac5f348"
+  },
+  "do_not_promote_until_hardware_compared": true
+}
