@@ -1,0 +1,153 @@
+{
+  "video": "diagnostics\\captures\\videos\\ge480i_live_end_credits_20260519.mp4",
+  "sheet": "diagnostics\\captures\\contact_sheets\\ge480i_live_end_credits_20260519.jpg",
+  "start": 0.0,
+  "end": 180.0,
+  "step": 15.0,
+  "frames": [
+    {
+      "index": 0,
+      "seconds": 0.0,
+      "timestamp": "00:00",
+      "path": "diagnostics\\captures\\contact_sheets\\ge480i_live_end_credits_20260519\\frames\\frame_0000_00000000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "00:00"
+    },
+    {
+      "index": 1,
+      "seconds": 15.0,
+      "timestamp": "00:15",
+      "path": "diagnostics\\captures\\contact_sheets\\ge480i_live_end_credits_20260519\\frames\\frame_0001_00015000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "00:15"
+    },
+    {
+      "index": 2,
+      "seconds": 30.0,
+      "timestamp": "00:30",
+      "path": "diagnostics\\captures\\contact_sheets\\ge480i_live_end_credits_20260519\\frames\\frame_0002_00030000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "00:30"
+    },
+    {
+      "index": 3,
+      "seconds": 45.0,
+      "timestamp": "00:45",
+      "path": "diagnostics\\captures\\contact_sheets\\ge480i_live_end_credits_20260519\\frames\\frame_0003_00045000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "00:45"
+    },
+    {
+      "index": 4,
+      "seconds": 60.0,
+      "timestamp": "01:00",
+      "path": "diagnostics\\captures\\contact_sheets\\ge480i_live_end_credits_20260519\\frames\\frame_0004_00060000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "01:00"
+    },
+    {
+      "index": 5,
+      "seconds": 75.0,
+      "timestamp": "01:15",
+      "path": "diagnostics\\captures\\contact_sheets\\ge480i_live_end_credits_20260519\\frames\\frame_0005_00075000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "01:15"
+    },
+    {
+      "index": 6,
+      "seconds": 90.0,
+      "timestamp": "01:30",
+      "path": "diagnostics\\captures\\contact_sheets\\ge480i_live_end_credits_20260519\\frames\\frame_0006_00090000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "01:30"
+    },
+    {
+      "index": 7,
+      "seconds": 105.0,
+      "timestamp": "01:45",
+      "path": "diagnostics\\captures\\contact_sheets\\ge480i_live_end_credits_20260519\\frames\\frame_0007_00105000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "01:45"
+    },
+    {
+      "index": 8,
+      "seconds": 120.0,
+      "timestamp": "02:00",
+      "path": "diagnostics\\captures\\contact_sheets\\ge480i_live_end_credits_20260519\\frames\\frame_0008_00120000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "02:00"
+    },
+    {
+      "index": 9,
+      "seconds": 135.0,
+      "timestamp": "02:15",
+      "path": "diagnostics\\captures\\contact_sheets\\ge480i_live_end_credits_20260519\\frames\\frame_0009_00135000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "02:15"
+    },
+    {
+      "index": 10,
+      "seconds": 150.0,
+      "timestamp": "02:30",
+      "path": "diagnostics\\captures\\contact_sheets\\ge480i_live_end_credits_20260519\\frames\\frame_0010_00150000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "02:30"
+    },
+    {
+      "index": 11,
+      "seconds": 165.0,
+      "timestamp": "02:45",
+      "path": "diagnostics\\captures\\contact_sheets\\ge480i_live_end_credits_20260519\\frames\\frame_0011_00165000.png",
+      "capture": {
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": []
+      },
+      "label": "02:45"
+    }
+  ]
+}
