@@ -1,0 +1,102 @@
+{
+  "output_image": "diagnostics\\captures\\current\\preingame_comparison_matrix_g1mtabge3_20260518.jpg",
+  "current_candidate": "artifacts/generated/g1mtabge3.z64",
+  "notes": [
+    "GV-USB2 frames were normalized from 720x480 capture to 720x540 display aspect for comparison.",
+    "Difficulty and briefing current route probes do not reach the intended pages; they land on the Bond/mode dossier page.",
+    "No ROM patching is performed by this script."
+  ],
+  "rows": [
+    {
+      "screen": "Classification / CMK board",
+      "finding": "Needs explicit validation. Current capture appears delayed/looped; earlier user note said it runs off right.",
+      "ge": "GE480i snapshot",
+      "stock": "Stock TND64 02:20",
+      "current": "Current 01:30"
+    },
+    {
+      "screen": "TiJayFly logo",
+      "finding": "TND-only asset. Use stock TND for position/pacing; 480i should not introduce crop.",
+      "ge": "GE480i n/a",
+      "stock": "Stock TND64 00:05",
+      "current": "Current 00:15"
+    },
+    {
+      "screen": "Rare logo",
+      "finding": "Comparable screen. Check scale/centering and intro cadence against GE480i/stock.",
+      "ge": "GE480i 00:15",
+      "stock": "Stock TND64 00:15",
+      "current": "Current 00:25"
+    },
+    {
+      "screen": "White circle / barrel entry",
+      "finding": "Fail. Current has doubled/incorrect circle structure instead of the normal sweep.",
+      "ge": "GE480i 00:20",
+      "stock": "Stock TND64 00:20",
+      "current": "Current 00:30"
+    },
+    {
+      "screen": "Gunbarrel, Bond visible",
+      "finding": "Fail. Bond/barrel cadence and apparent viewport do not match GE480i or stock TND.",
+      "ge": "GE480i 00:30",
+      "stock": "Stock TND64 00:30",
+      "current": "Current 00:40"
+    },
+    {
+      "screen": "Gunbarrel red wipe",
+      "finding": "Fail. Current phase/shape differs; keep this out of the gameplay-success path.",
+      "ge": "GE480i 00:40",
+      "stock": "Stock TND64 00:35",
+      "current": "Current 00:45"
+    },
+    {
+      "screen": "Title logo",
+      "finding": "Needs fix/measurement. Current title does not yet read like GE480i-style high-res presentation.",
+      "ge": "GE480i title 00:50",
+      "stock": "Stock TND64 00:40",
+      "current": "Current 00:55"
+    },
+    {
+      "screen": "Opening credits",
+      "finding": "Likely fail. User observed character credits running offscreen; current needs safe-area/scale pass.",
+      "ge": "GE480i credits 00:55",
+      "stock": "Stock TND64 00:45",
+      "current": "Current 01:05"
+    },
+    {
+      "screen": "File select dossier",
+      "finding": "Mostly close, but current wallpaper/background appears shifted left versus GE480i target.",
+      "ge": "GE480i snapshot",
+      "stock": "Stock TND64 n/a",
+      "current": "Current route 01:00"
+    },
+    {
+      "screen": "Bond dossier / mode select",
+      "finding": "Improved. Visual layout is now close; remaining issue is interactive hitbox/tab placement, not obvious in a still.",
+      "ge": "GE480i snapshot",
+      "stock": "Stock TND64 n/a",
+      "current": "Current route 01:00"
+    },
+    {
+      "screen": "Mission select",
+      "finding": "Fail. Mission label text still overflows/misaligns instead of sitting on the film strip like GE480i.",
+      "ge": "GE480i snapshot",
+      "stock": "Stock TND64 n/a",
+      "current": "Current route 01:00"
+    },
+    {
+      "screen": "Difficulty select",
+      "finding": "Unknown current. Route probe currently lands on mode page, so no valid current difficulty frame yet.",
+      "ge": "GE480i snapshot",
+      "stock": "Stock TND64 n/a",
+      "current": "Current probe result"
+    },
+    {
+      "screen": "Briefing / objectives",
+      "finding": "Unknown current. Route probe currently lands on mode page, so no valid current briefing frame yet.",
+      "ge": "GE480i snapshot",
+      "stock": "GE480i obj ref",
+      "current": "Current probe result"
+    }
+  ]
+}
