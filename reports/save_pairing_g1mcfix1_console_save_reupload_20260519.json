@@ -1,0 +1,36 @@
+{
+  "source_save": "C:\\Users\\codex\\Documents\\007 - Tomorrow Never Dies (USA).sav",
+  "source_save_bytes": 512,
+  "source_save_md5": "f02bb8224a4dc25079721d7a3f0d38e0",
+  "gopher_save_dir": "C:\\Users\\codex\\AppData\\Roaming\\gopher64\\saves",
+  "parallel_save_dir": "C:\\Users\\codex\\AppData\\Local\\parallel-launcher\\data\\retro-data\\saves",
+  "parallel_srm_template": null,
+  "roms": [
+    {
+      "rom": "artifacts\\generated\\g1mcfix1.z64",
+      "rom_md5": "32b0802210e71fecdf4a0a524b705aef",
+      "rom_sha256": "AA88E4D7A746664424431D4DB3A02D8A1EC42E2096544ED147E3C32D14F8B7ED",
+      "internal_title": "GOLDENEYE",
+      "writes": [
+        {
+          "path": "artifacts\\generated\\g1mcfix1.sav",
+          "bytes": 512,
+          "backup": null,
+          "changed": false
+        },
+        {
+          "path": "artifacts\\generated\\g1mcfix1.eep",
+          "bytes": 2048,
+          "backup": null,
+          "changed": false
+        },
+        {
+          "path": "C:\\Users\\codex\\AppData\\Roaming\\gopher64\\saves\\GOLDENEYE-AA88E4D7A746664424431D4DB3A02D8A1EC42E2096544ED147E3C32D14F8B7ED.eep",
+          "bytes": 2048,
+          "backup": null,
+          "changed": false
+        }
+      ]
+    }
+  ]
+}
