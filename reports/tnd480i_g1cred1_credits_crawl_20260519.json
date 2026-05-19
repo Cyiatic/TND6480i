@@ -1,0 +1,80 @@
+{
+  "base_rom": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1tabhit1.z64",
+  "base_md5": "36fe8168bb3d93c9dc8fad0e99417dff",
+  "out_rom": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1cred1.z64",
+  "out_md5": "af038b44f872973961c28f92f114e61d",
+  "header_crc": "4C565106 3002B8AC",
+  "purpose": "Apply the GE480i rolling end-credits crawl x-coordinate deltas missing from g1tabhit1.",
+  "scope": "Only the credits crawl function words at 0xBD870-0xBDB80 are changed; gameplay/dossier code is untouched.",
+  "patches": [
+    {
+      "offset": "0xBD870",
+      "note": "default first-column x: 220 -> 320",
+      "old": "0x241600DC",
+      "ge_stock": "0x241600DC",
+      "new": "0x24160140",
+      "changed": true
+    },
+    {
+      "offset": "0xBD878",
+      "note": "default second-column x: 220 -> 320",
+      "old": "0x241700DC",
+      "ge_stock": "0x241700DC",
+      "new": "0x24170140",
+      "changed": true
+    },
+    {
+      "offset": "0xBD930",
+      "note": "pre-scan explicit first-column x: x -> x + 100",
+      "old": "0x0060B025",
+      "ge_stock": "0x0060B025",
+      "new": "0x24760064",
+      "changed": true
+    },
+    {
+      "offset": "0xBD95C",
+      "note": "pre-scan explicit second-column x: x -> x + 100",
+      "old": "0x0060B825",
+      "ge_stock": "0x0060B825",
+      "new": "0x24770064",
+      "changed": true
+    },
+    {
+      "offset": "0xBDA00",
+      "note": "render explicit first-column x: x -> x + 100",
+      "old": "0x0060B025",
+      "ge_stock": "0x0060B025",
+      "new": "0x24760064",
+      "changed": true
+    },
+    {
+      "offset": "0xBDB80",
+      "note": "render explicit second-column x: x -> x + 100",
+      "old": "0x0060B825",
+      "ge_stock": "0x0060B825",
+      "new": "0x24770064",
+      "changed": true
+    }
+  ],
+  "changed_patch_count": 6,
+  "save_outputs": [
+    {
+      "source": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1tabhit1.sav",
+      "target": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1cred1.sav",
+      "bytes": 512,
+      "md5": "79ed3fe6851b080ff21de69fd12f034d"
+    },
+    {
+      "source": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1tabhit1.eep",
+      "target": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\g1cred1.eep",
+      "bytes": 2048,
+      "md5": "e47f5c07623838e875761a0493388e03"
+    }
+  ],
+  "bps": {
+    "patch": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\artifacts\\generated\\TND6480i_g1cred1_from_baseline_tnd.bps",
+    "manifest": "C:\\Users\\codex\\Documents\\GitHub\\TND6480i\\reports\\tnd6480i_g1cred1_bps_manifest.json",
+    "patch_md5": "bab522537ead0faf8f9107ce4b4adc70"
+  },
+  "do_not_promote_until_hardware_compared": true
+}
