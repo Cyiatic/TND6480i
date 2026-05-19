@@ -4,6 +4,8 @@ Current candidate: `artifacts/generated/g1mtabge3.z64`
 
 Comparison matrix: `diagnostics/captures/current/preingame_comparison_matrix_g1mtabge3_20260518.jpg`
 
+Opening credits verification sheet: `diagnostics/captures/current/opening_credits_scale_verification_g1mtabge3_20260518.jpg`
+
 Machine-readable report: `reports/preingame_comparison_matrix_g1mtabge3_20260518.json`
 
 All GV-USB2 captures were normalized from 720x480 capture geometry to 720x540 display aspect before visual comparison.
@@ -19,7 +21,7 @@ All GV-USB2 captures were normalized from 720x480 capture geometry to 720x540 di
 | Gunbarrel with Bond visible | GE480i and stock TND64 | Fails. Bond and the barrel are out of phase, and the visible barrel aperture does not match the reference. | Needs a dedicated gunbarrel pass after dossier/menu correctness is locked. |
 | Gunbarrel red wipe | GE480i and stock TND64 | Fails. Red overlay timing/shape still differs from both references. | Same as above: isolate from gameplay and dossier work. |
 | Title logo | GE480i title behavior and stock TND title asset | Needs measurement. It is visible, but not yet proven to match GE480i-style sharp/centered presentation. | Quantify bounds before patching. |
-| Opening credits | GE480i credit scale and stock TND credit placement | Likely fails. Character view appears zoomed in compared with GE480i, and user observed character credit text running offscreen. | Later scene-scale plus safe-area/text-bound pass. |
+| Opening credits | GE480i credit scale and stock TND credit placement | Verified fail. Current character presentation is cropped/zoomed into heads or upper fragments compared with GE480i and stock TND, and user observed character credit text running offscreen. | Later scene-scale/viewport plus safe-area/text-bound pass. |
 | File select dossier | GE480i file select | Mostly close. File icons and text are present, but the wallpaper/background appears shifted left versus GE480i. | Low-risk background-origin adjustment after mission text. |
 | Bond dossier / mode select | GE480i Bond dossier | Improved and visually close. Remaining issue is likely cursor/hitbox/tab placement, which a still frame cannot prove. | Treat as fixed visually; validate navigation hit targets separately. |
 | Mission select | GE480i mission select | Fails. Mission label text still overflows/runs right and does not sit on the film-strip captions like GE480i. | Highest-priority pre-game fix. Adjust label scale/anchor/table, not the mission layout wholesale. |

@@ -58,7 +58,7 @@
     },
     {
       "screen": "Opening credits",
-      "finding": "Likely fail. Character view appears zoomed in versus GE480i, and text may run offscreen.",
+      "finding": "Verified fail. Character presentation is cropped/zoomed into heads or upper fragments versus GE480i/stock TND.",
       "ge": "GE480i credits 00:55",
       "stock": "Stock TND64 00:45",
       "current": "Current 01:05"

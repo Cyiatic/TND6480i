@@ -236,10 +236,10 @@ def main():
         },
         {
             "screen": "Opening credits",
-            "finding": "Likely fail. Character view appears zoomed in versus GE480i, and text may run offscreen.",
+            "finding": "Verified fail. Character presentation is cropped/zoomed into heads or upper fragments versus GE480i/stock TND.",
             "ge": {"title": "GE480i credits 00:55", "image": frame("ge_credits_55s", ge480i, 55), "note": "Reference text scale and margins."},
             "stock": {"title": "Stock TND64 00:45", "image": frame("stock_credits_45s", stock_tnd, 45), "note": "Original TND credit placement."},
-            "current": {"title": "Current 01:05", "image": frame("current_credits_65s", current_start, 65), "note": "Character crop/scale is too tight; also needs text-bound measurement."},
+            "current": {"title": "Current 01:05", "image": frame("current_credits_65s", current_start, 65), "note": "Character crop/scale is wrong; also needs text-bound measurement."},
         },
         {
             "screen": "File select dossier",
