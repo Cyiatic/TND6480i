@@ -156,6 +156,26 @@ ffmpeg -hide_banner -y `
   -frames:v 1 diagnostics\captures\current\probe.png
 ```
 
+### Hardware-In-The-Loop Method
+
+The useful breakthrough was treating real N64 output as a scripted test target,
+not as a final manual check. The loop was:
+
+1. Build a narrow ROM candidate from documented offset changes.
+2. Smoke it in emulator to reject crashes and obvious black screens quickly.
+3. Upload it to SC64 with the intended save type and known-good save state.
+4. Power-cycle or reset the N64 when needed through the Kasa-controlled outlet.
+5. Capture stills or clips from GV-USB2 over S-Video with ffmpeg.
+6. Generate contact sheets or comparison atlases against GE480i reference
+   footage.
+7. Promote, reject, or narrow the next patch based on measured screen behavior.
+
+This mattered because several candidates looked plausible in emulators but
+failed on real hardware, and several visual issues were only obvious from the
+capture path or from Analogue 3D output. The SC64 direct-boot path made the loop
+fast enough to test many small candidates, while the Kasa outlet reduced the
+cost of hard-lock recovery when a bad ROM wedged the console.
+
 ## EverDrive X7 Save Notes
 
 EverDrive X7 correctly reports this ROM as:
