@@ -35,7 +35,19 @@ user32.SetWindowPos.argtypes = [
     ctypes.c_int,
     ctypes.c_uint,
 ]
+user32.SetCursorPos.argtypes = [ctypes.c_int, ctypes.c_int]
+user32.mouse_event.argtypes = [
+    wintypes.DWORD,
+    wintypes.DWORD,
+    wintypes.DWORD,
+    wintypes.DWORD,
+    ctypes.POINTER(ctypes.c_ulong),
+]
 user32.keybd_event.argtypes = [ctypes.c_ubyte, ctypes.c_ubyte, wintypes.DWORD, ctypes.POINTER(ctypes.c_ulong)]
+user32.MapVirtualKeyW.argtypes = [ctypes.c_uint, ctypes.c_uint]
+user32.MapVirtualKeyW.restype = ctypes.c_uint
+user32.SendInput.argtypes = [ctypes.c_uint, ctypes.c_void_p, ctypes.c_int]
+user32.SendInput.restype = ctypes.c_uint
 user32.GetWindowRect.argtypes = [wintypes.HWND, ctypes.POINTER(wintypes.RECT)]
 user32.GetWindowDC.argtypes = [wintypes.HWND]
 user32.GetWindowDC.restype = wintypes.HDC
@@ -71,9 +83,14 @@ VK_UP = 0x26
 VK_RIGHT = 0x27
 VK_DOWN = 0x28
 KEYEVENTF_KEYUP = 0x0002
+KEYEVENTF_SCANCODE = 0x0008
+MAPVK_VK_TO_VSC = 0
+INPUT_KEYBOARD = 1
 SW_RESTORE = 9
 HWND_TOPMOST = wintypes.HWND(-1)
 SWP_SHOWWINDOW = 0x0040
+MOUSEEVENTF_LEFTDOWN = 0x0002
+MOUSEEVENTF_LEFTUP = 0x0004
 PW_RENDERFULLCONTENT = 0x00000002
 DIB_RGB_COLORS = 0
 BI_RGB = 0
@@ -101,6 +118,8 @@ VK_NAMES = {
 }
 for char in "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789":
     VK_NAMES[char] = ord(char)
+for index in range(1, 13):
+    VK_NAMES[f"F{index}"] = 0x70 + index - 1
 
 
 class BITMAPINFOHEADER(ctypes.Structure):
@@ -124,6 +143,27 @@ class BITMAPINFO(ctypes.Structure):
         ("bmiHeader", BITMAPINFOHEADER),
         ("bmiColors", wintypes.DWORD * 3),
     ]
+
+
+ULONG_PTR = wintypes.WPARAM
+
+
+class KEYBDINPUT(ctypes.Structure):
+    _fields_ = [
+        ("wVk", wintypes.WORD),
+        ("wScan", wintypes.WORD),
+        ("dwFlags", wintypes.DWORD),
+        ("time", wintypes.DWORD),
+        ("dwExtraInfo", ULONG_PTR),
+    ]
+
+
+class INPUTUNION(ctypes.Union):
+    _fields_ = [("ki", KEYBDINPUT)]
+
+
+class INPUT(ctypes.Structure):
+    _fields_ = [("type", wintypes.DWORD), ("union", INPUTUNION)]
 
 
 def window_title(hwnd):
@@ -151,14 +191,26 @@ def windows_for_pid(pid):
 
 
 def tap_key(vk):
-    user32.keybd_event(vk, 0, 0, None)
+    send_key(vk, True)
     time.sleep(0.035)
-    user32.keybd_event(vk, 0, KEYEVENTF_KEYUP, None)
+    send_key(vk, False)
+
+
+def send_key(vk, pressed):
+    scan = user32.MapVirtualKeyW(vk, MAPVK_VK_TO_VSC) & 0xFF
+    flags = KEYEVENTF_SCANCODE | (0 if pressed else KEYEVENTF_KEYUP)
+    item = INPUT()
+    item.type = INPUT_KEYBOARD
+    item.union.ki = KEYBDINPUT(0, scan, flags, 0, 0)
+    sent = user32.SendInput(1, ctypes.byref(item), ctypes.sizeof(INPUT))
+    legacy_flags = 0 if pressed else KEYEVENTF_KEYUP
+    user32.keybd_event(vk, scan, legacy_flags, None)
+    if sent == 0:
+        user32.keybd_event(vk, scan, legacy_flags, None)
 
 
 def set_key(vk, pressed):
-    flags = 0 if pressed else KEYEVENTF_KEYUP
-    user32.keybd_event(vk, 0, flags, None)
+    send_key(vk, pressed)
 
 
 def parse_input_events(value):
@@ -197,10 +249,10 @@ def parse_input_events(value):
 
 
 def foreground_for_capture(hwnd):
-    hwnd = wintypes.HWND(hwnd)
-    user32.ShowWindow(hwnd, SW_RESTORE)
-    user32.SetWindowPos(hwnd, HWND_TOPMOST, 96, 96, 656, 519, SWP_SHOWWINDOW)
-    user32.SetForegroundWindow(hwnd)
+    hwnd_obj = wintypes.HWND(hwnd)
+    user32.ShowWindow(hwnd_obj, SW_RESTORE)
+    user32.SetWindowPos(hwnd_obj, HWND_TOPMOST, 96, 96, 656, 519, SWP_SHOWWINDOW)
+    user32.SetForegroundWindow(hwnd_obj)
     time.sleep(0.5)
 
 
@@ -460,6 +512,20 @@ def capture_looks_blank(capture_path):
         return False
 
 
+def capture_is_empty_black(capture_path):
+    try:
+        from PIL import Image
+
+        image = Image.open(capture_path).convert("L")
+        hist = image.histogram()
+        pixels = image.width * image.height
+        if pixels <= 0:
+            return True
+        return sum(hist[1:]) / pixels < 0.00001
+    except Exception:
+        return False
+
+
 def parse_capture_times(value):
     if not value:
         return []
@@ -472,17 +538,45 @@ def parse_capture_times(value):
     return sorted(set(times))
 
 
+def parse_command_events(value):
+    if not value:
+        return []
+    text = value
+    path = Path(value)
+    if path.exists():
+        text = path.read_text(encoding="utf-8")
+
+    events = []
+    for raw_part in text.replace("\n", ";").split(";"):
+        part = raw_part.strip()
+        if not part or part.startswith("#"):
+            continue
+        fields = [field.strip() for field in part.split(":", 1)]
+        if len(fields) != 2 or not fields[1]:
+            raise argparse.ArgumentTypeError(
+                f"command event must be time:COMMAND, got {raw_part!r}"
+            )
+        events.append({"time": float(fields[0]), "command": fields[1]})
+    return sorted(events, key=lambda item: item["time"])
+
+
 def timed_capture(args, rom, hwnd, elapsed, suffix):
     if not args.ffmpeg or not args.capture_dir:
         return None
     if hwnd is not None:
         foreground_for_capture(hwnd)
-    stem = Path(rom).stem
+    rom_path = Path(rom)
+    stem = rom_path.stem
+    if args.include_parent_in_capture_name:
+        stem = f"{rom_path.parent.name}_{stem}"
     safe_suffix = suffix.replace(".", "p")
     out_png = args.capture_dir / f"{stem}_{safe_suffix}.png"
     title = window_title(wintypes.HWND(hwnd)) if hwnd is not None else ""
     capture = capture_window_title_gdigrab(args.ffmpeg, out_png, title)
-    if capture["returncode"] == 0 and capture_looks_blank(capture["path"]):
+    if capture["returncode"] == 0 and (
+        capture_is_empty_black(capture["path"])
+        or (not args.keep_dark_title_captures and capture_looks_blank(capture["path"]))
+    ):
         title_capture = capture
         capture = capture_desktop(args.ffmpeg, out_png)
         capture["previous_error"] = title_capture
@@ -535,7 +629,7 @@ def run_one(args, rom):
         "w", encoding="utf-8", errors="replace"
     ) as stderr:
         proc = subprocess.Popen(
-            [str(args.gopher), str(rom)],
+            [str(args.gopher), *args.emulator_args, str(rom)],
             cwd=args.cwd,
             env=env,
             stdout=stdout,
@@ -550,6 +644,9 @@ def run_one(args, rom):
         next_capture_index = 0
         input_events = list(args.input_events)
         next_input_event = 0
+        command_events = list(args.command_events)
+        next_command_event = 0
+        command_results = []
         pending_keyups = []
         scripted_key_events = 0
         try:
@@ -557,6 +654,7 @@ def run_one(args, rom):
                 windows = windows_for_pid(proc.pid)
                 if windows and main_window is None:
                     main_window = {"hwnd": int(windows[0][0]), "title": windows[0][1]}
+                    foreground_for_capture(main_window["hwnd"])
                 elapsed_now = time.monotonic() - start
                 if main_window is not None:
                     hwnd_obj = wintypes.HWND(main_window["hwnd"])
@@ -579,6 +677,32 @@ def run_one(args, rom):
                             })
                             pending_keyups.sort(key=lambda item: item["time"])
                         next_input_event += 1
+                while next_command_event < len(command_events) and elapsed_now >= command_events[next_command_event]["time"]:
+                    event = command_events[next_command_event]
+                    try:
+                        result = subprocess.run(
+                            [str(args.gopher), "--command", event["command"]],
+                            cwd=args.cwd,
+                            stdout=subprocess.PIPE,
+                            stderr=subprocess.PIPE,
+                            text=True,
+                            timeout=10,
+                        )
+                        command_results.append({
+                            "time": event["time"],
+                            "command": event["command"],
+                            "returncode": result.returncode,
+                            "stdout_tail": result.stdout.splitlines()[-8:],
+                            "stderr_tail": result.stderr.splitlines()[-8:],
+                        })
+                    except Exception as exc:
+                        command_results.append({
+                            "time": event["time"],
+                            "command": event["command"],
+                            "returncode": None,
+                            "error": repr(exc),
+                        })
+                    next_command_event += 1
                 input_allowed = args.input and (args.input_until <= 0 or elapsed_now <= args.input_until)
                 if input_allowed and main_window is not None and time.monotonic() - last_tap >= args.tap_interval:
                     user32.SetForegroundWindow(wintypes.HWND(main_window["hwnd"]))
@@ -629,6 +753,9 @@ def run_one(args, rom):
         "scripted_key_events": scripted_key_events,
         "input_events_total": len(input_events),
         "input_events_consumed": next_input_event,
+        "command_events_total": len(command_events),
+        "command_events_consumed": next_command_event,
+        "command_results": command_results,
         "exited_before_timeout": exited_before_timeout,
         "exit_code_before_timeout": exit_code_before_timeout,
         "stdout_path": str(stdout_path),
@@ -646,10 +773,26 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("roms", nargs="+")
     parser.add_argument("--gopher", required=True, type=Path)
+    parser.add_argument(
+        "--emulator-arg",
+        dest="emulator_args",
+        action="append",
+        default=[],
+        help="Extra argument passed to the emulator before the ROM path. Repeat for multiple args.",
+    )
     parser.add_argument("--report", required=True, type=Path)
     parser.add_argument("--seconds", type=float, default=25.0)
     parser.add_argument("--input", action="store_true")
-    parser.add_argument("--input-until", type=float, default=0.0, help="Stop automated Start/A taps after this many seconds; 0 means tap for the full run.")
+    parser.add_argument(
+        "--input-until",
+        type=float,
+        default=0.0,
+        help=(
+            "Stop automated Start/A taps after this many seconds; 0 means tap for the full run. "
+            "For gameplay visual evidence, keep this before level control begins so pause/watch "
+            "toggling does not pollute the capture."
+        ),
+    )
     parser.add_argument("--tap-interval", type=float, default=0.6)
     parser.add_argument(
         "--input-events",
@@ -660,6 +803,22 @@ def main():
     parser.add_argument("--ffmpeg", type=Path, default=None)
     parser.add_argument("--capture-dir", type=Path, default=None)
     parser.add_argument("--capture-times", type=parse_capture_times, default=[])
+    parser.add_argument(
+        "--command-events",
+        type=parse_command_events,
+        default=[],
+        help="Semicolon/newline list or file path of emulator command events: time:COMMAND.",
+    )
+    parser.add_argument(
+        "--keep-dark-title-captures",
+        action="store_true",
+        help="Keep gdigrab title captures even when they are mostly black; useful for dark intro/title scenes.",
+    )
+    parser.add_argument(
+        "--include-parent-in-capture-name",
+        action="store_true",
+        help="Prefix capture filenames with the ROM parent folder to avoid clobbering same-stem probes.",
+    )
     parser.add_argument("--cwd", default=str(Path.cwd()))
     args = parser.parse_args()
     args.report.parent.mkdir(parents=True, exist_ok=True)

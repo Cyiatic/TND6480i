@@ -15,6 +15,8 @@ param(
     [string]$AmfUsage = 'lowlatency',
     [string]$VideoSize = '720x480',
     [string]$FrameRate = '29.97',
+    [ValidateRange(0, 1)]
+    [int]$VideoInputPin = 1,
     [switch]$NoCycle
 )
 
@@ -43,7 +45,8 @@ $job = Start-Job -ScriptBlock {
         $JobAmfQuality,
         $JobAmfUsage,
         $JobVideoSize,
-        $JobFrameRate
+        $JobFrameRate,
+        $JobVideoInputPin
     )
 
     $args = @(
@@ -52,6 +55,7 @@ $job = Start-Job -ScriptBlock {
         '-y',
         '-rtbufsize', '256M',
         '-f', 'dshow',
+        '-crossbar_video_input_pin_number', $JobVideoInputPin,
         '-video_size', $JobVideoSize,
         '-framerate', $JobFrameRate,
         '-i', 'video=GV-USB2, Analog Capture',
@@ -86,7 +90,7 @@ $job = Start-Job -ScriptBlock {
     if ($LASTEXITCODE -ne 0) {
         throw "ffmpeg exited with $LASTEXITCODE"
     }
-} -ArgumentList $outPath, $Seconds, $Crf, $Encoder, $Bitrate, $Maxrate, $Bufsize, $AmfQuality, $AmfUsage, $VideoSize, $FrameRate
+} -ArgumentList $outPath, $Seconds, $Crf, $Encoder, $Bitrate, $Maxrate, $Bufsize, $AmfQuality, $AmfUsage, $VideoSize, $FrameRate, $VideoInputPin
 
 try {
     Start-Sleep -Seconds $PreRollSeconds

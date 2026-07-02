@@ -21,6 +21,7 @@
 *.stdout.txt
 *.stderr.txt
 *.tmp
+tools/
 reports/hardware_*_stdout_*.txt
 reports/hardware_*_stderr_*.txt
 reports/hardware_*_stdout.txt
@@ -33,12 +34,43 @@ __pycache__/
 .pytest_cache/
 
 # Local artifact staging.
+artifacts/analogue_test/*
+artifacts/diagnostics/*
 artifacts/roms/*
 artifacts/generated/*
+artifacts/release/*
+artifacts/reports/*
+artifacts/scratch/*
 artifacts/tmp/*
+!artifacts/analogue_test/README.md
 !artifacts/roms/.gitkeep
 !artifacts/generated/.gitkeep
 !artifacts/tmp/.gitkeep
 
-# Keep curated diagnostics, but ignore accidental bulk captures.
+# Keep already tracked curated diagnostics, but ignore accidental bulk captures.
 diagnostics/bulk/
+diagnostics/aux/
+diagnostics/captures/**/*.bmp
+diagnostics/captures/**/*.jpg
+diagnostics/captures/**/*.jpeg
+diagnostics/captures/**/*.png
+diagnostics/captures/**/*.avi
+diagnostics/captures/**/*.mkv
+diagnostics/captures/**/*.mov
+diagnostics/captures/**/*.mp4
+diagnostics/captures/**/*.mpg
+diagnostics/captures/**/*.webm
+diagnostics/captures/**/frames/
+diagnostics/captures/**/keyframes/
+diagnostics/**/*.json
+diagnostics/**/*.txt
+diagnostics/routes/*.events
+diagnostics/framebuffers/
+diagnostics/sc64/
+
+# Generated analysis reports are useful locally, but should be curated before commit.
+reports/**/*.json
+reports/**/*.csv
+reports/**/*.txt
+reports/measurement/**/*_frames/
+reports/measurement/**/*.png

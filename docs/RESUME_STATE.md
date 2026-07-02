@@ -1,8 +1,54 @@
 # TND6480i Resume State
 
-Last updated: 2026-05-18 after `t90doss1my16` dossier hardware probe.
+Last updated: 2026-05-25 after `g1hiq3_gegate` font-good hardware/Analogue confirmation.
 
 Scope reminder: keep work limited to this N64/TND6480i project and directly related tools/devices.
+
+## 2026-05-25 Current Resume Point
+
+Current best hardware/Analogue-confirmed test build:
+
+```text
+ROM: artifacts/generated/g1hiq3_gegate.z64
+Short test package: artifacts/release/TND6480i_g1hiq3_fontgood_20260525_test.zip
+Short ROM name: G1HQ3AM.Z64
+ROM MD5: 4063fd9968b528148a9441b11dfd0203
+Save: artifacts/generated/g1hiq3_gegate_ammoon.sav
+Save/EEP MD5: 50a3f7cf6e022fdec7f37f2cc8ae2e2a
+Save type: EEPROM 4K
+```
+
+Confirmed current behavior:
+
+- All levels boot and run on the current line.
+- Gameplay, pause/watch, HUD, bullets UI, dossier, multiplayer, cheat menu,
+  mission-result screens, credits, and front-end screens are in the expected
+  480i visual family.
+- Font output looks good on hardware/Analogue review.
+- Bazaar countdown timer position is corrected.
+- Use `g1mcfix4` only as the packaged rollback/old RC1; it is not the latest
+  font-quality line.
+
+Important capture-variable note: the user observed that the in-game
+anti-aliasing option makes a large visible difference to text quality. Future
+text/HUD/watch/mission-intro comparisons must record AA state and avoid mixing
+AA-on with AA-off captures. The exact save bit is not mapped yet in
+`scripts/patch_save_options.py`.
+
+Publishing/provenance note from 2026-07-02: TiJay said the repo may be
+published, but it must clearly state that the patch is based on the Tomorrow
+Never Dies 64 `11-24 Extended Edition`. TiJay may also speak with Wreck about
+including the patch in a future Vault bundle; do not present that as guaranteed.
+
+Next release-oriented task:
+
+1. Generate a stock-GoldenEye-USA-to-`g1hiq3_gegate` patch package.
+2. Record target ROM, patch, and ZIP hashes.
+3. Do one final normal-controller spot check only if more ROM edits are made.
+
+Do not restart from the older `t90*` branches below unless investigating
+history. They are retained as the path that led to the current build, not as the
+resume point.
 
 ## 2026-05-17 TLB90/Fb8040 Breakthrough
 

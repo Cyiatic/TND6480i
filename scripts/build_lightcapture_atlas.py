@@ -100,7 +100,14 @@ def run_ffmpeg_frame(ffmpeg, video, seconds, out_png):
         "1",
         str(out_png),
     ]
-    subprocess.run(cmd, check=True)
+    result = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+    if result.returncode != 0 or not out_png.exists():
+        return {
+            "ok": False,
+            "returncode": result.returncode,
+            "stderr_tail": result.stderr.splitlines()[-8:],
+        }
+    return {"ok": True, "returncode": result.returncode, "stderr_tail": []}
 
 
 def bbox(mask):
@@ -192,7 +199,18 @@ def build_atlas(args):
     for index, (stamp, label, family) in enumerate(TND6480I_EVENTS):
         seconds = parse_time(stamp)
         out_png = frame_dir / "screen_atlas" / f"{index:02d}_{stamp.replace(':', '')}_{label.replace('/', '_').replace(' ', '_')}.png"
-        run_ffmpeg_frame(args.ffmpeg, video, seconds, out_png)
+        capture = run_ffmpeg_frame(args.ffmpeg, video, seconds, out_png)
+        if not capture["ok"]:
+            report["screen_atlas"].append({
+                "timestamp": stamp,
+                "seconds": seconds,
+                "label": label,
+                "family": family,
+                "path": str(out_png),
+                "capture": capture,
+                "skipped": True,
+            })
+            continue
         metrics = frame_metrics(out_png)
         entry = {
             "timestamp": stamp,
@@ -216,7 +234,18 @@ def build_atlas(args):
             seconds = base + offset
             stamp = format_time(seconds)
             out_png = frame_dir / "level_probes" / f"{level}_{stamp.replace(':', '')}_p{offset:03d}.png"
-            run_ffmpeg_frame(args.ffmpeg, video, seconds, out_png)
+            capture = run_ffmpeg_frame(args.ffmpeg, video, seconds, out_png)
+            if not capture["ok"]:
+                report["level_probes"].append({
+                    "level": level,
+                    "timestamp": stamp,
+                    "seconds": seconds,
+                    "offset_from_level_start": offset,
+                    "path": str(out_png),
+                    "capture": capture,
+                    "skipped": True,
+                })
+                continue
             metrics = frame_metrics(out_png)
             entry = {
                 "level": level,

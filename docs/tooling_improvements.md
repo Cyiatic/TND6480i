@@ -153,3 +153,32 @@ Immediate practical takeaway:
    - compare `game_h460_top10_current` vs the stable gameplay/pause rollback vs base/enhanced TND on the same complete save
    - prioritize Party/City/The End load failure, Tower intro crash, Labs encoder freeze, and Hotel/Volcano prism corruption
    - preserve Press/Bridge/Alaska as good-level controls
+
+## 2026-05-25 Tooling Lessons
+
+The final successful loop combined these tools:
+
+- SC64 / SummerCart64 for fast direct upload with explicit EEPROM 4K save type.
+- GV-USB2 plus ffmpeg for scripted stills, short clips, and contact sheets.
+- LightCapture recordings for long manual reference clips and timestamp maps.
+- Analogue 3D as a perceptual HDMI-quality check when S-Video metrics looked
+  inconclusive.
+- EverDrive X7 only for final SD-card behavior and save pairing, not rapid
+  iteration.
+- Kasa power switch for remote power-cycle recovery when a bad ROM locks the
+  console.
+- Gopher64 for quick smoke tests and route/probe sanity checks, but not as final
+  visual proof.
+- Python/capstone/keystone scripts for reproducible MIPS word edits and
+  manifests.
+
+The most useful new support scripts from the final pass were:
+
+- `scripts/patch_save_options.py`
+- `scripts/build_force_fp_watch_probe.py`
+- `scripts/build_auto_watch_text_probe.py`
+- `scripts/measure_480i_text_quality.py`
+- `scripts/verify_480i_render_contract.py`
+
+For future projects, prioritize building the capture/probe/measurement harness
+before generating many ROM candidates.

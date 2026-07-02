@@ -16,6 +16,19 @@ GE_STOCK = ROOT / "artifacts" / "roms" / "GoldenEye 007 (USA).z64"
 GE_480I = ROOT / "artifacts" / "roms" / "BASELINE_GE_480i_direct_from_stock.z64"
 
 PATCH_SETS = {
+    "g1hct2": {
+        "purpose": "Apply the remaining GE480i display-cast second/third credit-row text constants on top of g1hiftr1.",
+        "offsets": (
+            (0x4ED24, "display-cast second-row credit text center X"),
+            (0x4ED3C, "display-cast second-row credit text Y"),
+            (0x4ED44, "display-cast second-row credit text clip bottom offset"),
+            (0x4ED5C, "display-cast second-row credit text render Y"),
+            (0x4EE14, "display-cast third-row credit text center X"),
+            (0x4EE2C, "display-cast third-row credit text Y"),
+            (0x4EE34, "display-cast third-row credit text clip bottom offset"),
+            (0x4EE4C, "display-cast third-row credit text render Y"),
+        ),
+    },
     "g1hift1": {
         "purpose": "Apply GE480i display-cast model/interface centering plus credit text constants on top of g1hlim1.",
         "offsets": (

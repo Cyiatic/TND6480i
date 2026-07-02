@@ -17,10 +17,16 @@ public class KasaButtonWin32 {
   public delegate bool EnumWindowProc(IntPtr hWnd, IntPtr lParam);
   [DllImport("user32.dll")] public static extern bool EnumChildWindows(IntPtr hWnd, EnumWindowProc callback, IntPtr lParam);
   [DllImport("user32.dll")] public static extern int GetWindowText(IntPtr hWnd, StringBuilder text, int count);
+  [DllImport("user32.dll")] public static extern int GetClassName(IntPtr hWnd, StringBuilder text, int count);
   [DllImport("user32.dll")] public static extern bool GetWindowRect(IntPtr hWnd, out RECT rect);
   [DllImport("user32.dll")] public static extern bool IsWindowEnabled(IntPtr hWnd);
   [DllImport("user32.dll")] public static extern bool IsWindowVisible(IntPtr hWnd);
   [DllImport("user32.dll")] public static extern IntPtr SendMessage(IntPtr hWnd, UInt32 msg, IntPtr wParam, IntPtr lParam);
+  [DllImport("user32.dll")] public static extern bool PostMessage(IntPtr hWnd, UInt32 msg, IntPtr wParam, IntPtr lParam);
+  [DllImport("user32.dll")] public static extern bool SetForegroundWindow(IntPtr hWnd);
+  [DllImport("user32.dll")] public static extern bool ShowWindow(IntPtr hWnd, int nCmdShow);
+  [DllImport("user32.dll")] public static extern bool SetCursorPos(int X, int Y);
+  [DllImport("user32.dll")] public static extern void mouse_event(UInt32 dwFlags, UInt32 dx, UInt32 dy, UInt32 dwData, UIntPtr dwExtraInfo);
   [StructLayout(LayoutKind.Sequential)] public struct RECT { public int Left, Top, Right, Bottom; }
 }
 '@
@@ -41,9 +47,87 @@ function Get-KasaWindow {
     return $proc.MainWindowHandle
 }
 
+function Get-WindowRectObject {
+    param([IntPtr]$Hwnd)
+
+    $rect = New-Object KasaButtonWin32+RECT
+    [void][KasaButtonWin32]::GetWindowRect($Hwnd, [ref]$rect)
+    return $rect
+}
+
+function Get-KasaDevicesRect {
+    param([IntPtr]$Window)
+
+    $script:KasaDevicesRect = $null
+    [KasaButtonWin32]::EnumChildWindows($Window, {
+        param($hWnd, $lParam)
+
+        $text = New-Object System.Text.StringBuilder 256
+        [void][KasaButtonWin32]::GetWindowText($hWnd, $text, $text.Capacity)
+        if ($text.ToString() -ne 'Devices') {
+            return $true
+        }
+
+        $rect = New-Object KasaButtonWin32+RECT
+        [void][KasaButtonWin32]::GetWindowRect($hWnd, [ref]$rect)
+        $script:KasaDevicesRect = $rect
+        return $false
+    }, [IntPtr]::Zero) | Out-Null
+
+    if ($script:KasaDevicesRect) {
+        return $script:KasaDevicesRect
+    }
+
+    throw 'Could not locate Kasa Devices panel'
+}
+
+function Get-KasaDeviceList {
+    param([IntPtr]$Window)
+
+    $script:KasaDeviceList = [IntPtr]::Zero
+    [KasaButtonWin32]::EnumChildWindows($Window, {
+        param($hWnd, $lParam)
+
+        $class = New-Object System.Text.StringBuilder 256
+        [void][KasaButtonWin32]::GetClassName($hWnd, $class, $class.Capacity)
+        if ($class.ToString() -like '*SysListView32*') {
+            $script:KasaDeviceList = $hWnd
+            return $false
+        }
+
+        return $true
+    }, [IntPtr]::Zero) | Out-Null
+
+    if ($script:KasaDeviceList -ne [IntPtr]::Zero) {
+        return $script:KasaDeviceList
+    }
+
+    throw 'Could not locate Kasa device list'
+}
+
+function Select-KasaN64Tile {
+    param([IntPtr]$Window)
+
+    # The plug tiles are custom-drawn inside the Devices panel, so they do not
+    # expose button handles. Send a click to the first list item, which is N64.
+    [void][KasaButtonWin32]::ShowWindow($Window, 9)
+    [void][KasaButtonWin32]::SetForegroundWindow($Window)
+
+    $list = Get-KasaDeviceList -Window $Window
+    $x = 68
+    $y = 70
+    $lParam = [IntPtr](($y -shl 16) -bor $x)
+    [void][KasaButtonWin32]::PostMessage($list, 0x0201, [IntPtr]1, $lParam)
+    Start-Sleep -Milliseconds 60
+    [void][KasaButtonWin32]::PostMessage($list, 0x0202, [IntPtr]0, $lParam)
+    Start-Sleep -Milliseconds 800
+}
+
 function Get-KasaTopButtons {
     param([IntPtr]$Window)
 
+    $windowRect = Get-WindowRectObject -Hwnd $Window
+    $windowWidth = $windowRect.Right - $windowRect.Left
     $buttons = New-Object System.Collections.Generic.List[object]
     [KasaButtonWin32]::EnumChildWindows($Window, {
         param($hWnd, $lParam)
@@ -59,7 +143,9 @@ function Get-KasaTopButtons {
         [void][KasaButtonWin32]::GetWindowRect($hWnd, [ref]$rect)
 
         # Restrict to the selected plug control strip, not hidden settings widgets.
-        if ($rect.Left -lt 890 -or $rect.Left -gt 1135 -or $rect.Top -lt 100 -or $rect.Top -gt 170) {
+        $relX = $rect.Left - $windowRect.Left
+        $relY = $rect.Top - $windowRect.Top
+        if ($relX -lt ($windowWidth * 0.62) -or $relX -gt ($windowWidth * 0.96) -or $relY -lt 80 -or $relY -gt 160) {
             return $true
         }
 
@@ -108,8 +194,18 @@ function Click-KasaButton {
 }
 
 $window = Get-KasaWindow
-$buttons = Get-KasaTopButtons -Window $window
+try {
+    $buttons = Get-KasaTopButtons -Window $window
+} catch {
+    Select-KasaN64Tile -Window $window
+    $buttons = Get-KasaTopButtons -Window $window
+}
 $initial = Show-KasaState -Buttons $buttons
+if (-not $initial.OnEnabled -and -not $initial.OffEnabled) {
+    Select-KasaN64Tile -Window $window
+    $buttons = Get-KasaTopButtons -Window $window
+    $initial = Show-KasaState -Buttons $buttons
+}
 
 if ($StatusOnly) {
     $initial

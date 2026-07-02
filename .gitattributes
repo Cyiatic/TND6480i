@@ -1,2 +1,32 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+
+# Binary project artifacts.
+*.z64 binary
+*.n64 binary
+*.v64 binary
+*.rom binary
+*.bin binary
+*.eep binary
+*.eeprom binary
+*.sav binary
+*.sra binary
+*.fla binary
+*.xdelta binary
+*.vcdiff binary
+*.ips binary
+*.bps binary
+*.zip binary
+
+# Capture/reference media.
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.bmp binary
+*.mp4 binary
+*.mpg binary
+*.mpeg binary
+*.mkv binary
+*.mov binary
+*.avi binary
+*.webm binary

@@ -16,39 +16,13 @@
           "path": "artifacts\\generated\\g1mcfix4.sav",
           "bytes": 512,
           "backup": null,
-          "changed": true
+          "changed": false
         },
         {
           "path": "artifacts\\generated\\g1mcfix4.eep",
           "bytes": 2048,
           "backup": null,
-          "changed": true
-        },
-        {
-          "path": "C:\\Users\\codex\\AppData\\Roaming\\gopher64\\saves\\GOLDENEYE-FBEBBAF5112E24126FD9D11FAC2ED0A126155B6D193E86412B058251CF8649B9.eep",
-          "bytes": 2048,
-          "backup": null,
-          "changed": true
-        }
-      ]
-    },
-    {
-      "rom": "artifacts\\generated\\TND6480i_current_g1mcfix4.z64",
-      "rom_md5": "fa93be061c59ef5cabad24fbf5f66b39",
-      "rom_sha256": "FBEBBAF5112E24126FD9D11FAC2ED0A126155B6D193E86412B058251CF8649B9",
-      "internal_title": "GOLDENEYE",
-      "writes": [
-        {
-          "path": "artifacts\\generated\\TND6480i_current_g1mcfix4.sav",
-          "bytes": 512,
-          "backup": null,
-          "changed": true
-        },
-        {
-          "path": "artifacts\\generated\\TND6480i_current_g1mcfix4.eep",
-          "bytes": 2048,
-          "backup": null,
-          "changed": true
+          "changed": false
         },
         {
           "path": "C:\\Users\\codex\\AppData\\Roaming\\gopher64\\saves\\GOLDENEYE-FBEBBAF5112E24126FD9D11FAC2ED0A126155B6D193E86412B058251CF8649B9.eep",
