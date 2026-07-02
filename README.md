@@ -38,11 +38,6 @@ This work is based on the **Tomorrow Never Dies 64 11-24 Extended Edition**
 romhack. Any public repo, release notes, or patch package should state that
 clearly.
 
-As of 2026-07-02, TiJay indicated that publishing this repository is okay as
-long as the 11-24 Extended Edition basis is made clear, and may speak with Wreck
-about including the patch in a future Vault bundle. Treat Vault inclusion as an
-upstream packaging possibility, not as something this repo can promise.
-
 ## AI Assistance Disclosure
 
 This project was developed with AI assistance from OpenAI Codex for reverse
