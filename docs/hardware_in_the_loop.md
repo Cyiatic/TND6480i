@@ -80,7 +80,7 @@ Reusable helpers live in:
 - `scripts/hardware/cycle_kasa_n64_buttons.ps1`
 - `scripts/hardware/record_gvusb2_kasa_cycle.ps1`
 
-## Why Emulators Were Not Enough
+## Why The Emulator Is Not Enough
 
 Emulators were useful for rejecting obviously broken candidates, routing into
 menus or stages, and collecting fast comparison screenshots. They were not the
