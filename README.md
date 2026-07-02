@@ -38,20 +38,6 @@ This work is based on the **Tomorrow Never Dies 64 11-24 Extended Edition**
 romhack. Any public repo, release notes, or patch package should state that
 clearly.
 
-## AI Assistance Disclosure
-
-This project was developed with AI assistance from OpenAI Codex for reverse
-engineering support, scripting, documentation, visual comparison workflows, and
-candidate iteration. Hardware setup, real-console testing, subjective visual
-review, and final project direction were provided by the human project owner.
-
-## Credits
-
-Key credits: Rare, the Tomorrow Never Dies 64 team, TiJay, Wreck, the
-GoldenEye 480i / Hi Res patch contributors, Cyiatic, and OpenAI Codex.
-
-See [Credits And Acknowledgements](docs/credits.md) for the fuller list.
-
 ## Using This Repo
 
 This repository is primarily a development and documentation workspace. It is
@@ -75,6 +61,19 @@ should stay local unless a release package is deliberately prepared. Most
 scripts assume Windows paths from the original workstation and may need path
 adjustments for another machine.
 
+## Documentation Map
+
+- [Release artifacts and save notes](docs/release_artifacts_and_save_notes.md)
+- [Credits and acknowledgements](docs/credits.md)
+- [Current candidate status](docs/current_candidate_status_20260519.md)
+- [Reverse-engineering technical findings](docs/reverse_engineering_technical_findings.md)
+- [Measurable 480i validation workflow](docs/measurable_480i_validation_workflow_20260525.md)
+- [N64 480i porting playbook](docs/N64_480i_porting_playbook.md)
+- [Project retrospective](docs/project_retrospective_20260525.md)
+- [Direct stage probe workflow](docs/direct_stage_probe_workflow.md)
+- [Patch-site audit](docs/patch_site_audit.md)
+- [Publishing notes](docs/publishing_notes_20260702.md)
+
 ## How This Was Done
 
 The useful breakthrough was a real-hardware feedback loop:
@@ -88,19 +87,6 @@ The useful breakthrough was a real-hardware feedback loop:
 7. Promote, reject, or narrow the next patch based on measured behavior.
 
 Details: [Hardware-In-The-Loop Workflow](docs/hardware_in_the_loop.md)
-
-## Documentation Map
-
-- [Release artifacts and save notes](docs/release_artifacts_and_save_notes.md)
-- [Credits and acknowledgements](docs/credits.md)
-- [Current candidate status](docs/current_candidate_status_20260519.md)
-- [Reverse-engineering technical findings](docs/reverse_engineering_technical_findings.md)
-- [Measurable 480i validation workflow](docs/measurable_480i_validation_workflow_20260525.md)
-- [N64 480i porting playbook](docs/N64_480i_porting_playbook.md)
-- [Project retrospective](docs/project_retrospective_20260525.md)
-- [Direct stage probe workflow](docs/direct_stage_probe_workflow.md)
-- [Patch-site audit](docs/patch_site_audit.md)
-- [Publishing notes](docs/publishing_notes_20260702.md)
 
 ## Repository Layout
 
@@ -139,3 +125,17 @@ Use evidence before promotion:
 
 Do not treat emulator-only success as final. Real N64 output through GV-USB2,
 plus Analogue/human review where useful, is the source of truth.
+
+## Credits
+
+Key credits: Rare, the Tomorrow Never Dies 64 team, TiJay, Wreck, the
+GoldenEye 480i / Hi Res patch contributors, Cyiatic, and OpenAI Codex.
+
+See [Credits And Acknowledgements](docs/credits.md) for the fuller list.
+
+## AI Assistance Disclosure
+
+This project was developed with AI assistance from OpenAI Codex for reverse
+engineering support, scripting, documentation, visual comparison workflows, and
+candidate iteration. Hardware setup, real-console testing, subjective visual
+review, and final project direction were provided by the human project owner.
