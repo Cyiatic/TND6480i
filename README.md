@@ -28,6 +28,11 @@ pause/watch/HUD text is in the expected visual family, dossier pages and menus
 are usable, and the final text/font pass looks correct with the right in-game
 anti-aliasing/display option state.
 
+If text appears unusually pixelated, check the in-game anti-aliasing option
+before treating it as a patch regression. AA-off can make the same
+`g1hiq3_gegate` ROM look substantially rougher than the accepted AA-on test
+state.
+
 The previous packaged rollback candidate is `g1mcfix4` /
 `TND6480i_g1mcfix4_RC1`; it remains documented because it has the existing
 stock-GE xdelta release bundle.

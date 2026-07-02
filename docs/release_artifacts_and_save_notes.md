@@ -20,6 +20,18 @@ distribute patches, manifests, and documentation, not ROMs.
 This is the current hardware/Analogue-confirmed line and should be used for
 current testing and the next public patch package.
 
+Important display-option caveat: the in-game anti-aliasing option materially
+affects perceived text quality. If pause/watch/HUD/mission-intro text looks
+pixelated, verify the AA setting before treating the patch as regressed. The
+accepted `g1hiq3_gegate` result was judged with the correct display-option
+state, and AA-off can make the same ROM appear much rougher.
+
+The public `v0.1.0-rc1` BPS release targets this exact `g1hiq3_gegate` ROM:
+
+- Target MD5: `4063fd9968b528148a9441b11dfd0203`
+- Target SHA256:
+  `f359631cb63bb367e56a6c39a5f95b6fc11a3fda5b8a2c2eed87a3da5aded3d3`
+
 ## Packaged Rollback Candidate
 
 - Candidate: `g1mcfix4` / `TND6480i_g1mcfix4_RC1`
