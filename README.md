@@ -37,6 +37,25 @@ The previous packaged rollback candidate is `g1mcfix4` /
 `TND6480i_g1mcfix4_RC1`; it remains documented because it has the existing
 stock-GE xdelta release bundle.
 
+## Release Candidate
+
+Current prerelease:
+[v0.1.0-rc1](https://github.com/Cyiatic/TND6480i/releases/tag/v0.1.0-rc1)
+
+The release asset is a BPS patch package, not a ROM. Apply it to a stock
+GoldenEye 007 USA ROM:
+
+```text
+Source: GoldenEye 007 (USA).z64
+MD5:    70c525880240c1e838b8b1be35666c3b
+Patch:  TND6480i_g1hiq3_RC1_from_stock_GE007.bps
+Target: g1hiq3_gegate / G1HQ3AM
+MD5:    4063fd9968b528148a9441b11dfd0203
+```
+
+Use a BPS patcher such as Floating IPS / flips. Full hashes and release notes
+are in [release artifacts and save notes](docs/release_artifacts_and_save_notes.md).
+
 ## Provenance
 
 This work is based on the **Tomorrow Never Dies 64 11-24 Extended Edition**
@@ -65,6 +84,17 @@ them under `artifacts/roms/`. Generated ROMs, saves, patches, and captures
 should stay local unless a release package is deliberately prepared. Most
 scripts assume Windows paths from the original workstation and may need path
 adjustments for another machine.
+
+## Known Caveats
+
+- No ROMs are distributed here or in the release assets.
+- The patch is based on Tomorrow Never Dies 64 11-24 Extended Edition.
+- The target hardware profile is NTSC N64 with Expansion Pak / 8 MB.
+- Save type is `EEPROM 4K`.
+- The in-game anti-aliasing option materially affects perceived text quality.
+  Compare AA-on captures against AA-on captures, and AA-off against AA-off.
+- Emulator success is useful but not conclusive; real N64 capture remains the
+  release authority.
 
 ## Documentation Map
 
@@ -104,7 +134,7 @@ The useful breakthrough was a real-hardware feedback loop:
 
 Details: [Hardware-In-The-Loop Workflow](docs/hardware_in_the_loop.md)
 
-## Source ROM Expectation
+## Patch Source ROM
 
 Patch generation and verification assume a stock GoldenEye 007 USA source ROM:
 
@@ -130,6 +160,25 @@ Use evidence before promotion:
 
 Do not treat emulator-only success as final. Real N64 output through GV-USB2,
 plus Analogue/human review where useful, is the source of truth.
+
+## Testing Notes
+
+Useful bug reports should include:
+
+- ROM/release hash or tag.
+- Hardware or emulator used.
+- Flashcart and save type, if testing on N64.
+- Display path, such as S-Video capture, CRT, Analogue 3D, or emulator video.
+- In-game display options, especially anti-aliasing and ammo/HUD state.
+- Screenshot, capture clip, or contact sheet when the issue is visual.
+- Exact menu, level, cutscene, or gameplay route used to reproduce the issue.
+
+## License / Use
+
+The scripts and documentation in this repository are provided for research,
+patch development, and interoperability work. This repository does not grant any
+rights to GoldenEye 007, Tomorrow Never Dies 64, commercial ROM images, or
+third-party assets. Do not distribute ROMs.
 
 ## Credits
 
