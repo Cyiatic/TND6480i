@@ -52,6 +52,29 @@ GoldenEye 480i / Hi Res patch contributors, Cyiatic, and OpenAI Codex.
 
 See [Credits And Acknowledgements](docs/credits.md) for the fuller list.
 
+## Using This Repo
+
+This repository is primarily a development and documentation workspace. It is
+useful in three different ways:
+
+- Players/testers should start with
+  [release artifacts and save notes](docs/release_artifacts_and_save_notes.md)
+  for the current candidate hashes, save type, and EverDrive/SC64 notes.
+- Modders should start with
+  [reverse-engineering technical findings](docs/reverse_engineering_technical_findings.md)
+  and [patch-site audit](docs/patch_site_audit.md) to understand the memory map,
+  VI/framebuffer changes, rejected approaches, and high-value offsets.
+- Future 480i porting work should start with
+  [N64 480i porting playbook](docs/N64_480i_porting_playbook.md) and
+  [measurable validation workflow](docs/measurable_480i_validation_workflow_20260525.md)
+  before generating new candidates.
+
+To reproduce the workflow locally, provide your own legal source ROMs and keep
+them under `artifacts/roms/`. Generated ROMs, saves, patches, and captures
+should stay local unless a release package is deliberately prepared. Most
+scripts assume Windows paths from the original workstation and may need path
+adjustments for another machine.
+
 ## How This Was Done
 
 The useful breakthrough was a real-hardware feedback loop:
