@@ -74,6 +74,17 @@ adjustments for another machine.
 - [Patch-site audit](docs/patch_site_audit.md)
 - [Publishing notes](docs/publishing_notes_20260702.md)
 
+## Repository Layout
+
+- `scripts/`: ROM builders, patchers, emulator smoke tests, hardware helpers.
+- `scripts/hardware/`: Kasa/GV-USB2/flashcart-facing helper scripts.
+- `docs/`: long-form findings, handoffs, candidate histories, comparisons.
+- `reports/`: JSON manifests, smoke results, offset audits, screen analyses.
+- `diagnostics/captures/`: curated screenshots, videos, contact sheets, visual proof.
+- `artifacts/roms/`: local source ROMs and baselines, ignored by git.
+- `artifacts/generated/`: generated candidates/saves/patches, ignored by git.
+- `artifacts/release/`: local release packages, ignored by git.
+
 ## How This Was Done
 
 The useful breakthrough was a real-hardware feedback loop:
@@ -87,17 +98,6 @@ The useful breakthrough was a real-hardware feedback loop:
 7. Promote, reject, or narrow the next patch based on measured behavior.
 
 Details: [Hardware-In-The-Loop Workflow](docs/hardware_in_the_loop.md)
-
-## Repository Layout
-
-- `scripts/`: ROM builders, patchers, emulator smoke tests, hardware helpers.
-- `scripts/hardware/`: Kasa/GV-USB2/flashcart-facing helper scripts.
-- `docs/`: long-form findings, handoffs, candidate histories, comparisons.
-- `reports/`: JSON manifests, smoke results, offset audits, screen analyses.
-- `diagnostics/captures/`: curated screenshots, videos, contact sheets, visual proof.
-- `artifacts/roms/`: local source ROMs and baselines, ignored by git.
-- `artifacts/generated/`: generated candidates/saves/patches, ignored by git.
-- `artifacts/release/`: local release packages, ignored by git.
 
 ## Source ROM Expectation
 
