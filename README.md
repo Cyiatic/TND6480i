@@ -45,6 +45,13 @@ engineering support, scripting, documentation, visual comparison workflows, and
 candidate iteration. Hardware setup, real-console testing, subjective visual
 review, and final project direction were provided by the human project owner.
 
+## Credits
+
+Key credits: Rare, the Tomorrow Never Dies 64 team, TiJay, Wreck, the
+GoldenEye 480i / Hi Res patch contributors, Cyiatic, and OpenAI Codex.
+
+See [Credits And Acknowledgements](docs/credits.md) for the fuller list.
+
 ## How This Was Done
 
 The useful breakthrough was a real-hardware feedback loop:
@@ -62,6 +69,7 @@ Details: [Hardware-In-The-Loop Workflow](docs/hardware_in_the_loop.md)
 ## Documentation Map
 
 - [Release artifacts and save notes](docs/release_artifacts_and_save_notes.md)
+- [Credits and acknowledgements](docs/credits.md)
 - [Current candidate status](docs/current_candidate_status_20260519.md)
 - [Reverse-engineering technical findings](docs/reverse_engineering_technical_findings.md)
 - [Measurable 480i validation workflow](docs/measurable_480i_validation_workflow_20260525.md)
