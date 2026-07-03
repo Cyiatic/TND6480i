@@ -1,3 +1,5 @@
+![TND6480i cover art](docs/assets/tnd6480i_cover.png)
+
 # TND6480i
 
 Tomorrow Never Dies 64 480i reverse-engineering workspace.
