@@ -1,4 +1,4 @@
-![TND6480i cover art](docs/assets/tnd6480i_cover.png)
+<img src="docs/assets/tnd6480i_cover.png" alt="TND6480i cover art" width="50%">
 
 # TND6480i
 
