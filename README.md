@@ -1,4 +1,4 @@
-<img src="docs/assets/tnd6480i_cover.png" alt="TND6480i cover art" width="50%">
+<img src="images/tnd6480i-logo.png" alt="Tomorrow Never Dies 6480i Expanded" width="483">
 
 # TND6480i
 
