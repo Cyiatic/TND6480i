@@ -193,5 +193,7 @@ See [Credits And Acknowledgements](docs/credits.md) for the fuller list.
 
 This project was developed with AI assistance from OpenAI Codex for reverse
 engineering support, scripting, documentation, visual comparison workflows, and
-candidate iteration. Hardware setup, real-console testing, subjective visual
-review, and final project direction were provided by the human project owner.
+candidate iteration. The repository owner directed the work, reviewed the
+resulting changes, and remains responsible for the project's technical claims
+and final decisions. Hardware setup, real-console testing, and subjective visual
+evaluation were performed by the repository owner.
