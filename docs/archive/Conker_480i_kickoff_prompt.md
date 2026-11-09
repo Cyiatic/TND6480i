@@ -13,7 +13,7 @@ C:\Users\codex\Documents\GitHub\TND6480i\docs\N64_480i_porting_playbook.md
 C:\Users\codex\Documents\GitHub\TND6480i\docs\project_retrospective_20260525.md
 C:\Users\codex\Documents\GitHub\TND6480i\docs\reverse_engineering_technical_findings.md
 C:\Users\codex\Documents\GitHub\TND6480i\docs\measurable_480i_validation_workflow_20260525.md
-C:\Users\codex\Documents\GitHub\TND6480i\docs\runtime_text_measurement_attempt_20260525.md
+C:\Users\codex\Documents\GitHub\TND6480i\docs\archive\runtime_text_measurement_attempt_20260525.md
 C:\Users\codex\Documents\GitHub\TND6480i\docs\direct_stage_probe_workflow.md
 C:\Users\codex\Documents\GitHub\TND6480i\docs\credits_render_path_audit_20260519.md
 C:\Users\codex\Documents\GitHub\TND6480i\README.md

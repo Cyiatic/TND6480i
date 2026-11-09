@@ -1,4 +1,4 @@
-<img src="images/tnd6480i-logo.png" alt="Tomorrow Never Dies 6480i Expanded" width="483">
+<img src="assets/tnd6480i-logo.png" alt="Tomorrow Never Dies 6480i Expanded" width="483">
 
 # TND6480i
 
@@ -12,6 +12,25 @@ GE480i-style front-end layout, stable gameplay, and hardware-tested N64 output.
 ROM images, generated candidate ROMs, save files, video captures, and binary
 patch blobs are intentionally local/untracked. Distribute patches and manifests,
 not ROMs.
+
+## Download
+
+Current prerelease:
+[v0.1.0-rc1](https://github.com/Cyiatic/TND6480i/releases/tag/v0.1.0-rc1)
+
+The release asset is a BPS patch package, not a ROM. Apply it to a stock
+GoldenEye 007 USA ROM:
+
+```text
+Source: GoldenEye 007 (USA).z64
+MD5:    70c525880240c1e838b8b1be35666c3b
+Patch:  TND6480i_g1hiq3_RC1_from_stock_GE007.bps
+Target: g1hiq3_gegate / G1HQ3AM
+MD5:    4063fd9968b528148a9441b11dfd0203
+```
+
+Use a BPS patcher such as Floating IPS / flips. Full hashes and release notes
+are in [release artifacts and save notes](docs/release_artifacts_and_save_notes.md).
 
 ## Status
 
@@ -39,32 +58,18 @@ The previous packaged rollback candidate is `g1mcfix4` /
 `TND6480i_g1mcfix4_RC1`; it remains documented because it has the existing
 stock-GE xdelta release bundle.
 
-## Release Candidate
+## Known caveats
 
-Current prerelease:
-[v0.1.0-rc1](https://github.com/Cyiatic/TND6480i/releases/tag/v0.1.0-rc1)
+- No ROMs are distributed here or in the release assets.
+- The patch is based on Tomorrow Never Dies 64 11-24 Extended Edition.
+- The target hardware profile is NTSC N64 with Expansion Pak / 8 MB.
+- Save type is `EEPROM 4K`.
+- The in-game anti-aliasing option materially affects perceived text quality.
+  Compare AA-on captures against AA-on captures, and AA-off against AA-off.
+- Emulator success is useful but not conclusive; real N64 capture remains the
+  release authority.
 
-The release asset is a BPS patch package, not a ROM. Apply it to a stock
-GoldenEye 007 USA ROM:
-
-```text
-Source: GoldenEye 007 (USA).z64
-MD5:    70c525880240c1e838b8b1be35666c3b
-Patch:  TND6480i_g1hiq3_RC1_from_stock_GE007.bps
-Target: g1hiq3_gegate / G1HQ3AM
-MD5:    4063fd9968b528148a9441b11dfd0203
-```
-
-Use a BPS patcher such as Floating IPS / flips. Full hashes and release notes
-are in [release artifacts and save notes](docs/release_artifacts_and_save_notes.md).
-
-## Provenance
-
-This work is based on the **Tomorrow Never Dies 64 11-24 Extended Edition**
-romhack. Any public repo, release notes, or patch package should state that
-clearly.
-
-## Using This Repo
+## Using this repo
 
 This repository is primarily a development and documentation workspace. It is
 useful in three different ways:
@@ -87,42 +92,37 @@ should stay local unless a release package is deliberately prepared. Most
 scripts assume Windows paths from the original workstation and may need path
 adjustments for another machine.
 
-## Known Caveats
+Several scripts also use local untracked baselines in `artifacts/roms/`, such as
+stock TND64, GE480i, and intermediate TND6480i baselines. Keep those local and
+do not commit them.
 
-- No ROMs are distributed here or in the release assets.
-- The patch is based on Tomorrow Never Dies 64 11-24 Extended Edition.
-- The target hardware profile is NTSC N64 with Expansion Pak / 8 MB.
-- Save type is `EEPROM 4K`.
-- The in-game anti-aliasing option materially affects perceived text quality.
-  Compare AA-on captures against AA-on captures, and AA-off against AA-off.
-- Emulator success is useful but not conclusive; real N64 capture remains the
-  release authority.
+## Documentation
 
-## Documentation Map
+Start with the [documentation index](docs/README.md). The most useful entry points:
 
-- [Release artifacts and save notes](docs/release_artifacts_and_save_notes.md)
-- [Credits and acknowledgements](docs/credits.md)
-- [Current candidate status](docs/current_candidate_status_20260519.md)
-- [Reverse-engineering technical findings](docs/reverse_engineering_technical_findings.md)
-- [Measurable 480i validation workflow](docs/measurable_480i_validation_workflow_20260525.md)
-- [N64 480i porting playbook](docs/N64_480i_porting_playbook.md)
-- [Project retrospective](docs/project_retrospective_20260525.md)
-- [Direct stage probe workflow](docs/direct_stage_probe_workflow.md)
-- [Patch-site audit](docs/patch_site_audit.md)
-- [Publishing notes](docs/publishing_notes_20260702.md)
+| I want to… | Start here |
+| --- | --- |
+| Apply the patch, check hashes, set up saves | [Release artifacts and save notes](docs/release_artifacts_and_save_notes.md) |
+| Understand the memory map and patch sites | [Technical findings](docs/reverse_engineering_technical_findings.md) · [Patch-site audit](docs/patch_site_audit.md) |
+| Port another N64 game to 480i | [N64 480i porting playbook](docs/N64_480i_porting_playbook.md) · [Measurable validation workflow](docs/measurable_480i_validation_workflow_20260525.md) |
+| Reproduce the hardware test loop | [Hardware-in-the-loop workflow](docs/hardware_in_the_loop.md) |
+| Read how the project went | [Project retrospective](docs/project_retrospective_20260525.md) |
+| Find dated handoffs, candidate notes and session logs | [docs/archive/](docs/archive/README.md) |
 
-## Repository Layout
+## Repository layout
 
+- `assets/`: README logo and cover art.
 - `scripts/`: ROM builders, patchers, emulator smoke tests, hardware helpers.
 - `scripts/hardware/`: Kasa/GV-USB2/flashcart-facing helper scripts.
-- `docs/`: long-form findings, handoffs, candidate histories, comparisons.
+- `docs/`: long-form findings, workflows and guides ([index](docs/README.md)).
+- `docs/archive/`: dated handoffs, candidate notes, session logs and superseded status pages.
 - `reports/`: JSON manifests, smoke results, offset audits, screen analyses.
 - `diagnostics/captures/`: curated screenshots, videos, contact sheets, visual proof.
 - `artifacts/roms/`: local source ROMs and baselines, ignored by git.
 - `artifacts/generated/`: generated candidates/saves/patches, ignored by git.
 - `artifacts/release/`: local release packages, ignored by git.
 
-## How This Was Done
+## How this was done
 
 The useful breakthrough was a real-hardware feedback loop:
 
@@ -136,20 +136,7 @@ The useful breakthrough was a real-hardware feedback loop:
 
 Details: [Hardware-In-The-Loop Workflow](docs/hardware_in_the_loop.md)
 
-## Patch Source ROM
-
-Patch generation and verification assume a stock GoldenEye 007 USA source ROM:
-
-```text
-GoldenEye 007 (USA).z64
-MD5: 70c525880240c1e838b8b1be35666c3b
-```
-
-Several scripts also use local untracked baselines in `artifacts/roms/`, such as
-stock TND64, GE480i, and intermediate TND6480i baselines. Keep those local and
-do not commit them.
-
-## Development Rules
+## Development rules
 
 Use evidence before promotion:
 
@@ -163,7 +150,7 @@ Use evidence before promotion:
 Do not treat emulator-only success as final. Real N64 output through GV-USB2,
 plus Analogue/human review where useful, is the source of truth.
 
-## Testing Notes
+## Reporting bugs
 
 Useful bug reports should include:
 
@@ -175,19 +162,25 @@ Useful bug reports should include:
 - Screenshot, capture clip, or contact sheet when the issue is visual.
 - Exact menu, level, cutscene, or gameplay route used to reproduce the issue.
 
-## License / Use
+## Credits and provenance
+
+This work is based on the **Tomorrow Never Dies 64 11-24 Extended Edition**
+romhack. Any public repo, release notes, or patch package should state that
+clearly.
+
+Key credits: Rare, the Tomorrow Never Dies 64 team, TiJay, Wreck, the
+GoldenEye 480i / Hi Res patch contributors, Cyiatic, and OpenAI Codex.
+
+See [Credits And Acknowledgements](docs/credits.md) for the fuller list.
+
+## License
 
 The scripts and documentation in this repository are provided for research,
 patch development, and interoperability work. This repository does not grant any
 rights to GoldenEye 007, Tomorrow Never Dies 64, commercial ROM images, or
 third-party assets. Do not distribute ROMs.
 
-## Credits
-
-Key credits: Rare, the Tomorrow Never Dies 64 team, TiJay, Wreck, the
-GoldenEye 480i / Hi Res patch contributors, Cyiatic, and OpenAI Codex.
-
-See [Credits And Acknowledgements](docs/credits.md) for the fuller list.
+No open-source license file has been added yet, so the scripts and documentation are all rights reserved by default.
 
 ## AI Assistance Disclosure
 

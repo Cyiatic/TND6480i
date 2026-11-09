@@ -6,7 +6,7 @@ Final 2026-05-25 closeout: the current `g1hiq3_gegate` line, paired with the
 normalized ammo-on save, passed user hardware/Analogue review for font quality.
 The same line also fixed Bazaar's countdown timer position. This document is
 retained as the investigation history; use
-`docs/runtime_text_measurement_attempt_20260525.md` and
+`docs/archive/runtime_text_measurement_attempt_20260525.md` and
 `docs/measurable_480i_validation_workflow_20260525.md` for the final
 measurement workflow and regression gates.
 

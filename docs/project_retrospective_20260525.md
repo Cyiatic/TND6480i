@@ -176,10 +176,10 @@ For a new GoldenEye-engine project, start by reading these files:
 - `docs/N64_480i_porting_playbook.md`
 - `docs/reverse_engineering_technical_findings.md`
 - `docs/measurable_480i_validation_workflow_20260525.md`
-- `docs/runtime_text_measurement_attempt_20260525.md`
+- `docs/archive/runtime_text_measurement_attempt_20260525.md`
 - `docs/direct_stage_probe_workflow.md`
 - `docs/ge_decomp_offset_audit.md`
-- `docs/current_candidate_status_20260519.md`
+- `docs/archive/current_candidate_status_20260519.md`
 
 ## Better Prompt For A Future Fresh Thread
 
@@ -191,7 +191,7 @@ C:\Users\codex\Documents\GitHub\TND6480i\docs\N64_480i_porting_playbook.md
 C:\Users\codex\Documents\GitHub\TND6480i\docs\project_retrospective_20260525.md
 C:\Users\codex\Documents\GitHub\TND6480i\docs\reverse_engineering_technical_findings.md
 C:\Users\codex\Documents\GitHub\TND6480i\docs\measurable_480i_validation_workflow_20260525.md
-C:\Users\codex\Documents\GitHub\TND6480i\docs\runtime_text_measurement_attempt_20260525.md
+C:\Users\codex\Documents\GitHub\TND6480i\docs\archive\runtime_text_measurement_attempt_20260525.md
 
 Work only on the N64 project. Use Git from the beginning. Keep commercial ROMs,
 generated ROMs, saves, and raw captures out of normal commits. Build named

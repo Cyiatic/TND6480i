@@ -30,7 +30,7 @@ ROMS = {
 
 OUT_ROM = ROOT / "artifacts" / "generated" / "g1txtview1.z64"
 OUT_REPORT = ROOT / "reports" / "text_resolution_followup_20260524.json"
-OUT_DOC = ROOT / "docs" / "text_resolution_followup_20260524.md"
+OUT_DOC = ROOT / "docs" / "archive" / "text_resolution_followup_20260524.md"
 
 COMMENT_RE = re.compile(
     r"/\*\s*([0-9A-Fa-f]{6})\s+([0-9A-Fa-f]{8})\s+([0-9A-Fa-f]{8})\s*\*/\s*(.*)"

@@ -58,7 +58,7 @@ The user hardware pass on real N64 confirmed the important target behavior:
 - Bazaar countdown timer position is corrected on the `g1hiq3_gegate` line.
 - The only intentional non-resolution content edit is the save/difficulty label change from `Custom` to `007`.
 
-2026-05-24 follow-up: the user reported that Analogue 3D output makes the mission intro text, ammo count, and pause/watch text look closer to stock resolution than GE480i. That report started the `g1mcfix4` text-resolution review before final release packaging. The first-test hardware candidate was `artifacts/generated/g1hiq1.z64`; the riskier follow-up was `artifacts/generated/g1hiq2.z64`. This line is superseded by the 2026-05-25 `g1hiq3_gegate` confirmation below. See `docs/text_resolution_followup_20260524.md`.
+2026-05-24 follow-up: the user reported that Analogue 3D output makes the mission intro text, ammo count, and pause/watch text look closer to stock resolution than GE480i. That report started the `g1mcfix4` text-resolution review before final release packaging. The first-test hardware candidate was `artifacts/generated/g1hiq1.z64`; the riskier follow-up was `artifacts/generated/g1hiq2.z64`. This line is superseded by the 2026-05-25 `g1hiq3_gegate` confirmation below. See `docs/archive/text_resolution_followup_20260524.md`.
 
 2026-05-25 follow-up: the active text-quality measurement baseline is now
 `artifacts/generated/g1hiq3_gegate.z64` with
@@ -71,7 +71,7 @@ non-comparable. A no-controller real-hardware watch/HUD capture harness is
 available in `scripts/build_force_fp_watch_probe.py`,
 `scripts/build_auto_watch_text_probe.py --delay-frames`, and
 `scripts/patch_save_options.py`. Matched GE480i/TND watch and HUD captures are
-documented in `docs/runtime_text_measurement_attempt_20260525.md`. Keep
+documented in `docs/archive/runtime_text_measurement_attempt_20260525.md`. Keep
 `g1mcfix4` as the packaged RC1 rollback; use `g1hiq3_gegate` for current
 testing and release packaging.
 
