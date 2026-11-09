@@ -175,12 +175,11 @@ See [Credits And Acknowledgements](docs/credits.md) for the fuller list.
 
 ## License
 
-The scripts and documentation in this repository are provided for research,
-patch development, and interoperability work. This repository does not grant any
-rights to GoldenEye 007, Tomorrow Never Dies 64, commercial ROM images, or
-third-party assets. Do not distribute ROMs.
-
-No open-source license file has been added yet, so the scripts and documentation are all rights reserved by default.
+The scripts and documentation are MIT-licensed; see [LICENSE](LICENSE). They are
+provided for research, patch development, and interoperability work. The license
+covers this repository's own code and writing only: it grants no rights to
+GoldenEye 007, Tomorrow Never Dies 64, commercial ROM images, or third-party
+assets. Do not distribute ROMs.
 
 ## AI Assistance Disclosure
 
